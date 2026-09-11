@@ -36,7 +36,7 @@ const hero_content: DataType = {
   sm_info: <>
     Reach more customers with Meta and Google Ads, compelling ad creatives, AI UGC-style videos, conversion-focused websites, and SEO.
   </>,
-  btn_text: <>Let’s Talk About <br /> Your Business</>,
+  btn_text: <>Let’s <br /> Talk</>,
 }
 const {
   slide_text,
