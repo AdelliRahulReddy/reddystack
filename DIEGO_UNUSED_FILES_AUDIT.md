@@ -6,6 +6,10 @@ Status: Phase 1 deletion partially completed on 2026-04-28 after owner confirmat
 
 This file tracks what was removed and what still needs confirmation/access before deletion.
 
+## Cleanup update — 2026-09-12
+
+Removed unused `three.js`, `webgl.js`, and `charming.js` plus their barrel exports after checking all source and asset references. Also removed `hover-reveal.css`, which was not imported. The entries below describe the earlier audit; these four files are no longer pending. Active GSAP plugins and globally loaded styles remain in place.
+
 ## Method
 
 - Built a static import graph from all active Next App Router entrypoints in `src/app`.
