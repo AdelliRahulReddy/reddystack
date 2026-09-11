@@ -20,29 +20,23 @@ interface DataType {
 
 const hero_content: DataType = {
   slide_text: [
-    "Websites",
-    "Mobile Apps",
-    "Landing Pages",
-    "Portfolios",
-    "Automation Scripts",
-    "MVPs",
+    "Meta Ads",
+    "Google Ads",
+    "Ad Creatives",
+    "AI UGC-Style Videos",
+    "Website Development",
+    "SEO & Local SEO",
   ],
-  sub_title: "Rahul Reddy / Founder, Reddystack",
-  title_1: "Websites, Apps, MVPs & Automations",
+  sub_title: "REDDYSTACK · DIGITAL MARKETING & WEB DEVELOPMENT",
+  title_1: "Ads, Creative & Websites That Help Your Business Grow.",
   title_2_line_1: "",
   title_2_line_2: "",
   mobile_title_2_line_1: "",
   mobile_title_2_line_2: "",
   sm_info: <>
-    <span className="d-none d-md-inline">
-      Website, app, MVP and automation development services for startups, founders, and small businesses. <br />
-      Reddystack builds landing pages, business websites, apps, MVPs, and automation scripts.
-    </span>
-    <span className="d-inline d-md-none">
-      Landing pages, business websites, apps, MVPs, and automation scripts for startups and small businesses.
-    </span>
+    Reach more customers with Meta and Google Ads, compelling ad creatives, AI UGC-style videos, conversion-focused websites, and SEO.
   </>,
-  btn_text: <>Start <br /> Your Project</>,
+  btn_text: <>Let’s Talk About <br /> Your Business</>,
 }
 const {
   slide_text,
@@ -135,6 +129,9 @@ const HeroAreaHome = () => {
                         <i className="tp-btn-circle-dot"></i>
                       </Link>
                     </div>
+                    <Link href="/service" className="tp-btn-border-sm">
+                      Explore Our Services
+                    </Link>
                   </div>
                   <div className="tp-hero-scroll smooth">
                     <a className="pointer" onClick={scrollTo}>
