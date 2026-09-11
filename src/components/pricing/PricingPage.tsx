@@ -6,59 +6,19 @@ import type { ServiceDetail } from "@/data/ServiceDetailData";
 import heroWebsite from "@/assets/img/portfolio/port-inner-up-1.jpg";
 
 const pricingFaqService: ServiceDetail = {
-  slug: "pricing",
-  path: "/pricing",
-  subtitle: "Pricing and Scope",
-  title: "Pricing and Scope",
-  introPrimary:
-    "Reddystack pricing depends on scope, page count, content depth, integrations, automation complexity, and launch support. Simple fixed-scope work can stay affordable, while service websites, apps, MVPs, chatbots, and automation systems need a clearer quote before work starts.",
-  introSecondary:
-    "The goal is honest scope, not vague packages. Every project should define what is included, what is excluded, and what should wait for a later phase.",
-  overviewPrimary: "",
-  overviewSecondary: "",
-  features: [],
-  closingSummary: "",
-  sideTitle: "",
-  categories: ["Website", "SEO", "Apps", "Automation"],
-  highlightTitle: ["Pricing", "scope"],
-  highlightText: "",
-  metaTitle: "Pricing | Website, App, SEO & Automation Scope",
-  metaDescription:
-    "Review Reddystack starting prices, scope guidance, timelines, and honest limits for websites, apps, SEO-ready pages, MVPs, and AI automation.",
+  slug: "pricing", path: "/pricing", subtitle: "Pricing and Scope", title: "Custom Quotes",
+  introPrimary: "Every quote reflects your goals and agreed deliverables.", introSecondary: "",
+  overviewPrimary: "", overviewSecondary: "", features: [], closingSummary: "", sideTitle: "",
+  categories: ["Ads", "Creative", "Websites", "SEO"], highlightTitle: ["Clear", "scope"], highlightText: "",
+  metaTitle: "Custom Quotes | Reddystack", metaDescription: "Scope and pricing for ads, creative, videos, websites, and SEO.",
   heroImage: heroWebsite,
-  presentation: {
-    faqTitle: "Pricing Questions",
-    faqDescription:
-      "Clear answers about how Reddystack scopes websites, apps, MVPs, SEO-ready pages, and automation work.",
-    faqHighlights: ["Starting Prices", "Scope", "Timeline"],
-    showFaqShapes: false,
-  },
+  presentation: { faqTitle: "Pricing Questions", faqDescription: "What to expect before you start.", faqHighlights: ["Scope", "Deliverables", "Costs"], showFaqShapes: false },
   faqItems: [
-    {
-      question: "What is the starting price for a Reddystack website?",
-      answer:
-        "A focused starter website can start at Rs. 9,999 when the scope is limited to a simple one-page build or starter presence. Small business websites usually start from Rs. 14,999, and SEO-ready multi-page builds usually start from Rs. 24,999 depending on content depth and sections.",
-      some_features: ["Starter Website", "Scope Limits", "SEO Upgrade"],
-    },
-    {
-      question: "How are app and MVP projects priced?",
-      answer:
-        "App and MVP pricing depends on screens, user flows, roles, integrations, backend logic, and launch requirements. Small MVP scopes usually start from Rs. 49,999+ after the first useful release is defined.",
-      some_features: ["User Flows", "MVP Scope", "Integrations"],
-    },
-    {
-      question: "Do prices include SEO setup?",
-      answer:
-        "SEO-ready builds can include metadata, heading structure, sitemap, schema, internal links, speed checks, and crawlability basics. Ongoing SEO campaigns or content retainers should be scoped separately.",
-      some_features: ["Metadata", "Schema", "Crawlability"],
-    },
-    {
-      question: "Can Reddystack work with clients outside India?",
-      answer:
-        "Yes. Reddystack is online-first and can work with startups, creators, founders, and small businesses across India and worldwide through a remote-friendly process.",
-      some_features: ["India", "Worldwide", "Remote Delivery"],
-    },
-  ],
+    { question: "How much will my project cost?", answer: "We provide a custom quote after understanding your goals, deliverables, timeline, and required support. There is no automatic package selection.", some_features: ["Custom Quote", "Agreed Scope"] },
+    { question: "Does an ads quote include advertising spend?", answer: "Advertising spend is separate from our campaign management fee. The proposal will distinguish platform spend, management, and any creative production costs.", some_features: ["Ad Spend", "Management Fee", "Creative Costs"] },
+    { question: "Is the work one-off or ongoing?", answer: "Websites and creative production can be scoped as projects. Campaign management and SEO can be scoped as ongoing work. Deliverables, reporting, and review points are agreed before starting.", some_features: ["Project Work", "Ongoing Support"] },
+    { question: "What about revisions and third-party costs?", answer: "Your quote sets out revision rounds, inclusions, exclusions, and any separate costs such as hosting, domains, stock assets, or paid tools before work starts.", some_features: ["Revisions", "Inclusions", "Third-party Costs"] }
+  ]
 };
 
 const PricingPage = () => {
@@ -77,20 +37,17 @@ const PricingPage = () => {
                         Pricing
                       </span>
       <h1 className="service-details__title tp-char-animation">
-                        Pricing for websites, apps, SEO-ready pages, MVPs, chatbots, and automations.
+                        A clear quote for your business goals.
                       </h1>
                     </div>
                   </div>
                   <div className="offset-xl-4 col-xl-5 col-lg-8">
                     <div className="service-details__banner-text">
                       <p className="mb-30 tp_title_anim">
-                        Reddystack uses clear scope before price. Fixed starter work can stay
-                        lean, but larger websites, apps, MVPs, chatbots, and AI systems need a quote
-                        based on the actual pages, workflows, integrations, and launch goals.
+                        Tell us what you want to achieve. We scope ads, creative content, AI videos, websites, and SEO around your goals, timeline, and budget.
                       </p>
                       <p className="tp_title_anim">
-                        No package promises ranking guarantees or fake outcomes. The goal is
-                        practical delivery, clear inclusions, and a realistic upgrade path.
+                        You receive clear deliverables, fees, exclusions, and review points before work begins. Apps, MVPs, chatbots, and automation are also available on request.
                       </p>
                     </div>
                   </div>

@@ -925,7 +925,7 @@
 
 .postbox__comment-input{
     position: relative;
-    & span{
+    & span, & label{
         &.floating-label{
             position: absolute;
             pointer-events: none;

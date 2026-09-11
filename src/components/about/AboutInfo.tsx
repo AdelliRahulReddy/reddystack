@@ -11,9 +11,9 @@ interface DataType {
 }
 
 const info_data: DataType[] = [
-  { title: "Vibe Coding", bg_img: "/assets/img/about/ab-1.png", href: "/mvp-development-for-startup-founders" },
-  { title: "Prompt Engineering", bg_img: "/assets/img/about/ab-2.png", href: "/ai-automation" },
-  { title: "AI Automations", bg_img: "/assets/img/about/ab-3.png", href: "/ai-automation" },
+  { title: "Ad Campaigns", bg_img: "/assets/img/about/ab-1.png", href: "/service/meta-ads" },
+  { title: "Creative Content", bg_img: "/assets/img/about/ab-2.png", href: "/service/ad-creatives" },
+  { title: "Websites", bg_img: "/assets/img/about/ab-3.png", href: "/service/seo-websites" },
   { title: "SEO Strategy", bg_img: "/assets/img/about/ab-4.png", href: "/website-development" }
 ]
 
@@ -29,9 +29,7 @@ const AboutInfo = () => {
               <div className="ab-info__text">
 
                 <div>
-                  I&apos;m Rahul <span className="line"></span> a developer and digital strategist
-                  based in India. I focus on building real-world products using
-                  modern tech. I love experimenting with
+                  I&apos;m Rahul <span className="line"></span> founder of Reddystack, based in Hyderabad. I work directly with small businesses and growing brands, bringing clear planning and hands-on delivery to
 
                   {info_data.map((item, index) =>
                     <React.Fragment key={index}>

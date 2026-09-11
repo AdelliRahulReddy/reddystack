@@ -48,8 +48,8 @@ const Offcanvas2 = ({ showCanvas, setShowCanvas }: Offcanvas2Props) => {
           </div>
           <div className="tp-offcanvas-main-2">
             <div className="tp-offcanvas-content-2">
-              <h3 className="tp-offcanvas-content-title-2">Let&apos;s Build Something High-Impact.</h3>
-              <p>Building SEO-ready websites, apps, and automations using AI collaboration — no traditional coding required.</p>
+              <h3 className="tp-offcanvas-content-title-2">Let&apos;s Grow Your Business.</h3>
+              <p>Reddystack helps small businesses and growing brands attract customers through ads, creative content, websites, and SEO.</p>
             </div>
             <div className="tp-main-menu-mobile d-lg-none">
               <nav>

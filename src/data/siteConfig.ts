@@ -1,12 +1,13 @@
 import type { StaticImageData } from "next/image";
 import type { Metadata } from "next";
+import { primaryServices } from "./ServiceDetailData";
 
 export const siteSeo = {
   siteName: "Reddystack",
   siteNameAlternates: ["ReddyStack", "Reddystack by Rahul Reddy", "reddystack.com"],
-  defaultTitle: "Website, App, MVP & Automation Development Services | Reddystack",
+  defaultTitle: "Digital Marketing & Website Development | Reddystack",
   defaultDescription:
-    "Reddystack builds landing pages, business websites, apps, MVPs, and automation scripts for startups, founders, and small businesses across India and worldwide.",
+    "Reddystack helps small businesses and growing brands attract customers through ads, creative content, websites, and SEO.",
   creatorHandle: "@reddystack",
   logoPath: "/assets/img/logo/logo-black.png",
   ogImagePath: "/assets/img/hero/hero-img.png",
@@ -18,28 +19,16 @@ export const siteConfig = {
   titleSuffix: siteSeo.siteName,
   description: siteSeo.defaultDescription,
   keywords: [
-    "Reddystack",
-    "website app MVP automation development services",
-    "website development services",
-    "business website development",
-    "landing page development services",
-    "affordable website development",
-    "website development under 10000",
-    "website development",
-    "SEO website development",
-    "SEO services",
-    "landing page development",
-    "custom web application development",
-    "app development",
-    "mobile app development",
-    "AI chatbot development",
-    "MVP development",
-    "AI automation services",
-    "automation scripts",
-    "workflow automation",
-    "AI-assisted development",
-    "Rahul Reddy",
-  ],
+  "Reddystack",
+  "Meta Ads",
+  "Google Ads",
+  "Ad Creatives",
+  "AI UGC-Style Videos",
+  "Website Development",
+  "SEO & Local SEO",
+  "Rahul Reddy",
+  "Hyderabad"
+],
   email: "hello@reddystack.com",
   phoneDisplay: "+91 7032784208",
   phoneHref: "+917032784208",
@@ -51,20 +40,16 @@ export const siteConfig = {
   siteUrl: "https://www.reddystack.com",
   serviceAreas: ["Hyderabad", "India", "Worldwide"],
   serviceTypes: [
-    "Website Development Services",
-    "Affordable Website Development",
-    "SEO Website Development",
-    "Landing Page Development",
-    "SEO Services",
-    "Mobile App Development",
-    "App Development",
-    "AI Chatbot Development",
-    "Custom Web Application Development",
-    "MVP Development Services",
-    "AI Automation Services",
-  ],
+  "Meta Ads",
+  "Google Ads",
+  "Ad Creatives",
+  "AI UGC-Style Videos",
+  "Website Development",
+  "SEO & Local SEO"
+],
   socialLinks: {
     email: "mailto:hello@reddystack.com",
+    whatsapp: "https://wa.me/917032784208",
     google: "https://www.google.com/search?q=reddystack",
     instagram: "https://www.instagram.com/reddy.stack/",
     x: "https://x.com/reddystack",
@@ -98,37 +83,37 @@ export const pageSeo = {
   about: {
     title: "About Reddystack | Rahul Reddy, Founder-Led Digital Execution",
     description:
-      "Learn how Rahul Reddy built Reddystack and how the founder-led, AI-assisted approach helps businesses launch websites, mobile apps, MVPs, and automations with clarity.",
+      "Meet Rahul Reddy, founder of Reddystack, helping small businesses and growing brands with ads, creative content, websites, and SEO.",
     path: "/about",
   },
   services: {
-    title: "Services | Website Development, Apps, MVPs & AI Automation",
+    title: "Services | Ads, Creative, Websites & SEO | Reddystack",
     description:
-      "Explore Reddystack services for website development, mobile apps, custom web applications, MVP development, landing pages, and AI automation systems.",
+      "Explore Meta Ads, Google Ads, Ad Creatives, AI UGC-style Videos, Website Development, and SEO & Local SEO.",
     path: "/service",
   },
   portfolio: {
-    title: "Portfolio | Digital Products, Launches & Automation Work",
+    title: "Portfolio | Selected Work | Reddystack",
     description:
       "See selected Reddystack work across websites, product builds, MVP launches, and automation systems created with premium execution and clear outcomes.",
     path: "/portfolio",
   },
   blog: {
-    title: "Insights | SEO, AI Workflows & Product Execution",
+    title: "Insights | Ads, Creative, Websites & SEO",
     description:
-      "Read Reddystack insights on SEO, AI-assisted workflows, mobile app planning, product execution, MVP strategy, and automation.",
+      "Ideas for ads, creative content, websites, and SEO, alongside our guides to apps and automation.",
     path: "/blog",
   },
   contact: {
     title: "Contact Reddystack | Start Your Project",
     description:
-      "Start your project with Reddystack. Talk to Rahul Reddy about website development, mobile apps, MVPs, custom web applications, and AI automation.",
+      "Talk to Rahul Reddy about ads, creative content, AI videos, websites, and SEO. Enquire through our form or WhatsApp.",
     path: "/contact",
   },
   pricing: {
-    title: "Pricing | Website, App, SEO & Automation Scope",
+    title: "Pricing | Custom Quotes | Reddystack",
     description:
-      "Review Reddystack starting prices, scope guidance, timelines, and honest limits for websites, apps, SEO-ready pages, MVPs, and AI automation.",
+      "Get a custom quote for ads, creative content, AI videos, websites, and SEO with clear deliverables, fees, and scope.",
     path: "/pricing",
   },
   privacyPolicy: {
@@ -163,9 +148,9 @@ export const pageSeo = {
     path: "/portfolio-details",
   },
   blogSidebar: {
-    title: "Insights | SEO, AI Workflows & Product Execution",
+    title: "Insights | Ads, Creative, Websites & SEO",
     description:
-      "Read Reddystack insights on SEO, AI-assisted workflows, mobile app planning, product execution, MVP strategy, and automation.",
+      "Ideas for ads, creative content, websites, and SEO, alongside our guides to apps and automation.",
     path: "/blog-sidebar",
     canonicalPath: "/blog",
     robots: {
@@ -186,7 +171,7 @@ export const pageSeo = {
   notFound: {
     title: "Page Not Found | Reddystack",
     description:
-      "The page could not be found. Return to Reddystack to explore websites, mobile apps, MVPs, and automations.",
+      "The page could not be found. Explore Reddystack services for ads, creative content, websites, and SEO.",
     path: "/404",
     robots: {
       index: false,
@@ -314,122 +299,13 @@ const serviceOfferCatalog = {
   "@id": schemaIds.offerCatalog,
   name: "Reddystack service packages",
   url: buildCanonicalUrl("/pricing"),
-  itemListElement: [
-    {
-      "@type": "Offer",
-      name: "Quick Website Fix",
-      url: buildCanonicalUrl("/contact"),
-      category: "Website support",
-      description:
-        "Small website edits, frontend fixes, content updates, form checks, and quick launch cleanup for simple scopes.",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: "INR",
-        minPrice: "999",
-      },
-      availability: "https://schema.org/InStock",
-      itemOffered: {
-        "@type": "Service",
-        name: "Quick website fix",
-        serviceType: "Website support",
-      },
-    },
-    {
-      "@type": "Offer",
-      name: "Website Development Under Rs. 10,000",
-      url: buildCanonicalUrl("/website-development-under-10000"),
-      category: "Website development",
-      description:
-        "Focused one-page websites, starter portfolios, and simple launch pages with clear scope.",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: "INR",
-        price: "9999",
-      },
-      availability: "https://schema.org/InStock",
-      itemOffered: {
-        "@type": "Service",
-        name: "Budget website development",
-        serviceType: "Website development",
-      },
-    },
-    {
-      "@type": "Offer",
-      name: "Website Development Services",
-      url: buildCanonicalUrl("/website-development"),
-      category: "Website development",
-      description:
-        "Business website development for startups and small businesses that need SEO-ready structure, clear pages, and launch support.",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: "INR",
-        minPrice: "14999",
-      },
-      availability: "https://schema.org/InStock",
-      itemOffered: {
-        "@type": "Service",
-        name: "Website development services",
-        serviceType: "Website development services",
-      },
-    },
-    {
-      "@type": "Offer",
-      name: "SEO Services",
-      url: buildCanonicalUrl("/seo-services"),
-      category: "Search engine optimization",
-      description:
-        "Technical SEO setup, page structure, metadata, schema, sitemap, internal links, and focused SEO repair for small business websites.",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: "INR",
-        minPrice: "9999",
-      },
-      availability: "https://schema.org/InStock",
-      itemOffered: {
-        "@type": "Service",
-        name: "SEO services",
-        serviceType: "SEO services",
-      },
-    },
-    {
-      "@type": "Offer",
-      name: "App Development",
-      url: buildCanonicalUrl("/app-development"),
-      category: "Application development",
-      description:
-        "Web and mobile app development scoped around practical workflows, MVPs, dashboards, and product flows.",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: "INR",
-        minPrice: "49999",
-      },
-      availability: "https://schema.org/InStock",
-      itemOffered: {
-        "@type": "Service",
-        name: "App development",
-        serviceType: "App development services",
-      },
-    },
-    {
-      "@type": "Offer",
-      name: "AI Automation Services",
-      url: buildCanonicalUrl("/ai-automation"),
-      category: "Business automation",
-      description:
-        "AI automation services for small teams that need lead handling, workflow systems, and prompt-driven operations.",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: "INR",
-        minPrice: "14999",
-      },
-      availability: "https://schema.org/InStock",
-      itemOffered: {
-        "@type": "Service",
-        name: "AI automation services",
-        serviceType: "AI automation services",
-      },
-    },
-  ],
+  itemListElement: primaryServices.map((service) => ({
+    "@type": "Offer",
+    name: service.title,
+    url: buildCanonicalUrl(service.path),
+    description: "Custom quote based on agreed scope and deliverables.",
+    itemOffered: { "@type": "Service", name: service.title, serviceType: service.title },
+  })),
 } as const;
 
 export const serviceOfferCatalogSchema = {

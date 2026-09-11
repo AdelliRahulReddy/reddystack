@@ -24,7 +24,7 @@ const about_content: DataType = {
   subtitle: "About Reddystack",
   award_title: "Founder-led by Rahul Reddy",
   award_des: "Based in Hyderabad, serving India and global clients",
-  about_des: <>Reddystack is a founder-led digital service brand helping startups, founders, and businesses launch <span>SEO websites, applications, MVPs, and automations</span> with clear scope, fast delivery, and premium execution. The work stays practical, conversion-aware, and <span>built for real business outcomes</span> instead of unnecessary complexity.</>,
+  about_des: <>Founder-led by Rahul Reddy Adelli, Reddystack helps small businesses and growing brands attract customers through <span>ads, creative content, websites, and SEO.</span> Based in Hyderabad and working remotely across India and worldwide, we bring <span>clear scope, direct communication, and practical delivery</span> to every project.</>,
   counter_data: [
     { id: 1, count: 15, text: "Projects In Development" },
     { id: 2, count: 6, text: "Years of Learning" },

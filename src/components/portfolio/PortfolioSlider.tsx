@@ -56,7 +56,7 @@ const PortfolioSlider = () => {
             <div className="porfolio-inner__overlay">
               <div className="porfolio-inner__text-1">
                 <h1 className="porfolio-inner__slider-title tp_title_anim">
-                  Selected Projects <br /> Built & Shipped.
+                  Selected Work <br /> From Reddystack.
                 </h1>
               </div>
               <Slider {...setting} className="porfolio-inner__slider-active">

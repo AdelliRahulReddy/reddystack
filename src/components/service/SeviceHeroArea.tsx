@@ -21,29 +21,39 @@ interface DataType {
 
 const hero_content: DataType = {
   subtitle: "Services",
-  title: "SEO Websites, Applications, MVPs & Automations",
+  title: "Ads, Creative, Websites & SEO",
   serrvice_list: [
-    {
-      id: 1,
-      delay: ".3s",
-      title: "SEO Websites"
-    },
-    {
-      id: 2,
-      delay: ".5s",
-      title: "Applications",
-    },
-    {
-      id: 3,
-      delay: ".7s",
-      title: "MVP Builds",
-    },
-    {
-      id: 4,
-      delay: ".9s",
-      title: "AI Automations",
-    },
-  ],
+  {
+    "id": 1,
+    "delay": ".2s",
+    "title": "Meta Ads"
+  },
+  {
+    "id": 2,
+    "delay": ".3s",
+    "title": "Google Ads"
+  },
+  {
+    "id": 3,
+    "delay": ".4s",
+    "title": "Ad Creatives"
+  },
+  {
+    "id": 4,
+    "delay": ".5s",
+    "title": "AI UGC-Style Videos"
+  },
+  {
+    "id": 5,
+    "delay": ".6s",
+    "title": "Website Development"
+  },
+  {
+    "id": 6,
+    "delay": ".7s",
+    "title": "SEO & Local SEO"
+  }
+],
   slider_images_1: [
     slider_img_1, slider_img_2,
     slider_img_1, slider_img_2,

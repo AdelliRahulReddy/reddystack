@@ -27,33 +27,33 @@ interface DataType {
 
 
 const service_content: DataType = {
-  subtitle: "MY PROCESS",
-  title: <>How I <br /> Build Your Projects</>,
-  sm_info: <>I offer AI-powered services to help elevate <br /> your brand & drive results.</>,
+  subtitle: "HOW WE WORK",
+  title: <>From Your Goal <br /> to Delivery</>,
+  sm_info: <>Clear scope, direct communication, <br /> and work built around your business.</>,
   btn_text: <>Ready to start your project? <span>Let&apos;s Talk</span></>,
   service_data: [
     {
       id: 1,
       icon: <StrategyIcno />,
       title: <>Discovery <br /> & Strategy</>,
-      sm_des: <>I understand your goals, audience, and <br /> define a clear roadmap.</>,
+      sm_des: <>We review your goals, audience, offer, <br /> and budget before agreeing the scope.</>,
       tag_1: "Research",
       tag_2: "Planning",
     },
     {
       id: 2,
       icon: <LeadershipIcon />,
-      title: <>AI-Powered <br /> Building</>,
-      sm_des: <>I use AI tools and vibe coding to build <br /> fast, SEO-optimized solutions.</>,
-      tag_1: "Vibe Coding",
-      tag_2: "Prompt Engineering",
+      title: <>Create <br /> & Launch</>,
+      sm_des: <>We prepare campaigns, creative, or website work <br /> for your review before launch.</>,
+      tag_1: "Your Feedback",
+      tag_2: "Clear Deliverables",
     },
     {
       id: 3,
       icon: <DevelopmentIcon />,
       title: <>Launch <br /> & Optimize</>,
-      sm_des: <>I deploy, test, and optimize to ensure <br /> everything runs smoothly.</>,
-      tag_1: "SEO Setup",
+      sm_des: <>We check the agreed work, review results, <br /> and plan improvements where needed.</>,
+      tag_1: "Reporting",
       tag_2: "Performance",
     },
   ]

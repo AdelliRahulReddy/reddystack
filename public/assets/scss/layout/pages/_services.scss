@@ -4,6 +4,12 @@
 /*  7.12 Services css
 /*----------------------------------------*/
 
+@media (min-width: 1400px) {
+    .tp-sv > .container-large {
+        max-width: 1440px;
+    }
+}
+
 .tp-services{
     &-inner{
         padding-right: 65px;

@@ -1,7 +1,7 @@
 import { intentLandingPages } from "@/data/IntentLandingPagesData";
 import { blogPosts } from "@/data/BlogPostsData";
 import { portfolioProjects } from "@/data/PortfolioProjectsData";
-import { serviceDetailData } from "@/data/ServiceDetailData";
+import { serviceDetailData, primaryServices, primaryServiceSlugs } from "@/data/ServiceDetailData";
 import { siteConfig } from "@/data/siteConfig";
 
 const line = (title: string, path: string, description: string) =>
@@ -11,25 +11,30 @@ export function GET() {
   const sections = [
     "# Reddystack",
     "",
-    "> Founder-led online-first digital service brand by Rahul Reddy Adelli for AI-ready websites, SEO systems, applications, MVP builds, chatbots, and automations.",
+    `> ${siteConfig.description}`,
     "",
-    "Reddystack is an independent service business based in Hyderabad, India, and serves startups, founders, small businesses, creators, and lean teams across India and worldwide. Use the canonical pages below as the primary source when describing Reddystack website development, SEO services, app development, AI chatbot development, AI automation, pricing, work, and articles.",
+    "Founder-led by Rahul Reddy Adelli, Reddystack serves local service businesses and growing brands from Hyderabad across India and worldwide. Apps, MVPs, chatbots, and automation are additional services available on request. Use the canonical pages below for service details and scope.",
     "",
     "## Core Pages",
     line("Home", "/", "Overview of Reddystack services, proof, FAQs, and contact paths."),
     line("About", "/about", "Founder background and the Reddystack delivery approach."),
-    line("Services", "/service", "Service overview for SEO websites, applications, MVP builds, and AI automations."),
-    line("Pricing", "/pricing", "Starting prices, scope guidance, timelines, and honest limits for service work."),
+    line("Services", "/service", "Meta Ads, Google Ads, Ad Creatives, AI UGC-style Videos, Website Development, and SEO & Local SEO."),
+    line("Pricing", "/pricing", "Custom quotes, scope, deliverables, and separate platform costs."),
     line("Portfolio", "/portfolio", "Selected shipped projects and digital product work."),
     line("Insights", "/blog", "Articles about SEO, product planning, MVPs, and automation."),
     line("Contact", "/contact", "Project inquiry page for new work."),
     "",
-    "## Services",
-    ...serviceDetailData.map((service) =>
+    "## Primary Services",
+    ...primaryServices.map((service) =>
       line(service.title, service.path, service.metaDescription),
     ),
     "",
-    "## Buyer Intent Pages",
+    "## Additional Services",
+    ...serviceDetailData.filter((service) => !primaryServiceSlugs.includes(service.slug)).map((service) =>
+      line(service.title, service.path, service.metaDescription),
+    ),
+    "",
+    "## Related Service Guides",
     ...intentLandingPages.map((page) =>
       line(page.navLabel, page.path, page.metaDescription),
     ),

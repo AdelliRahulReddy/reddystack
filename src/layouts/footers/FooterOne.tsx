@@ -22,9 +22,9 @@ interface DataType {
 }
 
 const footer_content: DataType = {
-  title: "Start your next build with clarity",
-  title_2: <>Start your next build <br /> with clarity</>,
-  btn_text_1: 'Send Project Brief',
+  title: "Let’s grow your business",
+  title_2: <>Let’s grow <br /> your business</>,
+  btn_text_1: 'Email Your Enquiry',
   footer_data: [
     {
       id: 1,
@@ -69,7 +69,7 @@ const FooterOne = ({ style }: FooterOneProps) => {
     ? "tp-footer__customize black-bg-3"
     : "tp-page-wrapper theme-bg";
   const primaryCtaHref = "/contact";
-  const primaryCtaLabel = "Start Project";
+  const primaryCtaLabel = "Let’s Talk";
 
 
 
@@ -118,7 +118,7 @@ const FooterOne = ({ style }: FooterOneProps) => {
                       <div className="tp-footer-btn text-center">
                         <a className="tp-btn-grey-xl w-100" target="_blank" rel="noopener noreferrer" href={siteConfig.socialLinks.email}>
                           <div>
-                            <span>Send Project Brief</span>
+                            <span>Email Your Enquiry</span>
                           </div>
                         </a>
                       </div>

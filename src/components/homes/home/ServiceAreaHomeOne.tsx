@@ -24,44 +24,44 @@ interface DataType {
 
 const service_content: DataType = {
   subtitle: "Core Services",
-  title: <>What <br /> Reddystack Builds</>,
-  sm_des: <>Reddystack builds landing pages, business websites, apps, MVPs, custom web applications, SEO services, and automation scripts for startups, founders, and growth-focused teams.</>,
+  title: <>How We Help <br /> Your Business Grow</>,
+  sm_des: <>From ads and creative content to websites and search visibility, our six core services help your business reach more customers and turn interest into enquiries.</>,
   accordion_data: [
     {
-      id: 1, tab_id: "One", path: "/website-development", question: "Business Websites & Landing Pages",
-      answer: "We design and build SEO friendly business websites, service pages, and launch pages with strong user experience, clear contact paths, and custom domain setup when needed.",
-      some_features: ["Business Websites", "Landing Pages", "Lead Forms"],
-      linkLabel: "Website Development Services"
+      id: 1, tab_id: "One", path: "/service/meta-ads", question: "Meta Ads",
+      answer: "Reach your audience on Facebook and Instagram with campaigns built around your offer, supported by tracking and ongoing optimisation.",
+      some_features: ["Facebook & Instagram Campaigns", "Conversion Tracking", "Campaign Optimisation"],
+      linkLabel: "Explore Meta Ads"
     },
     {
-      id: 2, tab_id: "Two", path: "/seo-services", question: "SEO Services for Small Businesses",
-      answer: "We shape service pages, metadata, crawl paths, schema, and internal links so small businesses have clearer search visibility and better inquiry flow.",
-      some_features: ["SEO Services", "Service Pages", "Search Visibility"],
-      linkLabel: "SEO Services for Small Businesses"
+      id: 2, tab_id: "Two", path: "/service/google-ads", question: "Google Ads",
+      answer: "Connect with people searching for what you offer through Google Ads campaign setup, conversion tracking, and ongoing optimisation.",
+      some_features: ["Campaign Setup", "Conversion Tracking", "Campaign Optimisation"],
+      linkLabel: "Explore Google Ads"
     },
     {
-      id: 3, tab_id: "Three", path: "/landing-page-development-for-lead-generation", question: "Landing Page Development Services",
-      answer: "We build campaign pages, SaaS pages, app launch pages, and service offer pages with focused messaging, forms, tracking, and one clear conversion action.",
-      some_features: ["Landing Pages", "Lead Generation", "Campaign Tracking"],
-      linkLabel: "Landing Page Development Services"
+      id: 3, tab_id: "Three", path: "/service/ad-creatives", question: "Ad Creatives",
+      answer: "Bring your offer to life with ad images, promotional designs, video editing, and copy tailored to your audience and campaign.",
+      some_features: ["Ad Images & Promotional Designs", "Video Editing", "Ad Copy & Scripts"],
+      linkLabel: "Explore Ad Creatives"
     },
     {
-      id: 4, tab_id: "Four", path: "/mvp-development-for-startup-founders", question: "MVP Development for Startups",
-      answer: "We turn ideas into lean MVPs and application builds with controlled scope, clean flows, and fast execution for a usable first release.",
-      some_features: ["MVP Development", "Startup Validation", "Rapid Execution"],
-      linkLabel: "MVP Development for Startups"
+      id: 4, tab_id: "Four", path: "/service/ai-ugc-videos", question: "AI UGC-Style Videos",
+      answer: "Explain your product or service with AI-presenter videos in a conversational, creator-style format for ads and social content.",
+      some_features: ["AI-Presenter Videos", "Product Demos", "Service Explainers"],
+      linkLabel: "Explore AI Videos"
     },
     {
-      id: 5, tab_id: "Five", path: "/custom-web-application-development-services", question: "Custom Web Applications",
-      answer: "We create dashboards, portals, internal tools, and workflow systems when your business needs users to take action instead of only reading a website.",
-      some_features: ["Custom Web Apps", "Dashboards", "Internal Tools"],
-      linkLabel: "Custom Web Application Development"
+      id: 5, tab_id: "Five", path: "/service/seo-websites", question: "Website Development",
+      answer: "Build a clear online home for your business with websites, online stores, and landing pages that make it easy for visitors to enquire or buy.",
+      some_features: ["Business Websites", "Online Stores", "Landing Pages"],
+      linkLabel: "Explore Website Development"
     },
     {
-      id: 6, tab_id: "Six", path: "/ai-automation", question: "AI Automation Services",
-      answer: "We build practical automation systems that reduce repeated work, improve real time lead handling, and give small teams cleaner operational flow.",
-      some_features: ["AI Automation", "Lead Handling", "Workflow Systems"],
-      linkLabel: "AI Automation Services"
+      id: 6, tab_id: "Six", path: "/service/seo-local-seo", question: "SEO & Local SEO",
+      answer: "Improve your visibility in search with website optimisation and Google Business Profile management, helping customers find your business online and locally.",
+      some_features: ["Website Optimisation", "Local SEO", "Google Business Profile Management"],
+      linkLabel: "Explore SEO Services"
     }
   ]
 }
@@ -90,7 +90,7 @@ const ServiceAreaHomeOne = () => {
             <div className="row gx-0">
 
               <div className="col-xl-6 col-lg-7">
-                <div className="tp-services-wrapper tp-services-capsule-wrapper p-relative pt-100 pr-70" style={{ paddingTop: "100px", }}
+                <div className="tp-services-wrapper tp-services-capsule-wrapper p-relative pt-100 pr-30" style={{ paddingTop: "100px", }}
                   data-tp-throwable-scene="true">
                   <div className="tp-section-title-wrapper tp_text_anim mb-170">
                     <div className="tp-section-title-inner p-relative">
@@ -105,31 +105,31 @@ const ServiceAreaHomeOne = () => {
                       <span className="tp-services-capsule-item" style={{ backgroundColor: "#00CC97" }}>Websites</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FF759C" }}>Apps</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FF759C" }}>Meta Ads</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FFDB59", color: "#121212" }}>Under Rs. 10k</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FFDB59", color: "#121212" }}>Google Ads</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#19B3F1" }}>Custom Web Apps</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#19B3F1" }}>Ad Creatives</span>
                     </p>
                     <p data-tp-throwable-el="">
                       <span className="tp-services-capsule-item" style={{ backgroundColor: "#FF759C" }}>Landing Pages</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#00CC97" }}>Affordable Websites</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#00CC97" }}>Online Stores</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FFDB59", color: "#121212" }}>MVPs</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FFDB59", color: "#121212" }}>Ad Copy</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#19B3F1" }}>SEO Websites</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#19B3F1" }}>SEO & Local SEO</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FF759C" }}>AI Automations</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FF759C" }}>AI UGC Videos</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#00CC97" }}>Performance</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#00CC97" }}>Video Editing</span>
                     </p>
                     {/* Keep the image shapes at the bottom */}
                     <p data-tp-throwable-el="">
@@ -183,7 +183,7 @@ const ServiceAreaHomeOne = () => {
                             </ul>
                             <div className="pt-20">
                               <Link href={item.path} className="tp-btn-border-sm">
-                                Explore {item.linkLabel}
+                                {item.linkLabel}
                               </Link>
                             </div>
                           </div>

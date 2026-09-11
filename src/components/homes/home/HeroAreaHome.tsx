@@ -27,7 +27,7 @@ const hero_content: DataType = {
     "Website Development",
     "SEO & Local SEO",
   ],
-  sub_title: "REDDYSTACK · DIGITAL MARKETING & WEB DEVELOPMENT",
+  sub_title: "DIGITAL MARKETING & WEBSITES",
   title_1: "Ads, Creative & Websites That Help Your Business Grow.",
   title_2_line_1: "",
   title_2_line_2: "",

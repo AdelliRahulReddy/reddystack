@@ -12,7 +12,7 @@ interface DataType {
 const faq_content: DataType = {
   subtitle: "FAQs",
   title: <>Common Questions</>,
-  sm_des: <>Clear answers for founders and businesses exploring websites, apps, MVPs, and automations with Reddystack.</>,
+  sm_des: <>Answers about ads, creative content, websites, SEO, and working with Reddystack.</>,
 };
 
 const { subtitle, title, sm_des } = faq_content;

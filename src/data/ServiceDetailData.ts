@@ -64,13 +64,393 @@ const sharedImages = {
 };
 
 export const serviceDetailData: ServiceDetail[] = [
+{
+  "slug": "meta-ads",
+  "path": "/service/meta-ads",
+  "subtitle": "Facebook & Instagram Campaigns",
+  "title": "Meta Ads",
+  "introPrimary": "Reach potential customers on Facebook and Instagram with campaigns built around your offer and business goals.",
+  "introSecondary": "For local service businesses, product brands, and growing companies. Work directly with Rahul Reddy to agree the scope and review the work.",
+  "overviewPrimary": "We review your offer, audience, existing account, and campaign goal before launch. Campaigns can support enquiries, online sales, or awareness depending on the agreed scope.",
+  "overviewSecondary": "Your business retains ownership of its advertising account. We agree account access, tracking requirements, campaign assets, and reporting before work begins.",
+  "features": [
+    "Campaign planning and audience research",
+    "Facebook and Instagram campaign setup",
+    "Conversion tracking checks",
+    "Ongoing optimisation and agreed reporting"
+  ],
+  "closingSummary": "Tell us about your business and goals to get a custom quote.",
+  "sideTitle": "What We Can Help With",
+  "categories": [
+    "Campaign planning and audience research",
+    "Facebook and Instagram campaign setup",
+    "Conversion tracking checks",
+    "Ongoing optimisation and agreed reporting"
+  ],
+  "highlightTitle": [
+    "Meta Ads",
+    "for your business"
+  ],
+  "highlightText": "Reach potential customers on Facebook and Instagram with campaigns built around your offer and business goals.",
+  "metaTitle": "Meta Ads Services | Reddystack",
+  "metaDescription": "Reach potential customers on Facebook and Instagram with campaigns built around your offer and business goals.",
+  "presentation": {
+    "showVisuals": false,
+    "showSidebar": true,
+    "faqTitle": "Meta Ads Questions",
+    "faqDescription": "Scope, expectations, and next steps.",
+    "showFaqShapes": false
+  },
+  "pricingTitle": "Custom Quotes",
+  "pricingText": "Fees depend on the agreed deliverables, timeline, and support. Your quote states inclusions, exclusions, revisions, and separate platform or tool costs.",
+  "processTitle": "How We Work",
+  "processSteps": [
+    {
+      "label": "Agree the brief",
+      "text": "Review your business, goals, assets, and budget."
+    },
+    {
+      "label": "Prepare and review",
+      "text": "Create the agreed work and get your feedback."
+    },
+    {
+      "label": "Deliver and improve",
+      "text": "Check the deliverables and agree any ongoing support."
+    }
+  ],
+  "faqItems": [
+    {
+      "question": "Does the management fee include ad spend?",
+      "answer": "No. Advertising spend is separate from campaign management and any creative production fees. Your quote identifies each cost. Results depend on the offer, audience, budget, website, and market conditions.",
+      "some_features": [
+        "Campaign planning and audience research",
+        "Facebook and Instagram campaign setup",
+        "Conversion tracking checks"
+      ]
+    },
+    {
+      "question": "How do we get started?",
+      "answer": "Use the enquiry form or WhatsApp to share your goal and current website or profile. We will discuss the scope before providing a custom quote.",
+      "some_features": [
+        "Your Goals",
+        "Clear Scope",
+        "Custom Quote"
+      ]
+    }
+  ],
+  heroImage: serviceThumbnail
+},
+{
+  "slug": "google-ads",
+  "path": "/service/google-ads",
+  "subtitle": "Campaign Setup & Optimisation",
+  "title": "Google Ads",
+  "introPrimary": "Connect with people looking for your products or services through Google Ads campaigns and conversion tracking.",
+  "introSecondary": "For local service businesses, product brands, and growing companies. Work directly with Rahul Reddy to agree the scope and review the work.",
+  "overviewPrimary": "We review search intent, your offer, landing pages, and budget to choose a campaign scope that fits your business. Tracking is checked before performance is assessed.",
+  "overviewSecondary": "Ongoing work focuses on relevant traffic and the actions that matter to your business. Reporting and review frequency are agreed in your proposal.",
+  "features": [
+    "Goal and keyword planning",
+    "Campaign setup and ad copy",
+    "Conversion tracking checks",
+    "Search-term review, optimisation, and reporting"
+  ],
+  "closingSummary": "Tell us about your business and goals to get a custom quote.",
+  "sideTitle": "What We Can Help With",
+  "categories": [
+    "Goal and keyword planning",
+    "Campaign setup and ad copy",
+    "Conversion tracking checks",
+    "Search-term review, optimisation, and reporting"
+  ],
+  "highlightTitle": [
+    "Google Ads",
+    "for your business"
+  ],
+  "highlightText": "Connect with people looking for your products or services through Google Ads campaigns and conversion tracking.",
+  "metaTitle": "Google Ads Services | Reddystack",
+  "metaDescription": "Connect with people looking for your products or services through Google Ads campaigns and conversion tracking.",
+  "presentation": {
+    "showVisuals": false,
+    "showSidebar": true,
+    "faqTitle": "Google Ads Questions",
+    "faqDescription": "Scope, expectations, and next steps.",
+    "showFaqShapes": false
+  },
+  "pricingTitle": "Custom Quotes",
+  "pricingText": "Fees depend on the agreed deliverables, timeline, and support. Your quote states inclusions, exclusions, revisions, and separate platform or tool costs.",
+  "processTitle": "How We Work",
+  "processSteps": [
+    {
+      "label": "Agree the brief",
+      "text": "Review your business, goals, assets, and budget."
+    },
+    {
+      "label": "Prepare and review",
+      "text": "Create the agreed work and get your feedback."
+    },
+    {
+      "label": "Deliver and improve",
+      "text": "Check the deliverables and agree any ongoing support."
+    }
+  ],
+  "faqItems": [
+    {
+      "question": "Do I need a website or landing page?",
+      "answer": "Most campaigns need a suitable destination and a clear conversion action. We review your existing website first; landing page work can be quoted separately when needed.",
+      "some_features": [
+        "Goal and keyword planning",
+        "Campaign setup and ad copy",
+        "Conversion tracking checks"
+      ]
+    },
+    {
+      "question": "How do we get started?",
+      "answer": "Use the enquiry form or WhatsApp to share your goal and current website or profile. We will discuss the scope before providing a custom quote.",
+      "some_features": [
+        "Your Goals",
+        "Clear Scope",
+        "Custom Quote"
+      ]
+    }
+  ],
+  heroImage: serviceThumbnail
+},
+{
+  "slug": "ad-creatives",
+  "path": "/service/ad-creatives",
+  "subtitle": "Design, Editing, Copy & Scripts",
+  "title": "Ad Creatives",
+  "introPrimary": "Turn your offer into ad images, promotional designs, edited videos, and copy for your campaigns.",
+  "introSecondary": "For local service businesses, product brands, and growing companies. Work directly with Rahul Reddy to agree the scope and review the work.",
+  "overviewPrimary": "We start with your audience, offer, brand assets, and campaign objective. The brief defines formats, dimensions, quantities, and the message each asset should communicate.",
+  "overviewSecondary": "You review the proposed direction before the final assets are prepared. Filming, stock assets, voiceovers, source files, and usage rights are included only when specified in the quote.",
+  "features": [
+    "Ad images and promotional designs",
+    "Video editing and platform formats",
+    "Ad copy, hooks, and scripts",
+    "Agreed versions and revision rounds"
+  ],
+  "closingSummary": "Tell us about your business and goals to get a custom quote.",
+  "sideTitle": "What We Can Help With",
+  "categories": [
+    "Ad images and promotional designs",
+    "Video editing and platform formats",
+    "Ad copy, hooks, and scripts",
+    "Agreed versions and revision rounds"
+  ],
+  "highlightTitle": [
+    "Ad Creatives",
+    "for your business"
+  ],
+  "highlightText": "Turn your offer into ad images, promotional designs, edited videos, and copy for your campaigns.",
+  "metaTitle": "Ad Creatives Services | Reddystack",
+  "metaDescription": "Turn your offer into ad images, promotional designs, edited videos, and copy for your campaigns.",
+  "presentation": {
+    "showVisuals": false,
+    "showSidebar": true,
+    "faqTitle": "Ad Creatives Questions",
+    "faqDescription": "Scope, expectations, and next steps.",
+    "showFaqShapes": false
+  },
+  "pricingTitle": "Custom Quotes",
+  "pricingText": "Fees depend on the agreed deliverables, timeline, and support. Your quote states inclusions, exclusions, revisions, and separate platform or tool costs.",
+  "processTitle": "How We Work",
+  "processSteps": [
+    {
+      "label": "Agree the brief",
+      "text": "Review your business, goals, assets, and budget."
+    },
+    {
+      "label": "Prepare and review",
+      "text": "Create the agreed work and get your feedback."
+    },
+    {
+      "label": "Deliver and improve",
+      "text": "Check the deliverables and agree any ongoing support."
+    }
+  ],
+  "faqItems": [
+    {
+      "question": "How many designs or revisions are included?",
+      "answer": "The quote specifies the number of assets, versions, formats, and revision rounds. Additional concepts or changes outside the agreed brief can be quoted separately.",
+      "some_features": [
+        "Ad images and promotional designs",
+        "Video editing and platform formats",
+        "Ad copy, hooks, and scripts"
+      ]
+    },
+    {
+      "question": "How do we get started?",
+      "answer": "Use the enquiry form or WhatsApp to share your goal and current website or profile. We will discuss the scope before providing a custom quote.",
+      "some_features": [
+        "Your Goals",
+        "Clear Scope",
+        "Custom Quote"
+      ]
+    }
+  ],
+  heroImage: serviceThumbnail
+},
+{
+  "slug": "ai-ugc-videos",
+  "path": "/service/ai-ugc-videos",
+  "subtitle": "AI Presenters, Demos & Explainers",
+  "title": "AI UGC-Style Videos",
+  "introPrimary": "Explain your product or service through conversational AI-presenter videos designed for ads and social content.",
+  "introSecondary": "For local service businesses, product brands, and growing companies. Work directly with Rahul Reddy to agree the scope and review the work.",
+  "overviewPrimary": "We agree the script, presenter style, language, length, and intended use before production. You can supply product footage, screenshots, and brand assets to support the story.",
+  "overviewSecondary": "These are AI-generated, creator-style videos. They are not presented as genuine customer testimonials or real customer experiences. Presenter permissions and asset rights are checked for the agreed use.",
+  "features": [
+    "AI-presenter videos",
+    "Product demonstrations using supplied assets",
+    "Service explainer scripts",
+    "Editing, captions, and agreed export formats"
+  ],
+  "closingSummary": "Tell us about your business and goals to get a custom quote.",
+  "sideTitle": "What We Can Help With",
+  "categories": [
+    "AI-presenter videos",
+    "Product demonstrations using supplied assets",
+    "Service explainer scripts",
+    "Editing, captions, and agreed export formats"
+  ],
+  "highlightTitle": [
+    "AI UGC-Style Videos",
+    "for your business"
+  ],
+  "highlightText": "Explain your product or service through conversational AI-presenter videos designed for ads and social content.",
+  "metaTitle": "AI UGC-Style Videos Services | Reddystack",
+  "metaDescription": "Explain your product or service through conversational AI-presenter videos designed for ads and social content.",
+  "presentation": {
+    "showVisuals": false,
+    "showSidebar": true,
+    "faqTitle": "AI UGC-Style Videos Questions",
+    "faqDescription": "Scope, expectations, and next steps.",
+    "showFaqShapes": false
+  },
+  "pricingTitle": "Custom Quotes",
+  "pricingText": "Fees depend on the agreed deliverables, timeline, and support. Your quote states inclusions, exclusions, revisions, and separate platform or tool costs.",
+  "processTitle": "How We Work",
+  "processSteps": [
+    {
+      "label": "Agree the brief",
+      "text": "Review your business, goals, assets, and budget."
+    },
+    {
+      "label": "Prepare and review",
+      "text": "Create the agreed work and get your feedback."
+    },
+    {
+      "label": "Deliver and improve",
+      "text": "Check the deliverables and agree any ongoing support."
+    }
+  ],
+  "faqItems": [
+    {
+      "question": "Is this the same as hiring a real UGC creator?",
+      "answer": "No. This service uses AI presenters and production tools. Live filming and human creator partnerships are separate scopes; the final content should accurately represent the product and the presenter.",
+      "some_features": [
+        "AI-presenter videos",
+        "Product demonstrations using supplied assets",
+        "Service explainer scripts"
+      ]
+    },
+    {
+      "question": "How do we get started?",
+      "answer": "Use the enquiry form or WhatsApp to share your goal and current website or profile. We will discuss the scope before providing a custom quote.",
+      "some_features": [
+        "Your Goals",
+        "Clear Scope",
+        "Custom Quote"
+      ]
+    }
+  ],
+  heroImage: serviceThumbnail
+},
+{
+  "slug": "seo-local-seo",
+  "path": "/service/seo-local-seo",
+  "subtitle": "Website Optimisation & Local Visibility",
+  "title": "SEO & Local SEO",
+  "introPrimary": "Help customers find your business through website optimisation and Google Business Profile management.",
+  "introSecondary": "For local service businesses, product brands, and growing companies. Work directly with Rahul Reddy to agree the scope and review the work.",
+  "overviewPrimary": "We review your website, services, target locations, and existing search presence. Priorities are based on the gaps that affect how customers find and understand your business.",
+  "overviewSecondary": "Local SEO can include accurate business information, profile updates, service information, and a practical review-request process. Work is scoped around your actual locations and business details.",
+  "features": [
+    "Website and technical SEO review",
+    "On-page content and metadata optimisation",
+    "Google Business Profile management",
+    "Local visibility checks and agreed reporting"
+  ],
+  "closingSummary": "Tell us about your business and goals to get a custom quote.",
+  "sideTitle": "What We Can Help With",
+  "categories": [
+    "Website and technical SEO review",
+    "On-page content and metadata optimisation",
+    "Google Business Profile management",
+    "Local visibility checks and agreed reporting"
+  ],
+  "highlightTitle": [
+    "SEO & Local SEO",
+    "for your business"
+  ],
+  "highlightText": "Help customers find your business through website optimisation and Google Business Profile management.",
+  "metaTitle": "SEO & Local SEO Services | Reddystack",
+  "metaDescription": "Help customers find your business through website optimisation and Google Business Profile management.",
+  "presentation": {
+    "showVisuals": false,
+    "showSidebar": true,
+    "faqTitle": "SEO & Local SEO Questions",
+    "faqDescription": "Scope, expectations, and next steps.",
+    "showFaqShapes": false
+  },
+  "pricingTitle": "Custom Quotes",
+  "pricingText": "Fees depend on the agreed deliverables, timeline, and support. Your quote states inclusions, exclusions, revisions, and separate platform or tool costs.",
+  "processTitle": "How We Work",
+  "processSteps": [
+    {
+      "label": "Agree the brief",
+      "text": "Review your business, goals, assets, and budget."
+    },
+    {
+      "label": "Prepare and review",
+      "text": "Create the agreed work and get your feedback."
+    },
+    {
+      "label": "Deliver and improve",
+      "text": "Check the deliverables and agree any ongoing support."
+    }
+  ],
+  "faqItems": [
+    {
+      "question": "Can you guarantee a ranking or a result date?",
+      "answer": "No. Search performance depends on competition, website condition, content, and platform changes. We agree the work and reporting, then review progress over time without promising a particular position.",
+      "some_features": [
+        "Website and technical SEO review",
+        "On-page content and metadata optimisation",
+        "Google Business Profile management"
+      ]
+    },
+    {
+      "question": "How do we get started?",
+      "answer": "Use the enquiry form or WhatsApp to share your goal and current website or profile. We will discuss the scope before providing a custom quote.",
+      "some_features": [
+        "Your Goals",
+        "Clear Scope",
+        "Custom Quote"
+      ]
+    }
+  ],
+  heroImage: serviceThumbnail
+},
   {
     slug: 'seo-websites',
     path: '/service/seo-websites',
-    subtitle: 'Visibility & Conversion',
-    title: 'SEO Website Development',
+    subtitle: 'Business Websites, Online Stores & Landing Pages',
+    title: 'Website Development',
     introPrimary:
-      'SEO website development at Reddystack is planned to rank cleanly, communicate clearly, and convert attention into inquiries. The structure, page hierarchy, speed, and messaging are treated as part of the build from day one instead of being patched in later.',
+      'Reddystack builds business websites, online stores, and landing pages that explain your offer and make it easy to enquire or buy. Structure, mobile usability, and clear contact paths are planned from the start.',
     introSecondary:
       'This service is best for startups, local businesses, and founder-led brands that need a premium website with stronger search visibility and a cleaner path to leads.',
     overviewPrimary:
@@ -79,7 +459,7 @@ export const serviceDetailData: ServiceDetail[] = [
       'Landing page builds, service page systems, and launch support can sit inside this service when the website also needs stronger positioning, better lead flow, or cleaner rollout execution.',
     features: [
       'Keyword-aware website development, site structure, and service page planning',
-      'Responsive business website builds and landing page implementation',
+      'Responsive business websites, online stores, and landing pages',
       'On-page SEO setup, performance tuning, and crawl-friendly markup',
       'Conversion-focused sections, CTAs, forms, and launch support',
     ],
@@ -96,7 +476,7 @@ export const serviceDetailData: ServiceDetail[] = [
     highlightTitle: ['Search-ready', 'websites'],
     highlightText:
       'Built for brands that need visibility, clarity, and stronger conversion from their online presence.',
-    metaTitle: 'SEO Website Development Services | Reddystack',
+    metaTitle: 'Website Development Services | Reddystack',
     metaDescription:
       'SEO website development services by Reddystack for startups and small businesses that need responsive websites, service pages, performance, and lead-ready structure.',
     faqItems: [
@@ -318,12 +698,16 @@ export const serviceDetailData: ServiceDetail[] = [
   },
 ];
 
+export const primaryServiceSlugs = ["meta-ads", "google-ads", "ad-creatives", "ai-ugc-videos", "seo-websites", "seo-local-seo"];
+export const primaryServices = primaryServiceSlugs.map((slug) => serviceDetailData.find((service) => service.slug === slug)!);
+
 export function getServiceDetail(slug: string) {
   return serviceDetailData.find((service) => service.slug === slug);
 }
 
 export function getAdjacentServices(slug: string) {
-  const currentIndex = serviceDetailData.findIndex((service) => service.slug === slug);
+  const services = primaryServiceSlugs.includes(slug) ? primaryServices : serviceDetailData.filter((service) => !primaryServiceSlugs.includes(service.slug));
+  const currentIndex = services.findIndex((service) => service.slug === slug);
 
   if (currentIndex === -1) {
     return {
@@ -333,8 +717,8 @@ export function getAdjacentServices(slug: string) {
   }
 
   const previousService =
-    serviceDetailData[(currentIndex - 1 + serviceDetailData.length) % serviceDetailData.length];
-  const nextService = serviceDetailData[(currentIndex + 1) % serviceDetailData.length];
+    services[(currentIndex - 1 + services.length) % services.length];
+  const nextService = services[(currentIndex + 1) % services.length];
 
   return {
     previousService,

@@ -3,14 +3,12 @@ import React from 'react';
 import Slider from "react-slick";
 
 const marquee_data = [
-  'Mobile Apps',
-  'Landing Pages',
-  'Websites',
-  'WordPress',
-  'SEO Websites',
-  'MVP Builds',
-  'AI Automations',
-  'Web Apps',
+  "Meta Ads",
+  "Google Ads",
+  "Ad Creatives",
+  "AI UGC-Style Videos",
+  "Website Development",
+  "SEO & Local SEO"
 ];
 
 const setting = {

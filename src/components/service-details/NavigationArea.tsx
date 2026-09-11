@@ -26,7 +26,7 @@ const NavigationArea = ({ previousService, nextService }: NavigationAreaProps) =
               </div>
               <div className="col-xl-4 col-lg-4 col-md-4 col-12">
                 <div className="porfolio-details__navigation-bar text-center">
-                  <Link href="/service">
+                  <Link href="/service" aria-label="View all services">
                     <span>
                       <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                         xmlns="http://www.w3.org/2000/svg">

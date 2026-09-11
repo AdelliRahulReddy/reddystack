@@ -41,15 +41,16 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
   const [isFocused3, setIsFocused3] = useState<boolean>(false);
   const [isFocused4, setIsFocused4] = useState<boolean>(false);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-  const [activeCategory, setActiveCategory] = useState<number | null>(1);
+  const [activeCategory, setActiveCategory] = useState<number | null>(null);
 
 
   const { register, handleSubmit, reset, formState: { errors }, } = useForm<FormData>({ resolver: yupResolver(schema), });
   const onSubmit = async (data: FormData) => {
+    if (isSubmitting) return;
     setIsSubmitting(true);
 
     try {
-      const budget = activeCategory !== null ? budget_categorys[activeCategory]?.title : '';
+      const budget = activeCategory !== null ? budget_categorys[activeCategory]?.title : 'Not specified';
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -80,6 +81,7 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
       setIsFocused3(false);
       setIsFocused4(false);
       reset();
+      setActiveCategory(null);
     } catch (error) {
       const message =
         error instanceof Error ? error.message : 'Unable to send the message right now.';
@@ -127,7 +129,7 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
   };
 
   const handleItemClick = (index: number) => {
-    setActiveCategory(index);
+    setActiveCategory(activeCategory === index ? null : index);
   };
 
 
@@ -142,30 +144,30 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
             <div className="row gx-20">
               <div className="col-xxl-6 col-xl-6 col-lg-6">
                 <div className="postbox__comment-input mb-35">
-                  <input type="text" className="inputText" {...register("name")} onFocus={handleFocus} onBlur={handleBlur} />
-                  <span className={`floating-label ${isFocused ? 'floating-label-floated' : ''}`}>Your  Name</span>
-                  <p className="form_error">{errors.name?.message}</p>
+                  <input type="text" autoComplete="name" className="inputText" id="contact-name" aria-invalid={Boolean(errors.name)} aria-describedby="contact-name-error" {...register("name")} onFocus={handleFocus} onBlur={handleBlur} />
+                  <label htmlFor="contact-name" className={`floating-label ${isFocused ? 'floating-label-floated' : ''}`}>Your  Name</label>
+                  <p className="form_error" id="contact-name-error">{errors.name?.message}</p>
                 </div>
               </div>
               <div className="col-xxl-6 col-xl-6 col-lg-6">
                 <div className="postbox__comment-input mb-35">
-                  <input type="text" className="inputText" {...register("company")} onFocus={handleFocus2} onBlur={handleBlur2} />
-                  <span className={`floating-label ${isFocused2 ? 'floating-label-floated' : ''}`}>Company</span>
-                  <p className="form_error">{errors.company?.message}</p>
+                  <input type="text" className="inputText" id="contact-company" aria-invalid={Boolean(errors.company)} aria-describedby="contact-company-error" {...register("company")} onFocus={handleFocus2} onBlur={handleBlur2} />
+                  <label htmlFor="contact-company" className={`floating-label ${isFocused2 ? 'floating-label-floated' : ''}`}>Company</label>
+                  <p className="form_error" id="contact-company-error">{errors.company?.message}</p>
                 </div>
               </div>
               <div className="col-xxl-12">
                 <div className="postbox__comment-input mb-35">
-                  <input type="text" className="inputText" {...register("email")} onFocus={handleFocus3} onBlur={handleBlur3} />
-                  <span className={`floating-label ${isFocused3 ? 'floating-label-floated' : ''}`}>Your Email</span>
-                  <p className="form_error">{errors.email?.message}</p>
+                  <input type="email" autoComplete="email" className="inputText" id="contact-email" aria-invalid={Boolean(errors.email)} aria-describedby="contact-email-error" {...register("email")} onFocus={handleFocus3} onBlur={handleBlur3} />
+                  <label htmlFor="contact-email" className={`floating-label ${isFocused3 ? 'floating-label-floated' : ''}`}>Your Email</label>
+                  <p className="form_error" id="contact-email-error">{errors.email?.message}</p>
                 </div>
               </div>
               <div className="col-xxl-12">
                 <div className="postbox__comment-input mb-20">
-                  <textarea className="textareaText" {...register("message")} onFocus={handleFocus4} onBlur={handleBlur4}></textarea>
-                  <span className={`floating-label-2 ${isFocused4 ? 'floating-label-floated' : ''}`}>Your Comment</span>
-                  <p className="form_error">{errors.message?.message}</p>
+                  <textarea className="textareaText" id="contact-message" aria-invalid={Boolean(errors.message)} aria-describedby="contact-message-error" {...register("message")} onFocus={handleFocus4} onBlur={handleBlur4}></textarea>
+                  <label htmlFor="contact-message" className={`floating-label-2 ${isFocused4 ? 'floating-label-floated' : ''}`}>Tell us what you need</label>
+                  <p className="form_error" id="contact-message-error">{errors.message?.message}</p>
                 </div>
               </div>
             </div>
@@ -173,18 +175,15 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
           <div className="row">
             <div className="col-xl-12">
               <div className="contact-inner__category mb-45">
-                <h4 className="contact-inner__category-title">Project budget (INR)</h4>
+                <h4 className="contact-inner__category-title">Budget range (optional, INR)</h4>
                 <div className="contact-inner__category-wrapper">
 
                   {budget_categorys.map((item, index) => (
-                    <label key={index} htmlFor={item.id}
+                    <button key={index} type="button"
+                      aria-pressed={activeCategory === index}
                       onClick={() => handleItemClick(index)}
                       className={`contact-budget-btn ${activeCategory === index ? 'active' : ''}`}
-                    >{item.title}</label>
-                  ))}
-
-                  {budget_categorys.map((item, index) => (
-                    <input key={index} type="radio" name="contact_budget" id={item.id} />
+                    >{item.title}</button>
                   ))}
 
                 </div>
@@ -194,9 +193,9 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
           <div className="row">
             <div className="col-xxl-12">
               <div className="postbox__comment-btn">
-                <button type="submit" className="tp-btn-grey-lg">
+                <button type="submit" className="tp-btn-grey-lg" disabled={isSubmitting} aria-busy={isSubmitting}>
                   <span>
-                    <i>{isSubmitting ? 'Sending...' : 'Request Free Audit'}</i>
+                    <i>{isSubmitting ? 'Sending...' : 'Send Enquiry'}</i>
                   </span>
                 </button>
               </div>

@@ -9,7 +9,7 @@ const Breadcrumb = () => {
           <div className="row">
             <div className="blog-list__title-box">
               <span className="blog-list__subtitle tp-char-animation">Insights Archive</span>
-              <h1 className="blog-list__title tp-char-animation">Insights on websites, apps,<br /> MVPs, and automations.</h1>
+              <h1 className="blog-list__title tp-char-animation">Ideas for ads, creative,<br /> websites, and SEO.</h1>
             </div>
           </div>
         </div>

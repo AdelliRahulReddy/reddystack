@@ -8,51 +8,94 @@ export type HomeFaqItem = {
 
 export const homeFaqItems: HomeFaqItem[] = [
   {
-    id: 1,
-    tab_id: "FaqOne",
-    question: "What does Reddystack build?",
-    answer:
-      "Reddystack builds website development services, SEO websites, mobile apps, custom web applications, MVPs, landing pages, and AI automation systems for startups, founders, and businesses that need practical digital execution.",
-    some_features: ["Website Development", "Mobile Apps", "AI Automation"],
+    "id": 1,
+    "tab_id": "Faq1",
+    "question": "What can Reddystack help my business with?",
+    "answer": "Our six primary services are Meta Ads, Google Ads, Ad Creatives, AI UGC-style Videos, Website Development, and SEO & Local SEO. Related design, editing, copy, landing pages, and Google Business Profile work sit within these services.",
+    "some_features": [
+      "Meta Ads",
+      "Google Ads",
+      "Ad Creatives",
+      "AI UGC-Style Videos",
+      "Website Development",
+      "SEO & Local SEO"
+    ]
   },
   {
-    id: 2,
-    tab_id: "FaqTwo",
-    question: "Who is Reddystack best for?",
-    answer:
-      "The service is best suited for startups, founder-led brands, and growing businesses that want clear scope, premium execution, and leaner delivery without traditional agency overhead.",
-    some_features: ["Startups", "Founder-led Brands", "Growing Businesses"],
+    "id": 2,
+    "tab_id": "Faq2",
+    "question": "Who do you work with?",
+    "answer": "We work with local service businesses, product and ecommerce brands, and growing companies. Reddystack is based in Hyderabad and supports clients across India and worldwide through direct communication with Rahul Reddy.",
+    "some_features": [
+      "Local Businesses",
+      "Growing Brands",
+      "Remote Delivery"
+    ]
   },
   {
-    id: 3,
-    tab_id: "FaqThree",
-    question: "Do you work only in Hyderabad?",
-    answer:
-      "No. Reddystack is based in Hyderabad and works with clients across India and international markets. The delivery model is built to support both local and remote projects.",
-    some_features: ["Hyderabad", "India", "Worldwide"],
+    "id": 3,
+    "tab_id": "Faq3",
+    "question": "Are advertising spend and management fees separate?",
+    "answer": "Yes. Ad spend goes to the advertising platform and is separate from campaign management. Creative production and tracking work are scoped in the proposal so you can see what is included.",
+    "some_features": [
+      "Platform Spend",
+      "Management",
+      "Clear Scope"
+    ]
   },
   {
-    id: 4,
-    tab_id: "FaqFour",
-    question: "Can Reddystack build a website under Rs. 10,000?",
-    answer:
-      "Yes, when the scope is focused. A simple one-page website, starter portfolio, or launch page can fit under Rs. 10,000 when content, custom design depth, integrations, and extra pages stay limited.",
-    some_features: ["Website Under 10k", "One-page Website", "Starter Site"],
+    "id": 4,
+    "tab_id": "Faq4",
+    "question": "Are AI UGC-style videos real customer testimonials?",
+    "answer": "No. They use AI presenters and production tools for product demos, ads, and service explainers. We distinguish generated presenter content from real customer experiences.",
+    "some_features": [
+      "AI Presenters",
+      "Product Demos",
+      "Service Explainers"
+    ]
   },
   {
-    id: 5,
-    tab_id: "FaqFive",
-    question: "Do you only build websites?",
-    answer:
-      "No. Reddystack builds landing pages, business websites, web apps, mobile-first apps, MVPs, custom web applications, chatbot flows, and automation scripts. The right scope depends on whether the project needs a marketing page, a full business website, a usable product, or a workflow that saves repeated manual work.",
-    some_features: ["Landing Pages", "Apps", "Automation Scripts"],
+    "id": 5,
+    "tab_id": "Faq5",
+    "question": "Do you still offer apps, MVPs, and automation?",
+    "answer": "Yes. Apps, MVPs, chatbots, and automation are secondary services, available on request when they support your business goals. We agree their scope separately.",
+    "some_features": [
+      "Apps & MVPs",
+      "Chatbots",
+      "Automation"
+    ]
   },
   {
-    id: 6,
-    tab_id: "FaqSix",
-    question: "How do projects usually start?",
-    answer:
-      "Projects usually begin with a quick conversation through WhatsApp or the contact form. From there, the work is shaped into a quick fix, a starter package, or a custom quote based on scope.",
-    some_features: ["Quick Fix", "Starter Package", "Custom Quote"],
+    "id": 6,
+    "tab_id": "Faq6",
+    "question": "How do pricing, ownership, and revisions work?",
+    "answer": "We provide a custom quote with deliverables, revision rounds, fees, and any separate platform costs. Ownership, account access, handover, and ongoing support are agreed in the proposal before work begins.",
+    "some_features": [
+      "Custom Quotes",
+      "Revisions",
+      "Handover"
+    ]
   },
+  {
+    "id": 7,
+    "tab_id": "Faq7",
+    "question": "Can you guarantee leads, sales, or SEO rankings?",
+    "answer": "No. Results depend on your offer, audience, budget, competition, website, and platform changes. We agree measurable goals and reporting so progress can be reviewed honestly.",
+    "some_features": [
+      "Goals",
+      "Reporting",
+      "Review"
+    ]
+  },
+  {
+    "id": 8,
+    "tab_id": "Faq8",
+    "question": "How do I get started?",
+    "answer": "Send an enquiry or message us on WhatsApp with your business details, the service you need, and your goal. We will discuss the next step and prepare a quote for the agreed scope.",
+    "some_features": [
+      "Enquiry Form",
+      "WhatsApp",
+      "Custom Quote"
+    ]
+  }
 ];

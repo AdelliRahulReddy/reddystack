@@ -16,6 +16,10 @@ html[tp-theme='tp-theme-dark']{
 
 html[tp-theme='tp-theme-light']{
 
+    & .tp-services-area.black-bg-3 {
+        background-color: #F6F9FF;
+    }
+
     & .tp-header-4__area {
         &.tp-header-sticky-cloned::after {
             background: rgba(255, 255, 255, 0.7);
@@ -128,8 +132,13 @@ html[tp-theme='tp-theme-light']{
     & .tp-hero-content > span {
         color: var(--tp-common-black-5);
     }
-    & .tp-hero-title {
+    & .tp-hero-title,
+    & .tp-hero-title .tp-hero-title-static {
         color: var(--tp-common-black-5);
+    }
+    & .tp-hero-btn .tp-btn-border-sm {
+        color: var(--tp-common-black-5);
+        border-color: rgba(37, 37, 37, 0.35);
     }
     & .tp-hero-content p {
         color: rgba(37, 37, 37, 0.70);

@@ -38,35 +38,34 @@ const featuredBlogPosts = getRecentBlogPosts(3);
 
 const price_content: DataType = {
   subtitle: "Pricing",
-  title: <>Affordable <br /> Starting&nbsp;Packages</>,
+  title: <>Clear Scope. <br /> Custom Quotes.</>,
   priceing_data: [
     {
       tab_id: "home",
       tab_content: "Pricing",
       tab_items: [
-        {
-          time: "Quick Fix",
-          info_1: "Starting at",
-          info_2: "Small edits, bug fixes, form checks, content updates",
-          price: "₹999",
-          btn_text: "Request Quick Fix",
-        },
-        {
-          time: "Website Under 10k",
-          info_1: "Starting at",
-          info_2: "One-page sites, portfolios, launch pages",
-          price: "₹9,999",
-          btn_text: "See Budget Scope",
-          path: "/website-development-under-10000",
-        },
-        {
-          time: "Growth Build",
-          info_1: "Starting from",
-          info_2: <>SEO websites, MVPs, apps, <br /> AI automations, and chatbot flows</>,
-          price: "₹24,999+",
-          btn_text: "Get Custom Quote",
-        }
-      ]
+  {
+    "time": "Ads & SEO",
+    "info_1": "Ongoing support",
+    "info_2": "Meta Ads, Google Ads, and SEO. Scope and reporting agreed upfront; ad spend is separate.",
+    "btn_text": "Get a Custom Quote",
+    "path": "/contact"
+  },
+  {
+    "time": "Creative & Video",
+    "info_1": "Per project or content package",
+    "info_2": "Ad designs, copy, video editing, and AI UGC-style videos. Deliverables and revisions agreed upfront.",
+    "btn_text": "Get a Custom Quote",
+    "path": "/contact"
+  },
+  {
+    "time": "Website Development",
+    "info_1": "Project-based delivery",
+    "info_2": "Business websites, online stores, and landing pages. Pages, integrations, and support scoped to your needs.",
+    "btn_text": "Get a Custom Quote",
+    "path": "/contact"
+  }
+]
     },
     {
       tab_id: "blog",
@@ -135,7 +134,7 @@ const PriceAreaHomeOne = ({ style }: PriceAreaHomeOneProps) => {
               {style ?
                 <div className="sv-inner__price-title-box text-center">
                   <h4 className="tp-section-title-3 tp_title_anim">Services & Pricing</h4>
-                  <p className="tp_title_anim">Realistic starting ranges with final scope confirmed before work starts.</p>
+                  <p className="tp_title_anim">Custom quotes with deliverables, fees, and scope agreed before work starts.</p>
                 </div>
                 :
                 <div className="tp-pcb-tab blog-btn-tab d-flex justify-content-center mb-80">

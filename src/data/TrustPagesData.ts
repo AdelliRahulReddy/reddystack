@@ -57,7 +57,7 @@ export const trustPages: Record<TrustPageSlug, TrustPageData> = {
       {
         title: "Website use",
         body: [
-          "The Reddystack website is provided for general information about website development, apps, MVPs, SEO-ready pages, AI automation, pricing guidance, portfolio work, and project contact paths.",
+          "The Reddystack website provides information about ads, creative content, AI UGC-style videos, websites, SEO, pricing, and portfolio work. Apps, MVPs, chatbots, and automation are additional services available on request.",
           "Information on the website is not a guarantee of results, rankings, revenue, traffic, or platform approval.",
         ],
       },
@@ -102,7 +102,7 @@ export const trustPages: Record<TrustPageSlug, TrustPageData> = {
       {
         title: "Refunds and cancellations",
         body: [
-          "Because website, app, MVP, and automation work is custom service work, refund eligibility depends on the project stage, work already completed, and the written agreement for that scope.",
+          "Because this is custom service work, refund eligibility depends on the project stage, work already completed, and the written agreement for that scope.",
           "If a project is cancelled before work starts, the refund or adjustment should follow the agreed payment terms for that project.",
         ],
       },

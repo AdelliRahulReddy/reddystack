@@ -8,6 +8,11 @@
 - no DB, auth, CMS, server actions
 
 ## Core Rules
+- primary offering: Meta Ads, Google Ads, Ad Creatives, AI UGC-Style Videos, Website Development, SEO & Local SEO
+- audience: local service businesses and growing brands; founder-led by Rahul Reddy
+- pricing: custom quotes; advertising spend separate from management fees
+- apps, MVPs, chatbots, and automation remain secondary services
+- local review first; do not push until the user explicitly approves the final version
 - frontend must follow `AGENT_SOURCE_RULES.md`
 - source template: `C:\Users\adell\Documents\diego-next-js`
 - no custom redesign unless user approves

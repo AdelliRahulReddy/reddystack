@@ -1,4 +1,5 @@
 import { siteConfig } from "@/data/siteConfig";
+import { serviceDetailData } from "@/data/ServiceDetailData";
 import { blogPosts } from "@/data/BlogPostsData";
 import { intentLandingPages } from "@/data/IntentLandingPagesData";
 import { portfolioProjects } from "@/data/PortfolioProjectsData";
@@ -20,10 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { path: "/privacy-policy", changeFrequency: "yearly", priority: 0.3 },
       { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
       { path: "/revision-policy", changeFrequency: "yearly", priority: 0.3 },
-      { path: "/service/seo-websites", changeFrequency: "monthly", priority: 0.8 },
-      { path: "/service/applications", changeFrequency: "monthly", priority: 0.8 },
-      { path: "/service/mvp-builds", changeFrequency: "monthly", priority: 0.8 },
-      { path: "/service/ai-automations", changeFrequency: "monthly", priority: 0.8 },
+      ...serviceDetailData.map((service) => ({ path: service.path, changeFrequency: "monthly" as const, priority: 0.8 })),
       ...intentLandingPages.map((page) => ({
         path: page.path,
         changeFrequency: "monthly" as const,

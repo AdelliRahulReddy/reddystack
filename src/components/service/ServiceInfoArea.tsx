@@ -7,7 +7,7 @@ import ServiceMobileIcon from '@/svg/service/ServiceMobileIcon';
 import ServiceSoftwareIcon from '@/svg/service/ServiceSoftwareIcon';
 import ServiceWebIcon from '@/svg/service/ServiceWebIcon';
 import StarIcon from '@/svg/service/StarIcon';
-import { intentLandingPages } from '@/data/IntentLandingPagesData';
+import { serviceDetailData, primaryServices, primaryServiceSlugs } from '@/data/ServiceDetailData';
 
 interface DataType {
   description: React.JSX.Element;
@@ -33,33 +33,8 @@ const getIntentIcon = (relatedServiceSlug: string) => {
 };
 
 const service_info_content: DataType = {
-  description: <>Core website development, app, MVP, and <br /> AI automation services for businesses that need <br /> launch-ready execution and practical digital systems.</>,
-  service_data: [
-    {
-      id: 1,
-      icon: <ServiceWebIcon />,
-      title: 'SEO Website Development',
-      href: '/service/seo-websites',
-    },
-    {
-      id: 2,
-      icon: <ServiceMobileIcon />,
-      title: 'Web & Mobile Applications',
-      href: '/service/applications',
-    },
-    {
-      id: 3,
-      icon: <ServiceDevelopmentIcon />,
-      title: 'MVP Development Services',
-      href: '/service/mvp-builds',
-    },
-    {
-      id: 4,
-      icon: <ServiceSoftwareIcon />,
-      title: 'AI Automation Services',
-      href: '/service/ai-automations',
-    },
-  ],
+  description: <>Six services to help small businesses and growing brands attract customers through ads, creative content, websites, and SEO.</>,
+  service_data: primaryServices.map((service, index) => ({ id: index + 1, icon: <ServiceWebIcon />, title: service.title, href: service.path })),
 };
 
 const { description, service_data } = service_info_content;
@@ -119,20 +94,20 @@ const ServiceInfoArea = () => {
                     <span>
                       <StarIcon />
                     </span>{' '}
-                    Buyer Intent Pages
+                    Additional Services
                   </h4>
                 </div>
               </div>
               <div className="col-xl-8">
                 <div className="sv-inner__service-category-wrap">
-                  {intentLandingPages.map((page) => (
+                  {serviceDetailData.filter((service) => !primaryServiceSlugs.includes(service.slug)).map((page) => (
                     <div key={page.slug} className="sv-inner__service-category">
                       <Link className="d-flex align-items-center justify-content-between" href={page.path}>
                         <div className="sv-inner__service-category-content">
                           <span>
-                            {getIntentIcon(page.relatedServiceSlug)}
+                            {getIntentIcon(page.slug)}
                           </span>
-                          <span>{page.navLabel}</span>
+                          <span>{page.title}</span>
                         </div>
                         <div className="sv-inner__service-category-link">
                           <span>
