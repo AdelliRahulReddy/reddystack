@@ -87,7 +87,7 @@ export const metadata: Metadata = {
         url: `${siteConfig.siteUrl}${siteSeo.ogImagePath}`,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.ownerName} - ${siteSeo.siteName}`,
+        alt: siteSeo.ogImageAlt,
       },
     ],
   },

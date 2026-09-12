@@ -38,6 +38,12 @@ for (const url of urls) {
   const response = await fetch(`${base}${path}`, { redirect: 'manual' });
   assert.equal(response.status, 200, `${path}: status`);
   const html = await response.text();
+  for (const [attribute, tag] of [['property', 'og:image'], ['name', 'twitter:image']]) {
+    const image = html.match(new RegExp(`<meta ${attribute}="${tag}" content="([^"]+)"`))?.[1];
+    assert.ok(image?.startsWith(`${origin}/`), `${path}: ${tag} must use an absolute site image URL`);
+    assert.ok(!image.includes('/hero/hero-img.png'), `${path}: ${tag} still uses the Diego portrait`);
+  }
+  assert.ok(!html.includes('/assets/img/logo/logo-black.png'), `${path}: outdated Diego logo reference`);
   assert.equal((html.match(/<h1(?:\s|>)/g) || []).length, 1, `${path}: one H1`);
   assert.ok(!/<meta[^>]+name="robots"[^>]+content="[^"]*noindex/.test(html), `${path}: noindex`);
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];

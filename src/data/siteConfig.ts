@@ -9,8 +9,9 @@ export const siteSeo = {
   defaultDescription:
     "Reddystack helps small businesses and growing brands attract customers through ads, creative content, websites, and SEO.",
   creatorHandle: "@reddystack",
-  logoPath: "/assets/img/logo/logo-black.png",
-  ogImagePath: "/assets/img/hero/hero-img.png",
+  logoPath: "/assets/img/logo/favicon.png",
+  ogImagePath: "/assets/img/social/reddystack-share-v1.png",
+  ogImageAlt: "Reddystack — Ads, Creative & Websites That Grow Your Business.",
 } as const;
 
 export const siteConfig = {
@@ -236,7 +237,7 @@ export const buildOpenGraph = (options: {
   images: options.images || [
     buildSeoImage(
       siteSeo.ogImagePath,
-      `${siteConfig.ownerName} - ${siteSeo.siteName}`,
+      siteSeo.ogImageAlt,
     ),
   ],
   publishedTime: options.publishedTime,
