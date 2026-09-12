@@ -13,22 +13,22 @@ const ServiceDetailsArea = ({ service }: ServiceDetailsAreaProps) => {
   const showVisuals = service.presentation?.showVisuals ?? true;
   const showSidebar = service.presentation?.showSidebar ?? true;
   const leftColumnClass = showSidebar ? 'col-xl-7 col-lg-7' : 'col-xl-12 col-lg-12';
-  const bannerColumnClass = showSidebar ? 'offset-xl-4 col-xl-5' : 'col-xl-8 col-lg-10';
+  const bannerColumnClass = 'col-xl-8 col-lg-10';
 
   return (
-    <div className="service-details__area service-details__space pt-200 pb-120 black-bg-3">
+    <div className="service-details__area service-details__space pt-160 pb-90 black-bg-3">
       <div className="container">
         <div className="row">
           <div className="col-xl-12">
-            <div className="service-details__title-box mb-40">
+            <div className="service-details__title-box mb-30">
               <span className="service-details__subtitle tp-char-animation">{service.subtitle}</span>
               <h1 className="service-details__title tp-char-animation">{service.title}</h1>
             </div>
           </div>
           <div className="row">
             <div className={bannerColumnClass}>
-              <div className="service-details__banner-text mb-80">
-                <p className="mb-30 tp_title_anim">{service.introPrimary}</p>
+              <div className="service-details__banner-text mb-50">
+                <p className="mb-15 tp_title_anim">{service.introPrimary}</p>
                 <p className="tp_title_anim">{service.introSecondary}</p>
               </div>
             </div>

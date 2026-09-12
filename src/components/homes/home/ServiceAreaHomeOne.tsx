@@ -24,42 +24,42 @@ interface DataType {
 
 const service_content: DataType = {
   subtitle: "Core Services",
-  title: <>How We Help <br /> Your Business Grow</>,
-  sm_des: <>From ads and creative content to websites and search visibility, our six core services help your business reach more customers and turn interest into enquiries.</>,
+  title: <>Services to Grow <br /> Your Business</>,
+  sm_des: <>Reach customers, explain your offer, and turn interest into enquiries with our six core services.</>,
   accordion_data: [
     {
       id: 1, tab_id: "One", path: "/service/meta-ads", question: "Meta Ads",
-      answer: "Reach your audience on Facebook and Instagram with campaigns built around your offer, supported by tracking and ongoing optimisation.",
+      answer: "Reach potential customers on Facebook and Instagram with campaigns built around your offer.",
       some_features: ["Facebook & Instagram Campaigns", "Conversion Tracking", "Campaign Optimisation"],
       linkLabel: "Explore Meta Ads"
     },
     {
       id: 2, tab_id: "Two", path: "/service/google-ads", question: "Google Ads",
-      answer: "Connect with people searching for what you offer through Google Ads campaign setup, conversion tracking, and ongoing optimisation.",
+      answer: "Connect with people searching for your products or services on Google.",
       some_features: ["Campaign Setup", "Conversion Tracking", "Campaign Optimisation"],
       linkLabel: "Explore Google Ads"
     },
     {
       id: 3, tab_id: "Three", path: "/service/ad-creatives", question: "Ad Creatives",
-      answer: "Bring your offer to life with ad images, promotional designs, video editing, and copy tailored to your audience and campaign.",
+      answer: "Make your offer stand out with visuals, video, and copy tailored to your campaign.",
       some_features: ["Ad Images & Promotional Designs", "Video Editing", "Ad Copy & Scripts"],
       linkLabel: "Explore Ad Creatives"
     },
     {
       id: 4, tab_id: "Four", path: "/service/ai-ugc-videos", question: "AI UGC-Style Videos",
-      answer: "Explain your product or service with AI-presenter videos in a conversational, creator-style format for ads and social content.",
+      answer: "Explain your product or service with conversational AI-presenter videos for ads and social content.",
       some_features: ["AI-Presenter Videos", "Product Demos", "Service Explainers"],
       linkLabel: "Explore AI Videos"
     },
     {
       id: 5, tab_id: "Five", path: "/service/seo-websites", question: "Website Development",
-      answer: "Build a clear online home for your business with websites, online stores, and landing pages that make it easy for visitors to enquire or buy.",
+      answer: "Give your business an online home that makes it easy for visitors to enquire or buy.",
       some_features: ["Business Websites", "Online Stores", "Landing Pages"],
       linkLabel: "Explore Website Development"
     },
     {
       id: 6, tab_id: "Six", path: "/service/seo-local-seo", question: "SEO & Local SEO",
-      answer: "Improve your visibility in search with website optimisation and Google Business Profile management, helping customers find your business online and locally.",
+      answer: "Help customers find your business in Google Search, Maps, and local results.",
       some_features: ["Website Optimisation", "Local SEO", "Google Business Profile Management"],
       linkLabel: "Explore SEO Services"
     }
@@ -79,7 +79,7 @@ const ServiceAreaHomeOne = () => {
     <>
       <section className="tp-services-area tp-sv tp-services-bg-text-animation fix" id="tp-sv">
         <div className="container container-large">
-          <div className="tp-services-inner pb-195 p-relative z-index-1">
+          <div className="tp-services-inner pb-100 p-relative z-index-1">
 
             <span className="tp-services-inner-border tp-vertical-line transition-3"></span>
             <span className="tp-services-inner-border right tp-vertical-line transition-3"></span>
@@ -95,7 +95,7 @@ const ServiceAreaHomeOne = () => {
                   <div className="tp-section-title-wrapper tp_text_anim mb-170">
                     <div className="tp-section-title-inner p-relative">
                       <span className="tp-section-subtitle">{subtitle}</span>
-                      <h3 className="tp-section-title tp_title_anim">{title}</h3>
+                      <h2 className="tp-section-title tp_title_anim">{title}</h2>
                     </div>
                     <p>{sm_des}</p>
                   </div>

@@ -760,14 +760,14 @@
     }
     &__title{
         font-weight: 500;
-        font-size: 100px;
-        line-height: 1;
+        font-size: clamp(56px, 5.5vw, 80px);
+        line-height: 1.08;
         letter-spacing: -0.01em;
         color: var(--tp-common-white);
         font-family: var(--tp-ff-didoneright);  
         text-transform: capitalize;
         @media #{$md}{
-            font-size: 85px;
+            font-size: 64px;
         }
         @media #{$xs}{
             font-size: clamp(36px, 11vw, 58px);
@@ -838,10 +838,14 @@
         }
     }
     &__left-text{
+        & .tp-section-title-3 {
+            font-size: clamp(28px, 3vw, 40px);
+            line-height: 1.15;
+        }
         & .text-1{
             font-weight: 400;
-            font-size: 30px;
-            line-height: 38px;
+            font-size: clamp(22px, 2.2vw, 30px);
+            line-height: 1.4;
             color: var(--tp-common-white);
             padding-bottom: 20px;
             font-family: var(--tp-ff-didoneright);
@@ -854,7 +858,7 @@
         }
     }
     &__fea-list{
-        margin-bottom: 90px;
+        margin-bottom: 45px;
         & ul{
             & li{
                 font-weight: 500;
@@ -897,15 +901,15 @@
     &__right{
         &-wrap{
             background-color: rgba(255, 255, 255, 0.1);
-            padding: 100px 30px;
-            margin-left: 70px;
+            padding: 50px 30px;
+            margin-left: 35px;
             @media #{$md,$xs}{
                 margin-left: 0;
                 margin-top: 60px;
             }
         }
         &-category{
-            margin-bottom: 200px;
+            margin-bottom: 50px;
             & a,
             & span{
                 font-weight: 500;
@@ -915,8 +919,10 @@
                 color: var(--tp-ff-didoneright);
                 color: var(--tp-common-white);
                 padding: 0px 20px;
-                height: 40px;
-                line-height: 40px;
+                min-height: 40px;
+                line-height: 1.5;
+                padding-top: 9px;
+                padding-bottom: 9px;
                 border: 1px solid rgba(255, 255, 255, 0.1);
                 border-radius: 100px;
                 transition: .3s;

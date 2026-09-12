@@ -9,10 +9,6 @@ interface DataType {
   slide_text: string[];
   sub_title: string;
   title_1: string;
-  title_2_line_1: string;
-  title_2_line_2: string;
-  mobile_title_2_line_1: string;
-  mobile_title_2_line_2: string;
   sm_info: JSX.Element;
   btn_text: JSX.Element;
 }
@@ -27,13 +23,9 @@ const hero_content: DataType = {
     "SEO & Local SEO",
   ],
   sub_title: "DIGITAL MARKETING & WEBSITES",
-  title_1: "Ads, Creative & Websites That Help Your Business Grow.",
-  title_2_line_1: "",
-  title_2_line_2: "",
-  mobile_title_2_line_1: "",
-  mobile_title_2_line_2: "",
+  title_1: "Ads, Creative & Websites That Grow Your Business.",
   sm_info: <>
-    Reach more customers with Meta and Google Ads, compelling ad creatives, AI UGC-style videos, conversion-focused websites, and SEO.
+    Reach more customers with Meta & Google Ads, ad creatives, AI UGC-style videos, websites, and SEO.
   </>,
   btn_text: <>Let’s <br /> Talk</>,
 }
@@ -41,10 +33,6 @@ const {
   slide_text,
   sub_title,
   title_1,
-  title_2_line_1,
-  title_2_line_2,
-  mobile_title_2_line_1,
-  mobile_title_2_line_2,
   sm_info,
   btn_text
 } = hero_content;
@@ -93,30 +81,10 @@ const HeroAreaHome = () => {
                 <div className="tp-hero-content p-relative z-index-1">
                   <span className="singleLine">{sub_title}</span>
                   <h1 className="tp-hero-title tp_title_anim">
-                    <strong className="tp-hero-title-static">{title_1}</strong> <br />
-                    {title_2_line_1 || title_2_line_2 ? (
-                      <span className="tp-hero-title-secondary d-none d-md-block">
-                        {title_2_line_1 ? (
-                          <span className="tp-hero-title-secondary-line">{title_2_line_1}</span>
-                        ) : null}
-                        {title_2_line_2 ? (
-                          <span className="tp-hero-title-secondary-line">{title_2_line_2}</span>
-                        ) : null}
-                      </span>
-                    ) : null}
-                    {mobile_title_2_line_1 || mobile_title_2_line_2 ? (
-                      <span className="tp-hero-title-secondary tp-hero-title-secondary-mobile d-block d-md-none">
-                        {mobile_title_2_line_1 ? (
-                          <span className="tp-hero-title-secondary-line">{mobile_title_2_line_1}</span>
-                        ) : null}
-                        {mobile_title_2_line_2 ? (
-                          <span className="tp-hero-title-secondary-line">{mobile_title_2_line_2}</span>
-                        ) : null}
-                      </span>
-                    ) : null}
+                    <strong className="tp-hero-title-static">{title_1}</strong>
                   </h1>
                   <p>{sm_info}</p>
-                  <div className="tp-hero-btn wrap">
+                  <div className="tp-hero-btn d-flex align-items-center flex-wrap gap-3">
                     <div className="tp-hover-btn-wrapper tp-btn-bounce">
                       <Link href="/contact" className="tp-hover-btn tp-hover-btn-item tp-btn-circle square">
                         <span className="tp-btn-circle-text" >
@@ -128,8 +96,8 @@ const HeroAreaHome = () => {
                         <i className="tp-btn-circle-dot"></i>
                       </Link>
                     </div>
-                    <Link href="/service" className="tp-btn-border-sm">
-                      Explore Our Services
+                    <Link href="/service" className="tp-btn-border-sm border-0 px-2 text-decoration-underline">
+                      Explore Services
                     </Link>
                   </div>
                   <div className="tp-hero-scroll smooth">
@@ -146,20 +114,20 @@ const HeroAreaHome = () => {
                 <div className="tp-hero-thumb-shape">
                   <span className="tp-hero-thumb-shape-3"></span>
                 </div>
-                <div className="tp-hero-thumb">
+                <button type="button" className="tp-hero-thumb p-0 border-0 bg-transparent"
+                  aria-label={paused ? 'Play illustration' : 'Pause illustration'}
+                  title={paused ? 'Play illustration' : 'Pause illustration'}
+                  onClick={() => { if (paused) animation.current?.play(); else animation.current?.pause(); setPaused(!paused); }}>
                   <Lottie
                     lottieRef={animation}
                     aria-hidden="true"
                     animationData={heroAnimation}
                     loop={true}
                     className="tp-hero-lottie"
-                    rendererSettings={{ preserveAspectRatio: 'xMidYMid meet' }}
+                    // Trim unused canvas below the base, then align the artwork to the bottom.
+                    rendererSettings={{ viewBoxSize: '0 0 1600 1164', preserveAspectRatio: 'xMidYMax meet' }}
                     style={{ width: '100%', height: '100%' }}
                   />
-                </div>
-                <button type="button" className="tp-btn-border-sm" aria-pressed={paused}
-                  onClick={() => { if (paused) animation.current?.play(); else animation.current?.pause(); setPaused(!paused); }}>
-                  {paused ? 'Play illustration' : 'Pause illustration'}
                 </button>
               </div>
             </div>
