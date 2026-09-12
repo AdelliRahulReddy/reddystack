@@ -42,7 +42,7 @@ const ServiceDetailsArea = ({ service }: ServiceDetailsAreaProps) => {
             <div className="col-xl-12">
               <div className="service-details__tab-wrapper text-center mb-120">
                 <div className="service-details__tab-thumb">
-                  <Image data-speed="0.4" src={service.heroImage} style={{ height: 'auto' }} alt={service.title} />
+                  <Image src={service.heroImage} style={{ height: 'auto' }} sizes="100vw" alt={service.title} />
                 </div>
               </div>
             </div>

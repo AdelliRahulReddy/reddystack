@@ -3,9 +3,6 @@ import Link from 'next/link';
 import React, { useEffect, useRef, useState, type JSX } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { getRecentBlogPosts } from '@/data/BlogPostsData';
-import blog_img_3 from "@/assets/img/blog/blog-1.jpg";
-import blog_img_4 from "@/assets/img/blog/blog-2.jpg";
-import blog_img_5 from "@/assets/img/blog/blog-3.jpg";
 
 interface DataType {
   subtitle: string;
@@ -33,7 +30,6 @@ interface DataType {
   }[]
 }
 
-const featuredBlogImages = [blog_img_3, blog_img_4, blog_img_5];
 const featuredBlogPosts = getRecentBlogPosts(3);
 
 const price_content: DataType = {
@@ -70,8 +66,8 @@ const price_content: DataType = {
     {
       tab_id: "blog",
       tab_content: "Blog",
-      tab_items: featuredBlogPosts.map((post, index) => ({
-        img: featuredBlogImages[index] || featuredBlogImages[0],
+      tab_items: featuredBlogPosts.map((post) => ({
+        img: post.cardImage,
         date: post.displayDate,
         title: post.title,
         category: post.categoryLabel,

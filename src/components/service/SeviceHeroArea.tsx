@@ -1,11 +1,8 @@
 'use client';
 import React from 'react';
 import useMedia from 'react-use/lib/useMedia';
-import Image, { StaticImageData } from 'next/image'
-import slider_img_1 from "@/assets/img/services/slider/services-slider-1.jpg";
-import slider_img_2 from "@/assets/img/services/slider/services-slider-2.jpg";
-import slider_img_3 from "@/assets/img/services/slider/services-slider-3.jpg";
-import slider_img_4 from "@/assets/img/services/slider/services-slider-4.jpg";
+import Image from 'next/image';
+import { portfolioProjects, type PortfolioProject } from '@/data/PortfolioProjectsData';
 import Slider from "react-slick";
 
 interface DataType {
@@ -16,8 +13,8 @@ interface DataType {
     delay: string;
     title: string;
   }[];
-  slider_images_1: StaticImageData[];
-  slider_images_2: StaticImageData[];
+  slider_images_1: PortfolioProject[];
+  slider_images_2: PortfolioProject[];
 }
 
 const hero_content: DataType = {
@@ -56,16 +53,10 @@ const hero_content: DataType = {
   }
 ],
   slider_images_1: [
-    slider_img_1, slider_img_2,
-    slider_img_1, slider_img_2,
-    slider_img_1, slider_img_2,
-    slider_img_1, slider_img_2,
+    ...portfolioProjects.slice(0, 3), ...portfolioProjects.slice(0, 3),
   ],
   slider_images_2: [
-    slider_img_3, slider_img_4,
-    slider_img_3, slider_img_4,
-    slider_img_3, slider_img_4,
-    slider_img_3, slider_img_4,
+    ...portfolioProjects.slice(3), ...portfolioProjects.slice(3),
   ]
 }
 
@@ -144,7 +135,7 @@ const SeviceHeroArea = () => {
                       <Slider {...setting_1} autoplay={!reducedMotion} className="sv-inner__slider-active-1">
                         {slider_images_1.map((item, index) => (
                           <div key={index} className="sv-inner__slider-item">
-                            <Image src={item} alt="Reddystack website and application service visual" />
+                            <Image src={item.listingImage} style={{ height: 'auto' }} sizes="(max-width: 767px) 100vw, 25vw" alt={`${item.title} — Reddystack project`} />
                           </div>
                         ))}
                       </Slider>
@@ -155,7 +146,7 @@ const SeviceHeroArea = () => {
                       <Slider {...setting_1} autoplay={!reducedMotion} className="sv-inner__slider-active-2">
                         {slider_images_2.map((item, index) => (
                           <div key={index} className="sv-inner__slider-item">
-                            <Image src={item} alt="Reddystack MVP and automation service visual" />
+                            <Image src={item.listingImage} style={{ height: 'auto' }} sizes="(max-width: 767px) 100vw, 25vw" alt={`${item.title} — Reddystack project`} />
                           </div>
                         ))}
                       </Slider>

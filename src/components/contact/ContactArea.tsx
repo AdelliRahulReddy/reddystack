@@ -2,9 +2,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-import contact_img from "@/assets/img/contact/contact.jpg";
-import contact_flower_img_1 from "@/assets/img/contact/contact-flower.png";
-import contact_flower_img_2 from "@/assets/img/contact/contact-flower-text.png";
+import founderPortrait from "@/assets/img/hero/ab-hero-1.jpg";
+import brandLogo from "@/assets/img/logo/favicon.png";
 import ContactForm from '../forms/ContactForm';
 import { siteConfig } from '@/data/siteConfig';
 
@@ -102,15 +101,14 @@ const ContactArea = () => {
                   <div className="contact-inner__top-section-title-box mb-70">
                     <span className="contact-inner__subtitle">{subtitle}</span>
                     <h1 className="contact-inner__title tp-char-animation tp-hero-3__content">{title_1} {' '}
-                      <span><Image src={contact_img} alt="Reddystack project inquiry" /></span> <br />
+                      <span><Image src={founderPortrait} width={190} height={90} style={{ objectFit: 'cover', objectPosition: 'center 30%' }} alt="Rahul Reddy, founder of Reddystack" /></span> <br />
                       {title_2}
                     </h1>
                   </div>
                 </div>
                 <div className="col-xl-3 col-lg-2 d-none d-sm-block text-end">
                   <div className="contact-inner__shape-1 text-center text-lg-end">
-                    <Image className="flower-img" src={contact_flower_img_1} alt="" />
-                    <Image className="flower-text" src={contact_flower_img_2} alt="" />
+                    <Image src={brandLogo} width={160} height={160} alt="Reddystack logo" />
                   </div>
                 </div>
               </div>

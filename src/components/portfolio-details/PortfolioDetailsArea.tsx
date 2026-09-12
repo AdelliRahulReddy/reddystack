@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import type { PortfolioProject } from '@/data/PortfolioProjectsData';
-import portfolio_details_img_1 from "@/assets/img/portfolio/port-details-2.jpg";
 
 type PortfolioDetailsAreaProps = {
   project: PortfolioProject;
@@ -23,8 +22,8 @@ const PortfolioDetailsArea = ({
           <div className="col-xl-12">
             <div className="porfolio-details__overview-thumb mb-100">
               <Image
-                data-speed="0.6"
-                src={portfolio_details_img_1}
+                src={project.listingImage}
+                sizes="(max-width: 1199px) 100vw, 1170px"
                 style={{ height: 'auto' }}
                 alt={`${project.title} project overview`}
               />

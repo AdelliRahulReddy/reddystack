@@ -38,6 +38,7 @@ for (const url of urls) {
   const response = await fetch(`${base}${path}`, { redirect: 'manual' });
   assert.equal(response.status, 200, `${path}: status`);
   const html = await response.text();
+  assert.doesNotMatch(html, /(?:blog-list-avata-1|user24|user-1|avata-[123]|port-details-2|ab-circle-img|footer-circle-img|contact-flower(?:-text)?|sv-details(?:-[12])?|services-slider-[1-4]|blog-details-big-img|blog-standard-[1-4]|blog-list-[1-7](?:-[12])?|blog-[123](?:-[123]){0,2}|sidebar-[12]|hero-img|logo-black)(?:\.|%2E)/i, `${path}: retired template image reference`);
   for (const [attribute, tag] of [['property', 'og:image'], ['name', 'twitter:image']]) {
     const image = html.match(new RegExp(`<meta ${attribute}="${tag}" content="([^"]+)"`))?.[1];
     assert.ok(image?.startsWith(`${origin}/`), `${path}: ${tag} must use an absolute site image URL`);

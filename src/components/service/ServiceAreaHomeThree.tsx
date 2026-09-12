@@ -2,7 +2,7 @@
 import Link from 'next/link'; 
 import Image from 'next/image';
 import React, { type JSX } from 'react';
-import circle_img from "@/assets/img/footer/footer-circle-img.png";
+import brandLogo from "@/assets/img/logo/favicon.png";
 import service_shape_1 from "@/assets/img/portfolio/shape-1.png";
 import service_shape_2 from "@/assets/img/portfolio/shape-2.png";
 import service_star_icon from "@/assets/img/portfolio/star.png";
@@ -72,7 +72,7 @@ const ServiceAreaHomeThree = ({ style }: ServiceAreaHomeThreeProps) => {
 
         <div className="tp-service-3__circle-img">
           <span className="text-img">
-            <Image src={circle_img} alt="Reddystack delivery process" />
+            <Image src={brandLogo} width={120} height={120} alt="Reddystack logo" />
           </span>
           <div className="shape d-none d-lg-block">
             <svg width="260" height="70" viewBox="0 0 260 70" fill="none" xmlns="http://www.w3.org/2000/svg">

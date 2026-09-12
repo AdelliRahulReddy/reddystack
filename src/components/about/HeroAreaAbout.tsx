@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import about_shape_1 from "@/assets/img/hero/hero-shape-2-1.png";
 import about_signature from "@/assets/img/hero/ab-signature.jpg";
-import about_circle from "@/assets/img/hero/ab-circle-img.png";
+import brandLogo from "@/assets/img/logo/favicon.png";
 import about_img from "@/assets/img/hero/ab-hero-1.jpg";
 import { scroller } from 'react-scroll';
 
@@ -60,7 +60,7 @@ const HeroAreaAbout = () => {
                   <Image src={about_signature} alt="Rahul Reddy signature" />
                 </div>
                 <div className="ab-hero__circle">
-                  <Image className="tp-rotate-center" src={about_circle} alt="Reddystack founder-led digital service badge" />
+                  <Image src={brandLogo} width={130} height={130} alt="Reddystack logo" />
                 </div>
                 <div className="ab-hero__big-img">
                   <Image src={about_img} style={{ height: "auto" }} alt="Rahul Reddy, founder of Reddystack" />

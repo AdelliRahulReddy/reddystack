@@ -1,8 +1,6 @@
 import type { StaticImageData } from 'next/image';
 
-import serviceThumbnail from '@/assets/img/services/sv-details.jpg';
-import serviceThumbOne from '@/assets/img/services/sv-details-1.jpg';
-import serviceThumbTwo from '@/assets/img/services/sv-details-2.jpg';
+import serviceThumbnail from '@/assets/img/social/reddystack-share-v1.png';
 
 export type ServiceDetailPresentation = {
   showVisuals?: boolean;
@@ -61,7 +59,6 @@ export type ServiceDetail = {
 
 const sharedImages = {
   heroImage: serviceThumbnail,
-  supportingImages: [serviceThumbOne, serviceThumbTwo] as [StaticImageData, StaticImageData],
 };
 
 export const serviceDetailData: ServiceDetail[] = [

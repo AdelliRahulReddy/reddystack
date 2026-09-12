@@ -21,14 +21,14 @@ const BreadcrumbBlogDetails = ({ post }: BreadcrumbBlogDetailsProps) => {
               <h1 className="blog-list__title tp-char-animation">{post.title}</h1>
             </div>
             <div className="blog-details__meta mb-70">
-              <span><Image src={post.author.avatar} style={{ height: 'auto' }} alt={post.author.name} /><i>{post.author.name}</i></span>
+              <span><Image src={post.author.avatar} width={46} height={46} style={{ objectFit: 'cover', borderRadius: '50%' }} alt={post.author.name} /><i>{post.author.name}</i></span>
               <span>{post.displayDate}</span>
               <span>{post.readTime}</span>
             </div>
           </div>
         </div>
-        <div className="blog-details__big-thumb text-center ">
-          <Image data-speed="0.7" src={post.heroImage} alt={post.title} />
+        <div className="blog-details__big-thumb text-center h-auto">
+          <Image className="h-auto" src={post.heroImage} sizes="100vw" alt={post.title} />
         </div>
       </div>
     </>

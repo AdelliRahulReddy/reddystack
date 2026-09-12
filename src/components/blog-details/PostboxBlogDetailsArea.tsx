@@ -136,7 +136,7 @@ const PostboxBlogDetailsArea = ({
                     <div className="postbox-details__author-content">
                       <h4>Related Service</h4>
                       <p>
-                        Need similar help for your business? Explore our {relatedPage.title} service.
+                        Need similar help for your business? Explore our {relatedPage.title}.
                       </p>
                     </div>
                     <div className="pt-20 pt-md-0">
@@ -157,7 +157,7 @@ const PostboxBlogDetailsArea = ({
               <div className="postbox-details__author-info-box mb-95 p-relative">
                 <div className="postbox-details__author-wrap d-flex align-items-center">
                   <div className="postbox-details__author-avata">
-                    <Image src={post.author.avatar} alt={post.author.name} />
+                    <Image src={post.author.avatar} width={80} height={80} style={{ objectFit: 'cover', borderRadius: '50%' }} alt={post.author.name} />
                   </div>
                   <div className="postbox-details__author-content">
                     <h4>{post.author.name}</h4>
@@ -213,8 +213,8 @@ const PostboxBlogDetailsArea = ({
                     </div>
                     <div className="row">
                       <div className="col-xl-12">
-                        <div className="postbox-details___related-thumb mb-80">
-                          <Image data-speed="1.1" src={relatedPost.cardImage} alt={relatedPost.title} />
+                        <div className="postbox-details___related-thumb mb-80 h-auto">
+                          <Image className="h-auto" src={relatedPost.cardImage} sizes="(max-width: 1199px) 100vw, 1170px" alt={relatedPost.title} />
                         </div>
                       </div>
                     </div>

@@ -1,37 +1,14 @@
 import type { StaticImageData } from 'next/image';
 
-import authorAvatar from '@/assets/img/users/blog-list-avata-1.png';
-import recentAvatar from '@/assets/img/users/user24.jpg';
-
-import blogHeroOne from '@/assets/img/blog/blog-details-big-img.jpg';
-import blogHeroTwo from '@/assets/img/blog/blog-1.jpg';
-import blogHeroThree from '@/assets/img/blog/blog-standard-1.jpg';
-import blogHeroFour from '@/assets/img/blog/blog-standard-3.jpg';
-import blogHeroFive from '@/assets/img/blog/blog-2.jpg';
-import blogHeroSix from '@/assets/img/blog/blog-3.jpg';
-import blogHeroSeven from '@/assets/img/blog/blog-list-1.jpg';
-import blogHeroEight from '@/assets/img/blog/blog-3-2.jpg';
-
-import blogDetailOne from '@/assets/img/blog/blog-details-4-1.jpg';
-import blogDetailTwo from '@/assets/img/blog/blog-details-4-2.jpg';
-import blogDetailThree from '@/assets/img/blog/blog-standard-2.jpg';
-import blogDetailFour from '@/assets/img/blog/blog-standard-4.jpg';
-import blogDetailFive from '@/assets/img/blog/blog-list-5.jpg';
-import blogDetailSix from '@/assets/img/blog/blog-list-6.jpg';
-import blogDetailSeven from '@/assets/img/blog/blog-list-7.jpg';
-import blogDetailEight from '@/assets/img/blog/blog-list-1-2.jpg';
-
-import blogCardOne from '@/assets/img/blog/blog-3-3-1.jpg';
-import blogCardTwo from '@/assets/img/blog/blog-list-1-1.jpg';
-import blogCardThree from '@/assets/img/blog/blog-list-2.jpg';
-import blogCardFour from '@/assets/img/blog/blog-list-3.jpg';
-import blogCardFive from '@/assets/img/blog/blog-list-4.jpg';
-import blogCardSix from '@/assets/img/blog/blog-3-1.jpg';
-import blogCardSeven from '@/assets/img/blog/blog-3.jpg';
-import blogCardEight from '@/assets/img/blog/blog-1.jpg';
-
-import sidebarImageOne from '@/assets/img/blog/sidebar-1.jpg';
-import sidebarImageTwo from '@/assets/img/blog/sidebar-2.jpg';
+import authorAvatar from '@/assets/img/hero/ab-hero-1.jpg';
+import blogCoverOne from '@/assets/img/insights/how-seo-websites-help-startups-get-better-leads.png';
+import blogCoverTwo from '@/assets/img/insights/landing-pages-vs-seo-websites-what-should-you-launch-first.png';
+import blogCoverThree from '@/assets/img/insights/when-to-build-an-application-instead-of-a-website.png';
+import blogCoverFour from '@/assets/img/insights/how-to-plan-application-features-before-development-starts.png';
+import blogCoverFive from '@/assets/img/insights/how-to-scope-an-mvp-without-overbuilding.png';
+import blogCoverSix from '@/assets/img/insights/what-a-founder-led-mvp-launch-needs-before-release.png';
+import blogCoverSeven from '@/assets/img/insights/ai-automations-small-teams-can-actually-use.png';
+import blogCoverEight from '@/assets/img/insights/prompt-engineering-for-business-workflows-that-save-time.png';
 
 import { siteConfig } from '@/data/siteConfig';
 
@@ -107,10 +84,10 @@ export const blogPosts: BlogPost[] = [
     readTime: '6 min read',
     commentsCount: 2,
     author: rahulAuthor,
-    cardImage: blogCardOne,
-    heroImage: blogHeroOne,
-    detailImage: blogDetailOne,
-    sidebarImage: sidebarImageOne,
+    cardImage: blogCoverOne,
+    heroImage: blogCoverOne,
+    detailImage: blogCoverOne,
+    sidebarImage: blogCoverOne,
     leadParagraphs: [
       'A lot of startup websites are visually acceptable but commercially weak. They launch with generic page structure, unclear service messaging, and no real search strategy behind them. That usually means the site looks finished while failing to generate qualified inbound opportunities.',
       'An SEO website fixes that by treating structure, content, search intent, and conversion flow as part of the build itself. The homepage, service pages, internal linking, page speed, and contact journey all work together to help the business get discovered and understood faster.',
@@ -151,10 +128,10 @@ export const blogPosts: BlogPost[] = [
     readTime: '5 min read',
     commentsCount: 1,
     author: rahulAuthor,
-    cardImage: blogCardTwo,
-    heroImage: blogHeroTwo,
-    detailImage: blogDetailTwo,
-    sidebarImage: sidebarImageTwo,
+    cardImage: blogCoverTwo,
+    heroImage: blogCoverTwo,
+    detailImage: blogCoverTwo,
+    sidebarImage: blogCoverTwo,
     leadParagraphs: [
       'A landing page is usually the better first move when the offer is narrow, the campaign is immediate, and the business mainly needs one clear action. It is fast to launch and easier to test when you already know what the visitor should do next.',
       'A full SEO website makes more sense when the business has multiple services, wants stronger search visibility, or needs a more durable content structure that can grow with the company over time.',
@@ -196,10 +173,10 @@ export const blogPosts: BlogPost[] = [
     readTime: '7 min read',
     commentsCount: 0,
     author: rahulAuthor,
-    cardImage: blogCardThree,
-    heroImage: blogHeroThree,
-    detailImage: blogDetailThree,
-    sidebarImage: sidebarImageOne,
+    cardImage: blogCoverThree,
+    heroImage: blogCoverThree,
+    detailImage: blogCoverThree,
+    sidebarImage: blogCoverThree,
     leadParagraphs: [
       'A website is mainly for explanation, positioning, and conversion. An application is for action. The difference becomes obvious when users need dashboards, recurring interactions, saved data, permissions, or step-by-step workflows that a marketing site cannot realistically handle.',
       'A lot of founders build too much application logic too early. Others stay on brochure-style websites for too long and force people through awkward manual processes. The right answer depends on the behavior the user actually needs to complete.',
@@ -221,7 +198,7 @@ export const blogPosts: BlogPost[] = [
     ],
     tags: ['Applications', 'Product Planning', 'Build Decisions'],
     sidebarVariant: 'slider',
-    sliderImages: [blogCardThree, blogHeroThree, blogDetailThree],
+    sliderImages: [blogCoverThree, blogCoverThree, blogCoverThree],
   },
   {
     slug: 'how-to-plan-application-features-before-development-starts',
@@ -241,10 +218,10 @@ export const blogPosts: BlogPost[] = [
     readTime: '6 min read',
     commentsCount: 3,
     author: rahulAuthor,
-    cardImage: blogCardFour,
-    heroImage: blogHeroFour,
-    detailImage: blogDetailFour,
-    sidebarImage: sidebarImageTwo,
+    cardImage: blogCoverFour,
+    heroImage: blogCoverFour,
+    detailImage: blogCoverFour,
+    sidebarImage: blogCoverFour,
     leadParagraphs: [
       'A weak planning phase usually shows up later as missed deadlines, unclear product decisions, or features that looked useful on paper but do not improve the user journey. The earlier the scope is clarified, the less waste the build will carry.',
       'Good application planning does not try to define everything forever. It focuses on key flows, core roles, critical screens, and release boundaries so the first version is understandable to both the team and the user.',
@@ -285,10 +262,10 @@ export const blogPosts: BlogPost[] = [
     readTime: '6 min read',
     commentsCount: 1,
     author: rahulAuthor,
-    cardImage: blogCardFive,
-    heroImage: blogHeroFive,
-    detailImage: blogDetailFive,
-    sidebarImage: sidebarImageOne,
+    cardImage: blogCoverFive,
+    heroImage: blogCoverFive,
+    detailImage: blogCoverFive,
+    sidebarImage: blogCoverFive,
     leadParagraphs: [
       'An MVP should answer one clear business question. Can users understand the product, complete the core journey, and show enough signal to justify iteration? When scope is shaped around that question, the release gets faster and the product stays easier to improve later.',
       'Overbuilding happens when founders try to satisfy future edge cases before version one has even faced real users. The result is usually slower launch, weaker feedback, and a product that still has not proven its core value.',
@@ -329,10 +306,10 @@ export const blogPosts: BlogPost[] = [
     readTime: '5 min read',
     commentsCount: 0,
     author: rahulAuthor,
-    cardImage: blogCardSix,
-    heroImage: blogHeroSix,
-    detailImage: blogDetailSix,
-    sidebarImage: sidebarImageTwo,
+    cardImage: blogCoverSix,
+    heroImage: blogCoverSix,
+    detailImage: blogCoverSix,
+    sidebarImage: blogCoverSix,
     leadParagraphs: [
       'A founder-led MVP launch does not need enterprise ceremony, but it still needs discipline. The product should have a clear promise, a usable flow, and enough internal visibility that issues can be caught and handled quickly after release.',
       'Launches break down when the team is focused only on coding the product and forgets the surrounding pieces: onboarding clarity, error handling, response flows, support expectations, and what happens after someone first uses the product.',
@@ -373,10 +350,10 @@ export const blogPosts: BlogPost[] = [
     readTime: '6 min read',
     commentsCount: 4,
     author: rahulAuthor,
-    cardImage: blogCardSeven,
-    heroImage: blogHeroSeven,
-    detailImage: blogDetailSeven,
-    sidebarImage: sidebarImageOne,
+    cardImage: blogCoverSeven,
+    heroImage: blogCoverSeven,
+    detailImage: blogCoverSeven,
+    sidebarImage: blogCoverSeven,
     leadParagraphs: [
       'Small teams rarely need experimental AI for the sake of experimentation. They need systems that handle repetitive tasks, reduce missed follow-up, and make operations less dependent on memory or manual checklists.',
       'That could mean routing leads, drafting replies, organizing internal requests, turning form inputs into structured next steps, or helping content and support workflows move faster with less friction.',
@@ -417,10 +394,10 @@ export const blogPosts: BlogPost[] = [
     readTime: '5 min read',
     commentsCount: 2,
     author: rahulAuthor,
-    cardImage: blogCardEight,
-    heroImage: blogHeroEight,
-    detailImage: blogDetailEight,
-    sidebarImage: sidebarImageTwo,
+    cardImage: blogCoverEight,
+    heroImage: blogCoverEight,
+    detailImage: blogCoverEight,
+    sidebarImage: blogCoverEight,
     leadParagraphs: [
       'Prompt engineering is often framed like a trick for getting better chatbot answers. In a business context, it is more useful than that. It becomes part of workflow design, especially when a team wants outputs that are more structured, more reusable, and easier to trust.',
       'That matters in operations, support, content, lead handling, and internal documentation. The goal is not just a “better answer.” The goal is a better process that produces more consistent outputs with less manual rewriting.',
@@ -531,5 +508,3 @@ export const blogSocialLinks = [
     link: siteConfig.socialLinks.telegram,
   },
 ] as const;
-
-export const blogRecentAuthorAvatar = recentAvatar;

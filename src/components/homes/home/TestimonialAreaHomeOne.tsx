@@ -1,13 +1,8 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import Slider from 'react-slick';
 import quote from "@/assets/img/testimonial/quote.svg";
-
-import user_avatar_1 from "@/assets/img/users/user-1.jpg";
-import user_avatar_2 from "@/assets/img/users/avata-1.png";
-import user_avatar_3 from "@/assets/img/users/avata-2.png";
-import user_avatar_4 from "@/assets/img/users/avata-3.png";
 
 import StartIcon from '@/svg/icons/StartIcon';
 import { gsap } from 'gsap';
@@ -25,7 +20,7 @@ interface DataType {
   }[];
   testimonial_nav_data: {
     id: number;
-    img: StaticImageData;
+    initials: string;
     name: string;
     designation: string;
     company: string;
@@ -62,28 +57,28 @@ const testimonial_content: DataType = {
   testimonial_nav_data: [
     {
       id: 1,
-      img: user_avatar_1,
+      initials: "SJ",
       name: "Sarah Jenkins",
       designation: "Founder at",
       company: "GreenPulse",
     },
     {
       id: 2,
-      img: user_avatar_2,
+      initials: "ML",
       name: "Mark Lewis",
       designation: "Product Lead at",
       company: "SkyFlow",
     },
     {
       id: 3,
-      img: user_avatar_3,
+      initials: "PK",
       name: "Priya Kumar",
       designation: "Operations Manager at",
       company: "BrightOps",
     },
     {
       id: 4,
-      img: user_avatar_4,
+      initials: "DR",
       name: "Dave Roberts",
       designation: "Marketing Director at",
       company: "TechEdge",
@@ -254,8 +249,8 @@ const TestimonialAreaHomeOne = ({ style }: TestimonialAreaHomeOneProps) => {
                       <div key={index} className="swiper-slide">
                         <div
                           className="tp-testimonial-user-item d-flex justify-content-center align-items-center">
-                          <div className="tp-testimonial-user-thumb">
-                            <Image src={item.img} alt={`${item.name} testimonial`} />
+                          <div className="tp-testimonial-user-thumb d-flex align-items-center justify-content-center rounded-circle theme-bg-2" aria-hidden="true">
+                            <span className="tp-testimonial-user-title mb-0">{item.initials}</span>
                           </div>
                           <div className="tp-testimonial-user-content">
                             <h3 className="tp-testimonial-user-title">{item.name}</h3>
