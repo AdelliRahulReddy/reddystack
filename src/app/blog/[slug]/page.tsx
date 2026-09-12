@@ -62,7 +62,7 @@ export async function generateMetadata({
       url: canonicalUrl,
       images: [buildSeoImage(post.heroImage, post.title)],
       publishedTime: post.publishedAt,
-      modifiedTime: post.publishedAt,
+      modifiedTime: post.updatedAt || post.publishedAt,
       authors: [post.author.name],
     }),
     twitter: buildTwitterCard({

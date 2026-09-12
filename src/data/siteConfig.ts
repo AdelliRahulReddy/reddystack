@@ -4,10 +4,10 @@ import { primaryServices } from "./ServiceDetailData";
 
 export const siteSeo = {
   siteName: "Reddystack",
-  siteNameAlternates: ["ReddyStack", "Reddystack by Rahul Reddy", "reddystack.com"],
-  defaultTitle: "Digital Marketing & Website Development | Reddystack",
+  siteNameAlternates: ["ReddyStack", "reddystack.com"],
+  defaultTitle: "Reddystack | Digital Marketing & Website Development",
   defaultDescription:
-    "Reddystack helps small businesses and growing brands attract customers through ads, creative content, websites, and SEO.",
+    "Reddystack offers Meta and Google Ads, ad creatives, AI UGC videos, websites, and SEO. Based in Hyderabad, serving businesses in India and worldwide.",
   creatorHandle: "@reddystack",
   logoPath: "/assets/img/logo/favicon.png",
   ogImagePath: "/assets/img/social/reddystack-share-v1.png",
@@ -82,7 +82,7 @@ export const pageSeo = {
     path: "/",
   },
   about: {
-    title: "About Reddystack | Rahul Reddy, Founder-Led Digital Execution",
+    title: "About Reddystack | Founder Rahul Reddy Adelli",
     description:
       "Meet Rahul Reddy, founder of Reddystack, helping small businesses and growing brands with ads, creative content, websites, and SEO.",
     path: "/about",
@@ -100,7 +100,7 @@ export const pageSeo = {
     path: "/portfolio",
   },
   blog: {
-    title: "Insights | Ads, Creative, Websites & SEO",
+    title: "Insights | Ads, Creative, Websites & SEO | Reddystack",
     description:
       "Ideas for ads, creative content, websites, and SEO, alongside our guides to apps and automation.",
     path: "/blog",
@@ -126,7 +126,7 @@ export const pageSeo = {
   terms: {
     title: "Terms of Service | Reddystack",
     description:
-      "Read the basic terms for using the Reddystack website and requesting website, app, MVP, SEO, and automation services.",
+      "Read the terms for using Reddystack and commissioning ads, creative content, AI videos, websites, SEO, and other digital services.",
     path: "/terms",
   },
   revisionPolicy: {
@@ -149,7 +149,7 @@ export const pageSeo = {
     path: "/portfolio-details",
   },
   blogSidebar: {
-    title: "Insights | Ads, Creative, Websites & SEO",
+    title: "Insights | Ads, Creative, Websites & SEO | Reddystack",
     description:
       "Ideas for ads, creative content, websites, and SEO, alongside our guides to apps and automation.",
     path: "/blog-sidebar",
@@ -264,7 +264,7 @@ export const buildPageMetadata = (pageKey: PageSeoKey): Metadata => {
   return {
     title: page.title,
     description: page.description,
-    robots: page.robots,
+    ...(page.robots ? { robots: page.robots } : {}),
     openGraph: buildOpenGraph({
       title: page.title,
       description: page.description,
@@ -281,9 +281,12 @@ export const buildPageMetadata = (pageKey: PageSeoKey): Metadata => {
   };
 };
 
-const officialProfileLinks = [
+const founderProfileLinks = [
   siteConfig.socialLinks.linkedin,
   siteConfig.socialLinks.github,
+];
+
+const businessProfileLinks = [
   siteConfig.socialLinks.instagram,
   siteConfig.socialLinks.x,
   siteConfig.socialLinks.telegram,
@@ -328,8 +331,8 @@ export const organizationSchema = {
   founder: {
     "@type": "Person",
     name: siteConfig.ownerName,
-    url: buildCanonicalUrl("/about"),
-    sameAs: officialProfileLinks,
+    url: buildCanonicalUrl("/about/rahul-reddy-adelli"),
+    sameAs: founderProfileLinks,
   },
   email: siteConfig.email,
   contactPoint: {
@@ -342,8 +345,7 @@ export const organizationSchema = {
   },
   areaServed: "Worldwide",
   knowsAbout: [
-    "Website development",
-    "Search engine optimization",
+    ...siteConfig.serviceTypes,
     "AI automation",
     "AI chatbot development",
     "Lead generation",
@@ -352,10 +354,8 @@ export const organizationSchema = {
     "MVP development",
     "App development",
   ],
-  makesOffer: {
-    "@id": schemaIds.offerCatalog,
-  },
-  sameAs: officialProfileLinks,
+  hasOfferCatalog: serviceOfferCatalog,
+  sameAs: businessProfileLinks,
 } as const;
 
 export const websiteSchema = {
@@ -407,8 +407,8 @@ export const aboutPageSchema = {
     worksFor: {
       "@id": schemaIds.organization,
     },
-    url: buildCanonicalUrl("/about"),
-    sameAs: officialProfileLinks,
+    url: buildCanonicalUrl("/about/rahul-reddy-adelli"),
+    sameAs: founderProfileLinks,
   },
 } as const;
 
@@ -472,6 +472,7 @@ export const buildBlogPostingSchema = (article: {
   metaDescription: string;
   path: string;
   publishedAt: string;
+  updatedAt?: string;
   categoryLabel: string;
   tags: string[];
   heroImage: SeoImageInput;
@@ -489,7 +490,7 @@ export const buildBlogPostingSchema = (article: {
   articleSection: article.categoryLabel,
   keywords: article.tags.join(", "),
   datePublished: article.publishedAt,
-  dateModified: article.publishedAt,
+  dateModified: article.updatedAt || article.publishedAt,
   image: [buildAssetUrl(article.heroImage)],
   mainEntityOfPage: {
     "@id": `${buildCanonicalUrl(article.path)}#webpage`,
@@ -499,7 +500,7 @@ export const buildBlogPostingSchema = (article: {
     name: article.author.name,
     description: article.author.bio,
     jobTitle: article.author.role,
-    url: buildCanonicalUrl("/about"),
+    url: buildCanonicalUrl("/about/rahul-reddy-adelli"),
   },
   publisher: {
     "@id": schemaIds.organization,

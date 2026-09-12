@@ -34,6 +34,7 @@ export type BlogPost = {
   monthShort: string;
   day: string;
   publishedAt: string;
+  updatedAt?: string;
   readTime: string;
   commentsCount: number;
   author: {
@@ -62,7 +63,7 @@ const rahulAuthor = {
   name: 'Rahul Reddy',
   role: 'Founder, Reddystack',
   avatar: authorAvatar,
-  bio: 'Rahul Reddy leads Reddystack with a founder-led, execution-first approach to SEO websites, applications, MVP builds, and AI-assisted systems that help real businesses ship faster.',
+  bio: 'Rahul Reddy Adelli is the founder of Reddystack in Hyderabad, working with businesses on ads, creative content, AI videos, websites, and SEO.',
 };
 
 export const blogPosts: BlogPost[] = [
@@ -80,6 +81,7 @@ export const blogPosts: BlogPost[] = [
     displayDate: 'April 11, 2026',
     monthShort: 'Apr',
     day: '11',
+    updatedAt: '2026-09-12',
     publishedAt: '2026-04-11',
     readTime: '6 min read',
     commentsCount: 2,
@@ -124,6 +126,7 @@ export const blogPosts: BlogPost[] = [
     displayDate: 'April 7, 2026',
     monthShort: 'Apr',
     day: '07',
+    updatedAt: '2026-09-12',
     publishedAt: '2026-04-07',
     readTime: '5 min read',
     commentsCount: 1,
@@ -169,6 +172,7 @@ export const blogPosts: BlogPost[] = [
     displayDate: 'April 3, 2026',
     monthShort: 'Apr',
     day: '03',
+    updatedAt: '2026-09-12',
     publishedAt: '2026-04-03',
     readTime: '7 min read',
     commentsCount: 0,
@@ -214,6 +218,7 @@ export const blogPosts: BlogPost[] = [
     displayDate: 'March 29, 2026',
     monthShort: 'Mar',
     day: '29',
+    updatedAt: '2026-09-12',
     publishedAt: '2026-03-29',
     readTime: '6 min read',
     commentsCount: 3,
@@ -258,6 +263,7 @@ export const blogPosts: BlogPost[] = [
     displayDate: 'March 25, 2026',
     monthShort: 'Mar',
     day: '25',
+    updatedAt: '2026-09-12',
     publishedAt: '2026-03-25',
     readTime: '6 min read',
     commentsCount: 1,
@@ -302,6 +308,7 @@ export const blogPosts: BlogPost[] = [
     displayDate: 'March 19, 2026',
     monthShort: 'Mar',
     day: '19',
+    updatedAt: '2026-09-12',
     publishedAt: '2026-03-19',
     readTime: '5 min read',
     commentsCount: 0,
@@ -346,6 +353,7 @@ export const blogPosts: BlogPost[] = [
     displayDate: 'March 14, 2026',
     monthShort: 'Mar',
     day: '14',
+    updatedAt: '2026-09-12',
     publishedAt: '2026-03-14',
     readTime: '6 min read',
     commentsCount: 4,
@@ -390,6 +398,7 @@ export const blogPosts: BlogPost[] = [
     displayDate: 'March 8, 2026',
     monthShort: 'Mar',
     day: '08',
+    updatedAt: '2026-09-12',
     publishedAt: '2026-03-08',
     readTime: '5 min read',
     commentsCount: 2,

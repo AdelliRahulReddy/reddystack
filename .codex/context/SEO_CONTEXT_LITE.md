@@ -1,11 +1,11 @@
 # SEO Context Lite
 
 ## Positioning
-`Reddystack is a founder-led digital service brand based in Hyderabad, helping startups and businesses build SEO websites, applications, MVPs, and automations for clients across India and worldwide.`
+Reddystack is Rahul Reddy Adelli's independent digital service business in Hyderabad, serving India and worldwide. Primary services: Meta Ads, Google Ads, Ad Creatives, AI UGC-Style Videos, Website Development, SEO & Local SEO. Apps, MVPs, chatbots, and automation are secondary.
 
 ## Entity Model
 - sitewide: `Organization`
-- sitewide: `ProfessionalService`
+- sitewide: `WebSite`
 - service pages: `Service`
 - blog posts: `BlogPosting`
 - portfolio pages: `CreativeWork`
@@ -16,7 +16,7 @@
 - affordable but credible
 - Hyderabad-based
 - India and worldwide
-- SEO websites, apps, MVPs, automations
+- six core services above; custom quotes with advertising spend separate
 - clear scope
 - premium execution
 
@@ -41,7 +41,11 @@
 - homepage FAQ schema from visible FAQ data
 - service FAQ schema from visible service data
 - blog/service/portfolio detail metadata and page schema
-- 4 live intent pages
+- 110 canonical public URLs across core pages, services, intent pages, portfolio, articles, topic hubs, and locations
+- six `/blog/{topic}` hubs with nested guides from `seo-pages.json`
+- founder profile at `/about/rahul-reddy-adelli`
+- separate founder and business profiles in Organization schema
+- branded Next.js file-based icons and `reddystack-share-v1.png` for default social previews
 
 ## Current Intent Pages
 - website development services
@@ -58,10 +62,13 @@
 - MVP development for startup founders
 - AI automation services for small teams
 
-## Still Pending
-- affordable app development in India
-- website vs app
-- landing page vs SEO website
+## Verification
+- Check current routes in `sitemap.ts`, `SeoPagesData.ts`, and `IntentLandingPagesData.ts`; historical aliases above may redirect.
+- Build, then run `scripts/check-seo-routes.mjs` and `scripts/check-ui-contracts.mjs` against the production server.
+- Set `SEO_CHECK_BASE` for live verification after deployment.
+- Sitemap modification dates must reflect actual edits, not build time.
+- Google chooses sitelinks and snippets; schema and submission cannot guarantee them.
+- Update Search Console only under the account/property that owns Reddystack.
 
 ## Internal Linking Expectations
 - homepage -> services, portfolio, blog, contact

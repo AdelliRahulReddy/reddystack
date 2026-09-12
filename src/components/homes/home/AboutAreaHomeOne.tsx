@@ -1,10 +1,10 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Lottie, { type LottieRefCurrentProps } from 'lottie-react';
 import useMedia from 'react-use/lib/useMedia';
 import award_img from "@/assets/img/about/award-icon.svg";
-import aboutAnimation from "@/assets/lottie/AboutReddystack.json";
+import { useInView } from 'react-intersection-observer';
 import Count from '@/components/common/Count';
 
 
@@ -36,14 +36,24 @@ const about_content: DataType = {
 const { subtitle, award_title, award_des, about_des, counter_data } = about_content
 
 const AboutAreaHomeOne = () => {
+  const { ref, inView } = useInView({ rootMargin: '200px', triggerOnce: true });
+  const [aboutAnimation, setAboutAnimation] = useState<object | null>(null);
   const animation = useRef<LottieRefCurrentProps>(null);
   const reducedMotion = useMedia('(prefers-reduced-motion: reduce)', true);
   useEffect(() => {
+    if (!inView) return;
+    let active = true;
+    import('@/assets/lottie/AboutReddystack.json')
+      .then(({ default: data }) => { if (active) setAboutAnimation(data); })
+      .catch((error) => console.error('Could not load the About illustration', error));
+    return () => { active = false; };
+  }, [inView]);
+  useEffect(() => {
     if (reducedMotion) animation.current?.pause(); else animation.current?.play();
-  }, [reducedMotion]);
+  }, [reducedMotion, aboutAnimation]);
   return (
     <>
-      <section className="tp-about-area fix">
+      <section ref={ref} className="tp-about-area fix">
         <div className="container container-large">
           <div className="tp-about-inner pt-145 pb-80" style={{ paddingTop: "145px", paddingBottom: "80px" }}>
             <span className="tp-about-inner-border transition-3"></span>
@@ -59,7 +69,7 @@ const AboutAreaHomeOne = () => {
                       <div className="tp-about-thumb-bg-shape include-bg"
                         style={{ backgroundImage: 'url(/assets/img/about/shape/about-shape-1.png)' }}></div>
                       <div className="tp-about-lottie-frame">
-                        <Lottie
+                        {aboutAnimation && <Lottie
                           lottieRef={animation}
                           autoplay={!reducedMotion}
                           aria-hidden="true"
@@ -68,7 +78,7 @@ const AboutAreaHomeOne = () => {
                           className="tp-about-lottie-player"
                           rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
                           style={{ width: '100%', height: '100%' }}
-                        />
+                        />}
                       </div>
                     </div>
                   </div>
@@ -83,7 +93,7 @@ const AboutAreaHomeOne = () => {
                       </span>
                     </div>
                     <div className="tp-about-award-content d-inline-block">
-                      <h4 className="tp-about-award-title">{award_title}</h4>
+                      <h3 className="tp-about-award-title">{award_title}</h3>
                       <p>{award_des}</p>
                     </div>
                   </div>

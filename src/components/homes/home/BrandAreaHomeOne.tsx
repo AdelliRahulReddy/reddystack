@@ -28,7 +28,7 @@ const BrandAreaHomeOne = () => {
 
             <div className="row align-items-center">
               <div className="col-xl-3 col-lg-3 col-md-5">
-                <h3 className="tp-brand-title">How Reddystack <br /> Delivers</h3>
+                <h2 className="tp-brand-title">How Reddystack <br /> Delivers</h2>
               </div>
               <div className="col-xl-9 col-lg-9 col-md-7">
                 <div className="tp-brand-slider">

@@ -6,6 +6,7 @@ import {
   siteConfig,
   siteSeo,
   websiteSchema,
+  organizationSchema,
 } from "@/data/siteConfig";
 import type { Metadata } from "next";
 
@@ -20,6 +21,7 @@ import {
 
 // all font configure
 const abril = Abril_Fatface({
+  preload: false,
   weight: "400",
   subsets: ["latin"],
   variable: "--font-abril",
@@ -32,24 +34,28 @@ const dmSans = DM_Sans({
 });
 
 const garamond = EB_Garamond({
+  preload: false,
   weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
   variable: "--font-garamond",
 });
 
 const kufam = Kufam({
+  preload: false,
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-kufam",
 });
 
 const poppins = Poppins({
+  preload: false,
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   variable: "--font-poppins",
 });
 
 const playfair = Playfair_Display({
+  preload: false,
   weight: ["400", "500", "600", "700", "900"],
   subsets: ["latin"],
   variable: "--font-playfair",
@@ -119,7 +125,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Site-level JSON-LD. Page/entity schemas are injected by their routes. */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([websiteSchema, organizationSchema]) }}
         />
       </head>
       <body suppressHydrationWarning className="scroll-smooth">

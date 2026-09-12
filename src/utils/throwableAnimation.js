@@ -1,4 +1,5 @@
 import jQuery from 'jquery';
+import { gsap } from 'gsap';
 import Matter from '../../public/assets/plugins/matter.js';
 
 

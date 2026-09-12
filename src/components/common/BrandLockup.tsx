@@ -26,6 +26,9 @@ const BrandLockup = ({ className, textColor }: BrandLockupProps) => {
         <Image
           src={favicon}
           alt="Reddystack logo"
+          width={40}
+          height={40}
+          sizes="40px"
           style={{
             width: 'clamp(32px, 8.4vw, 40px)',
             height: 'auto',

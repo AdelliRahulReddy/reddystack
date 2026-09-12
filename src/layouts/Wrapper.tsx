@@ -16,17 +16,13 @@ import PortfolioPanel from "@/utils/PortfolioPanel";
 import blogAnimation from "@/utils/blogAnimation";
 import linesAnimation from "@/utils/linesAnimation";
 import { buttonAnimation } from "@/utils/buttonAnimation";
-import { scrollSmother } from "@/utils/scrollSmother";
 import { scrollTextAnimation } from "@/utils/scrollTextAnimation";
 import textInvert from "@/utils/textInvert";
 import ContextProvider from "@/context/app-context";
 
-import {
-  ScrollSmoother,
-  SplitText,
-} from "@/plugins";
+import { ScrollSmoother } from "@/plugins";
 
-gsap.registerPlugin(ScrollSmoother, ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
 const Wrapper = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
@@ -127,7 +123,6 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
       blogAnimation();
       linesAnimation();
       buttonAnimation();
-      scrollSmother();
       const scrollTextCleanup = scrollTextAnimation();
       const textInvertCleanup = textInvert();
 

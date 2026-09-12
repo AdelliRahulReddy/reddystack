@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 
-const TITLE_SELECTOR = ".tp_title_anim";
+// Keep the page's main heading visible from the server-rendered first paint.
+const TITLE_SELECTOR = ".tp_title_anim:not(h1)";
 const TEXT_SELECTOR = ".tp_text_anim p";
 const SPLIT_TEXT_SELECTOR = ".tp-split-text";
 
