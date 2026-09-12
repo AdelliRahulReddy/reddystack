@@ -219,6 +219,12 @@
 }
 .tp-portfolio{
     &-item-2{
+        isolation: isolate;
+        & > .tp-portfolio-card-image {
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(.45);
+        }
         padding: 40px 40px;
         width: 770px;
         height: 520px;

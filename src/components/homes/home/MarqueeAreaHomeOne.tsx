@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+import useMedia from 'react-use/lib/useMedia';
 import Slider from "react-slick";
 
 const marquee_data = [
@@ -53,12 +54,13 @@ const setting = {
 }
 
 const MarqueeAreaHomeOne = () => {
+  const reducedMotion = useMedia('(prefers-reduced-motion: reduce)', true);
   return (
     <>
       <div className="tp-marquee-area z-index-5">
         <div className="tp-marquee-wrapper">
           <div className="tp-marquee-slider fix">
-            <Slider {...setting} className="tp-marquee-slider-active d-flex align-items-center ">
+            <Slider {...setting} autoplay={!reducedMotion} className="tp-marquee-slider-active d-flex align-items-center ">
               {marquee_data.map((item, index) => (
                 <div key={index} className="tp-marquee-item">
                   <p>{item}</p>

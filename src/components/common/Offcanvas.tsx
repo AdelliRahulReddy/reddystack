@@ -5,6 +5,7 @@ import Shape from "@/assets/img/offcanvas/bg-shape-2.png"
 import MobileMenus from '@/layouts/headers/menu/mobile-menus';
 import { siteConfig } from '@/data/siteConfig';
 import BrandLockup from './BrandLockup';
+import useMenuDialog from '@/hooks/useMenuDialog';
 
 type OffcanvasProps = {
   showCanvas: boolean;
@@ -14,13 +15,17 @@ type OffcanvasProps = {
 };
 
 const Offcanvas = ({ showCanvas, setShowCanvas, style_bg, style_bg2 }: OffcanvasProps) => {
+  const dialogRef = useMenuDialog(showCanvas);
   return (
     <>
-      <div className={`tp-offcanvas-area  ${showCanvas ? 'opened' : ''} ${style_bg ? 'tp-offcanvas-update-bg' : ''} ${style_bg2 ? 'tp-offcanvas-update-bg-2' : ''}`}>
+      <dialog ref={dialogRef} id="site-menu" aria-label="Site menu" tabIndex={-1}
+        onCancel={(event) => { event.preventDefault(); setShowCanvas(false); }}
+        onClickCapture={(event) => { if ((event.target as Element).closest('a[href]')) setShowCanvas(false); }}
+        className={`tp-offcanvas-area ${showCanvas ? 'opened' : ''} ${style_bg ? 'tp-offcanvas-update-bg' : ''} ${style_bg2 ? 'tp-offcanvas-update-bg-2' : ''}`}>
         <div className="tp-offcanvas-bg is-left"></div>
         <div className="tp-offcanvas-bg is-right d-none d-md-block">
           <div className="tp-offcanvas-shape">
-            <Image className="tp-offcanvas-shape-1" src={Shape} alt="image" />
+            <Image className="tp-offcanvas-shape-1" src={Shape} alt="" />
           </div>
         </div>
         <div className="tp-offcanvas-wrapper-2">
@@ -41,7 +46,7 @@ const Offcanvas = ({ showCanvas, setShowCanvas, style_bg, style_bg2 }: Offcanvas
               </div>
               <div className="tp-offcanvas-close d-md-none text-end">
 
-                <button className="tp-offcanvas-close-btn tp-offcanvas-close-btn" onClick={() => setShowCanvas(false)}>
+                <button type="button" aria-label="Close menu" className="tp-offcanvas-close-btn tp-offcanvas-close-btn" onClick={() => setShowCanvas(false)}>
                   <span className="text">
                     <span>close</span>
                   </span>
@@ -69,7 +74,7 @@ const Offcanvas = ({ showCanvas, setShowCanvas, style_bg, style_bg2 }: Offcanvas
 
           <div className="tp-offcanvas-right d-none d-md-block">
             <div className="tp-offcanvas-close text-end">
-              <button className="tp-offcanvas-close-btn tp-offcanvas-close-btn" onClick={() => setShowCanvas(false)}>
+              <button type="button" aria-label="Close menu" className="tp-offcanvas-close-btn tp-offcanvas-close-btn" onClick={() => setShowCanvas(false)}>
                 <span className="text">
                   <span>close</span>
                 </span>
@@ -115,7 +120,7 @@ const Offcanvas = ({ showCanvas, setShowCanvas, style_bg, style_bg2 }: Offcanvas
           </div>
 
         </div>
-      </div>
+      </dialog>
     </>
   );
 };

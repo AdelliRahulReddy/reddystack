@@ -26,7 +26,7 @@ const IntentLandingPage = ({ page }: IntentLandingPageProps) => {
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main>
+          <main id="main-content" tabIndex={-1}>
             <ServiceDetailsArea service={service} />
             <ServiceFaqArea service={service} />
             <NavigationArea

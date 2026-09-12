@@ -195,7 +195,10 @@
             }
         }
         & .themepure-theme-toggle-input{
-            display: none;
+            position: absolute;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
         }
         &-slide{
             position: absolute;
@@ -420,7 +423,10 @@ div.tp-theme-toggle-single{
     }
 
     & .themepure-theme-toggle-input{
-        display: none;
+        position: absolute;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
     }
 }
 .tp-theme-toggle-single {

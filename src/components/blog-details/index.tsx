@@ -17,7 +17,7 @@ const BlogDetails = ({ post, previousPost, nextPost, relatedPost }: BlogDetailsP
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main>
+          <main id="main-content" tabIndex={-1}>
             <BreadcrumbBlogDetails post={post} />
             <PostboxBlogDetailsArea
               post={post}

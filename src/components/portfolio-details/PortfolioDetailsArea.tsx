@@ -84,7 +84,7 @@ const PortfolioDetailsArea = ({
                 </div>
                 <div className="col-xl-4 col-lg-4 col-md-4 col-12">
                   <div className="porfolio-details__navigation-bar text-center">
-                    <Link href="/portfolio">
+                    <Link href="/portfolio" aria-label="View all projects">
                       <span>
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path opacity="0.5" d="M1 5.21053C1 3.22567 1 2.23323 1.61662 1.61662C2.23323 1 3.22567 1 5.21053 1C7.19539 1 8.18782 1 8.80444 1.61662C9.42105 2.23323 9.42105 3.22567 9.42105 5.21053C9.42105 7.19539 9.42105 8.18782 8.80444 8.80444C8.18782 9.42105 7.19539 9.42105 5.21053 9.42105C3.22567 9.42105 2.23323 9.42105 1.61662 8.80444C1 8.18782 1 7.19539 1 5.21053Z" stroke="white" strokeWidth="1.5" />

@@ -1,47 +1,13 @@
 'use client';
 import Link from 'next/link';
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import { gsap } from 'gsap';
 
 import { portfolioProjects } from '@/data/PortfolioProjectsData';
 
 const PortfolioArea = () => {
   const firstColumnProjects = portfolioProjects.slice(0, 3);
   const secondColumnProjects = portfolioProjects.slice(3);
-
-  useEffect(() => {
-    gsap.set('.tp-portfolio-bg-text', {
-      x: '25%'
-    });
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '.tp-portfolio-bg-text-animation',
-        start: '-500 0%',
-        end: 'bottom -10%',
-        scrub: true,
-        invalidateOnRefresh: true
-      }
-    })
-      .to('.tp-portfolio-bg-text', {
-        x: '-80%'
-      });
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '.portfolio-list-scroll-text-animation',
-        start: '-500 0%',
-        end: 'bottom -10%',
-        scrub: true,
-        invalidateOnRefresh: true
-      }
-    })
-      .to('.portfolio-list-scroll-text', {
-        x: '-80%'
-      });
-
-  }, []);
 
   return (
     <div className="porfolio-inner__thumb-wrapper tp-portfolio-effect portfolio-list-scroll-text-animation p-relative fix  black-bg-3 pt-80 pb-50"

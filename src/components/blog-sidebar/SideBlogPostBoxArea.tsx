@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useMemo, useState } from 'react';
 import Image from 'next/image';
 import BlogSidebar from './BlogSidebar';
+import ArticleSearch from './ArticleSearch';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useVideoModal } from '@/provider/VideoProvider';
@@ -26,6 +27,7 @@ const SideBlogPostBoxArea = () => {
           <div className="row">
             <div className="col-xxl-8 col-xl-8 col-lg-8">
               <div className="postbox__wrapper">
+                <div className="d-lg-none"><ArticleSearch /></div>
                 {filteredArticles.map((item, i) =>
                   <article className="postbox__item mb-60" key={i}>
                     {(!item.sidebarVariant || item.sidebarVariant === 'image') &&
@@ -49,9 +51,9 @@ const SideBlogPostBoxArea = () => {
                           <h5>{item.day}</h5>
                         </div>
                         <div className="postbox__play-btn">
-                          <a onClick={()=>playVideo(item.videoId || "qmGYnJgCW1o")} className="popup-video"
+                          <button type="button" aria-label="Play article video" onClick={()=>playVideo(item.videoId || "qmGYnJgCW1o")} className="popup-video"
                             style={{ cursor: "pointer" }}
-                          ><i className="fa-sharp fa-solid fa-play"></i></a>
+                          ><i className="fa-sharp fa-solid fa-play"></i></button>
                         </div>
                       </div>
                     }
@@ -98,10 +100,10 @@ const SideBlogPostBoxArea = () => {
                             )}
                           </Swiper>
                           <div className="postbox__slider-arrow-wrap d-none d-sm-block">
-                            <button className="postbox-arrow-prev">
+                            <button type="button" aria-label="Previous article image" className="postbox-arrow-prev">
                               <i className="fa-sharp fa-solid fa-arrow-left"></i>
                             </button>
-                            <button className="postbox-arrow-next">
+                            <button type="button" aria-label="Next article image" className="postbox-arrow-next">
                               <i className="fa-sharp fa-solid fa-arrow-right"></i>
                             </button>
                           </div>

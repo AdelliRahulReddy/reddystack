@@ -10,6 +10,7 @@ import XIcon from '@/svg/icons/XIcon';
 
 import bg_shape from "@/assets/img/offcanvas/bg-shape-3.png";
 import { siteConfig } from '@/data/siteConfig';
+import useMenuDialog from '@/hooks/useMenuDialog';
 
 type Offcanvas2Props = {
   showCanvas: boolean;
@@ -17,11 +18,15 @@ type Offcanvas2Props = {
 };
 
 const Offcanvas2 = ({ showCanvas, setShowCanvas }: Offcanvas2Props) => {
+  const dialogRef = useMenuDialog(showCanvas);
   return (
     <>
-      <div className={`tp-offcanvas-area-2 tp-menu-2 ${showCanvas ? 'opened' : ''}`}>
+      <dialog ref={dialogRef} id="site-menu" aria-label="Site menu" tabIndex={-1}
+        onCancel={(event) => { event.preventDefault(); setShowCanvas(false); }}
+        onClickCapture={(event) => { if ((event.target as Element).closest('a[href]')) setShowCanvas(false); }}
+        className={`tp-offcanvas-area-2 tp-menu-2 ${showCanvas ? 'opened' : ''}`}>
         <div className="tp-offcanvas-shape">
-          <Image className="tp-offcanvas-shape-2" src={bg_shape} alt="image" />
+          <Image className="tp-offcanvas-shape-2" src={bg_shape} alt="" />
         </div>
         <div className="tp-offcanvas-circle-1">
           <span></span>
@@ -36,7 +41,7 @@ const Offcanvas2 = ({ showCanvas, setShowCanvas }: Offcanvas2Props) => {
               <BrandLockup className="logo-black" textColor="var(--tp-common-black-5)" />
             </div>
             <div className="tp-offcanvas-close-2">
-              <button className="tp-offcanvas-close-btn-2 tp-offcanvas-open-btn-2" onClick={() => setShowCanvas(false)}>
+              <button type="button" aria-label="Close menu" className="tp-offcanvas-close-btn-2 tp-offcanvas-open-btn-2" onClick={() => setShowCanvas(false)}>
                 <svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9.19141 9.80762L27.5762 28.1924" stroke="currentColor" strokeWidth="1.5"
                     strokeLinecap="round" strokeLinejoin="round" />
@@ -51,7 +56,7 @@ const Offcanvas2 = ({ showCanvas, setShowCanvas }: Offcanvas2Props) => {
               <h3 className="tp-offcanvas-content-title-2">Let&apos;s Grow Your Business.</h3>
               <p>Reddystack helps small businesses and growing brands attract customers through ads, creative content, websites, and SEO.</p>
             </div>
-            <div className="tp-main-menu-mobile d-lg-none">
+            <div className="tp-main-menu-mobile d-xl-none">
               <nav>
                 <MobileMenus />
               </nav>
@@ -69,22 +74,22 @@ const Offcanvas2 = ({ showCanvas, setShowCanvas }: Offcanvas2Props) => {
               <h3 className="tp-offcanvas-contact-title-2">Follow Us</h3>
               <ul>
                 <li>
-                  <a href={siteConfig.socialLinks.instagram} target="_blank" rel="noreferrer">
+                  <a href={siteConfig.socialLinks.instagram} aria-label="Instagram" target="_blank" rel="noreferrer">
                     <InstagramIcon />
                   </a>
                 </li>
                 <li>
-                  <a href={siteConfig.socialLinks.x} target="_blank" rel="noreferrer">
+                  <a href={siteConfig.socialLinks.x} aria-label="X" target="_blank" rel="noreferrer">
                     <XIcon />
                   </a>
                 </li>
                 <li>
-                  <a href={siteConfig.socialLinks.telegram} target="_blank" rel="noreferrer">
+                  <a href={siteConfig.socialLinks.telegram} aria-label="Telegram" target="_blank" rel="noreferrer">
                     <TelegramIcon />
                   </a>
                 </li>
                 <li>
-                  <a href={siteConfig.socialLinks.linkedin} target="_blank" rel="noreferrer">
+                  <a href={siteConfig.socialLinks.linkedin} aria-label="LinkedIn" target="_blank" rel="noreferrer">
                     <Linkedin />
                   </a>
                 </li>
@@ -92,7 +97,7 @@ const Offcanvas2 = ({ showCanvas, setShowCanvas }: Offcanvas2Props) => {
             </div>
           </div>
         </div>
-      </div>
+      </dialog>
     </>
   );
 };

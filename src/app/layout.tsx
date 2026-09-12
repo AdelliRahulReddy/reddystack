@@ -104,6 +104,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
+      tp-theme="tp-theme-dark"
+      suppressHydrationWarning
       className={`
         ${abril.variable}
         ${dmSans.variable}
@@ -114,8 +116,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       `}
     >
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Site-level JSON-LD. Page/entity schemas are injected by their routes. */}
         <script
           type="application/ld+json"

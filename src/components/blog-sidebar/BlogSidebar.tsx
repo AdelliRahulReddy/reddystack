@@ -3,6 +3,7 @@ import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 
 import Link from 'next/link';
+import ArticleSearch from './ArticleSearch';
 import {
   getBlogCategoryCounts,
   getRecentBlogPosts,
@@ -47,7 +48,7 @@ const sidebar_content: DataType = {
     path: post.path,
   })),
   tag_title: "Tags",
-  tags: getUniqueBlogTags().map((tag) => ({ title: tag, link: '/blog' })),
+  tags: getUniqueBlogTags().map((tag) => ({ title: tag, link: `/blog?q=${encodeURIComponent(tag)}` })),
 }
 
 const { category_title, category_list, post_title, post_list, tag_title, tags } = sidebar_content
@@ -80,22 +81,10 @@ const BlogSidebar = ({
     <>
       <div className="col-xxl-4 col-xl-4 col-lg-4">
         <div className={`sidebar__wrapper ${archiveFilterMode ? '' : 'tp-blog-sidebar-sticky'}`.trim()}>
-          <div className="sidebar__widget mb-60">
+          <div className={`sidebar__widget mb-60 ${archiveFilterMode ? 'd-none d-lg-block' : ''}`}>
             <div className="sidebar__widget-content">
               <h3 className="sidebar__widget-title">Search Here</h3>
-              <div className="sidebar__search">
-                <form onSubmit={e => e.preventDefault()}>
-                  <div className="sidebar__search-input-2">
-                    <input type="text" placeholder="Search..." />
-                    <button type="submit">
-                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://https://w3.org/2000/svg">
-                        <path d="M8.6 16.2C12.7974 16.2 16.2 12.7974 16.2 8.6C16.2 4.40264 12.7974 1 8.6 1C4.40264 1 1 4.40264 1 8.6C1 12.7974 4.40264 16.2 8.6 16.2Z" stroke="currentcolor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M16.9984 17L15.3984 15.4" stroke="currentcolor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </button>
-                  </div>
-                </form>
-              </div>
+              <ArticleSearch />
             </div>
           </div>
           <div className="sidebar__widget mb-60">
@@ -107,6 +96,7 @@ const BlogSidebar = ({
                     {onCategorySelect ? (
                       <a
                         role="button"
+                        onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); onCategorySelect(item.key); } }}
                         tabIndex={0}
                         onClick={(event) => {
                           event.preventDefault();

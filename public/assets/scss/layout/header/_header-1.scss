@@ -15,7 +15,7 @@
     }
 
     &-mob-space {
-        @media #{$md,$xs} {
+        @media #{$lg,$md,$xs} {
             padding: clamp(12px, 1.8svh, 18px) 0;
         }
     }

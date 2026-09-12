@@ -279,7 +279,7 @@
             font-size: 75px;
         }
         @media #{$xs}{
-            font-size: 65px;
+            font-size: clamp(40px, 12vw, 65px);
             & br{
                 display: none;
             }

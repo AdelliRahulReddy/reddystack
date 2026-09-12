@@ -8,7 +8,7 @@ const Error = () => {
   return (
     <>
       <HeaderOne />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <Breadcrumb />
         <section className="error-area black-bg-2 z-index-11 py-5">
           <div className="tp-erorr-bg"></div>

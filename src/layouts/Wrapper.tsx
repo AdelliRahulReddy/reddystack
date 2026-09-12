@@ -45,7 +45,7 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
   }, []);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       const smoother = ScrollSmoother.create({
         smooth: 1.35,
         effects: true,
@@ -94,7 +94,7 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     // sticky section
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       const mm = gsap.matchMedia();
       mm.add("(min-width: 1199px)", () => {
         ScrollTrigger.create({
@@ -120,6 +120,7 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
     let cleanups: Array<() => void> = [];
 
     const frameId = window.requestAnimationFrame(() => {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
       throwableAnimation();
       servicesPanel();
       PortfolioPanel();
@@ -127,13 +128,13 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
       linesAnimation();
       buttonAnimation();
       scrollSmother();
-      scrollTextAnimation();
+      const scrollTextCleanup = scrollTextAnimation();
       const textInvertCleanup = textInvert();
 
       const titleCleanup = animationTitle();
       const charCleanup = animationTitleChar();
 
-      cleanups = [titleCleanup, charCleanup, textInvertCleanup].filter(
+      cleanups = [titleCleanup, charCleanup, textInvertCleanup, scrollTextCleanup].filter(
         (cleanup): cleanup is () => void => typeof cleanup === "function"
       );
     });
@@ -146,6 +147,7 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
 
   return (
     <ContextProvider>
+      <a href="#main-content" className="skip-link">Skip to main content</a>
       {children}
       <ToastContainer position="top-right" />
       <ScrollToTop />

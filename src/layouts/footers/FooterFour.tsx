@@ -94,7 +94,7 @@ const FooterFour = () => {
                     </div>
                     <div className="tp-footer-4__social">
                       {social_links.map((item, index) => (
-                        <Link href={item.link} key={index} target="_blank" rel="noopener noreferrer">
+                        <Link href={item.link} aria-label={item.cls === 'gmail' ? 'Email Reddystack' : item.cls === 'x' ? 'X' : item.cls.charAt(0).toUpperCase() + item.cls.slice(1)} key={index} target="_blank" rel="noopener noreferrer">
                           <span>
                             {item.icon}
                           </span>

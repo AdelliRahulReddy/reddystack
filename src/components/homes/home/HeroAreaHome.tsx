@@ -1,10 +1,9 @@
 'use client'
 import Link from 'next/link';
-import { type JSX } from 'react';
-import { scroller } from 'react-scroll';
+import { type JSX, useEffect, useRef, useState } from 'react';
 import HeroArrowIcon from '@/svg/home/HeroIcons/HeroArrowIcon';
 import { HeroSocialLinks } from '@/components/common/SocialLinks';
-import Lottie from 'lottie-react';
+import Lottie, { type LottieRefCurrentProps } from 'lottie-react';
 import heroAnimation from '@/assets/lottie/hero-animation.json';
 interface DataType {
   slide_text: string[];
@@ -50,16 +49,16 @@ const {
   btn_text
 } = hero_content;
 
-// scroll to tp-sv section 
-const scrollTo = () => {
-  scroller.scrollTo('tp-sv', {
-    duration: 800,
-    delay: 0,
-    smooth: 'easeInOutQuart',
-  });
-};
-
 const HeroAreaHome = () => {
+  const animation = useRef<LottieRefCurrentProps>(null);
+  const [paused, setPaused] = useState(false);
+  useEffect(() => {
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const syncMotion = () => { animation.current?.pause(); setPaused(true); };
+    if (motion.matches) syncMotion();
+    motion.addEventListener('change', syncMotion);
+    return () => motion.removeEventListener('change', syncMotion);
+  }, []);
   return (
     <>
 
@@ -75,7 +74,7 @@ const HeroAreaHome = () => {
           <div className="tp-hero-shape-1 background-dark-mode" style={{ backgroundImage: 'url(/assets/img/hero/hero-overlay-2.png)' }}></div>
           <span className="tp-hero-shape-2"></span>
         </div>
-        <div className="tp-hero-bottom-text-wrapper">
+        <div className="tp-hero-bottom-text-wrapper" aria-hidden="true">
           <div className="tp-hero-bottom-text">
             {slide_text.map((item, index) => (
               <p key={index}>{item}</p>
@@ -134,7 +133,7 @@ const HeroAreaHome = () => {
                     </Link>
                   </div>
                   <div className="tp-hero-scroll smooth">
-                    <a className="pointer" onClick={scrollTo}>
+                    <a className="pointer" href="#tp-sv" aria-label="Scroll to services">
                       <span className="tp-hero-scroll-bar"></span>
                       <span className="tp-hero-scroll-mouse"></span>
                     </a>
@@ -149,6 +148,8 @@ const HeroAreaHome = () => {
                 </div>
                 <div className="tp-hero-thumb">
                   <Lottie
+                    lottieRef={animation}
+                    aria-hidden="true"
                     animationData={heroAnimation}
                     loop={true}
                     className="tp-hero-lottie"
@@ -156,6 +157,10 @@ const HeroAreaHome = () => {
                     style={{ width: '100%', height: '100%' }}
                   />
                 </div>
+                <button type="button" className="tp-btn-border-sm" aria-pressed={paused}
+                  onClick={() => { if (paused) animation.current?.play(); else animation.current?.pause(); setPaused(!paused); }}>
+                  {paused ? 'Play illustration' : 'Pause illustration'}
+                </button>
               </div>
             </div>
           </div>

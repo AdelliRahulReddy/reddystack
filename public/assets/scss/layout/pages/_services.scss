@@ -10,6 +10,20 @@
     }
 }
 
+@media #{$xs} {
+    .tp-sv .tp-services-capsule-wrapper {
+        padding-bottom: 280px;
+
+        & > .tp-services-capsule-item-wrapper {
+            display: block;
+
+            & > p {
+                pointer-events: none;
+            }
+        }
+    }
+}
+
 .tp-services{
     &-inner{
         padding-right: 65px;
@@ -756,7 +770,7 @@
             font-size: 85px;
         }
         @media #{$xs}{
-            font-size: 58px;
+            font-size: clamp(36px, 11vw, 58px);
         }
     }
     &__banner-text{

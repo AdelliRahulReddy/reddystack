@@ -27,7 +27,7 @@ const PricingPage = () => {
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main>
+          <main id="main-content" tabIndex={-1}>
             <section className="service-details__area service-details__space pt-200 pb-80 black-bg-3">
               <div className="container">
                 <div className="row">

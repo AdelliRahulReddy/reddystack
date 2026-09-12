@@ -21,16 +21,19 @@ type PostboxBlogDetailsAreaProps = {
 const socialLinks = [
   {
     id: 1,
+    label: 'X',
     icon: <XIcon />,
     link: siteConfig.socialLinks.x,
   },
   {
     id: 2,
+    label: 'LinkedIn',
     icon: <Linkedin />,
     link: siteConfig.socialLinks.linkedin,
   },
   {
     id: 3,
+    label: 'Telegram',
     icon: <TelegramIcon />,
     link: siteConfig.socialLinks.telegram,
   },
@@ -71,7 +74,7 @@ const PostboxBlogDetailsArea = ({
             <div className="postbox-details__wrapper tp-blog-sidebar-sticky-area tp-blog-social-sticky-area p-relative">
               <div className="postbox-details__top-social tp-blog-social-sticky d-none d-xxl-inline-flex">
                 {socialLinks.map((item) => (
-                  <Link href={item.link} key={item.id} target="_blank" rel="noopener noreferrer">
+                  <Link href={item.link} aria-label={item.label} key={item.id} target="_blank" rel="noopener noreferrer">
                     {item.icon}
                   </Link>
                 ))}
@@ -82,7 +85,7 @@ const PostboxBlogDetailsArea = ({
                 <p className="pb-20">{post.leadParagraphs[1]}</p>
               </div>
 
-              <h4 className="postbox-details__title pb-15">{post.sectionTitle}</h4>
+              <h2 className="postbox-details__title pb-15">{post.sectionTitle}</h2>
 
               <div className="postbox-details__text pb-40">
                 {post.sectionParagraphsBeforeImage.map((paragraph, index) => (
@@ -123,7 +126,7 @@ const PostboxBlogDetailsArea = ({
 
               <div className="tagcloud pb-35">
                 {post.tags.map((tag) => (
-                  <Link href="/blog" key={tag}>{tag}</Link>
+                  <Link href={`/blog?q=${encodeURIComponent(tag)}`} key={tag}>{tag}</Link>
                 ))}
               </div>
 
@@ -165,7 +168,7 @@ const PostboxBlogDetailsArea = ({
                   <div className="postbox-details__author-social-link">
                     {socialLinks.map((item) => (
                       <Link
-                        href={item.link}
+                        href={item.link} aria-label={item.label}
                         key={item.id}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -230,7 +233,7 @@ const PostboxBlogDetailsArea = ({
                             </div>
                             <div className="col-xl-4 col-lg-4 col-md-4 col-12">
                               <div className="porfolio-details__navigation-bar text-center">
-                                <Link href="/blog">
+                                <Link href="/blog" aria-label="View all articles">
                                   <span>
                                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path opacity="0.5" d="M1 5.21053C1 3.22567 1 2.23323 1.61662 1.61662C2.23323 1 3.22567 1 5.21053 1C7.19539 1 8.18782 1 8.80444 1.61662C9.42105 2.23323 9.42105 3.22567 9.42105 5.21053C9.42105 7.19539 9.42105 8.18782 8.80444 8.80444C8.18782 9.42105 7.19539 9.42105 5.21053 9.42105C3.22567 9.42105 2.23323 9.42105 1.61662 8.80444C1 8.18782 1 7.19539 1 5.21053Z" stroke="white" strokeWidth="1.5" />

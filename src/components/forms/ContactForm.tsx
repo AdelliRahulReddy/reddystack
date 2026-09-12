@@ -146,28 +146,28 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
                 <div className="postbox__comment-input mb-35">
                   <input type="text" autoComplete="name" className="inputText" id="contact-name" aria-invalid={Boolean(errors.name)} aria-describedby="contact-name-error" {...register("name")} onFocus={handleFocus} onBlur={handleBlur} />
                   <label htmlFor="contact-name" className={`floating-label ${isFocused ? 'floating-label-floated' : ''}`}>Your  Name</label>
-                  <p className="form_error" id="contact-name-error">{errors.name?.message}</p>
+                  <p role="alert" className="form_error" id="contact-name-error">{errors.name?.message}</p>
                 </div>
               </div>
               <div className="col-xxl-6 col-xl-6 col-lg-6">
                 <div className="postbox__comment-input mb-35">
-                  <input type="text" className="inputText" id="contact-company" aria-invalid={Boolean(errors.company)} aria-describedby="contact-company-error" {...register("company")} onFocus={handleFocus2} onBlur={handleBlur2} />
+                  <input type="text" className="inputText" id="contact-company" autoComplete="organization" aria-invalid={Boolean(errors.company)} aria-describedby="contact-company-error" {...register("company")} onFocus={handleFocus2} onBlur={handleBlur2} />
                   <label htmlFor="contact-company" className={`floating-label ${isFocused2 ? 'floating-label-floated' : ''}`}>Company</label>
-                  <p className="form_error" id="contact-company-error">{errors.company?.message}</p>
+                  <p role="alert" className="form_error" id="contact-company-error">{errors.company?.message}</p>
                 </div>
               </div>
               <div className="col-xxl-12">
                 <div className="postbox__comment-input mb-35">
-                  <input type="email" autoComplete="email" className="inputText" id="contact-email" aria-invalid={Boolean(errors.email)} aria-describedby="contact-email-error" {...register("email")} onFocus={handleFocus3} onBlur={handleBlur3} />
+                  <input type="email" autoComplete="email" spellCheck={false} className="inputText" id="contact-email" aria-invalid={Boolean(errors.email)} aria-describedby="contact-email-error" {...register("email")} onFocus={handleFocus3} onBlur={handleBlur3} />
                   <label htmlFor="contact-email" className={`floating-label ${isFocused3 ? 'floating-label-floated' : ''}`}>Your Email</label>
-                  <p className="form_error" id="contact-email-error">{errors.email?.message}</p>
+                  <p role="alert" className="form_error" id="contact-email-error">{errors.email?.message}</p>
                 </div>
               </div>
               <div className="col-xxl-12">
                 <div className="postbox__comment-input mb-20">
                   <textarea className="textareaText" id="contact-message" aria-invalid={Boolean(errors.message)} aria-describedby="contact-message-error" {...register("message")} onFocus={handleFocus4} onBlur={handleBlur4}></textarea>
                   <label htmlFor="contact-message" className={`floating-label-2 ${isFocused4 ? 'floating-label-floated' : ''}`}>Tell us what you need</label>
-                  <p className="form_error" id="contact-message-error">{errors.message?.message}</p>
+                  <p role="alert" className="form_error" id="contact-message-error">{errors.message?.message}</p>
                 </div>
               </div>
             </div>
@@ -195,7 +195,7 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
               <div className="postbox__comment-btn">
                 <button type="submit" className="tp-btn-grey-lg" disabled={isSubmitting} aria-busy={isSubmitting}>
                   <span>
-                    <i>{isSubmitting ? 'Sending...' : 'Send Enquiry'}</i>
+                    <i>{isSubmitting ? 'Sending…' : 'Send Enquiry'}</i>
                   </span>
                 </button>
               </div>

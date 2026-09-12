@@ -14,7 +14,7 @@ const About = () => {
       <HeaderFour />
       <div id="smooth-wrapper" className="black-bg-3">
         <div id="smooth-content">
-          <main>
+          <main id="main-content" tabIndex={-1}>
             <HeroAreaAbout />
             <AboutInfo />
             <PersonalInfo />

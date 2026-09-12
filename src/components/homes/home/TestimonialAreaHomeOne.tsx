@@ -143,7 +143,7 @@ const TestimonialAreaHomeOne = ({ style }: TestimonialAreaHomeOneProps) => {
 
   useEffect(() => {
     const testimonialSection = sectionRef.current;
-    if (!testimonialSection) {
+    if (!testimonialSection || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       return;
     }
 

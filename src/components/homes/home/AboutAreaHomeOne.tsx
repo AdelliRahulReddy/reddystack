@@ -1,7 +1,8 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Lottie from 'lottie-react';
+import Lottie, { type LottieRefCurrentProps } from 'lottie-react';
+import useMedia from 'react-use/lib/useMedia';
 import award_img from "@/assets/img/about/award-icon.svg";
 import aboutAnimation from "@/assets/lottie/AboutReddystack.json";
 import Count from '@/components/common/Count';
@@ -35,6 +36,11 @@ const about_content: DataType = {
 const { subtitle, award_title, award_des, about_des, counter_data } = about_content
 
 const AboutAreaHomeOne = () => {
+  const animation = useRef<LottieRefCurrentProps>(null);
+  const reducedMotion = useMedia('(prefers-reduced-motion: reduce)', true);
+  useEffect(() => {
+    if (reducedMotion) animation.current?.pause(); else animation.current?.play();
+  }, [reducedMotion]);
   return (
     <>
       <section className="tp-about-area fix">
@@ -54,6 +60,9 @@ const AboutAreaHomeOne = () => {
                         style={{ backgroundImage: 'url(/assets/img/about/shape/about-shape-1.png)' }}></div>
                       <div className="tp-about-lottie-frame">
                         <Lottie
+                          lottieRef={animation}
+                          autoplay={!reducedMotion}
+                          aria-hidden="true"
                           animationData={aboutAnimation}
                           loop={true}
                           className="tp-about-lottie-player"
@@ -70,7 +79,7 @@ const AboutAreaHomeOne = () => {
                   <div className="tp-about-award d-inline-block">
                     <div className="tp-about-award-icon d-inline-block" style={{ marginRight: "15px" }}>
                       <span>
-                        <Image src={award_img} alt="image" />
+                        <Image src={award_img} alt="" />
                       </span>
                     </div>
                     <div className="tp-about-award-content d-inline-block">

@@ -10,22 +10,26 @@ import type { JSX } from "react";
 interface HeroDataType {
   id: number;
   link: string;
+  label: string;
   icon: JSX.Element;
 }
 
 const hero_social_data: HeroDataType[] = [
   {
     id: 1,
+    label: 'Instagram',
     link: siteConfig.socialLinks.instagram,
     icon: <InstagramIcon />,
   },
   {
     id: 2,
+    label: 'X',
     link: siteConfig.socialLinks.x,
     icon: <XIcon />,
   },
   {
     id: 3,
+    label: 'Telegram',
     link: siteConfig.socialLinks.telegram,
     icon: <TelegramIcon />,
   }
@@ -38,6 +42,7 @@ export const HeroSocialLinks = () => {
         <Link
           key={h_index}
           href={h_item.link}
+          aria-label={h_item.label}
           target="_blank"
           rel="noopener noreferrer">
           {h_item.icon}

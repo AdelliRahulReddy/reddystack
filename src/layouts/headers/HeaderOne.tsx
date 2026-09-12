@@ -17,7 +17,7 @@ const HeaderOne = () => {
 
   // header border bottom animation
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       // Testimonial 3 Image Animation
       gsap.set(".tp-header-border", { width: 0, });
       const borderTween = gsap.to(".tp-header-border", {
@@ -48,13 +48,13 @@ const HeaderOne = () => {
           <span className="tp-header-border"></span>
           <div className="container container-large">
             <div className="row align-items-center">
-              <div className="col-xl-2 col-lg-2 col-md-5 col-6">
+              <div className="col-xxl-2 col-xl-3 col-lg-6 col-md-5 col-6">
                 <div className="logo">
                   <BrandLockup className="logo-white" textColor="var(--tp-common-white)" />
                   <BrandLockup className="logo-black" textColor="var(--tp-common-black-5)" />
                 </div>
               </div>
-              <div className="col-xl-6 col-lg-7 d-none d-lg-block">
+              <div className="col-xl-7 d-none d-xl-block">
                 <div className="main-menu">
                   <nav className="tp-main-menu-content">
                     <NavMenu />
@@ -62,7 +62,7 @@ const HeaderOne = () => {
                 </div>
               </div>
 
-              <div className="col-xl-4 col-lg-3 col-md-7 col-6">
+              <div className="col-xxl-3 col-xl-2 col-lg-6 col-md-7 col-6">
                 <div className="tp-header-right d-flex align-items-center justify-content-end">
 
                   <div className="tp-theme-toggle">
@@ -97,7 +97,7 @@ const HeaderOne = () => {
                       </span>
 
                       <input
-                        checked={active}
+                        aria-label="Dark mode" checked={active}
                         onChange={toggleTheme}
                         type="checkbox"
                         className="themepure-theme-toggle-input"
@@ -121,7 +121,7 @@ const HeaderOne = () => {
 
                   <div className="tp-header-hamburger ml-20">
                     <button className="tp-hamburger-btn tp-hamburger-btn-white tp-menu-bar tp-offcanvas-open-btn-2"
-                      onClick={() => setShowCanvas(true)}
+                      aria-label="Open menu" aria-expanded={showCanvas} aria-controls="site-menu" onClick={() => setShowCanvas(true)}
                       type="button">
                       <span></span>
                     </button>
@@ -140,7 +140,7 @@ const HeaderOne = () => {
         <div className="tp-header-area tp-header-mob-space tp-header-transparent p-relative tp-int-menu tp-header-sticky-cloned">
           <div className="container container-large">
             <div className="row align-items-center">
-              <div className="col-xl-2 col-lg-2 col-md-5 col-6">
+              <div className="col-xxl-2 col-xl-3 col-lg-6 col-md-5 col-6">
 
                 <div className="logo">
                   <BrandLockup className="logo-white" textColor="var(--tp-common-white)" />
@@ -148,14 +148,14 @@ const HeaderOne = () => {
                 </div>
 
               </div>
-              <div className="col-xl-6 col-lg-7 d-none d-lg-block">
+              <div className="col-xl-7 d-none d-xl-block">
                 <div className="main-menu">
                   <nav className="tp-main-menu-content">
                     <NavMenu />
                   </nav>
                 </div>
               </div>
-              <div className="col-xl-4 col-lg-3 col-md-7 col-6">
+              <div className="col-xxl-3 col-xl-2 col-lg-6 col-md-7 col-6">
                 <div className="tp-header-right d-flex align-items-center justify-content-end">
                   <div className="tp-theme-toggle ">
                     <label
@@ -188,7 +188,7 @@ const HeaderOne = () => {
                       </span>
 
                       <input
-                        checked={active}
+                        aria-label="Dark mode" checked={active}
                         onChange={toggleTheme}
                         id="header-one-theme-toggle-sticky"
                         type="checkbox"
@@ -210,7 +210,7 @@ const HeaderOne = () => {
                   </div>
                   <div className="tp-header-hamburger ml-20">
                     <button
-                      onClick={() => setShowCanvas(true)}
+                      aria-label="Open menu" aria-expanded={showCanvas} aria-controls="site-menu" onClick={() => setShowCanvas(true)}
                       className="tp-hamburger-btn tp-hamburger-btn-white tp-menu-bar tp-offcanvas-open-btn-2"
                       type="button">
                       <span></span>

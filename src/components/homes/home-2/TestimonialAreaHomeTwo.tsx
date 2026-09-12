@@ -13,6 +13,7 @@ const TestimonialAreaHomeTwo = () => {
   const slideCount = featuredProjects.length;
 
   const moveText = (e: React.MouseEvent<HTMLDivElement>, index: number) => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const hoverTextRef = hoverTextRefs.current[index];
 
     if (hoverTextRef) {
@@ -20,10 +21,8 @@ const TestimonialAreaHomeTwo = () => {
       const x = e.clientX - item.left;
       const y = e.clientY - item.top;
 
-      const children = hoverTextRef.children;
-      if (children[0] && children[0].children[2]) {
-        (children[0].children[2] as HTMLElement).style.transform = `translate(${x}px, ${y}px)`;
-      }
+      const label = hoverTextRef.querySelector<HTMLElement>('.tp-portfolio-view');
+      if (label) label.style.transform = `translate(${x}px, ${y}px)`;
     }
   };
 
@@ -95,41 +94,27 @@ const TestimonialAreaHomeTwo = () => {
           <div className="row">
             <div className="col-xl-12">
               <div className="tp-3d-slide-container">
-                <span
+                <button type="button" disabled={activeIndex === 0}
                   className="tp-3d-slide-arrow tp-3d-slide-arrow-left z-index-9"
                   onClick={() => shiftActiveIndex(-1)}
-                  onKeyDown={(event) => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      shiftActiveIndex(-1);
-                    }
-                  }}
-                  role="button"
-                  tabIndex={0}
                   aria-label="Show previous project"
                 >
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15 8H1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M8 1L1 8L8 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </span>
+                </button>
 
-                <span
+                <button type="button" disabled={activeIndex === slideCount - 1}
                   className="tp-3d-slide-arrow tp-3d-slide-arrow-right z-index-9"
                   onClick={() => shiftActiveIndex(1)}
-                  onKeyDown={(event) => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      shiftActiveIndex(1);
-                    }
-                  }}
-                  role="button"
-                  tabIndex={0}
                   aria-label="Show next project"
                 >
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 8H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M8 1L15 8L8 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </span>
+                </button>
 
                 <div
                   className="tp-3d-slide-wrapper"
@@ -140,6 +125,7 @@ const TestimonialAreaHomeTwo = () => {
                   {featuredProjects.map((item, index) => (
                     <div
                       key={item.slug}
+                      aria-hidden={index !== activeIndex}
                       className={`tp-3d-slide tp-hover-reveal-text ${getSlideClassName(index)}`.trim()}
                       ref={(element) => {
                         hoverTextRefs.current[index] = element;
@@ -149,10 +135,9 @@ const TestimonialAreaHomeTwo = () => {
                       <Link
                         href={item.path}
                         className="tp-portfolio-item-2 include-bg"
-                        style={{
-                          backgroundImage: `url(${item.listingImage.src})`,
-                        }}
+                        tabIndex={index === activeIndex ? 0 : -1}
                       >
+                        <Image src={item.listingImage} alt="" fill sizes="(max-width: 767px) 90vw, (max-width: 1199px) 630px, 770px" className="tp-portfolio-card-image" />
                         <div className="tp-portfolio-meta-2">
                           <span>{item.category}</span>
                           <span>{item.year}</span>

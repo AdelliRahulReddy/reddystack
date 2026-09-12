@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import useMedia from 'react-use/lib/useMedia';
 import Image, { StaticImageData } from 'next/image'
 import slider_img_1 from "@/assets/img/services/slider/services-slider-1.jpg";
 import slider_img_2 from "@/assets/img/services/slider/services-slider-2.jpg";
@@ -111,6 +112,7 @@ const setting_1 = {
 
 
 const SeviceHeroArea = () => {
+  const reducedMotion = useMedia('(prefers-reduced-motion: reduce)', true);
   return (
     <>
       <div className="sv-inner__slider-area black-bg-3 sv-inner__slider-plr">
@@ -139,7 +141,7 @@ const SeviceHeroArea = () => {
                 <div className="row">
                   <div className="col-xl-6 col-lg-6 col-md-6">
                     <div className="sv-inner__slider-wrapper">
-                      <Slider {...setting_1} className="sv-inner__slider-active-1">
+                      <Slider {...setting_1} autoplay={!reducedMotion} className="sv-inner__slider-active-1">
                         {slider_images_1.map((item, index) => (
                           <div key={index} className="sv-inner__slider-item">
                             <Image src={item} alt="Reddystack website and application service visual" />
@@ -150,7 +152,7 @@ const SeviceHeroArea = () => {
                   </div>
                   <div className="col-xl-6 col-lg-6 col-md-6">
                     <div className="sv-inner__slider-wrapper">
-                      <Slider {...setting_1} className="sv-inner__slider-active-2">
+                      <Slider {...setting_1} autoplay={!reducedMotion} className="sv-inner__slider-active-2">
                         {slider_images_2.map((item, index) => (
                           <div key={index} className="sv-inner__slider-item">
                             <Image src={item} alt="Reddystack MVP and automation service visual" />

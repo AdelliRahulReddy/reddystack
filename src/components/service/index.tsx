@@ -14,7 +14,7 @@ const Service = () => {
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main>
+          <main id="main-content" tabIndex={-1}>
             <SeviceHeroArea />
             <ServiceAreaHomeThree /> {/* Restored original 'Our Process' design */}
             <ServiceInfoArea />

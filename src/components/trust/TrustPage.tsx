@@ -2,19 +2,21 @@ import HeaderFour from "@/layouts/headers/HeaderFour";
 import FooterOne from "@/layouts/footers/FooterOne";
 import type { TrustPageData } from "@/data/TrustPagesData";
 import Link from "next/link";
+import type { ReactNode } from 'react';
 
 type TrustPageProps = {
   page: Pick<TrustPageData, 'title' | 'subtitle' | 'intro' | 'sections'>;
   breadcrumbs?: { name: string; path: string }[];
+  children?: ReactNode;
 };
 
-const TrustPage = ({ page, breadcrumbs }: TrustPageProps) => {
+const TrustPage = ({ page, breadcrumbs, children }: TrustPageProps) => {
   return (
     <>
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main>
+          <main id="main-content" tabIndex={-1}>
             <section className="service-details__area service-details__space pt-200 pb-120 black-bg-3">
               <div className="container">
                 <div className="row">
@@ -40,6 +42,7 @@ const TrustPage = ({ page, breadcrumbs }: TrustPageProps) => {
                       <p className="tp_title_anim">{page.intro}</p>
                     </div>
                     <div className="service-details__left-wrap">
+                      {children}
                       {page.sections.map((section) => (
                         <section key={section.title} className="service-details__left-text pb-20">
                           <h2 className="tp-section-title-3 mb-25">{section.title}</h2>

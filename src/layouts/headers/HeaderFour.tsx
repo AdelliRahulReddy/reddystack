@@ -70,7 +70,7 @@ const HeaderFour = ({ style }: HeaderFourProps) => {
                         </svg>
                       </span>
                       <input
-                        checked={active}
+                        aria-label="Dark mode" checked={active}
                         onChange={toggleTheme}
                         id="header-four-theme-toggle-primary"
                         type="checkbox"
@@ -120,7 +120,7 @@ const HeaderFour = ({ style }: HeaderFourProps) => {
                     </Link>
                   </div>
                   <div className="tp-header-3__bar">
-                    <button className="tp-menu-bar tp-offcanvas-open-btn" onClick={() => setShowCanvas(true)}>
+                    <button className="tp-menu-bar tp-offcanvas-open-btn" aria-label="Open menu" aria-expanded={showCanvas} aria-controls="site-menu" onClick={() => setShowCanvas(true)}>
                       <svg width="32" height="10" viewBox="0 0 32 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M31 1H1" stroke="currentcolor" strokeWidth="2" strokeLinecap="round" />
                         <path d="M31 9H1" stroke="currentcolor" strokeWidth="2" strokeLinecap="round" />
@@ -173,7 +173,7 @@ const HeaderFour = ({ style }: HeaderFourProps) => {
                         </svg>
                       </span>
                       <input
-                        checked={active}
+                        aria-label="Dark mode" checked={active}
                         onChange={toggleTheme}
                         id="header-four-theme-toggle-sticky"
                         type="checkbox"
@@ -223,7 +223,7 @@ const HeaderFour = ({ style }: HeaderFourProps) => {
                     </Link>
                   </div>
                   <div className="tp-header-3__bar">
-                    <button className=" tp-menu-bar tp-offcanvas-open-btn" onClick={() => setShowCanvas(true)}>
+                    <button className=" tp-menu-bar tp-offcanvas-open-btn" aria-label="Open menu" aria-expanded={showCanvas} aria-controls="site-menu" onClick={() => setShowCanvas(true)}>
                       <svg width="32" height="10" viewBox="0 0 32 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M31 1H1" stroke="currentcolor" strokeWidth="2" strokeLinecap="round" />
                         <path d="M31 9H1" stroke="currentcolor" strokeWidth="2" strokeLinecap="round" />

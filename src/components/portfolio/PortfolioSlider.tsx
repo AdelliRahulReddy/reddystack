@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Slider from 'react-slick';
 import React from 'react';
+import useMedia from 'react-use/lib/useMedia';
 
 import { portfolioProjects } from '@/data/PortfolioProjectsData';
 
@@ -48,6 +49,7 @@ const setting = {
 };
 
 const PortfolioSlider = () => {
+  const reducedMotion = useMedia('(prefers-reduced-motion: reduce)', true);
   return (
     <div className="porfolio-inner__slider-area porfolio-inner__ptb black-bg-3 p-relative fix">
       <div className="container-fluid">
@@ -59,7 +61,7 @@ const PortfolioSlider = () => {
                   Selected Work <br /> From Reddystack.
                 </h1>
               </div>
-              <Slider {...setting} className="porfolio-inner__slider-active">
+              <Slider {...setting} autoplay={!reducedMotion} className="porfolio-inner__slider-active">
                 {slider_images.map((item, index) => (
                   <div key={index} className="porfolio-inner__thumb">
                     <Image src={item} style={{ height: 'auto' }} alt="Project preview" />

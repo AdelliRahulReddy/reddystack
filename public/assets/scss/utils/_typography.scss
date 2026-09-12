@@ -5,40 +5,40 @@ $font-url: 'https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+San
 
 @font-face {
     font-family: 'Didone';
-    src:    url('../../fonts/didone-light.otf') format('woff');
+    src:    url('../../fonts/didone-light.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Didone';
-    src:    url('../../fonts/didone-medium.otf') format('woff');
+    src:    url('../../fonts/didone-medium.otf') format('opentype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Didone Wide Medum';
-    src:    url('../../fonts/didone-wide-medium.otf') format('woff');
+    src:    url('../../fonts/didone-wide-medium.otf') format('opentype');
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Didone Compack Dark';
-    src:    url('../../fonts/didone-compack-dark.otf') format('woff');
+    src:    url('../../fonts/didone-compack-dark.otf') format('opentype');
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Didone right';
-    src:    url('../../fonts/PP-Right-Didone-Medium.otf') format('woff');
+    src:    url('../../fonts/PP-Right-Didone-Medium.otf') format('opentype');
     font-style: normal;
     font-display: swap;
     font-weight: 500;
 }
 @font-face {
     font-family: 'Didone right';
-    src:    url('../../fonts/PP-Right-Didone-Light.otf') format('woff');
+    src:    url('../../fonts/PP-Right-Didone-Light.otf') format('opentype');
     font-style: normal;
     font-display: swap;
     font-weight: 300;
@@ -47,19 +47,19 @@ $font-url: 'https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+San
 // font family
 $font-family: (
     'ff': (
-        'body': "'DM Sans', sans-serif",
+        'body': "var(--font-dm-sans), sans-serif",
         'heading': "'Didone', sans-serif",
-        'p': "'DM Sans', sans-serif",
-        'dmsans': "'DM Sans', sans-serif",
+        'p': "var(--font-dm-sans), sans-serif",
+        'dmsans': "var(--font-dm-sans), sans-serif",
         'didone': "'Didone', sans-serif",
         'didoneWideMedium': "'Didone Wide Medum', serif",
         'didoneCompackDark': "'Didone Compack Dark', serif",
         'didoneright': "'Didone right', serif",
-        'garamond': "'EB Garamond', serif",
-        'kufam': "'Kufam', sans-serif",
-        'abril': "'Abril Fatface', cursive",
-        'poppins': "'Poppins', sans-serif",
-        'playfair': "'Playfair Display', sans-serif",
+        'garamond': "var(--font-garamond), serif",
+        'kufam': "var(--font-kufam), sans-serif",
+        'abril': "var(--font-abril), cursive",
+        'poppins': "var(--font-poppins), sans-serif",
+        'playfair': "var(--font-playfair), sans-serif",
         'fontawesome': '"Font Awesome 6 Pro"',
     )
 );

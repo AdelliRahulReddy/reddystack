@@ -12,7 +12,7 @@ const Contact = () => {
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main>
+          <main id="main-content" tabIndex={-1}>
             <ContactArea />
           </main>
           <FooterOne style={true} />

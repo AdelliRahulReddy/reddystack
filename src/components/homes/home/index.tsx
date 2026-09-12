@@ -23,7 +23,7 @@ const HomeOne = () => {
         style={{ backgroundImage: `url(/assets/img/bg/distort-bg.png)` }}
       >
         <div id="smooth-content">
-          <main>
+          <main id="main-content" tabIndex={-1}>
             <HeroAreaHome />
             <BrandAreaHomeOne />
             <ServiceAreaHomeOne />
