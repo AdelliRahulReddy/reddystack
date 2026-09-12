@@ -1,5 +1,6 @@
 import { intentLandingPages } from "@/data/IntentLandingPagesData";
 import { blogPosts } from "@/data/BlogPostsData";
+import { seoPages } from "@/data/SeoPagesData";
 import { portfolioProjects } from "@/data/PortfolioProjectsData";
 import { serviceDetailData, primaryServices, primaryServiceSlugs } from "@/data/ServiceDetailData";
 import { siteConfig } from "@/data/siteConfig";
@@ -21,7 +22,8 @@ export function GET() {
     line("Services", "/service", "Meta Ads, Google Ads, Ad Creatives, AI UGC-style Videos, Website Development, and SEO & Local SEO."),
     line("Pricing", "/pricing", "Custom quotes, scope, deliverables, and separate platform costs."),
     line("Portfolio", "/portfolio", "Selected shipped projects and digital product work."),
-    line("Insights", "/blog", "Articles about SEO, product planning, MVPs, and automation."),
+    line("Insights", "/blog", "Guides about ads, creative production, AI video, websites and SEO."),
+    line("Founder", "/about/rahul-reddy-adelli", "Rahul Reddy Adelli and the Reddystack delivery approach."),
     line("Contact", "/contact", "Project inquiry page for new work."),
     "",
     "## Primary Services",
@@ -41,6 +43,7 @@ export function GET() {
     "",
     "## Articles",
     ...blogPosts.map((post) => line(post.title, post.path, post.metaDescription)),
+    ...seoPages.filter((page) => page.kind === 'guide' || page.kind === 'hub').map((page) => line(page.title, page.path, page.description)),
     "",
     "## Projects",
     ...portfolioProjects.map((project) =>

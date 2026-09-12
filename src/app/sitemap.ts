@@ -4,6 +4,7 @@ import { blogPosts } from "@/data/BlogPostsData";
 import { intentLandingPages } from "@/data/IntentLandingPagesData";
 import { portfolioProjects } from "@/data/PortfolioProjectsData";
 import type { MetadataRoute } from "next";
+import { seoPages } from "@/data/SeoPagesData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routeConfig: Array<{
@@ -31,7 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = routeConfig.map((route) => ({
       url: route.path === "" ? `${siteConfig.siteUrl}/` : `${siteConfig.siteUrl}${route.path}`,
-      lastModified: new Date().toISOString().split("T")[0],
       changeFrequency: route.changeFrequency,
       priority: route.priority,
     }));
@@ -45,10 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const portfolioRoutes = portfolioProjects.map((project) => ({
       url: `${siteConfig.siteUrl}${project.path}`,
-      lastModified: new Date().toISOString().split("T")[0],
       changeFrequency: "monthly" as const,
       priority: 0.75,
     }));
 
-  return [...routes, ...articleRoutes, ...portfolioRoutes];
+  return [...routes, ...articleRoutes, ...portfolioRoutes, ...seoPages.map((page) => ({
+    url: `${siteConfig.siteUrl}${page.path}`,
+    ...(page.publishedAt ? { lastModified: page.publishedAt } : {}),
+  }))];
 }

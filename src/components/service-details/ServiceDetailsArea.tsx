@@ -128,6 +128,14 @@ const ServiceDetailsArea = ({ service }: ServiceDetailsAreaProps) => {
                 </div>
               ) : null}
 
+              {service.relatedLinks && (
+                <section className="service-details__left-text pb-20">
+                  <h2 className="tp-section-title-3 mb-25">Related guides and services</h2>
+                  <div className="service-details__fea-list">
+                    <ul>{service.relatedLinks.map((link) => <li key={link.path}><Link href={link.path}>{link.title}</Link></li>)}</ul>
+                  </div>
+                </section>
+              )}
               <div className="service-details__left-text">
                 {service.finalCtaTitle ? (
                   <h2 className="tp-section-title-3 mb-25">{service.finalCtaTitle}</h2>

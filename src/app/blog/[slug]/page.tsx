@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 
 import BlogDetails from '@/components/blog-details';
 import Wrapper from '@/layouts/Wrapper';
+import SeoContentPage, { seoContentMetadata } from '@/components/seo/SeoContentPage';
+import { getSeoPage, seoPages } from '@/data/SeoPagesData';
 import {
   blogPosts,
   getAdjacentBlogPosts,
@@ -26,15 +28,16 @@ type BlogPostPageProps = {
 };
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({
+  return [...blogPosts.map((post) => ({
     slug: post.slug,
-  }));
+  })), ...seoPages.filter((page) => page.path.startsWith('/blog/') && page.kind === 'hub').map((page) => ({ slug: page.path.split('/')[2] }))];
 }
 
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
+  if (getSeoPage(`/blog/${slug}`)) return seoContentMetadata(`/blog/${slug}`);
   const post = getBlogPost(slug);
 
   if (!post) {
@@ -75,6 +78,7 @@ export async function generateMetadata({
 
 const BlogPostPage = async ({ params }: BlogPostPageProps) => {
   const { slug } = await params;
+  if (getSeoPage(`/blog/${slug}`)) return <SeoContentPage path={`/blog/${slug}`} />;
   const post = getBlogPost(slug);
 
   if (!post) {

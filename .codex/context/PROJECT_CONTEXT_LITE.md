@@ -23,6 +23,7 @@
 - homepage FAQ: `src/data/HomeFaqData.ts`
 - service details + service FAQ: `src/data/ServiceDetailData.ts`
 - blog content: `src/data/BlogPostsData.ts`
+- service-topic hubs, new guides and founder profile: `src/data/seo-pages.json`, routed through `SeoPagesData.ts`
 - portfolio content: `src/data/PortfolioProjectsData.ts`
 
 ## Active Routes
@@ -65,6 +66,9 @@
 ## Blog
 - archive uses sidebar flow, not alternate tabbed archive
 - real detail route is `/blog/[slug]`
+- new guide route is `/blog/[slug]/[article]`; six `/blog/{topic}` hubs link all new guides
+- preserve the eight historical article URLs; do not create flat aliases for new nested guides
+- run `node scripts/check-seo-routes.mjs` against a production build on port 3187 (or set `SEO_CHECK_BASE`)
 
 ## Portfolio
 - real detail route is `/portfolio/[slug]`

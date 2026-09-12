@@ -184,6 +184,8 @@ const FooterOne = ({ style }: FooterOneProps) => {
                 <div className="col-xl-6 col-md-6">
                   <div className="tp-copyright-content-right text-center text-md-end">
                     <span>
+                      <Link href="/blog">Guides</Link>
+                      {" / "}
                       <Link href="/pricing">Pricing</Link>
                       {" / "}
                       <Link href="/privacy-policy">Privacy</Link>

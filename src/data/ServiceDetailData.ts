@@ -51,6 +51,7 @@ export type ServiceDetail = {
   pricingText?: string;
   finalCtaTitle?: string;
   finalCtaText?: string;
+  relatedLinks?: { title: string; path: string }[];
   faqItems: {
     question: string;
     answer: string;
@@ -92,7 +93,8 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Reach potential customers on Facebook and Instagram with campaigns built around your offer and business goals.",
-  "metaTitle": "Meta Ads Services | Reddystack",
+  "metaTitle": "Meta Ads Management Services | Reddystack",
+  "relatedLinks": [{ "title": "Meta Ads guides and checklists", "path": "/blog/meta-ads" }],
   "metaDescription": "Reach potential customers on Facebook and Instagram with campaigns built around your offer and business goals.",
   "presentation": {
     "showVisuals": false,
@@ -168,7 +170,8 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Connect with people looking for your products or services through Google Ads campaigns and conversion tracking.",
-  "metaTitle": "Google Ads Services | Reddystack",
+  "metaTitle": "Google Ads Management Services | Reddystack",
+  "relatedLinks": [{ "title": "Google Ads guides and checklists", "path": "/blog/google-ads" }],
   "metaDescription": "Connect with people looking for your products or services through Google Ads campaigns and conversion tracking.",
   "presentation": {
     "showVisuals": false,
@@ -244,7 +247,8 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Turn your offer into ad images, promotional designs, edited videos, and copy for your campaigns.",
-  "metaTitle": "Ad Creatives Services | Reddystack",
+  "metaTitle": "Ad Creative Services | Reddystack",
+  "relatedLinks": [{ "title": "Ad creative briefs, scripts and examples", "path": "/blog/ad-creatives" }],
   "metaDescription": "Turn your offer into ad images, promotional designs, edited videos, and copy for your campaigns.",
   "presentation": {
     "showVisuals": false,
@@ -320,7 +324,8 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Explain your product or service through conversational AI-presenter videos designed for ads and social content.",
-  "metaTitle": "AI UGC-Style Videos Services | Reddystack",
+  "metaTitle": "AI UGC-Style Video Production Services | Reddystack",
+  "relatedLinks": [{ "title": "AI video workflows and production checklists", "path": "/blog/ai-ugc-videos" }],
   "metaDescription": "Explain your product or service through conversational AI-presenter videos designed for ads and social content.",
   "presentation": {
     "showVisuals": false,
@@ -397,6 +402,7 @@ export const serviceDetailData: ServiceDetail[] = [
   ],
   "highlightText": "Help customers find your business through website optimisation and Google Business Profile management.",
   "metaTitle": "SEO & Local SEO Services | Reddystack",
+  "relatedLinks": [{ "title": "SEO and Local SEO guides", "path": "/blog/seo-local-seo" }],
   "metaDescription": "Help customers find your business through website optimisation and Google Business Profile management.",
   "presentation": {
     "showVisuals": false,
@@ -476,7 +482,8 @@ export const serviceDetailData: ServiceDetail[] = [
     highlightTitle: ['Search-ready', 'websites'],
     highlightText:
       'Built for brands that need visibility, clarity, and stronger conversion from their online presence.',
-    metaTitle: 'Website Development Services | Reddystack',
+    metaTitle: 'SEO-Ready Website Development | Reddystack',
+    relatedLinks: [{ title: 'Website development briefs and launch checklists', path: '/blog/website-development' }, { title: 'Business website development services', path: '/website-development' }],
     metaDescription:
       'SEO website development services by Reddystack for startups and small businesses that need responsive websites, service pages, performance, and lead-ready structure.',
     faqItems: [

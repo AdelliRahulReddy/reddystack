@@ -1,12 +1,14 @@
 import HeaderFour from "@/layouts/headers/HeaderFour";
 import FooterOne from "@/layouts/footers/FooterOne";
 import type { TrustPageData } from "@/data/TrustPagesData";
+import Link from "next/link";
 
 type TrustPageProps = {
-  page: TrustPageData;
+  page: Pick<TrustPageData, 'title' | 'subtitle' | 'intro' | 'sections'>;
+  breadcrumbs?: { name: string; path: string }[];
 };
 
-const TrustPage = ({ page }: TrustPageProps) => {
+const TrustPage = ({ page, breadcrumbs }: TrustPageProps) => {
   return (
     <>
       <HeaderFour />
@@ -18,6 +20,13 @@ const TrustPage = ({ page }: TrustPageProps) => {
                 <div className="row">
                   <div className="col-xl-12">
                     <div className="service-details__title-box mb-40">
+                      {breadcrumbs && (
+                        <nav className="blog-list__text-sm mb-25" aria-label="Breadcrumb">
+                          {breadcrumbs.map((item, index) => (
+                            <span key={item.path}>{index > 0 && ' / '}<Link href={item.path}>{item.name}</Link></span>
+                          ))}
+                        </nav>
+                      )}
                       <span className="service-details__subtitle tp-char-animation">
                         {page.subtitle}
                       </span>
@@ -37,6 +46,14 @@ const TrustPage = ({ page }: TrustPageProps) => {
                           {section.body.map((paragraph) => (
                             <p key={paragraph}>{paragraph}</p>
                           ))}
+                          {(section.bullets || section.links) && (
+                            <div className="service-details__fea-list">
+                              <ul>
+                                {section.bullets?.map((item) => <li key={item}>{item}</li>)}
+                                {section.links?.map((link) => <li key={link.path}><Link href={link.path}>{link.title}</Link></li>)}
+                              </ul>
+                            </div>
+                          )}
                         </section>
                       ))}
                     </div>

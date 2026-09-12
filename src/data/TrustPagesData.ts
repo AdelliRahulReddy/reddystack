@@ -11,6 +11,8 @@ export type TrustPageData = {
   sections: {
     title: string;
     body: string[];
+    bullets?: string[];
+    links?: { title: string; path: string }[];
   }[];
 };
 

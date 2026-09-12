@@ -1406,6 +1406,7 @@ export function buildIntentServiceDetail(page: IntentLandingPage): ServiceDetail
     pricingText: page.pricingText,
     finalCtaTitle: page.finalCtaTitle,
     finalCtaText: page.finalCtaText,
+    relatedLinks: page.relatedServiceSlug === 'seo-websites' ? [{ title: 'Website development guides and checklists', path: '/blog/website-development' }] : undefined,
     faqItems: page.faqItems,
   };
 }

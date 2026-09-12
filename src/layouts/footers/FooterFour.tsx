@@ -60,6 +60,8 @@ const footer_content: DataType = {
   ],
   links: [
     { title: "About", link: "/about" },
+    { title: "Founder", link: "/about/rahul-reddy-adelli" },
+    { title: "Guides", link: "/blog" },
     { title: "Services", link: "/service" },
     { title: "Portfolio", link: "/portfolio" },
     { title: "Contact", link: "/contact" },

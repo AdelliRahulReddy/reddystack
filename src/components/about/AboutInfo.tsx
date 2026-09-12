@@ -14,7 +14,7 @@ const info_data: DataType[] = [
   { title: "Ad Campaigns", bg_img: "/assets/img/about/ab-1.png", href: "/service/meta-ads" },
   { title: "Creative Content", bg_img: "/assets/img/about/ab-2.png", href: "/service/ad-creatives" },
   { title: "Websites", bg_img: "/assets/img/about/ab-3.png", href: "/service/seo-websites" },
-  { title: "SEO Strategy", bg_img: "/assets/img/about/ab-4.png", href: "/website-development" }
+  { title: "SEO Strategy", bg_img: "/assets/img/about/ab-4.png", href: "/service/seo-local-seo" }
 ]
 
 
@@ -29,7 +29,7 @@ const AboutInfo = () => {
               <div className="ab-info__text">
 
                 <div>
-                  I&apos;m Rahul <span className="line"></span> founder of Reddystack, based in Hyderabad. I work directly with small businesses and growing brands, bringing clear planning and hands-on delivery to
+                  I&apos;m <Link href="/about/rahul-reddy-adelli">Rahul</Link> <span className="line"></span> founder of Reddystack, based in Hyderabad. I work directly with small businesses and growing brands, bringing clear planning and hands-on delivery to
 
                   {info_data.map((item, index) =>
                     <React.Fragment key={index}>

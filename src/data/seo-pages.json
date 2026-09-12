@@ -1,0 +1,3762 @@
+[
+  {
+    "path": "/blog/meta-ads/facebook-ads-audit-checklist",
+    "parent": "/blog/meta-ads",
+    "kind": "guide",
+    "title": "Facebook Ads Audit Checklist",
+    "description": "Audit a Facebook or Instagram account from business outcome back to the ad. A low cost per lead is useful only when those leads can become customers.",
+    "subtitle": "Meta Ads guides · Reddystack · 12 September 2026",
+    "intro": "Audit a Facebook or Instagram account from business outcome back to the ad. A low cost per lead is useful only when those leads can become customers.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Start with a reliable comparison",
+        "body": [
+          "Export two comparable reporting periods and write down the campaign objective, attribution setting, spend and business outcome. Mark promotions, stock changes and tracking releases that could distort the comparison. Separate new-customer acquisition from remarketing."
+        ],
+        "bullets": [
+          "Account: confirm the business owns the ad account, billing and connected assets; remove access that is no longer needed.",
+          "Measurement: complete a test enquiry or purchase and compare the event with the actual CRM record or order.",
+          "Offer: open every destination on a phone and confirm the price, promise and next step match the ad.",
+          "Delivery: review spend, reach, frequency and conversions by campaign before drilling into placements or creatives."
+        ]
+      },
+      {
+        "title": "Build a useful issue register",
+        "body": [
+          "For each finding record evidence, likely impact, an owner and the next check. “Tracking problem” is too vague; “purchase fires again when the receipt page reloads” is an actionable defect. Fix invalid measurement before reallocating budget."
+        ],
+        "bullets": [
+          "Example: 40 recorded leads but only 25 unique enquiries means the reported CPL cannot be trusted yet.",
+          "Example: an ad gets clicks but the contact button fails on Android. Repair the destination before commissioning new creative."
+        ]
+      },
+      {
+        "title": "Finish with decisions",
+        "body": [
+          "Choose three priority changes, keep a dated log and define what would count as improvement. Compare qualified enquiries and customer acquisition cost after enough outcomes have accumulated. Avoid declaring a winner from one sale or changing every variable at once. An audit should leave an evidence trail, not a long list of unexplained dashboard scores."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Facebook Ads Cost in India: Plan Your Budget",
+            "path": "/blog/meta-ads/facebook-ads-cost-india"
+          },
+          {
+            "title": "Facebook Ads Budget for a Small Business",
+            "path": "/blog/meta-ads/facebook-ads-budget-small-business"
+          },
+          {
+            "title": "Meta Ads services",
+            "path": "/service/meta-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/meta-ads/facebook-ads-cost-india",
+    "parent": "/blog/meta-ads",
+    "kind": "guide",
+    "title": "Facebook Ads Cost in India: Plan Your Budget",
+    "description": "Facebook Ads has no universal price per customer in India. Separate the amount paid to Meta from creative production, campaign management and the cost of converting enquiries into sales.",
+    "subtitle": "Meta Ads guides · Reddystack · 12 September 2026",
+    "intro": "Facebook Ads has no universal price per customer in India. Separate the amount paid to Meta from creative production, campaign management and the cost of converting enquiries into sales.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Build the budget from unit economics",
+        "body": [
+          "Write down contribution per sale after fulfilment and the portion you can allocate to acquisition. Use the close rate from your own sales records to translate an affordable customer cost into an affordable qualified-lead cost."
+        ],
+        "bullets": [
+          "Media budget: money spent inside the advertising account.",
+          "Production: images, edits, scripts and landing-page work.",
+          "Management: setup, optimisation and reporting fees.",
+          "Other costs: tools, applicable taxes and any agreed integrations."
+        ]
+      },
+      {
+        "title": "An illustrative calculation",
+        "body": [
+          "Suppose a sale contributes ₹4,000 before acquisition, and the business chooses a ₹1,000 acquisition ceiling. If one in ten qualified enquiries becomes a sale, an initial qualified-lead ceiling is ₹100. At a ₹10,000 media budget, that model needs 100 qualified enquiries and ten sales to meet the ceiling. These are planning assumptions, not Indian market averages or a Reddystack quote."
+        ]
+      },
+      {
+        "title": "How to use early campaign data",
+        "body": [
+          "Record raw leads, duplicates, qualified leads and completed sales separately. If raw leads cost ₹50 but only one quarter qualify, the qualified-lead cost is ₹200. Recalculate the budget using that number and the observed close rate. Ask a provider which costs are included, who owns the account and how overspend is handled. A cheap click does not establish a profitable campaign."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Facebook Ads Audit Checklist",
+            "path": "/blog/meta-ads/facebook-ads-audit-checklist"
+          },
+          {
+            "title": "Facebook Ads Budget for a Small Business",
+            "path": "/blog/meta-ads/facebook-ads-budget-small-business"
+          },
+          {
+            "title": "Meta Ads services",
+            "path": "/service/meta-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/meta-ads/facebook-ads-budget-small-business",
+    "parent": "/blog/meta-ads",
+    "kind": "guide",
+    "title": "Facebook Ads Budget for a Small Business",
+    "description": "A small-business ad budget should buy a focused learning test that the business can afford. Start with one offer and a clear customer outcome before splitting spend across many campaigns.",
+    "subtitle": "Meta Ads guides · Reddystack · 12 September 2026",
+    "intro": "A small-business ad budget should buy a focused learning test that the business can afford. Start with one offer and a clear customer outcome before splitting spend across many campaigns.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Set a test you can interpret",
+        "body": [
+          "Choose the audience, location, offer, conversion action and sales follow-up owner. Establish a maximum test loss and a review date. If the proposed budget is too small to generate meaningful outcomes at your expected lead cost, narrow the test rather than spreading the same amount across more ad sets."
+        ],
+        "bullets": [
+          "Use a fixed planning period and a written media-spend limit.",
+          "Keep production and management fees outside the media calculation.",
+          "Choose a qualified-lead or purchase target, not only a click target.",
+          "Reserve time for follow-up; unanswered enquiries waste paid demand."
+        ]
+      },
+      {
+        "title": "Use a sensitivity range",
+        "body": [
+          "Illustrative model: a ₹6,000 test buys 120, 60 or 30 leads at assumed CPLs of ₹50, ₹100 or ₹200. At a 20% qualification rate those become 24, 12 or 6 qualified leads. The exercise shows how uncertain the result is before spending; it is not a forecast. Decide whether those possible sample sizes can answer your question."
+        ]
+      },
+      {
+        "title": "When to increase or stop",
+        "body": [
+          "Increase spend gradually only when tracking is reliable, delivery capacity exists and qualified outcomes justify the change. Pause for broken checkout, misdirected enquiries or uncontrolled spend. Poor results with very few leads may remain inconclusive; document that instead of declaring that the channel never works. Repeat a controlled test when the offer or measurement has materially improved."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Facebook Ads Audit Checklist",
+            "path": "/blog/meta-ads/facebook-ads-audit-checklist"
+          },
+          {
+            "title": "Facebook Ads Cost in India: Plan Your Budget",
+            "path": "/blog/meta-ads/facebook-ads-cost-india"
+          },
+          {
+            "title": "Meta Ads services",
+            "path": "/service/meta-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/meta-ads/facebook-ads-low-quality-leads",
+    "parent": "/blog/meta-ads",
+    "kind": "guide",
+    "title": "How to Diagnose Low-Quality Facebook Leads",
+    "description": "Cheap Facebook leads can become expensive sales work. Diagnose where relevance breaks down before adding more form fields or changing the audience.",
+    "subtitle": "Meta Ads guides · Reddystack · 12 September 2026",
+    "intro": "Cheap Facebook leads can become expensive sales work. Diagnose where relevance breaks down before adding more form fields or changing the audience.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Define the problem in the CRM",
+        "body": [
+          "Classify a sample of recent enquiries as duplicate, unreachable, outside service area, unsuitable requirement, wrong budget, qualified or customer. Use the same labels across campaigns and record when each lead received its first response. “Bad lead” alone hides problems that require different fixes."
+        ],
+        "bullets": [
+          "Outside area: compare the promised coverage with delivery and location settings.",
+          "Wrong expectation: inspect the ad promise, sample pricing language and landing page.",
+          "Unreachable: check accidental submissions, contact validation and response timing.",
+          "Unsuitable need: add one question that changes whether you can serve the enquiry."
+        ]
+      },
+      {
+        "title": "Change the signal, not just the volume",
+        "body": [
+          "Illustrative example: campaign A generates 50 enquiries with five qualified; campaign B produces 25 with ten qualified at the same spend. Campaign B has the higher raw CPL but the lower qualified CPL. Judge the campaign against the qualification definition, not the form-submission count. Only send eligible customer data back to platforms through an agreed, privacy-aware measurement setup."
+        ]
+      },
+      {
+        "title": "A controlled next test",
+        "body": [
+          "Keep the offer and sales response process stable. Test a clearer price boundary or a service-area statement, then compare qualification rate and qualified-lead cost. Too much friction can exclude suitable buyers as well, so also review form completion. Keep useful business questions and remove questions that nobody uses to make a decision."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Facebook Ads Audit Checklist",
+            "path": "/blog/meta-ads/facebook-ads-audit-checklist"
+          },
+          {
+            "title": "Facebook Ads Cost in India: Plan Your Budget",
+            "path": "/blog/meta-ads/facebook-ads-cost-india"
+          },
+          {
+            "title": "Meta Ads services",
+            "path": "/service/meta-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/meta-ads/meta-pixel-vs-conversions-api",
+    "parent": "/blog/meta-ads",
+    "kind": "guide",
+    "title": "Meta Pixel vs Conversions API",
+    "description": "Meta Pixel and Conversions API are two routes for sending measurement events to Meta. Choose the setup by the events your business needs and the systems you can maintain.",
+    "subtitle": "Meta Ads guides · Reddystack · 12 September 2026",
+    "intro": "Meta Pixel and Conversions API are two routes for sending measurement events to Meta. Choose the setup by the events your business needs and the systems you can maintain.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Understand the event journey",
+        "body": [
+          "A browser event is triggered on the visitor’s device. A server event is sent from a connected backend or integration. The same purchase can travel through both routes, so the measurement design needs a way to recognise that they describe one action. Server-side collection does not remove privacy or consent obligations."
+        ],
+        "bullets": [
+          "List each business event and the system that knows it really happened.",
+          "Decide which events are browser-based, server-based or both.",
+          "Document event names, identifiers, timestamps, currency and value where relevant.",
+          "Keep credentials server-side and limit access to the integration."
+        ]
+      },
+      {
+        "title": "Validate one complete transaction",
+        "body": [
+          "Use a clearly identified test order. Check the browser event, the server event and the order record. Where both routes report the action, verify event matching and deduplication using Meta’s current documentation. Reload the confirmation page and retry a webhook to check whether the order is incorrectly counted twice. Never assume an installed plugin proves the setup is correct."
+        ]
+      },
+      {
+        "title": "Which should a small business choose?",
+        "body": [
+          "A supported platform integration can be easier to operate than custom code. A custom integration makes sense when important events happen in a backend that the standard connector cannot cover. Define an owner for failures and retest after checkout or consent changes. CAPI improves the available measurement path; it does not guarantee perfect attribution or permission to send every customer field."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Meta: browser and server event deduplication",
+            "path": "https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Facebook Ads Audit Checklist",
+            "path": "/blog/meta-ads/facebook-ads-audit-checklist"
+          },
+          {
+            "title": "Facebook Ads Cost in India: Plan Your Budget",
+            "path": "/blog/meta-ads/facebook-ads-cost-india"
+          },
+          {
+            "title": "Meta Ads services",
+            "path": "/service/meta-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/meta-ads/facebook-ads-vs-google-ads",
+    "parent": "/blog/meta-ads",
+    "kind": "guide",
+    "title": "Facebook Ads vs Google Ads: Choosing a Starting Channel",
+    "description": "Choose between Meta and Google Ads by how customers discover and buy your offer. Search demand, creative assets and sales economics matter more than a generic claim that one channel is cheaper.",
+    "subtitle": "Meta Ads guides · Reddystack · 12 September 2026",
+    "intro": "Choose between Meta and Google Ads by how customers discover and buy your offer. Search demand, creative assets and sales economics matter more than a generic claim that one channel is cheaper.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Compare the buying situation",
+        "body": [
+          "Google Search can reach people expressing a need through a query. Facebook and Instagram can introduce an offer while someone is browsing. Both platforms have additional formats, so this distinction is a starting point rather than a description of every campaign type."
+        ],
+        "bullets": [
+          "Known problem and urgent enquiry: investigate relevant Search demand and landing-page fit.",
+          "Visually demonstrable product: consider whether a social ad can communicate value quickly.",
+          "Unfamiliar offer: plan education before expecting a direct purchase.",
+          "Limited budget: choose one clear test rather than underfunding both channels."
+        ]
+      },
+      {
+        "title": "Make the comparison fair",
+        "body": [
+          "An illustrative service business might compare search enquiries and social enquiries after using the same qualification definition, service area and response process. Keep platform-reported conversions visible, but reconcile sales in the CRM. A platform may attribute the same customer differently; adding both reported totals can overstate business results."
+        ]
+      },
+      {
+        "title": "Decide using evidence",
+        "body": [
+          "Estimate demand and costs before launch, then review qualified customer cost, contribution after acquisition and operational capacity. Search may be constrained by available demand; social may require more creative iteration. Use the stronger channel as a starting point and add the other only when it has a defined role. A retargeting campaign is not a substitute for a plan to acquire new demand."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Facebook Ads Audit Checklist",
+            "path": "/blog/meta-ads/facebook-ads-audit-checklist"
+          },
+          {
+            "title": "Facebook Ads Cost in India: Plan Your Budget",
+            "path": "/blog/meta-ads/facebook-ads-cost-india"
+          },
+          {
+            "title": "Meta Ads services",
+            "path": "/service/meta-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/meta-ads/facebook-ads-for-ecommerce",
+    "parent": "/blog/meta-ads",
+    "kind": "guide",
+    "title": "Facebook Ads for Ecommerce: A Launch Checklist",
+    "description": "An ecommerce campaign needs more than product images. Make the offer, catalogue, checkout and purchase measurement agree before sending paid traffic.",
+    "subtitle": "Meta Ads guides · Reddystack · 12 September 2026",
+    "intro": "An ecommerce campaign needs more than product images. Make the offer, catalogue, checkout and purchase measurement agree before sending paid traffic.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Check the store first",
+        "body": [
+          "Buy a test item using a phone, including a variant and delivery address. Confirm that the price, availability, shipping cost and delivery promise stay consistent from ad to receipt. Campaign optimisation cannot repair an unavailable product or an unreliable checkout."
+        ],
+        "bullets": [
+          "Catalogue: accurate IDs, variants, prices, stock and destination URLs.",
+          "Creative: show the actual product and explain a specific reason to buy.",
+          "Checkout: usable payment flow, visible shipping and clear return information.",
+          "Measurement: one completed order, correct value and currency, no reload duplicates."
+        ]
+      },
+      {
+        "title": "Protect contribution, not only revenue",
+        "body": [
+          "Illustrative example: an order worth ₹2,000 is not a ₹2,000 advertising allowance. Subtract product cost, fulfilment, payment charges, discounts and an allowance for returns to understand available contribution. Calculate acquisition economics before judging the campaign by return on ad spend alone. A high revenue ratio can still conceal weak margins."
+        ]
+      },
+      {
+        "title": "Plan the first review",
+        "body": [
+          "Compare new and returning customers when reliable data allows it. Inspect product-level availability, returns and purchase-event integrity alongside ad performance. Pause creative for unavailable variants and make changes in the source catalogue instead of fixing each ad manually. Scale only when fulfilment, stock and customer support can handle the extra demand. Treat claimed platform revenue as an attribution view to reconcile with store records."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Facebook Ads Audit Checklist",
+            "path": "/blog/meta-ads/facebook-ads-audit-checklist"
+          },
+          {
+            "title": "Facebook Ads Cost in India: Plan Your Budget",
+            "path": "/blog/meta-ads/facebook-ads-cost-india"
+          },
+          {
+            "title": "Meta Ads services",
+            "path": "/service/meta-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/meta-ads/facebook-retargeting-strategy",
+    "parent": "/blog/meta-ads",
+    "kind": "guide",
+    "title": "A Practical Facebook Retargeting Strategy",
+    "description": "Retargeting should answer the question that stopped a relevant visitor from buying. Define the audience, message and exclusion rules before deciding how often to show the ad.",
+    "subtitle": "Meta Ads guides · Reddystack · 12 September 2026",
+    "intro": "Retargeting should answer the question that stopped a relevant visitor from buying. Define the audience, message and exclusion rules before deciding how often to show the ad.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Map audiences to intent",
+        "body": [
+          "Someone who watched a short video has shown a different signal from someone who started checkout. Design the message around the event and its recency, and use only audience data that your business is permitted to use."
+        ],
+        "bullets": [
+          "Product viewer: clarify product use, suitability or an important feature.",
+          "Checkout starter: explain delivery, payment or return information without inventing urgency.",
+          "Service-page visitor: answer a buying objection or show relevant project evidence.",
+          "Recent customer: exclude from acquisition messaging unless there is a suitable repeat-purchase offer."
+        ]
+      },
+      {
+        "title": "Write the sequence before launch",
+        "body": [
+          "For an illustrative online course, the first reminder might explain who the course fits, and the next could clarify time commitment. Repeating “buy now” to everyone does not address either question. Set audience windows around the actual purchase cycle and available audience size. Avoid very small segments that cannot support useful delivery."
+        ]
+      },
+      {
+        "title": "Watch for diminishing value",
+        "body": [
+          "Review reach, frequency, qualified outcomes and the incremental role of retargeting. A person already close to buying may convert after seeing an ad, but attribution alone does not prove the ad caused the sale. Where scale permits, use a suitable holdout or platform experiment. Exclude converted customers reliably and refresh the message when it no longer resolves a real objection."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Facebook Ads Audit Checklist",
+            "path": "/blog/meta-ads/facebook-ads-audit-checklist"
+          },
+          {
+            "title": "Facebook Ads Cost in India: Plan Your Budget",
+            "path": "/blog/meta-ads/facebook-ads-cost-india"
+          },
+          {
+            "title": "Meta Ads services",
+            "path": "/service/meta-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/meta-ads/meta-ads-reporting-metrics",
+    "parent": "/blog/meta-ads",
+    "kind": "guide",
+    "title": "Meta Ads Reporting Metrics That Support Decisions",
+    "description": "A useful Meta Ads report connects spending with business outcomes and a next action. Keep platform delivery metrics and verified sales outcomes visible as different layers.",
+    "subtitle": "Meta Ads guides · Reddystack · 12 September 2026",
+    "intro": "A useful Meta Ads report connects spending with business outcomes and a next action. Keep platform delivery metrics and verified sales outcomes visible as different layers.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Use a compact reporting sheet",
+        "body": [
+          "Record the reporting window, currency and attribution setting at the top. Compare equivalent periods and annotate tracking changes, promotions and stock issues before interpreting movement."
+        ],
+        "bullets": [
+          "Delivery: spend, impressions, reach and frequency.",
+          "Response: link clicks, landing-page visits and relevant engagement.",
+          "Conversion: leads or purchases with the event definition stated.",
+          "Business: unique qualified leads, completed sales, revenue and contribution where available."
+        ]
+      },
+      {
+        "title": "Calculate the right denominator",
+        "body": [
+          "CPL = spend divided by leads. Qualified CPL = spend divided by qualified leads. Customer acquisition cost = the defined acquisition spend divided by new customers. In an example with ₹10,000 spent, 100 leads and 20 qualified leads, CPL is ₹100 while qualified CPL is ₹500. Label the spend included in each calculation so media-only and fully loaded costs are not confused."
+        ]
+      },
+      {
+        "title": "Turn the report into an action",
+        "body": [
+          "State one finding, its evidence, an uncertainty and an owner. For example, “qualified CPL rose while raw CPL stayed flat; review lead rejection reasons before increasing spend.” Do not add platform totals together as unique customers without deduplication. A tidy report should make the next decision easier, not bury it beneath screenshots or a single blended efficiency score."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Facebook Ads Audit Checklist",
+            "path": "/blog/meta-ads/facebook-ads-audit-checklist"
+          },
+          {
+            "title": "Facebook Ads Cost in India: Plan Your Budget",
+            "path": "/blog/meta-ads/facebook-ads-cost-india"
+          },
+          {
+            "title": "Meta Ads services",
+            "path": "/service/meta-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/meta-ads/facebook-ads-not-converting",
+    "parent": "/blog/meta-ads",
+    "kind": "guide",
+    "title": "Facebook Ads Not Converting? Diagnose the Funnel",
+    "description": "When Facebook Ads generate clicks without enquiries or purchases, inspect the whole conversion journey. Increasing spend before finding the broken step can magnify the problem.",
+    "subtitle": "Meta Ads guides · Reddystack · 12 September 2026",
+    "intro": "When Facebook Ads generate clicks without enquiries or purchases, inspect the whole conversion journey. Increasing spend before finding the broken step can magnify the problem.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Trace one visitor journey",
+        "body": [
+          "Open the actual ad destination on a phone. Confirm the page loads, the offer matches, the form works and the confirmation reaches the business. Then check whether the platform records that real action. Separate a lack of customers from a lack of tracking."
+        ],
+        "bullets": [
+          "Few impressions: inspect account, ad approval and delivery conditions.",
+          "Impressions without useful clicks: review message relevance and the creative.",
+          "Clicks without landing visits: test speed, redirects and destination availability.",
+          "Visits without actions: inspect trust, offer fit and form or checkout friction.",
+          "Actions without recorded conversions: test the event definition and integration."
+        ]
+      },
+      {
+        "title": "Use a specific hypothesis",
+        "body": [
+          "Illustrative example: 200 reported clicks but only 70 landing-page visits suggests investigating loading or measurement differences before blaming the form. If qualified enquiries exist in the CRM but the platform shows none, fixing reporting is the first task. Small samples may not distinguish a weak offer from normal variation."
+        ]
+      },
+      {
+        "title": "Choose one repair and verify it",
+        "body": [
+          "Record the current numbers and change the most plausible issue first. Complete a test action after each technical repair. For an offer or creative test, agree the outcome and review window beforehand. Check whether the resulting leads are usable, not merely more numerous. Keep an annotated change log so future campaign reviews can connect an improvement with what actually changed."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Facebook Ads Audit Checklist",
+            "path": "/blog/meta-ads/facebook-ads-audit-checklist"
+          },
+          {
+            "title": "Facebook Ads Cost in India: Plan Your Budget",
+            "path": "/blog/meta-ads/facebook-ads-cost-india"
+          },
+          {
+            "title": "Meta Ads services",
+            "path": "/service/meta-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/google-ads/google-ads-audit-checklist",
+    "parent": "/blog/google-ads",
+    "kind": "guide",
+    "title": "Google Ads Audit Checklist",
+    "description": "A Google Ads audit should explain which spending decisions to change and why. Start with real conversions and customer value before inspecting individual keywords.",
+    "subtitle": "Google Ads guides · Reddystack · 12 September 2026",
+    "intro": "A Google Ads audit should explain which spending decisions to change and why. Start with real conversions and customer value before inspecting individual keywords.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Check foundations before performance",
+        "body": [
+          "Record account ownership, billing, campaign goals and the reporting period. Confirm that a primary conversion represents an outcome worth bidding towards. A page view or button click may be useful context without being an appropriate primary sales goal."
+        ],
+        "bullets": [
+          "Conversion actions: verify source, counting, values and duplicate imports.",
+          "Targeting: inspect actual locations served, exclusions, schedules and languages.",
+          "Search demand: review search terms, match types and negative keywords.",
+          "Destinations: check offer consistency, phone usability and successful submission.",
+          "Budget: compare allocation with qualified outcomes rather than headline traffic."
+        ]
+      },
+      {
+        "title": "Trace wasted spend with evidence",
+        "body": [
+          "In an illustrative account, a campaign may show cheap conversions because it counts both a lead-form event and the same lead imported from analytics. Another may attract research queries that never become qualified enquiries. Those findings need different fixes: reconcile goals in the first case and investigate intent in the second. Do not apply a bulk list of exclusions without checking what the business actually sells."
+        ]
+      },
+      {
+        "title": "Leave a prioritised action log",
+        "body": [
+          "For every issue, include the campaign, supporting evidence, proposed change, owner and validation method. Repair measurement and broken destinations first. Then test targeting, messages and allocation. Keep the change history intact so a later review can distinguish an improvement caused by a repair from a promotion, seasonality or a different reporting window."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads Cost in India: Budget and Fee Planning",
+            "path": "/blog/google-ads/google-ads-cost-india"
+          },
+          {
+            "title": "Google Ads for Local Businesses",
+            "path": "/blog/google-ads/google-ads-for-local-businesses"
+          },
+          {
+            "title": "Google Ads management",
+            "path": "/service/google-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/google-ads/google-ads-cost-india",
+    "parent": "/blog/google-ads",
+    "kind": "guide",
+    "title": "Google Ads Cost in India: Budget and Fee Planning",
+    "description": "Google Ads costs depend on the auction, offer and conversion journey. Build an India campaign budget from your business economics instead of treating a quoted average CPC as a promise.",
+    "subtitle": "Google Ads guides · Reddystack · 12 September 2026",
+    "intro": "Google Ads costs depend on the auction, offer and conversion journey. Build an India campaign budget from your business economics instead of treating a quoted average CPC as a promise.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Separate the costs",
+        "body": [
+          "Use the account’s planning tools and your own history for estimates. A Keyword Difficulty score measures an SEO opportunity; it is not an advertising price or a bid recommendation."
+        ],
+        "bullets": [
+          "Media spend goes to the advertising platform.",
+          "Management covers the agreed account work and reporting.",
+          "Landing pages, creative and measurement may have separate scopes.",
+          "Tools and applicable taxes should be stated in the quote."
+        ]
+      },
+      {
+        "title": "Translate clicks into a useful forecast",
+        "body": [
+          "Illustrative assumptions: ₹20,000 media spend at ₹40 per click buys 500 clicks. At a 4% enquiry rate that yields 20 enquiries, or ₹1,000 per enquiry. If half qualify, the qualified-lead cost becomes ₹2,000. If two become customers, media acquisition cost is ₹10,000 per customer. These numbers demonstrate the calculation; they are not average costs or guaranteed results."
+        ]
+      },
+      {
+        "title": "Agree limits and review rules",
+        "body": [
+          "Check the campaign’s average daily budget and applicable spending-limit rules before launch. A daily average should not be mistaken for a strict identical spend every day. Set reporting, alerting and approval responsibilities. Reforecast after observing conversion and qualification rates, and stop to repair tracking or a broken enquiry flow before buying more traffic. The lowest CPC is not necessarily the lowest customer cost."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads: average daily budget and overdelivery",
+            "path": "https://support.google.com/google-ads/answer/1704443"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads Audit Checklist",
+            "path": "/blog/google-ads/google-ads-audit-checklist"
+          },
+          {
+            "title": "Google Ads for Local Businesses",
+            "path": "/blog/google-ads/google-ads-for-local-businesses"
+          },
+          {
+            "title": "Google Ads management",
+            "path": "/service/google-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/google-ads/google-ads-for-local-businesses",
+    "parent": "/blog/google-ads",
+    "kind": "guide",
+    "title": "Google Ads for Local Businesses",
+    "description": "A local-business Search campaign needs a clear service area, a reachable business and a page that answers the buyer’s immediate question. Start with the service you can fulfil reliably.",
+    "subtitle": "Google Ads guides · Reddystack · 12 September 2026",
+    "intro": "A local-business Search campaign needs a clear service area, a reachable business and a page that answers the buyer’s immediate question. Start with the service you can fulfil reliably.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Make geographic intent explicit",
+        "body": [
+          "Write down towns, areas or travel boundaries that the business actually serves. Review location options and observed user locations after launch; a phrase containing a city name does not by itself guarantee every enquiry comes from that city."
+        ],
+        "bullets": [
+          "List the services you want enquiries for and those you do not provide.",
+          "Match ads to relevant service pages with contact and availability information.",
+          "Align call handling and campaign schedules with the actual response process.",
+          "Define qualified outcomes, such as a suitable appointment or accepted quotation request."
+        ]
+      },
+      {
+        "title": "Use a local test brief",
+        "body": [
+          "For an illustrative repair business: advertise one repair category within the agreed service boundary, explain the booking process and route enquiries to the person who can schedule work. Use a dedicated confirmation event for completed requests and treat a call-button click as a separate signal. Avoid claims such as “open now” or “same-day service” unless the business can fulfil them."
+        ]
+      },
+      {
+        "title": "Review the full enquiry path",
+        "body": [
+          "Compare search terms, locations, calls, form submissions and accepted jobs. Ask why enquiries were declined: distance, unavailable service, price mismatch or missed contact. Feed those findings into the next targeting and copy revision. Scale only when the team can handle the extra work and the resulting jobs justify acquisition costs. Local visibility is valuable when it creates serviceable demand."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads Audit Checklist",
+            "path": "/blog/google-ads/google-ads-audit-checklist"
+          },
+          {
+            "title": "Google Ads Cost in India: Budget and Fee Planning",
+            "path": "/blog/google-ads/google-ads-cost-india"
+          },
+          {
+            "title": "Google Ads management",
+            "path": "/service/google-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/google-ads/google-ads-negative-keywords",
+    "parent": "/blog/google-ads",
+    "kind": "guide",
+    "title": "Google Ads Negative Keywords: A Review Workflow",
+    "description": "Negative keywords help control irrelevant Search traffic, but an overly broad exclusion can also block suitable customers. Build exclusions from evidence and the business’s actual boundaries.",
+    "subtitle": "Google Ads guides · Reddystack · 12 September 2026",
+    "intro": "Negative keywords help control irrelevant Search traffic, but an overly broad exclusion can also block suitable customers. Build exclusions from evidence and the business’s actual boundaries.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Classify the search terms",
+        "body": [
+          "Review the available search-term report alongside lead outcomes. Separate irrelevant searches from relevant searches that simply have not converted yet. The report may not expose every search, so avoid treating it as a complete record of demand."
+        ],
+        "bullets": [
+          "Employment intent: jobs, salary or internships when recruiting is not the campaign goal.",
+          "Learning intent: tutorials or courses when the business only sells execution.",
+          "Wrong offering: products or services the business does not provide.",
+          "Wrong location: areas outside coverage, after checking how the phrase is used."
+        ]
+      },
+      {
+        "title": "Apply exclusions at the right scope",
+        "body": [
+          "An illustrative agency may exclude “jobs” from a client-acquisition campaign while preserving it in a recruiting campaign. A store should not automatically exclude “free” if it advertises free delivery. Choose account, campaign or ad-group scope according to whether the exclusion is truly universal. Negative match behaviour differs from positive keyword matching; check the current platform rules before uploading a list."
+        ]
+      },
+      {
+        "title": "Maintain an exclusion log",
+        "body": [
+          "Record the term, reason, scope and date. Revisit exclusions after expanding products or service areas. Review possible conflicts when valuable traffic drops suddenly. A maintained list is useful account knowledge; a huge downloaded list with no context is not evidence of good optimisation. Measure changes using relevant enquiries or sales, not only the reduction in total clicks."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads: negative keywords",
+            "path": "https://support.google.com/google-ads/answer/2453972"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads Audit Checklist",
+            "path": "/blog/google-ads/google-ads-audit-checklist"
+          },
+          {
+            "title": "Google Ads Cost in India: Budget and Fee Planning",
+            "path": "/blog/google-ads/google-ads-cost-india"
+          },
+          {
+            "title": "Google Ads management",
+            "path": "/service/google-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/google-ads/google-ads-conversion-tracking-checklist",
+    "parent": "/blog/google-ads",
+    "kind": "guide",
+    "title": "Google Ads Conversion Tracking Checklist",
+    "description": "Conversion tracking should record the business action that actually happened. Validate the journey from the customer’s device to the platform and your own records before using the event for bidding.",
+    "subtitle": "Google Ads guides · Reddystack · 12 September 2026",
+    "intro": "Conversion tracking should record the business action that actually happened. Validate the journey from the customer’s device to the platform and your own records before using the event for bidding.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Define each conversion",
+        "body": [
+          "Create an event inventory with the outcome, trigger, source, value, currency and counting rule. Distinguish primary business goals from diagnostic events. Document whether an event is collected directly or imported so the same action is not accidentally counted twice."
+        ],
+        "bullets": [
+          "Lead: successful accepted submission rather than merely opening the form.",
+          "Purchase: confirmed order with a transaction identifier and actual value.",
+          "Phone: distinguish a call-button click from a measured call outcome.",
+          "Offline sale: confirm identity matching, permission and the import process before use."
+        ]
+      },
+      {
+        "title": "Run a test matrix",
+        "body": [
+          "Test mobile and desktop, successful and failed submissions, repeat clicks, refreshed confirmation pages and any cross-domain handoff. A successful test should appear in the business system exactly as expected. Reconcile it with the platform diagnostics after allowing for reporting delays. Check consent choices as part of the implementation; tracking must respect the visitor’s applicable choices."
+        ]
+      },
+      {
+        "title": "Make maintenance visible",
+        "body": [
+          "Keep a record of the test, date and responsible owner. Retest after form, checkout, analytics or consent changes. If conversions abruptly disappear, compare the CRM or order system before assuming demand collapsed. Do not put personal information in page URLs or generic analytics event names. A reliable setup includes a way to detect failure, not only a one-time installation."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads: conversion measurement",
+            "path": "https://support.google.com/google-ads/answer/1722022"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads Audit Checklist",
+            "path": "/blog/google-ads/google-ads-audit-checklist"
+          },
+          {
+            "title": "Google Ads Cost in India: Budget and Fee Planning",
+            "path": "/blog/google-ads/google-ads-cost-india"
+          },
+          {
+            "title": "Google Ads management",
+            "path": "/service/google-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/google-ads/google-ads-keyword-match-types",
+    "parent": "/blog/google-ads",
+    "kind": "guide",
+    "title": "Google Ads Keyword Match Types Explained",
+    "description": "Broad, phrase and exact match provide different levels of reach and control. Match types describe how ads can become eligible for searches; they do not replace conversion measurement or search-term review.",
+    "subtitle": "Google Ads guides · Reddystack · 12 September 2026",
+    "intro": "Broad, phrase and exact match provide different levels of reach and control. Match types describe how ads can become eligible for searches; they do not replace conversion measurement or search-term review.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Understand the three options",
+        "body": [
+          "Broad match can include related searches beyond the keyword’s direct wording. Phrase match considers searches that include the meaning of the keyword. Exact match can include the same meaning or intent, so it does not mean an exact character-for-character phrase. Google’s current documentation is the source for detailed matching behaviour."
+        ],
+        "bullets": [
+          "Broad: assess whether bidding goals, conversion quality and budget can support wider discovery.",
+          "Phrase: inspect which related meanings reach the campaign.",
+          "Exact: use for tighter intent steering without assuming variants are impossible."
+        ]
+      },
+      {
+        "title": "Use a business example",
+        "body": [
+          "For an illustrative business selling website development, “website development service” and searches about learning to build a website have different commercial implications. The relevant decision is whether the actual query fits the offer and produces qualified enquiries. Adding the same phrase in every match type does not automatically create more useful demand."
+        ]
+      },
+      {
+        "title": "Review after launch",
+        "body": [
+          "Read the available search terms, campaign priorities and conversion outcomes. Investigate irrelevant themes and apply suitable negatives; negative match rules are different from positive match rules. Keep a change log and avoid judging a match type by one short period with few sales. The best setup is the one that reaches useful demand within your economics and operational limits."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads: keyword matching options",
+            "path": "https://support.google.com/google-ads/answer/7478529"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads Audit Checklist",
+            "path": "/blog/google-ads/google-ads-audit-checklist"
+          },
+          {
+            "title": "Google Ads Cost in India: Budget and Fee Planning",
+            "path": "/blog/google-ads/google-ads-cost-india"
+          },
+          {
+            "title": "Google Ads management",
+            "path": "/service/google-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/google-ads/google-ads-landing-page-checklist",
+    "parent": "/blog/google-ads",
+    "kind": "guide",
+    "title": "Google Ads Landing Page Checklist",
+    "description": "A paid-search landing page should continue the promise made in the ad and make the next step work on a phone. Use this checklist before launch and after material changes.",
+    "subtitle": "Google Ads guides · Reddystack · 12 September 2026",
+    "intro": "A paid-search landing page should continue the promise made in the ad and make the next step work on a phone. Use this checklist before launch and after material changes.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Check message and decision information",
+        "body": [
+          "Open the destination from the ad preview where possible. A visitor should understand what is offered, who it fits and what happens after enquiry without decoding vague slogans."
+        ],
+        "bullets": [
+          "Headline and ad describe the same service or offer.",
+          "Inclusions, important exclusions and applicable pricing context are visible.",
+          "Proof is relevant and approved for public use.",
+          "Contact and business identity are easy to find.",
+          "Primary form or checkout works with clear labels and errors.",
+          "The page loads without a blocking overlay or unusable mobile controls."
+        ]
+      },
+      {
+        "title": "Test the conversion path",
+        "body": [
+          "Submit a clearly marked test enquiry with realistic validation, then confirm delivery to the responsible person. Test a failure case and repeated submission as well. Check that measurement counts the successful action, preserves necessary campaign information and avoids putting personal data in URLs. A thank-you message on screen is not proof that the business received the enquiry."
+        ]
+      },
+      {
+        "title": "Choose the next experiment",
+        "body": [
+          "If visitors understand the offer but abandon the form, inspect the required fields and errors. If enquiries are consistently unsuitable, improve eligibility and expectations before removing all friction. Compare qualified outcomes alongside conversion rate. Keep accessibility, readable contrast and keyboard operation in every version; a visually simpler page should still work for the people expected to use it."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads Audit Checklist",
+            "path": "/blog/google-ads/google-ads-audit-checklist"
+          },
+          {
+            "title": "Google Ads Cost in India: Budget and Fee Planning",
+            "path": "/blog/google-ads/google-ads-cost-india"
+          },
+          {
+            "title": "Google Ads management",
+            "path": "/service/google-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/google-ads/google-ads-low-quality-leads",
+    "parent": "/blog/google-ads",
+    "kind": "guide",
+    "title": "Improve Lead Quality from Google Ads",
+    "description": "Poor Google Ads lead quality can come from mismatched search intent, targeting, the offer or the sales process. Diagnose rejected enquiries before changing bids or adding budget.",
+    "subtitle": "Google Ads guides · Reddystack · 12 September 2026",
+    "intro": "Poor Google Ads lead quality can come from mismatched search intent, targeting, the offer or the sales process. Diagnose rejected enquiries before changing bids or adding budget.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Give rejection reasons names",
+        "body": [
+          "Review a representative sample with the person who handles enquiries. Mark duplicates, wrong service, outside coverage, wrong budget, uncontactable and qualified. Record response timing so a missed call is not automatically blamed on targeting."
+        ],
+        "bullets": [
+          "Wrong service: compare search terms and ad-group themes with the landing page.",
+          "Wrong geography: inspect location settings and observed customer locations.",
+          "Research-only interest: clarify the service and commercial next step.",
+          "Uncontactable: check validation, duplicate records and response handling."
+        ]
+      },
+      {
+        "title": "Optimise for a meaningful outcome",
+        "body": [
+          "Illustrative comparison: two campaigns spend ₹8,000 each. One produces 40 enquiries with four qualified; the other produces 20 with eight qualified. The second campaign has the lower qualified-lead cost despite its higher raw CPL. If feasible, plan measurement of qualified outcomes with appropriate permissions and data handling. Do not blindly change the bidding goal to an untested event."
+        ]
+      },
+      {
+        "title": "Run a focused correction",
+        "body": [
+          "Choose one cause supported by the data, such as an irrelevant query theme or an unclear minimum scope. Update the relevant negative keywords, copy or qualification question and review both enquiry volume and suitability. Avoid claiming improved quality merely because fewer people submit. The end point is more useful customer conversations at a sustainable acquisition cost."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads Audit Checklist",
+            "path": "/blog/google-ads/google-ads-audit-checklist"
+          },
+          {
+            "title": "Google Ads Cost in India: Budget and Fee Planning",
+            "path": "/blog/google-ads/google-ads-cost-india"
+          },
+          {
+            "title": "Google Ads management",
+            "path": "/service/google-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/google-ads/google-ads-budget-planning",
+    "parent": "/blog/google-ads",
+    "kind": "guide",
+    "title": "Google Ads Budget Planning Worksheet",
+    "description": "A Google Ads budget is a model of demand and conversion economics. Write the assumptions down so you can change the plan when real results disagree with it.",
+    "subtitle": "Google Ads guides · Reddystack · 12 September 2026",
+    "intro": "A Google Ads budget is a model of demand and conversion economics. Write the assumptions down so you can change the plan when real results disagree with it.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Collect the inputs",
+        "body": [
+          "Use your own historical results where possible. Otherwise label the numbers as assumptions and create a range rather than a single confident forecast."
+        ],
+        "bullets": [
+          "Affordable acquisition cost per new customer.",
+          "Estimated cost per click for the market and intent.",
+          "Expected click-to-enquiry or click-to-purchase rate.",
+          "Qualification and close rates for lead generation.",
+          "Maximum test spend, production costs and review responsibility."
+        ]
+      },
+      {
+        "title": "Work through an illustrative model",
+        "body": [
+          "Assume ₹30 CPC, a 5% enquiry rate, 50% qualification and a 20% close rate among qualified leads. One thousand clicks cost ₹30,000 and imply 50 enquiries, 25 qualified leads and five customers. Media acquisition cost is ₹6,000 per customer. This is arithmetic based on assumptions, not a prediction. Re-run the sheet with weaker conversion rates to see the downside."
+        ]
+      },
+      {
+        "title": "Connect planning to controls",
+        "body": [
+          "Allocate spend to distinct business goals and confirm campaign budget rules in the live account. Review spend pacing, conversion delays and capacity before increasing limits. Keep fees and media separate and obtain approval for meaningful scope changes. If the economics cannot work under realistic assumptions, revisit the offer, margins or landing journey before trying to solve the problem with more budget."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads Audit Checklist",
+            "path": "/blog/google-ads/google-ads-audit-checklist"
+          },
+          {
+            "title": "Google Ads Cost in India: Budget and Fee Planning",
+            "path": "/blog/google-ads/google-ads-cost-india"
+          },
+          {
+            "title": "Google Ads management",
+            "path": "/service/google-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/google-ads/google-ads-reporting-metrics",
+    "parent": "/blog/google-ads",
+    "kind": "guide",
+    "title": "Google Ads Reporting Metrics and Decisions",
+    "description": "A Google Ads report should connect the search campaign to customer outcomes. State the reporting window and conversion definitions before interpreting changes.",
+    "subtitle": "Google Ads guides · Reddystack · 12 September 2026",
+    "intro": "A Google Ads report should connect the search campaign to customer outcomes. State the reporting window and conversion definitions before interpreting changes.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Build three reporting layers",
+        "body": [
+          "Delivery explains what was purchased; conversion explains the recorded actions; business results explain whether those actions were useful. Keep all three instead of elevating one metric to a universal score."
+        ],
+        "bullets": [
+          "Delivery: spend, impressions, clicks, CPC and relevant coverage indicators.",
+          "Conversion: defined actions, conversion rate, cost per action and reported value.",
+          "Business: unique enquiries, qualified leads, new customers and verified revenue.",
+          "Context: budget changes, promotions, tracking changes and conversion delays."
+        ]
+      },
+      {
+        "title": "Read ratios together",
+        "body": [
+          "Illustrative example: CPC rises from ₹20 to ₹30 while the purchase rate rises from 2% to 5%. Media cost per purchase changes from ₹1,000 to ₹600 despite more expensive clicks. Conversely, cheaper clicks can increase customer cost if intent becomes weaker. Use consistent date ranges and avoid comparing a partial current week with a complete previous week."
+        ]
+      },
+      {
+        "title": "End with a decision",
+        "body": [
+          "Write a short statement connecting evidence to the next action: “spend increased in an unserviceable area; review location settings and lead rejection records.” Record who will act and how the change will be checked. Platform attribution and analytics can differ, so reconcile important sales in the business system rather than silently presenting conflicting totals as equivalent."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads Audit Checklist",
+            "path": "/blog/google-ads/google-ads-audit-checklist"
+          },
+          {
+            "title": "Google Ads Cost in India: Budget and Fee Planning",
+            "path": "/blog/google-ads/google-ads-cost-india"
+          },
+          {
+            "title": "Google Ads management",
+            "path": "/service/google-ads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ad-creatives/ad-creative-brief-template",
+    "parent": "/blog/ad-creatives",
+    "kind": "guide",
+    "title": "Ad Creative Brief Template",
+    "description": "A useful ad creative brief gives the designer or editor enough information to make a decision. Copy the fields below into your project document and fill them before production starts.",
+    "subtitle": "Ad creative guides · Reddystack · 12 September 2026",
+    "intro": "A useful ad creative brief gives the designer or editor enough information to make a decision. Copy the fields below into your project document and fill them before production starts.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "The brief to copy",
+        "body": [
+          "Campaign name: __. Business owner: __. Review owner: __. Due date: __. Primary outcome: __. Audience and buying situation: __. Offer and destination URL: __."
+        ],
+        "bullets": [
+          "Message: the one thing the audience should understand.",
+          "Evidence: approved product facts, demonstrations or customer proof supporting that message.",
+          "Objection: the specific doubt this creative should answer.",
+          "Action: the next step and what happens after it.",
+          "Assets: logo, fonts, product images, footage, references and usage rights.",
+          "Deliverables: concepts, lengths, aspect ratios, languages and editable files required."
+        ]
+      },
+      {
+        "title": "An illustrative completed message",
+        "body": [
+          "For a website service, the message might be “make it easier for customers to request a quote from their phone.” The evidence could be a real form demonstration; the action could be “review the project scope.” That is more usable than “make a viral premium ad.” Label any mockup as a concept and do not present invented customer results as proof."
+        ]
+      },
+      {
+        "title": "Agree review and testing rules",
+        "body": [
+          "Specify included revision rounds and who provides one consolidated response. Define which variable each version changes: hook, demonstration, offer framing or visual treatment. Keep the destination and measurement ready before judging creative performance. Store the final approved brief beside the exports so the campaign operator can connect each file to its intended audience and test."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Facebook Ad Design Specs: A Production Checklist",
+            "path": "/blog/ad-creatives/facebook-ad-design-specs"
+          },
+          {
+            "title": "Video Ad Script Template with an Example",
+            "path": "/blog/ad-creatives/video-ad-script-template"
+          },
+          {
+            "title": "Ad creative services",
+            "path": "/service/ad-creatives"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ad-creatives/facebook-ad-design-specs",
+    "parent": "/blog/ad-creatives",
+    "kind": "guide",
+    "title": "Facebook Ad Design Specs: A Production Checklist",
+    "description": "Plan Facebook and Instagram ad assets for their intended placements. Use aspect ratios as production starting points, then confirm the current requirements in Meta’s Ads Guide and account preview.",
+    "subtitle": "Ad creative guides · Reddystack · 12 September 2026",
+    "intro": "Plan Facebook and Instagram ad assets for their intended placements. Use aspect ratios as production starting points, then confirm the current requirements in Meta’s Ads Guide and account preview.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Prepare a sensible export set",
+        "body": [
+          "Common design canvases include square 1:1, portrait 4:5 and vertical 9:16. For example, a design team can prepare 1080×1080, 1080×1350 and 1080×1920 canvases. These are practical production sizes, not a claim that every placement accepts every format."
+        ],
+        "bullets": [
+          "Keep key text, product details and the call to action clear of interface overlays.",
+          "Create a deliberate crop for each ratio instead of stretching the artwork.",
+          "Check small text and captions on an actual phone.",
+          "Review image rights, music permissions, spelling and destination consistency."
+        ]
+      },
+      {
+        "title": "Inspect the placement preview",
+        "body": [
+          "Upload a draft and examine each planned placement in the account. Look for cropped faces, hidden subtitles, unreadable prices and missing brand context. Confirm file type, length, dimensions and other requirements in the current official guide before export approval. Platform specifications and supported formats can change."
+        ]
+      },
+      {
+        "title": "Give the operator an export manifest",
+        "body": [
+          "Use filenames that identify concept, ratio, language and version. An example is quote-form-demo_9x16_en_v02.mp4. Include the approved copy, destination URL and notes about the intended placement. Retain the editable source separately from approved exports. A complete handoff reduces the chance that the right design is published with the wrong crop, old offer or mismatched caption."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Meta Ads Guide: check current placement requirements",
+            "path": "https://www.facebook.com/business/ads-guide"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Ad Creative Brief Template",
+            "path": "/blog/ad-creatives/ad-creative-brief-template"
+          },
+          {
+            "title": "Video Ad Script Template with an Example",
+            "path": "/blog/ad-creatives/video-ad-script-template"
+          },
+          {
+            "title": "Ad creative services",
+            "path": "/service/ad-creatives"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ad-creatives/video-ad-script-template",
+    "parent": "/blog/ad-creatives",
+    "kind": "guide",
+    "title": "Video Ad Script Template with an Example",
+    "description": "Write a video ad as a sequence of decisions for the viewer. The script should connect an opening idea to a demonstration and a clear action, with each claim supported.",
+    "subtitle": "Ad creative guides · Reddystack · 12 September 2026",
+    "intro": "Write a video ad as a sequence of decisions for the viewer. The script should connect an opening idea to a demonstration and a clear action, with each claim supported.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Copy this script structure",
+        "body": [
+          "Audience: __. Problem or desire: __. Offer: __. Proof available: __. Main objection: __. Action: __."
+        ],
+        "bullets": [
+          "Opening: a specific situation the intended customer recognises.",
+          "Demonstration: show what the offer does instead of relying on adjectives.",
+          "Explanation: connect the demonstration to a useful benefit.",
+          "Qualification: state an important limit or condition where needed.",
+          "Close: give one next step that matches the destination."
+        ]
+      },
+      {
+        "title": "Illustrative 20-second service script",
+        "body": [
+          "Opening: “Do customers struggle to request a quote from your phone site?” Demonstration: show a short, labelled enquiry form being completed. Explanation: “A clear service page and working form make the next step easier.” Close: “Explore Reddystack’s landing-page service.” The timing is a planning example; read it aloud and revise to suit the footage. It does not promise more leads or claim a client result."
+        ]
+      },
+      {
+        "title": "Review before recording",
+        "body": [
+          "Check pronunciation, pacing, visible proof and whether the message works with captions. Remove unsupported superlatives, invented testimonials and urgency that is not real. Write a second opening only when it tests a different customer question. Keep the offer and main sequence stable if the purpose is to compare hooks. Approve the script before generating a presenter or editing every export size."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Ad Creative Brief Template",
+            "path": "/blog/ad-creatives/ad-creative-brief-template"
+          },
+          {
+            "title": "Facebook Ad Design Specs: A Production Checklist",
+            "path": "/blog/ad-creatives/facebook-ad-design-specs"
+          },
+          {
+            "title": "Ad creative services",
+            "path": "/service/ad-creatives"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ad-creatives/ad-hooks-examples",
+    "parent": "/blog/ad-creatives",
+    "kind": "guide",
+    "title": "Ad Hook Examples for Clearer Creative",
+    "description": "An ad hook should attract the people who might need the offer and give them a reason to continue. Attention that comes from a misleading promise can reduce lead quality.",
+    "subtitle": "Ad creative guides · Reddystack · 12 September 2026",
+    "intro": "An ad hook should attract the people who might need the offer and give them a reason to continue. Attention that comes from a misleading promise can reduce lead quality.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Five reusable approaches",
+        "body": [
+          "These are original illustrative prompts, not proven winning ads. Replace the placeholders with accurate details from the business."
+        ],
+        "bullets": [
+          "Recognisable task: “Still collecting website enquiries through three different channels?”",
+          "Demonstration first: “Here is what a customer sees after tapping Request a Quote.”",
+          "Objection: “What should you receive before approving a new landing page?”",
+          "Decision aid: “A business website or a campaign landing page: which fits this launch?”",
+          "Useful correction: “A cheap lead can still be expensive to turn into a customer.”"
+        ]
+      },
+      {
+        "title": "Match the opening to the rest",
+        "body": [
+          "A hook about cost should lead into a cost explanation. A demonstration hook should show the real workflow. For an illustrative product ad, “see how the lid opens with one hand” needs footage that actually demonstrates that action. Do not attract viewers with an unrelated sensational opening and then switch to the offer."
+        ]
+      },
+      {
+        "title": "Test the message fairly",
+        "body": [
+          "Keep the body, audience and destination consistent when comparing openings. Review qualified actions and customer outcomes as well as early video engagement. A hook that increases views but attracts unsuitable people may weaken the campaign. Record what question each variant addresses and keep the finding in the next brief, rather than assuming the same opening works for every business."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Ad Creative Brief Template",
+            "path": "/blog/ad-creatives/ad-creative-brief-template"
+          },
+          {
+            "title": "Facebook Ad Design Specs: A Production Checklist",
+            "path": "/blog/ad-creatives/facebook-ad-design-specs"
+          },
+          {
+            "title": "Ad creative services",
+            "path": "/service/ad-creatives"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ad-creatives/ad-creative-testing-framework",
+    "parent": "/blog/ad-creatives",
+    "kind": "guide",
+    "title": "An Ad Creative Testing Framework",
+    "description": "Creative testing works best when each version answers a specific question. Decide what you want to learn before producing a large batch of nearly identical ads.",
+    "subtitle": "Ad creative guides · Reddystack · 12 September 2026",
+    "intro": "Creative testing works best when each version answers a specific question. Decide what you want to learn before producing a large batch of nearly identical ads.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Write the hypothesis",
+        "body": [
+          "Use a sentence such as “showing the mobile form before describing the service will help suitable buyers understand the offer.” Name the audience, outcome and competing version. Choose a platform experiment where available and appropriate; otherwise acknowledge that normal delivery differences limit a causal comparison."
+        ],
+        "bullets": [
+          "Concept test: compare genuinely different message approaches.",
+          "Hook test: change the opening while retaining the body.",
+          "Proof test: compare relevant approved forms of evidence.",
+          "Format test: communicate the same offer with different media."
+        ]
+      },
+      {
+        "title": "Set a decision rule",
+        "body": [
+          "Choose the primary business outcome and a review window that can accumulate useful results. Record spend and exposure per version. An illustrative test with two conversions in one version and one in another is weak evidence, especially if delivery was unequal. Avoid claiming statistical significance without an appropriate analysis and enough observations."
+        ]
+      },
+      {
+        "title": "Keep the learning usable",
+        "body": [
+          "Record the creative ID, concept, offer, target, spend, outcomes and caveats. Move a successful concept into a controlled next test rather than changing five elements at once. Check whether an apparent winner has worse qualification or refund outcomes. Retire versions for a documented reason and preserve the source files so a later campaign can reuse the idea without recreating the whole production process."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Ad Creative Brief Template",
+            "path": "/blog/ad-creatives/ad-creative-brief-template"
+          },
+          {
+            "title": "Facebook Ad Design Specs: A Production Checklist",
+            "path": "/blog/ad-creatives/facebook-ad-design-specs"
+          },
+          {
+            "title": "Ad creative services",
+            "path": "/service/ad-creatives"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ad-creatives/static-vs-video-ads",
+    "parent": "/blog/ad-creatives",
+    "kind": "guide",
+    "title": "Static vs Video Ads: Which Should You Test?",
+    "description": "Static and video ads solve different communication problems. Choose the format that can explain the offer clearly with the assets and production time available.",
+    "subtitle": "Ad creative guides · Reddystack · 12 September 2026",
+    "intro": "Static and video ads solve different communication problems. Choose the format that can explain the offer clearly with the assets and production time available.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Match format to the message",
+        "body": [
+          "A static image can communicate a simple offer, product view or comparison quickly. Video can demonstrate a sequence, explain a process or show movement. Neither format has a universal performance advantage across businesses."
+        ],
+        "bullets": [
+          "Use static when one frame can carry the essential decision information.",
+          "Use video when seeing the action helps explain the value.",
+          "Use a sequence or carousel when the message has distinct steps or options.",
+          "Account for the production effort needed to refresh and adapt the concept."
+        ]
+      },
+      {
+        "title": "Make a fair comparison",
+        "body": [
+          "For an illustrative website offer, a static version could show the completed enquiry screen while a video shows the short journey to it. Keep the audience, promise and destination aligned, but adapt the execution to each medium. Comparing an unclear image with a polished demonstration does not isolate the value of the format itself."
+        ]
+      },
+      {
+        "title": "Judge business outcomes",
+        "body": [
+          "Track relevant engagement, qualified enquiries or purchases and total production cost. Video views do not have the same meaning as completed enquiries; image clicks do not prove intent. Review whether the asset remains understandable on a phone and in the planned placements. Start with the strongest available concept, then use results to decide which format earns the next production investment."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Ad Creative Brief Template",
+            "path": "/blog/ad-creatives/ad-creative-brief-template"
+          },
+          {
+            "title": "Facebook Ad Design Specs: A Production Checklist",
+            "path": "/blog/ad-creatives/facebook-ad-design-specs"
+          },
+          {
+            "title": "Ad creative services",
+            "path": "/service/ad-creatives"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ad-creatives/creative-fatigue",
+    "parent": "/blog/ad-creatives",
+    "kind": "guide",
+    "title": "Creative Fatigue: Signs and a Response Plan",
+    "description": "Creative fatigue is a possible explanation for declining ad response, not a diagnosis made from frequency alone. Check what changed in the audience, offer and buying journey before replacing every asset.",
+    "subtitle": "Ad creative guides · Reddystack · 12 September 2026",
+    "intro": "Creative fatigue is a possible explanation for declining ad response, not a diagnosis made from frequency alone. Check what changed in the audience, offer and buying journey before replacing every asset.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Look for a pattern",
+        "body": [
+          "Compare similar periods and inspect reach, frequency, response and business outcomes together. The same ad may still work for new viewers while becoming less useful to a repeatedly reached audience."
+        ],
+        "bullets": [
+          "Response declines while exposure repeats within a comparable audience.",
+          "Qualified outcomes weaken without an obvious tracking or destination fault.",
+          "Comments reveal that the message is repetitive, unclear or no longer relevant.",
+          "The offer, stock or seasonal context has changed since the asset was produced."
+        ]
+      },
+      {
+        "title": "Rule out other causes",
+        "body": [
+          "Illustrative example: conversion cost rises after a delivery fee increases, while ad engagement remains stable. That points toward the offer or checkout rather than automatically proving creative fatigue. A broken form, exhausted audience, measurement change or a promotion ending can produce similar headline trends. Diagnose the cause using the available evidence."
+        ]
+      },
+      {
+        "title": "Refresh the concept deliberately",
+        "body": [
+          "Try a new objection, demonstration or message angle before only changing a background colour. Keep an effective control where practical and compare qualified outcomes. Maintain an asset register with concept, audience, first-use date and performance context. There is no universal frequency threshold or fixed weekly replacement schedule that fits every purchase cycle and campaign."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Ad Creative Brief Template",
+            "path": "/blog/ad-creatives/ad-creative-brief-template"
+          },
+          {
+            "title": "Facebook Ad Design Specs: A Production Checklist",
+            "path": "/blog/ad-creatives/facebook-ad-design-specs"
+          },
+          {
+            "title": "Ad creative services",
+            "path": "/service/ad-creatives"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ad-creatives/ad-copy-examples",
+    "parent": "/blog/ad-creatives",
+    "kind": "guide",
+    "title": "Ad Copy Examples for Service Businesses",
+    "description": "Good service-ad copy tells a suitable buyer what is offered and what to do next. These original examples are drafting starting points, not claims of campaign performance.",
+    "subtitle": "Ad creative guides · Reddystack · 12 September 2026",
+    "intro": "Good service-ad copy tells a suitable buyer what is offered and what to do next. These original examples are drafting starting points, not claims of campaign performance.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Examples to adapt",
+        "body": [
+          "Website service: “Give customers a clearer way to request a quote. Explore a landing page built around your offer, contact flow and mobile experience.”",
+          "Ad creative service: “Need a clearer campaign message? Plan ad images, video edits and copy around one offer and an agreed creative brief.”",
+          "Local SEO service: “Help customers understand where you work and what you offer. Review your website and eligible Google Business Profile information.”",
+          "AI presenter service: “Explain a product or service with an AI-presenter video. Start with an approved script, accurate assets and a clear next step.”"
+        ]
+      },
+      {
+        "title": "Make each example true for the business",
+        "body": [
+          "Replace broad nouns with the actual offer, audience and scope. Show evidence when available and include important conditions. If the service is remote, do not suggest a local office. If pricing is custom, do not advertise a fixed price that excludes essential work. A useful promise describes the deliverable without guaranteeing customers, revenue or rankings."
+        ]
+      },
+      {
+        "title": "Review and test",
+        "body": [
+          "Read the copy together with the visual and destination. The three should make the same promise. Test a specific change such as clearer qualification or a different objection, then compare qualified outcomes. Avoid personal-attribute assumptions, fabricated testimonials and unsupported “number one” claims. Keep an approved copy sheet so edits made during publishing do not quietly change the agreed offer."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Ad Creative Brief Template",
+            "path": "/blog/ad-creatives/ad-creative-brief-template"
+          },
+          {
+            "title": "Facebook Ad Design Specs: A Production Checklist",
+            "path": "/blog/ad-creatives/facebook-ad-design-specs"
+          },
+          {
+            "title": "Ad creative services",
+            "path": "/service/ad-creatives"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ad-creatives/video-ad-storyboard-template",
+    "parent": "/blog/ad-creatives",
+    "kind": "guide",
+    "title": "Video Ad Storyboard Template",
+    "description": "A storyboard connects the script to footage, on-screen text and production requirements. Use it to resolve missing assets before editing starts.",
+    "subtitle": "Ad creative guides · Reddystack · 12 September 2026",
+    "intro": "A storyboard connects the script to footage, on-screen text and production requirements. Use it to resolve missing assets before editing starts.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Copy the storyboard fields",
+        "body": [
+          "Create one row per shot: shot number; approximate duration; visual or action; spoken line; on-screen text; audio; asset source; rights status; production note. Add a destination and end-card note at the top of the document."
+        ],
+        "bullets": [
+          "Shot 1: introduce the customer situation with a recognisable visual.",
+          "Shot 2: demonstrate the relevant product or service action.",
+          "Shot 3: explain the decision information or answer an objection.",
+          "Shot 4: show the next step and accurate brand identity."
+        ]
+      },
+      {
+        "title": "An illustrative landing-page storyboard",
+        "body": [
+          "Shot 1 shows a mobile visitor looking for contact information. Shot 2 shows the actual service page and enquiry fields. Shot 3 shows a clearly labelled test confirmation. Shot 4 invites the viewer to explore the service. Use demonstration data, not a real customer’s personal details. The example shows a workflow and does not claim an increase in conversions."
+        ]
+      },
+      {
+        "title": "Approve before production",
+        "body": [
+          "Check that every shot has a available asset or a defined creation task. Confirm captions, safe areas and crop requirements for each placement. Record which elements may be AI generated and which must reproduce the real product accurately. Review the script, storyboard and claim evidence together so the editor does not have to invent proof or change the offer to fill a missing shot."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Ad Creative Brief Template",
+            "path": "/blog/ad-creatives/ad-creative-brief-template"
+          },
+          {
+            "title": "Facebook Ad Design Specs: A Production Checklist",
+            "path": "/blog/ad-creatives/facebook-ad-design-specs"
+          },
+          {
+            "title": "Ad creative services",
+            "path": "/service/ad-creatives"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ad-creatives/ad-creative-performance-metrics",
+    "parent": "/blog/ad-creatives",
+    "kind": "guide",
+    "title": "Ad Creative Performance Metrics",
+    "description": "Creative metrics should help explain how a message contributes to business results. Read attention, response and conversion signals together instead of ranking assets by one engagement number.",
+    "subtitle": "Ad creative guides · Reddystack · 12 September 2026",
+    "intro": "Creative metrics should help explain how a message contributes to business results. Read attention, response and conversion signals together instead of ranking assets by one engagement number.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Use the right measurement layer",
+        "body": [
+          "Start with the campaign objective and the action the creative asks for. A demonstration aimed at helping buyers understand a product serves a different role from a direct booking offer."
+        ],
+        "bullets": [
+          "Attention: relevant video-start and watch measures, with their definitions stated.",
+          "Response: link clicks, landing-page visits and meaningful engagement.",
+          "Conversion: qualified enquiries or purchases linked to the agreed event.",
+          "Economics: media cost per useful outcome plus the production effort required."
+        ]
+      },
+      {
+        "title": "Compare like with like",
+        "body": [
+          "An illustrative video may generate more views while a static offer produces more qualified enquiries. Neither is automatically the better asset without knowing the intended goal. Compare exposure, audience, placements, offer and period. A version that received most of the budget had more opportunity to accumulate results, so raw counts alone are a poor ranking method."
+        ]
+      },
+      {
+        "title": "Write a learning statement",
+        "body": [
+          "Use “the product demonstration produced more qualified enquiries in this test” rather than “video always wins.” Record the supporting numbers and the limitations. Check for worse downstream outcomes, including unsuitable leads or returns. Keep the creative ID and message angle beside the results so the next brief can reuse a useful insight without confusing it with a universal rule."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Ad Creative Brief Template",
+            "path": "/blog/ad-creatives/ad-creative-brief-template"
+          },
+          {
+            "title": "Facebook Ad Design Specs: A Production Checklist",
+            "path": "/blog/ad-creatives/facebook-ad-design-specs"
+          },
+          {
+            "title": "Ad creative services",
+            "path": "/service/ad-creatives"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ai-ugc-videos/ai-ugc-vs-human-ugc",
+    "parent": "/blog/ai-ugc-videos",
+    "kind": "guide",
+    "title": "AI UGC vs Human UGC: Choosing the Right Format",
+    "description": "AI UGC-style video uses a synthetic presenter or generated production elements to resemble familiar social-video formats. Human UGC comes from a real person; the two should not be presented as interchangeable evidence.",
+    "subtitle": "AI UGC-style video guides · Reddystack · 12 September 2026",
+    "intro": "AI UGC-style video uses a synthetic presenter or generated production elements to resemble familiar social-video formats. Human UGC comes from a real person; the two should not be presented as interchangeable evidence.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Compare what the viewer is being shown",
+        "body": [
+          "A synthetic presenter can deliver an approved explanation. A real customer can describe an experience they actually had. An AI-presented script should not be framed as a customer testimonial or personal experience that never occurred."
+        ],
+        "bullets": [
+          "AI presenter: useful for controlled scripts, explainers and planned versioning.",
+          "Human creator: useful when authentic use, personality or lived experience is central.",
+          "Product footage: valuable when viewers need to see the real item or workflow.",
+          "Hybrid: combine an accurately labelled presenter with genuine product demonstrations."
+        ]
+      },
+      {
+        "title": "Choose by the job",
+        "body": [
+          "For an illustrative software explainer, a synthetic presenter can introduce a feature while actual screen recordings show it working. For an account of how a customer used a product, use a real authorised customer statement. Do not fabricate a person, review or before-and-after outcome to make an ad appear more credible."
+        ]
+      },
+      {
+        "title": "Plan approval and rights",
+        "body": [
+          "Agree the script, voice, likeness permissions, source assets and disclosure approach before production. Confirm usage rights and how future edits will be handled. Review whether the final video could mislead someone about who is speaking or what has been demonstrated. Efficiency in production is useful only when the message remains accurate and suitable for the platform and target market."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "AI Presenter Video Workflow",
+            "path": "/blog/ai-ugc-videos/ai-presenter-video-workflow"
+          },
+          {
+            "title": "AI Product Demo Video Examples and Briefs",
+            "path": "/blog/ai-ugc-videos/ai-product-demo-video-examples"
+          },
+          {
+            "title": "AI UGC-style video production",
+            "path": "/service/ai-ugc-videos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ai-ugc-videos/ai-presenter-video-workflow",
+    "parent": "/blog/ai-ugc-videos",
+    "kind": "guide",
+    "title": "AI Presenter Video Workflow",
+    "description": "A reliable AI-presenter workflow starts with the message and ends with a human review of the exported video. Generating a talking avatar is only one production step.",
+    "subtitle": "AI UGC-style video guides · Reddystack · 12 September 2026",
+    "intro": "A reliable AI-presenter workflow starts with the message and ends with a human review of the exported video. Generating a talking avatar is only one production step.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Prepare the brief",
+        "body": [
+          "Define the audience, offer, destination, length, language, presenter treatment and output formats. Use an approved script with accurate product facts. Collect brand assets and confirm that voice, likeness and other media can be used for the intended purpose."
+        ],
+        "bullets": [
+          "Script review: wording, claims, pronunciation and an understandable next step.",
+          "Presenter setup: approved appearance, voice and consistent framing.",
+          "Production: short sections that can be corrected without regenerating the whole video.",
+          "Edit: actual product footage, captions and an accurate end card."
+        ]
+      },
+      {
+        "title": "Review a short sample first",
+        "body": [
+          "Generate a sample containing the brand name, difficult words and any essential numbers. Check pronunciation, lip sync and whether the delivery suits the audience. Approving that sample before all versions can reduce avoidable rework. Avoid adding an unsupported claim just because the presenter makes it sound confident."
+        ]
+      },
+      {
+        "title": "Validate the final export",
+        "body": [
+          "Watch the complete video at normal speed and inspect representative frames on a phone. Check captions against the approved script, verify numbers and test the destination link. Record the model or tool, source assets, approved version and agreed usage. Apply the disclosure approach appropriate to the content, platform and market, and keep real customer evidence separate from synthetic presentation."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "AI UGC vs Human UGC: Choosing the Right Format",
+            "path": "/blog/ai-ugc-videos/ai-ugc-vs-human-ugc"
+          },
+          {
+            "title": "AI Product Demo Video Examples and Briefs",
+            "path": "/blog/ai-ugc-videos/ai-product-demo-video-examples"
+          },
+          {
+            "title": "AI UGC-style video production",
+            "path": "/service/ai-ugc-videos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ai-ugc-videos/ai-product-demo-video-examples",
+    "parent": "/blog/ai-ugc-videos",
+    "kind": "guide",
+    "title": "AI Product Demo Video Examples and Briefs",
+    "description": "An AI-assisted product demo should make the real product easier to understand. The examples below are original concepts to adapt, not demonstrations of client results or product capabilities that have been verified.",
+    "subtitle": "AI UGC-style video guides · Reddystack · 12 September 2026",
+    "intro": "An AI-assisted product demo should make the real product easier to understand. The examples below are original concepts to adapt, not demonstrations of client results or product capabilities that have been verified.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Three illustrative demo concepts",
+        "body": [
+          "Software: an AI presenter introduces a scheduling task, then a real screen recording shows the available booking flow. Use a test account and blur or replace personal details.",
+          "Physical product: a presenter explains one feature while actual footage shows the item in use. Keep dimensions, labels, colours and included accessories accurate.",
+          "Digital service: a presenter outlines the delivery steps while approved diagrams or screen captures show the agreed process. Do not invent a dashboard or result that the service does not provide."
+        ]
+      },
+      {
+        "title": "Write the demo brief",
+        "body": [
+          "Record the user task, starting state, required actions and ending state. Identify which shots must be real and which can be illustrative. Provide the product version and reference assets so the editor can check continuity. If a concept visual is used, label it clearly and avoid presenting an imagined feature as available."
+        ]
+      },
+      {
+        "title": "Review against the product",
+        "body": [
+          "Ask someone who knows the product to compare the video with the actual experience. Test every shown step, confirm the current offer and remove unsupported performance claims. Check that the final call to action lands on a matching page. A polished demonstration that changes the shape, interface or behaviour of the product can create more confusion than a simpler accurate recording."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "AI UGC vs Human UGC: Choosing the Right Format",
+            "path": "/blog/ai-ugc-videos/ai-ugc-vs-human-ugc"
+          },
+          {
+            "title": "AI Presenter Video Workflow",
+            "path": "/blog/ai-ugc-videos/ai-presenter-video-workflow"
+          },
+          {
+            "title": "AI UGC-style video production",
+            "path": "/service/ai-ugc-videos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ai-ugc-videos/ai-video-ad-script-template",
+    "parent": "/blog/ai-ugc-videos",
+    "kind": "guide",
+    "title": "AI Video Ad Script Template",
+    "description": "An AI video script should be written for spoken delivery and checked against real evidence. Approve the wording before generation so the presenter does not become the first place an unclear offer is discovered.",
+    "subtitle": "AI UGC-style video guides · Reddystack · 12 September 2026",
+    "intro": "An AI video script should be written for spoken delivery and checked against real evidence. Approve the wording before generation so the presenter does not become the first place an unclear offer is discovered.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Copy the production template",
+        "body": [
+          "Audience: __. Business goal: __. Offer: __. Approved proof: __. Presenter type: __. Language and pronunciation notes: __. Disclosure treatment: __. Destination: __."
+        ],
+        "bullets": [
+          "Opening line: identify a specific task or question.",
+          "Main explanation: explain one useful part of the offer in plain language.",
+          "Demonstration cue: name the real footage or visual that supports it.",
+          "Important condition: state any limit needed to understand the offer.",
+          "Final line: give one accurate next step."
+        ]
+      },
+      {
+        "title": "Illustrative service script",
+        "body": [
+          "“Planning a new business website? Start by deciding what a visitor should do next. Your pages, mobile layout and enquiry form should support that action. Explore Reddystack’s website-development service to discuss the scope.” Pair the line with real page or form examples where available. It explains an approach without impersonating a customer or promising a result."
+        ]
+      },
+      {
+        "title": "Make generation easier to review",
+        "body": [
+          "Use short sentences and spell out ambiguous numbers in the pronunciation notes. Mark pauses and visuals separately from spoken copy. Generate a sample with the most difficult words before the full version. Compare the completed captions and narration with the approved script, including the final offer and destination. Synthetic delivery should never be used to invent an endorsement or personal experience."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "AI UGC vs Human UGC: Choosing the Right Format",
+            "path": "/blog/ai-ugc-videos/ai-ugc-vs-human-ugc"
+          },
+          {
+            "title": "AI Presenter Video Workflow",
+            "path": "/blog/ai-ugc-videos/ai-presenter-video-workflow"
+          },
+          {
+            "title": "AI UGC-style video production",
+            "path": "/service/ai-ugc-videos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ai-ugc-videos/ai-ugc-video-cost",
+    "parent": "/blog/ai-ugc-videos",
+    "kind": "guide",
+    "title": "AI UGC-Style Video Cost: Scope the Quote",
+    "description": "AI UGC-style video pricing depends on the production scope, not only the final video length. A useful quote separates concept work, generation, editing and the versions you need to publish.",
+    "subtitle": "AI UGC-style video guides · Reddystack · 12 September 2026",
+    "intro": "AI UGC-style video pricing depends on the production scope, not only the final video length. A useful quote separates concept work, generation, editing and the versions you need to publish.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "List the cost drivers",
+        "body": [
+          "Ask what is included before comparing two prices. A single approved script in one format is a different job from several concepts, languages and placement versions."
+        ],
+        "bullets": [
+          "Concept and copy: research, scripts and claim review.",
+          "Generation: presenter, voice, attempts and tool usage.",
+          "Editing: real footage, motion, captions, sound and end card.",
+          "Variants: hooks, languages, durations and aspect ratios.",
+          "Rights and handoff: permitted usage, project files and revision scope."
+        ]
+      },
+      {
+        "title": "Count the actual deliverables",
+        "body": [
+          "Illustrative scope: two concepts with two hooks each and two aspect ratios can produce eight exports. That does not necessarily require eight completely independent edits, but each export still needs checking. Ask which changes are included and which reopen script or production approval. Avoid treating “unlimited revisions” as meaningful unless its boundaries are clear."
+        ]
+      },
+      {
+        "title": "Compare the total usable outcome",
+        "body": [
+          "Request a sample, a deliverable list, the review process and any recurring tool costs. State who supplies product footage and who verifies pronunciation and claims. Reddystack quotes work against an agreed scope; this guide does not publish a fixed market rate or guaranteed turnaround. A lower generation cost is not a saving if inaccurate or unusable exports require the entire video to be remade."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "AI UGC vs Human UGC: Choosing the Right Format",
+            "path": "/blog/ai-ugc-videos/ai-ugc-vs-human-ugc"
+          },
+          {
+            "title": "AI Presenter Video Workflow",
+            "path": "/blog/ai-ugc-videos/ai-presenter-video-workflow"
+          },
+          {
+            "title": "AI UGC-style video production",
+            "path": "/service/ai-ugc-videos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ai-ugc-videos/ai-video-brand-consistency",
+    "parent": "/blog/ai-ugc-videos",
+    "kind": "guide",
+    "title": "AI Video Brand Consistency Checklist",
+    "description": "Consistent AI video production needs a shared reference for what must stay the same. Create a small brand and production checklist before generating a series of clips.",
+    "subtitle": "AI UGC-style video guides · Reddystack · 12 September 2026",
+    "intro": "Consistent AI video production needs a shared reference for what must stay the same. Create a small brand and production checklist before generating a series of clips.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Create the reference pack",
+        "body": [
+          "Use the approved logo, colour values, fonts, product images, voice notes and example frames. Record presenter treatment, pronunciation, caption style and the terms the business uses for its offers. A vague request to “match the brand” leaves too many decisions open."
+        ],
+        "bullets": [
+          "Identity: correct brand name, logo and product terminology.",
+          "Visuals: consistent framing, backgrounds and accurate product details.",
+          "Voice: approved pronunciation, tone and pace.",
+          "Message: matching offer, qualifications and call to action.",
+          "Rights: permission for assets, voices and likenesses across planned uses."
+        ]
+      },
+      {
+        "title": "Use a continuity review",
+        "body": [
+          "For an illustrative product series, compare clips side by side: does the packaging change, does a logo distort, or does the presenter’s voice shift? Build short reference frames for reviewers instead of relying on memory. Regenerate only the affected segment when the rest is correct, then review the assembled export again."
+        ]
+      },
+      {
+        "title": "Keep a version record",
+        "body": [
+          "Store the approved script, settings, source assets and final exports under one project version. Lock the core reference pack before translating or resizing, while allowing deliberate adaptations for each audience. Do not force identical pacing into every language if it harms understanding. Brand consistency means recognisable and accurate communication, not preserving an error across every video."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "AI UGC vs Human UGC: Choosing the Right Format",
+            "path": "/blog/ai-ugc-videos/ai-ugc-vs-human-ugc"
+          },
+          {
+            "title": "AI Presenter Video Workflow",
+            "path": "/blog/ai-ugc-videos/ai-presenter-video-workflow"
+          },
+          {
+            "title": "AI UGC-style video production",
+            "path": "/service/ai-ugc-videos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ai-ugc-videos/ai-ugc-video-disclosure",
+    "parent": "/blog/ai-ugc-videos",
+    "kind": "guide",
+    "title": "AI UGC-Style Video Disclosure: A Review Checklist",
+    "description": "Disclosure should help viewers understand synthetic presentation and commercial relationships. The right treatment depends on the content, platform and target jurisdiction, so review current rules before publishing.",
+    "subtitle": "AI UGC-style video guides · Reddystack · 12 September 2026",
+    "intro": "Disclosure should help viewers understand synthetic presentation and commercial relationships. The right treatment depends on the content, platform and target jurisdiction, so review current rules before publishing.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Separate three questions",
+        "body": [
+          "Is the presenter or scene synthetic? Is the message an advertisement or sponsored endorsement? Does the content imply a real person had an experience? These questions can require different explanations; one small “AI” label does not automatically resolve all of them."
+        ],
+        "bullets": [
+          "Do not invent a customer review or present a synthetic speaker as a satisfied customer.",
+          "Do not imply a person endorsed the offer without permission.",
+          "Identify commercial relationships where applicable.",
+          "Use an appropriate platform label and understandable disclosure when required."
+        ]
+      },
+      {
+        "title": "Review what an ordinary viewer would infer",
+        "body": [
+          "An illustrative AI presenter explaining a website service can be described as an AI presenter. A script saying “I bought this and doubled my sales” creates a purported personal experience and result that need real evidence; labelling the speaker AI does not make a fabricated claim true. Check the complete video, caption, landing page and visual context together."
+        ]
+      },
+      {
+        "title": "Keep evidence with the project",
+        "body": [
+          "Record asset and likeness permissions, approved claims, the publication market and the disclosure decision. The FTC’s endorsement resources explain relevant US advertising principles; other countries and platforms have their own requirements. This checklist is a production review aid, not a determination that a particular advertisement complies with every applicable law. Obtain qualified advice for uncertain or regulated claims before publication."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "FTC: endorsements, influencers and reviews",
+            "path": "https://www.ftc.gov/business-guidance/advertising-marketing/endorsements-influencers-reviews"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "AI UGC vs Human UGC: Choosing the Right Format",
+            "path": "/blog/ai-ugc-videos/ai-ugc-vs-human-ugc"
+          },
+          {
+            "title": "AI Presenter Video Workflow",
+            "path": "/blog/ai-ugc-videos/ai-presenter-video-workflow"
+          },
+          {
+            "title": "AI UGC-style video production",
+            "path": "/service/ai-ugc-videos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ai-ugc-videos/ai-video-localization-checklist",
+    "parent": "/blog/ai-ugc-videos",
+    "kind": "guide",
+    "title": "AI Video Localization Checklist",
+    "description": "Localizing an AI video means adapting its meaning and offer for the intended audience. Translation alone does not resolve differences in pronunciation, pricing, delivery or customer expectations.",
+    "subtitle": "AI UGC-style video guides · Reddystack · 12 September 2026",
+    "intro": "Localizing an AI video means adapting its meaning and offer for the intended audience. Translation alone does not resolve differences in pronunciation, pricing, delivery or customer expectations.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Prepare the market brief",
+        "body": [
+          "Name the language, region, audience and reviewing person. Confirm that the promoted service is actually available in that market and that the destination page supports the same promise."
+        ],
+        "bullets": [
+          "Language: terminology, idiom and names reviewed by a competent speaker.",
+          "Numbers: dates, currency, units and spoken amounts checked.",
+          "Offer: availability, delivery and important conditions match the market.",
+          "Visuals: captions and on-screen text fit after translation.",
+          "Rights: voice and media permissions cover the intended region and use."
+        ]
+      },
+      {
+        "title": "Test a difficult passage first",
+        "body": [
+          "Use a short sample containing the brand name, a price, a location and the main call to action. Have the reviewer check pronunciation and meaning, not only whether the voice sounds fluent. An illustrative English script may need fewer spoken points in another language to remain comfortable at the same duration; rewriting can be better than accelerating the voice."
+        ]
+      },
+      {
+        "title": "Check every final variant",
+        "body": [
+          "Review audio and captions together on a phone. Confirm the destination URL, contact process and local offer details. Keep a version matrix by language and aspect ratio so outdated captions are not paired with new narration. Use the same approved source message, but allow genuine linguistic adaptation. Never claim native-language support or local offices that the business cannot actually provide."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "AI UGC vs Human UGC: Choosing the Right Format",
+            "path": "/blog/ai-ugc-videos/ai-ugc-vs-human-ugc"
+          },
+          {
+            "title": "AI Presenter Video Workflow",
+            "path": "/blog/ai-ugc-videos/ai-presenter-video-workflow"
+          },
+          {
+            "title": "AI UGC-style video production",
+            "path": "/service/ai-ugc-videos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ai-ugc-videos/ai-video-quality-checklist",
+    "parent": "/blog/ai-ugc-videos",
+    "kind": "guide",
+    "title": "AI Video Quality Checklist Before Publishing",
+    "description": "Review the final AI-assisted video as an advertisement a customer will see. Technical export success is not the same as an accurate, understandable and publishable asset.",
+    "subtitle": "AI UGC-style video guides · Reddystack · 12 September 2026",
+    "intro": "Review the final AI-assisted video as an advertisement a customer will see. Technical export success is not the same as an accurate, understandable and publishable asset.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Inspect content and continuity",
+        "body": [
+          "Watch the whole export at normal speed first. Then inspect difficult frames and transitions where generation or editing errors are more likely to be visible."
+        ],
+        "bullets": [
+          "Product: labels, shape, accessories and demonstrated behaviour remain accurate.",
+          "Presenter: facial movement, hands, gaze and voice are acceptable for the intended use.",
+          "Text: brand names, captions, prices and conditions match the approved script.",
+          "Audio: speech is intelligible and music does not obscure key words.",
+          "Edit: transitions, pacing and crops preserve the meaning.",
+          "Disclosure and rights: required labels and permissions are in place."
+        ]
+      },
+      {
+        "title": "Test the actual viewing context",
+        "body": [
+          "Open the file on a phone, with sound on and off, and review the intended placement preview. Check whether interface elements cover captions or the call to action. In an illustrative demo, a generated button label that differs from the real software can invalidate the explanation even when the image looks polished."
+        ]
+      },
+      {
+        "title": "Define acceptance and rework",
+        "body": [
+          "Record each issue by timestamp, expected result and required correction. Fix the affected segment, then watch the complete replacement export to catch new problems. Keep the approved version and distribution list together. Avoid publishing first and treating viewer complaints as quality assurance, especially when a video shows product capabilities or customer claims."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "AI UGC vs Human UGC: Choosing the Right Format",
+            "path": "/blog/ai-ugc-videos/ai-ugc-vs-human-ugc"
+          },
+          {
+            "title": "AI Presenter Video Workflow",
+            "path": "/blog/ai-ugc-videos/ai-presenter-video-workflow"
+          },
+          {
+            "title": "AI UGC-style video production",
+            "path": "/service/ai-ugc-videos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ai-ugc-videos/ai-ugc-ad-examples",
+    "parent": "/blog/ai-ugc-videos",
+    "kind": "guide",
+    "title": "AI UGC-Style Ad Examples and Concepts",
+    "description": "These original AI UGC-style ad concepts show how a synthetic presenter can explain an offer without pretending to be a customer. They are illustrative scripts, not client campaigns or performance evidence.",
+    "subtitle": "AI UGC-style video guides · Reddystack · 12 September 2026",
+    "intro": "These original AI UGC-style ad concepts show how a synthetic presenter can explain an offer without pretending to be a customer. They are illustrative scripts, not client campaigns or performance evidence.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Concept 1: a decision helper",
+        "body": [
+          "Opening: “What should you prepare before asking for a new website?” Body: show an offer summary, page list and enquiry goal. Close: “Use a clear brief to discuss the scope.” A presenter can guide the explanation while simple approved visuals show the documents."
+        ]
+      },
+      {
+        "title": "Concept 2: a product walkthrough",
+        "body": [
+          "Opening: “Here is how this feature works.” Body: use actual footage of the current product with concise narration. Close: direct viewers to the relevant product information. The product team must verify every shown step; generated visuals should not invent functionality."
+        ]
+      },
+      {
+        "title": "Concept 3: an objection explainer",
+        "body": [
+          "Opening: “What happens after you send an enquiry?” Body: explain the real review, scope and approval steps. Close: invite a suitable buyer to explore the service. This can be useful for a service business when uncertainty about the process stops people taking the next step."
+        ]
+      },
+      {
+        "title": "Turn a concept into a production brief",
+        "body": [
+          "Choose one audience, one message and one action. Provide approved facts, footage, presenter requirements, caption language and disclosure treatment. Review a sample and test the destination before launch. Compare qualified outcomes across concepts rather than assuming the most lifelike presenter will perform best. Never add a fabricated first-person customer story to make the concept appear more authentic."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "AI UGC vs Human UGC: Choosing the Right Format",
+            "path": "/blog/ai-ugc-videos/ai-ugc-vs-human-ugc"
+          },
+          {
+            "title": "AI Presenter Video Workflow",
+            "path": "/blog/ai-ugc-videos/ai-presenter-video-workflow"
+          },
+          {
+            "title": "AI UGC-style video production",
+            "path": "/service/ai-ugc-videos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/website-development/website-development-brief-template",
+    "parent": "/blog/website-development",
+    "kind": "guide",
+    "title": "Website Development Brief Template",
+    "description": "A website brief should connect the business goal to the pages, content and actions that must work at launch. Copy this checklist into a shared document before requesting a quote.",
+    "subtitle": "Website development guides · Reddystack · 12 September 2026",
+    "intro": "A website brief should connect the business goal to the pages, content and actions that must work at launch. Copy this checklist into a shared document before requesting a quote.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Define the job",
+        "body": [
+          "Business and contact owner: __. Main audience: __. Primary offer: __. Launch goal: __. Primary visitor action: __. Decision maker: __. Desired date and reason: __. Budget range: __."
+        ],
+        "bullets": [
+          "Pages: list each page and the question it answers.",
+          "Content: identify who supplies copy, images, product data and permissions.",
+          "Functionality: forms, payments, bookings or integrations with clear acceptance criteria.",
+          "SEO: existing URLs to retain, priority topics and redirect requirements.",
+          "Operations: domain, hosting, business email, analytics and access ownership.",
+          "Handoff: editing needs, documentation and support after launch."
+        ]
+      },
+      {
+        "title": "An illustrative acceptance criterion",
+        "body": [
+          "“The enquiry form works” is incomplete. A stronger brief says: “A mobile visitor can submit a valid enquiry, sees confirmation, and the assigned business mailbox receives one message; invalid submissions show clear field errors.” Define equivalent checks for checkout, search or booking if they are in scope."
+        ]
+      },
+      {
+        "title": "Separate essential work from later ideas",
+        "body": [
+          "Mark each requirement as launch-critical or a later improvement and state what is explicitly excluded. Agree revision rounds, feedback timing and who approves production. Keep existing search-performing pages and business integrations visible in the brief so redesign work does not accidentally remove them. A clear scope improves the usefulness of quotes and gives both sides a shared way to decide whether the website is ready."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Business Website Launch Checklist",
+            "path": "/blog/website-development/business-website-launch-checklist"
+          },
+          {
+            "title": "Ecommerce Website Cost in India: What to Budget",
+            "path": "/blog/website-development/ecommerce-website-cost-india"
+          },
+          {
+            "title": "Website development",
+            "path": "/website-development"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/website-development/business-website-launch-checklist",
+    "parent": "/blog/website-development",
+    "kind": "guide",
+    "title": "Business Website Launch Checklist",
+    "description": "A launch checklist should test the website as a customer and as the person who operates it. Complete these checks on the actual production domain before treating the launch as finished.",
+    "subtitle": "Website development guides · Reddystack · 12 September 2026",
+    "intro": "A launch checklist should test the website as a customer and as the person who operates it. Complete these checks on the actual production domain before treating the launch as finished.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Check the customer journey",
+        "body": [
+          "Read the offer and click the main navigation from a phone and desktop. Complete the primary action with clearly marked test data. Confirm the business received it and can respond."
+        ],
+        "bullets": [
+          "Content: correct identity, services, contact details and approved proof.",
+          "Forms: labels, validation, delivery, confirmation and duplicate handling.",
+          "Commerce or booking: successful and failed flows where included.",
+          "Accessibility: keyboard operation, visible focus and readable text.",
+          "Performance: sensible image sizes and usable loading on a slower connection."
+        ]
+      },
+      {
+        "title": "Check search and operations",
+        "body": [
+          "Confirm important pages return successful responses, use their intended canonical URLs and are not accidentally marked noindex. Validate the sitemap and robots file. Test any redirects from changed URLs and check internal links for old destinations. Confirm HTTPS, domain ownership, analytics configuration and access for the people who maintain the site."
+        ]
+      },
+      {
+        "title": "Leave a launch record",
+        "body": [
+          "Record the deployed version, checks performed, known limitations and rollback approach. Make one real production smoke test after deployment; a local preview is not proof that production forms and environment settings work. Check Search Console for discovery and indexing signals over time. Submitting a sitemap helps discovery but does not guarantee that every page will be indexed or ranked. Assign an owner for enquiries and future maintenance."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Website Development Brief Template",
+            "path": "/blog/website-development/website-development-brief-template"
+          },
+          {
+            "title": "Ecommerce Website Cost in India: What to Budget",
+            "path": "/blog/website-development/ecommerce-website-cost-india"
+          },
+          {
+            "title": "Website development",
+            "path": "/website-development"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/website-development/ecommerce-website-cost-india",
+    "parent": "/blog/website-development",
+    "kind": "guide",
+    "title": "Ecommerce Website Cost in India: What to Budget",
+    "description": "An ecommerce website quote should describe the store the business needs to operate. Product complexity, checkout, integrations and ongoing responsibilities usually explain the price better than page count alone.",
+    "subtitle": "Website development guides · Reddystack · 12 September 2026",
+    "intro": "An ecommerce website quote should describe the store the business needs to operate. Product complexity, checkout, integrations and ongoing responsibilities usually explain the price better than page count alone.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "List the build and running costs",
+        "body": [
+          "Separate one-time implementation from recurring platform and operating costs. Ask which items are supplied by the business and which are part of the developer’s scope."
+        ],
+        "bullets": [
+          "Store setup: design, templates, navigation and essential content.",
+          "Catalogue: number of products, variants, data cleanup and import work.",
+          "Checkout: payments, shipping logic and applicable business requirements.",
+          "Integrations: inventory, order processing, email or other agreed systems.",
+          "Operations: hosting or platform plan, domain, extensions and support."
+        ]
+      },
+      {
+        "title": "Use a quote comparison worksheet",
+        "body": [
+          "For each proposal, write the included product count, template scope, revision rounds, migration work, payment setup and acceptance tests. Add twelve months of known recurring fees to understand the first-year commitment. A hypothetical store with 30 simple products and manual fulfilment is a different scope from a catalogue with thousands of variants and inventory synchronisation. This comparison is not a market-rate estimate or a fixed Reddystack price."
+        ]
+      },
+      {
+        "title": "Agree acceptance and ownership",
+        "body": [
+          "Test a real checkout path, failed payment, stock change, shipping calculation and order confirmation. Confirm who owns the accounts and who can update products after handoff. Clarify support boundaries and the cost of later changes. Avoid selecting solely on the cheapest build quote when essential catalogue preparation, recurring tools or operational checks are omitted. Ask for a scoped proposal against your actual store requirements."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Website Development Brief Template",
+            "path": "/blog/website-development/website-development-brief-template"
+          },
+          {
+            "title": "Business Website Launch Checklist",
+            "path": "/blog/website-development/business-website-launch-checklist"
+          },
+          {
+            "title": "Website development",
+            "path": "/website-development"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/website-development/landing-page-cost-india",
+    "parent": "/blog/website-development",
+    "kind": "guide",
+    "title": "Landing Page Cost in India: Compare the Scope",
+    "description": "Landing-page pricing depends on the message, design, implementation and conversion journey. A fair comparison states what the page must achieve and which assets already exist.",
+    "subtitle": "Website development guides · Reddystack · 12 September 2026",
+    "intro": "Landing-page pricing depends on the message, design, implementation and conversion journey. A fair comparison states what the page must achieve and which assets already exist.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Separate the deliverables",
+        "body": [
+          "A single template populated with approved copy differs from a page requiring research, copywriting, original design, development and tracking. The quote should make those responsibilities visible."
+        ],
+        "bullets": [
+          "Offer and copy: audience, value, objections and action.",
+          "Design: original composition or adaptation of an existing system.",
+          "Implementation: responsive page, form and required integrations.",
+          "Measurement: successful-action events and consent-aware configuration.",
+          "Launch: domain, deployment, checks and agreed revisions."
+        ]
+      },
+      {
+        "title": "Use an illustrative comparison",
+        "body": [
+          "Proposal A includes a page built from supplied copy and images. Proposal B includes offer research, copy, custom artwork and CRM integration. Their prices cannot be compared as if they purchase the same work. List the missing tasks, assign an owner and include any recurring tools in the decision. This guide deliberately uses scope examples rather than unsupported market-average prices."
+        ]
+      },
+      {
+        "title": "Define success before work begins",
+        "body": [
+          "Write the acceptance criteria: the mobile page is usable, the offer is accurate, a valid enquiry reaches the business and tracking records the intended action once. Confirm the number of variants, included revisions and post-launch support. A landing page cannot guarantee a conversion rate independently of traffic quality, offer, pricing and response handling. Choose a provider using the deliverables and review process as well as the quote."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Website Development Brief Template",
+            "path": "/blog/website-development/website-development-brief-template"
+          },
+          {
+            "title": "Business Website Launch Checklist",
+            "path": "/blog/website-development/business-website-launch-checklist"
+          },
+          {
+            "title": "Website development",
+            "path": "/website-development"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/website-development/website-redesign-checklist",
+    "parent": "/blog/website-development",
+    "kind": "guide",
+    "title": "Website Redesign Checklist: Preserve What Works",
+    "description": "A redesign should improve the customer experience while preserving valuable URLs, content and integrations. Inventory the current website before deciding what to remove or rename.",
+    "subtitle": "Website development guides · Reddystack · 12 September 2026",
+    "intro": "A redesign should improve the customer experience while preserving valuable URLs, content and integrations. Inventory the current website before deciding what to remove or rename.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Record the baseline",
+        "body": [
+          "Export the current sitemap and review important landing pages, search queries, backlinks and conversion paths. Save titles, canonicals and business-critical integrations. Use this inventory to distinguish a necessary change from a cosmetic preference."
+        ],
+        "bullets": [
+          "Keep useful existing URLs when the page intent remains the same.",
+          "Map removed or replaced URLs to genuinely equivalent destinations.",
+          "Retain accurate content that helps customers decide.",
+          "Identify forms, payment flows and scripts that must survive the change.",
+          "Record performance and accessibility issues to verify after launch."
+        ]
+      },
+      {
+        "title": "Test the migration map",
+        "body": [
+          "For each changed URL, check the intended permanent redirect and final successful destination. Avoid redirecting unrelated pages to the homepage just to eliminate a 404. Update internal links, canonicals and sitemap entries to the final URLs. Check that preview settings such as authentication or noindex do not leak into production."
+        ]
+      },
+      {
+        "title": "Launch with a recovery path",
+        "body": [
+          "Use a reviewed preview, record the deployed version and keep a rollback option. Test contact and checkout flows on production, then inspect Search Console and analytics for unexpected changes. Some short-term variation is possible, so diagnose specific failures rather than reverting solely because one metric moved. A successful redesign keeps the business reachable and makes the important tasks easier to complete."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Google: site moves with URL changes",
+            "path": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Website Development Brief Template",
+            "path": "/blog/website-development/website-development-brief-template"
+          },
+          {
+            "title": "Business Website Launch Checklist",
+            "path": "/blog/website-development/business-website-launch-checklist"
+          },
+          {
+            "title": "Website development",
+            "path": "/website-development"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/website-development/landing-page-conversion-tracking",
+    "parent": "/blog/website-development",
+    "kind": "guide",
+    "title": "Landing Page Conversion Tracking Checklist",
+    "description": "Landing-page conversion tracking should distinguish a completed business action from a casual click. Define the event first, then test whether the implementation records it reliably.",
+    "subtitle": "Website development guides · Reddystack · 12 September 2026",
+    "intro": "Landing-page conversion tracking should distinguish a completed business action from a casual click. Define the event first, then test whether the implementation records it reliably.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Write an event inventory",
+        "body": [
+          "For each action, record its meaning, trigger, destination system and intended reporting use. Keep diagnostic interactions separate from primary conversion outcomes."
+        ],
+        "bullets": [
+          "Form submitted successfully: verify server acceptance and delivery.",
+          "Call button clicked: label it as a click unless call completion is measured.",
+          "WhatsApp opened: do not describe this as a received or qualified enquiry.",
+          "Purchase completed: confirm transaction, value and currency.",
+          "Booking accepted: distinguish a booked appointment from opening the calendar."
+        ]
+      },
+      {
+        "title": "Use a practical test sheet",
+        "body": [
+          "Test valid, invalid and repeated actions across mobile and desktop. Include consent choices, ad-blocking conditions where relevant and any handoff to another domain. In an illustrative form flow, a client-side success animation may appear while email delivery fails; the business record is an essential part of the check. Avoid placing names, phone numbers or email addresses in URLs and general analytics parameters."
+        ]
+      },
+      {
+        "title": "Maintain the measurement",
+        "body": [
+          "Keep the event definition and test date with the page documentation. Retest after changes to forms, routing, analytics or consent handling. Compare reported conversions with unique business records and explain differences instead of treating every click as a customer. Reliable tracking improves decisions; it does not make attribution perfectly complete or remove the need to review lead quality."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Website Development Brief Template",
+            "path": "/blog/website-development/website-development-brief-template"
+          },
+          {
+            "title": "Business Website Launch Checklist",
+            "path": "/blog/website-development/business-website-launch-checklist"
+          },
+          {
+            "title": "Website development",
+            "path": "/website-development"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/website-development/website-speed-optimization-checklist",
+    "parent": "/blog/website-development",
+    "kind": "guide",
+    "title": "Website Speed Optimization Checklist",
+    "description": "Improve website speed by finding the largest user-visible delays first. A performance score is useful diagnostic evidence, but it should not replace checking the actual customer journey.",
+    "subtitle": "Website development guides · Reddystack · 12 September 2026",
+    "intro": "Improve website speed by finding the largest user-visible delays first. A performance score is useful diagnostic evidence, but it should not replace checking the actual customer journey.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Measure before editing",
+        "body": [
+          "Test representative pages on mobile and desktop. Distinguish lab results from real-user field data and record the conditions. Core Web Vitals cover loading, interaction responsiveness and visual stability; investigate the elements behind weak results rather than optimising only the score."
+        ],
+        "bullets": [
+          "Images: correct dimensions, modern formats and lazy loading for below-the-fold content.",
+          "Main content: avoid making the key heading or image wait for unnecessary scripts.",
+          "Scripts: remove unused third-party work and defer nonessential features.",
+          "Fonts: reduce unnecessary files and check rendering behaviour.",
+          "Layout: reserve space for media and avoid unexpected shifts."
+        ]
+      },
+      {
+        "title": "Prioritise by impact",
+        "body": [
+          "If a portfolio page downloads several multi-megabyte images, resizing and compressing those assets may matter more than a small stylesheet change. If the page appears quickly but freezes when a menu opens, inspect long-running work and interaction handling. Preserve image meaning and quality where customers need to inspect project details."
+        ]
+      },
+      {
+        "title": "Verify the complete flow",
+        "body": [
+          "Repeat the same measurement after a meaningful change and test navigation, forms and animations. Confirm that performance edits did not hide content, break accessibility or remove necessary measurement. Keep the result and conditions in the change record. Set a practical asset budget for future uploads so the next content update does not immediately recreate the same loading problem."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Web.dev: Core Web Vitals",
+            "path": "https://web.dev/articles/vitals"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Website Development Brief Template",
+            "path": "/blog/website-development/website-development-brief-template"
+          },
+          {
+            "title": "Business Website Launch Checklist",
+            "path": "/blog/website-development/business-website-launch-checklist"
+          },
+          {
+            "title": "Website development",
+            "path": "/website-development"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/seo-local-seo/local-seo-for-small-business",
+    "parent": "/blog/seo-local-seo",
+    "kind": "guide",
+    "title": "Local SEO for a Small Business: Where to Start",
+    "description": "Local SEO helps a suitable customer understand what the business offers, where it operates and how to take the next step. Start with accurate business information and a useful website.",
+    "subtitle": "SEO and Local SEO guides · Reddystack · 12 September 2026",
+    "intro": "Local SEO helps a suitable customer understand what the business offers, where it operates and how to take the next step. Start with accurate business information and a useful website.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Build a dependable foundation",
+        "body": [
+          "Choose clear service pages and explain actual coverage. If the business is eligible for a Google Business Profile, maintain accurate information and ownership. An online-only business should not assume it qualifies for a local profile simply because it serves customers in a city."
+        ],
+        "bullets": [
+          "Website: clear services, contact information and a working mobile enquiry path.",
+          "Profile: appropriate category, hours, contact details and real business information.",
+          "Evidence: approved photos, project examples and genuine customer reviews.",
+          "Consistency: correct important listings that misstate the business identity or location."
+        ]
+      },
+      {
+        "title": "Choose one useful improvement",
+        "body": [
+          "An illustrative home-service business might find that customers cannot tell whether their area is covered. A clear service-area explanation and a working enquiry route address that problem more directly than publishing dozens of city-name pages. Google describes local results through relevance, distance and prominence; adding keywords to a business name is not a substitute for accurate representation."
+        ]
+      },
+      {
+        "title": "Measure business usefulness",
+        "body": [
+          "Track relevant Search Console queries, website landing pages, profile interactions and qualified enquiries. Use consistent definitions and investigate whether customers can actually be served. Review changes over time rather than promising a fixed ranking date. Build new location content only when it has distinct value, such as actual delivery details or approved local work, and keep it connected to the main service structure."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Google: improve local ranking",
+            "path": "https://support.google.com/business/answer/7091"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Business Profile Optimization Checklist",
+            "path": "/blog/seo-local-seo/google-business-profile-optimization-checklist"
+          },
+          {
+            "title": "Local SEO Audit Checklist",
+            "path": "/blog/seo-local-seo/local-seo-audit-checklist"
+          },
+          {
+            "title": "SEO and Local SEO services",
+            "path": "/service/seo-local-seo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/seo-local-seo/google-business-profile-optimization-checklist",
+    "parent": "/blog/seo-local-seo",
+    "kind": "guide",
+    "title": "Google Business Profile Optimization Checklist",
+    "description": "Optimise an eligible Google Business Profile by making its information accurate and useful. Start with ownership and representation before treating posts or keywords as a ranking shortcut.",
+    "subtitle": "SEO and Local SEO guides · Reddystack · 12 September 2026",
+    "intro": "Optimise an eligible Google Business Profile by making its information accurate and useful. Start with ownership and representation before treating posts or keywords as a ranking shortcut.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Review the profile fields",
+        "body": [
+          "Confirm the business is eligible and represented according to Google’s current rules. Keep access under the business’s control and avoid creating duplicates for the same operation."
+        ],
+        "bullets": [
+          "Name: use the real business name without promotional keyword additions.",
+          "Category: select the most appropriate primary category and relevant additional categories.",
+          "Location or service area: show only what the business is entitled to represent.",
+          "Hours: maintain regular and special hours accurately.",
+          "Contact: test phone, website and applicable booking links.",
+          "Media: use real, authorised images that help customers understand the business."
+        ]
+      },
+      {
+        "title": "Check the customer experience",
+        "body": [
+          "View the profile as a customer on a phone. Follow the website link and attempt the main contact action. Ensure the landing page agrees with the profile about services, coverage and identity. A correct profile that sends visitors to a broken form still creates a poor enquiry experience."
+        ]
+      },
+      {
+        "title": "Maintain it with evidence",
+        "body": [
+          "Request reviews from real customers without incentives or selective gating. Respond appropriately while protecting private customer information. Keep a dated record of profile changes and investigate unexpected edits. Do not create unsupported offices or add services that are not offered. Review applicable Google guidance before making material address, category or eligibility changes."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Google: business representation guidelines",
+            "path": "https://support.google.com/business/answer/3038177"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Local SEO for a Small Business: Where to Start",
+            "path": "/blog/seo-local-seo/local-seo-for-small-business"
+          },
+          {
+            "title": "Local SEO Audit Checklist",
+            "path": "/blog/seo-local-seo/local-seo-audit-checklist"
+          },
+          {
+            "title": "SEO and Local SEO services",
+            "path": "/service/seo-local-seo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/seo-local-seo/local-seo-audit-checklist",
+    "parent": "/blog/seo-local-seo",
+    "kind": "guide",
+    "title": "Local SEO Audit Checklist",
+    "description": "A local SEO audit should identify factual, technical and customer-experience problems. Start with one real location or service operation and document the evidence for each finding.",
+    "subtitle": "SEO and Local SEO guides · Reddystack · 12 September 2026",
+    "intro": "A local SEO audit should identify factual, technical and customer-experience problems. Start with one real location or service operation and document the evidence for each finding.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Inspect four areas",
+        "body": [
+          "Record the business identity, actual coverage and relevant competitors before comparing visibility. Separate organic website results from local-profile results because their reports and ranking contexts differ."
+        ],
+        "bullets": [
+          "Business information: name, contact details, hours, eligible profile and important listings.",
+          "Website: indexable service pages, clear location context and usable contact paths.",
+          "Proof: genuine reviews, approved photos and relevant project information.",
+          "Measurement: Search Console, profile interactions and qualified enquiry records."
+        ]
+      },
+      {
+        "title": "Build an evidence register",
+        "body": [
+          "Use columns for issue, affected URL or listing, evidence, impact, owner and verification. For example, “the profile links to an old contact page that redirects twice” is more actionable than “local SEO is poor.” Test a mobile enquiry and confirm that the business receives it. Check inconsistent details at the source rather than making conflicting edits in several systems."
+        ]
+      },
+      {
+        "title": "Prioritise the repair list",
+        "body": [
+          "Resolve incorrect identity, inaccessible pages and broken enquiry paths before expanding content. Improve thin service explanations where they prevent buyers making a decision. Avoid manufacturing dozens of near-identical location pages to improve an audit score. Recheck the changed items and review qualified demand over time; no audit score can guarantee a map position or a particular number of customers."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Local SEO for a Small Business: Where to Start",
+            "path": "/blog/seo-local-seo/local-seo-for-small-business"
+          },
+          {
+            "title": "Google Business Profile Optimization Checklist",
+            "path": "/blog/seo-local-seo/google-business-profile-optimization-checklist"
+          },
+          {
+            "title": "SEO and Local SEO services",
+            "path": "/service/seo-local-seo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/seo-local-seo/local-seo-cost-india",
+    "parent": "/blog/seo-local-seo",
+    "kind": "guide",
+    "title": "Local SEO Cost in India: Compare Deliverables",
+    "description": "Local SEO pricing should reflect the business’s locations, website condition and ongoing work. Compare the defined deliverables and reporting, not a promise to rank first for a monthly fee.",
+    "subtitle": "SEO and Local SEO guides · Reddystack · 12 September 2026",
+    "intro": "Local SEO pricing should reflect the business’s locations, website condition and ongoing work. Compare the defined deliverables and reporting, not a promise to rank first for a monthly fee.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Define what the quote covers",
+        "body": [
+          "A single eligible business profile and a small service website differ from multiple staffed locations with separate operations. Establish the actual scope before estimating cost."
+        ],
+        "bullets": [
+          "Initial work: technical and information audit with prioritised findings.",
+          "Website work: service content, page fixes and relevant internal links.",
+          "Profile work: eligible Google Business Profile updates and maintenance.",
+          "Listings: important corrections where the business is legitimately represented.",
+          "Reporting: observed search performance, completed work and business outcomes."
+        ]
+      },
+      {
+        "title": "Compare proposals line by line",
+        "body": [
+          "Use a worksheet with task, quantity, owner, frequency and acceptance criteria. An illustrative proposal to edit one profile should not be compared directly with a proposal that also repairs a website and produces original content. Separate one-time fixes, monthly work and any third-party fees. This guide does not claim a market-average price or a fixed Reddystack package."
+        ]
+      },
+      {
+        "title": "Reject promises that hide the method",
+        "body": [
+          "Ask how reviews and links will be obtained and how business information will be verified. Paid fake reviews, unsupported offices and bulk irrelevant directory links create problems that a low fee does not justify. Agree realistic reporting and cancellation terms. Evaluate the work by accuracy, useful improvements and qualified enquiries over time, with rankings treated as an observed outcome rather than a guaranteed deliverable."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Local SEO for a Small Business: Where to Start",
+            "path": "/blog/seo-local-seo/local-seo-for-small-business"
+          },
+          {
+            "title": "Google Business Profile Optimization Checklist",
+            "path": "/blog/seo-local-seo/google-business-profile-optimization-checklist"
+          },
+          {
+            "title": "SEO and Local SEO services",
+            "path": "/service/seo-local-seo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/seo-local-seo/local-citations-guide",
+    "parent": "/blog/seo-local-seo",
+    "kind": "guide",
+    "title": "Local Citations: A Practical Guide",
+    "description": "A local citation is a mention of a business and its identifying information. Focus on accurate, relevant places where customers may look for the business instead of buying a large arbitrary directory count.",
+    "subtitle": "SEO and Local SEO guides · Reddystack · 12 September 2026",
+    "intro": "A local citation is a mention of a business and its identifying information. Focus on accurate, relevant places where customers may look for the business instead of buying a large arbitrary directory count.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Create a canonical business record",
+        "body": [
+          "Write the approved business name, public address if applicable, phone number, website and service description in one document. Use it when correcting listings and record who owns each account. Do not publish a private or unsupported address merely to make every field match."
+        ],
+        "bullets": [
+          "Start with the business’s own site and eligible major profiles.",
+          "Check relevant industry or local listings that real customers use.",
+          "Correct material errors such as old phones or closed locations.",
+          "Avoid directories whose main purpose is selling ranking links."
+        ]
+      },
+      {
+        "title": "Audit a small set carefully",
+        "body": [
+          "For an illustrative business that changed its phone number, search for the old number and prioritise listings that still attract customers. Record the listing URL, incorrect field, correction method and verification status. A submission receipt does not prove the live information changed. Recheck the published listing."
+        ]
+      },
+      {
+        "title": "Keep citations in perspective",
+        "body": [
+          "Accurate listings support discoverability and reduce customer confusion, but citation volume alone is not a business outcome. Pair listing work with clear service pages and a working enquiry process. Keep access and renewal details with the business, and avoid giving multiple providers permission to create competing versions of the same profile. Update the source record when the business genuinely changes."
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Local SEO for a Small Business: Where to Start",
+            "path": "/blog/seo-local-seo/local-seo-for-small-business"
+          },
+          {
+            "title": "Google Business Profile Optimization Checklist",
+            "path": "/blog/seo-local-seo/google-business-profile-optimization-checklist"
+          },
+          {
+            "title": "SEO and Local SEO services",
+            "path": "/service/seo-local-seo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/seo-local-seo/how-to-request-google-reviews",
+    "parent": "/blog/seo-local-seo",
+    "kind": "guide",
+    "title": "How to Request Google Reviews from Customers",
+    "description": "Ask real customers for an honest review after a meaningful interaction. Make the request easy to understand without steering the rating or rewarding a positive response.",
+    "subtitle": "SEO and Local SEO guides · Reddystack · 12 September 2026",
+    "intro": "Ask real customers for an honest review after a meaningful interaction. Make the request easy to understand without steering the rating or rewarding a positive response.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Use a neutral request",
+        "body": [
+          "An example message: “Thank you for choosing [business]. If you would like to share your experience, you can leave an honest Google review here: [review link]. Your feedback helps us understand what worked and what we can improve.” Send it only through a contact channel you are entitled to use."
+        ],
+        "bullets": [
+          "Request feedback from eligible customers consistently, not only those expected to praise you.",
+          "Do not offer discounts, gifts or payment for a review.",
+          "Do not ask staff or fabricated accounts to pose as customers.",
+          "Do not pressure a customer to remove an honest negative review in exchange for help."
+        ]
+      },
+      {
+        "title": "Choose a sensible moment",
+        "body": [
+          "Ask after the customer has enough experience to give useful feedback. For an illustrative completed service, that may be after delivery and follow-up rather than immediately after the first enquiry. Use the actual review link from the eligible profile and test it before sending. Avoid repeated reminders that become intrusive."
+        ]
+      },
+      {
+        "title": "Respond and learn",
+        "body": [
+          "Acknowledge feedback without exposing order details, personal information or private disputes. Investigate service problems through the appropriate private channel. Google’s review policies prohibit fake engagement and certain incentivised or selectively solicited reviews. Keep the request process focused on genuine customer feedback; a larger rating count is not worth undermining trust in the business."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Maps: prohibited and restricted content",
+            "path": "https://support.google.com/contributionpolicy/answer/7400114"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Local SEO for a Small Business: Where to Start",
+            "path": "/blog/seo-local-seo/local-seo-for-small-business"
+          },
+          {
+            "title": "Google Business Profile Optimization Checklist",
+            "path": "/blog/seo-local-seo/google-business-profile-optimization-checklist"
+          },
+          {
+            "title": "SEO and Local SEO services",
+            "path": "/service/seo-local-seo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/seo-local-seo/service-area-business-seo",
+    "parent": "/blog/seo-local-seo",
+    "kind": "guide",
+    "title": "SEO for a Service-Area Business",
+    "description": "A service-area business needs to explain where it can actually serve customers without pretending to have an office in every place. Make the coverage and enquiry process clear on the website.",
+    "subtitle": "SEO and Local SEO guides · Reddystack · 12 September 2026",
+    "intro": "A service-area business needs to explain where it can actually serve customers without pretending to have an office in every place. Make the coverage and enquiry process clear on the website.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Represent the operation accurately",
+        "body": [
+          "Review Google Business Profile eligibility and the distinction between a storefront and a service-area operation. A business that does not receive customers at its address should follow the applicable address-display rules. Online-only services should not assume the same eligibility as businesses making in-person contact."
+        ],
+        "bullets": [
+          "Describe the real service boundary and important travel or availability limits.",
+          "Use service pages that answer actual buyer questions.",
+          "Publish an accurate contact method and response process.",
+          "Keep public business details consistent with the actual operation."
+        ]
+      },
+      {
+        "title": "Use location pages selectively",
+        "body": [
+          "An illustrative business serving Hyderabad may explain its coverage and booking process on one useful overview. A separate neighbourhood page needs more than replacing the place name: it should add real information that helps that audience choose or use the service. Do not create virtual addresses or claim staffed branches that do not exist."
+        ]
+      },
+      {
+        "title": "Check discovery and enquiry quality",
+        "body": [
+          "Review the places from which suitable enquiries arrive and why others cannot be served. Use that information to improve coverage explanations and paid targeting separately. Keep website content and profile settings aligned when service boundaries change. Success means the right people understand the offer and can reach the business, not merely appearing for a longer list of city keywords."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Google: business representation guidelines",
+            "path": "https://support.google.com/business/answer/3038177"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Local SEO for a Small Business: Where to Start",
+            "path": "/blog/seo-local-seo/local-seo-for-small-business"
+          },
+          {
+            "title": "Google Business Profile Optimization Checklist",
+            "path": "/blog/seo-local-seo/google-business-profile-optimization-checklist"
+          },
+          {
+            "title": "SEO and Local SEO services",
+            "path": "/service/seo-local-seo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/seo-local-seo/local-business-schema",
+    "parent": "/blog/seo-local-seo",
+    "kind": "guide",
+    "title": "Local Business Schema: What to Include",
+    "description": "Structured data should describe the real business and agree with visible page content. It helps machines interpret information; it does not create eligibility, prove trust or guarantee a search feature.",
+    "subtitle": "SEO and Local SEO guides · Reddystack · 12 September 2026",
+    "intro": "Structured data should describe the real business and agree with visible page content. It helps machines interpret information; it does not create eligibility, prove trust or guarantee a search feature.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Choose an accurate description",
+        "body": [
+          "Use an appropriate schema type and stable identifiers for the business and website. Check Google’s current LocalBusiness documentation for required and recommended properties relevant to the feature you want. An organisation offering remote services should not invent a public storefront address to satisfy a schema example."
+        ],
+        "bullets": [
+          "Name, website and contact information must match the real entity.",
+          "Address and opening hours should reflect a legitimate public business operation.",
+          "Use official profiles for sameAs links rather than unrelated directory mentions.",
+          "Keep services and area descriptions consistent with visible information."
+        ]
+      },
+      {
+        "title": "Validate the rendered result",
+        "body": [
+          "Inspect the production HTML to confirm the JSON-LD exists and parses. Use the Rich Results Test for Google-supported features and review warnings in context. A syntactically valid object can still describe inaccurate facts. Check the page after deployment and after changes to business data."
+        ]
+      },
+      {
+        "title": "Avoid unsupported ratings",
+        "body": [
+          "Do not add invented review counts, customer scores or hidden testimonials. Follow the applicable feature policies instead of marking up every claim simply because a schema property exists. In an illustrative single-business site, one shared identity record is easier to maintain than conflicting addresses across every service page. Keep factual business information in one source and derive the markup from it."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Google: LocalBusiness structured data",
+            "path": "https://developers.google.com/search/docs/appearance/structured-data/local-business"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Local SEO for a Small Business: Where to Start",
+            "path": "/blog/seo-local-seo/local-seo-for-small-business"
+          },
+          {
+            "title": "Google Business Profile Optimization Checklist",
+            "path": "/blog/seo-local-seo/google-business-profile-optimization-checklist"
+          },
+          {
+            "title": "SEO and Local SEO services",
+            "path": "/service/seo-local-seo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/seo-local-seo/why-website-not-showing-on-google",
+    "parent": "/blog/seo-local-seo",
+    "kind": "guide",
+    "title": "Why Your Website Is Not Showing on Google",
+    "description": "First distinguish an indexing problem from a ranking problem. A website can be indexed yet receive very few impressions for competitive or poorly matched queries.",
+    "subtitle": "SEO and Local SEO guides · Reddystack · 12 September 2026",
+    "intro": "First distinguish an indexing problem from a ranking problem. A website can be indexed yet receive very few impressions for competitive or poorly matched queries.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Check discovery and access",
+        "body": [
+          "Use Search Console for the verified property and inspect a representative URL. Confirm the final production URL loads, returns the intended status and is not blocked by authentication or accidental noindex. Check canonical selection and the actual sitemap contents."
+        ],
+        "bullets": [
+          "Not discovered: improve internal links and submit a valid sitemap.",
+          "Crawled but not indexed: inspect content usefulness, duplication and canonical signals.",
+          "Indexed but rarely shown: review search intent, relevance and the competitive landscape.",
+          "Impressions without clicks: review the query, position, title and page promise together."
+        ]
+      },
+      {
+        "title": "Investigate one page end to end",
+        "body": [
+          "An illustrative service page may exist in the sitemap but have no internal links and nearly the same content as another page. Adding more slugs does not solve either issue. Make the page useful, connect it from an appropriate hub and retain one clear canonical destination for its intent. Avoid changing URLs repeatedly while diagnosing visibility."
+        ]
+      },
+      {
+        "title": "Track the next signal",
+        "body": [
+          "Record what was fixed and when. Check Search Console for subsequent discovery, indexing and query changes rather than repeatedly submitting the same URL and expecting immediate rankings. A sitemap submission is a discovery aid, not a guarantee. If a manual action or security issue is reported, address the specific finding through the official process. Use measured evidence before assuming the entire domain is penalised."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Google: build and submit a sitemap",
+            "path": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Local SEO for a Small Business: Where to Start",
+            "path": "/blog/seo-local-seo/local-seo-for-small-business"
+          },
+          {
+            "title": "Google Business Profile Optimization Checklist",
+            "path": "/blog/seo-local-seo/google-business-profile-optimization-checklist"
+          },
+          {
+            "title": "SEO and Local SEO services",
+            "path": "/service/seo-local-seo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/seo-local-seo/google-search-console-setup",
+    "parent": "/blog/seo-local-seo",
+    "kind": "guide",
+    "title": "Google Search Console Setup Checklist",
+    "description": "Set up Search Console with an account the business controls, verify the correct property and submit the production sitemap. The useful next step is interpreting reports, not repeatedly resubmitting URLs.",
+    "subtitle": "SEO and Local SEO guides · Reddystack · 12 September 2026",
+    "intro": "Set up Search Console with an account the business controls, verify the correct property and submit the production sitemap. The useful next step is interpreting reports, not repeatedly resubmitting URLs.",
+    "publishedAt": "2026-09-12",
+    "sections": [
+      {
+        "title": "Choose and verify the property",
+        "body": [
+          "A Domain property covers the domain across protocols and subdomains and uses DNS verification. A URL-prefix property covers the specified prefix and supports its available verification methods. Follow the instructions displayed for the chosen property and retain the verification record or method."
+        ],
+        "bullets": [
+          "Use the exact production domain and confirm ownership.",
+          "Keep the business as an owner and grant only the access collaborators need.",
+          "Check that verification survives a website redesign or DNS change.",
+          "Keep login and recovery information under the business’s control."
+        ]
+      },
+      {
+        "title": "Submit and inspect",
+        "body": [
+          "Open the Sitemaps report and submit the absolute production sitemap URL where the interface requires it. Confirm that the XML loads and lists canonical, indexable pages rather than redirects or drafts. Inspect representative important URLs to understand access and indexing status. Do not assume a successful sitemap submission means all entries were indexed."
+        ]
+      },
+      {
+        "title": "Use the reports consistently",
+        "body": [
+          "Review performance by query, page, country and device over a meaningful period. Separate branded discovery from service demand. Compare the indexing report with the intended published inventory and investigate specific exclusions. Keep a record of major releases so later changes can be interpreted in context. Search Console data is not a complete sales report, so connect it with analytics and qualified enquiries without expecting every number to match exactly."
+        ]
+      },
+      {
+        "title": "Official reference",
+        "body": [],
+        "links": [
+          {
+            "title": "Search Console: verify site ownership",
+            "path": "https://support.google.com/webmasters/answer/9008080"
+          }
+        ]
+      },
+      {
+        "title": "Related reading and services",
+        "body": [],
+        "links": [
+          {
+            "title": "Local SEO for a Small Business: Where to Start",
+            "path": "/blog/seo-local-seo/local-seo-for-small-business"
+          },
+          {
+            "title": "Google Business Profile Optimization Checklist",
+            "path": "/blog/seo-local-seo/google-business-profile-optimization-checklist"
+          },
+          {
+            "title": "SEO and Local SEO services",
+            "path": "/service/seo-local-seo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/meta-ads",
+    "parent": "/blog",
+    "kind": "hub",
+    "title": "Meta Ads guides",
+    "description": "Practical meta ads guides from Reddystack: checklists, planning examples and templates to help make better decisions.",
+    "subtitle": "Reddystack Insights",
+    "intro": "Use these meta ads guides to plan the work, check the details and understand the next decision. Start with a relevant checklist, then use the examples and templates for your own business. Illustrative examples are labelled; they are not client results.",
+    "sections": [
+      {
+        "title": "Checklists, examples and templates",
+        "body": [],
+        "links": [
+          {
+            "title": "Facebook Ads Audit Checklist",
+            "path": "/blog/meta-ads/facebook-ads-audit-checklist"
+          },
+          {
+            "title": "Facebook Ads Cost in India: Plan Your Budget",
+            "path": "/blog/meta-ads/facebook-ads-cost-india"
+          },
+          {
+            "title": "Facebook Ads Budget for a Small Business",
+            "path": "/blog/meta-ads/facebook-ads-budget-small-business"
+          },
+          {
+            "title": "How to Diagnose Low-Quality Facebook Leads",
+            "path": "/blog/meta-ads/facebook-ads-low-quality-leads"
+          },
+          {
+            "title": "Meta Pixel vs Conversions API",
+            "path": "/blog/meta-ads/meta-pixel-vs-conversions-api"
+          },
+          {
+            "title": "Facebook Ads vs Google Ads: Choosing a Starting Channel",
+            "path": "/blog/meta-ads/facebook-ads-vs-google-ads"
+          },
+          {
+            "title": "Facebook Ads for Ecommerce: A Launch Checklist",
+            "path": "/blog/meta-ads/facebook-ads-for-ecommerce"
+          },
+          {
+            "title": "A Practical Facebook Retargeting Strategy",
+            "path": "/blog/meta-ads/facebook-retargeting-strategy"
+          },
+          {
+            "title": "Meta Ads Reporting Metrics That Support Decisions",
+            "path": "/blog/meta-ads/meta-ads-reporting-metrics"
+          },
+          {
+            "title": "Facebook Ads Not Converting? Diagnose the Funnel",
+            "path": "/blog/meta-ads/facebook-ads-not-converting"
+          }
+        ]
+      },
+      {
+        "title": "Discuss the work",
+        "body": [
+          "Bring your current setup, the outcome you need and any constraints. We can use those details to agree a practical scope."
+        ],
+        "links": [
+          {
+            "title": "Meta Ads services",
+            "path": "/service/meta-ads"
+          },
+          {
+            "title": "Contact Reddystack",
+            "path": "/contact"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/google-ads",
+    "parent": "/blog",
+    "kind": "hub",
+    "title": "Google Ads guides",
+    "description": "Practical google ads guides from Reddystack: checklists, planning examples and templates to help make better decisions.",
+    "subtitle": "Reddystack Insights",
+    "intro": "Use these google ads guides to plan the work, check the details and understand the next decision. Start with a relevant checklist, then use the examples and templates for your own business. Illustrative examples are labelled; they are not client results.",
+    "sections": [
+      {
+        "title": "Checklists, examples and templates",
+        "body": [],
+        "links": [
+          {
+            "title": "Google Ads Audit Checklist",
+            "path": "/blog/google-ads/google-ads-audit-checklist"
+          },
+          {
+            "title": "Google Ads Cost in India: Budget and Fee Planning",
+            "path": "/blog/google-ads/google-ads-cost-india"
+          },
+          {
+            "title": "Google Ads for Local Businesses",
+            "path": "/blog/google-ads/google-ads-for-local-businesses"
+          },
+          {
+            "title": "Google Ads Negative Keywords: A Review Workflow",
+            "path": "/blog/google-ads/google-ads-negative-keywords"
+          },
+          {
+            "title": "Google Ads Conversion Tracking Checklist",
+            "path": "/blog/google-ads/google-ads-conversion-tracking-checklist"
+          },
+          {
+            "title": "Google Ads Keyword Match Types Explained",
+            "path": "/blog/google-ads/google-ads-keyword-match-types"
+          },
+          {
+            "title": "Google Ads Landing Page Checklist",
+            "path": "/blog/google-ads/google-ads-landing-page-checklist"
+          },
+          {
+            "title": "Improve Lead Quality from Google Ads",
+            "path": "/blog/google-ads/google-ads-low-quality-leads"
+          },
+          {
+            "title": "Google Ads Budget Planning Worksheet",
+            "path": "/blog/google-ads/google-ads-budget-planning"
+          },
+          {
+            "title": "Google Ads Reporting Metrics and Decisions",
+            "path": "/blog/google-ads/google-ads-reporting-metrics"
+          }
+        ]
+      },
+      {
+        "title": "Discuss the work",
+        "body": [
+          "Bring your current setup, the outcome you need and any constraints. We can use those details to agree a practical scope."
+        ],
+        "links": [
+          {
+            "title": "Google Ads management",
+            "path": "/service/google-ads"
+          },
+          {
+            "title": "Contact Reddystack",
+            "path": "/contact"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ad-creatives",
+    "parent": "/blog",
+    "kind": "hub",
+    "title": "Ad creative guides",
+    "description": "Practical ad creative guides from Reddystack: checklists, planning examples and templates to help make better decisions.",
+    "subtitle": "Reddystack Insights",
+    "intro": "Use these ad creative guides to plan the work, check the details and understand the next decision. Start with a relevant checklist, then use the examples and templates for your own business. Illustrative examples are labelled; they are not client results.",
+    "sections": [
+      {
+        "title": "Checklists, examples and templates",
+        "body": [],
+        "links": [
+          {
+            "title": "Ad Creative Brief Template",
+            "path": "/blog/ad-creatives/ad-creative-brief-template"
+          },
+          {
+            "title": "Facebook Ad Design Specs: A Production Checklist",
+            "path": "/blog/ad-creatives/facebook-ad-design-specs"
+          },
+          {
+            "title": "Video Ad Script Template with an Example",
+            "path": "/blog/ad-creatives/video-ad-script-template"
+          },
+          {
+            "title": "Ad Hook Examples for Clearer Creative",
+            "path": "/blog/ad-creatives/ad-hooks-examples"
+          },
+          {
+            "title": "An Ad Creative Testing Framework",
+            "path": "/blog/ad-creatives/ad-creative-testing-framework"
+          },
+          {
+            "title": "Static vs Video Ads: Which Should You Test?",
+            "path": "/blog/ad-creatives/static-vs-video-ads"
+          },
+          {
+            "title": "Creative Fatigue: Signs and a Response Plan",
+            "path": "/blog/ad-creatives/creative-fatigue"
+          },
+          {
+            "title": "Ad Copy Examples for Service Businesses",
+            "path": "/blog/ad-creatives/ad-copy-examples"
+          },
+          {
+            "title": "Video Ad Storyboard Template",
+            "path": "/blog/ad-creatives/video-ad-storyboard-template"
+          },
+          {
+            "title": "Ad Creative Performance Metrics",
+            "path": "/blog/ad-creatives/ad-creative-performance-metrics"
+          }
+        ]
+      },
+      {
+        "title": "Discuss the work",
+        "body": [
+          "Bring your current setup, the outcome you need and any constraints. We can use those details to agree a practical scope."
+        ],
+        "links": [
+          {
+            "title": "Ad creative services",
+            "path": "/service/ad-creatives"
+          },
+          {
+            "title": "Contact Reddystack",
+            "path": "/contact"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/ai-ugc-videos",
+    "parent": "/blog",
+    "kind": "hub",
+    "title": "AI UGC-style video guides",
+    "description": "Practical ai ugc-style video guides from Reddystack: checklists, planning examples and templates to help make better decisions.",
+    "subtitle": "Reddystack Insights",
+    "intro": "Use these ai ugc-style video guides to plan the work, check the details and understand the next decision. Start with a relevant checklist, then use the examples and templates for your own business. Illustrative examples are labelled; they are not client results.",
+    "sections": [
+      {
+        "title": "Checklists, examples and templates",
+        "body": [],
+        "links": [
+          {
+            "title": "AI UGC vs Human UGC: Choosing the Right Format",
+            "path": "/blog/ai-ugc-videos/ai-ugc-vs-human-ugc"
+          },
+          {
+            "title": "AI Presenter Video Workflow",
+            "path": "/blog/ai-ugc-videos/ai-presenter-video-workflow"
+          },
+          {
+            "title": "AI Product Demo Video Examples and Briefs",
+            "path": "/blog/ai-ugc-videos/ai-product-demo-video-examples"
+          },
+          {
+            "title": "AI Video Ad Script Template",
+            "path": "/blog/ai-ugc-videos/ai-video-ad-script-template"
+          },
+          {
+            "title": "AI UGC-Style Video Cost: Scope the Quote",
+            "path": "/blog/ai-ugc-videos/ai-ugc-video-cost"
+          },
+          {
+            "title": "AI Video Brand Consistency Checklist",
+            "path": "/blog/ai-ugc-videos/ai-video-brand-consistency"
+          },
+          {
+            "title": "AI UGC-Style Video Disclosure: A Review Checklist",
+            "path": "/blog/ai-ugc-videos/ai-ugc-video-disclosure"
+          },
+          {
+            "title": "AI Video Localization Checklist",
+            "path": "/blog/ai-ugc-videos/ai-video-localization-checklist"
+          },
+          {
+            "title": "AI Video Quality Checklist Before Publishing",
+            "path": "/blog/ai-ugc-videos/ai-video-quality-checklist"
+          },
+          {
+            "title": "AI UGC-Style Ad Examples and Concepts",
+            "path": "/blog/ai-ugc-videos/ai-ugc-ad-examples"
+          }
+        ]
+      },
+      {
+        "title": "Discuss the work",
+        "body": [
+          "Bring your current setup, the outcome you need and any constraints. We can use those details to agree a practical scope."
+        ],
+        "links": [
+          {
+            "title": "AI UGC-style video production",
+            "path": "/service/ai-ugc-videos"
+          },
+          {
+            "title": "Contact Reddystack",
+            "path": "/contact"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/website-development",
+    "parent": "/blog",
+    "kind": "hub",
+    "title": "Website development guides",
+    "description": "Practical website development guides from Reddystack: checklists, planning examples and templates to help make better decisions.",
+    "subtitle": "Reddystack Insights",
+    "intro": "Use these website development guides to plan the work, check the details and understand the next decision. Start with a relevant checklist, then use the examples and templates for your own business. Illustrative examples are labelled; they are not client results.",
+    "sections": [
+      {
+        "title": "Checklists, examples and templates",
+        "body": [],
+        "links": [
+          {
+            "title": "Website Development Brief Template",
+            "path": "/blog/website-development/website-development-brief-template"
+          },
+          {
+            "title": "Business Website Launch Checklist",
+            "path": "/blog/website-development/business-website-launch-checklist"
+          },
+          {
+            "title": "Ecommerce Website Cost in India: What to Budget",
+            "path": "/blog/website-development/ecommerce-website-cost-india"
+          },
+          {
+            "title": "Landing Page Cost in India: Compare the Scope",
+            "path": "/blog/website-development/landing-page-cost-india"
+          },
+          {
+            "title": "Website Redesign Checklist: Preserve What Works",
+            "path": "/blog/website-development/website-redesign-checklist"
+          },
+          {
+            "title": "Landing Page Conversion Tracking Checklist",
+            "path": "/blog/website-development/landing-page-conversion-tracking"
+          },
+          {
+            "title": "Website Speed Optimization Checklist",
+            "path": "/blog/website-development/website-speed-optimization-checklist"
+          },
+          {
+            "title": "How SEO websites help startups get better leads",
+            "path": "/blog/how-seo-websites-help-startups-get-better-leads"
+          },
+          {
+            "title": "Landing pages vs SEO websites",
+            "path": "/blog/landing-pages-vs-seo-websites-what-should-you-launch-first"
+          },
+          {
+            "title": "Website cost in India",
+            "path": "/how-much-does-a-website-cost-in-india"
+          }
+        ]
+      },
+      {
+        "title": "Discuss the work",
+        "body": [
+          "Bring your current setup, the outcome you need and any constraints. We can use those details to agree a practical scope."
+        ],
+        "links": [
+          {
+            "title": "Website development",
+            "path": "/website-development"
+          },
+          {
+            "title": "Contact Reddystack",
+            "path": "/contact"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/blog/seo-local-seo",
+    "parent": "/blog",
+    "kind": "hub",
+    "title": "SEO and Local SEO guides",
+    "description": "Practical seo and local seo guides from Reddystack: checklists, planning examples and templates to help make better decisions.",
+    "subtitle": "Reddystack Insights",
+    "intro": "Use these seo and local seo guides to plan the work, check the details and understand the next decision. Start with a relevant checklist, then use the examples and templates for your own business. Illustrative examples are labelled; they are not client results.",
+    "sections": [
+      {
+        "title": "Checklists, examples and templates",
+        "body": [],
+        "links": [
+          {
+            "title": "Local SEO for a Small Business: Where to Start",
+            "path": "/blog/seo-local-seo/local-seo-for-small-business"
+          },
+          {
+            "title": "Google Business Profile Optimization Checklist",
+            "path": "/blog/seo-local-seo/google-business-profile-optimization-checklist"
+          },
+          {
+            "title": "Local SEO Audit Checklist",
+            "path": "/blog/seo-local-seo/local-seo-audit-checklist"
+          },
+          {
+            "title": "Local SEO Cost in India: Compare Deliverables",
+            "path": "/blog/seo-local-seo/local-seo-cost-india"
+          },
+          {
+            "title": "Local Citations: A Practical Guide",
+            "path": "/blog/seo-local-seo/local-citations-guide"
+          },
+          {
+            "title": "How to Request Google Reviews from Customers",
+            "path": "/blog/seo-local-seo/how-to-request-google-reviews"
+          },
+          {
+            "title": "SEO for a Service-Area Business",
+            "path": "/blog/seo-local-seo/service-area-business-seo"
+          },
+          {
+            "title": "Local Business Schema: What to Include",
+            "path": "/blog/seo-local-seo/local-business-schema"
+          },
+          {
+            "title": "Why Your Website Is Not Showing on Google",
+            "path": "/blog/seo-local-seo/why-website-not-showing-on-google"
+          },
+          {
+            "title": "Google Search Console Setup Checklist",
+            "path": "/blog/seo-local-seo/google-search-console-setup"
+          }
+        ]
+      },
+      {
+        "title": "Discuss the work",
+        "body": [
+          "Bring your current setup, the outcome you need and any constraints. We can use those details to agree a practical scope."
+        ],
+        "links": [
+          {
+            "title": "SEO and Local SEO services",
+            "path": "/service/seo-local-seo"
+          },
+          {
+            "title": "Contact Reddystack",
+            "path": "/contact"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/about/rahul-reddy-adelli",
+    "parent": "/about",
+    "kind": "profile",
+    "title": "Rahul Reddy Adelli",
+    "description": "Meet Rahul Reddy Adelli, founder of Reddystack, an independent digital marketing and website service based in Hyderabad, India.",
+    "subtitle": "Founder of Reddystack",
+    "intro": "Rahul Reddy Adelli operates Reddystack as an independent service based in Hyderabad, India. The work brings together advertising, creative production, AI UGC-style videos, website development and search visibility.",
+    "sections": [
+      {
+        "title": "What Reddystack focuses on",
+        "body": [
+          "The six core services are Meta Ads, Google Ads, Ad Creatives, AI UGC-Style Videos, Website Development, and SEO & Local SEO. Related work is grouped under these services so a business can discuss a clear outcome and scope. Apps, MVPs and automation remain additional work available on request."
+        ],
+        "links": [
+          {
+            "title": "Explore the six services",
+            "path": "/service"
+          }
+        ]
+      },
+      {
+        "title": "Working with Rahul",
+        "body": [
+          "Start by explaining your business, offer, existing setup and the change you need. The next step is to agree deliverables, responsibilities, access, timeline and pricing. Review and approval points should be clear before launch.",
+          "Your business should retain ownership of its domain, hosting and advertising accounts. Any platform spend, tool costs, revisions and support boundaries belong in the agreed scope."
+        ]
+      },
+      {
+        "title": "Project work and published guidance",
+        "body": [
+          "The portfolio shows existing development projects. Those projects should be assessed on the work described; they are not evidence of unreported advertising results. The insights library provides planning guides, examples and checklists for the current service areas."
+        ],
+        "links": [
+          {
+            "title": "View the portfolio",
+            "path": "/portfolio"
+          },
+          {
+            "title": "Read the insights",
+            "path": "/blog"
+          }
+        ]
+      },
+      {
+        "title": "Contact and business information",
+        "body": [
+          "Reddystack is an independent service, not presented as a separately registered company. Business and tax details are stated where applicable in the agreed project documentation. Contact Rahul through the published Reddystack channels to discuss a project."
+        ],
+        "links": [
+          {
+            "title": "Contact Reddystack",
+            "path": "/contact"
+          },
+          {
+            "title": "Service terms",
+            "path": "/terms"
+          }
+        ]
+      }
+    ]
+  }
+]
