@@ -256,7 +256,7 @@
 		left: var(--tp-btn-circle-dot-left, 32px);
 		width: var(--tp-btn-circle-dot-size, 20px);
 		height: var(--tp-btn-circle-dot-size, 20px);
-		background-color: #BCE70C;
+		background-color: var(--tp-green-2);
 		border-radius: 50%;
 		@include transition(all, 0.5s);
 		@include transform(translate(-50%, -50%));
@@ -332,7 +332,7 @@
 		left: 36px;
 		width: 20px;
 		height: 20px;
-		background-color: #BCE70C;
+		background-color: var(--tp-green-2);
 		@include rounded-btn(20px, 20px, 20px);
 		@include transition(all, 0.5s);
 		@include transform(translate(-50%, -50%));

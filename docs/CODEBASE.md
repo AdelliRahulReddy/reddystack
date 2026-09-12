@@ -14,7 +14,7 @@ It should answer:
 - which areas are customized vs still template-heavy
 - where to start when editing homepage, blog, SEO, or shared shell code
 
-Before frontend/UI edits, also read `AGENT_SOURCE_RULES.md`.
+Before frontend/UI edits, also read `docs/AGENT_SOURCE_RULES.md`.
 That file records the current rule to use `C:\Users\adell\Documents\diego-next-js` as the source template and avoid unnecessary custom redesign unless the user asks for it.
 
 This document is intentionally pragmatic.
@@ -87,11 +87,11 @@ Important non-runtime folders/files:
   - generated build output
 - `test-results/`
   - generated test/smoke output
-- `seo.md`
+- `docs/context/SEO_CONTEXT_LITE.md`
   - current SEO status tracker
-- `AI_SEO_PLAYBOOK.md`
+- `docs/AI_SEO_PLAYBOOK.md`
   - AI recommendation and SEO positioning playbook
-- `README.md`
+- `docs/README.md`
   - still largely template-oriented
 
 ## Stack
@@ -554,7 +554,7 @@ Removed legacy shell pieces:
 
 ## Known Current Debt
 
-- `README.md` is still template-oriented
+- `docs/README.md` is still template-oriented
 - `pageSeo` still contains some legacy page entries that no longer map cleanly to active standalone routes
 - alternate blog archive components still exist even though `/blog` now uses the sidebar archive path
 - comment form is still fake/template behavior

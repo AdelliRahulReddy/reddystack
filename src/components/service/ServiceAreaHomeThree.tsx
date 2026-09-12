@@ -2,7 +2,7 @@
 import Link from 'next/link'; 
 import Image from 'next/image';
 import React, { type JSX } from 'react';
-import brandLogo from "@/assets/img/logo/favicon.png";
+import brandLogo from "@/assets/img/logo/reddystack-symbol.svg";
 import service_shape_1 from "@/assets/img/portfolio/shape-1.png";
 import service_shape_2 from "@/assets/img/portfolio/shape-2.png";
 import service_star_icon from "@/assets/img/portfolio/star.png";

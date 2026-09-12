@@ -3,17 +3,16 @@ Repo-local Codex efficiency setup.
 What this does:
 - keeps responses concise by default in local Codex sessions
 - points Codex to compressed repo context first
-- preserves the full human-readable originals in the repo root
+- keeps all project documentation in `docs/`
 
 Files:
-- `AGENTS.md`
-- `.codex/hooks.json`
-- `.codex/context/PROJECT_CONTEXT_LITE.md`
-- `.codex/context/SEO_CONTEXT_LITE.md`
+- root `AGENTS.md` points to `docs/AGENTS.md`
+- `docs/context/PROJECT_CONTEXT_LITE.md`
+- `docs/context/SEO_CONTEXT_LITE.md`
 
 How to use:
 - open Codex in this repo
-- the session-start hook should enable terse-lite behavior automatically
+- Codex reads the root `AGENTS.md` pointer and follows the project instructions in `docs/AGENTS.md`
 - ask for `normal mode` or `detailed mode` when you want more depth
 
 What not to compress:

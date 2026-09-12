@@ -50,6 +50,7 @@ for (const url of urls) {
     const image = html.match(new RegExp(`<meta ${attribute}="${tag}" content="([^"]+)"`))?.[1];
     assert.ok(image?.startsWith(`${origin}/`), `${path}: ${tag} must use an absolute site image URL`);
     assert.ok(!image.includes('/hero/hero-img.png'), `${path}: ${tag} still uses the Diego portrait`);
+    assert.doesNotMatch(image, /reddystack-share-v[123]/, `${path}: ${tag} still uses a retired brand card`);
   }
   assert.ok(!html.includes('/assets/img/logo/logo-black.png'), `${path}: outdated Diego logo reference`);
   assert.equal((html.match(/<h1(?:\s|>)/g) || []).length, 1, `${path}: one H1`);
@@ -73,6 +74,8 @@ for (const url of urls) {
   const schemas = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap((match) => JSON.parse(match[1]));
   const organization = schemas.find((schema) => schema['@type'] === 'Organization');
   assert.equal(organization?.['@id'], `${origin}/#organization`, `${path}: publisher identity`);
+  assert.equal(organization.logo?.url, `${origin}/assets/img/logo/reddystack-symbol.png`, `${path}: approved organization logo`);
+  assert.match(html, /reddystack-symbol[^"\s<>]*\.svg/, `${path}: approved visible brand symbol`);
   assert.equal(organization.hasOfferCatalog?.['@type'], 'OfferCatalog', `${path}: service catalog schema`);
   assert.ok(!organization.makesOffer, `${path}: OfferCatalog is not an Offer`);
   assert.equal(organization.founder.url, `${origin}/about/rahul-reddy-adelli`, `${path}: founder profile`);

@@ -365,10 +365,7 @@
                 max-width: 100%;
                 overflow-wrap: anywhere;
                 margin-bottom: 16px;
-                background: linear-gradient(90deg, #A248ED 0%, #FF5075 44.98%, #FFA14D 97.77%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
+                color: var(--tp-pink-2);
                 font-family: var(--tp-ff-didoneright);
                 position: relative;
                 &::after{
@@ -378,7 +375,7 @@
                     width: 50%;
                     height: 2px;
                     content: '';
-                    background: linear-gradient(90deg, #A248ED 0%, #FF5075 44.98%, #FFA14D 97.77%);
+                    background: currentColor;
                     z-index: 99;
                     transition: .4s;
                 }

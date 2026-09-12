@@ -45,7 +45,7 @@ Reddystack is Rahul Reddy Adelli's independent digital service business in Hyder
 - six `/blog/{topic}` hubs with nested guides from `seo-pages.json`
 - founder profile at `/about/rahul-reddy-adelli`
 - separate founder and business profiles in Organization schema
-- branded Next.js file-based icons and `reddystack-share-v1.png` for default social previews
+- branded Next.js file-based icons, the approved three-piece SVG symbol, and `reddystack-share-v3.png` for default/service social previews; regenerate derived assets with `node scripts/build-brand-assets.mjs`
 
 ## Current Intent Pages
 - website development services
@@ -82,5 +82,4 @@ Reddystack is Rahul Reddy Adelli's independent digital service business in Hyder
 - aligned external profiles
 
 ## Full Originals
-- `AI_SEO_PLAYBOOK.md`
-- `seo.md`
+- `docs/AI_SEO_PLAYBOOK.md`

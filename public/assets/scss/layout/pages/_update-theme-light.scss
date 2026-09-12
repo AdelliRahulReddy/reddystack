@@ -190,7 +190,7 @@ html[tp-theme='tp-theme-light']{
     }
     & .tp-header-4-sticky-bg.tp-header-3__area.tp-header-sticky-cloned {
         background: rgba(255, 255, 255, 0.7);
-        box-shadow: 0px 1px 3px 0px rgba(23, 23, 24, 0.12), 0px -1px 0px 0px rgba(36, 62, 21, 0.14);
+        box-shadow: 0px 1px 3px 0px rgba(23, 23, 24, 0.12), 0px -1px 0px 0px rgba(24, 24, 27, 0.14);
         backdrop-filter: blur(12px);
     }
     & .tp-about-4-content p {
@@ -447,7 +447,7 @@ html[tp-theme='tp-theme-light']{
         }
     }
     & .ab-funfact__area{
-        background-color: #F6F9FF;
+        background-color: var(--tp-grey-3);
     }
     & .porfolio-details__navigation-bar{
         & span{

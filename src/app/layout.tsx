@@ -9,6 +9,7 @@ import {
   organizationSchema,
 } from "@/data/siteConfig";
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 
 import {
   Abril_Fatface,
@@ -18,6 +19,13 @@ import {
   Poppins,
   Playfair_Display,
 } from "next/font/google";
+
+const sora = localFont({
+  src: '../../public/assets/fonts/Sora-SemiBold.ttf',
+  weight: '600',
+  display: 'swap',
+  variable: '--font-brand-sora',
+});
 
 // all font configure
 const abril = Abril_Fatface({
@@ -113,6 +121,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       tp-theme="tp-theme-dark"
       suppressHydrationWarning
       className={`
+        ${sora.variable}
         ${abril.variable}
         ${dmSans.variable}
         ${garamond.variable}

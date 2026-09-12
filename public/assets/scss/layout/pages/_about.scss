@@ -140,10 +140,7 @@
                 font-weight: 800;
                 font-size: 54px;
                 line-height: .93;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                @include gradient((90.68deg, #BCFFA4 8.59%, #F59571 86.19%));
+                color: var(--tp-green-2);
                 margin-bottom: 4px;
             }
 

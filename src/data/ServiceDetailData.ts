@@ -1,6 +1,6 @@
 import type { StaticImageData } from 'next/image';
 
-import serviceThumbnail from '@/assets/img/social/reddystack-share-v1.png';
+import serviceThumbnail from '@/assets/img/social/reddystack-share-v4.png';
 
 export type ServiceDetailPresentation = {
   showVisuals?: boolean;

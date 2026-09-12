@@ -11,10 +11,10 @@ type ServiceFaqAreaProps = {
 };
 
 const capsuleColors = [
-  { backgroundColor: "#00CC97" },
-  { backgroundColor: "#FF759C" },
-  { backgroundColor: "#FFDB59", color: "#121212" },
-  { backgroundColor: "#19B3F1" },
+  { backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" },
+  { backgroundColor: "var(--tp-pink-2)", color: "var(--tp-common-black)" },
+  { backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" },
+  { backgroundColor: "var(--tp-blue-2)", color: "var(--tp-common-white)" },
 ] as const;
 
 const ServiceFaqArea = ({ service }: ServiceFaqAreaProps) => {

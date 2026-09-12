@@ -73,7 +73,7 @@
             left: 82px;
             display: inline-block;
             @include rounded(511px , 511px);
-            background-color: rgba($color: #F4BE1B, $alpha: .3);
+            background-color: rgba(255, 118, 94, 0.08);
             filter: blur(150px);
             z-index: -1;
         }
@@ -83,7 +83,7 @@
             right: 194px;
             display: inline-block;
             @include rounded(462px , 462px);
-            background-color: rgba($color: #84994E, $alpha: .4);
+            background-color: rgba(112, 85, 232, 0.12);
             filter: blur(190px);
             z-index: -1;
         }
@@ -97,7 +97,7 @@
             position: absolute;
             top: 5px;
             display: inline-block;
-            background: #BCE70C;
+            background: var(--tp-green-2);
             box-shadow: 0px 2px 2px rgba(14, 30, 5, 0.5);
             border-radius: 100px;
             height: 32px;

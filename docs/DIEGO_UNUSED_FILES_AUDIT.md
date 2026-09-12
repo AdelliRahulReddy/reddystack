@@ -172,9 +172,9 @@ These do not affect the deployed site speed directly, but they bloat the reposit
 
 Keep:
 
-- `.codex/context/PROJECT_CONTEXT_LITE.md`
-- `.codex/context/SEO_CONTEXT_LITE.md`
-- `.codex/README.md`
+- `docs/context/PROJECT_CONTEXT_LITE.md`
+- `docs/context/SEO_CONTEXT_LITE.md`
+- `docs/CODEX_README.md`
 
 ## Suggested Removal Order After Confirmation
 

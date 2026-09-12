@@ -310,7 +310,7 @@
             left: -50%;
             z-index: -1;
             & svg{
-                color: #0F183E;
+                color: var(--tp-dark-black-4);
             }
         }
     }
@@ -367,11 +367,11 @@
         }
     }
     &__item{
-        background: #2D3866;
+        background: var(--tp-grey-2);
         border-radius: 30px;
         display: inline-flex;
         padding: 60px 70px;
-        box-shadow: 0px -8px 0px 0px #172351;
+        box-shadow: 0px -8px 0px 0px var(--tp-dark-black-3);
         @media #{$lg}{
             padding: 40px 30px;
         }
@@ -430,7 +430,7 @@
         & a{
             height: 56px;
             line-height: 56px;
-            background: #4C40F7;
+            background: var(--tp-blue-2);
             border-radius: 30px;
             width: 100%;
             padding: 0 20px;
@@ -584,7 +584,7 @@
             left: 0;
             width: 100%;
             height: 101%;
-            background: linear-gradient(180deg, #0F183E 1.05%, rgba(217, 217, 217, 0) 24.26%, rgba(217, 217, 217, 0) 68.54%, #0F183E 98.06%);
+            background: linear-gradient(180deg, var(--tp-dark-black-4) 1.05%, rgba(217, 217, 217, 0) 24.26%, rgba(217, 217, 217, 0) 68.54%, var(--tp-dark-black-4) 98.06%);
         }
     }
     &__slider-active-1{

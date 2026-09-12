@@ -54,7 +54,7 @@
     &-rating{
         margin-right: 8px;
         & span{
-            color: #BCE70C;
+            color: var(--tp-green-2);
 
             & svg{
                 @extend %svg-2;

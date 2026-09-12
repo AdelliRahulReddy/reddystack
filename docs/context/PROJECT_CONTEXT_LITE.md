@@ -13,7 +13,9 @@
 - pricing: custom quotes; advertising spend separate from management fees
 - apps, MVPs, chatbots, and automation remain secondary services
 - local review first; do not push until the user explicitly approves the final version
-- frontend must follow `AGENT_SOURCE_RULES.md`
+- approved dark-mode brand palette: charcoal `#302F35`, ivory `#F7F4EB`, violet `#7654E8`, lime `#D2ED7A`; Sora SemiBold headings/wordmark and DM Sans body. Keep the original three-colour symbol; coral stays in the symbol. Retain the light/dark switch and page layouts.
+- shared approved dark styling lives in `src/styles/_brand.scss`; template base/light tokens remain in `public/assets/scss/utils/_colors.scss`. The `/prototype` route uses the same shared styles, with noindex metadata.
+- frontend must follow `docs/AGENT_SOURCE_RULES.md`
 - source template: `C:\Users\adell\Documents\diego-next-js`
 - no custom redesign unless user approves
 - prefer source structure, classes, spacing, and SCSS

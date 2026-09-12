@@ -69,7 +69,7 @@ dialog .tp-offcanvas-wrapper-2 > div { height: 100dvh; }
         }
     }
     &__bg-color{
-        background-color: #162251;
+        background-color: var(--tp-dark-black-3);
         width: 50%;
         height: 100%;
         position: fixed;
@@ -302,14 +302,14 @@ dialog .tp-offcanvas-wrapper-2 > div { height: 100dvh; }
             left: 0;
             @include transform(scale(1, 0));
             transform-origin: top center;
-            background-color: #162251;
+            background-color: var(--tp-dark-black-3);
             transition-delay: 1s;
         }
         &.is-right{
             right: 0;
             transform-origin: bottom center;
             @include transform(scale(1, 0));
-            background-color: #0F183E;
+            background-color: var(--tp-dark-black-4);
             transition-delay: 1s;
         }
     }
@@ -443,7 +443,7 @@ dialog .tp-offcanvas-wrapper-2 > div { height: 100dvh; }
         scrollbar-width: none;
         overscroll-behavior-y: contain;
         border: 1px solid rgba(255, 255, 255, 0.20);
-        background: #1A2813;
+        background: var(--tp-theme-secondary);
         @include transform(translateX(calc(100% + 80px)));
         @extend %transition;
         overflow-x: hidden;
@@ -587,7 +587,7 @@ dialog .tp-offcanvas-wrapper-2 > div { height: 100dvh; }
             height: 400px;
             width: 400px;
             border-radius: 400px;
-            background: rgba(244, 190, 27, 0.30);
+            background: rgba(255, 118, 94, 0.08);
             filter: blur(150px);
             display: inline-block;
             position: absolute;
@@ -601,7 +601,7 @@ dialog .tp-offcanvas-wrapper-2 > div { height: 100dvh; }
             height: 600px;
             width: 600px;
             border-radius: 600px;
-            background: rgba(132, 153, 78, 0.60);
+            background: rgba(112, 85, 232, 0.12);
             filter: blur(190px);
             display: inline-block;
             position: absolute;

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 
 import founderPortrait from "@/assets/img/hero/ab-hero-1.jpg";
-import brandLogo from "@/assets/img/logo/favicon.png";
+import brandLogo from "@/assets/img/logo/reddystack-symbol.svg";
 import ContactForm from '../forms/ContactForm';
 import { siteConfig } from '@/data/siteConfig';
 
@@ -106,7 +106,7 @@ const ContactArea = () => {
                     </h1>
                   </div>
                 </div>
-                <div className="col-xl-3 col-lg-2 d-none d-sm-block text-end">
+                <div className="col-xl-3 col-lg-2 d-none d-lg-block text-end">
                   <div className="contact-inner__shape-1 text-center text-lg-end">
                     <Image src={brandLogo} width={160} height={160} alt="Reddystack logo" />
                   </div>

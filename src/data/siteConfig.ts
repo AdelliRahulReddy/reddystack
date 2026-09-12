@@ -9,8 +9,8 @@ export const siteSeo = {
   defaultDescription:
     "Reddystack offers Meta and Google Ads, ad creatives, AI UGC videos, websites, and SEO. Based in Hyderabad, serving businesses in India and worldwide.",
   creatorHandle: "@reddystack",
-  logoPath: "/assets/img/logo/favicon.png",
-  ogImagePath: "/assets/img/social/reddystack-share-v1.png",
+  logoPath: "/assets/img/logo/reddystack-symbol.png",
+  ogImagePath: "/assets/img/social/reddystack-share-v4.png",
   ogImageAlt: "Reddystack — Ads, Creative & Websites That Grow Your Business.",
 } as const;
 

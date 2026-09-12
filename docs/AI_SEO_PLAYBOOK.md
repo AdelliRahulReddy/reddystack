@@ -41,10 +41,10 @@ Reason:
 
 Implemented in code:
 
-- global metadata in [src/app/layout.tsx](/c:/Users/adell/Desktop/Rahulranksv2/src/app/layout.tsx)
-- shared SEO helpers and schema builders in [src/data/siteConfig.ts](/c:/Users/adell/Desktop/Rahulranksv2/src/data/siteConfig.ts)
-- sitemap in [src/app/sitemap.ts](/c:/Users/adell/Desktop/Rahulranksv2/src/app/sitemap.ts)
-- robots in [src/app/robots.ts](/c:/Users/adell/Desktop/Rahulranksv2/src/app/robots.ts)
+- global metadata in [src/app/layout.tsx](../src/app/layout.tsx)
+- shared SEO helpers and schema builders in [src/data/siteConfig.ts](../src/data/siteConfig.ts)
+- sitemap in [src/app/sitemap.ts](../src/app/sitemap.ts)
+- robots in [src/app/robots.ts](../src/app/robots.ts)
 - page-specific metadata on blog, service, and portfolio detail routes
 - page-specific OG and Twitter images on blog, service, and portfolio detail routes
 - breadcrumb schema on blog, service, and portfolio detail routes
@@ -246,13 +246,13 @@ Do not vary randomly across profiles and schema.
 
 ## Source Of Truth Files
 
-- [src/data/siteConfig.ts](/c:/Users/adell/Desktop/Rahulranksv2/src/data/siteConfig.ts)
-- [src/app/layout.tsx](/c:/Users/adell/Desktop/Rahulranksv2/src/app/layout.tsx)
-- [src/app/page.tsx](/c:/Users/adell/Desktop/Rahulranksv2/src/app/page.tsx)
-- [src/data/HomeFaqData.ts](/c:/Users/adell/Desktop/Rahulranksv2/src/data/HomeFaqData.ts)
-- [src/components/homes/home/FaqAreaHomeOne.tsx](/c:/Users/adell/Desktop/Rahulranksv2/src/components/homes/home/FaqAreaHomeOne.tsx)
-- [src/data/ServiceDetailData.ts](/c:/Users/adell/Desktop/Rahulranksv2/src/data/ServiceDetailData.ts)
-- [src/components/service-details/ServiceFaqArea.tsx](/c:/Users/adell/Desktop/Rahulranksv2/src/components/service-details/ServiceFaqArea.tsx)
+- [src/data/siteConfig.ts](../src/data/siteConfig.ts)
+- [src/app/layout.tsx](../src/app/layout.tsx)
+- [src/app/page.tsx](../src/app/page.tsx)
+- [src/data/HomeFaqData.ts](../src/data/HomeFaqData.ts)
+- [src/components/homes/home/FaqAreaHomeOne.tsx](../src/components/homes/home/FaqAreaHomeOne.tsx)
+- [src/data/ServiceDetailData.ts](../src/data/ServiceDetailData.ts)
+- [src/components/service-details/ServiceFaqArea.tsx](../src/components/service-details/ServiceFaqArea.tsx)
 
 ## Maintenance Rule
 

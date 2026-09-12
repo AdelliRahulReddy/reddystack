@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useSyncExternalStore } from 'react';
+import { usePathname } from 'next/navigation';
 const DARK = 'tp-theme-dark';
 const LIGHT = 'tp-theme-light';
 const eventName = 'reddystack-theme-change';
@@ -8,20 +9,25 @@ const subscribe = (notify: () => void) => {
   return () => window.removeEventListener(eventName, notify);
 };
 const snapshot = () => document.documentElement.getAttribute('tp-theme') || DARK;
-const apply = (theme: string) => {
+const apply = (theme: string, storageKey: string) => {
   document.documentElement.setAttribute('tp-theme', theme);
-  try { localStorage.setItem('tp_theme_scheme', theme); } catch { /* Theme still works when storage is unavailable. */ }
+  try { localStorage.setItem(storageKey, theme); } catch { /* Theme still works when storage is unavailable. */ }
   window.dispatchEvent(new Event(eventName));
 };
 export default function UseThemeCheck() {
-  const theme = useSyncExternalStore(subscribe, snapshot, () => DARK);
+  const isPrototype = usePathname() === '/prototype';
+  // Keep preview preferences separate from the main site.
+  const storageKey = isPrototype ? 'tp_prototype_cream_theme_scheme' : 'tp_theme_scheme';
+  const defaultTheme = DARK;
+  const theme = useSyncExternalStore(subscribe, snapshot, () => defaultTheme);
   useEffect(() => {
-    try { const saved = localStorage.getItem('tp_theme_scheme'); apply(saved === LIGHT ? LIGHT : DARK); } catch { apply(DARK); }
+    const sync = (saved: string | null) => apply(saved === LIGHT || saved === DARK ? saved : defaultTheme, storageKey);
+    try { sync(localStorage.getItem(storageKey)); } catch { apply(defaultTheme, storageKey); }
     const onStorage = (event: StorageEvent) => {
-      if (event.key === 'tp_theme_scheme') apply(event.newValue === LIGHT ? LIGHT : DARK);
+      if (event.key === storageKey) sync(event.newValue);
     };
     window.addEventListener('storage', onStorage);
     return () => window.removeEventListener('storage', onStorage);
-  }, []);
-  return { active: theme === DARK, toggleTheme: () => apply(snapshot() === DARK ? LIGHT : DARK) };
+  }, [storageKey, defaultTheme]);
+  return { active: theme === DARK, toggleTheme: () => apply(snapshot() === DARK ? LIGHT : DARK, storageKey) };
 }

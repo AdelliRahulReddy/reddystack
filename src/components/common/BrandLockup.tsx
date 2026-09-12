@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import favicon from '@/assets/img/logo/favicon.png';
+import brandLogo from '@/assets/img/logo/reddystack-symbol.svg';
 
 type BrandLockupProps = {
   className?: string;
@@ -11,21 +11,19 @@ type BrandLockupProps = {
 };
 
 const BrandLockup = ({ className, textColor }: BrandLockupProps) => {
-  const boostContrast = textColor === "var(--tp-common-white)";
-
   return (
-    <Link className={className} href="/">
+    <Link className={className} href="/" aria-label="Reddystack home">
       <span
         style={{
           display: 'inline-flex',
           alignItems: 'center',
-          gap: 'clamp(6px, 2vw, 9px)',
+          gap: 'clamp(9px, 2vw, 13px)',
           lineHeight: 1,
         }}
       >
         <Image
-          src={favicon}
-          alt="Reddystack logo"
+          src={brandLogo}
+          alt=""
           width={40}
           height={40}
           sizes="40px"
@@ -33,7 +31,6 @@ const BrandLockup = ({ className, textColor }: BrandLockupProps) => {
             width: 'clamp(32px, 8.4vw, 40px)',
             height: 'auto',
             flexShrink: 0,
-            filter: boostContrast ? 'brightness(1.08) contrast(1.12)' : 'none',
           }}
         />
         <span

@@ -301,7 +301,7 @@
         & span,
         & span b {
             @extend %ff-garamond;
-            @include gradient((90.68deg, #BCFFA4 8.59%, #BCFFA4 8.59%, #F59571 86.19%));
+            @include gradient((90.68deg, var(--tp-green-2) 8.59%, var(--tp-pink-2) 86.19%));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -418,7 +418,7 @@
                 position: absolute;
                 top: 0;
                 right: 0;
-                background-color: rgba($color: #84994E, $alpha: .6);
+                background-color: rgba(112, 85, 232, 0.12);
                 @include filter(blur(190px));
                 z-index: -2;
             }
@@ -629,7 +629,7 @@
         & a {
             display: inline-block;
             font-size: 18px;
-            background: #1D2B16;
+            background: var(--tp-dark-black-3);
             border: 1px solid rgba($color: $white, $alpha: .18);
             width: 40px;
             height: 40px;
@@ -658,8 +658,8 @@
             }
 
             &:hover {
-                background-color: #BCE70C;
-                border-color: #BCE70C;
+                background-color: var(--tp-green-2);
+                border-color: var(--tp-green-2);
                 color: #292D32;
             }
         }
@@ -681,7 +681,7 @@
             position: absolute;
             top: -35px;
             left: 107px;
-            background-color: rgba($color: #F4BE1B, $alpha: .35);
+            background-color: rgba(255, 118, 94, 0.08);
             @include filter(blur(150px));
             z-index: -2;
         }
@@ -2262,7 +2262,7 @@
         position: absolute;
         bottom: -50px;
         right: -60px;
-        border: 10px solid #0F183E;
+        border: 10px solid var(--tp-dark-black-4);
         border-radius: 50%;
 
         & img {

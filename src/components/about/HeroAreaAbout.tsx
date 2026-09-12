@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import about_shape_1 from "@/assets/img/hero/hero-shape-2-1.png";
 import about_signature from "@/assets/img/hero/ab-signature.jpg";
-import brandLogo from "@/assets/img/logo/favicon.png";
+import brandLogo from "@/assets/img/logo/reddystack-symbol.svg";
 import about_img from "@/assets/img/hero/ab-hero-1.jpg";
 import { scroller } from 'react-scroll';
 

@@ -9,6 +9,7 @@
 @forward "../../public/assets/css/bootstrap.css"; 
 @forward "../../public/assets/css/spacing.css"; 
 @forward "../../public/assets/scss/main.scss";
+@forward "./brand";
 
 // Shared accessibility and overflow corrections retain the template's design.
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible,
@@ -49,5 +50,4 @@ html[tp-theme='tp-theme-light'] { color-scheme: light; }
   .tp-services-capsule-item-wrapper > p > span { transform: none !important; }
   .tp-services-capsule-wrapper { padding-bottom: 0 !important; }
 }
-
 
