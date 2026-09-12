@@ -1,4 +1,10 @@
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+
+for (const name of ['hero-animation.json', 'AboutReddystack.json']) {
+  const animation = await readFile(new URL(`../public/assets/lottie/${name}`, import.meta.url), 'utf8');
+  assert.doesNotMatch(animation, /"x"\s*:\s*"|"ef"\s*:/, `${name}: use the full Lottie player if adding expressions or effects`);
+}
 
 const base = process.env.SEO_CHECK_BASE || 'http://localhost:3187';
 const home = await (await fetch(base)).text();

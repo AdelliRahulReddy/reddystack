@@ -5,6 +5,7 @@ import HeroArrowIcon from '@/svg/home/HeroIcons/HeroArrowIcon';
 import { HeroSocialLinks } from '@/components/common/SocialLinks';
 import Lottie, { type LottieRefCurrentProps } from 'lottie-react';
 import heroAnimation from '@/assets/lottie/hero-animation.json';
+import { useInView } from 'react-intersection-observer';
 interface DataType {
   slide_text: string[];
   sub_title: string;
@@ -38,8 +39,12 @@ const {
 } = hero_content;
 
 const HeroAreaHome = () => {
+  const { ref, inView } = useInView({ initialInView: true });
   const animation = useRef<LottieRefCurrentProps>(null);
   const [paused, setPaused] = useState(false);
+  useEffect(() => {
+    if (paused || !inView) animation.current?.pause(); else animation.current?.play();
+  }, [paused, inView]);
   useEffect(() => {
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const syncMotion = () => { animation.current?.pause(); setPaused(true); };
@@ -50,7 +55,7 @@ const HeroAreaHome = () => {
   return (
     <>
 
-      <section className="tp-hero-area p-relative tp-btn-trigger z-index-1 fix theme-bg-2">
+      <section ref={ref} className="tp-hero-area p-relative tp-btn-trigger z-index-1 fix theme-bg-2">
         <div className="tp-hero-social-wrapper">
           <span className="tp-hero-social-bar"></span>
           <div className="tp-hero-social">
@@ -120,6 +125,8 @@ const HeroAreaHome = () => {
                   onClick={() => { if (paused) animation.current?.play(); else animation.current?.pause(); setPaused(!paused); }}>
                   <Lottie
                     lottieRef={animation}
+                    autoplay={!paused && inView}
+                    onDOMLoaded={() => animation.current?.setSubframe(false)}
                     aria-hidden="true"
                     animationData={heroAnimation}
                     loop={true}

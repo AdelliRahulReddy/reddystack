@@ -36,21 +36,21 @@ const about_content: DataType = {
 const { subtitle, award_title, award_des, about_des, counter_data } = about_content
 
 const AboutAreaHomeOne = () => {
-  const { ref, inView } = useInView({ rootMargin: '200px', triggerOnce: true });
+  const { ref, inView } = useInView({ rootMargin: '200px' });
   const [aboutAnimation, setAboutAnimation] = useState<object | null>(null);
   const animation = useRef<LottieRefCurrentProps>(null);
   const reducedMotion = useMedia('(prefers-reduced-motion: reduce)', true);
   useEffect(() => {
-    if (!inView) return;
+    if (!inView || aboutAnimation) return;
     let active = true;
     import('@/assets/lottie/AboutReddystack.json')
       .then(({ default: data }) => { if (active) setAboutAnimation(data); })
       .catch((error) => console.error('Could not load the About illustration', error));
     return () => { active = false; };
-  }, [inView]);
+  }, [inView, aboutAnimation]);
   useEffect(() => {
-    if (reducedMotion) animation.current?.pause(); else animation.current?.play();
-  }, [reducedMotion, aboutAnimation]);
+    if (reducedMotion || !inView) animation.current?.pause(); else animation.current?.play();
+  }, [reducedMotion, aboutAnimation, inView]);
   return (
     <>
       <section ref={ref} className="tp-about-area fix">
@@ -71,7 +71,8 @@ const AboutAreaHomeOne = () => {
                       <div className="tp-about-lottie-frame">
                         {aboutAnimation && <Lottie
                           lottieRef={animation}
-                          autoplay={!reducedMotion}
+                          autoplay={!reducedMotion && inView}
+                          onDOMLoaded={() => animation.current?.setSubframe(false)}
                           aria-hidden="true"
                           animationData={aboutAnimation}
                           loop={true}

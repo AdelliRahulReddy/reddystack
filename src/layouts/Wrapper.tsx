@@ -42,17 +42,19 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     if (typeof window !== "undefined" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      const smoother = ScrollSmoother.create({
-        smooth: 1.35,
-        effects: true,
-        smoothTouch: false,
-        normalizeScroll: false,
-        ignoreMobileResize: true,
+      const mm = gsap.matchMedia();
+      // Small screens already use native scrolling; skip the extra layout work.
+      mm.add("(min-width: 992px)", () => {
+        const smoother = ScrollSmoother.create({
+          smooth: 1.35,
+          effects: true,
+          smoothTouch: false,
+          normalizeScroll: false,
+          ignoreMobileResize: true,
+        });
+        return () => smoother?.kill();
       });
-
-      return () => {
-        smoother?.kill();
-      };
+      return () => mm.revert();
     }
   }, []);
 
