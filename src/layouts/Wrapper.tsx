@@ -33,18 +33,19 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     // animation
+    let cleanup: (() => void) | undefined;
     const timer = setTimeout(() => {
-      animationCreate();
+      cleanup = animationCreate();
     }, 100);
 
-    return () => clearTimeout(timer);
+    return () => { clearTimeout(timer); cleanup?.(); };
   }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       const mm = gsap.matchMedia();
       // Small screens already use native scrolling; skip the extra layout work.
-      mm.add("(min-width: 992px)", () => {
+      mm.add("(min-width: 992px) and (prefers-reduced-motion: no-preference)", () => {
         const smoother = ScrollSmoother.create({
           smooth: 1.35,
           effects: true,
@@ -94,7 +95,7 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
     // sticky section
     if (typeof window !== "undefined" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       const mm = gsap.matchMedia();
-      mm.add("(min-width: 1199px)", () => {
+      mm.add("(min-width: 1199px) and (prefers-reduced-motion: no-preference)", () => {
         ScrollTrigger.create({
           trigger: ".tp-port-3-area",
           start: "top -60%",
@@ -115,30 +116,33 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
       return;
     }
 
-    let cleanups: Array<() => void> = [];
+    let media: ReturnType<typeof gsap.matchMedia> | undefined;
 
     const frameId = window.requestAnimationFrame(() => {
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-      throwableAnimation();
-      servicesPanel();
-      PortfolioPanel();
-      blogAnimation();
-      linesAnimation();
-      buttonAnimation();
-      const scrollTextCleanup = scrollTextAnimation();
-      const textInvertCleanup = textInvert();
+      media = gsap.matchMedia();
+      media.add('(prefers-reduced-motion: no-preference)', () => {
+        const throwableCleanup = throwableAnimation();
+        servicesPanel();
+        PortfolioPanel();
+        blogAnimation();
+        linesAnimation();
+        const buttonCleanup = buttonAnimation();
+        const scrollTextCleanup = scrollTextAnimation();
+        const textInvertCleanup = textInvert();
 
-      const titleCleanup = animationTitle();
-      const charCleanup = animationTitleChar();
+        const titleCleanup = animationTitle();
+        const charCleanup = animationTitleChar();
 
-      cleanups = [titleCleanup, charCleanup, textInvertCleanup, scrollTextCleanup].filter(
-        (cleanup): cleanup is () => void => typeof cleanup === "function"
-      );
+        const cleanups = [throwableCleanup, buttonCleanup, titleCleanup, charCleanup, textInvertCleanup, scrollTextCleanup].filter(
+          (cleanup): cleanup is () => void => typeof cleanup === "function"
+        );
+        return () => cleanups.forEach((cleanup) => cleanup());
+      });
     });
 
     return () => {
       window.cancelAnimationFrame(frameId);
-      cleanups.forEach((cleanup) => cleanup());
+      media?.revert();
     };
   }, [pathname]);
 

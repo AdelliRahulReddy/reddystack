@@ -13,10 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly" | "monthly" | "yearly";
     priority: number;
   }> = [
-      { path: "", lastModified: "2026-09-12", changeFrequency: "weekly", priority: 1 },
-      { path: "/about", lastModified: "2026-09-12", changeFrequency: "monthly", priority: 0.8 },
-      { path: "/service", changeFrequency: "monthly", priority: 0.85 },
-      { path: "/portfolio", changeFrequency: "monthly", priority: 0.85 },
+      { path: "", lastModified: "2026-09-14", changeFrequency: "weekly", priority: 1 },
+      { path: "/about", lastModified: "2026-09-14", changeFrequency: "monthly", priority: 0.8 },
+      { path: "/service", lastModified: "2026-09-14", changeFrequency: "monthly", priority: 0.85 },
+      { path: "/portfolio", lastModified: "2026-09-14", changeFrequency: "monthly", priority: 0.85 },
       { path: "/blog", lastModified: "2026-09-12", changeFrequency: "weekly", priority: 0.8 },
       { path: "/contact", changeFrequency: "monthly", priority: 0.75 },
       { path: "/pricing", changeFrequency: "monthly", priority: 0.78 },

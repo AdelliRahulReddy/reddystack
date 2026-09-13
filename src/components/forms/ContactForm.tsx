@@ -1,10 +1,11 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { toast } from 'react-toastify';
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { trackLeadEvent } from '@/components/analytics/gaEvents';
+import { siteConfig } from '@/data/siteConfig';
 
 interface FormData {
   name: string;
@@ -15,10 +16,10 @@ interface FormData {
 
 const schema = yup
   .object({
-    name: yup.string().required().label("Name"),
-    email: yup.string().required().email().label("Email"),
-    company: yup.string().required().label("Company"),
-    message: yup.string().required().label("Message"),
+    name: yup.string().trim().max(100).required().label("Name"),
+    email: yup.string().trim().max(254).required().email().label("Email"),
+    company: yup.string().trim().max(200).required().label("Company"),
+    message: yup.string().trim().max(4000).required().label("Message"),
   })
   .required();
 
@@ -36,6 +37,8 @@ type ContactFormProps = {
 };
 
 const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
+  const honeypot = useRef<HTMLInputElement>(null);
+  const [submitError, setSubmitError] = useState('');
   const [isFocused, setIsFocused] = useState<boolean>(false);
   const [isFocused2, setIsFocused2] = useState<boolean>(false);
   const [isFocused3, setIsFocused3] = useState<boolean>(false);
@@ -47,6 +50,7 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
   const { register, handleSubmit, reset, formState: { errors }, } = useForm<FormData>({ resolver: yupResolver(schema), });
   const onSubmit = async (data: FormData) => {
     if (isSubmitting) return;
+    setSubmitError('');
     setIsSubmitting(true);
 
     try {
@@ -58,6 +62,7 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
         },
         body: JSON.stringify({
           ...data,
+          website: honeypot.current?.value || '',
           budget,
           services: selectedCategories,
         }),
@@ -85,7 +90,7 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
     } catch (error) {
       const message =
         error instanceof Error ? error.message : 'Unable to send the message right now.';
-      toast(message);
+      setSubmitError(message);
     } finally {
       setIsSubmitting(false);
     }
@@ -137,7 +142,12 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={(event) => { void handleSubmit(onSubmit)(event); }}>
+        <div hidden>
+          <label htmlFor="contact-website">Leave this field empty</label>
+          <input ref={honeypot} id="contact-website" name="website" tabIndex={-1} autoComplete="off" />
+        </div>
+        {submitError && <p role="alert">{submitError} <a href={siteConfig.socialLinks.email}>Email your enquiry</a>.</p>}
         <div className="contact-inner__wrapper">
           <div className="postbox__comment-form">
             <h3 className="contact-inner__form-title">Request A Quote</h3>

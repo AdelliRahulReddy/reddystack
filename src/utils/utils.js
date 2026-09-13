@@ -1,11 +1,16 @@
 
 
 export const animationCreate = () => {
+    let disposed = false;
+    let animation;
     if (typeof window !== "undefined" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         import("wowjs").then((module) => {
+            if (disposed) return;
             const WOW = module.default;
-            new WOW.WOW({ live: false }).init()
+            animation = new WOW.WOW({ live: false });
+            animation.init();
         });
     }
+    return () => { disposed = true; animation?.stop(); };
 };
 

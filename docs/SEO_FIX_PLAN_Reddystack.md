@@ -1,5 +1,7 @@
 # Reddystack SEO + AI Visibility Fix Plan for Codex
 
+Historical plan. For current positioning, routes and implementation status, use `context/SEO_CONTEXT_LITE.md`, `AI_SEO_PLAYBOOK.md` and `CODEBASE.md`. Do not treat aspirational scores or old suggested pages below as verified results or current requirements.
+
 ## Goal
 
 Upgrade Reddystack to a 10/10 SEO + AI visibility foundation for 2026.

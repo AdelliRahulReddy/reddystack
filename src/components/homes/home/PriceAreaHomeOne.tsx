@@ -89,13 +89,8 @@ const PriceAreaHomeOne = ({ style }: PriceAreaHomeOneProps) => {
   const marker = useRef<HTMLSpanElement>(null);
 
   // handleActive
-  const handleActive = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, tab: string) => {
+  const handleActive = (tab: string) => {
     setActiveTab(tab);
-    const buttonElement = e.target as HTMLButtonElement;
-    if (buttonElement.classList.contains("active") && marker.current) {
-      marker.current.style.left = buttonElement.offsetLeft + "px";
-      marker.current.style.width = buttonElement.offsetWidth + "px";
-    }
   };
 
   useEffect(() => {
@@ -140,15 +135,20 @@ const PriceAreaHomeOne = ({ style }: PriceAreaHomeOneProps) => {
                         <button
                           className={`nav-links ${activeTab === item.tab_id ? "active" : ""}`}
                           id={`${item.tab_id}-tab`}
-                          data-bs-toggle="tab"
-                          data-bs-target={`#${item.tab_id}`}
                           type="button"
                           role="tab"
                           aria-controls={item.tab_id}
                           ref={activeTab === item.tab_id ? activeRef : null}
-                          onClick={(e) => handleActive(e, item.tab_id)}
-                          aria-selected={index === 0}
-                          tabIndex={-1}
+                          onClick={() => handleActive(item.tab_id)}
+                          onKeyDown={(event) => {
+                            if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+                            event.preventDefault();
+                            const next = event.key === 'Home' ? 0 : event.key === 'End' ? priceing_data.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + priceing_data.length) % priceing_data.length;
+                            handleActive(priceing_data[next].tab_id);
+                            document.getElementById(`${priceing_data[next].tab_id}-tab`)?.focus();
+                          }}
+                          aria-selected={activeTab === item.tab_id}
+                          tabIndex={activeTab === item.tab_id ? 0 : -1}
                         >
                           {item.tab_content}
                         </button>
@@ -165,7 +165,7 @@ const PriceAreaHomeOne = ({ style }: PriceAreaHomeOneProps) => {
               <div className="tab-content" id="myTabContent">
                 {priceing_data.map((item, i) =>
                   <div key={i}
-                    className={`tab-pane fade ${i === 0 ? "active show" : ""}`}
+                    className={`tab-pane fade ${activeTab === item.tab_id ? "active show" : ""}`}
                     id={item.tab_id} role="tabpanel" aria-labelledby={`${item.tab_id}-tab`}>
 
                     {item.tab_id === "home" &&

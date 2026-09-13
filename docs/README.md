@@ -27,12 +27,16 @@ npm run dev -- --port 3187
 ```sh
 npm run build
 npm run start -- --port 3187
+node scripts/check-contact.mjs
 node scripts/check-seo-routes.mjs
 node scripts/check-ui-contracts.mjs
-npx eslint src scripts
+node scripts/check-browser.mjs
+npm run lint
+npm audit
 ```
 
 Use `SEO_CHECK_BASE` to check a different server. Environment files and credentials stay outside Git.
+The browser check requires the installed `agent-browser` CLI; set `AGENT_BROWSER_BIN` if it is elsewhere. Contact and browser checks do not send email. See `CODEBASE.md` for contact limits, safe failure logs, and the per-instance throttling limitation.
 
 Content lives in `src/data`; shared metadata and organization details live in `src/data/siteConfig.ts`. Branded article covers live in `public/assets/img/insights`, and the default sharing card lives in `public/assets/img/social`.
 

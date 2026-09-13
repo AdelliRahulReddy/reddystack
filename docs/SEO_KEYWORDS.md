@@ -2,6 +2,8 @@
 
 Last updated: 2026-04-27
 
+Historical keyword research. Current service positioning and page ownership live in `context/SEO_CONTEXT_LITE.md`; revalidate demand before using these older exports for new pages.
+
 ## Purpose
 
 This file tracks keywords from Semrush exports that are realistic for a new domain and aligned with Reddystack's services.

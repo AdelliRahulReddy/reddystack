@@ -5,6 +5,7 @@ const blogAnimation = () => {
     const sidebarStickyTrigger = '.tp-blog-sidebar-sticky-area';
     const socialStickyTrigger = '.tp-blog-social-sticky-area';
     const addStickyAnimation = (target, start, end) => {
+      if (!document.querySelector(target)) return;
       gsap.to(target, {
         scrollTrigger: {
           trigger: target === '.tp-blog-sidebar-sticky' ? sidebarStickyTrigger : socialStickyTrigger,

@@ -1,10 +1,6 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
 import Slider from 'react-slick';
-import quote from "@/assets/img/testimonial/quote.svg";
-
-import StartIcon from '@/svg/icons/StartIcon';
 import { gsap } from 'gsap';
 
 
@@ -29,59 +25,59 @@ interface DataType {
 
 
 const testimonial_content: DataType = {
-  subtitle: "Testimonials",
-  title: "What my clients say",
-  info: "Real feedback from people I've worked with.",
+  subtitle: "Working Together",
+  title: "What you can expect",
+  info: "A clear process for ads, creative content, websites, and SEO.",
   testimonial_slider_data: [
     {
       id: 1,
-      rating_text: "5.0 Rating",
-      description: `"Reddystack built our entire website using AI tools without writing a single line of traditional code. The site is fast, SEO-optimized, and exactly what we envisioned."`,
+      rating_text: "01 · Understand the brief",
+      description: 'We start with your business, audience, goals, and budget. Together we identify the service and deliverables that fit your next step.',
     },
     {
       id: 2,
-      rating_text: "5.0 Rating",
-      description: `"We needed an MVP fast. Reddystack delivered a working prototype in under 2 weeks using an AI-powered approach. The execution speed and clarity were next level."`,
+      rating_text: "02 · Agree the scope",
+      description: 'Your quote sets out deliverables, fees, revisions, and responsibilities before work starts. Advertising spend and third-party costs are separate.',
     },
     {
       id: 3,
-      rating_text: "5.0 Rating",
-      description: `"The workflow automations Reddystack set up saved us 10+ hours weekly. The team clearly understands how to leverage AI for real business impact."`,
+      rating_text: "03 · Build and review",
+      description: 'Review the agreed work with Rahul Reddy. Feedback stays connected to the brief, with scope changes discussed before additional work begins.',
     },
     {
       id: 4,
-      rating_text: "5.0 Rating",
-      description: `"Reddystack's prompt engineering and SEO strategy helped us rank on page one within months. It's not just a build service — it's thoughtful digital strategy."`,
+      rating_text: "04 · Launch and measure",
+      description: 'We agree the handover or reporting needed for your service. Campaign and SEO outcomes depend on your offer, market, budget, and follow-through; rankings and sales are not guaranteed.',
     },
   ],
   testimonial_nav_data: [
     {
       id: 1,
-      initials: "SJ",
-      name: "Sarah Jenkins",
-      designation: "Founder at",
-      company: "GreenPulse",
+      initials: "01",
+      name: "Your Brief",
+      designation: "Goals and",
+      company: "budget",
     },
     {
       id: 2,
-      initials: "ML",
-      name: "Mark Lewis",
-      designation: "Product Lead at",
-      company: "SkyFlow",
+      initials: "02",
+      name: "Clear Scope",
+      designation: "Deliverables and",
+      company: "fees",
     },
     {
       id: 3,
-      initials: "PK",
-      name: "Priya Kumar",
-      designation: "Operations Manager at",
-      company: "BrightOps",
+      initials: "03",
+      name: "Your Review",
+      designation: "Feedback and",
+      company: "revisions",
     },
     {
       id: 4,
-      initials: "DR",
-      name: "Dave Roberts",
-      designation: "Marketing Director at",
-      company: "TechEdge",
+      initials: "04",
+      name: "Next Steps",
+      designation: "Handover and",
+      company: "reporting",
     },
   ]
 }
@@ -134,7 +130,7 @@ type TestimonialAreaHomeOneProps = {
 const TestimonialAreaHomeOne = ({ style }: TestimonialAreaHomeOneProps) => {
   const sectionRef = useRef<HTMLElement | null>(null);
 
-  const bg_img = style ? null : "/assets/img/bg/distort-bg.png"
+  const bg_img = style ? undefined : 'url(/assets/img/bg/distort-bg.png)'
 
   useEffect(() => {
     const testimonialSection = sectionRef.current;
@@ -175,7 +171,7 @@ const TestimonialAreaHomeOne = ({ style }: TestimonialAreaHomeOneProps) => {
 
   return (
     <>
-      <section ref={sectionRef} style={{ backgroundImage: `url(${bg_img})` }} className={`tp-testimonial-area ${style ? 'sv-inner__customize pb-160 black-bg-3' : 'theme-bg tp-bg-light pb-80'} pt-25`}>
+      <section ref={sectionRef} style={{ backgroundImage: bg_img }} className={`tp-testimonial-area ${style ? 'sv-inner__customize pb-160 black-bg-3' : 'theme-bg tp-bg-light pb-80'} pt-25`}>
         <div className="container">
           {style ? null :
             <div className="row">
@@ -210,18 +206,8 @@ const TestimonialAreaHomeOne = ({ style }: TestimonialAreaHomeOneProps) => {
                     <div key={i} className="swiper-slide">
                       <div className="tp-testimonial-item theme-bg-2"
                         style={{ backgroundImage: 'url(/assets/img/testimonial/bg-distort.png)' }}>
-                        <div className="tp-testimonial-quote">
-                          <Image src={quote} alt="" />
-                        </div>
                         <div className="tp-testimonial-item-top d-flex align-items-center">
 
-                          <div className="tp-testimonial-rating">
-                            <StartIcon />{' '}
-                            <StartIcon />{' '}
-                            <StartIcon />{' '}
-                            <StartIcon />{' '}
-                            <StartIcon />{' '}
-                          </div>
 
                           <p>{item.rating_text}</p>
                         </div>
@@ -235,6 +221,10 @@ const TestimonialAreaHomeOne = ({ style }: TestimonialAreaHomeOneProps) => {
 
 
 
+                <div className="d-flex justify-content-center gap-3 mt-30">
+                  <button type="button" className="tp-btn-border-sm" onClick={() => sliderRef.current?.slickPrev()} aria-label="Previous delivery step">Previous</button>
+                  <button type="button" className="tp-btn-border-sm" onClick={() => sliderRef.current?.slickNext()} aria-label="Next delivery step">Next</button>
+                </div>
                 <div className="tp-testimonial-thumb-slider">
 
                   <Slider

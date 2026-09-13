@@ -53,7 +53,7 @@ const nextConfig = {
       },
       {
         source: '/social-media-marketing',
-        destination: '/landing-page-development-for-lead-generation',
+        destination: '/service',
         permanent: true,
       },
       {

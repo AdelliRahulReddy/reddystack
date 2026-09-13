@@ -1,3 +1,8 @@
+// Numbered delivery badges retain a dark background in both themes.
+html[tp-theme='tp-theme-light'] .tp-testimonial-user-thumb .tp-testimonial-user-title {
+  color: var(--tp-common-white);
+}
+
 // Approved charcoal identity, shared by the site and preview. Light mode retains its existing design.
 html[tp-theme='tp-theme-dark'] {
 
@@ -124,7 +129,7 @@ html[tp-theme='tp-theme-dark'] {
   }
 
   .tp-hero-btn .tp-btn-circle-dot {
-    background: var(--brand-ink);
+    background: var(--brand-paper);
   }
 
   // Recolour the existing vector animation without changing its motion or skin tones.

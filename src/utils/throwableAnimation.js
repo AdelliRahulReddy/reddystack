@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import Matter from '../../public/assets/plugins/matter.js';
 
 
-export const throwableAnimation = async () => {
+export const throwableAnimation = () => {
     if (typeof window !== "undefined") {
         ! function ($) {
             "use strict";
@@ -55,7 +55,7 @@ export const throwableAnimation = async () => {
                     this._defaults = e, this._name = t, this.options = {
                         ...e,
                         ...s
-                    }, this.DOM = {}, this.DOM.element = i, this.DOM.$element = $(i), this.DOM.throwables = this.DOM.element.querySelectorAll("[data-tp-throwable-el]"), this.onWindowResize = tpDebounce(this.onWindowResize.bind(this), 250), this.bodies = [], this.init()
+                    }, this.DOM = {}, this.DOM.element = i, this.DOM.$element = $(i), this.DOM.throwables = this.DOM.element.querySelectorAll("[data-tp-throwable-el]"), this.onWindowResize = window.tpDebounce(this.onWindowResize.bind(this), 250), this.bodies = [], this.timers = [], this.init()
                 }
                 init() {
                     this.createWorld(), this.createBoundries(), this.createBodies(), this.enableRunner(), this.makeItRain(), this.bindResize()
@@ -63,17 +63,19 @@ export const throwableAnimation = async () => {
                 enableRunner() {
                     this.runnerObserver = new IntersectionObserver((([t]) => {
                         this.runner.enabled = t.isIntersecting
-                    })).observe(this.DOM.element)
+                    }));
+                    this.runnerObserver.observe(this.DOM.element)
                 }
                 makeItRain() {
-                    new IntersectionObserver((([t], e) => {
+                    this.rainObserver = new IntersectionObserver((([t], e) => {
                         t.isIntersecting && (this.DOM.throwables.forEach((t => {
                             gsap.to(t, {
                                 opacity: 1,
                                 duration: .35,
                             })
                         })), this.startRain(), e.disconnect())
-                    })).observe(this.DOM.element)
+                    }));
+                    this.rainObserver.observe(this.DOM.element)
                 }
                 bindResize() {
                     window.addEventListener("resize", this.onWindowResize)
@@ -184,7 +186,8 @@ export const throwableAnimation = async () => {
                     this.bodies.forEach(((t, e) => {
                         const i = setTimeout((() => {
                             Matter.Body.setStatic(t, !1), clearTimeout(i)
-                        }), 80 * e)
+                        }), 80 * e);
+                        this.timers.push(i)
                     }));
                     let t = !1;
                     Matter.Events.on(this.runner, "tick", (() => {
@@ -196,13 +199,31 @@ export const throwableAnimation = async () => {
                     this.height = this.DOM.element.offsetHeight, this.width = this.DOM.element.offsetWidth;
                     const t = setTimeout((() => {
                         this.updateBoundries(), this.updateBodies(), clearTimeout(t)
-                    }))
+                    }));
+                    this.timers.push(t)
                 }
                 onWindowResize() {
                     this.refresh()
                 }
                 destroy() {
-                    this.runner.enabled = !1, Matter.Runner.stop(this.runner), window.removeEventListener("resize", this.onWindowResize)
+                    this.runner.enabled = false;
+                    Matter.Runner.stop(this.runner);
+                    this.runnerObserver.disconnect();
+                    this.rainObserver.disconnect();
+                    this.onWindowResize.cancel();
+                    this.timers.forEach(clearTimeout);
+                    window.removeEventListener('resize', this.onWindowResize);
+                    const element = this.DOM.element;
+                    for (const [event, handler] of Object.entries({ mousemove: this.mouse.mousemove, mousedown: this.mouse.mousedown, mouseup: this.mouse.mouseup, mouseleave: this.mouse.mouseup, wheel: this.mouse.mousewheel, mousewheel: this.mouse.mousewheel, DOMMouseScroll: this.mouse.mousewheel, touchmove: this.mouse.mousemove, touchstart: this.mouse.mousedown, touchend: this.mouse.mouseup })) {
+                        element.removeEventListener(event, handler);
+                    }
+                    Matter.Events.off(this.runner);
+                    Matter.Events.off(this.mouseConstraint);
+                    Matter.Events.off(this.engine);
+                    Matter.Composite.clear(this.engine.world, false);
+                    Matter.Engine.clear(this.engine);
+                    gsap.killTweensOf(this.DOM.throwables);
+                    jQuery.removeData(element, 'plugin_tpThrowable');
                 }
             }
             $.fn[t] = function (e) {
@@ -214,8 +235,9 @@ export const throwableAnimation = async () => {
                     $.data(this, "plugin_" + t) || $.data(this, "plugin_" + t, new i(this, s))
                 }))
             }
-        }(jQuery), jQuery(document).ready((function ($) {
-            $("[data-tp-throwable-scene]").tpThrowable()
-        }));
+        }(jQuery);
+        const scenes = jQuery('[data-tp-throwable-scene]');
+        scenes.tpThrowable();
+        return () => scenes.each(function () { jQuery.data(this, 'plugin_tpThrowable')?.destroy(); });
     }
 };

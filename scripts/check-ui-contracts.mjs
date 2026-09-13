@@ -8,6 +8,8 @@ for (const name of ['hero-animation.json', 'AboutReddystack.json']) {
 
 const base = process.env.SEO_CHECK_BASE || 'http://localhost:3187';
 const home = await (await fetch(base)).text();
+assert.match(home, /id="home-tab"[^>]*tabindex="0"/i, 'Initial pricing tab must be keyboard reachable');
+assert.ok(!home.includes('Real feedback from people'), 'Unverified testimonial claims must not be published');
 assert.match(home, /aria-label="Open menu"/, 'Menu triggers must have an accessible name');
 assert.match(home, /href="#main-content"/, 'Keyboard users need a skip link');
 assert.match(home, /id="main-content"/, 'The skip destination must exist');

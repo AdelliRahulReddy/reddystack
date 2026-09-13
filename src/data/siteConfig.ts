@@ -59,11 +59,6 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/rahulreddyadelli",
     github: "https://github.com/AdelliRahulReddy",
   },
-  stats: {
-    projectsCompleted: 6,
-    yearsOfExperience: 6,
-    clientSatisfaction: 100,
-  },
 } as const;
 
 type PageSeoConfig = {

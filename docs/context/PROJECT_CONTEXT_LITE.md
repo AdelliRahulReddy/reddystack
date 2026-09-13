@@ -38,27 +38,32 @@
 - `/blog`
 - `/blog/[slug]`
 - `/contact`
+- `/pricing`, `/privacy-policy`, `/terms`, `/revision-policy`
+- `/about/rahul-reddy-adelli`
 
 ## Extra SEO Routes
-- `/website-development-services`
+- `/website-development`
 - `/affordable-website-development`
 - `/website-development-under-10000`
-- `/mobile-app-development-services`
+- `/app-development`
 - `/custom-web-application-development-services`
 - `/how-much-does-a-website-cost-in-india`
 - `/website-redesign-services`
-- `/website-maintenance-services`
 - `/landing-page-development-for-lead-generation`
 - `/affordable-website-development-for-startups`
-- `/seo-website-development-for-small-businesses`
+- `/seo-services`
 - `/mvp-development-for-startup-founders`
-- `/ai-automation-services-for-small-teams`
+- `/ai-automation`
+- `/ai-chatbot-development`
 
 ## Homepage
 - entry: `src/app/page.tsx`
 - shell: `src/components/homes/home/index.tsx`
 - featured projects: `src/components/homes/home-2/TestimonialAreaHomeTwo.tsx`
 - project data: `src/data/PortfolioProjectsData.ts`
+- featured work is explicitly labelled development work; it is not proof of ad-campaign results
+- `TestimonialAreaHomeOne.tsx` now explains delivery commitments; no unverified testimonials or ratings
+- pricing/blog tabs support keyboard navigation
 
 ## Service Detail
 - entry: `src/app/service/[slug]/page.tsx`
@@ -79,6 +84,14 @@
 ## Animation Note
 - local text animation helpers use plain GSAP reveals
 - avoid reintroducing SplitText unless fully validated
+- route animations use GSAP matchMedia cleanup; button listeners and Matter runners/observers are disposed
+
+## Contact and Verification
+- Contact API enforces body/field limits, allowed choices, origin, honeypot and per-instance throttling.
+- Throttling resets on cold starts; use a shared edge limiter when traffic scales. There is no durable enquiry store.
+- Failure logs contain a request ID and category, not enquiry content. Failed forms retain text and show an email fallback.
+- Run `scripts/check-contact.mjs`, then build and run the SEO, UI-contract and browser scripts against a fresh server.
+- `scripts/check-browser.mjs` uses the installed agent-browser CLI; see `docs/CODEBASE.md`.
 
 ## User Sensitivity
 - user dislikes blind design changes

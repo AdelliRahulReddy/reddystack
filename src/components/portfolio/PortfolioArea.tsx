@@ -23,7 +23,8 @@ const PortfolioArea = () => {
               <p>
                 Explore business websites, landing pages, and product builds by Reddystack.
                 Each case study explains the brief, scope, and delivery. The collection includes
-                client projects and internal tools and experiments.
+                client projects and internal tools and experiments. These are development examples,
+                not advertising campaign results. For ads, creative content, or AI video, <Link href="/contact">discuss your brief with Rahul</Link>.
               </p>
             </div>
           </div>

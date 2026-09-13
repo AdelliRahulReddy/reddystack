@@ -3,11 +3,13 @@ import jQuery from "jquery";
 
 export function buttonAnimation () {
   if(typeof window !== "undefined") {
-
+    const buttons = jQuery('.tp-hover-btn, .tp-hover-btn-wrapper');
+    const items = jQuery('.tp-hover-btn-item').toArray();
+    const context = gsap.context(() => {
     (function ($) {
       "use strict";
     
-      $('.tp-hover-btn').on('mouseenter', function (e) {
+      $('.tp-hover-btn').on('mouseenter.reddystackButton', function (e) {
         var x = e.pageX - $(this).offset().left;
         var y = e.pageY - $(this).offset().top;
     
@@ -17,7 +19,7 @@ export function buttonAnimation () {
         });
       });
     
-      $('.tp-hover-btn').on('mouseout', function (e) {
+      $('.tp-hover-btn').on('mouseleave.reddystackButton', function (e) {
         var x = e.pageX - $(this).offset().left;
         var y = e.pageY - $(this).offset().top;
     
@@ -32,7 +34,7 @@ export function buttonAnimation () {
     
       const hoverBtnItem = gsap.utils.toArray(".tp-hover-btn-item");
       hoverBtns.forEach((btn, i) => {
-        $(btn).mousemove(function (e) {
+        $(btn).on('mousemove.reddystackButton', function (e) {
           callParallax(e);
         });
         function callParallax(e) {
@@ -47,14 +49,16 @@ export function buttonAnimation () {
           gsap.to(target, 0.5, {
             x: ((relX - $this.width() / 2) / $this.width()) * movement,
             y: ((relY - $this.height() / 2) / $this.height()) * movement,
-            ease: Power2.easeOut,
+            ease: 'power2.out',
+            overwrite: 'auto',
           });
         }
-        $(btn).mouseleave(function () {
+        $(btn).on('mouseleave.reddystackButton', function () {
           gsap.to(hoverBtnItem[i], 0.5, {
             x: 0,
             y: 0,
-            ease: Power2.easeOut,
+            ease: 'power2.out',
+            overwrite: 'auto',
           });
         });
       });
@@ -127,5 +131,11 @@ export function buttonAnimation () {
 
     
     })(jQuery);
+    });
+    return () => {
+      buttons.off('.reddystackButton');
+      gsap.killTweensOf(items);
+      context.revert();
+    };
   }
 }

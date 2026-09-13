@@ -6,6 +6,8 @@ import useMedia from 'react-use/lib/useMedia';
 import award_img from "@/assets/img/about/award-icon.svg";
 import { useInView } from 'react-intersection-observer';
 import Count from '@/components/common/Count';
+import { portfolioProjects } from '@/data/PortfolioProjectsData';
+import { primaryServices } from '@/data/ServiceDetailData';
 
 
 type DataType = {
@@ -27,9 +29,9 @@ const about_content: DataType = {
   award_des: "Based in Hyderabad, serving India and global clients",
   about_des: <>Founder-led by Rahul Reddy Adelli, Reddystack helps small businesses and growing brands attract customers through <span>ads, creative content, websites, and SEO.</span> Based in Hyderabad and working remotely across India and worldwide, we bring <span>clear scope, direct communication, and practical delivery</span> to every project.</>,
   counter_data: [
-    { id: 1, count: 15, text: "Projects In Development" },
-    { id: 2, count: 6, text: "Years of Learning" },
-    { id: 3, count: 50, text: "Solutions Shipped" }
+    { id: 1, count: portfolioProjects.length, text: "Featured Projects" },
+    { id: 2, count: primaryServices.length, text: "Core Services" },
+    { id: 3, count: 1, text: "Founder Point of Contact" }
   ],
 }
 
@@ -109,7 +111,7 @@ const AboutAreaHomeOne = () => {
                             <h4 className="d-flex">
                               <span className="purecounter">
                                 <Count number={item.count} />
-                              </span>+
+                              </span>
                             </h4>
                             <p>{item.text}</p>
                           </div>

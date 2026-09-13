@@ -3,6 +3,9 @@ import { readFile } from 'node:fs/promises';
 
 const base = process.env.SEO_CHECK_BASE || 'http://localhost:3187';
 const origin = 'https://www.reddystack.com';
+const socialRedirect = await fetch(`${base}/social-media-marketing`, { redirect: 'manual' });
+assert.equal(socialRedirect.status, 308, 'Legacy social marketing URL must redirect permanently');
+assert.equal(new URL(socialRedirect.headers.get('location'), base).pathname, '/service', 'Redirect to the relevant service overview');
 const sitemapResponse = await fetch(`${base}/sitemap.xml`);
 assert.equal(sitemapResponse.status, 200, 'Sitemap must load');
 const xml = await sitemapResponse.text();

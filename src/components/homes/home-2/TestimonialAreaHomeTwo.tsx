@@ -85,6 +85,10 @@ const TestimonialAreaHomeTwo = () => {
           style={{ paddingBottom: '120px' }}
         >
           <span className="tp-about-inner-border transition-3"></span>
+          <div className="tp-section-title-wrapper text-center mb-40">
+            <h2 className="tp-section-title">Selected Development Work</h2>
+            <p>Websites, product builds, and tools. <Link href="/service">Explore our ads and creative services</Link>.</p>
+          </div>
           <div className="tp-hero-2__boder-circle">
             <span></span>
           </div>

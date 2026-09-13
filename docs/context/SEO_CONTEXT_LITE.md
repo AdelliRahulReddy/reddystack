@@ -41,11 +41,11 @@ Reddystack is Rahul Reddy Adelli's independent digital service business in Hyder
 - homepage FAQ schema from visible FAQ data
 - service FAQ schema from visible service data
 - blog/service/portfolio detail metadata and page schema
-- 110 canonical public URLs across core pages, services, intent pages, portfolio, articles, topic hubs, and locations
+- 110 canonical public URLs across core pages, services, intent pages, portfolio, articles, topic hubs, and the founder profile; no current location pages
 - six `/blog/{topic}` hubs with nested guides from `seo-pages.json`
 - founder profile at `/about/rahul-reddy-adelli`
 - separate founder and business profiles in Organization schema
-- branded Next.js file-based icons, the approved three-piece SVG symbol, and `reddystack-share-v3.png` for default/service social previews; regenerate derived assets with `node scripts/build-brand-assets.mjs`
+- branded Next.js file-based icons, the approved three-piece SVG symbol, and `reddystack-share-v4.png` for default/service social previews; regenerate derived assets with `node scripts/build-brand-assets.mjs`
 
 ## Current Intent Pages
 - website development services
@@ -55,12 +55,12 @@ Reddystack is Rahul Reddy Adelli's independent digital service business in Hyder
 - custom web application development services
 - how much does a website cost in India
 - website redesign services
-- website maintenance services
 - landing page development for lead generation
 - affordable website development for startups
 - SEO website development for small businesses
 - MVP development for startup founders
 - AI automation services for small teams
+- AI chatbot development
 
 ## Verification
 - Check current routes in `sitemap.ts`, `SeoPagesData.ts`, and `IntentLandingPagesData.ts`; historical aliases above may redirect.
@@ -76,7 +76,7 @@ Reddystack is Rahul Reddy Adelli's independent digital service business in Hyder
 - blog posts -> matching service + project/contact
 
 ## Trust Gaps
-- stronger testimonials
+- only publish testimonials and ad-campaign results with evidence and permission; the site currently shows delivery commitments instead
 - clearer outcomes
 - stronger case-study proof
 - aligned external profiles
