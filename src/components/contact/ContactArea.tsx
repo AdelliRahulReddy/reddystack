@@ -73,8 +73,12 @@ const {
 } = contact_content
 
 
-const ContactArea = () => {
-  const [selectedCategories, setSelectedCategories] = useState<number[]>([]);
+const ContactArea = ({ initialService, sourcePage }: { initialService: string; sourcePage: string }) => {
+  const [selectedCategories, setSelectedCategories] = useState<number[]>(() => {
+    const serviceId = ['applications', 'mvp-builds', 'ai-automations'].includes(initialService) ? 'additional' : initialService;
+    const index = categorys.findIndex((category) => category.id === serviceId);
+    return index < 0 ? [] : [index];
+  });
 
   // Function to toggle the selection of a category
   const toggleSelection = (id: number) => {
@@ -146,7 +150,7 @@ const ContactArea = () => {
                 </div>
               </div>
             </div>
-            <ContactForm selectedCategories={selectedCategoryTitles} />
+            <ContactForm selectedCategories={selectedCategoryTitles} sourcePage={sourcePage} />
           </div>
         </div>
       </div>

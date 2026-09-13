@@ -12,6 +12,7 @@ import {
   schemaIds,
 } from "@/data/siteConfig";
 import type { ServiceDetail } from "@/data/ServiceDetailData";
+import { getPortfolioProject } from "@/data/PortfolioProjectsData";
 
 type IntentFaqItem = {
   question: string;
@@ -1358,6 +1359,7 @@ function buildHighlightTitle(shortTitle: string): [string, string] {
 }
 
 export function buildIntentServiceDetail(page: IntentLandingPage): ServiceDetail {
+  const project = getPortfolioProject(page.relatedProjectSlug);
   const conciseHighlights = page.faqItems
     .flatMap((item) => item.some_features)
     .slice(0, 5);
@@ -1365,6 +1367,7 @@ export function buildIntentServiceDetail(page: IntentLandingPage): ServiceDetail
   return {
     slug: page.slug,
     path: page.path,
+    contactService: page.relatedServiceSlug,
     subtitle: page.eyebrow,
     title: page.navLabel,
     introPrimary: page.intro,
@@ -1388,7 +1391,6 @@ export function buildIntentServiceDetail(page: IntentLandingPage): ServiceDetail
     answerSections: [
       {
         title: page.fitTitle,
-        paragraphs: [page.fitIntro],
         bullets: page.fitBullets,
       },
       {
@@ -1406,7 +1408,10 @@ export function buildIntentServiceDetail(page: IntentLandingPage): ServiceDetail
     pricingText: page.pricingText,
     finalCtaTitle: page.finalCtaTitle,
     finalCtaText: page.finalCtaText,
-    relatedLinks: page.relatedServiceSlug === 'seo-websites' ? [{ title: 'Website development guides and checklists', path: '/blog/website-development' }] : undefined,
+    relatedLinks: [
+      ...(page.relatedServiceSlug === 'seo-websites' ? [{ title: 'Website development guides and checklists', path: '/blog/website-development' }] : []),
+      ...(project ? [{ title: `Development example: ${project.title}`, path: project.path }] : []),
+    ],
     faqItems: page.faqItems,
   };
 }

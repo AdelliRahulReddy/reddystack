@@ -28,7 +28,7 @@ export const trustPages: Record<TrustPageSlug, TrustPageData> = {
       {
         title: "Information Reddystack may collect",
         body: [
-          "When you contact Reddystack, the site may collect the details you choose to submit, such as name, email, company, project message, selected services, and budget range.",
+          "When you contact Reddystack, the site may collect the details you choose to submit, such as name, email, business or project name, project message, selected services, and budget range. Enquiries also include the service page you came from and an enquiry reference so we can understand and follow up on your request.",
           "The website may also use analytics tools such as GA4 to understand page visits, events, device type, and general traffic patterns. Do not send sensitive personal, payment, or private account information through the contact form.",
         ],
       },

@@ -16,6 +16,7 @@ const contactSchema = yup
     budget: yup.string().oneOf(['Not specified', 'Under ₹10k', '₹10k-25k', '₹25k-50k', '₹50k-1L', '₹1L+']).required(),
     services: yup.array().max(8).of(yup.string().oneOf(['Meta Ads', 'Google Ads', 'Ad Creatives', 'AI UGC-Style Videos', 'Website Development', 'SEO & Local SEO', 'Apps, MVPs & Automation', 'Not sure yet']).required()).default([]).required(),
     website: yup.string().max(0).default(''),
+    sourcePage: yup.string().max(200).matches(/^\/(?!\/)[a-z0-9/-]*(?![\s\S])/, { excludeEmptyString: true }).default(''),
   })
   .required();
 
@@ -103,9 +104,11 @@ export async function POST(request: Request) {
     const text = [
       `Name: ${payload.name}`,
       `Email: ${payload.email}`,
-      `Company: ${payload.company}`,
+      `Business / project: ${payload.company}`,
       `Budget: ${payload.budget}`,
       `Services: ${selectedServices}`,
+      `Source page: ${payload.sourcePage || '/contact'}`,
+      `Enquiry reference: ${requestId}`,
       '',
       'Message:',
       payload.message,
@@ -116,9 +119,11 @@ export async function POST(request: Request) {
         <h2>New Reddystack inquiry</h2>
         <p><strong>Name:</strong> ${escapeHtml(payload.name)}</p>
         <p><strong>Email:</strong> ${escapeHtml(payload.email)}</p>
-        <p><strong>Company:</strong> ${escapeHtml(payload.company)}</p>
+        <p><strong>Business / project:</strong> ${escapeHtml(payload.company)}</p>
         <p><strong>Budget:</strong> ${escapeHtml(payload.budget)}</p>
         <p><strong>Services:</strong> ${escapeHtml(selectedServices)}</p>
+        <p><strong>Source page:</strong> ${escapeHtml(payload.sourcePage || '/contact')}</p>
+        <p><strong>Enquiry reference:</strong> ${requestId}</p>
         <p><strong>Message:</strong></p>
         <p>${escapeHtml(payload.message).replace(/\n/g, '<br />')}</p>
       </div>
@@ -141,7 +146,7 @@ export async function POST(request: Request) {
       );
     }
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, requestId });
   } catch (error) {
     if (error instanceof yup.ValidationError || error instanceof SyntaxError) {
       return NextResponse.json(

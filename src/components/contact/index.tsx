@@ -6,14 +6,14 @@ import FooterOne from '@/layouts/footers/FooterOne';
 
 
 
-const Contact = () => {
+const Contact = ({ initialService, sourcePage }: { initialService: string; sourcePage: string }) => {
   return (
     <>
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main id="main-content" tabIndex={-1}>
-            <ContactArea />
+            <ContactArea initialService={initialService} sourcePage={sourcePage} />
           </main>
           <FooterOne style={true} />
         </div>

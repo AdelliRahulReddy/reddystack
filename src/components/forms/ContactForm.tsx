@@ -18,7 +18,7 @@ const schema = yup
   .object({
     name: yup.string().trim().max(100).required().label("Name"),
     email: yup.string().trim().max(254).required().email().label("Email"),
-    company: yup.string().trim().max(200).required().label("Company"),
+    company: yup.string().trim().max(200).required().label("Business / project name"),
     message: yup.string().trim().max(4000).required().label("Message"),
   })
   .required();
@@ -34,9 +34,10 @@ const budget_categorys = [
 
 type ContactFormProps = {
   selectedCategories?: string[];
+  sourcePage?: string;
 };
 
-const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
+const ContactForm = ({ selectedCategories = [], sourcePage = '' }: ContactFormProps) => {
   const honeypot = useRef<HTMLInputElement>(null);
   const [submitError, setSubmitError] = useState('');
   const [isFocused, setIsFocused] = useState<boolean>(false);
@@ -65,6 +66,7 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
           website: honeypot.current?.value || '',
           budget,
           services: selectedCategories,
+          sourcePage,
         }),
       });
 
@@ -80,6 +82,8 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
         form_location: "contact_page",
         selected_budget: budget,
         selected_services: selectedCategories.join(", "),
+        source_page: sourcePage || '/contact',
+        lead_id: result.requestId,
       });
       setIsFocused(false);
       setIsFocused2(false);
@@ -162,7 +166,7 @@ const ContactForm = ({ selectedCategories = [] }: ContactFormProps) => {
               <div className="col-xxl-6 col-xl-6 col-lg-6">
                 <div className="postbox__comment-input mb-35">
                   <input type="text" className="inputText" id="contact-company" autoComplete="organization" aria-invalid={Boolean(errors.company)} aria-describedby="contact-company-error" {...register("company")} onFocus={handleFocus2} onBlur={handleBlur2} />
-                  <label htmlFor="contact-company" className={`floating-label ${isFocused2 ? 'floating-label-floated' : ''}`}>Company</label>
+                  <label htmlFor="contact-company" className={`floating-label ${isFocused2 ? 'floating-label-floated' : ''}`}>Business / project name</label>
                   <p role="alert" className="form_error" id="contact-company-error">{errors.company?.message}</p>
                 </div>
               </div>

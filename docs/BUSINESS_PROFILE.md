@@ -1,6 +1,6 @@
 # Reddystack business profile
 
-Prepared for Google Business Profile. Draft only; listing creation and verification are not complete.
+Business identity draft. Google Business Profile creation is on hold: the owner confirmed that service delivery is online, worldwide, with no customer-facing office. Occasional discussions in person are not being presented as a local service offering.
 
 ## Business details
 

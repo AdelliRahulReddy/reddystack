@@ -11,6 +11,8 @@ type LeadEventParams = {
   form_location?: string;
   selected_services?: string;
   selected_budget?: string;
+  source_page?: string;
+  lead_id?: string;
 };
 
 export const trackLeadEvent = (
