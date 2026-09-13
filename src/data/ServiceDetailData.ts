@@ -25,6 +25,7 @@ export type ServiceProcessStep = {
 export type ServiceDetail = {
   slug: string;
   path: string;
+  contactService?: string;
   subtitle: string;
   title: string;
   introPrimary: string;
@@ -480,7 +481,7 @@ export const serviceDetailData: ServiceDetail[] = [
     highlightText:
       'Built for brands that need visibility, clarity, and stronger conversion from their online presence.',
     metaTitle: 'SEO-Ready Website Development | Reddystack',
-    relatedLinks: [{ title: 'Website development briefs and launch checklists', path: '/blog/website-development' }, { title: 'Business website development services', path: '/website-development' }],
+    relatedLinks: [{ title: 'Website development briefs and launch checklists', path: '/blog/website-development' }, { title: 'Business website development services', path: '/website-development' }, { title: 'Development example: KalyamRam portfolio website', path: '/portfolio/kalyamram' }, { title: 'Development example: ReelsXpress booking platform', path: '/portfolio/reelsxpress' }],
     metaDescription:
       'SEO website development services by Reddystack for startups and small businesses that need responsive websites, service pages, performance, and lead-ready structure.',
     faqItems: [

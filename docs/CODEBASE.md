@@ -67,6 +67,16 @@ Shared approved dark styling lives in `src/styles/_brand.scss`: charcoal #302F35
 - Errors log an event, request ID and failure category without email addresses, message text, API keys or raw provider messages. The response includes the request ID for investigation.
 - Failed sends retain form values and expose a direct email fallback. No enquiry is persisted in a database or browser storage. Resend acceptance is not proof of final mailbox delivery; monitor provider delivery events.
 - Google Analytics uses `NEXT_PUBLIC_GA_MEASUREMENT_ID` or the existing default ID. It tracks page views and contact actions. Production delivery/analytics must be checked separately from local rendering.
+- Service and intent-page quote links pass an editable service choice and a source pathname to `/contact`; query variants retain the `/contact` canonical. External URLs and query strings are excluded from source attribution.
+- Accepted enquiries include a shared request ID in the response and email. `contact_form_submit` carries `lead_id`, `source_page`, service and budget, without the name, email or message. This means provider acceptance, not a qualified lead, delivered email or sale. Contact-link clicks are weaker intent signals.
+
+### Sales measurement
+
+- In the Reddystack GA4 property, mark `contact_form_submit` as a key event and register `source_page` and `selected_services` as event-scoped custom dimensions. Do not register the unique `lead_id` as a high-cardinality reporting dimension.
+- Keep a private lead sheet outside this public repository with columns: enquiry reference, date, service, source page, qualified, quote amount/currency, status (new/quoted/won/lost), won revenue/currency. Update it from real enquiries and outcomes; do not label clicks or accepted forms as revenue.
+- Review Google organic impressions/clicks in Search Console separately from GA4 organic sessions and enquiries. Compare landing pages by qualified leads and won revenue, not impressions alone.
+- Before relying on production delivery, confirm `CONTACT_TO_EMAIL` is `thereddystack@gmail.com` (or absent, using the site default), keep `RESEND_FROM_EMAIL` on a verified sending domain, and inspect Resend delivery events. Local tests do not prove mailbox delivery.
+- Hosting changes on 2026-09-14: apex `reddystack.com` now uses a 308 redirect to `www.reddystack.com`; `CONTACT_TO_EMAIL` was corrected from `hello@reddystack.com` to `thereddystack@gmail.com` for all environments. The sender remains `Reddystack <hello@reddystack.com>`. Environment changes require a new deployment.
 
 ## Verification
 

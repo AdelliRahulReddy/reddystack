@@ -82,10 +82,48 @@ try {
   run('fill', '#contact-company', 'Example');
   run('fill', '#contact-email', 'test@example.test');
   run('fill', '#contact-message', 'Keep this enquiry on a failed send.');
-  run('click', 'button[type="submit"]');
+  // Keyboard submission avoids racing the page's smooth scrolling during simulated pointer clicks.
+  run('focus', 'button[type="submit"]');
+  run('press', 'Enter');
   run('wait', '--fn', 'Boolean(document.querySelector("form a[href^=mailto]"))');
   assert.equal(evaluate('document.getElementById("contact-message").value'), 'Keep this enquiry on a failed send.');
   assert.ok(evaluate('Boolean(document.querySelector("form a[href^=mailto]"))'));
+  run('set', 'viewport', '360', '800');
+  run('open', `${base}/service/ai-ugc-videos`);
+  const earlyCta = '.service-details__banner-text a';
+  assert.ok(evaluate(`Boolean(document.querySelector('${earlyCta}'))`), 'Service intro needs an early quote link');
+  assert.ok(evaluate(`document.querySelector('${earlyCta}').getBoundingClientRect().bottom <= innerHeight`), 'Mobile quote link must be visible without scrolling');
+  run('click', earlyCta);
+  run('wait', '--fn', 'Boolean(document.querySelector(".contact-category-btn[aria-pressed=true]"))');
+  assert.equal(evaluate('document.querySelector(".contact-category-btn[aria-pressed=true]").textContent'), 'AI UGC-Style Videos');
+  run('click', '.contact-category-btn[aria-pressed=true]');
+  assert.equal(evaluate('document.querySelectorAll(".contact-category-btn[aria-pressed=true]").length'), 0, 'Preselected service remains editable');
+  run('find', 'role', 'button', 'click', '--name', 'AI UGC-Style Videos', '--exact');
+  evaluate(`window.enquiryEvents=[]; window.gtag=(...args)=>window.enquiryEvents.push(args);
+    window.fetch=async (url, options)=>{if(url!='/api/contact') throw new Error('Unexpected test fetch'); window.enquiryBody=JSON.parse(options.body); return new Response(JSON.stringify({success:true,requestId:'test-reference'}), {status:200,headers:{'Content-Type':'application/json'}});}`);
+  run('fill', '#contact-name', 'Browser check');
+  run('fill', '#contact-company', 'My project');
+  run('fill', '#contact-email', 'test@example.test');
+  run('fill', '#contact-message', 'Discuss the AI video scope.');
+  run('focus', 'button[type="submit"]');
+  run('press', 'Enter');
+  run('wait', '--fn', 'window.enquiryEvents.some(e=>e[1]==="contact_form_submit")');
+  assert.equal(evaluate('window.enquiryBody.sourcePage'), '/service/ai-ugc-videos');
+  assert.deepEqual(evaluate('window.enquiryBody.services'), ['AI UGC-Style Videos']);
+  const lead = evaluate('window.enquiryEvents.find(e=>e[1]==="contact_form_submit")[2]');
+  assert.equal(lead.source_page, '/service/ai-ugc-videos');
+  assert.equal(lead.lead_id, 'test-reference');
+  assert.ok(!JSON.stringify(lead).includes('test@example.test'), 'Do not send enquiry PII to analytics');
+  for (const [path, service] of [['/website-development', 'Website Development'], ['/service/ai-automations', 'Apps, MVPs & Automation']]) {
+    run('open', `${base}${path}`);
+    run('click', earlyCta);
+    run('wait', '--fn', 'Boolean(document.querySelector(".contact-category-btn[aria-pressed=true]"))');
+    assert.equal(evaluate('document.querySelector(".contact-category-btn[aria-pressed=true]").textContent'), service);
+  }
+  run('open', `${base}/contact?service=unknown&source=https%3A%2F%2Fspam.example`);
+  assert.equal(evaluate('document.querySelectorAll(".contact-category-btn[aria-pressed=true]").length'), 0, 'Unknown service must not select a category');
+  assert.equal(evaluate('document.querySelector("link[rel=canonical]").href'), 'https://www.reddystack.com/contact', 'Context must not create a separate canonical URL');
+  console.log('Verified early mobile CTA, editable service selection, intent/secondary mapping, email context and accepted-lead analytics.');
   console.log('Verified CTA hover, keyboard tabs, repeated navigation, mobile menu/overflow, validation and failed-send recovery. No email sent.');
 } finally {
   run('close');

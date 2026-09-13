@@ -30,11 +30,19 @@ assert.equal((await post('{')).status, 400, 'Malformed JSON is a client error');
 assert.equal((await post(valid, { origin: 'https://spam.example' })).status, 403, 'Reject foreign browser origins');
 assert.equal((await post(valid, { 'content-type': 'text/plain' })).status, 415, 'Require JSON');
 assert.equal((await post({ ...valid, services: ['invented service'] })).status, 400, 'Validate service choices');
+for (const sourcePage of ['https://spam.example', '//spam.example', '/contact?email=private@example.test', '/service/../contact', '/service\nInjected: value', '/service\n', `/${'a'.repeat(180)}!`]) {
+  assert.equal((await post({ ...valid, sourcePage })).status, 400, 'Reject external URLs, query data and malformed source paths');
+}
 assert.equal((await post({ ...valid, website: 'spam.example' })).status, 400, 'Reject filled honeypot');
 assert.equal((await post({ ...valid, padding: 'x'.repeat(25000) })).status, 413, 'Bound actual body bytes, even without Content-Length');
 assert.equal(sent.length, 0, 'Invalid requests must never send email');
 now += 600001;
-assert.equal((await post(valid)).status, 200);
+const accepted = await post({ ...valid, sourcePage: '/service/seo-websites' });
+assert.equal(accepted.status, 200);
+const receipt = await accepted.json();
+assert.match(receipt.requestId, /^[a-f0-9-]{36}$/, 'Return an enquiry reference after provider acceptance');
+assert.ok(sent[0].text.includes(receipt.requestId), 'Use the same reference in the enquiry email');
+assert.match(sent[0].text, /Source page: \/service\/seo-websites/);
 assert.match(sent[0].html, /Test &lt;person&gt;/, 'Escape email HTML');
 providerError = { name: 'validation_error', message: 'private email detail', statusCode: 422 };
 assert.equal((await post(valid)).status, 502, 'Report provider failure');

@@ -7,7 +7,10 @@ import { buildBreadcrumbSchema, buildPageMetadata, contactPageSchema } from '@/d
 export const metadata = buildPageMetadata("contact");
 
 
-const index = () => {
+const index = async ({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) => {
+  const params = await searchParams;
+  const initialService = typeof params.service === 'string' ? params.service : '';
+  const sourcePage = typeof params.source === 'string' && params.source.length <= 200 && /^\/(?!\/)[a-z0-9/-]*(?![\s\S])/.test(params.source) ? params.source : '';
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: 'Home', path: '/' },
     { name: 'Contact', path: '/contact' },
@@ -24,7 +27,7 @@ const index = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Wrapper>
-        <Contact />
+        <Contact key={`${initialService}:${sourcePage}`} initialService={initialService} sourcePage={sourcePage} />
       </Wrapper>
     </>
   );
