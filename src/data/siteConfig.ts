@@ -30,9 +30,9 @@ export const siteConfig = {
   "Rahul Reddy",
   "Hyderabad"
 ],
-  email: "hello@reddystack.com",
-  phoneDisplay: "+91 7032784208",
-  phoneHref: "+917032784208",
+  email: "thereddystack@gmail.com",
+  phoneDisplay: "+91 7207022577",
+  phoneHref: "+917207022577",
   location: "Hyderabad, India",
   mapUrl: "https://www.google.com/maps/search/Hyderabad%2C%20India",
   businessStructure: "Independent service business operated by Rahul Reddy Adelli",
@@ -49,8 +49,8 @@ export const siteConfig = {
   "SEO & Local SEO"
 ],
   socialLinks: {
-    email: "mailto:hello@reddystack.com",
-    whatsapp: "https://wa.me/917032784208",
+    email: "mailto:thereddystack@gmail.com",
+    whatsapp: "https://wa.me/917207022577",
     google: "https://www.google.com/search?q=reddystack",
     instagram: "https://www.instagram.com/reddy.stack/",
     x: "https://x.com/reddystack",
