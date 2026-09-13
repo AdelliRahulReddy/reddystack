@@ -2,6 +2,14 @@
 html[tp-theme='tp-theme-light'] .tp-testimonial-user-thumb .tp-testimonial-user-title {
   color: var(--tp-common-white);
 }
+html[tp-theme='tp-theme-light'] .tp-testimonial-area .tp-btn-border-sm {
+  color: var(--tp-common-black-5);
+  border-color: currentColor;
+  &:hover {
+    background: var(--tp-common-black-5);
+    color: var(--tp-common-white);
+  }
+}
 
 // Approved charcoal identity, shared by the site and preview. Light mode retains its existing design.
 html[tp-theme='tp-theme-dark'] {

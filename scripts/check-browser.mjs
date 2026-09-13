@@ -37,6 +37,13 @@ try {
     return (Math.max(a,b)+0.05)/(Math.min(a,b)+0.05);
   })()`);
   assert.ok(badgeContrast >= 4.5, 'Delivery badge needs readable contrast in light mode');
+  const controlsReadable = String.raw`(() => {
+    const controls=Array.from(document.querySelectorAll('.tp-testimonial-area .tp-btn-border-sm'));
+    const luminance = color => color.match(/[\d.]+/g).slice(0,3).map(Number).map(x=>x/255).map(x=>x<=0.04045 ? x/12.92 : ((x+0.055)/1.055)**2.4).reduce((sum,x,i)=>sum+x*[0.2126,0.7152,0.0722][i],0);
+    return controls.length === 2 && controls.every(e=>1.05/(luminance(getComputedStyle(e).color)+0.05)>=4.5);
+  })()`;
+  run('wait', '--fn', controlsReadable);
+  assert.ok(evaluate(controlsReadable), 'Delivery controls must contrast with the light page');
   run('click', 'label[for="header-one-theme-toggle-primary"]');
   console.log('CTA hover is error-free and readable.');
   assert.equal(evaluate('document.getElementById("home-tab").tabIndex'), 0, 'Initial tab must be reachable');
