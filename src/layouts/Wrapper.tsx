@@ -1,7 +1,6 @@
 "use client";
-import { type ReactNode, useEffect } from "react";
+import { type ReactNode, useEffect, useRef } from "react";
 import { animationCreate } from "@/utils/utils";
-import { throwableAnimation } from "@/utils/throwableAnimation";
 import ScrollToTop from "@/components/common/ScrollToTop";
 import { ToastContainer } from "react-toastify";
 import { usePathname } from "next/navigation";
@@ -15,49 +14,46 @@ import servicesPanel from "@/utils/servicesPanel";
 import PortfolioPanel from "@/utils/PortfolioPanel";
 import blogAnimation from "@/utils/blogAnimation";
 import linesAnimation from "@/utils/linesAnimation";
-import { buttonAnimation } from "@/utils/buttonAnimation";
 import { scrollTextAnimation } from "@/utils/scrollTextAnimation";
 import textInvert from "@/utils/textInvert";
 import ContextProvider from "@/context/app-context";
 
-import { ScrollSmoother } from "@/plugins";
-
-gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const Wrapper = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
+  const smootherRef = useRef<{ kill: () => void; scrollTo: (position: number, smooth: boolean) => void } | null>(null);
 
   useEffect(() => {
     void import("bootstrap/dist/js/bootstrap");
   }, []);
 
   useEffect(() => {
-    // animation
-    let cleanup: (() => void) | undefined;
-    const timer = setTimeout(() => {
-      cleanup = animationCreate();
-    }, 100);
-
-    return () => { clearTimeout(timer); cleanup?.(); };
-  }, []);
-
-  useEffect(() => {
-    if (typeof window !== "undefined" && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (typeof window !== "undefined") {
       const mm = gsap.matchMedia();
       // Small screens already use native scrolling; skip the extra layout work.
       mm.add("(min-width: 992px) and (prefers-reduced-motion: no-preference)", () => {
-        const smoother = ScrollSmoother.create({
-          smooth: 1.35,
-          effects: true,
-          smoothTouch: false,
-          normalizeScroll: false,
-          ignoreMobileResize: true,
+        let disposed = false;
+        let smoother: typeof smootherRef.current = null;
+        import("@/plugins").then(({ ScrollSmoother }) => {
+          if (disposed) return;
+          gsap.registerPlugin(ScrollSmoother);
+          smoother = ScrollSmoother.create({
+            smooth: 1.35,
+            effects: true,
+            smoothTouch: false,
+            normalizeScroll: false,
+            ignoreMobileResize: true,
+          });
+          smootherRef.current = smoother;
+        }).catch(error => {
+          if (!disposed) console.error('Could not load smooth scrolling', error);
         });
-        return () => smoother?.kill();
+        return () => { disposed = true; smoother?.kill(); smootherRef.current = null; };
       });
       return () => mm.revert();
     }
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     if (typeof window === "undefined" || !("scrollRestoration" in window.history)) {
@@ -78,8 +74,7 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
     }
 
     const resetScrollPosition = () => {
-      const smoother = ScrollSmoother.get();
-      smoother?.scrollTo(0, false);
+      smootherRef.current?.scrollTo(0, false);
       window.scrollTo(0, 0);
       ScrollTrigger.refresh();
     };
@@ -120,23 +115,55 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
 
     const frameId = window.requestAnimationFrame(() => {
       media = gsap.matchMedia();
-      media.add('(prefers-reduced-motion: no-preference)', () => {
-        const throwableCleanup = throwableAnimation();
+      media.add('(prefers-reduced-motion: no-preference)', (context) => {
+        const wowCleanup = animationCreate();
+        let disposed = false;
+        const throwableCleanups: (() => void)[] = [];
+        const observer = new IntersectionObserver(entries => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            observer.unobserve(entry.target);
+            import('@/utils/throwableAnimation').then(({ throwableAnimation }) => {
+              if (disposed || !entry.target.isConnected) return;
+              context.add(() => {
+                const cleanup = throwableAnimation(entry.target);
+                if (cleanup) throwableCleanups.push(cleanup);
+              });
+            }).catch(error => {
+              if (!disposed) console.error('Could not load the capsule animation', error);
+            });
+          }
+        }, { rootMargin: '50px' });
+        document.querySelectorAll('[data-tp-throwable-scene]').forEach(scene => observer.observe(scene));
         servicesPanel();
         PortfolioPanel();
         blogAnimation();
         linesAnimation();
-        const buttonCleanup = buttonAnimation();
         const scrollTextCleanup = scrollTextAnimation();
         const textInvertCleanup = textInvert();
 
         const titleCleanup = animationTitle();
         const charCleanup = animationTitleChar();
 
-        const cleanups = [throwableCleanup, buttonCleanup, titleCleanup, charCleanup, textInvertCleanup, scrollTextCleanup].filter(
+        const cleanups = [wowCleanup, titleCleanup, charCleanup, textInvertCleanup, scrollTextCleanup].filter(
           (cleanup): cleanup is () => void => typeof cleanup === "function"
         );
-        return () => cleanups.forEach((cleanup) => cleanup());
+        return () => {
+          disposed = true;
+          observer.disconnect();
+          throwableCleanups.forEach(cleanup => cleanup());
+          cleanups.forEach(cleanup => cleanup());
+        };
+      });
+      media.add('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)', context => {
+        let disposed = false;
+        let cleanup: (() => void) | undefined;
+        import('@/utils/buttonAnimation').then(({ buttonAnimation }) => {
+          if (!disposed) context.add(() => { cleanup = buttonAnimation(); });
+        }).catch(error => {
+          if (!disposed) console.error('Could not load button effects', error);
+        });
+        return () => { disposed = true; cleanup?.(); };
       });
     });
 

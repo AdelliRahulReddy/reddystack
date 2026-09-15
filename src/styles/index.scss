@@ -4,12 +4,35 @@
 
 @forward "react-toastify/dist/ReactToastify.css";
 @forward "slick-carousel/slick/slick.css"; 
-@forward "swiper/css/bundle";   
+@forward "swiper/css";
+@forward "swiper/css/navigation";
  
 @forward "../../public/assets/css/bootstrap.css"; 
 @forward "../../public/assets/css/spacing.css"; 
 @forward "../../public/assets/scss/main.scss";
 @forward "./brand";
+
+// Reserve exactly the existing artwork area while its player loads.
+.tp-hero-artwork {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .tp-hero-still, .tp-hero-lottie {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+  }
+  .tp-hero-lottie { visibility: hidden; }
+  .tp-hero-still { mix-blend-mode: normal; }
+  &[data-ready='true'] {
+    .tp-hero-lottie { visibility: visible; }
+    .tp-hero-still { visibility: hidden; }
+  }
+}
 
 // Shared accessibility and overflow corrections retain the template's design.
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible,
