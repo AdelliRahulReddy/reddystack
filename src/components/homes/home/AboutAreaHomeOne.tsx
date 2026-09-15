@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import Lottie, { type LottieRefCurrentProps } from 'lottie-react';
+import type { LottieRefCurrentProps } from 'lottie-react';
 import useMedia from 'react-use/lib/useMedia';
 import award_img from "@/assets/img/about/award-icon.svg";
 import { useInView } from 'react-intersection-observer';
@@ -39,20 +39,28 @@ const { subtitle, award_title, award_des, about_des, counter_data } = about_cont
 
 const AboutAreaHomeOne = () => {
   const { ref, inView } = useInView({ rootMargin: '200px' });
-  const [aboutAnimation, setAboutAnimation] = useState<object | null>(null);
+  const [artwork, setArtwork] = useState<{ Player: typeof import('lottie-react').default; data: object } | null>(null);
   const animation = useRef<LottieRefCurrentProps>(null);
   const reducedMotion = useMedia('(prefers-reduced-motion: reduce)', true);
   useEffect(() => {
-    if (!inView || aboutAnimation) return;
-    let active = true;
-    import('@/assets/lottie/AboutReddystack.json')
-      .then(({ default: data }) => { if (active) setAboutAnimation(data); })
-      .catch((error) => console.error('Could not load the About illustration', error));
-    return () => { active = false; };
-  }, [inView, aboutAnimation]);
+    if (!inView || artwork) return;
+    const controller = new AbortController();
+    Promise.all([
+      import('lottie-react'),
+      fetch('/assets/lottie/AboutReddystack.json', { signal: controller.signal }).then(response => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      }),
+    ]).then(([{ default: Player }, data]) => {
+      if (!controller.signal.aborted) setArtwork({ Player, data });
+    }).catch(error => {
+      if (!controller.signal.aborted) console.error('Could not load the About illustration', error);
+    });
+    return () => controller.abort();
+  }, [inView, artwork]);
   useEffect(() => {
     if (reducedMotion || !inView) animation.current?.pause(); else animation.current?.play();
-  }, [reducedMotion, aboutAnimation, inView]);
+  }, [reducedMotion, artwork, inView]);
   return (
     <>
       <section ref={ref} className="tp-about-area fix">
@@ -71,12 +79,12 @@ const AboutAreaHomeOne = () => {
                       <div className="tp-about-thumb-bg-shape include-bg"
                         style={{ backgroundImage: 'url(/assets/img/about/shape/about-shape-1.png)' }}></div>
                       <div className="tp-about-lottie-frame">
-                        {aboutAnimation && <Lottie
+                        {artwork && <artwork.Player
                           lottieRef={animation}
                           autoplay={!reducedMotion && inView}
                           onDOMLoaded={() => animation.current?.setSubframe(false)}
                           aria-hidden="true"
-                          animationData={aboutAnimation}
+                          animationData={artwork.data}
                           loop={true}
                           className="tp-about-lottie-player"
                           rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}

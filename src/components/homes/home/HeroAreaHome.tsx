@@ -3,8 +3,7 @@ import Link from 'next/link';
 import { type JSX, useEffect, useRef, useState } from 'react';
 import HeroArrowIcon from '@/svg/home/HeroIcons/HeroArrowIcon';
 import { HeroSocialLinks } from '@/components/common/SocialLinks';
-import Lottie, { type LottieRefCurrentProps } from 'lottie-react';
-import heroAnimation from '@/assets/lottie/hero-animation.json';
+import type { LottieRefCurrentProps } from 'lottie-react';
 import { useInView } from 'react-intersection-observer';
 interface DataType {
   slide_text: string[];
@@ -42,9 +41,11 @@ const HeroAreaHome = () => {
   const { ref, inView } = useInView({ initialInView: true });
   const animation = useRef<LottieRefCurrentProps>(null);
   const [paused, setPaused] = useState(false);
+  const [artwork, setArtwork] = useState<{ Player: typeof import('lottie-react').default; data: object } | null>(null);
+  const [ready, setReady] = useState(false);
   useEffect(() => {
     if (paused || !inView) animation.current?.pause(); else animation.current?.play();
-  }, [paused, inView]);
+  }, [paused, inView, ready]);
   useEffect(() => {
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const syncMotion = () => { animation.current?.pause(); setPaused(true); };
@@ -52,6 +53,37 @@ const HeroAreaHome = () => {
     motion.addEventListener('change', syncMotion);
     return () => motion.removeEventListener('change', syncMotion);
   }, []);
+  useEffect(() => {
+    if (artwork || paused || !inView) return;
+    const controller = new AbortController();
+    let idle: number | undefined;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const load = () => {
+      Promise.all([
+        import('lottie-react'),
+        fetch('/assets/lottie/hero-animation.json', { signal: controller.signal }).then(response => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.json();
+        }),
+      ]).then(([{ default: Player }, data]) => {
+        if (!controller.signal.aborted) setArtwork({ Player, data });
+      }).catch(error => {
+        if (!controller.signal.aborted) console.error('Could not load the hero illustration', error);
+      });
+    };
+    const schedule = () => {
+      if ('requestIdleCallback' in window) idle = window.requestIdleCallback(load, { timeout: 2000 });
+      else timer = setTimeout(load, 1000);
+    };
+    if (document.readyState === 'complete') schedule();
+    else window.addEventListener('load', schedule, { once: true });
+    return () => {
+      controller.abort();
+      window.removeEventListener('load', schedule);
+      if (idle !== undefined) window.cancelIdleCallback(idle);
+      clearTimeout(timer);
+    };
+  }, [artwork, paused, inView]);
   return (
     <>
 
@@ -90,7 +122,7 @@ const HeroAreaHome = () => {
                   </h1>
                   <p>{sm_info}</p>
                   <div className="tp-hero-btn d-flex align-items-center flex-wrap gap-3">
-                    <div className="tp-hover-btn-wrapper tp-btn-bounce">
+                    <div className="tp-hover-btn-wrapper">
                       <Link href="/contact" className="tp-hover-btn tp-hover-btn-item tp-btn-circle square">
                         <span className="tp-btn-circle-text" >
                           {btn_text}
@@ -123,18 +155,25 @@ const HeroAreaHome = () => {
                   aria-label={paused ? 'Play illustration' : 'Pause illustration'}
                   title={paused ? 'Play illustration' : 'Pause illustration'}
                   onClick={() => { if (paused) animation.current?.play(); else animation.current?.pause(); setPaused(!paused); }}>
-                  <Lottie
+                  <span className="tp-hero-artwork" data-ready={ready}>
+                    {/* These are exact frames of the existing illustration, available before hydration. */}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/assets/lottie/hero-still-dark.svg" width="1600" height="1164" alt="" className="tp-hero-still background-white-mode" />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/assets/lottie/hero-still-light.svg" width="1600" height="1164" alt="" className="tp-hero-still background-dark-mode" />
+                  {artwork && <artwork.Player
                     lottieRef={animation}
-                    autoplay={!paused && inView}
-                    onDOMLoaded={() => animation.current?.setSubframe(false)}
+                    autoplay={false}
+                    onDOMLoaded={() => { animation.current?.setSubframe(false); setReady(true); }}
                     aria-hidden="true"
-                    animationData={heroAnimation}
+                    animationData={artwork.data}
                     loop={true}
                     className="tp-hero-lottie"
                     // Trim unused canvas below the base, then align the artwork to the bottom.
                     rendererSettings={{ viewBoxSize: '0 0 1600 1164', preserveAspectRatio: 'xMidYMax meet' }}
                     style={{ width: '100%', height: '100%' }}
-                  />
+                  />}
+                  </span>
                 </button>
               </div>
             </div>

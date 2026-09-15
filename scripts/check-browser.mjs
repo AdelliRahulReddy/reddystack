@@ -15,9 +15,34 @@ const evaluate = (code) => run('eval', code).result;
 // Launch without captured pipes so detached Chrome cannot keep a Windows stdout pipe open.
 execFileSync(browser, ['--session', 'reddystack-regression', 'open', base], { stdio: 'ignore', timeout: 45000 });
 try {
+  run('network', 'route', '**/_next/static/**/*.js', '--abort');
+  run('open', base);
+  assert.ok(evaluate(`(() => {
+    const title = document.querySelector('h1');
+    const cta = document.querySelector('.tp-hero-btn a');
+    const still = document.querySelector('.tp-hero-thumb img');
+    return [title, cta].every(e => e && getComputedStyle(e).opacity === '1' && e.getBoundingClientRect().height > 0)
+      && still?.complete && still.naturalWidth > 0;
+  })()`), 'Hero text, contact link and illustration must render without JavaScript');
+  run('network', 'unroute', '**/_next/static/**/*.js');
+  run('network', 'route', '**/assets/lottie/hero-animation.json', '--abort');
+  run('open', base);
+  run('wait', '--load', 'networkidle');
+  assert.ok(evaluate(`Array.from(document.querySelectorAll('.tp-hero-thumb img')).some(e => e.complete && e.naturalWidth > 0 && getComputedStyle(e).display !== 'none')`), 'Failed animation loading must retain the still illustration');
+  for (const theme of ['light', 'dark']) {
+    run('click', 'label[for="header-one-theme-toggle-primary"]');
+    run('wait', '--fn', `document.documentElement.getAttribute('tp-theme') === 'tp-theme-${theme}'`);
+    assert.ok(evaluate(`Array.from(document.querySelectorAll('.tp-hero-thumb img')).some(e => e.src.endsWith('hero-still-${theme}.svg') && getComputedStyle(e).display !== 'none' && getComputedStyle(e).visibility === 'visible')`), `${theme} mode must show the matching still illustration`);
+  }
+  run('network', 'unroute', '**/assets/lottie/hero-animation.json');
   run('set', 'viewport', '1440', '1000');
   run('open', base);
-  run('wait', '--fn', 'document.querySelector(".tp-btn-bounce")?.style.opacity === "1"');
+  run('wait', '--fn', 'Boolean(document.querySelector(".tp-hero-lottie svg"))');
+  assert.ok(evaluate(`performance.getEntriesByType('resource').find(e => e.name.endsWith('/assets/lottie/hero-animation.json'))?.startTime >= performance.getEntriesByType('navigation')[0].loadEventEnd`), 'Hero animation must load after the initial page load');
+  assert.ok(evaluate(`!performance.getEntriesByType('resource').some(e => e.name.endsWith('/assets/lottie/AboutReddystack.json'))`), 'The About illustration must not load before its section approaches the viewport');
+  run('click', '[aria-label="Pause illustration"]');
+  run('wait', '--fn', `Boolean(document.querySelector('[aria-label="Play illustration"]'))`);
+  run('click', '[aria-label="Play illustration"]');
   evaluate('window.regressionErrors=[]; window.addEventListener("error", e => window.regressionErrors.push(e.message))');
   run('hover', '.tp-hover-btn-item');
   assert.deepEqual(evaluate('window.regressionErrors'), [], 'Hover must not throw');
@@ -61,6 +86,7 @@ try {
     run('wait', '--url', '**/contact');
     run('find', 'role', 'link', 'click', '--name', 'Reddystack home');
     run('wait', '--url', `${base}/`);
+    run('wait', '.tp-hover-btn-item');
     run('hover', '.tp-hover-btn-item');
   }
   assert.deepEqual(evaluate('window.regressionErrors'), [], 'Client-side navigation must not throw');
@@ -124,6 +150,31 @@ try {
   assert.equal(evaluate('document.querySelectorAll(".contact-category-btn[aria-pressed=true]").length'), 0, 'Unknown service must not select a category');
   assert.equal(evaluate('document.querySelector("link[rel=canonical]").href'), 'https://www.reddystack.com/contact', 'Context must not create a separate canonical URL');
   console.log('Verified early mobile CTA, editable service selection, intent/secondary mapping, email context and accepted-lead analytics.');
+  run('set', 'media', 'dark', 'reduced-motion');
+  run('open', base);
+  run('wait', '--load', 'networkidle');
+  assert.ok(evaluate(`!performance.getEntriesByType('resource').some(e => e.name.endsWith('/assets/lottie/hero-animation.json'))`), 'Reduced motion must show the still without downloading an autoplay animation');
+  assert.ok(evaluate(`Boolean(document.querySelector('[aria-label="Play illustration"]'))`));
+  run('click', '[aria-label="Play illustration"]');
+  run('wait', '--fn', `document.querySelector('.tp-hero-artwork')?.dataset.ready === 'true'`);
+  run('click', '[aria-label="Pause illustration"]');
+  run('scrollintoview', '.tp-about-area');
+  run('wait', '--fn', `Boolean(document.querySelector('.tp-about-lottie-player svg'))`);
+  assert.ok(evaluate(`performance.getEntriesByType('resource').some(e => e.name.endsWith('/assets/lottie/AboutReddystack.json'))`), 'The About illustration must load when its section approaches the viewport');
+  const project = evaluate(`document.querySelector('.tp-3d-slide[aria-hidden="false"] h3').textContent`);
+  run('focus', '[aria-label="Show next project"]');
+  run('press', 'Enter');
+  assert.notEqual(evaluate(`document.querySelector('.tp-3d-slide[aria-hidden="false"] h3').textContent`), project, 'Project navigation must advance the visible slide');
+  const delivery = evaluate(`document.querySelector('.tp-testimonial-slider-active .slick-current').getAttribute('data-index')`);
+  run('focus', '[aria-label="Next delivery step"]');
+  run('press', 'Enter');
+  run('wait', '--fn', `document.querySelector('.tp-testimonial-slider-active .slick-current').getAttribute('data-index') !== ${JSON.stringify(delivery)}`);
+  run('focus', '#faqAccordionHome .accordion-item:nth-child(2) button');
+  run('press', 'Enter');
+  run('wait', '--fn', `document.querySelector('#faqAccordionHome .accordion-item:nth-child(2) .accordion-collapse').classList.contains('show')`);
+  assert.equal(evaluate(`document.querySelector('#faqAccordionHome .accordion-item:nth-child(2) button').getAttribute('aria-expanded')`), 'true', 'FAQ controls must expose their expanded state');
+  console.log('Project slider, delivery slider and FAQ interactions passed.');
+  console.log('Verified server-visible hero, theme-matched fallback, deferred loading, illustration controls and reduced motion.');
   console.log('Verified CTA hover, keyboard tabs, repeated navigation, mobile menu/overflow, validation and failed-send recovery. No email sent.');
 } finally {
   run('close');

@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import Matter from '../../public/assets/plugins/matter.js';
 
 
-export const throwableAnimation = () => {
+export const throwableAnimation = (scene) => {
     if (typeof window !== "undefined") {
         ! function ($) {
             "use strict";
@@ -236,7 +236,7 @@ export const throwableAnimation = () => {
                 }))
             }
         }(jQuery);
-        const scenes = jQuery('[data-tp-throwable-scene]');
+        const scenes = jQuery(scene);
         scenes.tpThrowable();
         return () => scenes.each(function () { jQuery.data(this, 'plugin_tpThrowable')?.destroy(); });
     }
