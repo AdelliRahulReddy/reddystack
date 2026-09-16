@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { path: "/privacy-policy", lastModified: "2026-09-14", changeFrequency: "yearly", priority: 0.3 },
       { path: "/terms", lastModified: "2026-09-12", changeFrequency: "yearly", priority: 0.3 },
       { path: "/revision-policy", changeFrequency: "yearly", priority: 0.3 },
-      ...serviceDetailData.map((service) => ({ path: service.path, lastModified: "2026-09-14", changeFrequency: "monthly" as const, priority: 0.8 })),
+      ...serviceDetailData.map((service) => ({ path: service.path, lastModified: service.updatedAt || "2026-09-14", changeFrequency: "monthly" as const, priority: 0.8 })),
       ...intentLandingPages.map((page) => ({
         path: page.path,
         lastModified: "2026-09-14",

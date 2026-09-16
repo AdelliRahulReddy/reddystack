@@ -1140,7 +1140,8 @@ html[tp-theme='tp-theme-light']{
     & .service-details__banner-text p {
         color: #5C5E64;
     }
-    & .service-details__left-text .text-1 {
+    & .service-details__left-text .text-1,
+    & .service-details__left-text .tp-section-title-3 {
         color: var(--tp-common-black-5);
     }
     & .service-details__left-text p {

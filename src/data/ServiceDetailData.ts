@@ -25,6 +25,7 @@ export type ServiceProcessStep = {
 export type ServiceDetail = {
   slug: string;
   path: string;
+  updatedAt?: string;
   contactService?: string;
   subtitle: string;
   title: string;
@@ -374,10 +375,11 @@ export const serviceDetailData: ServiceDetail[] = [
 {
   "slug": "seo-local-seo",
   "path": "/service/seo-local-seo",
+  "updatedAt": "2026-09-16",
   "subtitle": "Website Optimisation & Local Visibility",
   "title": "SEO & Local SEO",
-  "introPrimary": "Help customers find your business through website optimisation and Google Business Profile management.",
-  "introSecondary": "For local businesses and growing brands, with direct support from Rahul Reddy.",
+  "introPrimary": "Make it easier for customers to find your services and send an enquiry. Start with a review of your website, search visibility, and Google Business Profile where your business is eligible.",
+  "introSecondary": "Work directly with Rahul Reddy Adelli, based in Hyderabad and supporting businesses across India and worldwide. We agree the pages, locations, deliverables, and reporting before work starts.",
   "overviewPrimary": "We review your website, services, target locations, and existing search presence. Priorities are based on the gaps that affect how customers find and understand your business.",
   "overviewSecondary": "Local SEO can include accurate business information, profile updates, service information, and a practical review-request process. Work is scoped around your actual locations and business details.",
   "features": [
@@ -399,9 +401,14 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Help customers find your business through website optimisation and Google Business Profile management.",
-  "metaTitle": "SEO & Local SEO Services | Reddystack",
-  "relatedLinks": [{ "title": "SEO and Local SEO guides", "path": "/blog/seo-local-seo" }],
-  "metaDescription": "Help customers find your business through website optimisation and Google Business Profile management.",
+  "metaTitle": "SEO & Local SEO for Small Businesses | Reddystack",
+  "relatedLinks": [
+    { "title": "Google Business Profile optimisation checklist", "path": "/blog/seo-local-seo/google-business-profile-optimization-checklist" },
+    { "title": "SEO for a service-area business", "path": "/blog/seo-local-seo/service-area-business-seo" },
+    { "title": "Local SEO costs and scope", "path": "/blog/seo-local-seo/local-seo-cost-india" },
+    { "title": "Meet Rahul Reddy Adelli", "path": "/about/rahul-reddy-adelli" }
+  ],
+  "metaDescription": "Founder-led SEO and local SEO for small businesses. Website audits, service-page improvements, eligible Google Business Profiles, and clear enquiry reporting.",
   "presentation": {
     "showVisuals": false,
     "showSidebar": true,
@@ -409,24 +416,68 @@ export const serviceDetailData: ServiceDetail[] = [
     "faqDescription": "Scope, expectations, and next steps.",
     "showFaqShapes": false
   },
-  "pricingTitle": "Custom Quotes",
-  "pricingText": "Fees depend on the agreed deliverables, timeline, and support. Your quote states inclusions, exclusions, revisions, and separate platform or tool costs.",
-  "processTitle": "How We Work",
+  "answerSections": [
+    {
+      "title": "Who this service is for",
+      "paragraphs": [
+        "Local service businesses need customers to understand what they offer, where they work, and how to contact them. We can review an existing website or plan search requirements alongside a new website build.",
+        "A storefront and a business that visits customers need different location information. Online-only businesses can use website SEO; Google Business Profile work depends on eligibility for in-person customer contact. Coverage should reflect the places you actually serve."
+      ]
+    },
+    {
+      "title": "What your SEO scope can include",
+      "paragraphs": ["Choose the work that addresses your current gaps. The quote identifies which of these deliverables are included and whether changes are implemented by Reddystack or handed to your developer."],
+      "bullets": [
+        "Technical review: inspect agreed pages for indexing, crawl access, canonical URLs, redirects, sitemap coverage, and mobile loading issues.",
+        "Service-page improvements: clarify the offer, page titles, headings, service areas, internal links, and the next step for an enquiry.",
+        "Google Business Profile review: check eligibility, business details, categories, hours, services, website links, and duplicate-profile concerns.",
+        "Local consistency: review agreed directory listings and business details, with a process for requesting reviews from real customers.",
+        "Measurement: establish a Search Console baseline and check Analytics tracking for successful enquiries separately from contact-button clicks."
+      ]
+    },
+    {
+      "title": "A practical audit you can act on",
+      "paragraphs": [
+        "An audit should explain the page or profile affected, the evidence, the recommended change, its priority, and how to check the result. Agree an initial set of important service pages before expanding the work.",
+        "Illustrative audit entry, not a client result: a service page is discovered but not indexed. Check its live availability and canonical URL, review whether it answers the customer's question, and confirm relevant pages link to it. After making the agreed improvements, request indexing and check for a crawl and indexing decision. Google decides whether and when to index it."
+      ]
+    },
+    {
+      "title": "What progress reporting covers",
+      "paragraphs": [
+        "Review the agreed pages, relevant search queries, impressions, clicks, and successful enquiries alongside a dated change log. Where tracking is available, separate live-site visits from development traffic and test submissions.",
+        "A click is not automatically a customer. Compare enquiry quality with your own business records, and use longer reporting periods when traffic is low. Reporting frequency and ongoing optimisation are agreed in the scope."
+      ]
+    }
+  ],
+  "pricingTitle": "A quote based on your website and locations",
+  "pricingText": "Scope depends on the number of pages and genuine business locations, the condition of the website, access, and whether you need an audit, implementation, or ongoing support. Your quote states deliverables, exclusions, revisions, timing, and any separate tool costs. Advertising spend and paid campaigns are separate from this SEO service.",
+  "processTitle": "From the first review to implementation",
   "processSteps": [
     {
-      "label": "Agree the brief",
-      "text": "Review your business, goals, assets, and budget."
+      "label": "1. Share your starting point.",
+      "text": "Send your website, profile link if you have one, actual service areas, main services, and the enquiries you want to receive."
     },
     {
-      "label": "Prepare and review",
-      "text": "Create the agreed work and get your feedback."
+      "label": "2. Agree the priorities and access.",
+      "text": "Confirm the audit and implementation scope. Keep ownership of your domain, website, and Google accounts; grant the access needed for the agreed work."
     },
     {
-      "label": "Deliver and improve",
-      "text": "Check the deliverables and agree any ongoing support."
+      "label": "3. Implement, check, and report.",
+      "text": "Review content with you, check the changed pages and enquiry path, and record the baseline and completed work for the next progress review."
     }
   ],
   "faqItems": [
+    {
+      "question": "Do I need a Google Business Profile for website SEO?",
+      "answer": "No. Website SEO can help an online-only business. Google Business Profiles are for eligible businesses that meet customers in person, either at a qualifying location or by visiting customers. We check eligibility before including profile work.",
+      "some_features": ["Website SEO", "Eligibility Check", "Actual Service Areas"]
+    },
+    {
+      "question": "Is this an audit or an ongoing monthly service?",
+      "answer": "It can be an audit, agreed implementation work, or ongoing support. The quote identifies the pages and profiles covered, who makes each change, and the reporting schedule. A new website or paid advertising campaign is scoped separately.",
+      "some_features": ["Defined Deliverables", "Implementation Scope", "Agreed Reporting"]
+    },
     {
       "question": "Can you guarantee a ranking or a result date?",
       "answer": "No. Search performance depends on competition, website condition, content, and platform changes. We agree the work and reporting, then review progress over time without promising a particular position.",
@@ -438,7 +489,7 @@ export const serviceDetailData: ServiceDetail[] = [
     },
     {
       "question": "How do we get started?",
-      "answer": "Use the enquiry form or WhatsApp to share your goal and current website or profile. We will discuss the scope before providing a custom quote.",
+      "answer": "Share your website, Google Business Profile link if applicable, main services, and actual service areas through the enquiry form. Rahul will review the starting point with you before agreeing the scope and providing a custom quote.",
       "some_features": [
         "Your Goals",
         "Clear Scope",
@@ -446,6 +497,8 @@ export const serviceDetailData: ServiceDetail[] = [
       ]
     }
   ],
+  "finalCtaTitle": "Share your website and service areas",
+  "finalCtaText": "Tell Rahul what you offer, where you work, and what you want to improve. Include your website and profile links so the conversation starts with your actual business.",
   heroImage: serviceThumbnail
 },
   {

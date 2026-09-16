@@ -21,7 +21,7 @@ import {
 } from "next/font/google";
 
 const sora = localFont({
-  src: '../../public/assets/fonts/Sora-SemiBold.ttf',
+  src: '../../public/assets/fonts/Sora-SemiBold.woff2',
   weight: '600',
   display: 'swap',
   variable: '--font-brand-sora',
