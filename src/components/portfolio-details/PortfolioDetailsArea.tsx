@@ -54,7 +54,7 @@ const PortfolioDetailsArea = ({
             <div className="row">
               <div className="col-xl-5 col-lg-4">
                 <div className="porfolio-details__result-left">
-                  <h4 className="porfolio-details__overview-title mb-40">Results</h4>
+                  <h4 className="porfolio-details__overview-title mb-40">Design priorities</h4>
                 </div>
               </div>
               <div className="col-xl-7 col-lg-8">

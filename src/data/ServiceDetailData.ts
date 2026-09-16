@@ -65,6 +65,42 @@ const sharedImages = {
 
 export const serviceDetailData: ServiceDetail[] = [
 {
+    answerSections: [
+      {
+        "title": "Start with an offer the business can deliver",
+        "paragraphs": [
+          "Before building a campaign, we discuss the product or service, the customer, the delivery area and what happens after an enquiry. A local service accepting bookings needs a different setup from a shop taking online payments. We also agree what counts as a useful result: a relevant enquiry, a booking or a completed order.",
+          "Bring any existing account, website, creative assets and recent enquiry records. If the offer is still changing, a smaller test with one clear message is easier to learn from than several campaigns promoting different things."
+        ]
+      },
+      {
+        "title": "What campaign work can include",
+        "paragraphs": [
+          "The proposal identifies the campaigns, assets, tracking checks and review frequency. Creative production and landing-page changes are separate pieces of work unless included in the scope."
+        ],
+        "bullets": [
+          "Review the existing account, available assets, audience and geographic coverage.",
+          "Prepare campaign structure, agreed ad copy and supplied or commissioned creative.",
+          "Check the intended form, website event or purchase path before launch.",
+          "Review delivery, spend, creative response and enquiry quality at agreed intervals."
+        ]
+      },
+      {
+        "title": "Look past the cost of a form submission",
+        "paragraphs": [
+          "A low-cost lead is useful only if it fits the business. For example, a repair enquiry outside your service area or a request for a product you do not sell should not be treated as a success just because the form was submitted. Agree a simple way to record relevant, unreachable, duplicate and unsuitable enquiries.",
+          "That feedback helps distinguish an advertising problem from a weak offer, confusing page or slow response. Reports should connect spend and recorded actions with what your business learned, while making gaps in tracking visible. No fixed lead volume, revenue or return is promised."
+        ]
+      },
+      {
+        "title": "Access, approvals and handover",
+        "paragraphs": [
+          "The advertising account remains owned by your business. Access should be granted through the platform's permissions rather than by sending passwords. Confirm who can approve copy, product claims, budgets and changes before launch.",
+          "At handover or the end of a management period, the agreed campaign work and reporting should be understandable to the account owner. Ongoing optimisation, new creative and extra campaigns require an agreed scope; a setup project does not silently include indefinite management."
+        ]
+      }
+    ],
+    updatedAt: "2026-09-16",
   "slug": "meta-ads",
   "path": "/service/meta-ads",
   "subtitle": "Facebook & Instagram Campaigns",
@@ -103,20 +139,20 @@ export const serviceDetailData: ServiceDetail[] = [
     "showFaqShapes": false
   },
   "pricingTitle": "Custom Quotes",
-  "pricingText": "Fees depend on the agreed deliverables, timeline, and support. Your quote states inclusions, exclusions, revisions, and separate platform or tool costs.",
+  "pricingText": "The quote separates campaign setup or management from ad spend, creative production and website work. Scope depends on the offers, markets, campaign count, available assets and reporting required. Advertising spend is paid separately; increasing that spend does not guarantee more suitable customers. Share a realistic test budget and any existing account so the proposal can match the work.",
   "processTitle": "How We Work",
   "processSteps": [
     {
-      "label": "Agree the brief",
-      "text": "Review your business, goals, assets, and budget."
+      "label": "Define the test.",
+      "text": "Agree the offer, audience, destination, budget boundary and action to measure."
     },
     {
-      "label": "Prepare and review",
-      "text": "Create the agreed work and get your feedback."
+      "label": "Prepare for approval.",
+      "text": "Check access and tracking, build the agreed ads and review claims and creative with you."
     },
     {
-      "label": "Deliver and improve",
-      "text": "Check the deliverables and agree any ongoing support."
+      "label": "Review actual outcomes.",
+      "text": "Compare delivery and recorded actions with enquiry feedback, then agree the next change."
     }
   ],
   "faqItems": [
@@ -142,6 +178,43 @@ export const serviceDetailData: ServiceDetail[] = [
   heroImage: serviceThumbnail
 },
 {
+    answerSections: [
+      {
+        "title": "Match the campaign to the customer's search",
+        "paragraphs": [
+          "We begin with what your business sells, who can buy it and which locations you can serve. Someone searching for an emergency repair has a different need from someone comparing training courses or buying parts. Those distinctions shape keywords, exclusions, ad wording and the destination page.",
+          "If you already advertise, share the existing account and the business outcome of recent enquiries. Rebuilding everything is not automatically the right first step. An account review can identify useful history, tracking problems and spending on searches that do not fit the offer."
+        ]
+      },
+      {
+        "title": "An agreed setup and management scope",
+        "bullets": [
+          "Goal, service-area and keyword planning for the selected offer.",
+          "Campaign setup, ad copy and relevant destination-page review.",
+          "Checks of the actions used for reporting, including a successful enquiry or purchase where applicable.",
+          "Review of available search terms, exclusions, spend and recorded outcomes.",
+          "A dated record of changes and reporting at the frequency stated in the proposal."
+        ],
+        "paragraphs": [
+          "New landing pages, product feeds, extensive tracking repairs and creative production are included only if specified. The initial review should make those dependencies clear before a launch date is agreed."
+        ]
+      },
+      {
+        "title": "Define a useful conversion before paying for traffic",
+        "paragraphs": [
+          "Opening a contact page, clicking a phone number and completing an enquiry are different actions. A campaign report needs to distinguish them. The business also needs a way to record whether an enquiry was relevant and whether it became a sale; an advertising platform cannot know every offline outcome by itself.",
+          "Consider a hypothetical campaign with many form submissions but few customers. The next step could be clearer pricing, tighter service-area information or faster follow-up, rather than simply lowering the cost per click. Decisions should use both campaign evidence and the sales process."
+        ]
+      },
+      {
+        "title": "Budget and ownership remain visible",
+        "paragraphs": [
+          "Your business retains the advertising account and pays advertising spend separately from the service fee. We agree permissions, approval contacts and budget boundaries before changes are made. You should be able to see what is running and where the traffic goes.",
+          "A competitive search market can make a broad campaign unaffordable for a small test. In that situation, the discussion is about a narrower service, location or goal. No proposal should turn a limited budget into a guarantee of ranking, enquiries or revenue."
+        ]
+      }
+    ],
+    updatedAt: "2026-09-16",
   "slug": "google-ads",
   "path": "/service/google-ads",
   "subtitle": "Campaign Setup & Optimisation",
@@ -180,20 +253,20 @@ export const serviceDetailData: ServiceDetail[] = [
     "showFaqShapes": false
   },
   "pricingTitle": "Custom Quotes",
-  "pricingText": "Fees depend on the agreed deliverables, timeline, and support. Your quote states inclusions, exclusions, revisions, and separate platform or tool costs.",
+  "pricingText": "Setup and ongoing management are quoted against the number of offers, campaign scope, tracking work and reporting needs. Google advertising spend is separate. Landing-page builds, feeds and substantial measurement repairs should be named in the quote if required. A realistic proposal states these costs before asking you to commit to a campaign.",
   "processTitle": "How We Work",
   "processSteps": [
     {
-      "label": "Agree the brief",
-      "text": "Review your business, goals, assets, and budget."
+      "label": "Review demand and scope.",
+      "text": "Map the actual services, eligible locations, existing account and landing pages."
     },
     {
-      "label": "Prepare and review",
-      "text": "Create the agreed work and get your feedback."
+      "label": "Check the path to an enquiry.",
+      "text": "Prepare ads and tracking, test the agreed actions and obtain launch approval."
     },
     {
-      "label": "Deliver and improve",
-      "text": "Check the deliverables and agree any ongoing support."
+      "label": "Review relevance and outcomes.",
+      "text": "Use available search terms and enquiry feedback to guide changes within the agreed budget."
     }
   ],
   "faqItems": [
@@ -219,6 +292,43 @@ export const serviceDetailData: ServiceDetail[] = [
   heroImage: serviceThumbnail
 },
 {
+    answerSections: [
+      {
+        "title": "Turn the offer into a production brief",
+        "paragraphs": [
+          "A request for five ads still leaves most of the important decisions open. We first agree who should respond, what is being offered, what evidence supports it and what the viewer should do next. Product availability, price conditions and the destination link need to match the message.",
+          "Bring your logo, brand guidance, product photographs, usable footage and examples of the style you prefer. If an asset is missing, decide whether it will be supplied, filmed, licensed or created before approving the production scope."
+        ]
+      },
+      {
+        "title": "Specify the deliverables precisely",
+        "bullets": [
+          "Static images, promotional graphics, edited video or a defined combination.",
+          "Concept count, copy variations, video lengths and requested export formats.",
+          "Hooks, scripts, captions and calls to action included in the brief.",
+          "Review stages, revision rounds and the person providing consolidated feedback.",
+          "Any filming, stock, voiceover, source-file delivery or usage rights expressly included in the quote."
+        ],
+        "paragraphs": [
+          "A resize adapts an approved concept to another format. A new message, new footage or a different offer can require a new concept. Naming the distinction makes both the price and the review process clearer."
+        ]
+      },
+      {
+        "title": "Review the message before polishing every frame",
+        "paragraphs": [
+          "For a video, approve the script and planned shots before the full edit. For a static ad, approve the message and visual direction before a set of variations. Check that the product is recognisable, the claim is supportable and the important text survives a small screen.",
+          "Final review should use the intended placement preview as well as the exported file. Captions, platform controls and cropping can obscure details that looked fine in an editing window. The handoff should identify which file belongs to which placement."
+        ]
+      },
+      {
+        "title": "Make each variation useful to test",
+        "paragraphs": [
+          "A useful variation answers a question. For example, does showing a product in use explain the offer better than listing features? Changing the headline, footage, offer and destination together makes it difficult to identify what helped.",
+          "Creative production does not itself include media buying or establish campaign performance. If testing support is part of the project, agree the comparison, naming and reporting first. Engagement, enquiries and sales answer different questions; a popular video is not proof of a profitable campaign."
+        ]
+      }
+    ],
+    updatedAt: "2026-09-16",
   "slug": "ad-creatives",
   "path": "/service/ad-creatives",
   "subtitle": "Design, Editing, Copy & Scripts",
@@ -257,20 +367,20 @@ export const serviceDetailData: ServiceDetail[] = [
     "showFaqShapes": false
   },
   "pricingTitle": "Custom Quotes",
-  "pricingText": "Fees depend on the agreed deliverables, timeline, and support. Your quote states inclusions, exclusions, revisions, and separate platform or tool costs.",
+  "pricingText": "Creative fees depend on the number of concepts and versions, asset availability, editing requirements, languages and revision scope. Filming, paid stock, voiceovers and source files should be listed separately where applicable. Ad spend and campaign management are not included unless the proposal explicitly adds them.",
   "processTitle": "How We Work",
   "processSteps": [
     {
-      "label": "Agree the brief",
-      "text": "Review your business, goals, assets, and budget."
+      "label": "Brief and collect assets.",
+      "text": "Agree the offer, message, formats, quantities and permission to use the supplied material."
     },
     {
-      "label": "Prepare and review",
-      "text": "Create the agreed work and get your feedback."
+      "label": "Approve the direction.",
+      "text": "Review the concept or script before producing the full set of assets."
     },
     {
-      "label": "Deliver and improve",
-      "text": "Check the deliverables and agree any ongoing support."
+      "label": "Check and deliver.",
+      "text": "Apply agreed revisions and check final files, captions, crops and destination details."
     }
   ],
   "faqItems": [
@@ -296,6 +406,43 @@ export const serviceDetailData: ServiceDetail[] = [
   heroImage: serviceThumbnail
 },
 {
+    answerSections: [
+      {
+        "title": "Where an AI presenter is useful",
+        "paragraphs": [
+          "An AI presenter can introduce a service, explain a process or narrate supplied product footage. The format is useful when you need a repeatable presentation and have accurate material to work from. It should be described as generated or AI-assisted where required by the intended use and platform.",
+          "It cannot supply a real customer's experience. A script claiming that the presenter bought a product, visited a business or achieved a personal result would be inappropriate if that never happened. If the message needs a genuine testimonial or physical demonstration, plan real participation and footage."
+        ]
+      },
+      {
+        "title": "Agree the script and source material",
+        "bullets": [
+          "Presenter style, script, pronunciation, language, length and intended publishing channel.",
+          "Approved product images, interface recordings, service facts and brand assets.",
+          "Editing, captions, music or voice requirements and export versions.",
+          "Permissions for any identifiable person, voice, likeness or licensed material.",
+          "Sample approval and revision boundaries before multiple versions are produced."
+        ],
+        "paragraphs": [
+          "A product demonstration should use accurate visuals of the product. Generated footage must not invent buttons, packaging, features or results that a buyer will expect to receive."
+        ]
+      },
+      {
+        "title": "Review one sample before scaling production",
+        "paragraphs": [
+          "Check names and numbers aloud. Review facial movement, cuts, pacing, captions and whether the presenter is pointing at the right thing. A short sample can reveal a pronunciation or visual problem before it is repeated across an entire batch.",
+          "For another language, review meaning, local availability, currency and the destination page as well as the translation. A fluent-sounding voice is not evidence that the commercial message is accurate. Your approval contact should understand the language used."
+        ]
+      },
+      {
+        "title": "Publishing needs its own checks",
+        "paragraphs": [
+          "Before delivery, agree the intended usage and review the current rules of the publishing platform. Disclosure, rights and factual accuracy are separate checks. Labelling a clip as AI-generated does not fix an unsupported product claim or a fabricated endorsement.",
+          "The deliverable is the agreed video asset and production work. Advertising approval, reach and conversion results depend on factors outside the edit and are not guaranteed. Campaign setup or testing can be discussed as a separate scope."
+        ]
+      }
+    ],
+    updatedAt: "2026-09-16",
   "slug": "ai-ugc-videos",
   "path": "/service/ai-ugc-videos",
   "subtitle": "AI Presenters, Demos & Explainers",
@@ -334,20 +481,20 @@ export const serviceDetailData: ServiceDetail[] = [
     "showFaqShapes": false
   },
   "pricingTitle": "Custom Quotes",
-  "pricingText": "Fees depend on the agreed deliverables, timeline, and support. Your quote states inclusions, exclusions, revisions, and separate platform or tool costs.",
+  "pricingText": "The quote depends on script length, presenter and voice requirements, supplied assets, editing complexity, languages and version count. Extra generations, changed scripts after approval and third-party licences can affect scope. The proposal should identify what is included and who approves each stage before production starts.",
   "processTitle": "How We Work",
   "processSteps": [
     {
-      "label": "Agree the brief",
-      "text": "Review your business, goals, assets, and budget."
+      "label": "Confirm the use case.",
+      "text": "Decide what the presenter can truthfully explain and what needs real supplied footage."
     },
     {
-      "label": "Prepare and review",
-      "text": "Create the agreed work and get your feedback."
+      "label": "Approve script and sample.",
+      "text": "Check the facts, pronunciation, style and permissions before full production."
     },
     {
-      "label": "Deliver and improve",
-      "text": "Check the deliverables and agree any ongoing support."
+      "label": "Deliver reviewed versions.",
+      "text": "Check captions, localization, export formats and the agreed publishing requirements."
     }
   ],
   "faqItems": [
@@ -403,10 +550,22 @@ export const serviceDetailData: ServiceDetail[] = [
   "highlightText": "Help customers find your business through website optimisation and Google Business Profile management.",
   "metaTitle": "SEO & Local SEO for Small Businesses | Reddystack",
   "relatedLinks": [
-    { "title": "Google Business Profile optimisation checklist", "path": "/blog/seo-local-seo/google-business-profile-optimization-checklist" },
-    { "title": "SEO for a service-area business", "path": "/blog/seo-local-seo/service-area-business-seo" },
-    { "title": "Local SEO costs and scope", "path": "/blog/seo-local-seo/local-seo-cost-india" },
-    { "title": "Meet Rahul Reddy Adelli", "path": "/about/rahul-reddy-adelli" }
+    {
+      "title": "Google Business Profile optimisation checklist",
+      "path": "/blog/seo-local-seo/google-business-profile-optimization-checklist"
+    },
+    {
+      "title": "SEO for a service-area business",
+      "path": "/blog/seo-local-seo/service-area-business-seo"
+    },
+    {
+      "title": "Local SEO costs and scope",
+      "path": "/blog/seo-local-seo/local-seo-cost-india"
+    },
+    {
+      "title": "Meet Rahul Reddy Adelli",
+      "path": "/about/rahul-reddy-adelli"
+    }
   ],
   "metaDescription": "Founder-led SEO and local SEO for small businesses. Website audits, service-page improvements, eligible Google Business Profiles, and clear enquiry reporting.",
   "presentation": {
@@ -426,7 +585,9 @@ export const serviceDetailData: ServiceDetail[] = [
     },
     {
       "title": "What your SEO scope can include",
-      "paragraphs": ["Choose the work that addresses your current gaps. The quote identifies which of these deliverables are included and whether changes are implemented by Reddystack or handed to your developer."],
+      "paragraphs": [
+        "Choose the work that addresses your current gaps. The quote identifies which of these deliverables are included and whether changes are implemented by Reddystack or handed to your developer."
+      ],
       "bullets": [
         "Technical review: inspect agreed pages for indexing, crawl access, canonical URLs, redirects, sitemap coverage, and mobile loading issues.",
         "Service-page improvements: clarify the offer, page titles, headings, service areas, internal links, and the next step for an enquiry.",
@@ -447,6 +608,14 @@ export const serviceDetailData: ServiceDetail[] = [
       "paragraphs": [
         "Review the agreed pages, relevant search queries, impressions, clicks, and successful enquiries alongside a dated change log. Where tracking is available, separate live-site visits from development traffic and test submissions.",
         "A click is not automatically a customer. Compare enquiry quality with your own business records, and use longer reporting periods when traffic is low. Reporting frequency and ongoing optimisation are agreed in the scope."
+      ]
+    },
+    {
+      "title": "Choose improvements the business can maintain",
+      "paragraphs": [
+        "A useful service page needs current information about the actual work: who it suits, where it is available, what is included and how a quote is prepared. More pages are worthwhile when they answer distinct questions. Repeating the same copy with different location names does not explain a business's real coverage.",
+        "Keep a record of approved business details and who can update the website, profiles and directory listings. Changes to hours, services or contact information should be reflected consistently. Reviews should come from real customers describing their own experience; demo work and illustrative examples should be labelled as such.",
+        "Before agreeing ongoing work, distinguish one-time repairs from regular maintenance. An audit, an implemented fix and a later change in search traffic are three separate things. Reporting should make the completed work and the evidence for subsequent decisions easy to understand."
       ]
     }
   ],
@@ -471,12 +640,20 @@ export const serviceDetailData: ServiceDetail[] = [
     {
       "question": "Do I need a Google Business Profile for website SEO?",
       "answer": "No. Website SEO can help an online-only business. Google Business Profiles are for eligible businesses that meet customers in person, either at a qualifying location or by visiting customers. We check eligibility before including profile work.",
-      "some_features": ["Website SEO", "Eligibility Check", "Actual Service Areas"]
+      "some_features": [
+        "Website SEO",
+        "Eligibility Check",
+        "Actual Service Areas"
+      ]
     },
     {
       "question": "Is this an audit or an ongoing monthly service?",
       "answer": "It can be an audit, agreed implementation work, or ongoing support. The quote identifies the pages and profiles covered, who makes each change, and the reporting schedule. A new website or paid advertising campaign is scoped separately.",
-      "some_features": ["Defined Deliverables", "Implementation Scope", "Agreed Reporting"]
+      "some_features": [
+        "Defined Deliverables",
+        "Implementation Scope",
+        "Agreed Reporting"
+      ]
     },
     {
       "question": "Can you guarantee a ranking or a result date?",
@@ -502,6 +679,60 @@ export const serviceDetailData: ServiceDetail[] = [
   heroImage: serviceThumbnail
 },
   {
+    pricingText: "The estimate depends on page types, content readiness, integrations, migration and support. Domain, hosting, paid tools and maintenance should be visible in the proposal. A smaller first release can be sensible when it covers a complete customer journey; removing essential form checks or accessibility is not a useful cost saving.",
+    pricingTitle: "Quote the functionality as well as the pages",
+    processSteps: [
+      {
+        "label": "Map pages and responsibilities.",
+        "text": "Agree the content, functionality, assets and people needed for the build."
+      },
+      {
+        "label": "Build and review the journeys.",
+        "text": "Review actual pages and interactions, with feedback consolidated at agreed stages."
+      },
+      {
+        "label": "Check launch and handover.",
+        "text": "Test forms, links, devices and launch settings, then document the agreed access and support."
+      }
+    ],
+    processTitle: "From brief to checked release",
+    answerSections: [
+      {
+        "title": "Plan the pages around real customer questions",
+        "paragraphs": [
+          "A business website needs to explain what you do, who it is for, what the work involves and how to enquire. We use those questions to plan the page list and navigation. A campaign landing page, a service website and an online store need different content and different acceptance checks.",
+          "Bring existing URLs, your service details, photographs, brand assets and the action you want visitors to take. If the project replaces a live site, existing pages and links need to be accounted for before changing the structure."
+        ]
+      },
+      {
+        "title": "What the agreed build can cover",
+        "bullets": [
+          "Page planning, content structure and a responsive interface for the selected scope.",
+          "Service pages, landing pages, product pages or other explicitly agreed templates.",
+          "Page titles, headings, internal links and crawl-friendly technical foundations.",
+          "Forms and integrations with defined success and failure behaviour.",
+          "Mobile, accessibility and performance checks alongside launch and handover requirements."
+        ],
+        "paragraphs": [
+          "Copywriting, migration, ecommerce, booking systems, multilingual content and custom account areas should be named individually. Calling a project a five-page website does not describe the work hidden behind a payment or booking button."
+        ]
+      },
+      {
+        "title": "Test the enquiry path as well as the design",
+        "paragraphs": [
+          "A form that looks finished can still send mail to the wrong address, clear a message after a failure or count every button click as a lead. The project should define what successful delivery means and what the visitor sees when something goes wrong.",
+          "Review small screens, keyboard access, readable labels and the actual content. Large media and third-party widgets need a reason to be there. Performance work should focus on the visitor's experience, with measurements used to identify specific problems rather than as a substitute for testing."
+        ]
+      },
+      {
+        "title": "Keep the website operable after launch",
+        "paragraphs": [
+          "The business should retain ownership of its domain, hosting and relevant accounts. Agree who can change content, who receives enquiries and who handles renewals. Handover should cover the assets and access included in the project.",
+          "A launch is not a guarantee of search traffic. Search visibility also depends on useful content, competition and ongoing maintenance. Backups, updates, new pages and post-launch support need explicit ownership and scope so the site can remain useful after the initial build."
+        ]
+      }
+    ],
+    updatedAt: "2026-09-16",
     slug: 'seo-websites',
     path: '/service/seo-websites',
     subtitle: 'Business Websites, Online Stores & Landing Pages',
@@ -566,14 +797,68 @@ export const serviceDetailData: ServiceDetail[] = [
     ...sharedImages,
   },
   {
+    pricingText: "Applications are quoted by workflows, roles, data, integrations and platform requirements. Payment handling, offline use, migration and app-store delivery can change the scope substantially. The proposal should also separate hosting, usage-based services and ongoing maintenance from implementation.",
+    pricingTitle: "What changes the estimate",
+    processSteps: [
+      {
+        "label": "Map the work.",
+        "text": "Identify users, records, permissions and the most important complete journey."
+      },
+      {
+        "label": "Review a working slice.",
+        "text": "Build the main flow with realistic data and agree feedback before adding more features."
+      },
+      {
+        "label": "Check release readiness.",
+        "text": "Verify permissions and failure paths, then agree deployment, handover and support."
+      }
+    ],
+    processTitle: "How an application is scoped",
+    answerSections: [
+      {
+        "title": "When a website is no longer enough",
+        "paragraphs": [
+          "A website explains an offer and captures interest. An application usually maintains state: who signed in, what they are allowed to see, which record changed and what happens next. Examples include internal dashboards, customer portals and booking workflows.",
+          "Describe the work currently done in spreadsheets, messages or separate tools. Include the exceptions: a cancelled booking, a duplicate request or a user who leaves the business. Those details reveal more about the required application than a list of attractive screens."
+        ]
+      },
+      {
+        "title": "Define the rules behind each screen",
+        "bullets": [
+          "User roles, sign-in and permission boundaries for each action.",
+          "Data fields, validation, record ownership and how information is corrected.",
+          "The main workflow and its empty, loading, error and completion states.",
+          "Notifications and integrations, including what happens when a provider is unavailable.",
+          "Administration, support, deployment and agreed handover requirements."
+        ],
+        "paragraphs": [
+          "Web, mobile-first web and native mobile delivery are different scopes. Device features, offline needs, distribution and maintenance should guide the choice. A responsive website should not be described as an app-store application unless that delivery is actually included."
+        ]
+      },
+      {
+        "title": "Build one complete workflow before adding breadth",
+        "paragraphs": [
+          "For a hypothetical booking tool, a useful first slice includes availability, a valid booking, confirmation and cancellation rules. A calendar screen alone does not prove the process works. Tests should also cover two people trying to reserve the same resource and a failed notification.",
+          "Release review needs representative data and more than the developer's account. A user should not be able to read or change another person's records merely by changing a link. The exact checks depend on the application's data and permissions, but they belong in the build scope."
+        ]
+      },
+      {
+        "title": "Plan who operates the application",
+        "paragraphs": [
+          "Agree who receives error reports, handles user questions, manages account access and pays for hosting or external services. Backups are useful only when restoration and responsibility are understood. Export and handover requirements should be discussed before the data model becomes difficult to change.",
+          "Further features, ongoing maintenance and response expectations need a separate agreement where they extend beyond delivery. A clear first release gives you something usable and a better basis for deciding what to build next."
+        ]
+      }
+    ],
+    updatedAt: "2026-09-16",
     slug: 'applications',
     path: '/service/applications',
     subtitle: 'Product Builds',
     title: 'Web & Mobile Applications',
     introPrimary:
-      'Web and mobile applications at Reddystack are built for founders and businesses that need functional digital products, not just polished mockups. The focus is on planning what matters, building the right flows, and shipping something people can actually use.',
+      "Build a web or mobile application around a job people need to complete: manage a request, update a record, book a resource or use a product account.",
     introSecondary:
-      'This service is ideal for internal tools, customer-facing apps, and product ideas that need a practical build path with founder-led execution.',
+      "The first step is to define users, permissions and the complete workflow. Platform choice and features follow that scope.",
     overviewPrimary:
       'The work covers product architecture, screen planning, feature prioritization, and implementation support so the application is easier to build, easier to explain, and easier to operate after launch. Core journeys are shaped first, then the rest of the build follows real use cases instead of speculation.',
     overviewSecondary:
@@ -629,14 +914,68 @@ export const serviceDetailData: ServiceDetail[] = [
     ...sharedImages,
   },
   {
+    pricingText: "The quote depends on the core workflow, permissions, integrations, data and release requirements. A prototype for a presentation and a product handling real user accounts are different deliverables. Hosting, external services and subsequent feature work are identified separately in the proposal.",
+    pricingTitle: "Scope determines the first-release cost",
+    processSteps: [
+      {
+        "label": "Choose the test.",
+        "text": "Agree the target user, problem, learning goal and essential workflow."
+      },
+      {
+        "label": "Build and check.",
+        "text": "Implement the workflow, review it with realistic examples and verify important failure paths."
+      },
+      {
+        "label": "Release and observe.",
+        "text": "Agree operating responsibilities, feedback collection and what would justify another iteration."
+      }
+    ],
+    processTitle: "A bounded first release",
+    answerSections: [
+      {
+        "title": "Name the assumption the release should test",
+        "paragraphs": [
+          "An MVP is useful when it answers a business question. Will a particular customer use this workflow? Can they complete it without explanation? Is the output useful enough to return for? A long list of features can delay those answers without making the test stronger.",
+          "Start with one user type and one complete task. For a hypothetical request marketplace, that might be submitting a request and receiving a relevant response. Recommendations, loyalty points and a complex dashboard can wait until the main exchange has a reason to exist."
+        ]
+      },
+      {
+        "title": "Separate manual operations from essential safeguards",
+        "paragraphs": [
+          "Some early work can happen manually, such as reviewing a request or sending an approved update. State those manual steps openly and assign an owner. They let you test demand without building every administrative screen.",
+          "Permission checks, valid records, clear payment behaviour and protection against losing user work are different. They are part of making the first version usable. A reduced scope should narrow the product, not leave users guessing whether their submission or payment succeeded."
+        ],
+        "bullets": [
+          "One agreed core journey and a short list of release requirements.",
+          "Explicit manual steps, exclusions and follow-up responsibilities.",
+          "A way to observe completion and collect useful feedback.",
+          "Acceptance checks for the main journey and important failure cases."
+        ]
+      },
+      {
+        "title": "Use AI-assisted development with review",
+        "paragraphs": [
+          "AI-assisted tools can help produce code and explore implementation options, but generated output still needs review. The project is judged by the working behaviour, permissions and maintainability of the release, not by how quickly a screen can be produced.",
+          "Keep third-party services and technical choices understandable. A simple implementation that the owner can operate is more valuable than a collection of experimental tools with unclear costs or access. Any material limitations should be visible at handover."
+        ]
+      },
+      {
+        "title": "Decide what happens after the first users",
+        "paragraphs": [
+          "Record what people tried, where they stopped and what help they needed. A small sample can reveal usability problems, but it does not automatically establish demand or product-market fit. Combine observations with conversations and the business's actual acquisition process.",
+          "The next release should respond to evidence: a repeated obstacle, a missing operational step or a feature customers actually need. New ideas can stay in a backlog until there is a reason to prioritise them."
+        ]
+      }
+    ],
+    updatedAt: "2026-09-16",
     slug: 'mvp-builds',
     path: '/service/mvp-builds',
     subtitle: 'Startup Launches',
     title: 'MVP Builds',
     introPrimary:
-      'MVP Builds at Reddystack are for founders who need to validate an idea quickly without shipping a messy product. The emphasis is on scope control, fast execution, and building only what helps the product reach proof, feedback, or traction.',
+      "Turn a product idea into a first release that lets a real user complete the job you want to test.",
     introSecondary:
-      'This service fits startup launches, founder ideas, internal tools, and experiments that need a usable version in market instead of endless planning cycles.',
+      "We define the essential workflow, the learning goal and the release boundaries before expanding the feature list.",
     overviewPrimary:
       'The workflow covers lean feature scoping, Vibe Coding-assisted execution, core user journey planning, and release structure that keeps the product understandable to early users. The build stays focused so launch happens faster and iteration stays practical after release.',
     overviewSecondary:
@@ -692,14 +1031,68 @@ export const serviceDetailData: ServiceDetail[] = [
     ...sharedImages,
   },
   {
+    pricingText: "Cost depends on connected systems, permissions, data complexity, approval steps and failure handling. Model usage, automation subscriptions and other third-party charges are separate where applicable. Share the expected volume and existing tools so recurring costs and operating responsibilities can be discussed before implementation.",
+    pricingTitle: "Quote the workflow and its operation",
+    processSteps: [
+      {
+        "label": "Document a real example.",
+        "text": "Identify inputs, output requirements, exceptions and the current owner."
+      },
+      {
+        "label": "Build a limited workflow.",
+        "text": "Use rules where possible and add AI only for the parts that need interpretation."
+      },
+      {
+        "label": "Check and hand over.",
+        "text": "Test failures and duplicates, then document approval, monitoring and recovery steps."
+      }
+    ],
+    processTitle: "From a manual task to a checked workflow",
+    answerSections: [
+      {
+        "title": "Map the process before choosing a tool",
+        "paragraphs": [
+          "Bring a recent example of the work: where it arrives, who handles it, which systems it touches and what a correct result looks like. Include the awkward cases, such as missing information, duplicate messages and requests that need judgement.",
+          "A fixed rule may solve part of the problem more reliably than a model. For example, routing a form by its selected service does not require AI. Summarising a long free-text request may benefit from AI, provided the summary is checked before it drives an important action."
+        ]
+      },
+      {
+        "title": "Define the automation's boundary",
+        "bullets": [
+          "The trigger, accepted inputs and systems the workflow may access.",
+          "Validation, duplicate handling and the required output format.",
+          "Actions allowed automatically and actions held for human approval.",
+          "Logs, failure notifications and a way to pause or recover the process.",
+          "Account ownership, data handling and usage-based platform costs."
+        ],
+        "paragraphs": [
+          "An enquiry-drafting workflow, for example, can prepare a suggested response while keeping the actual send under human control. That boundary should be explicit rather than left to a prompt to infer."
+        ]
+      },
+      {
+        "title": "Test exceptions before expanding volume",
+        "paragraphs": [
+          "Use normal examples and deliberate failures: empty fields, contradictory instructions, an unavailable provider and the same event delivered twice. The workflow should not create two records or send two messages because a retry occurred.",
+          "AI output can be incomplete or incorrect even when it sounds confident. Check required fields and source facts before passing the result onward. Customer messages and imported documents are inputs to process, not permission to change the workflow's rules or expose private data."
+        ]
+      },
+      {
+        "title": "Measure the work that remains",
+        "paragraphs": [
+          "Compare the previous handling time with the time spent reviewing, correcting and recovering automated work. A process that generates drafts quickly but requires extensive repairs may not be saving useful effort. Start with a bounded workflow so this is easy to observe.",
+          "Agree who monitors failures and updates the process when a form, API or business rule changes. Ongoing operation is separate from a one-time implementation unless the proposal includes it. The business should retain access to the accounts needed to operate or pause the workflow."
+        ]
+      }
+    ],
+    updatedAt: "2026-09-16",
     slug: 'ai-automations',
     path: '/service/ai-automations',
     subtitle: 'Workflow Systems',
     title: 'AI Automations',
     introPrimary:
-      'AI Automations at Reddystack help businesses reduce repetitive work, improve execution speed, and turn manual processes into repeatable systems. The focus is not novelty for its own sake, but practical automation that removes friction from real operations.',
+      "Automate a repetitive business process with clear inputs, checked outputs and a person responsible when something needs attention.",
     introSecondary:
-      'This service is ideal for founders, lean teams, and operators who want faster turnaround without hiring for every repetitive task or relying on scattered tools.',
+      "Suitable starting points include enquiry routing, draft preparation, record updates and internal summaries. The workflow decides whether AI is useful.",
     overviewPrimary:
       'The work covers workflow mapping, automation planning, Prompt Engineering, and implementation across customer handling, content operations, and internal processes. The goal is to make repetitive business actions more consistent, trackable, and easier to scale.',
     overviewSecondary:

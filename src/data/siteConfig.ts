@@ -91,7 +91,7 @@ export const pageSeo = {
   portfolio: {
     title: "Portfolio | Selected Work | Reddystack",
     description:
-      "See selected Reddystack work across websites, product builds, MVP launches, and automation systems created with premium execution and clear outcomes.",
+      "Explore six personal and demo projects covering websites, product interfaces and automation, with clear descriptions of their purpose and design priorities.",
     path: "/portfolio",
   },
   blog: {

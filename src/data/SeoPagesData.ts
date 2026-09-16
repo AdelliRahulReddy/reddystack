@@ -7,6 +7,7 @@ export type SeoContentPage = Pick<TrustPageData, 'title' | 'subtitle' | 'intro' 
   description: string;
   kind: 'guide' | 'hub' | 'service' | 'location' | 'profile';
   publishedAt?: string;
+  updatedAt?: string;
 };
 
 export const seoPages = content as SeoContentPage[];

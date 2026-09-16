@@ -49,49 +49,61 @@ export const portfolioProjects: PortfolioProject[] = [
     title: 'KalyamRam',
     category: 'Portfolio Website',
     year: 2025,
-    client: 'Kalyam Ram',
+    client: "Personal / demo project",
     role: 'Strategy, UI/UX, Frontend Build',
     services: ['Website Development', 'Portfolio Website', 'Responsive Website Development'],
     summary:
-      'A clean personal portfolio built to make services, proof, and contact intent easier to understand in one pass.',
+      "A personal portfolio demo exploring how to introduce a person, present work and guide a visitor to contact.",
     heroDescription:
-      'KalyamRam was shaped as a founder-style portfolio website with stronger hierarchy, cleaner storytelling, and a more direct path from first impression to inquiry.',
+      "A personal/demo website project focused on the order of information: introduction, capabilities, selected work and contact. This is not a paid client case study.",
     heroStats: [
-      { value: '01', label: 'personal brand website direction' },
-      { value: '03', label: 'core service themes clarified' },
-      { value: '100%', label: 'responsive presentation focus' },
+      {
+        "value": "01",
+        "label": "Introduce the person"
+      },
+      {
+        "value": "02",
+        "label": "Explain the work"
+      },
+      {
+        "value": "03",
+        "label": "Make contact clear"
+      }
     ],
-    aboutTitle: 'A sharper portfolio experience for a personal brand that needed more clarity.',
+    aboutTitle: "A portfolio should answer more than who built it.",
     aboutDescription: [
-      'This project focused on presenting work, positioning, and credibility in a way that felt lighter and more intentional than a generic portfolio template.',
-      'The direction was to keep the visual language premium while making the content easier to scan across desktop and mobile without losing personality.',
+      "KalyamRam explores a familiar portfolio problem: a visitor sees a name and visual work but has to work out what the person offers or why a project matters. The design direction groups the introduction, capabilities and selected work into an understandable sequence.",
+      "The central content decision is to give the work context. A project title or image alone does not explain the problem, the person's role or what was produced. Short descriptions can provide that context without turning the opening page into a lengthy biography.",
+      "Contact belongs near the decision to enquire. A visitor who has understood the work should be able to find the next step without returning to the top or choosing among several unrelated actions. On a smaller screen, readable descriptions and an obvious link matter more than preserving a desktop composition exactly.",
+      "This is personal/demo work. The page describes the intended structure and design focus; it does not report client enquiries, usability-study results or commercial improvements. Those outcomes would require evidence from a real deployment and its users.",
+      "For a similar portfolio, prepare an introduction, a short capability list and a factual note for each project. Identify personal, demo and client work accurately. The useful review question is whether a new visitor can explain what you do and where to contact you after reading the page."
     ],
     overviewLead:
-      'The build centered on simplifying the page flow so visitors could quickly understand who the brand is, what is offered, and where to take action.',
+      "The project can be reviewed through three practical questions. They describe the design priorities, rather than measured performance results.",
     overviewPoints: [
-      'Restructured the content flow around introduction, proof, capabilities, and contact.',
-      'Reduced visual noise so the project sections and call to action felt more deliberate.',
-      'Tuned the responsive layout to keep the same clarity on smaller screens.',
+      "Introduction: can a visitor identify the person, focus and type of work without interpreting vague claims?",
+      "Project context: does each example explain its purpose and the role involved?",
+      "Contact: is the next action easy to find after the visitor has reviewed the work, including on a phone?"
     ],
     results: [
       {
-        value: '04',
-        label: 'core sections clarified for faster scanning and stronger story flow',
+        "value": "01",
+        "label": "Clear introduction and capabilities"
       },
       {
-        value: '01',
-        label: 'direct inquiry path added instead of splitting attention across multiple actions',
+        "value": "02",
+        "label": "Project descriptions with context"
       },
       {
-        value: '03',
-        label: 'service themes made easier to understand at a glance',
-      },
+        "value": "03",
+        "label": "A visible contact path"
+      }
     ],
     ctaLabel: 'Start Similar Project',
     ctaHref: '/contact',
-    metaTitle: 'KalyamRam | Portfolio Website Case Study | Reddystack',
+    metaTitle: "KalyamRam Portfolio Website Demo | Reddystack",
     metaDescription:
-      'See how Reddystack shaped the KalyamRam portfolio website with cleaner structure, stronger positioning, and an improved inquiry flow.',
+      "Explore a personal portfolio demo focused on introduction, project context and contact flow. Personal work, with no paid client or performance claims.",
     listingImage: kalyamRamImage,
     listingBackgroundImage: '/assets/img/portfolio/port-inner-up-1.jpg',
     thumbVariant: 4,
@@ -104,49 +116,61 @@ export const portfolioProjects: PortfolioProject[] = [
     title: 'Multi-Format Converter',
     category: 'File Tool',
     year: 2025,
-    client: 'Internal Product Build',
+    client: "Personal / demo project",
     role: 'Product Planning, UI Flow, App Build',
     services: ['Custom Web Application', 'Tool UX', 'Workflow Application'],
     summary:
-      'A utility-focused product concept designed to make file conversion simpler, faster, and easier to navigate for repeat use.',
+      "A file-conversion tool concept organised around selecting a file, choosing an output and understanding the result.",
     heroDescription:
-      'Multi-Format Converter was approached as a lightweight product experience where speed, clarity, and low-friction interaction mattered more than visual excess.',
+      "A personal/demo utility project exploring a short, understandable conversion journey. The focus is the interface and workflow described here, not a claim about production usage or supported formats.",
     heroStats: [
-      { value: '03', label: 'main steps in the product flow' },
-      { value: '01', label: 'focused utility interface' },
-      { value: '24/7', label: 'repeat-use tool positioning' },
+      {
+        "value": "01",
+        "label": "Select the input"
+      },
+      {
+        "value": "02",
+        "label": "Choose the output"
+      },
+      {
+        "value": "03",
+        "label": "Understand the result"
+      }
     ],
-    aboutTitle: 'A focused tool interface built around utility, not clutter.',
+    aboutTitle: "Make the next step clear in a small utility.",
     aboutDescription: [
-      'The core challenge was keeping the product straightforward enough for first-time users while still feeling credible and polished.',
-      'The interface needed to support quick actions, clear format choices, and a simpler conversion journey without unnecessary steps.',
+      "Multi-Format Converter explores how a single-purpose tool can explain its operation without making a user learn a complex interface. The core sequence is file selection, format choice and an output state. Each step should make the next decision apparent.",
+      "A converter's interface needs more than an upload button. People need to understand which input they selected and what the requested output means. A concise description beside the choice can be more useful than several decorative controls competing for attention.",
+      "The design direction keeps the utility's action central. First-time users need orientation, while repeat users need a short route through familiar steps. Clear state changes help both groups understand whether the tool is waiting, processing or ready to present a result.",
+      "This is a personal/demo product concept. No conversion-success rate, customer count, processing-speed benchmark or production availability is reported. The portfolio description should not be used as a specification of supported file types, limits or data retention.",
+      "For a production brief, those missing operational details would need explicit decisions. Define supported formats, size limits, failed-file handling, output naming and where files are processed or retained. Review an unsupported input and an interrupted operation alongside the successful journey before inviting users to depend on it."
     ],
     overviewLead:
-      'The design direction prioritized a minimal workflow so the user could move from file selection to conversion outcome with as little hesitation as possible.',
+      "The concept provides a way to discuss the user journey. Production capabilities would need their own implementation and verification.",
     overviewPoints: [
-      'Simplified the interaction flow around upload, format choice, and output.',
-      'Kept the visual treatment restrained so the product behavior stayed primary.',
-      'Structured the interface to feel useful for both one-time and repeated use cases.',
+      "Input clarity: show the selected file and communicate accepted formats and limits for the actual implementation.",
+      "Choice clarity: describe the output format so users understand what they are requesting.",
+      "Outcome clarity: distinguish a successful output from a failed or incomplete conversion without implying that a button click finished the job."
     ],
     results: [
       {
-        value: '03',
-        label: 'main steps reduced into a clearer conversion journey',
+        "value": "01",
+        "label": "Visible file selection"
       },
       {
-        value: '01',
-        label: 'single-purpose interface kept the product easier to understand',
+        "value": "02",
+        "label": "An understandable format choice"
       },
       {
-        value: '24',
-        label: 'hour-style utility positioning supported quick repeat usage',
-      },
+        "value": "03",
+        "label": "A distinct output state"
+      }
     ],
     ctaLabel: 'Discuss Utility Build',
     ctaHref: '/contact',
-    metaTitle: 'Multi-Format Converter | File Tool Case Study | Reddystack',
+    metaTitle: "Multi-Format Converter Demo Project | Reddystack",
     metaDescription:
-      'Explore the Multi-Format Converter case study and see how Reddystack planned a clearer file-tool experience around speed and usability.',
+      "A personal file-tool concept exploring upload, format selection and output states. Read the workflow decisions and the limits of the demo.",
     listingImage: multiFormatConverterImage,
     listingBackgroundImage: '/assets/img/portfolio/port-inner-up-4.jpg',
     thumbVariant: 4,
@@ -158,49 +182,61 @@ export const portfolioProjects: PortfolioProject[] = [
     title: 'Telegram Auto-Reply Bot',
     category: 'Automation',
     year: 2025,
-    client: 'Internal Automation Experiment',
+    client: "Personal / demo project",
     role: 'Workflow Design, Prompt Logic, Bot Setup',
     services: ['AI Automation', 'Telegram Automation', 'Lead Handling Flow'],
     summary:
-      'An automation-focused build designed to reduce response delay and create a more consistent first-touch experience inside Telegram.',
+      "An internal automation experiment exploring common reply paths and when a conversation needs a person.",
     heroDescription:
-      'Telegram Auto-Reply Bot was planned as a practical automation layer that could handle common replies, reduce manual lag, and keep conversations moving.',
+      "A personal/demo Telegram automation project focused on repeated questions, response paths and handoff. No live customer-service results or response-time improvement is claimed.",
     heroStats: [
-      { value: '05', label: 'common reply paths mapped' },
-      { value: '02', label: 'handoff outcomes defined' },
-      { value: '01', label: 'repeatable response system' },
+      {
+        "value": "01",
+        "label": "Recognise a supported request"
+      },
+      {
+        "value": "02",
+        "label": "Provide a useful response"
+      },
+      {
+        "value": "03",
+        "label": "Hand off when needed"
+      }
     ],
-    aboutTitle: 'Automation built around response speed and consistent first contact.',
+    aboutTitle: "Keep a first reply useful and its limits visible.",
     aboutDescription: [
-      'The project goal was not novelty. It was operational usefulness: faster handling of repeated questions and a cleaner handoff from inbound message to next step.',
-      'That required response logic that felt structured enough to trust while staying lightweight enough to maintain.',
+      "Telegram Auto-Reply Bot explores a narrow operational task: handling common incoming messages and directing the conversation toward a useful next step. The aim of the concept is to organise repeatable reply paths rather than pretend every message can be resolved automatically.",
+      "The important planning question is what the automation is allowed to answer. A supported request can receive an approved response or a request for missing information. An unclear or unsupported question needs a fallback that does not trap the person in a loop.",
+      "A handoff needs context. When a conversation requires a person, the useful information is the original request, any details already supplied and the reason the automated path stopped. Asking the user to start over can remove much of the convenience of an immediate reply.",
+      "This is personal/demo work and an internal experiment. The page does not establish production reliability, a reduction in workload or any paid client deployment. The scope described here is a basis for discussing reply logic and boundaries.",
+      "Before using a similar workflow for a real business, define account ownership, allowed actions, duplicate-message handling and who monitors failures. Test unknown requests and repeated events. Any action that sends messages or changes records needs explicit authorisation and a way to pause the process."
     ],
     overviewLead:
-      'The system was shaped around common inbound scenarios so the automation could support the conversation instead of turning into a brittle scripted wall.',
+      "The useful review is whether each supported path has an understandable response and each unsupported path has an honest exit.",
     overviewPoints: [
-      'Mapped reply paths around frequent message intent and simple next actions.',
-      'Focused on consistency so the first response felt faster and more reliable.',
-      'Kept the automation scope practical to reduce maintenance overhead.',
+      "Map common requests to approved responses instead of relying on vague all-purpose replies.",
+      "Keep clarification and human handoff available when the request falls outside the supported scope.",
+      "For a live implementation, verify duplicate handling, permissions and monitoring before relying on automated responses."
     ],
     results: [
       {
-        value: '05',
-        label: 'common reply paths organized into a clearer automation structure',
+        "value": "01",
+        "label": "Defined reply boundaries"
       },
       {
-        value: '01',
-        label: 'repeatable first-response system created for inbound conversations',
+        "value": "02",
+        "label": "Clear next steps"
       },
       {
-        value: '02',
-        label: 'handoff outcomes defined for reply, qualify, or escalate flows',
-      },
+        "value": "03",
+        "label": "A human handoff plan"
+      }
     ],
     ctaLabel: 'Discuss Automation Build',
     ctaHref: '/contact',
-    metaTitle: 'Telegram Auto-Reply Bot | Automation Case Study | Reddystack',
+    metaTitle: "Telegram Auto-Reply Bot Demo | Reddystack",
     metaDescription:
-      'Review the Telegram Auto-Reply Bot case study and how Reddystack turned repeated messaging tasks into a cleaner automation flow.',
+      "A personal Telegram automation experiment exploring common replies, fallback paths and human handoff, without client or performance claims.",
     listingImage: telegramBotImage,
     listingBackgroundImage: '/assets/img/portfolio/port-inner-up-5.jpg',
     thumbVariant: 4,
@@ -213,49 +249,61 @@ export const portfolioProjects: PortfolioProject[] = [
     title: 'GitWall App',
     category: 'Developer Tool',
     year: 2025,
-    client: 'Internal Product Build',
+    client: "Personal / demo project",
     role: 'Product Design, UX Direction, Build Execution',
     services: ['Custom Web App', 'Dashboard UX', 'MVP Development'],
     summary:
-      'A developer-facing product concept designed to present technical activity in a more visual, useful, and productized way.',
+      "A developer-tool concept exploring product explanation, first-use orientation and a readable interface.",
     heroDescription:
-      'GitWall App was shaped as a lightweight developer tool with stronger presentation, simpler navigation, and a clearer understanding of what the product does.',
+      "A personal/demo developer-facing product project. The work described focuses on explaining the tool and helping a visitor understand its first-use journey.",
     heroStats: [
-      { value: '06', label: 'core interface zones shaped' },
-      { value: '03', label: 'product layers clarified' },
-      { value: '01', label: 'developer-focused utility' },
+      {
+        "value": "01",
+        "label": "Explain the purpose"
+      },
+      {
+        "value": "02",
+        "label": "Orient the user"
+      },
+      {
+        "value": "03",
+        "label": "Keep the interface readable"
+      }
     ],
-    aboutTitle: 'A developer tool positioned with more product clarity and less friction.',
+    aboutTitle: "Explain a technical idea before adding more interface.",
     aboutDescription: [
-      'Developer tools often become feature-first and explanation-light. This project aimed to make the experience easier to understand without losing the technical feel.',
-      'The interface direction focused on cleaner product framing, faster orientation, and a more credible first-use experience.',
+      "GitWall App explores the presentation of a developer-facing utility. Technical users still need to understand what a product does, what information it uses and what action to take first. A dense interface cannot supply that explanation on its own.",
+      "The design direction gives the product's purpose a place before deeper interaction. Clear labels and an understandable starting point help a visitor assess whether the tool is relevant. The visual language can remain technical without assuming every visitor already knows the workflow.",
+      "First-use and repeated-use needs differ. A new user needs context for an empty screen, while a returning user may want direct access to familiar information. Those states should be considered together so guidance does not become a permanent obstacle to routine use.",
+      "This page describes a personal/demo concept. It does not claim a production integration, a verified feature inventory, adoption figures or a measured improvement in developer productivity. Those claims would require separate evidence.",
+      "For a similar live tool, the brief should identify the source of data, required permissions, refresh behaviour and what happens when access expires. Before adding more interface areas, check whether a user can explain the product's purpose and complete the intended first action with representative information."
     ],
     overviewLead:
-      'The work focused on turning a utility idea into a more legible product surface with stronger hierarchy and a better explanation of value.',
+      "The project centres on product communication and orientation. It is presented as design and development exploration rather than commercial proof.",
     overviewPoints: [
-      'Improved the way the product communicates purpose before showing deeper functionality.',
-      'Balanced developer-oriented visuals with a cleaner onboarding feel.',
-      'Kept the structure modular so future features could expand without weakening the base flow.',
+      "Describe the product's purpose before asking the visitor to interpret technical details.",
+      "Make the initial state and first useful action understandable, including when no data is available.",
+      "Keep any future capability claims tied to functionality that has actually been implemented and checked."
     ],
     results: [
       {
-        value: '03',
-        label: 'product layers defined around value, interaction, and future extensibility',
+        "value": "01",
+        "label": "A clear product explanation"
       },
       {
-        value: '01',
-        label: 'clearer positioning pass for a developer-facing audience',
+        "value": "02",
+        "label": "First-use orientation"
       },
       {
-        value: '06',
-        label: 'core interface zones shaped around faster orientation',
-      },
+        "value": "03",
+        "label": "Readable information hierarchy"
+      }
     ],
     ctaLabel: 'Build a Product Like This',
     ctaHref: '/contact',
-    metaTitle: 'GitWall App | Developer Tool Case Study | Reddystack',
+    metaTitle: "GitWall App Developer-Tool Demo | Reddystack",
     metaDescription:
-      'See how Reddystack approached GitWall App as a clearer, more productized developer-tool experience.',
+      "A personal developer-tool concept focused on product explanation and first-use clarity. Explore the design priorities and scope of the demo.",
     listingImage: gitWallImage,
     listingBackgroundImage: '/assets/img/portfolio/port-inner-up-2.jpg',
     thumbVariant: 4,
@@ -268,49 +316,61 @@ export const portfolioProjects: PortfolioProject[] = [
     title: 'ReelsXpress',
     category: 'Social Media',
     year: 2025,
-    client: 'ReelsXpress',
+    client: "Personal / demo project",
     role: 'Brand Landing Page, UX Polish, Conversion Direction',
     services: ['Landing Page Development', 'Lead Generation Page', 'Offer Structuring'],
     summary:
-      'A landing-page-style brand surface built to present social-media services with stronger hierarchy, pricing clarity, and a more premium feel.',
+      "A service-website demo exploring how offer details, pricing information and contact actions fit into a clear page sequence.",
     heroDescription:
-      'ReelsXpress focused on making the offer easier to trust and easier to act on through sharper section sequencing, more confident presentation, and cleaner mobile behavior.',
+      "A personal/demo service-website project focused on offer presentation, section order and mobile readability. This portfolio entry does not report paid client work or campaign results.",
     heroStats: [
-      { value: '03', label: 'key conversion sections tightened' },
-      { value: '01', label: 'premium landing direction' },
-      { value: '02', label: 'stronger CTA layers added' },
+      {
+        "value": "01",
+        "label": "Explain the offer"
+      },
+      {
+        "value": "02",
+        "label": "Clarify the scope"
+      },
+      {
+        "value": "03",
+        "label": "Guide the enquiry"
+      }
     ],
-    aboutTitle: 'A more premium landing experience for a service-led social media brand.',
+    aboutTitle: "Help a visitor compare the service before asking them to enquire.",
     aboutDescription: [
-      'The project direction centered on reducing generic template feel and replacing it with clearer offer positioning, better content rhythm, and more intentional calls to action.',
-      'The final structure leaned into a cleaner editorial feel while keeping the page conversion-oriented.',
+      "ReelsXpress explores the structure of a website presenting social-media services. The design problem is practical: visitors need to understand what is offered, what a package includes and how to discuss their needs without decoding a long series of promotional claims.",
+      "Section order matters because each part should answer the next reasonable question. An introduction establishes the offer, scope information explains what is delivered and the contact action gives the visitor a route to discuss details. Repeating a button does not replace missing information about the service.",
+      "Pricing presentation needs context. A figure is difficult to assess without deliverables, exclusions and any conditions. In a real service brief, those details would need approval from the business before publication. Any project examples or testimonials would also need accurate labels and permission.",
+      "This is personal/demo work. The portfolio does not claim that the page increased bookings, improved conversion rates or produced customer revenue. The focus is the information structure and the design questions described, rather than an unverified commercial outcome.",
+      "For a similar service site, prepare the exact offer, asset requirements, review process and enquiry details before design review. On mobile, check whether a visitor can compare the scope and reach contact without losing their place. Real enquiries can later reveal which questions the page still needs to answer."
     ],
     overviewLead:
-      'The redesign was less about adding more sections and more about making the existing story feel sharper, easier to trust, and easier to move through.',
+      "The demo is useful for discussing how a service offer is explained and how the page supports an informed enquiry.",
     overviewPoints: [
-      'Improved section sequencing so testimonials, pricing, and CTA blocks supported the offer more clearly.',
-      'Reduced clutter to create a more premium first impression.',
-      'Kept the mobile experience in focus so the page stayed usable on smaller screens.',
+      "Sequence the offer, scope information and contact action so the visitor can follow the decision.",
+      "Present pricing only with the inclusions and conditions needed to understand it.",
+      "Review smaller screens for readable content and accessible enquiry links; assess actual outcomes separately when evidence exists."
     ],
     results: [
       {
-        value: '03',
-        label: 'key conversion sections tightened for a clearer offer narrative',
+        "value": "01",
+        "label": "Offer-led page structure"
       },
       {
-        value: '01',
-        label: 'more premium visual direction established across the landing page',
+        "value": "02",
+        "label": "Scope and pricing context"
       },
       {
-        value: '02',
-        label: 'stronger CTA layers added around pricing and project inquiry',
-      },
+        "value": "03",
+        "label": "A clear enquiry route"
+      }
     ],
     ctaLabel: 'Start Similar Landing Page',
     ctaHref: '/contact',
-    metaTitle: 'ReelsXpress | Social Media Brand Case Study | Reddystack',
+    metaTitle: "ReelsXpress Service Website Demo | Reddystack",
     metaDescription:
-      'Explore how Reddystack improved the ReelsXpress landing experience with sharper offer structure, cleaner design, and stronger CTA flow.',
+      "A personal service-website demo exploring offer structure, pricing context and mobile enquiry flow. No paid client or conversion results are claimed.",
     listingImage: reelsXpressImage,
     listingBackgroundImage: '/assets/img/portfolio/port-inner-up-3.jpg',
     thumbVariant: 4,
@@ -323,49 +383,61 @@ export const portfolioProjects: PortfolioProject[] = [
     title: 'Bachelor Brother',
     category: 'Restaurant Website',
     year: 2024,
-    client: 'Bachelor Brother',
+    client: "Personal / demo project",
     role: 'Brand Site Direction, Menu Presentation, Local Business UX',
     services: ['Restaurant Website Development', 'Small Business Website', 'Mobile-First UX'],
     summary:
-      'A restaurant website concept built to showcase the brand, simplify discovery, and make the next action clearer for local visitors.',
+      "A restaurant-website concept exploring menu discovery, business information and practical contact paths for mobile visitors.",
     heroDescription:
-      'Bachelor Brother was structured as a straightforward restaurant website where menu visibility, business credibility, and action clarity had to work quickly together.',
+      "A personal/demo restaurant website project. The concept balances brand presentation with the information someone needs before deciding to visit or enquire.",
     heroStats: [
-      { value: '03', label: 'visitor priorities aligned' },
-      { value: '01', label: 'clearer action path created' },
-      { value: '02', label: 'trust signals surfaced better' },
+      {
+        "value": "01",
+        "label": "Find the menu information"
+      },
+      {
+        "value": "02",
+        "label": "Understand the business"
+      },
+      {
+        "value": "03",
+        "label": "Reach the next step"
+      }
     ],
-    aboutTitle: 'A restaurant site shaped for browsing, trust, and easy next action.',
+    aboutTitle: "Put the visitor's immediate questions within reach.",
     aboutDescription: [
-      'For hospitality-focused websites, the first impression has to communicate taste, clarity, and confidence without becoming visually noisy.',
-      'This project focused on making the brand easier to understand while supporting the practical needs of users looking for menu, vibe, and contact details.',
+      "Bachelor Brother explores a restaurant website where atmosphere and practical information need to work together. A visitor may appreciate the visual style, but still needs to understand the food, where the business is and how to contact it.",
+      "The content direction keeps menu-related information and contact intent close to the brand presentation. A useful restaurant page should not make a phone user search through decorative sections for basic details. The immediate task may be checking an item, planning a visit or asking a question.",
+      "A live version would need accurate hours, menu details, location and the ordering or booking methods actually supported. Those details change, so the business needs a clear way to maintain them. A button should not imply an online booking or ordering service unless the corresponding workflow exists.",
+      "This is a personal/demo concept, not a paid restaurant case study. No visit growth, booking count, search ranking or sales result is reported. The page describes design priorities and questions that a real project would need to resolve.",
+      "For a similar brief, collect current menu information, approved photographs, business details and the preferred contact action. Test a small screen and a slower connection. Review the text as well as the visual presentation: prices, availability and location details are only useful when the owner confirms they are current."
     ],
     overviewLead:
-      'The site was organized to help visitors understand the brand quickly, browse relevant information, and move toward inquiry or visit intent with less friction.',
+      "The project frames a restaurant site around the information a prospective visitor needs, with visual mood supporting that task.",
     overviewPoints: [
-      'Balanced visual mood with practical information layout for local discovery.',
-      'Improved the way menu-adjacent content and contact intent were presented.',
-      'Kept the structure mobile-conscious so high-intent visitors could act quickly.',
+      "Make menu-related information understandable without relying only on decorative imagery.",
+      "Place accurate business and contact details where mobile visitors can find them.",
+      "Match every booking, ordering or contact label to the real action available in the intended implementation."
     ],
     results: [
       {
-        value: '03',
-        label: 'visitor priorities aligned around brand, offer, and contact',
+        "value": "01",
+        "label": "Menu and offer visibility"
       },
       {
-        value: '01',
-        label: 'cleaner path created for users deciding whether to visit or inquire',
+        "value": "02",
+        "label": "Practical business information"
       },
       {
-        value: '02',
-        label: 'core business trust signals surfaced more clearly',
-      },
+        "value": "03",
+        "label": "Mobile contact clarity"
+      }
     ],
     ctaLabel: 'Plan a Restaurant Website',
     ctaHref: '/contact',
-    metaTitle: 'Bachelor Brother | Restaurant Website Case Study | Reddystack',
+    metaTitle: "Bachelor Brother Restaurant Website Demo | Reddystack",
     metaDescription:
-      'See how Reddystack approached the Bachelor Brother restaurant website with clearer structure, stronger branding, and easier action flow.',
+      "A personal restaurant-website concept covering menu discovery, business details and mobile contact paths. Read the demo's design priorities.",
     listingImage: bachelorBrotherImage,
     listingBackgroundImage: '/assets/img/portfolio/portfolio-2.jpg',
     thumbVariant: 4,

@@ -49,6 +49,9 @@ const ServiceInfoArea = () => {
               <h4 className="sv-inner__info-title tp_title_anim">
                 {description}
               </h4>
+              <p>Choose a service by the problem you need to solve. Meta Ads and Google Ads cover paid campaigns; creative and AI video cover the assets used to explain an offer. Website development covers the pages and enquiry journey, while SEO addresses useful content, search access and accurate local information.</p>
+              <p>These pieces often depend on one another. A campaign may need a clearer landing page, and a website may need approved copy or product information before launch. Start with your current setup and the action you want a customer to take. Rahul can discuss the first useful scope and identify the work that can wait.</p>
+              <p>Each service page explains possible deliverables, review steps and separate costs. The proposal confirms what is actually included, who supplies assets and access, and whether support ends at delivery or continues. Apps, MVPs and automation are available for workflows that need more than a marketing page.</p>
             </div>
           </div>
         </div>

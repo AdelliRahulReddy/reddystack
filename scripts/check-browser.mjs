@@ -20,7 +20,7 @@ try {
     run('click', 'label[for="header-four-theme-toggle-primary"]');
   }
   run('wait', '--fn', `document.documentElement.getAttribute('tp-theme') === 'tp-theme-light'`);
-  const serviceHeadingContrast = evaluate(String.raw`(() => {
+  const serviceHeadingContrast = String.raw`(() => {
     const headings = Array.from(document.querySelectorAll('.service-details__left-text h2'));
     const luminance = color => color.match(/[\d.]+/g).slice(0,3).map(Number).map(x=>x/255).map(x=>x<=0.04045 ? x/12.92 : ((x+0.055)/1.055)**2.4).reduce((sum,x,i)=>sum+x*[0.2126,0.7152,0.0722][i],0);
     const background = luminance(getComputedStyle(document.querySelector('.service-details__area')).backgroundColor);
@@ -28,8 +28,9 @@ try {
       const text = luminance(getComputedStyle(heading).color);
       return (Math.max(text,background)+0.05)/(Math.min(text,background)+0.05) >= 3;
     });
-  })()`);
-  assert.ok(serviceHeadingContrast, 'Large service headings must meet 3:1 contrast in light mode');
+  })()`;
+  run('wait', '--fn', serviceHeadingContrast);
+  assert.ok(evaluate(serviceHeadingContrast), 'Large service headings must meet 3:1 contrast in light mode');
   run('click', 'label[for="header-four-theme-toggle-primary"]');
   run('open', base);
   run('network', 'route', '**/_next/static/**/*.js', '--abort');

@@ -17,7 +17,7 @@ const funfact_data: DataType[] = [
     id: 1,
     delay: '.3s',
     counter: portfolioProjects.length,
-    title: <>Featured <br /> Projects</>,
+    title: <>Personal / Demo <br /> Projects</>,
   },
   {
     id: 2,

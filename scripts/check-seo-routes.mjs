@@ -21,9 +21,14 @@ const titles = new Map();
 const descriptions = new Map();
 const iconCss = await readFile(new URL('../public/assets/css/font-awesome-pro.css', import.meta.url), 'utf8');
 const pages = JSON.parse(await readFile(new URL('../src/data/seo-pages.json', import.meta.url), 'utf8'));
+const lastModifiedByUrl = new Map([...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => [
+  match[1].match(/<loc>([^<]+)<\/loc>/)?.[1],
+  match[1].match(/<lastmod>([^<]+)<\/lastmod>/)?.[1]?.slice(0, 10),
+]));
 for (const page of pages) {
   assert.match(page.path, /^\/[a-z0-9]+(?:[/-][a-z0-9]+)*$/, `Clean slug: ${page.path}`);
   assert.ok(urls.includes(`${origin}${page.path}`), `Unlisted page: ${page.path}`);
+  assert.equal(lastModifiedByUrl.get(`${origin}${page.path}`), page.updatedAt || page.publishedAt, `${page.path}: sitemap content date`);
   const ancestors = new Set([page.path]);
   let parent = page.parent;
   while (parent !== '/') {
@@ -75,6 +80,13 @@ for (const url of urls) {
   }
   assert.match(html, /<meta name="googlebot" content="[^"]*max-image-preview:large/, `${path}: inherit image-preview permission`);
   const schemas = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap((match) => JSON.parse(match[1]));
+  const contentPage = pages.find((page) => page.path === path);
+  if (contentPage?.kind === 'guide') {
+    const article = schemas.find((schema) => schema['@type'] === 'BlogPosting');
+    assert.equal(article?.datePublished, contentPage.publishedAt, `${path}: preserve publication date`);
+    assert.equal(article?.dateModified, contentPage.updatedAt || contentPage.publishedAt, `${path}: article modification date`);
+    assert.equal(html.match(/<meta property="article:modified_time" content="([^"]+)"/)?.[1], contentPage.updatedAt || contentPage.publishedAt, `${path}: social modification date`);
+  }
   const organization = schemas.find((schema) => schema['@type'] === 'Organization');
   assert.equal(organization?.['@id'], `${origin}/#organization`, `${path}: publisher identity`);
   assert.equal(organization.logo?.url, `${origin}/assets/img/logo/reddystack-symbol.png`, `${path}: approved organization logo`);

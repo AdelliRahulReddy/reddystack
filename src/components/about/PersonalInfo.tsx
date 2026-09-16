@@ -33,7 +33,7 @@ interface DataType {
 
 const personal_content: DataType = {
   subtitle: 'Personal Info',
-  title: 'Founder-led by Rahul Reddy Adelli, Reddystack helps local service businesses, product brands, and growing companies attract customers through ads, creative content, websites, and SEO. You work directly with Rahul to agree the scope, review the work, and plan the next steps. Apps, MVPs, chatbots, and automation remain available as additional services when your project needs them.',
+  title: 'Reddystack is a solo operation with six core services: Meta Ads, Google Ads, Ad Creatives, AI UGC-style Videos, Website Development, and SEO & Local SEO. I start by understanding the offer, the customer and the problem you want to solve. Apps, MVPs, chatbots and automation can be scoped separately when the work needs them.',
   email: siteConfig.email,
   phone: siteConfig.phoneDisplay,
   skillsets_data: [
@@ -46,7 +46,7 @@ const personal_content: DataType = {
     { id: 1, time: "2018 - 2022", designation: "The Beginning", company: "Zero Tech Background" },
     { id: 2, time: "2022 - 2025", designation: "Analyst", company: "HCLTech (Olin Project)" },
     { id: 3, time: "2025 - Present", designation: "Senior Analyst", company: "HCLTech (Verizon Project)" },
-    { id: 4, time: "2026 - Present", designation: "Founder", company: "Reddystack" }
+    { id: 4, time: "Apr 2026 - Present", designation: "Founder", company: "Reddystack" }
   ],
   education_data: [
     { id: 1, time: "2022 - Present", designation: "B.Sc. Design & Computing (WILP)", collage: "BITS Pilani" }
@@ -143,6 +143,13 @@ const PersonalInfo = () => {
             <div className="col-xl-6 col-lg-6">
               <div className="ab-personal-info__right-wrap">
 
+                <div className="ab-personal-info__exprience mb-85">
+                  <h4 className="ab-personal-info__right-title">How I work</h4>
+                  <p>Before work starts, we agree the deliverables, required content and access, review points, price and exclusions. A campaign may depend on a usable landing page; a website may depend on approved service information. Naming those dependencies early keeps the proposal realistic.</p>
+                  <p>The portfolio contains personal and demo projects. Reddystack has no client results to report at this stage. You can review the work described, ask about the approach and discuss a bounded first project without relying on invented testimonials or performance figures.</p>
+                  <p>For an enquiry, share what happens today and what you need to change. Your business should retain ownership of its domain, hosting and advertising accounts. Any access, handover and ongoing support requirements belong in the agreed scope.</p>
+                </div>
+
                 <div className="ab-personal-info__skill mb-85 wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".3s">
                   <h4 className="ab-personal-info__right-title">
                     <span>
@@ -153,7 +160,7 @@ const PersonalInfo = () => {
                           fill="currentcolor" />
                       </svg>
                     </span> {' '}
-                    Skillsets
+                    Self-assessed skills
                   </h4>
                   <div className="p-progress-bar-wrap">
                     {skillsets_data.map((item, index) => (

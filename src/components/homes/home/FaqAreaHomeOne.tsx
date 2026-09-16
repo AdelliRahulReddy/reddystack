@@ -66,7 +66,7 @@ const FaqAreaHomeOne = () => {
                           aria-controls={`collapse${item.tab_id}`}
                           tabIndex={0}
                         >
-                          <span>0{item.id}</span>
+                          <span className="flex-shrink-0">0{item.id}</span>
                           {item.question}
                         </button>
                       </h2>

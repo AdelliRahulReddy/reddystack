@@ -36,7 +36,7 @@ const HeroPortfolioDetailsArea = ({ project }: HeroPortfolioDetailsAreaProps) =>
                 <p className="portfolio-details__hero-text">{project.heroDescription}</p>
                 <div className="portfolio-details__hero-meta">
                   <div className="portfolio-details__hero-meta-item">
-                    <span className="label">Client</span>
+                    <span className="label">Project type</span>
                     <span className="value">{project.client}</span>
                   </div>
                   <div className="portfolio-details__hero-meta-item">

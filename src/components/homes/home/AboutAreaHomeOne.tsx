@@ -26,10 +26,10 @@ type DataType = {
 const about_content: DataType = {
   subtitle: "About Reddystack",
   award_title: "Founder-led by Rahul Reddy",
-  award_des: "Based in Hyderabad, serving India and global clients",
-  about_des: <>Founder-led by Rahul Reddy Adelli, Reddystack helps small businesses and growing brands attract customers through <span>ads, creative content, websites, and SEO.</span> Based in Hyderabad and working remotely across India and worldwide, we bring <span>clear scope, direct communication, and practical delivery</span> to every project.</>,
+  award_des: "Independent service · Hyderabad · Started April 2026",
+  about_des: <>I&apos;m Rahul Reddy Adelli. I started Reddystack in April 2026 to offer <span>ads, creative content, websites, and SEO</span> with direct communication. I operate independently from Hyderabad and am available for remote projects. We begin with the problem your business needs solved, then agree <span>deliverables, costs, review points and handover</span>. The portfolio shows personal and demo work you can assess before discussing a project.</>,
   counter_data: [
-    { id: 1, count: portfolioProjects.length, text: "Featured Projects" },
+    { id: 1, count: portfolioProjects.length, text: "Personal / Demo Projects" },
     { id: 2, count: primaryServices.length, text: "Core Services" },
     { id: 3, count: 1, text: "Founder Point of Contact" }
   ],

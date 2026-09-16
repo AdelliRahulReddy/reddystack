@@ -106,7 +106,7 @@ const ServiceFaqArea = ({ service }: ServiceFaqAreaProps) => {
                           aria-controls={`collapse-${service.slug}-${index}`}
                           tabIndex={0}
                         >
-                          <span>0{index + 1}</span>
+                          <span className="flex-shrink-0">0{index + 1}</span>
                           {item.question}
                         </button>
                       </h2>

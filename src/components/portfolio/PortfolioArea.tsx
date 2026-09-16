@@ -21,11 +21,13 @@ const PortfolioArea = () => {
           <div className="col-xl-8 col-lg-10">
             <div className="service-details__banner-text mb-50 text-center">
               <p>
-                Explore business websites, landing pages, and product builds by Reddystack.
-                Each case study explains the brief, scope, and delivery. The collection includes
-                client projects and internal tools and experiments. These are development examples,
-                not advertising campaign results. For ads, creative content, or AI video, <Link href="/contact">discuss your brief with Rahul</Link>.
+                These six personal and demo projects explore business websites, product interfaces
+                and automation. Each entry explains its purpose, the design priorities and the
+                limits of what the example demonstrates. The collection contains no paid client
+                case studies or measured advertising results.
               </p>
+              <p>Review the work by the problem it addresses: how a portfolio explains a person&apos;s capabilities, how a utility guides its next action, or how an automation handles a request it cannot answer. The project dates refer to the individual work; Reddystack began in April 2026.</p>
+              <p>A similar commercial project needs its own brief, factual content, acceptance checks and operating responsibilities. Use an example to explain the direction you want, then <Link href="/contact">discuss the actual scope with Rahul</Link>.</p>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ export function seoContentMetadata(path: string): Metadata {
   return {
     title, description: page.description,
     alternates: { canonical: url },
-    openGraph: buildOpenGraph({ title, description: page.description, url, type: page.kind === 'guide' ? 'article' : 'website', ...(page.publishedAt ? { publishedTime: page.publishedAt, modifiedTime: page.publishedAt } : {}) }),
+    openGraph: buildOpenGraph({ title, description: page.description, url, type: page.kind === 'guide' ? 'article' : 'website', ...(page.publishedAt ? { publishedTime: page.publishedAt, modifiedTime: page.updatedAt || page.publishedAt } : {}) }),
     twitter: buildTwitterCard({ title, description: page.description }),
   };
 }
@@ -36,7 +36,7 @@ export default function SeoContentPage({ path }: { path: string }) {
     '@id': `${url}#webpage`, url, name: page.title, description: page.description,
     isPartOf: { '@id': schemaIds.website },
     ...(page.kind === 'guide' ? {
-      headline: page.title, datePublished: page.publishedAt, dateModified: page.publishedAt,
+      headline: page.title, datePublished: page.publishedAt, dateModified: page.updatedAt || page.publishedAt,
       author: { '@type': 'Organization', '@id': schemaIds.organization, name: siteConfig.brandName, url: siteConfig.siteUrl },
       publisher: { '@id': schemaIds.organization }, mainEntityOfPage: url,
     } : page.kind === 'profile' ? {

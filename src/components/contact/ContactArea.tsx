@@ -26,7 +26,7 @@ const contact_content: DataType = {
   title_1: "Let’s Talk",
   title_2: "About your Project",
   email: siteConfig.email,
-  mail_text: <>Tell us about your business, the service you need, and your goal. Use the form below or message us on WhatsApp to discuss the scope.</>,
+  mail_text: <>Share your website or product link, what is currently difficult and what you want a customer to do. Include the service you need, available content, budget boundary and any deadline. If you are unsure where to start, choose &ldquo;Not sure yet&rdquo; and describe the problem. Rahul will use those details to discuss the scope and the information needed for a quote. An enquiry does not automatically start paid work. Keep passwords, payment details and private customer records out of the form; any required account access can be agreed separately.</>,
   categorys: [
   {
     "id": "meta-ads",

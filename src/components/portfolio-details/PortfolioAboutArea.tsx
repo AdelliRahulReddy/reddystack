@@ -28,7 +28,7 @@ const PortfolioAboutArea = ({ project }: PortfolioAboutAreaProps) => {
           <div className="col-xl-5 col-lg-4">
             <div className="porfolio-details__left-info">
               <div className="porfolio-details__left-content">
-                <h4 className="porfolio-details__left-info-title">Clients</h4>
+                <h4 className="porfolio-details__left-info-title">Project type</h4>
                 <span>{project.client}</span>
               </div>
               <div className="porfolio-details__left-content">
