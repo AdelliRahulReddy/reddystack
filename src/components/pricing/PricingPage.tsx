@@ -6,44 +6,44 @@ import type { ServiceDetail } from "@/data/ServiceDetailData";
 import heroWebsite from "@/assets/img/portfolio/port-inner-up-1.jpg";
 
 const pricingFaqService: ServiceDetail = {
-  slug: "pricing", path: "/pricing", subtitle: "Pricing and Scope", title: "Custom Quotes",
-  introPrimary: "Every quote reflects your goals and agreed deliverables.", introSecondary: "",
+  slug: "pricing", path: "/pricing", subtitle: "Ways to Work", title: "Proof Sprint to Scale",
+  introPrimary: "Every quote starts with one problem, a defined scope, and a realistic evidence plan.", introSecondary: "",
   overviewPrimary: "", overviewSecondary: "", features: [], closingSummary: "", sideTitle: "",
-  categories: ["Ads", "Creative", "Websites", "SEO"], highlightTitle: ["Clear", "scope"], highlightText: "",
-  metaTitle: "Custom Quotes | ReddyStack", metaDescription: "Scope and pricing for ads, creative, videos, websites, and SEO.",
+  categories: ["Proof Sprint", "Stack Build", "Operate & Improve"], highlightTitle: ["Proof-first", "engagements"], highlightText: "",
+  metaTitle: "Ways to Work | ReddyStack", metaDescription: "Proof Sprints, connected Stack Builds, and ongoing improvement engagements from ReddyStack.",
   heroImage: heroWebsite,
   presentation: { faqTitle: "Pricing Questions", faqDescription: "What to expect before you start.", faqHighlights: ["Scope", "Deliverables", "Costs"], showFaqShapes: false },
   faqItems: [
     {
-      "question": "What information makes a quote useful?",
-      "answer": "Send the current website or product, the problem to solve, the deliverables you expect and any budget or deadline boundary. Include the content and account access already available. For a website, name the page types and integrations; for creative, name the concepts and versions; for campaigns, describe the offer, market and total test budget. Missing inputs should be identified before the plan is agreed.",
+      "question": "Which engagement should I start with?",
+      "answer": "Start with the problem, not the package. A Proof Sprint fits one important unknown or bottleneck. A Stack Build fits a defined implementation that needs several connected capabilities. Operate and Improve fits a working system that needs ongoing testing and decisions. Rahul recommends the smallest engagement that can still produce a useful result.",
       "some_features": [
-        "Brief",
-        "Available Assets",
-        "Dependencies"
+        "Proof Sprint",
+        "Stack Build",
+        "Operate & Improve"
       ]
     },
     {
-      "question": "Does an ads quote include advertising spend?",
-      "answer": "Advertising spend is separate from setup or management fees. The proposal should distinguish platform spend, campaign work, creative production and landing-page or tracking changes. Consider those costs together when setting a budget. The business retains its advertising account and should understand the spending boundary and approval process before launch.",
+      "question": "What does a Proof Sprint include?",
+      "answer": "The sprint defines one decision, establishes the current baseline, completes a focused audit, build, fix, or test, and records the evidence and limitations. Its output depends on the problem and can include a landing path, search repair, tracking check, campaign test, creative comparison, or workflow prototype. It is bounded work, not an unlimited trial retainer.",
       "some_features": [
-        "Ad Spend",
-        "Management",
-        "Creative Costs"
+        "One Problem",
+        "Focused Work",
+        "Evidence Summary"
       ]
     },
     {
-      "question": "What recurring costs should I plan for?",
-      "answer": "Depending on the project, recurring costs can include domain renewal, hosting, paid tools, model or automation usage and ongoing support. Ask which accounts you own, who receives renewal notices and which charges depend on usage. A one-time build fee does not automatically cover these costs indefinitely; the written proposal identifies what is included.",
+      "question": "Are media spend and platform costs included?",
+      "answer": "No unless the proposal explicitly states otherwise. Advertising spend, hosting, domains, paid tools, stock, model usage, and other third-party costs remain visible and separate from ReddyStack fees. The client keeps ownership of the relevant accounts and approves spending boundaries before launch.",
       "some_features": [
-        "Renewals",
-        "Usage Costs",
-        "Account Ownership"
+        "Platform Spend",
+        "Third-Party Costs",
+        "Client Ownership"
       ]
     },
     {
       "question": "Is the work one-off or ongoing?",
-      "answer": "A website build, creative batch or audit can be a bounded project. Campaign management, content production and SEO maintenance can be ongoing work with agreed deliverables and review periods. State whether implementation follows an audit and whether post-launch fixes or monitoring are included. Do not assume that a handover includes continuing optimisation.",
+      "answer": "A Proof Sprint and Stack Build can be bounded projects. Operate and Improve is ongoing work with agreed priorities, reporting, and review periods. A completed project does not silently include indefinite monitoring, optimisation, new assets, or support; the proposal states what continues and what ends at handover.",
       "some_features": [
         "Project Scope",
         "Review Periods",
@@ -84,20 +84,20 @@ const PricingPage = () => {
                   <div className="col-xl-12">
                     <div className="service-details__title-box mb-40">
                       <span className="service-details__subtitle tp-char-animation">
-                        Pricing
+                        Ways to Work
                       </span>
       <h1 className="service-details__title tp-char-animation">
-                        A clear quote for your business goals.
+                        Start focused. Scale with evidence.
                       </h1>
                     </div>
                   </div>
                   <div className="offset-xl-4 col-xl-5 col-lg-8">
                     <div className="service-details__banner-text">
                       <p className="mb-30 tp_title_anim">
-                        A useful quote names the work, the inputs it depends on and the checks needed before delivery. Share your website or idea, the customer action you want, available assets and any budget or deadline boundary. Ads, creative content, AI videos, websites and SEO each need a different scope.
+                        ReddyStack offers three engagement shapes: a focused Proof Sprint, a connected Stack Build, and ongoing Operate and Improve support. The right starting point depends on the decision you need to make, the current evidence, and how much implementation is required.
                       </p>
                       <p className="tp_title_anim">
-                        Compare proposals using the same brief: deliverables, revisions, access, exclusions, recurring costs and handover. A lower price may cover fewer tasks, so check what remains your responsibility. Apps, MVPs, chatbots and automation are also available on request, with their workflows and operating costs agreed separately.
+                        Every quote names the problem, baseline, deliverables, access, approvals, revisions, exclusions, separate costs, evidence plan, and handover. Prices come after the scope is understood; no package hides media spend, platform costs, or client responsibilities.
                       </p>
                     </div>
                   </div>

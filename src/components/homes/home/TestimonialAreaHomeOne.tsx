@@ -25,59 +25,59 @@ interface DataType {
 
 
 const testimonial_content: DataType = {
-  subtitle: "Working Together",
-  title: "What you can expect",
-  info: "A clear process for ads, creative content, websites, and SEO.",
+  subtitle: "The ReddyStack Method",
+  title: "Diagnose. Build. Prove. Scale.",
+  info: "Every engagement follows the same evidence loop, even when the capabilities change.",
   testimonial_slider_data: [
     {
       id: 1,
-      rating_text: "01 · Understand the brief",
-      description: 'We start with your business, audience, goals, and budget. Together we identify the service and deliverables that fit your next step.',
+      rating_text: "01 · Diagnose",
+      description: 'Define the commercial goal, inspect the current setup, establish a baseline, and name the most important bottleneck before selecting a channel or deliverable.',
     },
     {
       id: 2,
-      rating_text: "02 · Agree the scope",
-      description: 'Your quote sets out deliverables, fees, revisions, and responsibilities before work starts. Advertising spend and third-party costs are separate.',
+      rating_text: "02 · Build",
+      description: 'Create only what the problem requires. The scope names the pages, campaigns, assets, tracking, access, approvals, costs, and responsibilities before work starts.',
     },
     {
       id: 3,
-      rating_text: "03 · Build and review",
-      description: 'Review the agreed work with Rahul Reddy. Feedback stays connected to the brief, with scope changes discussed before additional work begins.',
+      rating_text: "03 · Prove",
+      description: 'Launch or review the agreed work against the baseline. Record the change, the evidence, the limitations, and what the business learned without turning an early signal into a guarantee.',
     },
     {
       id: 4,
-      rating_text: "04 · Launch and measure",
-      description: 'We agree the handover or reporting needed for your service. Campaign and SEO outcomes depend on your offer, market, budget, and follow-through; rankings and sales are not guaranteed.',
+      rating_text: "04 · Scale",
+      description: 'Continue, expand, revise, or stop based on the evidence. More budget and more capabilities are added only when there is a clear reason and an agreed measurement plan.',
     },
   ],
   testimonial_nav_data: [
     {
       id: 1,
       initials: "01",
-      name: "Your Brief",
-      designation: "Goals and",
-      company: "budget",
+      name: "Diagnose",
+      designation: "Problem and",
+      company: "baseline",
     },
     {
       id: 2,
       initials: "02",
-      name: "Clear Scope",
-      designation: "Deliverables and",
-      company: "fees",
+      name: "Build",
+      designation: "Connected",
+      company: "scope",
     },
     {
       id: 3,
       initials: "03",
-      name: "Your Review",
-      designation: "Feedback and",
-      company: "revisions",
+      name: "Prove",
+      designation: "Evidence and",
+      company: "learning",
     },
     {
       id: 4,
       initials: "04",
-      name: "Next Steps",
-      designation: "Handover and",
-      company: "reporting",
+      name: "Scale",
+      designation: "Next",
+      company: "decision",
     },
   ]
 }
@@ -171,7 +171,7 @@ const TestimonialAreaHomeOne = ({ style }: TestimonialAreaHomeOneProps) => {
 
   return (
     <>
-      <section ref={sectionRef} style={{ backgroundImage: bg_img }} className={`tp-testimonial-area ${style ? 'sv-inner__customize pb-160 black-bg-3' : 'theme-bg tp-bg-light pb-80'} pt-25`}>
+      <section id="method" ref={sectionRef} style={{ backgroundImage: bg_img }} className={`tp-testimonial-area ${style ? 'sv-inner__customize pb-160 black-bg-3' : 'theme-bg tp-bg-light pb-80'} pt-25`}>
         <div className="container">
           {style ? null :
             <div className="row">

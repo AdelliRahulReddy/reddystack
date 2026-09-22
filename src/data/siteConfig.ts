@@ -1,17 +1,16 @@
 import type { StaticImageData } from "next/image";
 import type { Metadata } from "next";
-import { primaryServices } from "./ServiceDetailData";
 
 export const siteSeo = {
   siteName: "ReddyStack",
   siteNameAlternates: ["Reddystack", "reddystack.com"],
-  defaultTitle: "ReddyStack | Digital Marketing & Website Development",
+  defaultTitle: "ReddyStack | Proof-First Digital Growth Studio",
   defaultDescription:
-    "ReddyStack offers Meta and Google Ads, ad creatives, AI UGC videos, websites, and SEO. Based in Hyderabad, serving businesses in India and worldwide.",
+    "ReddyStack is a proof-first digital growth studio led by Rahul Reddy, connecting web, search, paid acquisition, creative, tracking, and automation.",
   creatorHandle: "@reddystack",
   logoPath: "/assets/img/logo/reddystack-symbol.png",
-  ogImagePath: "/assets/img/social/reddystack-share-v4.png",
-  ogImageAlt: "ReddyStack — Ads, Creative & Websites That Grow Your Business.",
+  ogImagePath: "/assets/img/social/reddystack-proof-first.png",
+  ogImageAlt: "ReddyStack — One problem. One connected stack. Proof before scale.",
   contentUpdatedAt: "2026-09-22",
 } as const;
 
@@ -22,12 +21,13 @@ export const siteConfig = {
   description: siteSeo.defaultDescription,
   keywords: [
   "ReddyStack",
-  "Meta Ads",
-  "Google Ads",
-  "Ad Creatives",
-  "AI UGC-Style Videos",
-  "Website Development",
-  "SEO & Local SEO",
+  "proof-first digital growth studio",
+  "digital growth systems",
+  "website and landing page development",
+  "SEO and search visibility",
+  "Meta and Google Ads",
+  "conversion tracking",
+  "AI-assisted automation",
   "Rahul Reddy",
   "Hyderabad"
 ],
@@ -36,18 +36,19 @@ export const siteConfig = {
   phoneHref: "+917207022577",
   location: "Hyderabad, India",
   mapUrl: "https://www.google.com/maps/search/Hyderabad%2C%20India",
-  businessStructure: "Independent service business operated by Rahul Reddy Adelli",
+  businessStructure: "Founder-led proof-first digital growth studio operated by Rahul Reddy Adelli",
   registrationStatus: "Not registered as a private limited company, LLP, or OPC",
   taxStatus: "GST details will be provided when applicable",
   siteUrl: "https://www.reddystack.com",
   serviceAreas: ["Hyderabad", "India", "Worldwide"],
   serviceTypes: [
-  "Meta Ads",
-  "Google Ads",
-  "Ad Creatives",
-  "AI UGC-Style Videos",
-  "Website Development",
-  "SEO & Local SEO"
+  "Digital growth diagnostics",
+  "Website and landing page development",
+  "SEO and search visibility",
+  "Meta and Google Ads",
+  "Creative and conversion assets",
+  "Tracking and analytics",
+  "AI automation"
 ],
   socialLinks: {
     email: "mailto:thereddystack@gmail.com",
@@ -78,39 +79,39 @@ export const pageSeo = {
     path: "/",
   },
   about: {
-    title: "About ReddyStack | Founder Rahul Reddy Adelli",
+    title: "About Rahul Reddy & ReddyStack | Proof-First Studio",
     description:
-      "Meet Rahul Reddy, founder of ReddyStack, helping small businesses and growing brands with ads, creative content, websites, and SEO.",
+      "Meet Rahul Reddy and learn how ReddyStack diagnoses, builds, proves, and improves connected digital growth systems with direct founder accountability.",
     path: "/about",
   },
   services: {
-    title: "Services | Ads, Creative, Websites & SEO | ReddyStack",
+    title: "Capabilities | ReddyStack Digital Growth Studio",
     description:
-      "Explore Meta Ads, Google Ads, Ad Creatives, AI UGC-style Videos, Website Development, and SEO & Local SEO.",
+      "Explore the capabilities ReddyStack combines around one growth problem: websites, search, paid acquisition, creative, tracking, and automation.",
     path: "/service",
   },
   portfolio: {
-    title: "Portfolio | Selected Work | ReddyStack",
+    title: "Work & Proof | Selected ReddyStack Builds",
     description:
-      "Explore six personal and demo projects covering websites, product interfaces and automation, with clear descriptions of their purpose and design priorities.",
+      "Review clearly labelled ReddyStack build work, including websites, product interfaces, and automation projects without invented client or performance claims.",
     path: "/portfolio",
   },
   blog: {
-    title: "Insights | Ads, Creative, Websites & SEO | ReddyStack",
+    title: "Insights | ReddyStack Proof-First Growth Studio",
     description:
-      "Ideas for ads, creative content, websites, and SEO, alongside our guides to apps and automation.",
+      "Practical ReddyStack guides about web, search, paid acquisition, creative testing, measurement, AI-assisted delivery, and automation.",
     path: "/blog",
   },
   contact: {
-    title: "Contact ReddyStack | Start Your Project",
+    title: "Start With One Growth Problem | Contact ReddyStack",
     description:
-      "Talk to Rahul Reddy about ads, creative content, AI videos, websites, and SEO. Enquire through our form or WhatsApp.",
+      "Share one digital growth problem with Rahul Reddy. Start with a focused proof sprint, connected build, or ongoing improvement engagement.",
     path: "/contact",
   },
   pricing: {
-    title: "Pricing | Custom Quotes | ReddyStack",
+    title: "Ways to Work | Proof Sprint to Scale | ReddyStack",
     description:
-      "Get a custom quote for ads, creative content, AI videos, websites, and SEO with clear deliverables, fees, and scope.",
+      "Understand ReddyStack engagements: a focused Proof Sprint, a connected Stack Build, or ongoing Operate and Improve support with clear scope.",
     path: "/pricing",
   },
   privacyPolicy: {
@@ -122,7 +123,7 @@ export const pageSeo = {
   terms: {
     title: "Terms of Service | ReddyStack",
     description:
-      "Read the terms for using ReddyStack and commissioning ads, creative content, AI videos, websites, SEO, and other digital services.",
+      "Read the terms for using ReddyStack and commissioning proof sprints, connected digital builds, ongoing optimisation, and related services.",
     path: "/terms",
   },
   revisionPolicy: {
@@ -134,20 +135,20 @@ export const pageSeo = {
   blogDetail: {
     title: "Insight Details | ReddyStack",
     description:
-      "Explore detailed ReddyStack insights on SEO, AI-assisted delivery, product execution, and digital growth.",
+      "Explore practical ReddyStack insights on proof-first digital growth, search, paid acquisition, measurement, product execution, and AI-assisted delivery.",
     path: "/blog-details",
     ogType: "article",
   },
   portfolioDetail: {
     title: "Project Details | ReddyStack",
     description:
-      "Review a detailed ReddyStack project breakdown, including the strategy, execution, and outcomes behind the build.",
+      "Review a detailed ReddyStack build breakdown, including the problem, scope, implementation decisions, evidence, and stated limitations.",
     path: "/portfolio-details",
   },
   blogSidebar: {
-    title: "Insights | Ads, Creative, Websites & SEO | ReddyStack",
+    title: "Insights | ReddyStack Proof-First Growth Studio",
     description:
-      "Ideas for ads, creative content, websites, and SEO, alongside our guides to apps and automation.",
+      "Practical guides about web, search, paid acquisition, creative testing, measurement, and automation.",
     path: "/blog-sidebar",
     canonicalPath: "/blog",
     robots: {
@@ -168,7 +169,7 @@ export const pageSeo = {
   notFound: {
     title: "Page Not Found | ReddyStack",
     description:
-      "The page could not be found. Explore ReddyStack services for ads, creative content, websites, and SEO.",
+      "The page could not be found. Explore the ReddyStack method, connected capabilities, work, and practical growth insights.",
     path: "/404",
     robots: {
       index: false,
@@ -294,17 +295,40 @@ export const schemaIds = {
   offerCatalog: `${siteConfig.siteUrl}/#offer-catalog`,
 } as const;
 
+export const engagementOffers = [
+  {
+    name: "Proof Sprint",
+    description:
+      "A bounded engagement that establishes the baseline, addresses one important digital growth problem, and records the evidence needed for the next decision.",
+  },
+  {
+    name: "Stack Build",
+    description:
+      "A connected implementation combining only the web, search, paid acquisition, creative, tracking, or automation capabilities required by the agreed problem.",
+  },
+  {
+    name: "Operate and Improve",
+    description:
+      "Ongoing testing, measurement, and improvement for a working digital growth system with priorities and reporting agreed in advance.",
+  },
+] as const;
+
 const serviceOfferCatalog = {
   "@type": "OfferCatalog",
   "@id": schemaIds.offerCatalog,
-  name: "ReddyStack service packages",
+  name: "ReddyStack engagement models",
   url: buildCanonicalUrl("/pricing"),
-  itemListElement: primaryServices.map((service) => ({
+  itemListElement: engagementOffers.map((offer) => ({
     "@type": "Offer",
-    name: service.title,
-    url: buildCanonicalUrl(service.path),
+    name: offer.name,
+    url: buildCanonicalUrl("/pricing"),
     description: "Custom quote based on agreed scope and deliverables.",
-    itemOffered: { "@type": "Service", name: service.title, serviceType: service.title },
+    itemOffered: {
+      "@type": "Service",
+      name: offer.name,
+      serviceType: offer.name,
+      description: offer.description,
+    },
   })),
 } as const;
 
@@ -318,6 +342,7 @@ export const organizationSchema = {
   "@type": "Organization",
   "@id": schemaIds.organization,
   name: siteSeo.siteName,
+  slogan: "One problem. One connected stack. Proof before scale.",
   url: siteConfig.siteUrl,
   logo: {
     "@type": "ImageObject",
@@ -342,10 +367,10 @@ export const organizationSchema = {
   areaServed: "Worldwide",
   knowsAbout: [
     ...siteConfig.serviceTypes,
-    "AI automation",
+    "Proof-first digital growth",
+    "Digital growth diagnostics",
+    "AI-assisted delivery",
     "AI chatbot development",
-    "Lead generation",
-    "Digital growth systems",
     "Conversion optimization",
     "MVP development",
     "App development",

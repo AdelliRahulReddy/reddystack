@@ -2,8 +2,6 @@
 
 import React from 'react';
 import Count from '../common/Count';
-import { portfolioProjects } from '@/data/PortfolioProjectsData';
-import { primaryServices } from '@/data/ServiceDetailData';
 
 interface DataType {
   id: number;
@@ -16,20 +14,20 @@ const funfact_data: DataType[] = [
   {
     id: 1,
     delay: '.3s',
-    counter: portfolioProjects.length,
-    title: <>Personal / Demo <br /> Projects</>,
+    counter: 4,
+    title: <>Proof-First <br /> Method Stages</>,
   },
   {
     id: 2,
     delay: '.5s',
-    counter: primaryServices.length,
-    title: <>Core <br /> Services</>,
+    counter: 1,
+    title: <>Connected <br /> Growth Stack</>,
   },
   {
     id: 3,
     delay: '.7s',
     counter: 1,
-    title: <>Founder <br /> Point of Contact</>,
+    title: <>Accountable <br /> Founder Lead</>,
   }
 
 ]

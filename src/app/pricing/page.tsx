@@ -14,24 +14,24 @@ export const metadata = buildPageMetadata("pricing");
 
 const pricingFaqItems = [
   {
-    question: "What is the starting price for a ReddyStack website?",
+    question: "Which engagement should I start with?",
     answer:
-      "A focused starter website can start at Rs. 9,999 when the scope is limited to a simple one-page build or starter presence. Small business websites usually start from Rs. 14,999, and SEO-ready multi-page builds usually start from Rs. 24,999 depending on content depth and sections.",
+      "Start with the problem, not the package. A Proof Sprint fits one important unknown or bottleneck. A Stack Build fits a defined implementation that needs several connected capabilities. Operate and Improve fits a working system that needs ongoing testing and decisions. Rahul recommends the smallest engagement that can still produce a useful result.",
   },
   {
-    question: "How are app and MVP projects priced?",
+    question: "What does a Proof Sprint include?",
     answer:
-      "App and MVP pricing depends on screens, user flows, roles, integrations, backend logic, and launch requirements. Small MVP scopes usually start from Rs. 49,999+ after the first useful release is defined.",
+      "The sprint defines one decision, establishes the current baseline, completes a focused audit, build, fix, or test, and records the evidence and limitations. Its output depends on the problem and can include a landing path, search repair, tracking check, campaign test, creative comparison, or workflow prototype. It is bounded work, not an unlimited trial retainer.",
   },
   {
-    question: "Do prices include SEO setup?",
+    question: "Are media spend and platform costs included?",
     answer:
-      "SEO-ready builds can include metadata, heading structure, sitemap, schema, internal links, speed checks, and crawlability basics. Ongoing SEO campaigns or content retainers should be scoped separately.",
+      "No unless the proposal explicitly states otherwise. Advertising spend, hosting, domains, paid tools, stock, model usage, and other third-party costs remain visible and separate from ReddyStack fees. The client keeps ownership of the relevant accounts and approves spending boundaries before launch.",
   },
   {
-    question: "Can ReddyStack work with clients outside India?",
+    question: "Is the work one-off or ongoing?",
     answer:
-      "Yes. ReddyStack is online-first and can work with startups, creators, founders, and small businesses across India and worldwide through a remote-friendly process.",
+      "A Proof Sprint and Stack Build can be bounded projects. Operate and Improve is ongoing work with agreed priorities, reporting, and review periods. A completed project does not silently include indefinite monitoring, optimisation, new assets, or support; the proposal states what continues and what ends at handover.",
   },
 ];
 
@@ -54,7 +54,7 @@ const PricingRoute = () => {
   const faqSchema = buildFAQPageSchema(pricingFaqItems, "/pricing");
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: "Home", path: "/" },
-    { name: "Pricing", path: "/pricing" },
+    { name: "Ways to Work", path: "/pricing" },
   ]);
 
   return (

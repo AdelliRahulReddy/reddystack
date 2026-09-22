@@ -11,10 +11,10 @@ interface DataType {
 }
 
 const info_data: DataType[] = [
-  { title: "Ad Campaigns", bg_img: "/assets/img/about/ab-1.png", href: "/service/meta-ads" },
-  { title: "Creative Content", bg_img: "/assets/img/about/ab-2.png", href: "/service/ad-creatives" },
-  { title: "Websites", bg_img: "/assets/img/about/ab-3.png", href: "/service/seo-websites" },
-  { title: "SEO Strategy", bg_img: "/assets/img/about/ab-4.png", href: "/service/seo-local-seo" }
+  { title: "digital foundations", bg_img: "/assets/img/about/ab-3.png", href: "/service/seo-websites" },
+  { title: "search visibility", bg_img: "/assets/img/about/ab-4.png", href: "/service/seo-local-seo" },
+  { title: "paid acquisition", bg_img: "/assets/img/about/ab-1.png", href: "/service/meta-ads" },
+  { title: "automation systems", bg_img: "/assets/img/about/ab-2.png", href: "/service/ai-automations" }
 ]
 
 
@@ -29,7 +29,7 @@ const AboutInfo = () => {
               <div className="ab-info__text">
 
                 <div>
-                  I&apos;m <Link href="/about/rahul-reddy-adelli">Rahul</Link> <span className="line"></span> I started ReddyStack in April 2026 and operate it independently from Hyderabad. You speak directly with me about the brief, scope and delivery for
+                  I&apos;m <Link href="/about/rahul-reddy-adelli">Rahul Reddy</Link> <span className="line"></span> I built ReddyStack as a proof-first studio. We begin with one important growth problem, connect only the capabilities it needs, and use evidence to decide what happens next across
 
                   {info_data.map((item, index) =>
                     <React.Fragment key={index}>

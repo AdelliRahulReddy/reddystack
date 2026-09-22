@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { trackLeadEvent } from '@/components/analytics/gaEvents';
 import { siteConfig } from '@/data/siteConfig';
+import { contactBudgetOptions } from '@/data/contactOptions';
 
 interface FormData {
   name: string;
@@ -23,14 +24,6 @@ const schema = yup
   })
   .required();
 
-
-const budget_categorys = [
-  { id: "under_10k", title: "Under ₹10k", },
-  { id: "10k_25k", title: "₹10k-25k", },
-  { id: "25k_50k", title: "₹25k-50k", },
-  { id: "50k_1l", title: "₹50k-1L", },
-  { id: "above_1l", title: "₹1L+", },
-]
 
 type ContactFormProps = {
   selectedCategories?: string[];
@@ -55,7 +48,7 @@ const ContactForm = ({ selectedCategories = [], sourcePage = '' }: ContactFormPr
     setIsSubmitting(true);
 
     try {
-      const budget = activeCategory !== null ? budget_categorys[activeCategory]?.title : 'Not specified';
+      const budget = activeCategory !== null ? contactBudgetOptions[activeCategory]?.title : 'Not specified';
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -154,7 +147,7 @@ const ContactForm = ({ selectedCategories = [], sourcePage = '' }: ContactFormPr
         {submitError && <p role="alert">{submitError} <a href={siteConfig.socialLinks.email}>Email your enquiry</a>.</p>}
         <div className="contact-inner__wrapper">
           <div className="postbox__comment-form">
-            <h3 className="contact-inner__form-title">Request A Quote</h3>
+            <h3 className="contact-inner__form-title">Start a Project</h3>
             <div className="row gx-20">
               <div className="col-xxl-6 col-xl-6 col-lg-6">
                 <div className="postbox__comment-input mb-35">
@@ -180,7 +173,7 @@ const ContactForm = ({ selectedCategories = [], sourcePage = '' }: ContactFormPr
               <div className="col-xxl-12">
                 <div className="postbox__comment-input mb-20">
                   <textarea className="textareaText" id="contact-message" aria-invalid={Boolean(errors.message)} aria-describedby="contact-message-error" {...register("message")} onFocus={handleFocus4} onBlur={handleBlur4}></textarea>
-                  <label htmlFor="contact-message" className={`floating-label-2 ${isFocused4 ? 'floating-label-floated' : ''}`}>Tell us what you need</label>
+                  <label htmlFor="contact-message" className={`floating-label-2 ${isFocused4 ? 'floating-label-floated' : ''}`}>Describe the problem</label>
                   <p role="alert" className="form_error" id="contact-message-error">{errors.message?.message}</p>
                 </div>
               </div>
@@ -192,7 +185,7 @@ const ContactForm = ({ selectedCategories = [], sourcePage = '' }: ContactFormPr
                 <h4 className="contact-inner__category-title">Budget range (optional, INR)</h4>
                 <div className="contact-inner__category-wrapper">
 
-                  {budget_categorys.map((item, index) => (
+                  {contactBudgetOptions.map((item, index) => (
                     <button key={index} type="button"
                       aria-pressed={activeCategory === index}
                       onClick={() => handleItemClick(index)}

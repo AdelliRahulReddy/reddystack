@@ -33,7 +33,7 @@ const getIntentIcon = (relatedServiceSlug: string) => {
 };
 
 const service_info_content: DataType = {
-  description: <>Six services to help small businesses and growing brands attract customers through ads, creative content, websites, and SEO.</>,
+  description: <>ReddyStack specialises in solving one measurable digital growth problem with a connected set of capabilities.</>,
   service_data: primaryServices.map((service, index) => ({ id: index + 1, icon: <ServiceWebIcon />, title: service.title, href: service.path })),
 };
 
@@ -49,9 +49,9 @@ const ServiceInfoArea = () => {
               <h4 className="sv-inner__info-title tp_title_anim">
                 {description}
               </h4>
-              <p>Choose a service by the problem you need to solve. Meta Ads and Google Ads cover paid campaigns; creative and AI video cover the assets used to explain an offer. Website development covers the pages and enquiry journey, while SEO addresses useful content, search access and accurate local information.</p>
-              <p>These pieces often depend on one another. A campaign may need a clearer landing page, and a website may need approved copy or product information before launch. Start with your current setup and the action you want a customer to take. Rahul can discuss the first useful scope and identify the work that can wait.</p>
-              <p>Each service page explains possible deliverables, review steps and separate costs. The proposal confirms what is actually included, who supplies assets and access, and whether support ends at delivery or continues. Apps, MVPs and automation are available for workflows that need more than a marketing page.</p>
+              <p>Buyers should not need to diagnose their own channel before asking for help. Start with the commercial goal, the current setup, what has already been tried, and where the system appears to break. Rahul uses that evidence to identify the first useful scope.</p>
+              <p>The stack may include a website or landing page, technical and on-page search work, Meta or Google campaigns, creative assets, conversion tracking, analytics, or automation. These are components—not six mandatory services and not a promise that every problem needs every tool.</p>
+              <p>Each capability page explains possible deliverables and boundaries. The final proposal connects them around one problem and confirms ownership, access, approvals, costs, checks, reporting, and what happens after delivery.</p>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ const ServiceInfoArea = () => {
                     <span>
                       <StarIcon />
                     </span>{' '}
-                    Core Services
+                    Core Capabilities
                   </h4>
                 </div>
               </div>
@@ -97,7 +97,7 @@ const ServiceInfoArea = () => {
                     <span>
                       <StarIcon />
                     </span>{' '}
-                    Additional Services
+                    Extended Capabilities
                   </h4>
                 </div>
               </div>

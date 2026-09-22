@@ -15,19 +15,18 @@ interface DataType {
 
 const hero_content: DataType = {
   slide_text: [
-    "Meta Ads",
-    "Google Ads",
-    "Ad Creatives",
-    "AI UGC-Style Videos",
-    "Website Development",
-    "SEO & Local SEO",
+    "Diagnose",
+    "Build",
+    "Measure",
+    "Learn",
+    "Scale",
   ],
-  sub_title: "DIGITAL MARKETING & WEBSITES",
-  title_1: "Ads, Creative & Websites That Grow Your Business.",
+  sub_title: "PROOF-FIRST DIGITAL GROWTH STUDIO",
+  title_1: "One Problem. One Connected Stack. Proof Before Scale.",
   sm_info: <>
-    Reach more customers with Meta & Google Ads, ad creatives, AI UGC-style videos, websites, and SEO.
+    ReddyStack finds the digital bottleneck, builds only what the business needs, and measures what changes before more budget is committed.
   </>,
-  btn_text: <>Let’s <br /> Talk</>,
+  btn_text: <>Start a <br /> Project</>,
 }
 const {
   slide_text,
@@ -133,8 +132,8 @@ const HeroAreaHome = () => {
                         <i className="tp-btn-circle-dot"></i>
                       </Link>
                     </div>
-                    <Link href="/service" className="tp-btn-border-sm border-0 px-2 text-decoration-underline">
-                      Explore Services
+                    <Link href="#method" className="tp-btn-border-sm border-0 px-2 text-decoration-underline">
+                      See the Method
                     </Link>
                   </div>
                   <div className="tp-hero-scroll smooth">

@@ -35,7 +35,7 @@ export default function SeoContentPage({ path }: { path: string }) {
   let parentPath = page.parent;
   const rootLabels: Record<string, string> = {
     '/blog': 'Insights',
-    '/service': 'Services',
+    '/service': 'Capabilities',
     '/about': 'About',
     '/website-development': 'Website development',
   };

@@ -4,16 +4,16 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const delivery_labels = [
-  'Founder-Led',
-  'Fast Delivery',
-  'SEO-Ready',
-  'AI-Assisted',
-  'Launch Support',
-  'Founder-Led',
-  'Fast Delivery',
-  'SEO-Ready',
-  'AI-Assisted',
-  'Launch Support',
+  'Proof First',
+  'Founder Led',
+  'Connected Stack',
+  'Transparent AI',
+  'Client-Owned Accounts',
+  'Proof First',
+  'Founder Led',
+  'Connected Stack',
+  'Transparent AI',
+  'Client-Owned Accounts',
 ];
 
 const BrandAreaHomeOne = () => {
@@ -28,7 +28,7 @@ const BrandAreaHomeOne = () => {
 
             <div className="row align-items-center">
               <div className="col-xl-3 col-lg-3 col-md-5">
-                <h2 className="tp-brand-title">How ReddyStack <br /> Delivers</h2>
+                <h2 className="tp-brand-title">The ReddyStack <br /> Standard</h2>
               </div>
               <div className="col-xl-9 col-lg-9 col-md-7">
                 <div className="tp-brand-slider">

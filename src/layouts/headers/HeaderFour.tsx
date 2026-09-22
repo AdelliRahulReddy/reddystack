@@ -105,7 +105,7 @@ const HeaderFour = ({ style }: HeaderFourProps) => {
 
                   <div className="tp-header-3__btn d-none d-md-block">
                     <Link className="tp-btn-white" href="/contact">
-                      Let&apos;s Talk
+                      Start a Project
                       <span>
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
@@ -208,7 +208,7 @@ const HeaderFour = ({ style }: HeaderFourProps) => {
 
                   <div className="tp-header-3__btn d-none d-md-block">
                     <Link className="tp-btn-white" href="/contact">
-                      Let&apos;s Talk
+                      Start a Project
                       <span>
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
@@ -243,4 +243,3 @@ const HeaderFour = ({ style }: HeaderFourProps) => {
 };
 
 export default HeaderFour;
-

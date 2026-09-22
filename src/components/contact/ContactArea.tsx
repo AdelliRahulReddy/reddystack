@@ -6,6 +6,7 @@ import founderPortrait from "@/assets/img/hero/ab-hero-1.jpg";
 import brandLogo from "@/assets/img/logo/reddystack-symbol.svg";
 import ContactForm from '../forms/ContactForm';
 import { siteConfig } from '@/data/siteConfig';
+import { contactCategories } from '@/data/contactOptions';
 
 
 interface DataType {
@@ -14,53 +15,15 @@ interface DataType {
   title_2: string;
   email: string;
   mail_text: React.JSX.Element;
-  categorys: {
-    id: string;
-    title: string;
-  }[];
 }
 
 
 const contact_content: DataType = {
-  subtitle: "Contact Us",
-  title_1: "Let’s Talk",
-  title_2: "About your Project",
+  subtitle: "Start Here",
+  title_1: "Bring One",
+  title_2: "Growth Problem",
   email: siteConfig.email,
-  mail_text: <>Share your website or product link, what is currently difficult and what you want a customer to do. Include the service you need, available content, budget boundary and any deadline. If you are unsure where to start, choose &ldquo;Not sure yet&rdquo; and describe the problem. Rahul will use those details to discuss the scope and the information needed for a quote. An enquiry does not automatically start paid work. Keep passwords, payment details and private customer records out of the form; any required account access can be agreed separately.</>,
-  categorys: [
-  {
-    "id": "meta-ads",
-    "title": "Meta Ads"
-  },
-  {
-    "id": "google-ads",
-    "title": "Google Ads"
-  },
-  {
-    "id": "ad-creatives",
-    "title": "Ad Creatives"
-  },
-  {
-    "id": "ai-ugc-videos",
-    "title": "AI UGC-Style Videos"
-  },
-  {
-    "id": "seo-websites",
-    "title": "Website Development"
-  },
-  {
-    "id": "seo-local-seo",
-    "title": "SEO & Local SEO"
-  },
-  {
-    "id": "additional",
-    "title": "Apps, MVPs & Automation"
-  },
-  {
-    "id": "not_sure",
-    "title": "Not sure yet"
-  }
-],
+  mail_text: <>Share the business problem, website or product link, desired outcome, what has already been tried, and any budget or deadline boundary. You do not need to diagnose the channel first. Rahul will review whether the next step should be a Proof Sprint, connected Stack Build, ongoing improvement, or no engagement yet. An enquiry does not automatically start paid work. Keep passwords, payment details, and private customer records out of the form.</>,
 }
 
 const {
@@ -69,14 +32,13 @@ const {
   title_2,
   email,
   mail_text,
-  categorys,
 } = contact_content
 
 
 const ContactArea = ({ initialService, sourcePage }: { initialService: string; sourcePage: string }) => {
   const [selectedCategories, setSelectedCategories] = useState<number[]>(() => {
     const serviceId = ['applications', 'mvp-builds', 'ai-automations'].includes(initialService) ? 'additional' : initialService;
-    const index = categorys.findIndex((category) => category.id === serviceId);
+    const index = contactCategories.findIndex((category) => category.id === serviceId);
     return index < 0 ? [] : [index];
   });
 
@@ -89,9 +51,10 @@ const ContactArea = ({ initialService, sourcePage }: { initialService: string; s
     }
   };
 
-  const selectedCategoryTitles = selectedCategories
-    .map((index) => categorys[index]?.title)
-    .filter((value): value is string => Boolean(value));
+  const selectedCategoryTitles = selectedCategories.flatMap((index) => {
+    const category = contactCategories[index];
+    return category ? [category.title] : [];
+  });
 
 
   return (
@@ -136,9 +99,9 @@ const ContactArea = ({ initialService, sourcePage }: { initialService: string; s
             <div className="row">
               <div className="col-xl-12">
                 <div className="contact-inner__category mb-85">
-                  <h4 className="contact-inner__category-title">I&apos;m interested in...</h4>
+                  <h4 className="contact-inner__category-title">Where should we begin?</h4>
                   <div className="contact-inner__category-wrapper">
-                    {categorys.map((item, index) => (
+                    {contactCategories.map((item, index) => (
                       <button key={index} type="button"
                         aria-pressed={selectedCategories.includes(index)}
                         onClick={() => toggleSelection(index)}

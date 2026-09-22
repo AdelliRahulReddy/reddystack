@@ -18,38 +18,38 @@ interface DataType {
 }
 
 const hero_content: DataType = {
-  subtitle: "Services",
-  title: "Ads, Creative, Websites & SEO",
+  subtitle: "Connected Capabilities",
+  title: "Build the Stack the Problem Needs",
   serrvice_list: [
   {
     "id": 1,
     "delay": ".2s",
-    "title": "Meta Ads"
+    "title": "Digital Foundations"
   },
   {
     "id": 2,
     "delay": ".3s",
-    "title": "Google Ads"
+    "title": "Search Visibility"
   },
   {
     "id": 3,
     "delay": ".4s",
-    "title": "Ad Creatives"
+    "title": "Paid Acquisition"
   },
   {
     "id": 4,
     "delay": ".5s",
-    "title": "AI UGC-Style Videos"
+    "title": "Creative Testing"
   },
   {
     "id": 5,
     "delay": ".6s",
-    "title": "Website Development"
+    "title": "Tracking & Analytics"
   },
   {
     "id": 6,
     "delay": ".7s",
-    "title": "SEO & Local SEO"
+    "title": "Automation & Products"
   }
 ],
   slider_images_1: [

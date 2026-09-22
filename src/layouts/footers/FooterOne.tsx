@@ -22,9 +22,9 @@ interface DataType {
 }
 
 const footer_content: DataType = {
-  title: "Let’s grow your business",
-  title_2: <>Let’s grow <br /> your business</>,
-  btn_text_1: 'Email Your Enquiry',
+  title: "Bring one growth problem",
+  title_2: <>Bring one problem. <br /> Build the proof.</>,
+  btn_text_1: 'Email the Problem',
   footer_data: [
     {
       id: 1,
@@ -69,7 +69,7 @@ const FooterOne = ({ style }: FooterOneProps) => {
     ? "tp-footer__customize black-bg-3"
     : "tp-page-wrapper theme-bg";
   const primaryCtaHref = "/contact";
-  const primaryCtaLabel = "Let’s Talk";
+  const primaryCtaLabel = "Start With One Problem";
 
 
 
@@ -118,7 +118,7 @@ const FooterOne = ({ style }: FooterOneProps) => {
                       <div className="tp-footer-btn text-center">
                         <a className="tp-btn-grey-xl w-100" target="_blank" rel="noopener noreferrer" href={siteConfig.socialLinks.email}>
                           <div>
-                            <span>Email Your Enquiry</span>
+                            <span>Email the Problem</span>
                           </div>
                         </a>
                       </div>
@@ -184,9 +184,13 @@ const FooterOne = ({ style }: FooterOneProps) => {
                 <div className="col-xl-6 col-md-6">
                   <div className="tp-copyright-content-right text-center text-md-end">
                     <span>
-                      <Link href="/blog">Guides</Link>
+                      <Link href="/service">Capabilities</Link>
                       {" / "}
-                      <Link href="/pricing">Pricing</Link>
+                      <Link href="/portfolio">Work</Link>
+                      {" / "}
+                      <Link href="/pricing">Ways to Work</Link>
+                      {" / "}
+                      <Link href="/blog">Insights</Link>
                       {" / "}
                       <Link href="/privacy-policy">Privacy</Link>
                       {" / "}
@@ -206,4 +210,3 @@ const FooterOne = ({ style }: FooterOneProps) => {
 };
 
 export default FooterOne;
-

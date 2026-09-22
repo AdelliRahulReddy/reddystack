@@ -16,10 +16,15 @@ const context = vm.createContext({
   console: { error: (...args) => logs.push(args) },
   require: (name) => name === 'resend' ? { Resend: class {
     emails = { send: async (message) => { sent.push(message); if (providerThrows) throw new Error('private provider detail'); return { error: providerError }; } };
-  } } : name === '@/data/siteConfig' ? { siteConfig: { email: 'hello@example.test' } } : require(name),
+  } } : name === '@/data/siteConfig' ? { siteConfig: { email: 'hello@example.test' } }
+    : name === '@/data/contactOptions' ? {
+      contactBudgetTitles: ['Under ₹25k', '₹25k–₹50k', '₹50k–₹1L', '₹1L–₹2.5L', '₹2.5L+'],
+      contactCategoryTitles: ['Proof Sprint', 'Paid Acquisition — Meta', 'Paid Acquisition — Google', 'Creative & Conversion', 'AI-Assisted Video', 'Website & Tracking Foundation', 'Search Visibility', 'Automation or Product Build', 'Start With the Bottleneck'],
+    }
+    : require(name),
 });
 vm.runInContext(code, context);
-const valid = { name: 'Test <person>', email: 'test@example.test', company: 'Example', message: 'Please discuss a website.', budget: 'Not specified', services: ['Website Development'] };
+const valid = { name: 'Test <person>', email: 'test@example.test', company: 'Example', message: 'Please discuss a website.', budget: '₹25k–₹50k', services: ['Website & Tracking Foundation'] };
 const post = (body, headers = {}) => context.exports.POST(new Request('https://www.reddystack.com/api/contact', {
   method: 'POST', headers: { 'content-type': 'application/json', origin: 'https://www.reddystack.com', 'x-vercel-forwarded-for': '192.0.2.1', ...headers },
   body: typeof body === 'string' ? body : JSON.stringify(body),

@@ -33,32 +33,32 @@ interface DataType {
 const featuredBlogPosts = getRecentBlogPosts(3);
 
 const price_content: DataType = {
-  subtitle: "Pricing",
-  title: <>Clear Scope. <br /> Custom Quotes.</>,
+  subtitle: "Ways to Work",
+  title: <>Start Focused. <br /> Scale With Evidence.</>,
   priceing_data: [
     {
       tab_id: "home",
       tab_content: "Pricing",
       tab_items: [
   {
-    "time": "Ads & SEO",
-    "info_1": "Ongoing support",
-    "info_2": "Meta Ads, Google Ads, and SEO. Scope and reporting agreed upfront; ad spend is separate.",
-    "btn_text": "Get a Custom Quote",
+    "time": "Proof Sprint",
+    "info_1": "One problem · bounded scope",
+    "info_2": "Establish the baseline, fix or test one important bottleneck, and leave with evidence for the next decision.",
+    "btn_text": "Discuss a Proof Sprint",
     "path": "/contact"
   },
   {
-    "time": "Creative & Video",
-    "info_1": "Per project or content package",
-    "info_2": "Ad designs, copy, video editing, and AI UGC-style videos. Deliverables and revisions agreed upfront.",
-    "btn_text": "Get a Custom Quote",
+    "time": "Stack Build",
+    "info_1": "Connected implementation",
+    "info_2": "Combine only the website, search, paid, creative, tracking, or automation work required by the agreed problem.",
+    "btn_text": "Plan a Stack Build",
     "path": "/contact"
   },
   {
-    "time": "Website Development",
-    "info_1": "Project-based delivery",
-    "info_2": "Business websites, online stores, and landing pages. Pages, integrations, and support scoped to your needs.",
-    "btn_text": "Get a Custom Quote",
+    "time": "Operate & Improve",
+    "info_1": "Ongoing evidence loop",
+    "info_2": "Run agreed tests, review meaningful outcomes, improve the working system, and change priorities when the evidence changes.",
+    "btn_text": "Discuss Ongoing Work",
     "path": "/contact"
   }
 ]
@@ -124,8 +124,8 @@ const PriceAreaHomeOne = ({ style }: PriceAreaHomeOneProps) => {
             <div className="col-xl-12">
               {style ?
                 <div className="sv-inner__price-title-box text-center">
-                  <h4 className="tp-section-title-3 tp_title_anim">Services & Pricing</h4>
-                  <p className="tp_title_anim">Custom quotes with deliverables, fees, and scope agreed before work starts.</p>
+                  <h4 className="tp-section-title-3 tp_title_anim">Ways to Work</h4>
+                  <p className="tp_title_anim">Proof Sprint, Stack Build, or ongoing improvement—each quoted with a defined problem, scope, evidence plan, and ownership.</p>
                 </div>
                 :
                 <div className="tp-pcb-tab blog-btn-tab d-flex justify-content-center mb-80">

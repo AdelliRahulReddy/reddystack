@@ -23,45 +23,33 @@ interface DataType {
 }
 
 const service_content: DataType = {
-  subtitle: "Core Services",
-  title: <>Services to Grow <br /> Your Business</>,
-  sm_des: <>Reach customers, explain your offer, and turn interest into enquiries with our six core services.</>,
+  subtitle: "The Connected Stack",
+  title: <>Build What the <br /> Problem Needs</>,
+  sm_des: <>Capabilities are selected around one measurable bottleneck. ReddyStack does not force every business into the same service package.</>,
   accordion_data: [
     {
-      id: 1, tab_id: "One", path: "/service/meta-ads", question: "Meta Ads",
-      answer: "Reach potential customers on Facebook and Instagram with campaigns built around your offer.",
-      some_features: ["Facebook & Instagram Campaigns", "Conversion Tracking", "Campaign Optimisation"],
-      linkLabel: "Explore Meta Ads"
+      id: 1, tab_id: "One", path: "/service/seo-websites", question: "Foundation",
+      answer: "Build the pages, offer clarity, enquiry path, and measurement foundation required before traffic is scaled.",
+      some_features: ["Websites & Landing Pages", "Conversion Paths", "Tracking Foundations"],
+      linkLabel: "Explore Website Foundations"
     },
     {
-      id: 2, tab_id: "Two", path: "/service/google-ads", question: "Google Ads",
-      answer: "Connect with people searching for your products or services on Google.",
-      some_features: ["Campaign Setup", "Conversion Tracking", "Campaign Optimisation"],
-      linkLabel: "Explore Google Ads"
+      id: 2, tab_id: "Two", path: "/service/seo-local-seo", question: "Discovery",
+      answer: "Improve how the right people find and understand the business across search engines and local discovery.",
+      some_features: ["Technical & On-Page SEO", "Search Intent", "Local Visibility"],
+      linkLabel: "Explore Search Visibility"
     },
     {
-      id: 3, tab_id: "Three", path: "/service/ad-creatives", question: "Ad Creatives",
-      answer: "Make your offer stand out with visuals, video, and copy tailored to your campaign.",
-      some_features: ["Ad Images & Promotional Designs", "Video Editing", "Ad Copy & Scripts"],
-      linkLabel: "Explore Ad Creatives"
+      id: 3, tab_id: "Three", path: "/service/meta-ads", question: "Acquisition",
+      answer: "Test paid demand with a clear offer, suitable destination, controlled budget, and meaningful conversion feedback.",
+      some_features: ["Meta & Google Ads", "Creative Testing", "Conversion Measurement"],
+      linkLabel: "Explore Paid Acquisition"
     },
     {
-      id: 4, tab_id: "Four", path: "/service/ai-ugc-videos", question: "AI UGC-Style Videos",
-      answer: "Explain your product or service with conversational AI-presenter videos for ads and social content.",
-      some_features: ["AI-Presenter Videos", "Product Demos", "Service Explainers"],
-      linkLabel: "Explore AI Videos"
-    },
-    {
-      id: 5, tab_id: "Five", path: "/service/seo-websites", question: "Website Development",
-      answer: "Give your business an online home that makes it easy for visitors to enquire or buy.",
-      some_features: ["Business Websites", "Online Stores", "Landing Pages"],
-      linkLabel: "Explore Website Development"
-    },
-    {
-      id: 6, tab_id: "Six", path: "/service/seo-local-seo", question: "SEO & Local SEO",
-      answer: "Help customers find your business in Google Search, Maps, and local results.",
-      some_features: ["Website Optimisation", "Local SEO", "Google Business Profile Management"],
-      linkLabel: "Explore SEO Services"
+      id: 4, tab_id: "Four", path: "/service/ai-automations", question: "Systems",
+      answer: "Connect repetitive workflows, product tools, and AI-assisted operations when the growth problem extends beyond a page or campaign.",
+      some_features: ["Workflow Automation", "Chatbots & Internal Tools", "Apps & MVPs"],
+      linkLabel: "Explore Automation Systems"
     }
   ]
 }
@@ -85,7 +73,7 @@ const ServiceAreaHomeOne = () => {
             <span className="tp-services-inner-border right tp-vertical-line transition-3"></span>
 
             <div className="tp-services-bottom-text tp-services-bg-text">
-              <p>Services</p>
+              <p>Capabilities</p>
             </div>
             <div className="row gx-0">
 
@@ -102,34 +90,34 @@ const ServiceAreaHomeOne = () => {
 
                   <div className="tp-services-capsule-item-wrapper">
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Websites</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Web & Landing</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-pink-2)", color: "var(--tp-common-black)" }}>Meta Ads</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-pink-2)", color: "var(--tp-common-black)" }}>Search Visibility</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Google Ads</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Paid Acquisition</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-blue-2)", color: "var(--tp-common-white)" }}>Ad Creatives</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-blue-2)", color: "var(--tp-common-white)" }}>Creative Testing</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-pink-2)", color: "var(--tp-common-black)" }}>Landing Pages</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-pink-2)", color: "var(--tp-common-black)" }}>Tracking</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Online Stores</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Automation</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Ad Copy</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Conversion</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-blue-2)", color: "var(--tp-common-white)" }}>SEO & Local SEO</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-blue-2)", color: "var(--tp-common-white)" }}>Analytics</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-pink-2)", color: "var(--tp-common-black)" }}>AI UGC Videos</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-pink-2)", color: "var(--tp-common-black)" }}>AI Workflows</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Video Editing</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Product Builds</span>
                     </p>
                     {/* Keep the image shapes at the bottom */}
                     <p data-tp-throwable-el="">

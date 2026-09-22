@@ -79,7 +79,7 @@ export const trustPages: Record<TrustPageSlug, TrustPageData> = {
       {
         title: "Website use",
         body: [
-          "The ReddyStack website provides information about ads, creative content, AI UGC-style videos, websites, SEO, pricing, and portfolio work. Apps, MVPs, chatbots, and automation are additional services available on request.",
+          "The ReddyStack website explains a proof-first digital growth method, connected capabilities, ways to work, portfolio items, and practical insights. A proposal selects only the web, search, paid acquisition, creative, tracking, automation, or product work required by the agreed problem.",
           "Information on the website is not a guarantee of results, rankings, revenue, traffic, or platform approval.",
         ],
       },

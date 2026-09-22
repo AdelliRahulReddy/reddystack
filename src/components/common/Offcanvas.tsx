@@ -104,7 +104,7 @@ const Offcanvas = ({ showCanvas, setShowCanvas, style_bg, style_bg2 }: Offcanvas
                     {siteConfig.email}</a>
                 </div>
                 <div className="tpoffcanvas__text">
-                  <p>If in doubt. reach out.</p>
+                  <p>Bring one problem. Start with evidence.</p>
                 </div>
               </div>
 

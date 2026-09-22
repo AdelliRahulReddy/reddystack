@@ -4,6 +4,7 @@ import { Resend } from 'resend';
 import { createHash, randomUUID } from 'node:crypto';
 
 import { siteConfig } from '@/data/siteConfig';
+import { contactBudgetTitles, contactCategoryTitles } from '@/data/contactOptions';
 
 export const runtime = 'nodejs';
 
@@ -13,8 +14,8 @@ const contactSchema = yup
     email: yup.string().trim().email().max(254).required(),
     company: yup.string().trim().max(200).required(),
     message: yup.string().trim().max(4000).required(),
-    budget: yup.string().oneOf(['Not specified', 'Under ₹10k', '₹10k-25k', '₹25k-50k', '₹50k-1L', '₹1L+']).required(),
-    services: yup.array().max(8).of(yup.string().oneOf(['Meta Ads', 'Google Ads', 'Ad Creatives', 'AI UGC-Style Videos', 'Website Development', 'SEO & Local SEO', 'Apps, MVPs & Automation', 'Not sure yet']).required()).default([]).required(),
+    budget: yup.string().oneOf(['Not specified', ...contactBudgetTitles]).required(),
+    services: yup.array().max(contactCategoryTitles.length).of(yup.string().oneOf(contactCategoryTitles).required()).default([]).required(),
     website: yup.string().max(0).default(''),
     sourcePage: yup.string().max(200).matches(/^\/(?!\/)[a-z0-9/-]*(?![\s\S])/, { excludeEmptyString: true }).default(''),
   })

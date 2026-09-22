@@ -32,7 +32,7 @@ const ServiceDetailsArea = ({ service }: ServiceDetailsAreaProps) => {
                 <p className="mb-15 tp_title_anim">{service.introPrimary}</p>
                 <p className="tp_title_anim">{service.introSecondary}</p>
                 <div className="d-flex flex-wrap gap-3 mt-30">
-                  <Link className="tp-btn-white" href={contactHref}>Request a Quote</Link>
+                  <Link className="tp-btn-white" href={contactHref}>Discuss Your Problem</Link>
                 </div>
               </div>
             </div>
@@ -181,7 +181,7 @@ const ServiceDetailsArea = ({ service }: ServiceDetailsAreaProps) => {
                   </h4>
                   <p className="mb-20">{service.highlightText}</p>
                   <Link className="tp-btn-white" href={contactHref}>
-                    Let&apos;s Talk
+                    Start a Project
                     <span>
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path

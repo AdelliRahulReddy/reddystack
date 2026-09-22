@@ -58,7 +58,7 @@ const PortfolioSlider = () => {
             <div className="porfolio-inner__overlay">
               <div className="porfolio-inner__text-1">
                 <h1 className="porfolio-inner__slider-title tp_title_anim">
-                  Selected Work <br /> From ReddyStack.
+                  Work You Can <br /> Inspect Clearly.
                 </h1>
               </div>
               <Slider {...setting} autoplay={!reducedMotion} className="porfolio-inner__slider-active">

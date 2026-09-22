@@ -28,26 +28,26 @@ const menu_data: DataType[] = [
   },
   {
     id: 2,
-    title: "About",
-    link: "/about",
+    title: "Method",
+    link: "/#method",
     has_dropdown: false,
   },
   {
     id: 3,
-    title: "Services",
+    title: "Capabilities",
     link: "/service",
     has_dropdown: false,
   },
   {
     id: 4,
-    title: "Pricing",
-    link: "/pricing",
+    title: "Work",
+    link: "/portfolio",
     has_dropdown: false,
   },
   {
     id: 5,
-    title: "Portfolio",
-    link: "/portfolio",
+    title: "About",
+    link: "/about",
     has_dropdown: false,
   },
   {
@@ -58,7 +58,7 @@ const menu_data: DataType[] = [
   },
   {
     id: 7,
-    title: "Contact",
+    title: "Start a Project",
     link: "/contact",
     has_dropdown: false,
   },

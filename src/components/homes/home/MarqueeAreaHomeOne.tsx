@@ -4,12 +4,12 @@ import useMedia from 'react-use/lib/useMedia';
 import Slider from "react-slick";
 
 const marquee_data = [
-  "Meta Ads",
-  "Google Ads",
-  "Ad Creatives",
-  "AI UGC-Style Videos",
-  "Website Development",
-  "SEO & Local SEO"
+  "One Problem",
+  "One Connected Stack",
+  "Proof Before Scale",
+  "Direct Founder Accountability",
+  "Transparent AI Use",
+  "Client-Owned Accounts"
 ];
 
 const setting = {

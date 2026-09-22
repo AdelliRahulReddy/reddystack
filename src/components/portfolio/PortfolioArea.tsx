@@ -13,20 +13,19 @@ const PortfolioArea = () => {
     <div className="porfolio-inner__thumb-wrapper tp-portfolio-effect portfolio-list-scroll-text-animation p-relative fix  black-bg-3 pt-80 pb-50"
       data-scrub="0.0001">
       <div className="portfolio-list-scroll-text pb-80 d-flex align-items-center">
-        <p>All Projects</p>
-        <p>All Projects</p>
+        <p>Work & Proof</p>
+        <p>Work & Proof</p>
       </div>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xl-8 col-lg-10">
             <div className="service-details__banner-text mb-50 text-center">
               <p>
-                These six personal and demo projects explore business websites, product interfaces
-                and automation. Each entry explains its purpose, the design priorities and the
-                limits of what the example demonstrates. The collection contains no paid client
-                case studies or measured advertising results.
+                ReddyStack&apos;s proof standard is simple: show the real work, state the actual role,
+                separate implementation evidence from business outcomes, and name what has not been
+                measured. These current projects are personal and demo builds—not invented client case studies.
               </p>
-              <p>Review the work by the problem it addresses: how a portfolio explains a person&apos;s capabilities, how a utility guides its next action, or how an automation handles a request it cannot answer. The project dates refer to the individual work; ReddyStack began in April 2026.</p>
+              <p>Review each build by the problem it addresses, the decisions made, the working output, and the stated limitations. Client case studies will be added only when permission, baseline data, completed work, and a defensible result all exist.</p>
               <p>A similar commercial project needs its own brief, factual content, acceptance checks and operating responsibilities. Use an example to explain the direction you want, then <Link href="/contact">discuss the actual scope with Rahul</Link>.</p>
             </div>
           </div>

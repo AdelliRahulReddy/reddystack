@@ -86,8 +86,8 @@ const TestimonialAreaHomeTwo = () => {
         >
           <span className="tp-about-inner-border transition-3"></span>
           <div className="tp-section-title-wrapper text-center mb-40">
-            <h2 className="tp-section-title">Selected Development Work</h2>
-            <p>Websites, product builds, and tools. <Link href="/service">Explore our ads and creative services</Link>.</p>
+            <h2 className="tp-section-title">Work You Can Inspect</h2>
+            <p>Clearly labelled personal and demo builds—shown as work, never presented as invented client results. <Link href="/portfolio">Review the full context</Link>.</p>
           </div>
           <div className="tp-hero-2__boder-circle">
             <span></span>

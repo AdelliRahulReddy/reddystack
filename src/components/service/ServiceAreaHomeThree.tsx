@@ -27,34 +27,42 @@ interface DataType {
 
 
 const service_content: DataType = {
-  subtitle: "HOW WE WORK",
-  title: <>From Your Goal <br /> to Delivery</>,
-  sm_info: <>Clear scope, direct communication, <br /> and work built around your business.</>,
-  btn_text: <>Ready to start your project? <span>Let&apos;s Talk</span></>,
+  subtitle: "THE REDDYSTACK METHOD",
+  title: <>From Bottleneck <br /> to Evidence</>,
+  sm_info: <>One accountable process across <br /> every capability and engagement.</>,
+  btn_text: <>Bring one growth problem. <span>Start here</span></>,
   service_data: [
     {
       id: 1,
       icon: <StrategyIcno />,
-      title: <>Discovery <br /> & Strategy</>,
-      sm_des: <>We review your goals, audience, offer, <br /> and budget before agreeing the scope.</>,
-      tag_1: "Research",
-      tag_2: "Planning",
+      title: <>Diagnose <br /> the Bottleneck</>,
+      sm_des: <>Clarify the commercial goal, inspect the current setup, <br /> and establish a useful baseline.</>,
+      tag_1: "Problem",
+      tag_2: "Baseline",
     },
     {
       id: 2,
       icon: <LeadershipIcon />,
-      title: <>Create <br /> & Launch</>,
-      sm_des: <>We prepare campaigns, creative, or website work <br /> for your review before launch.</>,
-      tag_1: "Your Feedback",
-      tag_2: "Clear Deliverables",
+      title: <>Build <br /> the Right Stack</>,
+      sm_des: <>Select and connect only the pages, search, paid, creative, <br /> tracking, or automation work the problem needs.</>,
+      tag_1: "Scope",
+      tag_2: "Ownership",
     },
     {
       id: 3,
       icon: <DevelopmentIcon />,
-      title: <>Launch <br /> & Optimize</>,
-      sm_des: <>We check the agreed work, review results, <br /> and plan improvements where needed.</>,
-      tag_1: "Reporting",
-      tag_2: "Performance",
+      title: <>Prove <br /> What Changed</>,
+      sm_des: <>Check the implementation, compare against the baseline, <br /> and document evidence and limitations.</>,
+      tag_1: "Evidence",
+      tag_2: "Learning",
+    },
+    {
+      id: 4,
+      icon: <DevelopmentIcon />,
+      title: <>Scale <br /> the Evidence</>,
+      sm_des: <>Continue, expand, revise, or stop based on what the work <br /> actually showed—not on activity alone.</>,
+      tag_1: "Decision",
+      tag_2: "Next Move",
     },
   ]
 }

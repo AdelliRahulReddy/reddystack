@@ -11,8 +11,8 @@ interface DataType {
 
 const faq_content: DataType = {
   subtitle: "FAQs",
-  title: <>Common Questions</>,
-  sm_des: <>Answers about ads, creative content, websites, SEO, and working with ReddyStack.</>,
+  title: <>How Proof-First Work Works</>,
+  sm_des: <>Clear answers about fit, evidence, AI, ownership, scope, and working directly with Rahul Reddy.</>,
 };
 
 const { subtitle, title, sm_des } = faq_content;

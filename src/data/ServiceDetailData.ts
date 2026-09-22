@@ -106,7 +106,7 @@ export const serviceDetailData: ServiceDetail[] = [
   "subtitle": "Facebook & Instagram Campaigns",
   "title": "Meta Ads",
   "introPrimary": "Reach potential customers on Facebook and Instagram with campaigns built around your offer and business goals.",
-  "introSecondary": "For local businesses and growing brands, with direct support from Rahul Reddy.",
+  "introSecondary": "For companies with a clear offer and a measurable acquisition problem, led directly by Rahul Reddy.",
   "overviewPrimary": "We review your offer, audience, existing account, and campaign goal before launch. Campaigns can support enquiries, online sales, or awareness depending on the agreed scope.",
   "overviewSecondary": "Your business retains ownership of its advertising account. We agree account access, tracking requirements, campaign assets, and reporting before work begins.",
   "features": [
@@ -220,7 +220,7 @@ export const serviceDetailData: ServiceDetail[] = [
   "subtitle": "Campaign Setup & Optimisation",
   "title": "Google Ads",
   "introPrimary": "Connect with people looking for your products or services through Google Ads campaigns and conversion tracking.",
-  "introSecondary": "For local businesses and growing brands, with direct support from Rahul Reddy.",
+  "introSecondary": "For companies with a clear offer and a measurable search-acquisition problem, led directly by Rahul Reddy.",
   "overviewPrimary": "We review search intent, your offer, landing pages, and budget to choose a campaign scope that fits your business. Tracking is checked before performance is assessed.",
   "overviewSecondary": "Ongoing work focuses on relevant traffic and the actions that matter to your business. Reporting and review frequency are agreed in your proposal.",
   "features": [
@@ -334,7 +334,7 @@ export const serviceDetailData: ServiceDetail[] = [
   "subtitle": "Design, Editing, Copy & Scripts",
   "title": "Ad Creatives",
   "introPrimary": "Turn your offer into ad images, promotional designs, edited videos, and copy for your campaigns.",
-  "introSecondary": "For local businesses and growing brands, with direct support from Rahul Reddy.",
+  "introSecondary": "For companies that need testable campaign assets connected to an offer, destination, and measurement plan.",
   "overviewPrimary": "We start with your audience, offer, brand assets, and campaign objective. The brief defines formats, dimensions, quantities, and the message each asset should communicate.",
   "overviewSecondary": "You review the proposed direction before the final assets are prepared. Filming, stock assets, voiceovers, source files, and usage rights are included only when specified in the quote.",
   "features": [
@@ -448,7 +448,7 @@ export const serviceDetailData: ServiceDetail[] = [
   "subtitle": "AI Presenters, Demos & Explainers",
   "title": "AI UGC-Style Videos",
   "introPrimary": "Explain your product or service through conversational AI-presenter videos designed for ads and social content.",
-  "introSecondary": "For local businesses and growing brands, with direct support from Rahul Reddy.",
+  "introSecondary": "An AI-assisted production capability used where it supports a defined message, channel, and evidence plan.",
   "overviewPrimary": "We agree the script, presenter style, language, length, and intended use before production. You can supply product footage, screenshots, and brand assets to support the story.",
   "overviewSecondary": "These are AI-generated, creator-style videos. They are not presented as genuine customer testimonials or real customer experiences. Presenter permissions and asset rights are checked for the agreed use.",
   "features": [
@@ -548,7 +548,7 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Help customers find your business through website optimisation and Google Business Profile management.",
-  "metaTitle": "SEO & Local SEO for Small Businesses | ReddyStack",
+  "metaTitle": "SEO & Search Visibility Services | ReddyStack",
   "relatedLinks": [
     {
       "title": "Google Business Profile optimisation checklist",
@@ -567,7 +567,7 @@ export const serviceDetailData: ServiceDetail[] = [
       "path": "/about/rahul-reddy-adelli"
     }
   ],
-  "metaDescription": "Founder-led SEO and local SEO for small businesses. Website audits, service-page improvements, eligible Google Business Profiles, and clear enquiry reporting.",
+  "metaDescription": "Proof-first SEO and search visibility work covering technical audits, service pages, eligible Google Business Profiles, baselines, and clear reporting.",
   "presentation": {
     "showVisuals": false,
     "showSidebar": true,
@@ -740,7 +740,7 @@ export const serviceDetailData: ServiceDetail[] = [
     introPrimary:
       'Business websites, online stores, and landing pages that explain your offer and make it easy to enquire or buy.',
     introSecondary:
-      'For startups, local businesses, and founder-led brands. Mobile usability, search visibility, and contact paths are planned from the start.',
+      'For companies that need a stronger digital foundation. Mobile usability, search visibility, measurement, and contact paths are planned from the start.',
     overviewPrimary:
       'We plan your pages around customer needs and relevant search terms, then build for clear navigation, fast loading, and straightforward enquiries.',
     overviewSecondary:
@@ -767,7 +767,7 @@ export const serviceDetailData: ServiceDetail[] = [
     metaTitle: 'SEO-Ready Website Development | ReddyStack',
     relatedLinks: [{ title: 'Website development briefs and launch checklists', path: '/blog/website-development' }, { title: 'Business website development services', path: '/website-development' }, { title: 'Development example: KalyamRam portfolio website', path: '/portfolio/kalyamram' }, { title: 'Development example: ReelsXpress booking platform', path: '/portfolio/reelsxpress' }],
     metaDescription:
-      'SEO website development services by ReddyStack for startups and small businesses that need responsive websites, service pages, performance, and lead-ready structure.',
+      'Proof-first website development by ReddyStack for companies that need responsive pages, search-ready structure, performance, tracking, and clear conversion paths.',
     faqItems: [
       {
         question: 'What is included in an SEO website build?',
@@ -790,8 +790,8 @@ export const serviceDetailData: ServiceDetail[] = [
       {
         question: 'Who is this best for?',
         answer:
-          'This service is best for startups, local businesses, and founder-led brands that need an affordable but credible website with stronger search readiness and clearer inquiry paths.',
-        some_features: ['Startups', 'Local Businesses', 'Founder-led Brands'],
+          'This service is best for companies that need a credible digital foundation, clearer conversion paths, search readiness, and an agreed measurement plan.',
+        some_features: ['Digital Foundation', 'Search Readiness', 'Clear Conversion Paths'],
       },
     ],
     ...sharedImages,

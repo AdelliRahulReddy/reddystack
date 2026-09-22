@@ -31,7 +31,7 @@ interface DataType {
 }
 
 const footer_content: DataType = {
-  sm_info: <>Feel free to reach out with questions <br /> or inquiries.</>,
+  sm_info: <>Bring one growth problem. <br /> Build the proof.</>,
   social_links: [
     {
       id: 1,
@@ -61,10 +61,11 @@ const footer_content: DataType = {
   links: [
     { title: "About", link: "/about" },
     { title: "Founder", link: "/about/rahul-reddy-adelli" },
-    { title: "Guides", link: "/blog" },
-    { title: "Services", link: "/service" },
-    { title: "Portfolio", link: "/portfolio" },
-    { title: "Contact", link: "/contact" },
+    { title: "Capabilities", link: "/service" },
+    { title: "Work", link: "/portfolio" },
+    { title: "Ways to Work", link: "/pricing" },
+    { title: "Insights", link: "/blog" },
+    { title: "Start a Project", link: "/contact" },
   ],
   address: <>{siteConfig.location}</>,
   email: siteConfig.email,

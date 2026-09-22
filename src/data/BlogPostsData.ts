@@ -63,7 +63,7 @@ const rahulAuthor = {
   name: 'Rahul Reddy',
   role: 'Founder, ReddyStack',
   avatar: authorAvatar,
-  bio: 'Rahul Reddy Adelli is the founder of ReddyStack in Hyderabad, working with businesses on ads, creative content, AI videos, websites, and SEO.',
+  bio: 'Rahul Reddy Adelli is the founder of ReddyStack, a proof-first digital growth studio connecting web, search, paid acquisition, creative, tracking, and automation.',
 };
 
 export const blogPosts: BlogPost[] = [

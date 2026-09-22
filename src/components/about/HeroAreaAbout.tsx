@@ -29,7 +29,7 @@ const HeroAreaAbout = () => {
           <Image src={about_shape_1} alt="" />
         </div>
         <div className="ab-hero__text d-none d-lg-block col-md-4">
-          <span>About Me</span>
+          <span>About ReddyStack</span>
         </div>
         <div className="smooth">
           <a onClick={scrollTo} className="d-none d-xl-block pointer">
@@ -51,7 +51,7 @@ const HeroAreaAbout = () => {
           <div className="row">
             <div className="col-xl-4 col-lg-5">
               <div className="ab-hero__title-box">
-                <h1 className="ab-hero__title tp-char-animation">I&apos;m Rahul Reddy</h1>
+                <h1 className="ab-hero__title tp-char-animation">Built by Rahul Reddy</h1>
               </div>
             </div>
             <div className="col-xl-8 col-lg-7">

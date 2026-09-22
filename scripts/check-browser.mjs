@@ -139,10 +139,10 @@ try {
   assert.ok(evaluate(`document.querySelector('${earlyCta}').getBoundingClientRect().bottom <= innerHeight`), 'Mobile quote link must be visible without scrolling');
   run('click', earlyCta);
   run('wait', '--fn', 'Boolean(document.querySelector(".contact-category-btn[aria-pressed=true]"))');
-  assert.equal(evaluate('document.querySelector(".contact-category-btn[aria-pressed=true]").textContent'), 'AI UGC-Style Videos');
+  assert.equal(evaluate('document.querySelector(".contact-category-btn[aria-pressed=true]").textContent'), 'AI-Assisted Video');
   run('click', '.contact-category-btn[aria-pressed=true]');
   assert.equal(evaluate('document.querySelectorAll(".contact-category-btn[aria-pressed=true]").length'), 0, 'Preselected service remains editable');
-  run('find', 'role', 'button', 'click', '--name', 'AI UGC-Style Videos', '--exact');
+  run('find', 'role', 'button', 'click', '--name', 'AI-Assisted Video', '--exact');
   evaluate(`window.enquiryEvents=[]; window.gtag=(...args)=>window.enquiryEvents.push(args);
     window.fetch=async (url, options)=>{if(url!='/api/contact') throw new Error('Unexpected test fetch'); window.enquiryBody=JSON.parse(options.body); return new Response(JSON.stringify({success:true,requestId:'test-reference'}), {status:200,headers:{'Content-Type':'application/json'}});}`);
   run('fill', '#contact-name', 'Browser check');
@@ -153,12 +153,12 @@ try {
   run('press', 'Enter');
   run('wait', '--fn', 'window.enquiryEvents.some(e=>e[1]==="contact_form_submit")');
   assert.equal(evaluate('window.enquiryBody.sourcePage'), '/service/ai-ugc-videos');
-  assert.deepEqual(evaluate('window.enquiryBody.services'), ['AI UGC-Style Videos']);
+  assert.deepEqual(evaluate('window.enquiryBody.services'), ['AI-Assisted Video']);
   const lead = evaluate('window.enquiryEvents.find(e=>e[1]==="contact_form_submit")[2]');
   assert.equal(lead.source_page, '/service/ai-ugc-videos');
   assert.equal(lead.lead_id, 'test-reference');
   assert.ok(!JSON.stringify(lead).includes('test@example.test'), 'Do not send enquiry PII to analytics');
-  for (const [path, service] of [['/website-development', 'Website Development'], ['/service/ai-automations', 'Apps, MVPs & Automation']]) {
+  for (const [path, service] of [['/website-development', 'Website & Tracking Foundation'], ['/service/ai-automations', 'Automation or Product Build']]) {
     run('open', `${base}${path}`);
     run('click', earlyCta);
     run('wait', '--fn', 'Boolean(document.querySelector(".contact-category-btn[aria-pressed=true]"))');

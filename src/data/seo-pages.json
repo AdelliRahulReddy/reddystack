@@ -5063,18 +5063,18 @@
     "parent": "/about",
     "kind": "profile",
     "title": "Rahul Reddy Adelli",
-    "description": "Meet Rahul Reddy Adelli, founder of ReddyStack, an independent digital marketing and website service based in Hyderabad, India.",
-    "subtitle": "Founder of ReddyStack",
-    "intro": "I am Rahul Reddy Adelli, the founder of ReddyStack in Hyderabad, India. I started ReddyStack in April 2026 and operate it independently, without employees. The service brings together advertising, creative production, AI UGC-style videos, websites and SEO, with direct communication from the first brief through the agreed delivery.",
+    "description": "Meet Rahul Reddy Adelli, founder of ReddyStack, a proof-first digital growth studio based in Hyderabad and working worldwide.",
+    "subtitle": "Built by Rahul Reddy",
+    "intro": "I am Rahul Reddy Adelli, the founder of ReddyStack in Hyderabad, India. I started ReddyStack in April 2026 and lead every engagement directly. ReddyStack connects web, search, paid acquisition, creative, tracking, and automation around one defined growth problem, with transparent AI use and clear evidence before scale.",
     "sections": [
       {
-        "title": "What ReddyStack focuses on",
+        "title": "How ReddyStack works",
         "body": [
-          "The six core services are Meta Ads, Google Ads, Ad Creatives, AI UGC-Style Videos, Website Development, and SEO & Local SEO. Related work is grouped under these services so a business can discuss a clear outcome and scope. Apps, MVPs and automation remain additional work available on request."
+          "ReddyStack is organised around four stages: Diagnose, Build, Prove, and Scale. The work can connect website and landing-page foundations, search visibility, paid acquisition, creative testing, tracking, and automation. The problem determines the stack; clients are not pushed into six unrelated service packages."
         ],
         "links": [
           {
-            "title": "Explore the six services",
+            "title": "Explore the capabilities",
             "path": "/service"
           }
         ]

@@ -6,8 +6,6 @@ import useMedia from 'react-use/lib/useMedia';
 import award_img from "@/assets/img/about/award-icon.svg";
 import { useInView } from 'react-intersection-observer';
 import Count from '@/components/common/Count';
-import { portfolioProjects } from '@/data/PortfolioProjectsData';
-import { primaryServices } from '@/data/ServiceDetailData';
 
 
 type DataType = {
@@ -25,13 +23,13 @@ type DataType = {
 
 const about_content: DataType = {
   subtitle: "About ReddyStack",
-  award_title: "Founder-led by Rahul Reddy",
-  award_des: "Independent service · Hyderabad · Started April 2026",
-  about_des: <>I&apos;m Rahul Reddy Adelli. I started ReddyStack in April 2026 to offer <span>ads, creative content, websites, and SEO</span> with direct communication. I operate independently from Hyderabad and am available for remote projects. We begin with the problem your business needs solved, then agree <span>deliverables, costs, review points and handover</span>. The portfolio shows personal and demo work you can assess before discussing a project.</>,
+  award_title: "Built and led by Rahul Reddy",
+  award_des: "Independent proof-first studio · Hyderabad · Worldwide",
+  about_des: <>I&apos;m Rahul Reddy Adelli. I built ReddyStack for companies that need <span>one accountable person across a connected digital problem</span>, rather than several disconnected vendors. Each engagement starts with a baseline, focuses on the most important bottleneck, and records what changed. <span>AI supports research and execution, but judgment, quality and accountability stay with me.</span></>,
   counter_data: [
-    { id: 1, count: portfolioProjects.length, text: "Personal / Demo Projects" },
-    { id: 2, count: primaryServices.length, text: "Core Services" },
-    { id: 3, count: 1, text: "Founder Point of Contact" }
+    { id: 1, count: 4, text: "Method Stages" },
+    { id: 2, count: 1, text: "Connected Stack" },
+    { id: 3, count: 1, text: "Accountable Lead" }
   ],
 }
 
