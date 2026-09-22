@@ -1057,7 +1057,7 @@ export const intentLandingPages: IntentLandingPage[] = [
         some_features: ["Hyderabad", "India", "International"],
       },
     ],
-    relatedServiceSlug: "seo-websites",
+    relatedServiceSlug: "seo-local-seo",
     relatedBlogSlug: "landing-pages-vs-seo-websites-what-should-you-launch-first",
     relatedProjectSlug: "reelsxpress",
     keywords: [

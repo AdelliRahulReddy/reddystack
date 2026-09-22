@@ -1,3 +1,5 @@
+const sitemapLastModified = "2026-09-22";
+
 import { siteConfig } from "@/data/siteConfig";
 import { serviceDetailData } from "@/data/ServiceDetailData";
 import { blogPosts } from "@/data/BlogPostsData";
@@ -13,20 +15,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly" | "monthly" | "yearly";
     priority: number;
   }> = [
-      { path: "", lastModified: "2026-09-16", changeFrequency: "weekly", priority: 1 },
-      { path: "/about", lastModified: "2026-09-16", changeFrequency: "monthly", priority: 0.8 },
-      { path: "/service", lastModified: "2026-09-16", changeFrequency: "monthly", priority: 0.85 },
-      { path: "/portfolio", lastModified: "2026-09-16", changeFrequency: "monthly", priority: 0.85 },
-      { path: "/blog", lastModified: "2026-09-16", changeFrequency: "weekly", priority: 0.8 },
-      { path: "/contact", lastModified: "2026-09-16", changeFrequency: "monthly", priority: 0.75 },
-      { path: "/pricing", lastModified: "2026-09-16", changeFrequency: "monthly", priority: 0.78 },
-      { path: "/privacy-policy", lastModified: "2026-09-16", changeFrequency: "yearly", priority: 0.3 },
-      { path: "/terms", lastModified: "2026-09-16", changeFrequency: "yearly", priority: 0.3 },
-      { path: "/revision-policy", lastModified: "2026-09-16", changeFrequency: "yearly", priority: 0.3 },
-      ...serviceDetailData.map((service) => ({ path: service.path, lastModified: service.updatedAt || "2026-09-14", changeFrequency: "monthly" as const, priority: 0.8 })),
+      { path: "", lastModified: sitemapLastModified, changeFrequency: "weekly", priority: 1 },
+      { path: "/about", lastModified: sitemapLastModified, changeFrequency: "monthly", priority: 0.8 },
+      { path: "/service", lastModified: sitemapLastModified, changeFrequency: "monthly", priority: 0.85 },
+      { path: "/portfolio", lastModified: sitemapLastModified, changeFrequency: "monthly", priority: 0.85 },
+      { path: "/blog", lastModified: sitemapLastModified, changeFrequency: "weekly", priority: 0.8 },
+      { path: "/contact", lastModified: sitemapLastModified, changeFrequency: "monthly", priority: 0.75 },
+      { path: "/pricing", lastModified: sitemapLastModified, changeFrequency: "monthly", priority: 0.78 },
+      { path: "/privacy-policy", lastModified: sitemapLastModified, changeFrequency: "yearly", priority: 0.3 },
+      { path: "/terms", lastModified: sitemapLastModified, changeFrequency: "yearly", priority: 0.3 },
+      { path: "/revision-policy", lastModified: sitemapLastModified, changeFrequency: "yearly", priority: 0.3 },
+      ...serviceDetailData.map((service) => ({ path: service.path, lastModified: service.updatedAt || sitemapLastModified, changeFrequency: "monthly" as const, priority: 0.8 })),
       ...intentLandingPages.map((page) => ({
         path: page.path,
-        lastModified: "2026-09-16",
+        lastModified: sitemapLastModified,
         changeFrequency: "monthly" as const,
         priority: page.slug === "website-development-services" ? 0.86 : 0.78,
       })),
@@ -48,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const portfolioRoutes = portfolioProjects.map((project) => ({
       url: `${siteConfig.siteUrl}${project.path}`,
-      lastModified: "2026-09-16",
+      lastModified: sitemapLastModified,
       changeFrequency: "monthly" as const,
       priority: 0.75,
     }));

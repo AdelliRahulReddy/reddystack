@@ -98,9 +98,9 @@ export async function POST(request: Request) {
 
     const toEmail = process.env.CONTACT_TO_EMAIL || siteConfig.email;
     const fromEmail =
-      process.env.RESEND_FROM_EMAIL || 'Reddystack <hello@reddystack.com>';
+      process.env.RESEND_FROM_EMAIL || 'ReddyStack <hello@reddystack.com>';
 
-    const subject = `New Reddystack inquiry from ${payload.name}`;
+    const subject = `New ReddyStack inquiry from ${payload.name}`;
     const text = [
       `Name: ${payload.name}`,
       `Email: ${payload.email}`,
@@ -116,7 +116,7 @@ export async function POST(request: Request) {
 
     const html = `
       <div>
-        <h2>New Reddystack inquiry</h2>
+        <h2>New ReddyStack inquiry</h2>
         <p><strong>Name:</strong> ${escapeHtml(payload.name)}</p>
         <p><strong>Email:</strong> ${escapeHtml(payload.email)}</p>
         <p><strong>Business / project:</strong> ${escapeHtml(payload.company)}</p>

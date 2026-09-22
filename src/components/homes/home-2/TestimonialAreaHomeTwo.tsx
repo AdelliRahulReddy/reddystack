@@ -141,7 +141,7 @@ const TestimonialAreaHomeTwo = () => {
                         className="tp-portfolio-item-2 include-bg"
                         tabIndex={index === activeIndex ? 0 : -1}
                       >
-                        <Image src={item.listingImage} alt="" fill sizes="(max-width: 767px) 90vw, (max-width: 1199px) 630px, 770px" className="tp-portfolio-card-image" />
+                        <Image src={item.listingImage} alt={`${item.title} project preview`} fill sizes="(max-width: 767px) 90vw, (max-width: 1199px) 630px, 770px" className="tp-portfolio-card-image" />
                         <div className="tp-portfolio-meta-2">
                           <span>{item.category}</span>
                           <span>{item.year}</span>

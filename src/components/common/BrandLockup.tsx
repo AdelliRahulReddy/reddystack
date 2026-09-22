@@ -12,7 +12,7 @@ type BrandLockupProps = {
 
 const BrandLockup = ({ className, textColor }: BrandLockupProps) => {
   return (
-    <Link className={className} href="/" aria-label="Reddystack home">
+    <Link className={className} href="/" aria-label="ReddyStack home">
       <span
         style={{
           display: 'inline-flex',
@@ -23,7 +23,7 @@ const BrandLockup = ({ className, textColor }: BrandLockupProps) => {
       >
         <Image
           src={brandLogo}
-          alt=""
+          alt="ReddyStack logo"
           width={40}
           height={40}
           sizes="40px"
@@ -44,7 +44,7 @@ const BrandLockup = ({ className, textColor }: BrandLockupProps) => {
             whiteSpace: 'nowrap',
           }}
         >
-          Reddystack
+          ReddyStack
         </span>
       </span>
     </Link>

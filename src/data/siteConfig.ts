@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import { primaryServices } from "./ServiceDetailData";
 
 export const siteSeo = {
-  siteName: "Reddystack",
-  siteNameAlternates: ["ReddyStack", "reddystack.com"],
-  defaultTitle: "Reddystack | Digital Marketing & Website Development",
+  siteName: "ReddyStack",
+  siteNameAlternates: ["Reddystack", "reddystack.com"],
+  defaultTitle: "ReddyStack | Digital Marketing & Website Development",
   defaultDescription:
-    "Reddystack offers Meta and Google Ads, ad creatives, AI UGC videos, websites, and SEO. Based in Hyderabad, serving businesses in India and worldwide.",
+    "ReddyStack offers Meta and Google Ads, ad creatives, AI UGC videos, websites, and SEO. Based in Hyderabad, serving businesses in India and worldwide.",
   creatorHandle: "@reddystack",
   logoPath: "/assets/img/logo/reddystack-symbol.png",
   ogImagePath: "/assets/img/social/reddystack-share-v4.png",
-  ogImageAlt: "Reddystack — Ads, Creative & Websites That Grow Your Business.",
+  ogImageAlt: "ReddyStack — Ads, Creative & Websites That Grow Your Business.",
 } as const;
 
 export const siteConfig = {
@@ -20,7 +20,7 @@ export const siteConfig = {
   titleSuffix: siteSeo.siteName,
   description: siteSeo.defaultDescription,
   keywords: [
-  "Reddystack",
+  "ReddyStack",
   "Meta Ads",
   "Google Ads",
   "Ad Creatives",
@@ -77,74 +77,74 @@ export const pageSeo = {
     path: "/",
   },
   about: {
-    title: "About Reddystack | Founder Rahul Reddy Adelli",
+    title: "About ReddyStack | Founder Rahul Reddy Adelli",
     description:
-      "Meet Rahul Reddy, founder of Reddystack, helping small businesses and growing brands with ads, creative content, websites, and SEO.",
+      "Meet Rahul Reddy, founder of ReddyStack, helping small businesses and growing brands with ads, creative content, websites, and SEO.",
     path: "/about",
   },
   services: {
-    title: "Services | Ads, Creative, Websites & SEO | Reddystack",
+    title: "Services | Ads, Creative, Websites & SEO | ReddyStack",
     description:
       "Explore Meta Ads, Google Ads, Ad Creatives, AI UGC-style Videos, Website Development, and SEO & Local SEO.",
     path: "/service",
   },
   portfolio: {
-    title: "Portfolio | Selected Work | Reddystack",
+    title: "Portfolio | Selected Work | ReddyStack",
     description:
       "Explore six personal and demo projects covering websites, product interfaces and automation, with clear descriptions of their purpose and design priorities.",
     path: "/portfolio",
   },
   blog: {
-    title: "Insights | Ads, Creative, Websites & SEO | Reddystack",
+    title: "Insights | Ads, Creative, Websites & SEO | ReddyStack",
     description:
       "Ideas for ads, creative content, websites, and SEO, alongside our guides to apps and automation.",
     path: "/blog",
   },
   contact: {
-    title: "Contact Reddystack | Start Your Project",
+    title: "Contact ReddyStack | Start Your Project",
     description:
       "Talk to Rahul Reddy about ads, creative content, AI videos, websites, and SEO. Enquire through our form or WhatsApp.",
     path: "/contact",
   },
   pricing: {
-    title: "Pricing | Custom Quotes | Reddystack",
+    title: "Pricing | Custom Quotes | ReddyStack",
     description:
       "Get a custom quote for ads, creative content, AI videos, websites, and SEO with clear deliverables, fees, and scope.",
     path: "/pricing",
   },
   privacyPolicy: {
-    title: "Privacy Policy | Reddystack",
+    title: "Privacy Policy | ReddyStack",
     description:
-      "Read how Reddystack handles website inquiries, contact form details, analytics, cookies, and communication data.",
+      "Read how ReddyStack handles website inquiries, contact form details, analytics, cookies, and communication data.",
     path: "/privacy-policy",
   },
   terms: {
-    title: "Terms of Service | Reddystack",
+    title: "Terms of Service | ReddyStack",
     description:
-      "Read the terms for using Reddystack and commissioning ads, creative content, AI videos, websites, SEO, and other digital services.",
+      "Read the terms for using ReddyStack and commissioning ads, creative content, AI videos, websites, SEO, and other digital services.",
     path: "/terms",
   },
   revisionPolicy: {
-    title: "Revision and Refund Policy | Reddystack",
+    title: "Revision and Refund Policy | ReddyStack",
     description:
-      "Review Reddystack project revision, cancellation, and refund guidance for scoped digital service work.",
+      "Review ReddyStack project revision, cancellation, and refund guidance for scoped digital service work.",
     path: "/revision-policy",
   },
   blogDetail: {
-    title: "Insight Details | Reddystack",
+    title: "Insight Details | ReddyStack",
     description:
-      "Explore detailed Reddystack insights on SEO, AI-assisted delivery, product execution, and digital growth.",
+      "Explore detailed ReddyStack insights on SEO, AI-assisted delivery, product execution, and digital growth.",
     path: "/blog-details",
     ogType: "article",
   },
   portfolioDetail: {
-    title: "Project Details | Reddystack",
+    title: "Project Details | ReddyStack",
     description:
-      "Review a detailed Reddystack project breakdown, including the strategy, execution, and outcomes behind the build.",
+      "Review a detailed ReddyStack project breakdown, including the strategy, execution, and outcomes behind the build.",
     path: "/portfolio-details",
   },
   blogSidebar: {
-    title: "Insights | Ads, Creative, Websites & SEO | Reddystack",
+    title: "Insights | Ads, Creative, Websites & SEO | ReddyStack",
     description:
       "Ideas for ads, creative content, websites, and SEO, alongside our guides to apps and automation.",
     path: "/blog-sidebar",
@@ -155,7 +155,7 @@ export const pageSeo = {
     },
   },
   homeThree: {
-    title: "Home Preview | Reddystack",
+    title: "Home Preview | ReddyStack",
     description: siteSeo.defaultDescription,
     path: "/home-3",
     canonicalPath: "/",
@@ -165,9 +165,9 @@ export const pageSeo = {
     },
   },
   notFound: {
-    title: "Page Not Found | Reddystack",
+    title: "Page Not Found | ReddyStack",
     description:
-      "The page could not be found. Explore Reddystack services for ads, creative content, websites, and SEO.",
+      "The page could not be found. Explore ReddyStack services for ads, creative content, websites, and SEO.",
     path: "/404",
     robots: {
       index: false,
@@ -296,7 +296,7 @@ export const schemaIds = {
 const serviceOfferCatalog = {
   "@type": "OfferCatalog",
   "@id": schemaIds.offerCatalog,
-  name: "Reddystack service packages",
+  name: "ReddyStack service packages",
   url: buildCanonicalUrl("/pricing"),
   itemListElement: primaryServices.map((service) => ({
     "@type": "Offer",

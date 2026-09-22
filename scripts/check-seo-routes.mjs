@@ -67,7 +67,7 @@ for (const url of urls) {
   assert.equal(canonical && new URL(canonical).href, new URL(url).href, `${path}: canonical`);
   const title = html.match(/<title>([^<]+)<\/title>/)?.[1];
   assert.ok(title, `${path}: title missing`);
-  assert.match(title, /Reddystack/, `${path}: title must identify the brand`);
+  assert.match(title, /ReddyStack/, `${path}: title must identify the brand`);
   assert.ok(!titles.has(title), `${path}: duplicate title with ${titles.get(title)}`);
   titles.set(title, path);
   const description = html.match(/<meta name="description" content="([^"]+)"/)?.[1];
