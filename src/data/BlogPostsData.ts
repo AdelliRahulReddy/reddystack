@@ -61,9 +61,9 @@ export type BlogPost = {
 
 const rahulAuthor = {
   name: 'Rahul Reddy',
-  role: 'Founder, Reddystack',
+  role: 'Founder, ReddyStack',
   avatar: authorAvatar,
-  bio: 'Rahul Reddy Adelli is the founder of Reddystack in Hyderabad, working with businesses on ads, creative content, AI videos, websites, and SEO.',
+  bio: 'Rahul Reddy Adelli is the founder of ReddyStack in Hyderabad, working with businesses on ads, creative content, AI videos, websites, and SEO.',
 };
 
 export const blogPosts: BlogPost[] = [
@@ -75,7 +75,7 @@ export const blogPosts: BlogPost[] = [
     title: "How SEO Websites Can Help Startups Get Better Leads",
     excerpt:
       "Plan service pages around real customer questions, check the enquiry path and measure whether search visits become relevant conversations.",
-    metaTitle: 'How SEO Websites Help Startups Get Better Leads | Reddystack',
+    metaTitle: 'How SEO Websites Help Startups Get Better Leads | ReddyStack',
     metaDescription:
       'Learn how SEO websites improve discovery, message clarity, and lead generation for startups that need more than a brochure site.',
     displayDate: 'April 11, 2026',
@@ -109,7 +109,7 @@ export const blogPosts: BlogPost[] = [
       "A useful service page helps the right person decide whether the business can solve their problem.",
     closingParagraphs: [
       "Begin with the pages closest to the work you actually want. Review one page for unanswered buyer questions, one enquiry journey for delivery problems and one report for misleading measures. These are concrete changes a small business can assess.",
-      "At Reddystack, the website brief can include page planning, content, search foundations and enquiry checks. The scope should state which work is included and how it will be verified. Search performance remains an outcome to monitor, not a result a build can promise."
+      "At ReddyStack, the website brief can include page planning, content, search foundations and enquiry checks. The scope should state which work is included and how it will be verified. Search performance remains an outcome to monitor, not a result a build can promise."
     ],
     tags: ['SEO Strategy', 'Website Build', 'Lead Generation'],
     sidebarVariant: 'image',
@@ -122,7 +122,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Landing Pages vs SEO Websites',
     excerpt:
       "Choose a landing page or a larger website by the offer, traffic source and questions visitors need answered before taking action.",
-    metaTitle: 'Landing Pages vs SEO Websites: What Should You Launch First? | Reddystack',
+    metaTitle: 'Landing Pages vs SEO Websites: What Should You Launch First? | ReddyStack',
     metaDescription:
       'Understand when a landing page is enough and when a full SEO website is the better investment for lead generation and growth.',
     displayDate: 'April 7, 2026',
@@ -170,7 +170,7 @@ export const blogPosts: BlogPost[] = [
     title: 'When to Build an Application',
     excerpt:
       "Follow a real workflow through its records, permissions and exceptions before deciding between a website, an existing tool and a custom application.",
-    metaTitle: 'When to Build an Application Instead of a Website | Reddystack',
+    metaTitle: 'When to Build an Application Instead of a Website | ReddyStack',
     metaDescription:
       'Learn the signals that tell you a product or business needs an application instead of just a marketing website.',
     displayDate: 'April 3, 2026',
@@ -204,7 +204,7 @@ export const blogPosts: BlogPost[] = [
       "Build an application when the workflow needs maintained records and rules, and you are ready to operate them.",
     closingParagraphs: [
       "A practical decision document can be short: the user, the task, current pain points, required records, permissions and the reason existing tools fall short. That is enough to start a grounded scoping conversation.",
-      "Reddystack can help assess a website, an integrated tool or a custom application against that brief. The first proposal should define the working journey and release responsibilities, rather than treating a long feature list as proof of value."
+      "ReddyStack can help assess a website, an integrated tool or a custom application against that brief. The first proposal should define the working journey and release responsibilities, rather than treating a long feature list as proof of value."
     ],
     tags: ['Applications', 'Product Planning', 'Build Decisions'],
     sidebarVariant: 'slider',
@@ -218,7 +218,7 @@ export const blogPosts: BlogPost[] = [
     title: 'How to Plan Application Features Before Development Starts',
     excerpt:
       "Turn a list of screens into a brief with user roles, workflow rules, realistic examples, dependencies and acceptance checks.",
-    metaTitle: 'How to Plan Application Features Before Development Starts | Reddystack',
+    metaTitle: 'How to Plan Application Features Before Development Starts | ReddyStack',
     metaDescription:
       'A practical guide to prioritizing application features, user flows, and release scope before development begins.',
     displayDate: 'March 29, 2026',
@@ -265,7 +265,7 @@ export const blogPosts: BlogPost[] = [
     title: 'How to Scope an MVP Without Overbuilding',
     excerpt:
       "Choose the assumption your first release should test, define a complete user journey and decide what can remain manual.",
-    metaTitle: 'How to Scope an MVP Without Overbuilding | Reddystack',
+    metaTitle: 'How to Scope an MVP Without Overbuilding | ReddyStack',
     metaDescription:
       'Learn how to scope an MVP around validation, release speed, and core user value instead of feature bloat.',
     displayDate: 'March 25, 2026',
@@ -312,7 +312,7 @@ export const blogPosts: BlogPost[] = [
     title: 'What a Founder-Led MVP Launch Needs Before Release',
     excerpt:
       "Check the user's journey and the operator's responsibilities before release, including permissions, failures, support and recovery.",
-    metaTitle: 'What a Founder-Led MVP Launch Needs Before Release | Reddystack',
+    metaTitle: 'What a Founder-Led MVP Launch Needs Before Release | ReddyStack',
     metaDescription:
       'A practical pre-launch checklist for founder-led MVPs that need clarity, speed, and fewer avoidable launch issues.',
     displayDate: 'March 19, 2026',
@@ -359,7 +359,7 @@ export const blogPosts: BlogPost[] = [
     title: 'AI Automations Small Teams Can Actually Use',
     excerpt:
       "Explore enquiry routing, draft preparation and internal summaries, with approval boundaries and checks for duplicates and incorrect output.",
-    metaTitle: 'AI Automations Small Teams Can Actually Use | Reddystack',
+    metaTitle: 'AI Automations Small Teams Can Actually Use | ReddyStack',
     metaDescription:
       'Practical AI automation ideas for lean teams that want to save time, reduce manual steps, and improve operational flow.',
     displayDate: 'March 14, 2026',
@@ -406,7 +406,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Prompt Engineering for Business Workflows That Save Time',
     excerpt:
       "Define approved inputs, missing-information rules and a usable output format, then test the prompt within the workflow that relies on it.",
-    metaTitle: 'Prompt Engineering for Business Workflows That Save Time | Reddystack',
+    metaTitle: 'Prompt Engineering for Business Workflows That Save Time | ReddyStack',
     metaDescription:
       'See how prompt engineering supports better AI workflows for content, operations, support, and internal process execution.',
     displayDate: 'March 8, 2026',

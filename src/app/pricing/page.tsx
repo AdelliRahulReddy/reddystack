@@ -14,7 +14,7 @@ export const metadata = buildPageMetadata("pricing");
 
 const pricingFaqItems = [
   {
-    question: "What is the starting price for a Reddystack website?",
+    question: "What is the starting price for a ReddyStack website?",
     answer:
       "A focused starter website can start at Rs. 9,999 when the scope is limited to a simple one-page build or starter presence. Small business websites usually start from Rs. 14,999, and SEO-ready multi-page builds usually start from Rs. 24,999 depending on content depth and sections.",
   },
@@ -29,9 +29,9 @@ const pricingFaqItems = [
       "SEO-ready builds can include metadata, heading structure, sitemap, schema, internal links, speed checks, and crawlability basics. Ongoing SEO campaigns or content retainers should be scoped separately.",
   },
   {
-    question: "Can Reddystack work with clients outside India?",
+    question: "Can ReddyStack work with clients outside India?",
     answer:
-      "Yes. Reddystack is online-first and can work with startups, creators, founders, and small businesses across India and worldwide through a remote-friendly process.",
+      "Yes. ReddyStack is online-first and can work with startups, creators, founders, and small businesses across India and worldwide through a remote-friendly process.",
   },
 ];
 

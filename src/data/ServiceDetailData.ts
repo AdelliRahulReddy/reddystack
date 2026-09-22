@@ -128,7 +128,7 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Reach potential customers on Facebook and Instagram with campaigns built around your offer and business goals.",
-  "metaTitle": "Meta Ads Management Services | Reddystack",
+  "metaTitle": "Meta Ads Management Services | ReddyStack",
   "relatedLinks": [{ "title": "Meta Ads guides and checklists", "path": "/blog/meta-ads" }],
   "metaDescription": "Reach potential customers on Facebook and Instagram with campaigns built around your offer and business goals.",
   "presentation": {
@@ -242,7 +242,7 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Connect with people looking for your products or services through Google Ads campaigns and conversion tracking.",
-  "metaTitle": "Google Ads Management Services | Reddystack",
+  "metaTitle": "Google Ads Management Services | ReddyStack",
   "relatedLinks": [{ "title": "Google Ads guides and checklists", "path": "/blog/google-ads" }],
   "metaDescription": "Connect with people looking for your products or services through Google Ads campaigns and conversion tracking.",
   "presentation": {
@@ -356,7 +356,7 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Turn your offer into ad images, promotional designs, edited videos, and copy for your campaigns.",
-  "metaTitle": "Ad Creative Services | Reddystack",
+  "metaTitle": "Ad Creative Services | ReddyStack",
   "relatedLinks": [{ "title": "Ad creative briefs, scripts and examples", "path": "/blog/ad-creatives" }],
   "metaDescription": "Turn your offer into ad images, promotional designs, edited videos, and copy for your campaigns.",
   "presentation": {
@@ -470,7 +470,7 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Explain your product or service through conversational AI-presenter videos designed for ads and social content.",
-  "metaTitle": "AI UGC-Style Video Production Services | Reddystack",
+  "metaTitle": "AI UGC-Style Video Production Services | ReddyStack",
   "relatedLinks": [{ "title": "AI video workflows and production checklists", "path": "/blog/ai-ugc-videos" }],
   "metaDescription": "Explain your product or service through conversational AI-presenter videos designed for ads and social content.",
   "presentation": {
@@ -548,7 +548,7 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Help customers find your business through website optimisation and Google Business Profile management.",
-  "metaTitle": "SEO & Local SEO for Small Businesses | Reddystack",
+  "metaTitle": "SEO & Local SEO for Small Businesses | ReddyStack",
   "relatedLinks": [
     {
       "title": "Google Business Profile optimisation checklist",
@@ -586,7 +586,7 @@ export const serviceDetailData: ServiceDetail[] = [
     {
       "title": "What your SEO scope can include",
       "paragraphs": [
-        "Choose the work that addresses your current gaps. The quote identifies which of these deliverables are included and whether changes are implemented by Reddystack or handed to your developer."
+        "Choose the work that addresses your current gaps. The quote identifies which of these deliverables are included and whether changes are implemented by ReddyStack or handed to your developer."
       ],
       "bullets": [
         "Technical review: inspect agreed pages for indexing, crawl access, canonical URLs, redirects, sitemap coverage, and mobile loading issues.",
@@ -764,15 +764,15 @@ export const serviceDetailData: ServiceDetail[] = [
     highlightTitle: ['Search-ready', 'websites'],
     highlightText:
       'Built for brands that need visibility, clarity, and stronger conversion from their online presence.',
-    metaTitle: 'SEO-Ready Website Development | Reddystack',
+    metaTitle: 'SEO-Ready Website Development | ReddyStack',
     relatedLinks: [{ title: 'Website development briefs and launch checklists', path: '/blog/website-development' }, { title: 'Business website development services', path: '/website-development' }, { title: 'Development example: KalyamRam portfolio website', path: '/portfolio/kalyamram' }, { title: 'Development example: ReelsXpress booking platform', path: '/portfolio/reelsxpress' }],
     metaDescription:
-      'SEO website development services by Reddystack for startups and small businesses that need responsive websites, service pages, performance, and lead-ready structure.',
+      'SEO website development services by ReddyStack for startups and small businesses that need responsive websites, service pages, performance, and lead-ready structure.',
     faqItems: [
       {
         question: 'What is included in an SEO website build?',
         answer:
-          'Reddystack covers structure, service page planning, responsive build quality, on-page SEO setup, performance tuning, and conversion-aware page sections so the website is useful for both search and lead generation.',
+          'ReddyStack covers structure, service page planning, responsive build quality, on-page SEO setup, performance tuning, and conversion-aware page sections so the website is useful for both search and lead generation.',
         some_features: ['Site Structure', 'On-page SEO', 'Performance'],
       },
       {
@@ -882,9 +882,9 @@ export const serviceDetailData: ServiceDetail[] = [
     highlightTitle: ['Launch-ready', 'applications'],
     highlightText:
       'Built for products that need a working application, a cleaner build path, and faster execution.',
-    metaTitle: 'Web & Mobile Application Development Services | Reddystack',
+    metaTitle: 'Web & Mobile Application Development Services | ReddyStack',
     metaDescription:
-      'Custom web and mobile application development services by Reddystack for dashboards, internal tools, MVP products, and launch-ready workflows.',
+      'Custom web and mobile application development services by ReddyStack for dashboards, internal tools, MVP products, and launch-ready workflows.',
     faqItems: [
       {
         question: 'Do you build internal tools and client-facing applications?',
@@ -895,7 +895,7 @@ export const serviceDetailData: ServiceDetail[] = [
       {
         question: 'Can you help plan features before development starts?',
         answer:
-          'Yes. Feature planning is part of the service. Reddystack helps define user flows, release scope, and screen-level priorities before deeper implementation begins.',
+          'Yes. Feature planning is part of the service. ReddyStack helps define user flows, release scope, and screen-level priorities before deeper implementation begins.',
         some_features: ['Feature Planning', 'User Flows', 'Release Scope'],
       },
       {
@@ -999,9 +999,9 @@ export const serviceDetailData: ServiceDetail[] = [
     highlightTitle: ['Fast-moving', 'MVP builds'],
     highlightText:
       'Built for validation, early traction, and sharper founder execution without unnecessary complexity.',
-    metaTitle: 'MVP Development Services | Reddystack',
+    metaTitle: 'MVP Development Services | ReddyStack',
     metaDescription:
-      'MVP development services by Reddystack for startup founders that need lean scoping, faster validation, product flows, and founder-led delivery.',
+      'MVP development services by ReddyStack for startup founders that need lean scoping, faster validation, product flows, and founder-led delivery.',
     faqItems: [
       {
         question: 'What makes an MVP different from a full product build?',
@@ -1012,7 +1012,7 @@ export const serviceDetailData: ServiceDetail[] = [
       {
         question: 'Can you help founders avoid overbuilding?',
         answer:
-          'Yes. Scope control is a core part of this service. Reddystack helps reduce unnecessary features so the first release can reach proof, feedback, or traction faster.',
+          'Yes. Scope control is a core part of this service. ReddyStack helps reduce unnecessary features so the first release can reach proof, feedback, or traction faster.',
         some_features: ['Scope Control', 'Faster Launch', 'Clear Priorities'],
       },
       {
@@ -1116,12 +1116,12 @@ export const serviceDetailData: ServiceDetail[] = [
     highlightTitle: ['Practical', 'automation systems'],
     highlightText:
       'Built to reduce manual work and help lean teams move faster with better operational flow.',
-    metaTitle: 'AI Automation Services | Reddystack',
+    metaTitle: 'AI Automation Services | ReddyStack',
     metaDescription:
-      'AI automation services by Reddystack for small teams that need workflow design, prompt engineering, lead handling, and practical business automation systems.',
+      'AI automation services by ReddyStack for small teams that need workflow design, prompt engineering, lead handling, and practical business automation systems.',
     faqItems: [
       {
-        question: 'What kinds of automations can Reddystack build?',
+        question: 'What kinds of automations can ReddyStack build?',
         answer:
           'The service can support lead handling, internal operations, content workflows, prompt-driven outputs, and repetitive business processes that need clearer handoffs and less manual follow-up.',
         some_features: ['Lead Handling', 'Internal Ops', 'Content Workflows'],

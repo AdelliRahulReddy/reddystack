@@ -13,6 +13,7 @@ import {
 } from "@/data/siteConfig";
 import type { ServiceDetail } from "@/data/ServiceDetailData";
 import { getPortfolioProject } from "@/data/PortfolioProjectsData";
+import { getBlogPost } from "@/data/BlogPostsData";
 
 type IntentFaqItem = {
   question: string;
@@ -67,14 +68,14 @@ export const intentLandingPages: IntentLandingPage[] = [
     slug: "website-development-services",
     path: "/website-development",
     navLabel: "Website Development Services",
-    metaTitle: "Website Development Services | Reddystack",
+    metaTitle: "Website Development Services | ReddyStack",
     metaDescription:
       "Founder-led website development services for startups and businesses that need affordable, SEO-ready websites, landing pages, and service pages.",
     eyebrow: "Website Development Services",
     shortTitle: "website development services",
     headline: "Website development services for businesses that need visibility, trust, and leads.",
     intro:
-      "Reddystack builds business websites, service websites and landing pages with clear content, mobile layouts and a checked enquiry path. You work directly with Rahul to agree the pages, functionality and launch requirements.",
+      "ReddyStack builds business websites, service websites and landing pages with clear content, mobile layouts and a checked enquiry path. You work directly with Rahul to agree the pages, functionality and launch requirements.",
     heroHighlights: [
       "SEO-ready website development for service businesses and startups",
       "Responsive pages built around clarity, speed, and inquiries",
@@ -123,7 +124,7 @@ export const intentLandingPages: IntentLandingPage[] = [
       "A quote should state page types, content responsibilities, forms, integrations, migration, revisions and launch support. Domain registration, hosting, licences and ongoing maintenance are separate costs where applicable. Share the existing website, a proposed page list and the customer action you want; those inputs are more useful than asking for a price based only on page count.",
     finalCtaTitle: "Share the website you need to build.",
     finalCtaText:
-      "If you need website development services with clear scope, SEO foundations, and practical delivery, start with the business goal and Reddystack will shape the right first version.",
+      "If you need website development services with clear scope, SEO foundations, and practical delivery, start with the business goal and ReddyStack will shape the right first version.",
     faqItems: [
       {
         question: "What is included in website development services?",
@@ -132,9 +133,9 @@ export const intentLandingPages: IntentLandingPage[] = [
         some_features: ["Responsive Build", "SEO Setup", "Lead Forms"],
       },
       {
-        question: "Can Reddystack build affordable business websites?",
+        question: "Can ReddyStack build affordable business websites?",
         answer:
-          "Yes. Reddystack can keep the first version affordable by controlling scope, focusing on essential pages, and prioritizing the sections that improve credibility and inquiries.",
+          "Yes. ReddyStack can keep the first version affordable by controlling scope, focusing on essential pages, and prioritizing the sections that improve credibility and inquiries.",
         some_features: ["Affordable Scope", "Business Website", "Founder-led"],
       },
       {
@@ -146,7 +147,7 @@ export const intentLandingPages: IntentLandingPage[] = [
       {
         question: "Do you work with clients outside Hyderabad?",
         answer:
-          "Yes. Reddystack is based in Hyderabad and is available for remote projects across India and worldwide. Scope, review contacts and communication arrangements are agreed before work starts.",
+          "Yes. ReddyStack is based in Hyderabad and is available for remote projects across India and worldwide. Scope, review contacts and communication arrangements are agreed before work starts.",
         some_features: ["Hyderabad", "India", "Worldwide"],
       },
     ],
@@ -171,14 +172,14 @@ export const intentLandingPages: IntentLandingPage[] = [
     slug: "affordable-website-development",
     path: "/affordable-website-development",
     navLabel: "Affordable Website Development",
-    metaTitle: "Affordable Website Development | Reddystack",
+    metaTitle: "Affordable Website Development | ReddyStack",
     metaDescription:
       "Affordable website development for startups and small businesses that need clear scope, SEO-ready structure, responsive design, and practical launch support.",
     eyebrow: "Affordable Website Development",
     shortTitle: "affordable website development",
     headline: "Affordable website development without making the site look or feel cheap.",
     intro:
-      "Reddystack helps startups, small businesses, and founder-led teams build affordable websites that still feel credible, load cleanly, and support real inquiries. The approach is to control scope, prioritize useful pages, and avoid paying for features the first version does not need.",
+      "ReddyStack helps startups, small businesses, and founder-led teams build affordable websites that still feel credible, load cleanly, and support real inquiries. The approach is to control scope, prioritize useful pages, and avoid paying for features the first version does not need.",
     heroHighlights: [
       "Affordable business websites with clear launch scope",
       "SEO-ready structure, responsive build, and contact tracking",
@@ -227,7 +228,7 @@ export const intentLandingPages: IntentLandingPage[] = [
       "The budget is agreed against a defined page list and functionality. A narrow scope with ready content can cost less than a site requiring research, migration or custom integrations. Confirm domain, hosting, paid tools, revisions and support in writing so the total cost is understandable before work starts.",
     finalCtaTitle: "Discuss the essentials and your budget.",
     finalCtaText:
-      "If you need affordable website development with clear priorities, share the goal and Reddystack will help shape the smallest useful version.",
+      "If you need affordable website development with clear priorities, share the goal and ReddyStack will help shape the smallest useful version.",
     faqItems: [
       {
         question: "Can affordable website development still include SEO?",
@@ -275,14 +276,14 @@ export const intentLandingPages: IntentLandingPage[] = [
     slug: "website-development-under-10000",
     path: "/website-development-under-10000",
     navLabel: "Website Development Under 10000",
-    metaTitle: "Website Development Under 10000 | Reddystack",
+    metaTitle: "Website Development Under 10000 | ReddyStack",
     metaDescription:
       "Website development under 10000 for focused launch pages, starter websites, portfolios, and simple business sites with clear scope.",
     eyebrow: "Budget Website Development",
     shortTitle: "website development under 10000",
     headline: "Website development under 10000 for focused first launches.",
     intro:
-      "A budget below Rs. 10,000 needs a tightly defined website scope. Reddystack can discuss a simple landing page, starter portfolio or basic business page within that boundary, subject to reviewing the content and required functionality.",
+      "A budget below Rs. 10,000 needs a tightly defined website scope. ReddyStack can discuss a simple landing page, starter portfolio or basic business page within that boundary, subject to reviewing the content and required functionality.",
     heroHighlights: [
       "Useful for one-page websites, starter pages, and small portfolios",
       "Clear scope so the budget is realistic from the beginning",
@@ -331,7 +332,7 @@ export const intentLandingPages: IntentLandingPage[] = [
       "Whether the project fits below Rs. 10,000 depends on the final brief and content readiness. Request a written quote before treating that amount as an offer. Domain, hosting, subscriptions and any work outside the agreed starter scope should be identified separately.",
     finalCtaTitle: "Start lean, then grow the website when the business needs it.",
     finalCtaText:
-      "If you need a website under Rs. 10,000, share the exact goal and Reddystack will tell you what can fit honestly within the budget.",
+      "If you need a website under Rs. 10,000, share the exact goal and ReddyStack will tell you what can fit honestly within the budget.",
     faqItems: [
       {
         question: "Can I get a website under Rs. 10,000?",
@@ -379,14 +380,14 @@ export const intentLandingPages: IntentLandingPage[] = [
     slug: "mobile-app-development-services",
     path: "/app-development",
     navLabel: "App Development Services",
-    metaTitle: "App Development Services | Reddystack",
+    metaTitle: "App Development Services | ReddyStack",
     metaDescription:
       "Mobile app development services for founders and businesses that need lean product scoping, mobile-first flows, MVP builds, and practical launch support.",
     eyebrow: "Mobile App Development Services",
     shortTitle: "mobile app development services",
     headline: "Mobile app development services for founders who need a usable first release.",
     intro:
-      "Plan and build a mobile-first product around the task users need to complete. Reddystack helps define the first release, screens, data and integrations before committing to a platform or feature list.",
+      "Plan and build a mobile-first product around the task users need to complete. ReddyStack helps define the first release, screens, data and integrations before committing to a platform or feature list.",
     heroHighlights: [
       "Mobile-first product planning and app flow structure",
       "MVP app development with lean release scope",
@@ -435,12 +436,12 @@ export const intentLandingPages: IntentLandingPage[] = [
       "The estimate depends on the delivery platform, workflows, roles, device features, backend and integrations. A browser-based demo and an app-store release are different projects. Hosting, platform accounts, usage charges and ongoing updates should be visible alongside the implementation quote.",
     finalCtaTitle: "Build the mobile app version that can actually launch.",
     finalCtaText:
-      "If you need mobile app development services or an MVP app build, start with the core user journey and Reddystack will help scope version one.",
+      "If you need mobile app development services or an MVP app build, start with the core user journey and ReddyStack will help scope version one.",
     faqItems: [
       {
-        question: "Does Reddystack build full mobile apps or only MVPs?",
+        question: "Does ReddyStack build full mobile apps or only MVPs?",
         answer:
-          "Reddystack can support MVP app builds, mobile-first product flows, and practical application builds. The recommended scope depends on the product stage and the user journey.",
+          "ReddyStack can support MVP app builds, mobile-first product flows, and practical application builds. The recommended scope depends on the product stage and the user journey.",
         some_features: ["MVP App", "Product Flows", "Application Build"],
       },
       {
@@ -483,14 +484,14 @@ export const intentLandingPages: IntentLandingPage[] = [
     slug: "custom-web-application-development-services",
     path: "/custom-web-application-development-services",
     navLabel: "Custom Web Application Development Services",
-    metaTitle: "Custom Web Application Development Services | Reddystack",
+    metaTitle: "Custom Web Application Development Services | ReddyStack",
     metaDescription:
       "Custom web application development services for dashboards, internal tools, portals, workflow systems, and MVP products with practical scope.",
     eyebrow: "Custom Web Application Development",
     shortTitle: "custom web application development",
     headline: "Custom web application development services for workflows that need more than a website.",
     intro:
-      "Reddystack builds custom web applications, dashboards, internal tools, portals, and workflow systems for teams that need users to do something, not just read information. The work starts with process clarity, then turns the core flow into a usable product surface.",
+      "ReddyStack builds custom web applications, dashboards, internal tools, portals, and workflow systems for teams that need users to do something, not just read information. The work starts with process clarity, then turns the core flow into a usable product surface.",
     heroHighlights: [
       "Custom web apps, dashboards, portals, and internal tools",
       "Workflow-first planning for real business actions",
@@ -539,7 +540,7 @@ export const intentLandingPages: IntentLandingPage[] = [
       "Price depends on rules, roles, data, integrations and operational requirements as well as screens. A limited internal tool is a different scope from a customer-facing subscription product. The proposal should separate implementation from hosting, external services, data migration and maintenance where relevant.",
     finalCtaTitle: "Turn the workflow into a web app people can use.",
     finalCtaText:
-      "If your business needs a custom web application, dashboard, portal, or internal tool, start with the workflow and Reddystack will shape a practical first release.",
+      "If your business needs a custom web application, dashboard, portal, or internal tool, start with the workflow and ReddyStack will shape a practical first release.",
     faqItems: [
       {
         question: "What counts as a custom web application?",
@@ -560,9 +561,9 @@ export const intentLandingPages: IntentLandingPage[] = [
         some_features: ["MVP", "Workflow Validation", "Version One"],
       },
       {
-        question: "Can Reddystack build internal business tools?",
+        question: "Can ReddyStack build internal business tools?",
         answer:
-          "Yes. Reddystack can support internal tools, dashboards, portals, and workflow interfaces when the business needs a cleaner system than spreadsheets or scattered manual steps.",
+          "Yes. ReddyStack can support internal tools, dashboards, portals, and workflow interfaces when the business needs a cleaner system than spreadsheets or scattered manual steps.",
         some_features: ["Business Tools", "Dashboards", "Workflow Systems"],
       },
     ],
@@ -587,7 +588,7 @@ export const intentLandingPages: IntentLandingPage[] = [
     slug: "how-much-does-a-website-cost-in-india",
     path: "/how-much-does-a-website-cost-in-india",
     navLabel: "How Much Does a Website Cost in India?",
-    metaTitle: "How Much Does a Website Cost in India? | Reddystack",
+    metaTitle: "How Much Does a Website Cost in India? | ReddyStack",
     metaDescription:
       "Clear website cost guidance for India, covering static websites, business websites, landing pages, redesigns, and custom website development.",
     eyebrow: "Website Cost Guide",
@@ -635,15 +636,15 @@ export const intentLandingPages: IntentLandingPage[] = [
     whyParagraphs: [
       "Send each provider the same brief. State the page list, examples of the content, required integrations and who supplies copy and images. Ask for exclusions as well as inclusions. A proposal for a layout assembled from supplied content is not directly comparable with one that includes research, writing and migration.",
       "Separate one-time work from recurring costs. Domain renewal, hosting, premium tools, email delivery and support may appear on different bills. Ask who owns each account and what happens if you move providers. Paying for a site should not leave you unable to access the assets needed to operate it.",
-      "Use actual quote figures in a simple calculation. As an illustration only, a Rs. 20,000 build plus Rs. 4,000 of stated first-year recurring charges totals Rs. 24,000 before any separately applicable charges. These figures are not Reddystack prices or a market benchmark; they show why the initial build fee is only part of the comparison.",
+      "Use actual quote figures in a simple calculation. As an illustration only, a Rs. 20,000 build plus Rs. 4,000 of stated first-year recurring charges totals Rs. 24,000 before any separately applicable charges. These figures are not ReddyStack prices or a market benchmark; they show why the initial build fee is only part of the comparison.",
       "When the total is too high, reduce a named part of the scope: fewer page types, ready-to-use content or a simpler workflow. Keep the requirements that make the release usable, including mobile checks, working forms and clear ownership. Ask for a revised quote showing exactly what changed."
     ],
     pricingTitle: "Pricing guidance",
     pricingText:
-      "Reddystack provides a custom quote after reviewing the brief. There is no single standard price for a landing page, store, redesign and custom application. Share the site or idea, required pages, available content, integrations and budget boundary to get a scope you can compare.",
+      "ReddyStack provides a custom quote after reviewing the brief. There is no single standard price for a landing page, store, redesign and custom application. Share the site or idea, required pages, available content, integrations and budget boundary to get a scope you can compare.",
     finalCtaTitle: "Get a clear website scope before deciding the budget.",
     finalCtaText:
-      "If you want to understand the right website cost for your startup, small business, or service brand, share the project goal and Reddystack will help shape a practical scope.",
+      "If you want to understand the right website cost for your startup, small business, or service brand, share the project goal and ReddyStack will help shape a practical scope.",
     faqItems: [
       {
         question: "What is the average website development cost in India?",
@@ -670,9 +671,9 @@ export const intentLandingPages: IntentLandingPage[] = [
         some_features: ["Design Charges", "SEO Setup", "Launch Support"],
       },
       {
-        question: "Can Reddystack help choose the right website budget?",
+        question: "Can ReddyStack help choose the right website budget?",
         answer:
-          "Yes. Reddystack can review the goal, pages, features, and launch timeline, then suggest a practical scope that avoids both underbuilding and unnecessary overbuilding.",
+          "Yes. ReddyStack can review the goal, pages, features, and launch timeline, then suggest a practical scope that avoids both underbuilding and unnecessary overbuilding.",
         some_features: ["Clear Scope", "Founder-led", "Practical Budget"],
       },
     ],
@@ -690,14 +691,14 @@ export const intentLandingPages: IntentLandingPage[] = [
     slug: "website-redesign-services",
     path: "/website-redesign-services",
     navLabel: "Website Redesign Services",
-    metaTitle: "Website Redesign Services | Reddystack",
+    metaTitle: "Website Redesign Services | ReddyStack",
     metaDescription:
       "Founder-led website redesign services for businesses that need clearer messaging, better SEO structure, faster performance, and stronger inquiry flow.",
     eyebrow: "Website Redesign Services",
     shortTitle: "website redesign services",
     headline: "Website redesign services for sites that need better clarity, SEO, and lead flow.",
     intro:
-      "Improve an existing website's content, navigation and enquiry experience while accounting for the pages and links it already has. Reddystack scopes redesign work around the problems you can identify on the current site.",
+      "Improve an existing website's content, navigation and enquiry experience while accounting for the pages and links it already has. ReddyStack scopes redesign work around the problems you can identify on the current site.",
     heroHighlights: [
       "Improve website structure before changing visuals",
       "Repair weak messaging, page hierarchy, and CTAs",
@@ -769,7 +770,7 @@ export const intentLandingPages: IntentLandingPage[] = [
       {
         question: "How much does a website redesign cost?",
         answer:
-          "Redesign cost depends on page count, content changes, SEO repair, design depth, and whether the existing technical setup can be reused. Reddystack scopes redesign work around the smallest useful relaunch.",
+          "Redesign cost depends on page count, content changes, SEO repair, design depth, and whether the existing technical setup can be reused. ReddyStack scopes redesign work around the smallest useful relaunch.",
         some_features: ["Redesign Cost", "Page Count", "SEO Repair"],
       },
     ],
@@ -787,14 +788,14 @@ export const intentLandingPages: IntentLandingPage[] = [
     slug: "landing-page-development-for-lead-generation",
     path: "/landing-page-development-for-lead-generation",
     navLabel: "Landing Page Development Services",
-    metaTitle: "Landing Page Development Services | Reddystack",
+    metaTitle: "Landing Page Development Services | ReddyStack",
     metaDescription:
       "Landing page development services for lead generation, SaaS launches, app landing pages, service offers, and campaign pages that need clear conversion flow.",
     eyebrow: "Lead Generation Landing Pages",
     shortTitle: "landing page development",
     headline: "Landing page development services for campaigns that need clearer leads.",
     intro:
-      "Build a focused page for one offer, with the information a visitor needs and a checked route to an enquiry. Reddystack can include copy structure, responsive development, forms and agreed tracking in the scope.",
+      "Build a focused page for one offer, with the information a visitor needs and a checked route to an enquiry. ReddyStack can include copy structure, responsive development, forms and agreed tracking in the scope.",
     heroHighlights: [
       "Focused page structure for one offer or campaign",
       "Lead forms, analytics, and conversion-aware CTAs",
@@ -866,7 +867,7 @@ export const intentLandingPages: IntentLandingPage[] = [
       {
         question: "Can you build SaaS or mobile app landing pages?",
         answer:
-          "Yes. Reddystack can build SaaS landing pages, app launch pages, waitlist pages, and validation pages with clear messaging and lead tracking.",
+          "Yes. ReddyStack can build SaaS landing pages, app launch pages, waitlist pages, and validation pages with clear messaging and lead tracking.",
         some_features: ["SaaS Landing Page", "App Landing Page", "Waitlist"],
       },
     ],
@@ -891,14 +892,14 @@ export const intentLandingPages: IntentLandingPage[] = [
     slug: "affordable-website-development-for-startups",
     path: "/affordable-website-development-for-startups",
     navLabel: "Affordable Website Development for Startups",
-    metaTitle: "Affordable Website Development for Startups | Reddystack",
+    metaTitle: "Affordable Website Development for Startups | ReddyStack",
     metaDescription:
       "Founder-led affordable website development for startups that need SEO-ready structure, sharp positioning, and a practical launch path.",
     eyebrow: "Startup Website Landing Page",
     shortTitle: "Affordable website development",
     headline: "A focused first website for your startup.",
     intro:
-      "Launch a startup website that explains the current product or service, its intended customer and the next useful action. Reddystack keeps the first scope focused on what the business can truthfully offer today.",
+      "Launch a startup website that explains the current product or service, its intended customer and the next useful action. ReddyStack keeps the first scope focused on what the business can truthfully offer today.",
     heroHighlights: [
       "Founder-led execution from Rahul Reddy",
       "Clear scope before design and build begin",
@@ -951,13 +952,13 @@ export const intentLandingPages: IntentLandingPage[] = [
       {
         question: "Can an affordable startup website still look premium?",
         answer:
-          "Yes. The key is controlled scope and strong structure. Reddystack focuses the budget on the pages, messaging, and UX that directly improve credibility and inquiries.",
+          "Yes. The key is controlled scope and strong structure. ReddyStack focuses the budget on the pages, messaging, and UX that directly improve credibility and inquiries.",
         some_features: ["Controlled Scope", "Premium UX", "Credibility"],
       },
       {
         question: "Is this only for Hyderabad startups?",
         answer:
-          "No. Reddystack is based in Hyderabad and works with startups across India and worldwide through a remote-friendly delivery process.",
+          "No. ReddyStack is based in Hyderabad and works with startups across India and worldwide through a remote-friendly delivery process.",
         some_features: ["Hyderabad", "India", "Worldwide"],
       },
       {
@@ -981,14 +982,14 @@ export const intentLandingPages: IntentLandingPage[] = [
     slug: "seo-website-development-for-small-businesses",
     path: "/seo-services",
     navLabel: "SEO Services for Small Businesses",
-    metaTitle: "SEO Services for Small Businesses | Reddystack",
+    metaTitle: "SEO Services for Small Businesses | ReddyStack",
     metaDescription:
       "SEO services for small businesses that need better visibility, clearer service pages, and founder-led practical delivery.",
     eyebrow: "Search-Focused Service Page",
     shortTitle: "SEO services for small businesses",
     headline: "SEO services for small businesses that need visibility and clearer lead flow.",
     intro:
-      "Reddystack provides SEO services for small businesses that want stronger search visibility, cleaner service-page structure, and a more direct route from discovery to inquiry.",
+      "ReddyStack provides SEO services for small businesses that want stronger search visibility, cleaner service-page structure, and a more direct route from discovery to inquiry.",
     heroHighlights: [
       "Search-ready page structure from the start",
       "Better service-page clarity for real buyers",
@@ -1053,7 +1054,7 @@ export const intentLandingPages: IntentLandingPage[] = [
       {
         question: "Can this work for businesses outside Hyderabad?",
         answer:
-          "Yes. Reddystack is based in Hyderabad but supports businesses across India and international markets through remote-first delivery.",
+          "Yes. ReddyStack is based in Hyderabad but supports businesses across India and international markets through remote-first delivery.",
         some_features: ["Hyderabad", "India", "International"],
       },
     ],
@@ -1078,14 +1079,14 @@ export const intentLandingPages: IntentLandingPage[] = [
     slug: "mvp-development-for-startup-founders",
     path: "/mvp-development-for-startup-founders",
     navLabel: "MVP Development for Startups",
-    metaTitle: "MVP Development for Startups | Reddystack",
+    metaTitle: "MVP Development for Startups | ReddyStack",
     metaDescription:
       "MVP development for startups and founders who need lean scoping, faster validation, and practical delivery.",
     eyebrow: "Founder MVP Landing Page",
     shortTitle: "MVP development",
     headline: "MVP development for startups that need validation without overbuilding.",
     intro:
-      "Build a first product release around one user, one important job and a question you need answered. Reddystack helps turn an idea into a bounded scope with a usable journey and explicit release checks.",
+      "Build a first product release around one user, one important job and a question you need answered. ReddyStack helps turn an idea into a bounded scope with a usable journey and explicit release checks.",
     heroHighlights: [
       "Lean scope around what users actually need first",
       "Founder-led execution with faster decisions",
@@ -1150,7 +1151,7 @@ export const intentLandingPages: IntentLandingPage[] = [
       {
         question: "Can this support founders outside India?",
         answer:
-          "Yes. Reddystack is based in Hyderabad and supports founders across India and worldwide through remote execution.",
+          "Yes. ReddyStack is based in Hyderabad and supports founders across India and worldwide through remote execution.",
         some_features: ["Hyderabad", "India", "Worldwide"],
       },
     ],
@@ -1175,14 +1176,14 @@ export const intentLandingPages: IntentLandingPage[] = [
     slug: "ai-automation-services-for-small-teams",
     path: "/ai-automation",
     navLabel: "AI Automation Services",
-    metaTitle: "AI Automation Services for Small Teams | Reddystack",
+    metaTitle: "AI Automation Services for Small Teams | ReddyStack",
     metaDescription:
       "AI automation services for small teams that need faster operations, better workflow consistency, and founder-led practical delivery.",
     eyebrow: "Operations Automation Page",
     shortTitle: "AI automation services",
     headline: "AI automation services for small teams that need less manual work and better operational flow.",
     intro:
-      "Reddystack helps small teams design practical AI automations for repetitive business work. The focus is operational usefulness: clearer workflows, faster responses, and less time lost to manual follow-up.",
+      "ReddyStack helps small teams design practical AI automations for repetitive business work. The focus is operational usefulness: clearer workflows, faster responses, and less time lost to manual follow-up.",
     heroHighlights: [
       "Workflow-first automation instead of novelty demos",
       "Prompt engineering and handoff logic where it matters",
@@ -1241,13 +1242,13 @@ export const intentLandingPages: IntentLandingPage[] = [
       {
         question: "Can automations work with our existing tools?",
         answer:
-          "Yes. Reddystack can connect automations to existing forms, workflows, and lightweight interfaces when the goal is to reduce friction rather than rebuild everything.",
+          "Yes. ReddyStack can connect automations to existing forms, workflows, and lightweight interfaces when the goal is to reduce friction rather than rebuild everything.",
         some_features: ["Existing Tools", "Forms", "Workflows"],
       },
       {
         question: "Do you work only with Hyderabad-based companies?",
         answer:
-          "No. Reddystack is based in Hyderabad and works with teams across India and international markets through remote-friendly delivery.",
+          "No. ReddyStack is based in Hyderabad and works with teams across India and international markets through remote-friendly delivery.",
         some_features: ["Hyderabad", "India", "International"],
       },
     ],
@@ -1265,14 +1266,14 @@ export const intentLandingPages: IntentLandingPage[] = [
     slug: "ai-chatbot-development",
     path: "/ai-chatbot-development",
     navLabel: "AI Chatbot Development Services",
-    metaTitle: "AI Chatbot Development Services | Reddystack",
+    metaTitle: "AI Chatbot Development Services | ReddyStack",
     metaDescription:
       "AI chatbot development services for websites, lead handling, support flows, and small-team workflows with practical scope and honest limitations.",
     eyebrow: "AI Chatbot Service Page",
     shortTitle: "AI chatbot development",
     headline: "AI chatbot development services for lead handling, support, and practical business workflows.",
     intro:
-      "Build a website assistant for a defined set of questions, useful enquiry collection and a clear handoff to a person. Reddystack scopes the knowledge, allowed actions and fallback behaviour before choosing the chatbot setup.",
+      "Build a website assistant for a defined set of questions, useful enquiry collection and a clear handoff to a person. ReddyStack scopes the knowledge, allowed actions and fallback behaviour before choosing the chatbot setup.",
     heroHighlights: [
       "Website chatbots for lead capture and support routing",
       "Prompt logic, fallback messages, and human handoff paths",
@@ -1321,7 +1322,7 @@ export const intentLandingPages: IntentLandingPage[] = [
       "Scope depends on knowledge sources, conversation paths, integrations, permitted actions and monitoring needs. A question-answering assistant is different from a bot that changes bookings or accesses private accounts. Hosting, model usage, provider subscriptions and ongoing content updates should be stated separately where applicable.",
     finalCtaTitle: "Build a chatbot that helps users reach the next step faster.",
     finalCtaText:
-      "If you need AI chatbot development for lead handling or support, start with the questions users ask most often and Reddystack will shape the right first version.",
+      "If you need AI chatbot development for lead handling or support, start with the questions users ask most often and ReddyStack will shape the right first version.",
     faqItems: [
       {
         question: "What can an AI chatbot do for a small business website?",
@@ -1386,6 +1387,7 @@ function buildHighlightTitle(shortTitle: string): [string, string] {
 
 export function buildIntentServiceDetail(page: IntentLandingPage): ServiceDetail {
   const project = getPortfolioProject(page.relatedProjectSlug);
+  const relatedBlog = getBlogPost(page.relatedBlogSlug);
   const conciseHighlights = page.faqItems
     .flatMap((item) => item.some_features)
     .slice(0, 5);
@@ -1411,7 +1413,7 @@ export function buildIntentServiceDetail(page: IntentLandingPage): ServiceDetail
     heroImage: page.heroImage,
     presentation: {
       faqTitle: `Questions About ${page.shortTitle}`,
-      faqDescription: `Clear answers for teams exploring ${page.shortTitle.toLowerCase()} with Reddystack.`,
+      faqDescription: `Clear answers for teams exploring ${page.shortTitle.toLowerCase()} with ReddyStack.`,
       faqHighlights: conciseHighlights.slice(0, 3),
     },
     answerSections: [
@@ -1436,7 +1438,9 @@ export function buildIntentServiceDetail(page: IntentLandingPage): ServiceDetail
     finalCtaText: page.finalCtaText,
     relatedLinks: [
       ...(page.relatedServiceSlug === 'seo-websites' ? [{ title: 'Website development guides and checklists', path: '/blog/website-development' }] : []),
-      ...(project ? [{ title: `Development example: ${project.title}`, path: project.path }] : []),
+      ...(page.relatedServiceSlug === 'seo-local-seo' ? [{ title: 'SEO & Local SEO guides', path: '/blog/seo-local-seo' }] : []),
+      ...(relatedBlog ? [{ title: 'Guide: ' + relatedBlog.title, path: relatedBlog.path }] : []),
+      ...(project ? [{ title: 'Development example: ' + project.title, path: project.path }] : []),
     ],
     faqItems: page.faqItems,
   };

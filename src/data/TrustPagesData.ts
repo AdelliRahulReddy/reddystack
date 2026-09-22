@@ -23,7 +23,7 @@ export const trustPages: Record<TrustPageSlug, TrustPageData> = {
     subtitle: "Website data handling · Updated 16 September 2026",
     metaKey: "privacyPolicy",
     intro:
-      "This page explains the information used when you browse Reddystack or contact Rahul through the website, email or WhatsApp. It describes the current website workflow; any additional data handling for a project should be discussed as part of that project's scope.",
+      "This page explains the information used when you browse ReddyStack or contact Rahul through the website, email or WhatsApp. It describes the current website workflow; any additional data handling for a project should be discussed as part of that project's scope.",
     sections: [
       {
         "title": "Information you send with an enquiry",
@@ -33,9 +33,9 @@ export const trustPages: Record<TrustPageSlug, TrustPageData> = {
         ]
       },
       {
-        "title": "How an enquiry reaches Reddystack",
+        "title": "How an enquiry reaches ReddyStack",
         "body": [
-          "The website sends validated form submissions through Resend to the Reddystack contact inbox. The message contains the submitted details, source page and enquiry reference. The contact-form endpoint does not create a separate enquiry database; delivery and the resulting email conversation involve the email services used.",
+          "The website sends validated form submissions through Resend to the ReddyStack contact inbox. The message contains the submitted details, source page and enquiry reference. The contact-form endpoint does not create a separate enquiry database; delivery and the resulting email conversation involve the email services used.",
           "The website is hosted on Vercel. The form uses a short-lived request counter to limit repeated submissions; on Vercel, it derives the counter key from the supplied client-IP header using a hash. Form delivery errors are logged with a reference and error category rather than the full submitted message."
         ]
       },
@@ -49,7 +49,7 @@ export const trustPages: Record<TrustPageSlug, TrustPageData> = {
       {
         "title": "Why the information is used",
         "body": [
-          "Enquiry details are used to respond, understand requirements, prepare a quote and keep project communication connected to the request. Website measurement helps identify which pages and contact paths are being used. Reddystack does not publish private enquiry details as testimonials, portfolio results or case studies without permission.",
+          "Enquiry details are used to respond, understand requirements, prepare a quote and keep project communication connected to the request. Website measurement helps identify which pages and contact paths are being used. ReddyStack does not publish private enquiry details as testimonials, portfolio results or case studies without permission.",
           "Project communications and email records are different from the website's temporary request counter. Do not assume that closing the page deletes a sent message or removes records held by an email or analytics provider."
         ]
       },
@@ -57,11 +57,11 @@ export const trustPages: Record<TrustPageSlug, TrustPageData> = {
         "title": "Questions, corrections and changes",
         "body": [
           "Contact Rahul through the published contact details if you need to correct an enquiry or discuss information you have shared. Give enough context to identify the conversation, such as its subject or reference, without sending additional sensitive material unnecessarily.",
-          "A link to WhatsApp, email or another website opens a separate service with its own data-handling rules. If Reddystack adds a CRM, newsletter, payment system or other data workflow, this page should be updated to reflect the actual implementation."
+          "A link to WhatsApp, email or another website opens a separate service with its own data-handling rules. If ReddyStack adds a CRM, newsletter, payment system or other data workflow, this page should be updated to reflect the actual implementation."
         ],
         "links": [
           {
-            "title": "Contact Reddystack about your information",
+            "title": "Contact ReddyStack about your information",
             "path": "/contact"
           }
         ]
@@ -74,12 +74,12 @@ export const trustPages: Record<TrustPageSlug, TrustPageData> = {
     subtitle: "Website and service terms · Updated 16 September 2026",
     metaKey: "terms",
     intro:
-      "These terms explain the basic conditions for using the Reddystack website and requesting scoped digital service work.",
+      "These terms explain the basic conditions for using the ReddyStack website and requesting scoped digital service work.",
     sections: [
       {
         title: "Website use",
         body: [
-          "The Reddystack website provides information about ads, creative content, AI UGC-style videos, websites, SEO, pricing, and portfolio work. Apps, MVPs, chatbots, and automation are additional services available on request.",
+          "The ReddyStack website provides information about ads, creative content, AI UGC-style videos, websites, SEO, pricing, and portfolio work. Apps, MVPs, chatbots, and automation are additional services available on request.",
           "Information on the website is not a guarantee of results, rankings, revenue, traffic, or platform approval.",
         ],
       },

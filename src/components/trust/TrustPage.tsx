@@ -8,9 +8,10 @@ type TrustPageProps = {
   page: Pick<TrustPageData, 'title' | 'subtitle' | 'intro' | 'sections'>;
   breadcrumbs?: { name: string; path: string }[];
   children?: ReactNode;
+  byline?: { name: string; role: string; href: string };
 };
 
-const TrustPage = ({ page, breadcrumbs, children }: TrustPageProps) => {
+const TrustPage = ({ page, breadcrumbs, children, byline }: TrustPageProps) => {
   return (
     <>
       <HeaderFour />
@@ -41,6 +42,11 @@ const TrustPage = ({ page, breadcrumbs, children }: TrustPageProps) => {
                     <div className="service-details__banner-text mb-80">
                       <p className="tp_title_anim">{page.intro}</p>
                     </div>
+                    {byline && (
+                      <p className="blog-list__text-sm mb-40">
+                        Written by <Link href={byline.href}>{byline.name}</Link> · {byline.role}
+                      </p>
+                    )}
                     <div className="service-details__left-wrap">
                       {children}
                       {page.sections.map((section) => (

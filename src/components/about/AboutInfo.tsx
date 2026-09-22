@@ -29,7 +29,7 @@ const AboutInfo = () => {
               <div className="ab-info__text">
 
                 <div>
-                  I&apos;m <Link href="/about/rahul-reddy-adelli">Rahul</Link> <span className="line"></span> I started Reddystack in April 2026 and operate it independently from Hyderabad. You speak directly with me about the brief, scope and delivery for
+                  I&apos;m <Link href="/about/rahul-reddy-adelli">Rahul</Link> <span className="line"></span> I started ReddyStack in April 2026 and operate it independently from Hyderabad. You speak directly with me about the brief, scope and delivery for
 
                   {info_data.map((item, index) =>
                     <React.Fragment key={index}>

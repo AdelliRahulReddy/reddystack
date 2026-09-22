@@ -53,7 +53,7 @@ const ServiceFaqArea = ({ service }: ServiceFaqAreaProps) => {
                       )}
                     </h2>
                   </div>
-                  <p>{service.presentation?.faqDescription ?? `Clear answers for teams exploring ${service.title.toLowerCase()} with Reddystack.`}</p>
+                  <p>{service.presentation?.faqDescription ?? `Clear answers for teams exploring ${service.title.toLowerCase()} with ReddyStack.`}</p>
                 </div>
 
                 <div className="tp-services-capsule-item-wrapper">

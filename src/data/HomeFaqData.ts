@@ -10,7 +10,7 @@ export const homeFaqItems: HomeFaqItem[] = [
   {
     "id": 1,
     "tab_id": "Faq1",
-    "question": "What can Reddystack help my business with?",
+    "question": "What can ReddyStack help my business with?",
     "answer": "The six core services are Meta Ads, Google Ads, Ad Creatives, AI UGC-style Videos, Website Development, and SEO & Local SEO. Start with the problem: an unclear offer, unsuitable enquiries, a missing website or content that needs producing. Rahul can help identify the first piece of work and its dependencies. A new ad campaign, for example, may need a clearer landing page and a working enquiry process before a larger budget makes sense.",
     "some_features": [
       "Meta Ads",
@@ -25,7 +25,7 @@ export const homeFaqItems: HomeFaqItem[] = [
     "id": 2,
     "tab_id": "Faq2",
     "question": "Who do you work with?",
-    "answer": "The services are intended for local service businesses, product and ecommerce brands, founders and small teams. Reddystack is an independent service started by Rahul Reddy Adelli in April 2026, based in Hyderabad and available for remote projects in India and worldwide. Rahul operates it without employees. The portfolio currently contains personal and demo projects; these are examples to review, not paid client case studies or evidence of commercial results.",
+    "answer": "The services are intended for local service businesses, product and ecommerce brands, founders and small teams. ReddyStack is an independent service started by Rahul Reddy Adelli in April 2026, based in Hyderabad and available for remote projects in India and worldwide. Rahul operates it without employees. The portfolio currently contains personal and demo projects; these are examples to review, not paid client case studies or evidence of commercial results.",
     "some_features": [
       "Local Businesses",
       "Growing Brands",

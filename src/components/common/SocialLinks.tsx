@@ -62,7 +62,7 @@ const copy_right_text: copy_right_text_type = {
   copy_right: <>
     © {new Date().getFullYear()} Rahul Reddy, All Rights Reserved
   </>,
-  copy_rigth_2: `Reddystack © ${new Date().getFullYear()}. All rights reserved.`
+  copy_rigth_2: `ReddyStack © ${new Date().getFullYear()}. All rights reserved.`
 }
 
 const { copy_right, copy_rigth_2 } = copy_right_text

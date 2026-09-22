@@ -135,7 +135,7 @@ const SeviceHeroArea = () => {
                       <Slider {...setting_1} autoplay={!reducedMotion} className="sv-inner__slider-active-1">
                         {slider_images_1.map((item, index) => (
                           <div key={index} className="sv-inner__slider-item">
-                            <Image src={item.listingImage} style={{ height: 'auto' }} sizes="(max-width: 767px) 100vw, 25vw" alt={`${item.title} — Reddystack project`} />
+                            <Image src={item.listingImage} style={{ height: 'auto' }} sizes="(max-width: 767px) 100vw, 25vw" alt={`${item.title} — ReddyStack project`} />
                           </div>
                         ))}
                       </Slider>
@@ -146,7 +146,7 @@ const SeviceHeroArea = () => {
                       <Slider {...setting_1} autoplay={!reducedMotion} className="sv-inner__slider-active-2">
                         {slider_images_2.map((item, index) => (
                           <div key={index} className="sv-inner__slider-item">
-                            <Image src={item.listingImage} style={{ height: 'auto' }} sizes="(max-width: 767px) 100vw, 25vw" alt={`${item.title} — Reddystack project`} />
+                            <Image src={item.listingImage} style={{ height: 'auto' }} sizes="(max-width: 767px) 100vw, 25vw" alt={`${item.title} — ReddyStack project`} />
                           </div>
                         ))}
                       </Slider>

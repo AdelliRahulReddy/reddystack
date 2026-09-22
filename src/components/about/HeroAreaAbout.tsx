@@ -60,10 +60,10 @@ const HeroAreaAbout = () => {
                   <Image src={about_signature} alt="Rahul Reddy signature" />
                 </div>
                 <div className="ab-hero__circle">
-                  <Image src={brandLogo} width={130} height={130} alt="Reddystack logo" />
+                  <Image src={brandLogo} width={130} height={130} alt="ReddyStack logo" />
                 </div>
                 <div className="ab-hero__big-img">
-                  <Image src={about_img} style={{ height: "auto" }} alt="Rahul Reddy, founder of Reddystack" />
+                  <Image src={about_img} style={{ height: "auto" }} alt="Rahul Reddy, founder of ReddyStack" />
                 </div>
               </div>
             </div>

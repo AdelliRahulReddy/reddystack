@@ -10,7 +10,7 @@ const pricingFaqService: ServiceDetail = {
   introPrimary: "Every quote reflects your goals and agreed deliverables.", introSecondary: "",
   overviewPrimary: "", overviewSecondary: "", features: [], closingSummary: "", sideTitle: "",
   categories: ["Ads", "Creative", "Websites", "SEO"], highlightTitle: ["Clear", "scope"], highlightText: "",
-  metaTitle: "Custom Quotes | Reddystack", metaDescription: "Scope and pricing for ads, creative, videos, websites, and SEO.",
+  metaTitle: "Custom Quotes | ReddyStack", metaDescription: "Scope and pricing for ads, creative, videos, websites, and SEO.",
   heroImage: heroWebsite,
   presentation: { faqTitle: "Pricing Questions", faqDescription: "What to expect before you start.", faqHighlights: ["Scope", "Deliverables", "Costs"], showFaqShapes: false },
   faqItems: [

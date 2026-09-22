@@ -101,7 +101,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     ctaLabel: 'Start Similar Project',
     ctaHref: '/contact',
-    metaTitle: "KalyamRam Portfolio Website Demo | Reddystack",
+    metaTitle: "KalyamRam Portfolio Website Demo | ReddyStack",
     metaDescription:
       "Explore a personal portfolio demo focused on introduction, project context and contact flow. Personal work, with no paid client or performance claims.",
     listingImage: kalyamRamImage,
@@ -168,7 +168,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     ctaLabel: 'Discuss Utility Build',
     ctaHref: '/contact',
-    metaTitle: "Multi-Format Converter Demo Project | Reddystack",
+    metaTitle: "Multi-Format Converter Demo Project | ReddyStack",
     metaDescription:
       "A personal file-tool concept exploring upload, format selection and output states. Read the workflow decisions and the limits of the demo.",
     listingImage: multiFormatConverterImage,
@@ -234,7 +234,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     ctaLabel: 'Discuss Automation Build',
     ctaHref: '/contact',
-    metaTitle: "Telegram Auto-Reply Bot Demo | Reddystack",
+    metaTitle: "Telegram Auto-Reply Bot Demo | ReddyStack",
     metaDescription:
       "A personal Telegram automation experiment exploring common replies, fallback paths and human handoff, without client or performance claims.",
     listingImage: telegramBotImage,
@@ -301,7 +301,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     ctaLabel: 'Build a Product Like This',
     ctaHref: '/contact',
-    metaTitle: "GitWall App Developer-Tool Demo | Reddystack",
+    metaTitle: "GitWall App Developer-Tool Demo | ReddyStack",
     metaDescription:
       "A personal developer-tool concept focused on product explanation and first-use clarity. Explore the design priorities and scope of the demo.",
     listingImage: gitWallImage,
@@ -368,7 +368,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     ctaLabel: 'Start Similar Landing Page',
     ctaHref: '/contact',
-    metaTitle: "ReelsXpress Service Website Demo | Reddystack",
+    metaTitle: "ReelsXpress Service Website Demo | ReddyStack",
     metaDescription:
       "A personal service-website demo exploring offer structure, pricing context and mobile enquiry flow. No paid client or conversion results are claimed.",
     listingImage: reelsXpressImage,
@@ -435,7 +435,7 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     ctaLabel: 'Plan a Restaurant Website',
     ctaHref: '/contact',
-    metaTitle: "Bachelor Brother Restaurant Website Demo | Reddystack",
+    metaTitle: "Bachelor Brother Restaurant Website Demo | ReddyStack",
     metaDescription:
       "A personal restaurant-website concept covering menu discovery, business details and mobile contact paths. Read the demo's design priorities.",
     listingImage: bachelorBrotherImage,

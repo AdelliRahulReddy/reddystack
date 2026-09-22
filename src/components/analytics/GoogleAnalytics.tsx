@@ -2,11 +2,11 @@
 
 import Script from "next/script";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { trackLeadEvent } from "./gaEvents";
 
-const GA_MEASUREMENT_ID =
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-Q3YJ0S421Y";
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const ANALYTICS_HOSTS = new Set(["www.reddystack.com", "reddystack.com"]);
 
 declare global {
   interface Window {
@@ -17,18 +17,63 @@ declare global {
 
 const GoogleAnalytics = () => {
   const pathname = usePathname();
+  const [analyticsEnabled, setAnalyticsEnabled] = useState(false);
+  const sentPageViews = useRef(new Set<string>());
 
   useEffect(() => {
-    if (!GA_MEASUREMENT_ID || typeof window.gtag !== "function") {
+    const enabled =
+      process.env.NODE_ENV === "production" &&
+      Boolean(GA_MEASUREMENT_ID) &&
+      ANALYTICS_HOSTS.has(window.location.hostname);
+
+    setAnalyticsEnabled(enabled);
+  }, []);
+
+  useEffect(() => {
+    if (!analyticsEnabled || sentPageViews.current.has(pathname)) {
       return;
     }
 
-    window.gtag("event", "page_view", {
-      page_path: pathname,
-      page_location: window.location.href,
-      page_title: document.title,
-    });
-  }, [pathname]);
+    const sendPageView = () => {
+      if (typeof window.gtag !== "function") {
+        return false;
+      }
+
+      if (sentPageViews.current.has(pathname)) {
+        return true;
+      }
+
+      window.gtag("event", "page_view", {
+        page_path: pathname,
+        page_location: window.location.href,
+        page_title: document.title,
+      });
+      sentPageViews.current.add(pathname);
+      return true;
+    };
+
+    if (sendPageView()) {
+      return;
+    }
+
+    const handleReady = () => {
+      sendPageView();
+    };
+    const retry = window.setInterval(() => {
+      sendPageView();
+    }, 100);
+    const timeout = window.setTimeout(() => {
+      window.clearInterval(retry);
+    }, 10000);
+
+    window.addEventListener("reddystack:analytics-ready", handleReady);
+
+    return () => {
+      window.removeEventListener("reddystack:analytics-ready", handleReady);
+      window.clearInterval(retry);
+      window.clearTimeout(timeout);
+    };
+  }, [analyticsEnabled, pathname]);
 
   useEffect(() => {
     const handleContactLinkClick = (event: MouseEvent) => {
@@ -79,27 +124,28 @@ const GoogleAnalytics = () => {
     };
   }, []);
 
-  if (!GA_MEASUREMENT_ID) {
+  if (!analyticsEnabled || !GA_MEASUREMENT_ID) {
     return null;
   }
 
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        src={"https://www.googletagmanager.com/gtag/js?id=" + GA_MEASUREMENT_ID}
         strategy="afterInteractive"
       />
       <Script
         id="google-analytics"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer.push(arguments);}
-            window.gtag = gtag;
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: false });
-          `,
+          __html: [
+            "window.dataLayer = window.dataLayer || [];",
+            "function gtag(){window.dataLayer.push(arguments);}",
+            "window.gtag = gtag;",
+            "gtag('js', new Date());",
+            "gtag('config', '" + GA_MEASUREMENT_ID + "', { send_page_view: false });",
+            "window.dispatchEvent(new Event('reddystack:analytics-ready'));",
+          ].join("\n"),
         }}
       />
     </>

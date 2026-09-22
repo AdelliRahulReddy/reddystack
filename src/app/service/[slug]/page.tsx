@@ -39,7 +39,7 @@ export async function generateMetadata({
 
   if (!service) {
     return {
-      title: 'Service | Reddystack',
+      title: 'Service | ReddyStack',
       robots: {
         index: false,
         follow: false,

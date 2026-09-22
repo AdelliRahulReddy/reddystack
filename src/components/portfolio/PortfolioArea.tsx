@@ -26,7 +26,7 @@ const PortfolioArea = () => {
                 limits of what the example demonstrates. The collection contains no paid client
                 case studies or measured advertising results.
               </p>
-              <p>Review the work by the problem it addresses: how a portfolio explains a person&apos;s capabilities, how a utility guides its next action, or how an automation handles a request it cannot answer. The project dates refer to the individual work; Reddystack began in April 2026.</p>
+              <p>Review the work by the problem it addresses: how a portfolio explains a person&apos;s capabilities, how a utility guides its next action, or how an automation handles a request it cannot answer. The project dates refer to the individual work; ReddyStack began in April 2026.</p>
               <p>A similar commercial project needs its own brief, factual content, acceptance checks and operating responsibilities. Use an example to explain the direction you want, then <Link href="/contact">discuss the actual scope with Rahul</Link>.</p>
             </div>
           </div>

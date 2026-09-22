@@ -111,7 +111,7 @@ const BlogSidebar = ({
                         {item.title}<span>({item.items})</span>
                       </a>
                     ) : (
-                      <Link href="/blog">{item.title}<span>({item.items})</span></Link>
+                      <Link href={`/blog?category=${encodeURIComponent(item.key)}`}>{item.title}<span>({item.items})</span></Link>
                     )}
                   </li>
                 ))}

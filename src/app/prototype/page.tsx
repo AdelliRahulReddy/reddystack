@@ -3,8 +3,8 @@ import HomeOne from '@/components/homes/home';
 import Wrapper from '@/layouts/Wrapper';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Reddystack — Brand Preview' },
-  description: 'A local preview of the proposed Reddystack brand identity.',
+  title: { absolute: 'ReddyStack — Brand Preview' },
+  description: 'A local preview of the proposed ReddyStack brand identity.',
   robots: {
     index: false,
     follow: false,

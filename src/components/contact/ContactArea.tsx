@@ -105,14 +105,14 @@ const ContactArea = ({ initialService, sourcePage }: { initialService: string; s
                   <div className="contact-inner__top-section-title-box mb-70">
                     <span className="contact-inner__subtitle">{subtitle}</span>
                     <h1 className="contact-inner__title tp-char-animation tp-hero-3__content">{title_1} {' '}
-                      <span><Image src={founderPortrait} width={190} height={90} style={{ objectFit: 'cover', objectPosition: 'center 30%' }} alt="Rahul Reddy, founder of Reddystack" /></span> <br />
+                      <span><Image src={founderPortrait} width={190} height={90} style={{ objectFit: 'cover', objectPosition: 'center 30%' }} alt="Rahul Reddy, founder of ReddyStack" /></span> <br />
                       {title_2}
                     </h1>
                   </div>
                 </div>
                 <div className="col-xl-3 col-lg-2 d-none d-lg-block text-end">
                   <div className="contact-inner__shape-1 text-center text-lg-end">
-                    <Image src={brandLogo} width={160} height={160} alt="Reddystack logo" />
+                    <Image src={brandLogo} width={160} height={160} alt="ReddyStack logo" />
                   </div>
                 </div>
               </div>

@@ -72,7 +72,7 @@ const ServiceAreaHomeThree = ({ style }: ServiceAreaHomeThreeProps) => {
 
         <div className="tp-service-3__circle-img">
           <span className="text-img">
-            <Image src={brandLogo} width={120} height={120} alt="Reddystack logo" />
+            <Image src={brandLogo} width={120} height={120} alt="ReddyStack logo" />
           </span>
           <div className="shape d-none d-lg-block">
             <svg width="260" height="70" viewBox="0 0 260 70" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -42,7 +42,7 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: 'Insight | Reddystack',
+      title: 'Insight | ReddyStack',
       robots: {
         index: false,
         follow: false,
