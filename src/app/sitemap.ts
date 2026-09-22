@@ -1,6 +1,6 @@
-const sitemapLastModified = "2026-09-22";
+const sitemapLastModified = siteSeo.contentUpdatedAt;
 
-import { siteConfig } from "@/data/siteConfig";
+import { siteConfig, siteSeo } from "@/data/siteConfig";
 import { serviceDetailData } from "@/data/ServiceDetailData";
 import { blogPosts } from "@/data/BlogPostsData";
 import { intentLandingPages } from "@/data/IntentLandingPagesData";

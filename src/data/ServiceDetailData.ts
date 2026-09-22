@@ -100,7 +100,7 @@ export const serviceDetailData: ServiceDetail[] = [
         ]
       }
     ],
-    updatedAt: "2026-09-16",
+    updatedAt: "2026-09-22",
   "slug": "meta-ads",
   "path": "/service/meta-ads",
   "subtitle": "Facebook & Instagram Campaigns",
@@ -214,7 +214,7 @@ export const serviceDetailData: ServiceDetail[] = [
         ]
       }
     ],
-    updatedAt: "2026-09-16",
+    updatedAt: "2026-09-22",
   "slug": "google-ads",
   "path": "/service/google-ads",
   "subtitle": "Campaign Setup & Optimisation",
@@ -328,7 +328,7 @@ export const serviceDetailData: ServiceDetail[] = [
         ]
       }
     ],
-    updatedAt: "2026-09-16",
+    updatedAt: "2026-09-22",
   "slug": "ad-creatives",
   "path": "/service/ad-creatives",
   "subtitle": "Design, Editing, Copy & Scripts",
@@ -442,7 +442,7 @@ export const serviceDetailData: ServiceDetail[] = [
         ]
       }
     ],
-    updatedAt: "2026-09-16",
+    updatedAt: "2026-09-22",
   "slug": "ai-ugc-videos",
   "path": "/service/ai-ugc-videos",
   "subtitle": "AI Presenters, Demos & Explainers",
@@ -522,7 +522,7 @@ export const serviceDetailData: ServiceDetail[] = [
 {
   "slug": "seo-local-seo",
   "path": "/service/seo-local-seo",
-  "updatedAt": "2026-09-16",
+  "updatedAt": "2026-09-22",
   "subtitle": "Website Optimisation & Local Visibility",
   "title": "SEO & Local SEO",
   "introPrimary": "Make it easier for customers to find your services and send an enquiry. Start with a review of your website, search visibility, and Google Business Profile where your business is eligible.",
@@ -732,7 +732,7 @@ export const serviceDetailData: ServiceDetail[] = [
         ]
       }
     ],
-    updatedAt: "2026-09-16",
+    updatedAt: "2026-09-22",
     slug: 'seo-websites',
     path: '/service/seo-websites',
     subtitle: 'Business Websites, Online Stores & Landing Pages',
@@ -850,7 +850,7 @@ export const serviceDetailData: ServiceDetail[] = [
         ]
       }
     ],
-    updatedAt: "2026-09-16",
+    updatedAt: "2026-09-22",
     slug: 'applications',
     path: '/service/applications',
     subtitle: 'Product Builds',
@@ -967,7 +967,7 @@ export const serviceDetailData: ServiceDetail[] = [
         ]
       }
     ],
-    updatedAt: "2026-09-16",
+    updatedAt: "2026-09-22",
     slug: 'mvp-builds',
     path: '/service/mvp-builds',
     subtitle: 'Startup Launches',
@@ -1084,7 +1084,7 @@ export const serviceDetailData: ServiceDetail[] = [
         ]
       }
     ],
-    updatedAt: "2026-09-16",
+    updatedAt: "2026-09-22",
     slug: 'ai-automations',
     path: '/service/ai-automations',
     subtitle: 'Workflow Systems',

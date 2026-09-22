@@ -12,6 +12,7 @@ export const siteSeo = {
   logoPath: "/assets/img/logo/reddystack-symbol.png",
   ogImagePath: "/assets/img/social/reddystack-share-v4.png",
   ogImageAlt: "ReddyStack — Ads, Creative & Websites That Grow Your Business.",
+  contentUpdatedAt: "2026-09-22",
 } as const;
 
 export const siteConfig = {
@@ -552,5 +553,5 @@ export const buildCreativeWorkSchema = (project: {
   creator: {
     "@id": schemaIds.organization,
   },
-  dateCreated: `${project.year}-01-01`,
+  dateCreated: String(project.year),
 });
