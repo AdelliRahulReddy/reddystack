@@ -8,7 +8,7 @@ import { buildBreadcrumbSchema, buildCanonicalUrl, buildOpenGraph, buildTwitterC
 export function seoContentMetadata(path: string): Metadata {
   const page = getSeoPage(path);
   if (!page) notFound();
-  const title = page.title + ' | ' + siteConfig.siteName;
+  const title = page.title + ' | ' + siteConfig.brandName;
   const url = buildCanonicalUrl(path);
   return {
     title,

@@ -2,11 +2,20 @@
 
 import Script from "next/script";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
 import { trackLeadEvent } from "./gaEvents";
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const ANALYTICS_HOSTS = new Set(["www.reddystack.com", "reddystack.com"]);
+
+const subscribeToAnalyticsEnvironment = () => () => {};
+
+const getAnalyticsEnabled = () =>
+  process.env.NODE_ENV === "production" &&
+  Boolean(GA_MEASUREMENT_ID) &&
+  ANALYTICS_HOSTS.has(window.location.hostname);
+
+const getServerAnalyticsEnabled = () => false;
 
 declare global {
   interface Window {
@@ -17,17 +26,12 @@ declare global {
 
 const GoogleAnalytics = () => {
   const pathname = usePathname();
-  const [analyticsEnabled, setAnalyticsEnabled] = useState(false);
+  const analyticsEnabled = useSyncExternalStore(
+    subscribeToAnalyticsEnvironment,
+    getAnalyticsEnabled,
+    getServerAnalyticsEnabled,
+  );
   const sentPageViews = useRef(new Set<string>());
-
-  useEffect(() => {
-    const enabled =
-      process.env.NODE_ENV === "production" &&
-      Boolean(GA_MEASUREMENT_ID) &&
-      ANALYTICS_HOSTS.has(window.location.hostname);
-
-    setAnalyticsEnabled(enabled);
-  }, []);
 
   useEffect(() => {
     if (!analyticsEnabled || sentPageViews.current.has(pathname)) {
