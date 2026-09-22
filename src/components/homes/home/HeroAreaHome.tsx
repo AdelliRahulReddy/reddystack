@@ -8,9 +8,9 @@ import { useInView } from 'react-intersection-observer';
 interface DataType {
   slide_text: string[];
   sub_title: string;
-  title_1: string;
   sm_info: JSX.Element;
   btn_text: JSX.Element;
+  trust_points: string[];
 }
 
 const hero_content: DataType = {
@@ -22,18 +22,22 @@ const hero_content: DataType = {
     "Scale",
   ],
   sub_title: "PROOF-FIRST DIGITAL GROWTH STUDIO",
-  title_1: "One Problem. One Connected Stack. Proof Before Scale.",
   sm_info: <>
-    ReddyStack finds the digital bottleneck, builds only what the business needs, and measures what changes before more budget is committed.
+    ReddyStack finds the bottleneck, builds the right fix, and proves what works before you spend more.
   </>,
   btn_text: <>Start a <br /> Project</>,
+  trust_points: [
+    "Founder-led",
+    "Client-owned accounts",
+    "Transparent AI use",
+  ],
 }
 const {
   slide_text,
   sub_title,
-  title_1,
   sm_info,
-  btn_text
+  btn_text,
+  trust_points,
 } = hero_content;
 
 const HeroAreaHome = () => {
@@ -117,7 +121,9 @@ const HeroAreaHome = () => {
                 <div className="tp-hero-content p-relative z-index-1">
                   <span className="singleLine">{sub_title}</span>
                   <h1 className="tp-hero-title tp_title_anim">
-                    <strong className="tp-hero-title-static">{title_1}</strong>
+                    <strong className="tp-hero-title-static">
+                      One Problem. One Connected Stack. <span className="tp-hero-title-accent">Proof</span> Before Scale.
+                    </strong>
                   </h1>
                   <p>{sm_info}</p>
                   <div className="tp-hero-btn d-flex align-items-center flex-wrap gap-3">
@@ -132,10 +138,14 @@ const HeroAreaHome = () => {
                         <i className="tp-btn-circle-dot"></i>
                       </Link>
                     </div>
-                    <Link href="#method" className="tp-btn-border-sm border-0 px-2 text-decoration-underline">
-                      See the Method
+                    <Link href="#method" className="tp-hero-method-link">
+                      <span>See Our Method</span>
+                      <HeroArrowIcon />
                     </Link>
                   </div>
+                  <ul className="tp-hero-trust" aria-label="How ReddyStack works">
+                    {trust_points.map((item) => <li key={item}>{item}</li>)}
+                  </ul>
                   <div className="tp-hero-scroll smooth">
                     <a className="pointer" href="#tp-sv" aria-label="Scroll to services">
                       <span className="tp-hero-scroll-bar"></span>

@@ -97,6 +97,10 @@ html[tp-theme='tp-theme-dark'] {
     line-height: 1.12;
   }
 
+  .tp-hero-title-accent {
+    color: var(--brand-accent) !important;
+  }
+
   .tp-hero-content > p {
     line-height: 1.6;
   }
