@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import HomeOne from '@/components/homes/home';
-import Wrapper from '@/layouts/Wrapper';
+
+import { featuredPortfolioProjects } from '@/data/FeaturedPortfolioProjects';
+import PrototypeExperience from './PrototypeExperience';
 
 export const metadata: Metadata = {
-  title: { absolute: 'ReddyStack — Brand Preview' },
-  description: 'A local preview of the proposed ReddyStack brand identity.',
+  title: { absolute: 'ReddyStack — Rahul Reddy, Independent Growth Partner' },
+  description: 'Rahul Reddy helps growing brands connect SEO, websites, paid ads, and creative around one clear business goal.',
   robots: {
     index: false,
     follow: false,
@@ -12,10 +13,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BrandPreview() {
-  return (
-    <Wrapper>
-      <HomeOne />
-    </Wrapper>
-  );
+export default function GrowthStudioPrototype() {
+  return <PrototypeExperience projects={featuredPortfolioProjects} />;
 }

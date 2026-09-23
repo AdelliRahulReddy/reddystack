@@ -1,6 +1,3 @@
-import HomeOne from '@/components/homes/home';
-import Wrapper from '@/layouts/Wrapper';
-import React from 'react';
 import {
   buildCanonicalUrl,
   buildFAQPageSchema,
@@ -10,6 +7,8 @@ import {
 import type { Metadata } from 'next';
 import { marketRootLanguageAlternates } from '@/data/MarketSeo';
 import { homeFaqItems } from '@/data/HomeFaqData';
+import { featuredPortfolioProjects } from '@/data/FeaturedPortfolioProjects';
+import PrototypeExperience from '@/app/prototype/PrototypeExperience';
 
 
 export const metadata: Metadata = {
@@ -33,9 +32,7 @@ const MainHome = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}
       />
-      <Wrapper>
-        <HomeOne />
-      </Wrapper>
+      <PrototypeExperience projects={featuredPortfolioProjects} />
     </>
   );
 };
