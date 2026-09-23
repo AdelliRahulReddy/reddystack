@@ -43,21 +43,21 @@ const price_content: DataType = {
   {
     "time": "Proof Sprint",
     "info_1": "One problem · bounded scope",
-    "info_2": "Establish the baseline, fix or test one important bottleneck, and leave with evidence for the next decision.",
+    "info_2": "Solve or test one clear growth problem, then review the evidence.",
     "btn_text": "Discuss a Proof Sprint",
     "path": "/contact"
   },
   {
     "time": "Stack Build",
     "info_1": "Connected implementation",
-    "info_2": "Combine only the website, search, paid, creative, tracking, or automation work required by the agreed problem.",
+    "info_2": "Build the website, search, ads, creative, or tracking your plan needs.",
     "btn_text": "Plan a Stack Build",
     "path": "/contact"
   },
   {
     "time": "Operate & Improve",
     "info_1": "Ongoing evidence loop",
-    "info_2": "Run agreed tests, review meaningful outcomes, improve the working system, and change priorities when the evidence changes.",
+    "info_2": "Review results regularly and improve what is working.",
     "btn_text": "Discuss Ongoing Work",
     "path": "/contact"
   }

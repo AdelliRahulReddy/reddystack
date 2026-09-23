@@ -25,7 +25,7 @@ const about_content: DataType = {
   subtitle: "About ReddyStack",
   award_title: "Built and led by Rahul Reddy",
   award_des: "Independent proof-first studio · Hyderabad · Worldwide",
-  about_des: <>I&apos;m Rahul Reddy Adelli. I built ReddyStack for companies that need <span>one accountable person across a connected digital problem</span>, rather than several disconnected vendors. Each engagement starts with a baseline, focuses on the most important bottleneck, and records what changed. <span>AI supports research and execution, but judgment, quality and accountability stay with me.</span></>,
+  about_des: <>I&apos;m Rahul Reddy Adelli, an independent growth partner in Hyderabad. I work directly with you, focus on the main business problem, and explain what changed. <span>AI supports delivery; I remain accountable for the work.</span></>,
   counter_data: [
     { id: 1, count: 4, text: "Method Stages" },
     { id: 2, count: 1, text: "Connected Stack" },

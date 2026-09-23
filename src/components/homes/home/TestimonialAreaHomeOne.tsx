@@ -27,27 +27,27 @@ interface DataType {
 const testimonial_content: DataType = {
   subtitle: "The ReddyStack Method",
   title: "Diagnose. Build. Prove. Scale.",
-  info: "Every engagement follows the same evidence loop, even when the capabilities change.",
+  info: "Four clear steps, from the first problem to the next decision.",
   testimonial_slider_data: [
     {
       id: 1,
       rating_text: "01 · Diagnose",
-      description: 'Define the commercial goal, inspect the current setup, establish a baseline, and name the most important bottleneck before selecting a channel or deliverable.',
+      description: 'Set a goal, review the current setup, and find the main bottleneck.',
     },
     {
       id: 2,
       rating_text: "02 · Build",
-      description: 'Create only what the problem requires. The scope names the pages, campaigns, assets, tracking, access, approvals, costs, and responsibilities before work starts.',
+      description: 'Build only what is needed, with clear scope, costs, and responsibilities.',
     },
     {
       id: 3,
       rating_text: "03 · Prove",
-      description: 'Launch or review the agreed work against the baseline. Record the change, the evidence, the limitations, and what the business learned without turning an early signal into a guarantee.',
+      description: 'Measure the agreed work, share the evidence, and explain what it means.',
     },
     {
       id: 4,
       rating_text: "04 · Scale",
-      description: 'Continue, expand, revise, or stop based on the evidence. More budget and more capabilities are added only when there is a clear reason and an agreed measurement plan.',
+      description: 'Use the results to decide what to improve, grow, or stop.',
     },
   ],
   testimonial_nav_data: [

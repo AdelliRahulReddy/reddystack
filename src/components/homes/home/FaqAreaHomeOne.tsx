@@ -11,8 +11,8 @@ interface DataType {
 
 const faq_content: DataType = {
   subtitle: "FAQs",
-  title: <>How Proof-First Work Works</>,
-  sm_des: <>Clear answers about fit, evidence, AI, ownership, scope, and working directly with Rahul Reddy.</>,
+  title: <>What to Know Before We Start</>,
+  sm_des: <>Simple answers about services, scope, costs, and results.</>,
 };
 
 const { subtitle, title, sm_des } = faq_content;
@@ -78,11 +78,6 @@ const FaqAreaHomeOne = () => {
                       >
                         <div className="accordion-body">
                           <p>{item.answer}</p>
-                          <ul>
-                            {item.some_features.map((feature) => (
-                              <li key={feature}>{feature}</li>
-                            ))}
-                          </ul>
                         </div>
                       </div>
                       <span className="accordion-item-border"></span>

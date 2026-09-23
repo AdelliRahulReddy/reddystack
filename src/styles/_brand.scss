@@ -564,3 +564,25 @@ html[tp-theme='tp-theme-dark'] {
 
   body { background: var(--brand-ink); color: var(--brand-paper); }
 }
+
+@media (max-width: 767px) {
+  .back-to-top-wrapper { display: none; }
+
+  .tp-hero-area .tp-hero-title-static {
+    display: block;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .tp_title_anim,
+  .tp_title_anim div,
+  .tp_text_anim p,
+  .tp-char-animation,
+  .tp-split-text,
+  .tp_fade_bottom,
+  .wow {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+}
