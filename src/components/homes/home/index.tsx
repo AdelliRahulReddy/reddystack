@@ -11,9 +11,14 @@ import TestimonialAreaHomeOne from "./TestimonialAreaHomeOne";
 import PriceAreaHomeOne from "./PriceAreaHomeOne";
 import FaqAreaHomeOne from "./FaqAreaHomeOne";
 import FooterOne from "@/layouts/footers/FooterOne";
+import type { Market } from "@/data/MarketConfig";
+import { marketPages } from "@/data/MarketPageData";
+import MarketFocusArea from "@/components/country/MarketFocusArea";
 
 
-const HomeOne = () => {
+const HomeOne = ({ market }: { market?: Market }) => {
+  const marketPage = market ? marketPages[market.code] : undefined;
+
   return (
     <>
       <HeaderOne />
@@ -24,14 +29,15 @@ const HomeOne = () => {
       >
         <div id="smooth-content">
           <main id="main-content" tabIndex={-1}>
-            <HeroAreaHome />
-            <BrandAreaHomeOne />
+            <HeroAreaHome content={marketPage?.hero} />
+            {!market && <BrandAreaHomeOne />}
+            {marketPage && market && <MarketFocusArea marketName={market.name} focus={marketPage.focus} />}
             <ServiceAreaHomeOne />
             <MarqueeAreaHomeOne />
             <AboutAreaHomeOne />
             <TestimonialAreaHomeTwo />
             <TestimonialAreaHomeOne />
-            <PriceAreaHomeOne />
+            <PriceAreaHomeOne style={Boolean(market)} />
             <FaqAreaHomeOne />
           </main>
           <FooterOne />

@@ -1,19 +1,13 @@
 'use client'
 import Link from 'next/link';
-import { type JSX, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import HeroArrowIcon from '@/svg/home/HeroIcons/HeroArrowIcon';
 import { HeroSocialLinks } from '@/components/common/SocialLinks';
 import type { LottieRefCurrentProps } from 'lottie-react';
 import { useInView } from 'react-intersection-observer';
-interface DataType {
-  slide_text: string[];
-  sub_title: string;
-  sm_info: JSX.Element;
-  btn_text: JSX.Element;
-  trust_points: string[];
-}
+import type { MarketHeroContent } from '@/data/MarketPageData';
 
-const hero_content: DataType = {
+const default_hero_content: MarketHeroContent = {
   slide_text: [
     "Diagnose",
     "Build",
@@ -22,25 +16,18 @@ const hero_content: DataType = {
     "Scale",
   ],
   sub_title: "PROOF-FIRST DIGITAL GROWTH STUDIO",
-  sm_info: <>
-    ReddyStack finds the bottleneck, builds the right fix, and proves what works before you spend more.
-  </>,
-  btn_text: <>Start a <br /> Project</>,
-  trust_points: [
-    "Founder-led",
-    "Client-owned accounts",
-    "Transparent AI use",
-  ],
+  title_before: "One Problem. One Connected Stack. ",
+  title_accent: "Proof",
+  title_after: " Before Scale.",
+  sm_info: "ReddyStack finds the bottleneck, builds the right fix, and proves what works before you spend more.",
+  btn_text: "Start a Project",
+  btn_href: "/contact",
+  secondary_text: "See Our Method",
+  secondary_href: "#method",
+  trust_points: ["Founder-led", "Client-owned accounts", "Transparent AI use"],
 }
-const {
-  slide_text,
-  sub_title,
-  sm_info,
-  btn_text,
-  trust_points,
-} = hero_content;
 
-const HeroAreaHome = () => {
+const HeroAreaHome = ({ content = default_hero_content }: { content?: MarketHeroContent }) => {
   const { ref, inView } = useInView({ initialInView: true });
   const animation = useRef<LottieRefCurrentProps>(null);
   const [paused, setPaused] = useState(false);
@@ -104,12 +91,12 @@ const HeroAreaHome = () => {
         </div>
         <div className="tp-hero-bottom-text-wrapper" aria-hidden="true">
           <div className="tp-hero-bottom-text">
-            {slide_text.map((item, index) => (
+            {content.slide_text.map((item, index) => (
               <p key={index}>{item}</p>
             ))}
           </div>
           <div className="tp-hero-bottom-text">
-            {slide_text.map((item, index) => (
+            {content.slide_text.map((item, index) => (
               <p key={index}>{item}</p>
             ))}
           </div>
@@ -119,18 +106,18 @@ const HeroAreaHome = () => {
             <div className="col-xl-7 col-lg-7 col-md-12">
               <div className="tp-hero-left-wrapper">
                 <div className="tp-hero-content p-relative z-index-1">
-                  <span className="singleLine">{sub_title}</span>
+                  <span className="singleLine">{content.sub_title}</span>
                   <h1 className="tp-hero-title tp_title_anim">
                     <strong className="tp-hero-title-static">
-                      One Problem. One Connected Stack. <span className="tp-hero-title-accent">Proof</span> Before Scale.
+                      {content.title_before}<span className="tp-hero-title-accent">{content.title_accent}</span>{content.title_after}
                     </strong>
                   </h1>
-                  <p>{sm_info}</p>
+                  <p>{content.sm_info}</p>
                   <div className="tp-hero-btn d-flex align-items-center flex-wrap gap-3">
                     <div className="tp-hover-btn-wrapper">
-                      <Link href="/contact" className="tp-hover-btn tp-hover-btn-item tp-btn-circle square">
+                      <Link href={content.btn_href} className="tp-hover-btn tp-hover-btn-item tp-btn-circle square">
                         <span className="tp-btn-circle-text" >
-                          {btn_text}
+                          {content.btn_text}
                         </span>
                         <span className="tp-btn-circle-arrow">
                           <HeroArrowIcon />
@@ -138,13 +125,13 @@ const HeroAreaHome = () => {
                         <i className="tp-btn-circle-dot"></i>
                       </Link>
                     </div>
-                    <Link href="#method" className="tp-hero-method-link">
-                      <span>See Our Method</span>
+                    <Link href={content.secondary_href} className="tp-hero-method-link">
+                      <span>{content.secondary_text}</span>
                       <HeroArrowIcon />
                     </Link>
                   </div>
                   <ul className="tp-hero-trust" aria-label="How ReddyStack works">
-                    {trust_points.map((item) => <li key={item}>{item}</li>)}
+                    {content.trust_points.map((item) => <li key={item}>{item}</li>)}
                   </ul>
                   <div className="tp-hero-scroll smooth">
                     <a className="pointer" href="#tp-sv" aria-label="Scroll to services">
