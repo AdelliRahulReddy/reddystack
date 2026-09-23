@@ -78,9 +78,8 @@ const ServiceAreaHomeOne = () => {
             <div className="row gx-0">
 
               <div className="col-xl-6 col-lg-7">
-                <div className="tp-services-wrapper tp-services-capsule-wrapper p-relative pt-100 pr-30" style={{ paddingTop: "100px", }}
-                  data-tp-throwable-scene="true">
-                  <div className="tp-section-title-wrapper tp_text_anim mb-170">
+                <div className="tp-services-wrapper tp-services-capsule-wrapper p-relative pt-100 pr-30">
+                  <div className="tp-section-title-wrapper tp_text_anim mb-30">
                     <div className="tp-section-title-inner p-relative">
                       <span className="tp-section-subtitle">{subtitle}</span>
                       <h2 className="tp-section-title tp_title_anim">{title}</h2>
@@ -88,48 +87,50 @@ const ServiceAreaHomeOne = () => {
                     <p>{sm_des}</p>
                   </div>
 
-                  <div className="tp-services-capsule-item-wrapper">
-                    <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Web & Landing</span>
-                    </p>
-                    <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-pink-2)", color: "var(--tp-common-black)" }}>Search Visibility</span>
-                    </p>
-                    <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Paid Acquisition</span>
-                    </p>
-                    <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-blue-2)", color: "var(--tp-common-white)" }}>Creative Testing</span>
-                    </p>
-                    <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-pink-2)", color: "var(--tp-common-black)" }}>Tracking</span>
-                    </p>
-                    <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Automation</span>
-                    </p>
-                    <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Conversion</span>
-                    </p>
-                    <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-blue-2)", color: "var(--tp-common-white)" }}>Analytics</span>
-                    </p>
-                    <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-pink-2)", color: "var(--tp-common-black)" }}>AI Workflows</span>
-                    </p>
-                    <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Product Builds</span>
-                    </p>
-                    {/* Keep the image shapes at the bottom */}
-                    <p data-tp-throwable-el="">
-                      <span className="">
-                        <Image src={shape_1} alt="" />
-                      </span>
-                    </p>
-                    <p data-tp-throwable-el="">
-                      <span className="">
-                        <Image src={shape_2} alt="" />
-                      </span>
-                    </p>
+                  <div className="tp-services-capsule-field">
+                    <div className="tp-services-capsule-item-wrapper" data-tp-throwable-scene="true">
+                      <p data-tp-throwable-el="">
+                        <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Web & Landing</span>
+                      </p>
+                      <p data-tp-throwable-el="">
+                        <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-pink-2)", color: "var(--tp-common-black)" }}>Search Visibility</span>
+                      </p>
+                      <p data-tp-throwable-el="">
+                        <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Paid Acquisition</span>
+                      </p>
+                      <p data-tp-throwable-el="">
+                        <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-blue-2)", color: "var(--tp-common-white)" }}>Creative Testing</span>
+                      </p>
+                      <p data-tp-throwable-el="">
+                        <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-pink-2)", color: "var(--tp-common-black)" }}>Tracking</span>
+                      </p>
+                      <p data-tp-throwable-el="">
+                        <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Automation</span>
+                      </p>
+                      <p data-tp-throwable-el="">
+                        <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Conversion</span>
+                      </p>
+                      <p data-tp-throwable-el="">
+                        <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-blue-2)", color: "var(--tp-common-white)" }}>Analytics</span>
+                      </p>
+                      <p data-tp-throwable-el="">
+                        <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-pink-2)", color: "var(--tp-common-black)" }}>AI Workflows</span>
+                      </p>
+                      <p data-tp-throwable-el="">
+                        <span className="tp-services-capsule-item" style={{ backgroundColor: "var(--tp-green-2)", color: "var(--tp-common-black)" }}>Product Builds</span>
+                      </p>
+                      {/* Keep the image shapes at the bottom */}
+                      <p className="tp-services-capsule-shape" data-tp-throwable-el="">
+                        <span className="">
+                          <Image src={shape_1} alt="" />
+                        </span>
+                      </p>
+                      <p className="tp-services-capsule-shape" data-tp-throwable-el="">
+                        <span className="">
+                          <Image src={shape_2} alt="" />
+                        </span>
+                      </p>
+                    </div>
                   </div>
 
                 </div>

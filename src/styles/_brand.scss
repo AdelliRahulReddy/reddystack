@@ -151,6 +151,113 @@ html[tp-theme='tp-theme-light'] .tp-market-focus-card p {
     margin-bottom: 1.75rem;
   }
 }
+
+// Keep the moving service chips in a bounded field, below the heading and description.
+.tp-sv .tp-services-capsule-wrapper {
+  height: 695px;
+}
+
+.tp-sv .tp-services-capsule-field {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.tp-sv .tp-services-capsule-field .tp-services-capsule-item-wrapper {
+  position: absolute;
+  inset: 30px 0;
+  width: 100%;
+}
+
+.tp-sv .tp-services-capsule-field .tp-services-capsule-item-wrapper > p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  margin-bottom: 0;
+  user-select: none;
+  pointer-events: auto;
+  transition: none;
+}
+
+.tp-sv .tp-services-capsule-field .tp-services-capsule-item-wrapper > p img {
+  margin-bottom: 10px;
+  transition: none;
+}
+
+// The oversized decorative label must stay on one line instead of wrapping over the service content.
+.tp-services-area .tp-services-bottom-text p {
+  font-size: clamp(108px, 16vw, 280px);
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+
+@media (max-width: 767px) {
+  // This background word adds noise at phone widths; the visible section heading already names the topic.
+  .tp-services-area .tp-services-bottom-text {
+    display: none;
+  }
+
+  .tp-sv .tp-services-capsule-wrapper {
+    height: auto;
+    overflow: visible;
+    padding-bottom: 0;
+  }
+
+  .tp-sv .tp-services-capsule-wrapper .tp-section-title-wrapper {
+    margin-bottom: 24px;
+  }
+
+  .tp-sv .tp-services-capsule-field {
+    height: auto;
+    overflow: visible;
+  }
+
+  .tp-sv .tp-services-capsule-field .tp-services-capsule-item-wrapper {
+    display: flex;
+    position: static;
+    inset: auto;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    transform: none !important;
+  }
+
+  .tp-sv .tp-services-capsule-field .tp-services-capsule-item-wrapper > p {
+    position: static !important;
+    flex: 0 0 auto;
+    margin: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: none;
+  }
+
+  .tp-sv .tp-services-capsule-field .tp-services-capsule-item-wrapper > p > .tp-services-capsule-item {
+    transform: none !important;
+  }
+
+  .tp-sv .tp-services-capsule-field .tp-services-capsule-item-wrapper > .tp-services-capsule-shape {
+    display: none !important;
+  }
+
+  // Keep the transition ticker compact so it does not crowd the service list on small screens.
+  .tp-marquee-area .tp-marquee-slider {
+    transform: rotate(-1deg) translateY(-12px);
+  }
+
+  .tp-marquee-area .tp-marquee-slider-active {
+    height: 58px;
+  }
+
+  .tp-marquee-area .tp-marquee-item p {
+    padding-right: 24px;
+    font-size: clamp(16px, 4.5vw, 20px);
+  }
+}
+
 html[tp-theme='tp-theme-light'] .tp-testimonial-area .tp-btn-border-sm {
   color: var(--tp-common-black-5);
   border-color: currentColor;
