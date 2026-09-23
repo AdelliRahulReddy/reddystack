@@ -22,7 +22,7 @@ const PortfolioDetails = ({
       <HeaderFour style={true} />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main id="main-content" tabIndex={-1}>
+          <main id="main-content" className="rs-subpage" tabIndex={-1}>
             <HeroPortfolioDetailsArea project={project} />
             <PortfolioAboutArea project={project} />
             <PortfolioDetailsArea

@@ -19,7 +19,7 @@ type HeroPortfolioDetailsAreaProps = {
 
 const HeroPortfolioDetailsArea = ({ project }: HeroPortfolioDetailsAreaProps) => {
   return (
-    <div className="porfolio-details__area porfolio-details__color-customize p-relative smooth black-bg-3">
+    <div className="porfolio-details__area porfolio-details__color-customize rs-project-detail-hero p-relative smooth black-bg-3">
       <a className="pointer" onClick={scrollTo}>
         <div className="tp-hero-3__scrool-down z-index-5">
           <span className="text">Scroll</span>

@@ -22,7 +22,7 @@ const Offcanvas = ({ showCanvas, setShowCanvas, style_bg, style_bg2 }: Offcanvas
       <dialog ref={dialogRef} id="site-menu" aria-label="Site menu" tabIndex={-1}
         onCancel={(event) => { event.preventDefault(); setShowCanvas(false); }}
         onClickCapture={(event) => { if ((event.target as Element).closest('a[href]')) setShowCanvas(false); }}
-        className={`tp-offcanvas-area ${showCanvas ? 'opened' : ''} ${style_bg ? 'tp-offcanvas-update-bg' : ''} ${style_bg2 ? 'tp-offcanvas-update-bg-2' : ''}`}>
+        className={`rs-site-menu tp-offcanvas-area ${showCanvas ? 'opened' : ''} ${style_bg ? 'tp-offcanvas-update-bg' : ''} ${style_bg2 ? 'tp-offcanvas-update-bg-2' : ''}`}>
         <div className="tp-offcanvas-bg is-left"></div>
         <div className="tp-offcanvas-bg is-right d-none d-md-block">
           <div className="tp-offcanvas-shape">

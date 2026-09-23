@@ -10,7 +10,7 @@ const PortfolioArea = () => {
   const secondColumnProjects = portfolioProjects.slice(3);
 
   return (
-    <div className="porfolio-inner__thumb-wrapper tp-portfolio-effect portfolio-list-scroll-text-animation p-relative fix  black-bg-3 pt-80 pb-50"
+    <div id="portfolio-projects" className="porfolio-inner__thumb-wrapper tp-portfolio-effect portfolio-list-scroll-text-animation p-relative fix black-bg-3 pt-80 pb-50 rs-portfolio-projects"
       data-scrub="0.0001">
       <div className="portfolio-list-scroll-text pb-80 d-flex align-items-center">
         <p>Work & Proof</p>

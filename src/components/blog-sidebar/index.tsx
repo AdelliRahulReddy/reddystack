@@ -9,7 +9,7 @@ const BlogSidebar = () => {
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main id="main-content" tabIndex={-1}>
+          <main id="main-content" className="rs-subpage" tabIndex={-1}>
             <Breadcrumb />
             <SideBlogPostBoxArea/>
           </main>

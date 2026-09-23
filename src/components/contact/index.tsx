@@ -12,7 +12,7 @@ const Contact = ({ initialService, sourcePage }: { initialService: string; sourc
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main id="main-content" tabIndex={-1}>
+          <main id="main-content" className="rs-subpage" tabIndex={-1}>
             <ContactArea initialService={initialService} sourcePage={sourcePage} />
           </main>
           <FooterOne style={true} />

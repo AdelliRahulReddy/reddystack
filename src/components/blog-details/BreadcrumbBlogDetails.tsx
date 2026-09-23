@@ -9,7 +9,7 @@ type BreadcrumbBlogDetailsProps = {
 const BreadcrumbBlogDetails = ({ post }: BreadcrumbBlogDetailsProps) => {
   return (
     <>
-      <div className="blog-details__area blog-details__customize pt-200 black-bg-3">
+      <div className="blog-details__area blog-details__customize rs-blog-article-hero rs-page-hero black-bg-3">
         <div className="container">
           <div className="row">
             <div className="blog-list__title-box">

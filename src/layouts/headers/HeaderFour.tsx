@@ -21,24 +21,12 @@ const HeaderFour = ({ style }: HeaderFourProps) => {
   return (
     <>
       <header>
-        <div className={`tp-header-4__area tp-header-transparent tp-header-4__plr ${style ? 'header tp-header-4__white-color tp-header-4__mob-ptb' : 'header tp-header-4__mob-ptb'}`}>
+        <div className={`rs-inner-header tp-header-4__area tp-header-transparent tp-header-4__plr ${style ? 'header tp-header-4__white-color tp-header-4__mob-ptb' : 'header tp-header-4__mob-ptb'}`}>
           <div className="container-fluid">
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-6 col-md-6 col-6">
                 <div className="tp-header-3__logo">
-                  {style ?
-                    <>
-                      <BrandLockup className="logo-white" textColor="var(--tp-common-white)" />
-                      <BrandLockup className="logo-black" textColor="var(--tp-common-white)" />
-                    </>
-                    :
-                    <>
-                      <BrandLockup className="logo-white" textColor="var(--tp-common-white)" />
-                      <BrandLockup className="logo-black" textColor="var(--tp-common-black-5)" />
-                    </>
-
-                  }
-
+                  <BrandLockup className="rs-header-brand" textColor="var(--rs-paper)" />
                 </div>
               </div>
               <div className="col-xl-7 d-none d-xl-block">
@@ -136,13 +124,12 @@ const HeaderFour = ({ style }: HeaderFourProps) => {
       </header>
 
       <header>
-        <div className="tp-header-4__area tp-header-transparent tp-header-4__mob-ptb tp-header-4__plr tp-int-menu tp-header-sticky-cloned">
+        <div className="rs-inner-header rs-inner-header--sticky tp-header-4__area tp-header-transparent tp-header-4__mob-ptb tp-header-4__plr tp-int-menu tp-header-sticky-cloned">
           <div className="container-fluid">
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-6 col-md-6 col-6">
                 <div className="tp-header-3__logo">
-                  <BrandLockup className="logo-white" textColor="var(--tp-common-white)" />
-                  <BrandLockup className="logo-black" textColor="var(--tp-common-black-5)" />
+                  <BrandLockup className="rs-header-brand" textColor="var(--rs-paper)" />
                 </div>
               </div>
               <div className="col-xl-7 d-none d-xl-block">

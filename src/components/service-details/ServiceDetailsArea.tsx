@@ -17,7 +17,7 @@ const ServiceDetailsArea = ({ service }: ServiceDetailsAreaProps) => {
   const contactHref = `/contact?${new URLSearchParams({ service: service.contactService || service.slug, source: service.path })}`;
 
   return (
-    <div className="service-details__area service-details__space pt-160 pb-90 black-bg-3">
+    <div className="service-details__area service-details__space rs-service-detail-hero black-bg-3">
       <div className="container">
         <div className="row">
           <div className="col-xl-12">

@@ -18,8 +18,8 @@ const TrustPage = ({ page, breadcrumbs, className, children, byline }: TrustPage
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main id="main-content" tabIndex={-1}>
-            <section className={`service-details__area service-details__space pt-200 pb-120 black-bg-3 ${className || ''}`.trim()}>
+          <main id="main-content" className="rs-subpage" tabIndex={-1}>
+            <section className={`service-details__area service-details__space rs-trust-page black-bg-3 ${className || ''}`.trim()}>
               <div className="container">
                 <div className="row">
                   <div className="col-xl-12">
@@ -39,7 +39,7 @@ const TrustPage = ({ page, breadcrumbs, className, children, byline }: TrustPage
                       </h1>
                     </div>
                   </div>
-                  <div className="offset-xl-4 col-xl-7 col-lg-9">
+                  <div className="offset-xl-2 col-xl-8 col-lg-9">
                     <div className="service-details__banner-text mb-80">
                       <p className="tp_title_anim">{page.intro}</p>
                     </div>

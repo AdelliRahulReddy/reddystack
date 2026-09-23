@@ -24,7 +24,7 @@ const scrollTo = () => {
 const HeroAreaAbout = () => {
   return (
     <>
-      <div className="ab-hero__area ab-hero__customize ab-hero__ptb black-bg-3 p-relative z-index-1 fix">
+      <div className="ab-hero__area ab-hero__customize ab-hero__ptb rs-about-hero rs-page-hero black-bg-3 p-relative z-index-1 fix">
         <div className="ab-hero__shape-1">
           <Image src={about_shape_1} alt="" />
         </div>
@@ -51,7 +51,7 @@ const HeroAreaAbout = () => {
           <div className="row">
             <div className="col-xl-4 col-lg-5">
               <div className="ab-hero__title-box">
-                <h1 className="ab-hero__title tp-char-animation">Built by Rahul Reddy</h1>
+                <h1 className="ab-hero__title tp-char-animation">Built by<br />Rahul Reddy</h1>
               </div>
             </div>
             <div className="col-xl-8 col-lg-7">

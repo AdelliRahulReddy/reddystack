@@ -59,7 +59,7 @@ const ContactArea = ({ initialService, sourcePage }: { initialService: string; s
 
   return (
     <>
-      <div className="contact-inner__area contact-inner__ptb p-relative black-bg-3">
+      <div className="contact-inner__area contact-inner__ptb rs-contact-page p-relative black-bg-3">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-11 offset-xl-1">

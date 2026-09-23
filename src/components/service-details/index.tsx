@@ -19,7 +19,7 @@ const ServiceDetails = ({ service, previousService, nextService }: ServiceDetail
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main id="main-content" tabIndex={-1}>
+          <main id="main-content" className="rs-subpage" tabIndex={-1}>
             <ServiceDetailsArea service={service} />
             <ServiceFaqArea service={service} />
             <NavigationArea previousService={previousService} nextService={nextService} />

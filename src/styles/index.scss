@@ -11,6 +11,7 @@
 @forward "../../public/assets/css/spacing.css"; 
 @forward "../../public/assets/scss/main.scss";
 @forward "./brand";
+@forward "./_inner-pages.scss";
 
 // Reserve exactly the existing artwork area while its player loads.
 .tp-hero-artwork {

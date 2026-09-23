@@ -1,5 +1,5 @@
 import React from 'react';
-import SeviceHeroArea from './SeviceHeroArea';
+import ServicePageHero from './ServicePageHero';
 import ServiceInfoArea from './ServiceInfoArea';
 import FooterOne from '@/layouts/footers/FooterOne';
 import HeaderFour from '@/layouts/headers/HeaderFour';
@@ -14,8 +14,8 @@ const Service = () => {
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main id="main-content" tabIndex={-1}>
-            <SeviceHeroArea />
+          <main id="main-content" className="rs-subpage" tabIndex={-1}>
+            <ServicePageHero />
             <ServiceAreaHomeThree /> {/* Restored original 'Our Process' design */}
             <ServiceInfoArea />
             <TestimonialAreaHomeOne style={true} />

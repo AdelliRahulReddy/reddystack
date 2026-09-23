@@ -77,8 +77,8 @@ const PricingPage = () => {
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main id="main-content" tabIndex={-1}>
-            <section className="service-details__area service-details__space pt-200 pb-80 black-bg-3">
+          <main id="main-content" className="rs-subpage" tabIndex={-1}>
+            <section className="service-details__area service-details__space rs-pricing-hero black-bg-3">
               <div className="container">
                 <div className="row">
                   <div className="col-xl-12">

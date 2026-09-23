@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import HeaderFour from '@/layouts/headers/HeaderFour';
-import PortfolioSlider from './PortfolioSlider';
+import PortfolioPageHero from './PortfolioPageHero';
 import PortfolioArea from './PortfolioArea';
 import FooterOne from '@/layouts/footers/FooterOne';
 
@@ -12,8 +12,8 @@ const Portfolio = () => {
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main id="main-content" tabIndex={-1}>
-            <PortfolioSlider />
+          <main id="main-content" className="rs-subpage" tabIndex={-1}>
+            <PortfolioPageHero />
             <PortfolioArea />
           </main>
           <FooterOne style={true} />

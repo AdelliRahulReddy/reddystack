@@ -276,6 +276,7 @@ export default function PrototypeExperience({ projects, market }: { projects: Pr
   const rootRef = useRef<HTMLElement | null>(null);
   const [activeNeed, setActiveNeed] = useState(0);
   const [showMobileContact, setShowMobileContact] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { active: darkMode, toggleTheme } = UseThemeCheck();
   const marketPage = market ? marketPages[market.code] : undefined;
   const contactMessage = market
@@ -294,17 +295,18 @@ export default function PrototypeExperience({ projects, market }: { projects: Pr
   useEffect(() => {
     const root = rootRef.current;
     if (!root || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const compactMotion = window.matchMedia('(max-width: 640px)').matches;
 
     const context = gsap.context(() => {
-      gsap.fromTo('[data-intro]', { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.62, stagger: 0.06, ease: 'power3.out', clearProps: 'all' });
-      gsap.fromTo('[data-growth-visual]', { autoAlpha: 0.7, y: 17, rotate: 1.5 }, { autoAlpha: 1, y: 0, rotate: 0, duration: 0.8, ease: 'power3.out', clearProps: 'all' });
+      gsap.fromTo('[data-intro]', { autoAlpha: 0, y: compactMotion ? 10 : 16 }, { autoAlpha: 1, y: 0, duration: compactMotion ? 0.38 : 0.62, stagger: compactMotion ? 0.035 : 0.06, ease: 'power3.out', clearProps: 'all' });
+      gsap.fromTo('[data-growth-visual]', { autoAlpha: 0.7, y: compactMotion ? 10 : 17, rotate: compactMotion ? 0.5 : 1.5 }, { autoAlpha: 1, y: 0, rotate: 0, duration: compactMotion ? 0.48 : 0.8, ease: 'power3.out', clearProps: 'all' });
     }, root);
 
     const revealAnimations: gsap.core.Tween[] = [];
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        revealAnimations.push(gsap.fromTo(entry.target, { autoAlpha: 0.68, y: 15 }, { autoAlpha: 1, y: 0, duration: 0.55, ease: 'power3.out', clearProps: 'all' }));
+        revealAnimations.push(gsap.fromTo(entry.target, { autoAlpha: 0.68, y: compactMotion ? 8 : 15 }, { autoAlpha: 1, y: 0, duration: compactMotion ? 0.34 : 0.55, ease: 'power3.out', clearProps: 'all' }));
         observer.unobserve(entry.target);
       });
     }, { threshold: 0.13 });
@@ -325,12 +327,21 @@ export default function PrototypeExperience({ projects, market }: { projects: Pr
         <div className={styles.frame}>
           <header className={styles.header} data-intro>
             <Link className={styles.brand} href="/" aria-label="ReddyStack home"><Image src={brandSymbol} alt="" width={31} height={31} priority /><span>ReddyStack</span></Link>
-            <nav className={styles.nav} aria-label="Main navigation"><a href="#services">Services</a><a href="#work">Work</a><a href="#approach">How I work</a><a href="#faq">FAQs</a><Link href="/blog">Insights</Link></nav>
+            <nav className={[styles.nav, mobileMenuOpen ? styles.navOpen : ''].filter(Boolean).join(' ')} id="main-navigation" aria-label="Main navigation">
+              <a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a>
+              <a href="#work" onClick={() => setMobileMenuOpen(false)}>Work</a>
+              <a href="#approach" onClick={() => setMobileMenuOpen(false)}>How I work</a>
+              <a href="#faq" onClick={() => setMobileMenuOpen(false)}>FAQs</a>
+              <Link href="/blog" onClick={() => setMobileMenuOpen(false)}>Insights</Link>
+            </nav>
             <button className={styles.themeToggle} type="button" onClick={toggleTheme} aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'} aria-pressed={darkMode}>
               <svg aria-hidden="true" viewBox="0 0 20 20" fill="none">{darkMode ? <path d="M16.5 12.3A7 7 0 0 1 7.7 3.5 7 7 0 1 0 16.5 12.3Z" /> : <><circle cx="10" cy="10" r="3.2" /><path d="M10 1.8v2M10 16.2v2M18.2 10h-2M3.8 10h-2m14-5.8-1.4 1.4m-8.8 8.8-1.4 1.4m11.6 0-1.4-1.4M5.2 5.2 3.8 3.8" /></>}</svg>
               <span>{darkMode ? 'Dark' : 'Light'}</span>
             </button>
-            <a className={styles.headerCta} href={whatsappHref(contactMessage)} target="_blank" rel="noreferrer">WhatsApp Rahul <WhatsAppIcon /></a>
+            <button className={styles.menuToggle} type="button" aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={mobileMenuOpen} aria-controls="main-navigation" onClick={() => setMobileMenuOpen((open) => !open)}>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">{mobileMenuOpen ? <path d="m6 6 12 12M18 6 6 18" /> : <><path d="M4 7h16M4 12h16M4 17h16" /></>}</svg>
+            </button>
+            <a className={styles.headerCta} href={whatsappHref(contactMessage)} target="_blank" rel="noreferrer" aria-label="Message Rahul on WhatsApp">WhatsApp Rahul <WhatsAppIcon /></a>
           </header>
 
           <div className={styles.heroMeta} data-intro><span><i /> {marketPage?.hero.sub_title ?? 'INDEPENDENT BRAND GROWTH PARTNER'}</span><span>HYDERABAD · WORKING WORLDWIDE</span></div>

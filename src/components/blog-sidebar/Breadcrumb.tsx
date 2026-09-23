@@ -6,7 +6,7 @@ import { seoPages } from '@/data/SeoPagesData';
 const Breadcrumb = () => {
   return (
     <>
-      <div className="blog-standard__area pt-200 black-bg-3">
+      <div className="blog-standard__area rs-blog-index-hero rs-page-hero black-bg-3">
         <div className="container">
           <div className="row">
             <div className="blog-list__title-box">
