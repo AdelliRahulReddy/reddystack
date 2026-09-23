@@ -6,6 +6,7 @@ import { siteConfig } from '@/data/siteConfig';
 import InstagramIcon from '@/svg/icons/InstagramIcon';
 import TelegramIcon from '@/svg/icons/TelegramIcon';
 import XIcon from '@/svg/icons/XIcon';
+import CountryChoiceLinks from '@/components/country/CountryChoiceLinks';
 
 
 interface DataType {
@@ -201,6 +202,7 @@ const FooterOne = ({ style }: FooterOneProps) => {
                   </div>
                 </div>
               </div>
+              <CountryChoiceLinks />
             </div>
           </div>
         </div>

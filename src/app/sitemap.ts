@@ -7,6 +7,8 @@ import { intentLandingPages } from "@/data/IntentLandingPagesData";
 import { portfolioProjects } from "@/data/PortfolioProjectsData";
 import type { MetadataRoute } from "next";
 import { seoPages } from "@/data/SeoPagesData";
+import { markets } from "@/data/MarketConfig";
+import { marketLanguageAlternates } from "@/data/MarketSeo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routeConfig: Array<{
@@ -22,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { path: "/blog", lastModified: sitemapLastModified, changeFrequency: "weekly", priority: 0.8 },
       { path: "/contact", lastModified: sitemapLastModified, changeFrequency: "monthly", priority: 0.75 },
       { path: "/pricing", lastModified: sitemapLastModified, changeFrequency: "monthly", priority: 0.78 },
-      { path: "/privacy-policy", lastModified: sitemapLastModified, changeFrequency: "yearly", priority: 0.3 },
+      { path: "/privacy-policy", lastModified: "2026-09-23", changeFrequency: "yearly", priority: 0.3 },
       { path: "/terms", lastModified: sitemapLastModified, changeFrequency: "yearly", priority: 0.3 },
       { path: "/revision-policy", lastModified: sitemapLastModified, changeFrequency: "yearly", priority: 0.3 },
       ...serviceDetailData.map((service) => ({ path: service.path, lastModified: service.updatedAt || sitemapLastModified, changeFrequency: "monthly" as const, priority: 0.8 })),
@@ -39,7 +41,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ...(route.lastModified ? { lastModified: route.lastModified } : {}),
       changeFrequency: route.changeFrequency,
       priority: route.priority,
+      ...(route.path === "" ? { alternates: { languages: marketLanguageAlternates } } : {}),
     }));
+
+  const marketRoutes = markets.map((market) => ({
+    url: `${siteConfig.siteUrl}${market.href}`,
+    lastModified: "2026-09-23",
+    alternates: { languages: marketLanguageAlternates },
+  }));
 
   const articleRoutes = blogPosts.map((post) => ({
       url: `${siteConfig.siteUrl}${post.path}`,
@@ -55,7 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.75,
     }));
 
-  return [...routes, ...articleRoutes, ...portfolioRoutes, ...seoPages.map((page) => ({
+  return [...routes, ...marketRoutes, ...articleRoutes, ...portfolioRoutes, ...seoPages.map((page) => ({
     url: `${siteConfig.siteUrl}${page.path}`,
     ...(page.updatedAt || page.publishedAt ? { lastModified: page.updatedAt || page.publishedAt } : {}),
   }))];

@@ -6,6 +6,7 @@ import MobileMenus from '@/layouts/headers/menu/mobile-menus';
 import { siteConfig } from '@/data/siteConfig';
 import BrandLockup from './BrandLockup';
 import useMenuDialog from '@/hooks/useMenuDialog';
+import CountryChoiceLinks from '@/components/country/CountryChoiceLinks';
 
 type OffcanvasProps = {
   showCanvas: boolean;
@@ -70,6 +71,7 @@ const Offcanvas = ({ showCanvas, setShowCanvas, style_bg, style_bg2 }: Offcanvas
                 <MobileMenus />
               </nav>
             </div>
+            <CountryChoiceLinks className="mt-30" collapsible />
           </div>
 
           <div className="tp-offcanvas-right d-none d-md-block">

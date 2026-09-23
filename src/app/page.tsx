@@ -2,14 +2,23 @@ import HomeOne from '@/components/homes/home';
 import Wrapper from '@/layouts/Wrapper';
 import React from 'react';
 import {
+  buildCanonicalUrl,
   buildFAQPageSchema,
   buildPageMetadata,
   homePageSchema,
 } from '@/data/siteConfig';
+import type { Metadata } from 'next';
+import { marketRootLanguageAlternates } from '@/data/MarketSeo';
 import { homeFaqItems } from '@/data/HomeFaqData';
 
 
-export const metadata = buildPageMetadata("home");
+export const metadata: Metadata = {
+  ...buildPageMetadata("home"),
+  alternates: {
+    canonical: buildCanonicalUrl("/"),
+    languages: marketRootLanguageAlternates,
+  },
+};
 
 const MainHome = () => {
   const homeFaqSchema = buildFAQPageSchema(homeFaqItems, "/");

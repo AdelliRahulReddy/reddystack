@@ -11,6 +11,7 @@ import XIcon from '@/svg/icons/XIcon';
 import bg_shape from "@/assets/img/offcanvas/bg-shape-3.png";
 import { siteConfig } from '@/data/siteConfig';
 import useMenuDialog from '@/hooks/useMenuDialog';
+import CountryChoiceLinks from '@/components/country/CountryChoiceLinks';
 
 type Offcanvas2Props = {
   showCanvas: boolean;
@@ -61,6 +62,7 @@ const Offcanvas2 = ({ showCanvas, setShowCanvas }: Offcanvas2Props) => {
                 <MobileMenus />
               </nav>
             </div>
+            <CountryChoiceLinks className="mt-30" collapsible />
             <div className="tp-offcanvas-contact-2">
               <h3 className="tp-offcanvas-contact-title-2">Information</h3>
 

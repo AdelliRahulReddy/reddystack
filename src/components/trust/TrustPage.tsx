@@ -7,18 +7,19 @@ import type { ReactNode } from 'react';
 type TrustPageProps = {
   page: Pick<TrustPageData, 'title' | 'subtitle' | 'intro' | 'sections'>;
   breadcrumbs?: { name: string; path: string }[];
+  className?: string;
   children?: ReactNode;
   byline?: { name: string; role: string; href: string };
 };
 
-const TrustPage = ({ page, breadcrumbs, children, byline }: TrustPageProps) => {
+const TrustPage = ({ page, breadcrumbs, className, children, byline }: TrustPageProps) => {
   return (
     <>
       <HeaderFour />
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main id="main-content" tabIndex={-1}>
-            <section className="service-details__area service-details__space pt-200 pb-120 black-bg-3">
+            <section className={`service-details__area service-details__space pt-200 pb-120 black-bg-3 ${className || ''}`.trim()}>
               <div className="container">
                 <div className="row">
                   <div className="col-xl-12">

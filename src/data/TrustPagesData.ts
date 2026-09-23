@@ -20,7 +20,7 @@ export const trustPages: Record<TrustPageSlug, TrustPageData> = {
   "privacy-policy": {
     slug: "privacy-policy",
     title: "Privacy Policy",
-    subtitle: "Website data handling · Updated 16 September 2026",
+    subtitle: "Website data handling · Updated 23 September 2026",
     metaKey: "privacyPolicy",
     intro:
       "This page explains the information used when you browse ReddyStack or contact Rahul through the website, email or WhatsApp. It describes the current website workflow; any additional data handling for a project should be discussed as part of that project's scope.",
@@ -45,6 +45,13 @@ export const trustPages: Record<TrustPageSlug, TrustPageData> = {
           "The website uses Google Analytics 4 to understand page visits, traffic sources, device information and recorded interactions. It records actions such as contact-link clicks and successful form submissions. A contact-link click is a navigation action, not proof that a conversation or sale occurred.",
           "The site's custom form-submission event includes the selected services, selected budget, source page and enquiry reference. It does not intentionally include the submitted name, email or message. Analytics and hosting providers process technical information under their own arrangements; avoid placing sensitive information in a page URL or query string."
         ]
+      },
+      {
+        title: "Country suggestions and saved preference",
+        body: [
+          "On Vercel, the website may use the country code supplied in the request to suggest a matching country page. The suggestion does not redirect you. The website feature returns only a supported country code and does not store or log your raw IP address; Vercel may process request data under its own hosting arrangements. No suggestion is shown when country information is unavailable or unsupported.",
+          "If you choose a country or dismiss a suggestion, that choice is saved in this browser's local storage so the prompt does not keep returning. It stays there until you choose another option or clear the website's browser storage. The stored preference is not sent as an analytics event.",
+        ],
       },
       {
         "title": "Why the information is used",

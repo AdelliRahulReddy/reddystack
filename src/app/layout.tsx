@@ -1,5 +1,6 @@
 import "../styles/index.scss";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import CountrySuggestion from "@/components/country/CountrySuggestion";
 import ThemeProvider from "@/components/provider/ThemeProvider";
 import { VideoProvider } from "@/provider/VideoProvider";
 import {
@@ -141,6 +142,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <GoogleAnalytics />
         <ThemeProvider>
           <VideoProvider>{children}</VideoProvider>
+          <CountrySuggestion />
         </ThemeProvider>
       </body>
     </html>

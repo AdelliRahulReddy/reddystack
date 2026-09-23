@@ -11,6 +11,7 @@ import InstagramIcon from '@/svg/icons/InstagramIcon';
 import TelegramIcon from '@/svg/icons/TelegramIcon';
 import XIcon from '@/svg/icons/XIcon';
 import BrandLockup from '@/components/common/BrandLockup';
+import CountryChoiceLinks from '@/components/country/CountryChoiceLinks';
 
 
 interface DataType {
@@ -148,6 +149,7 @@ const FooterFour = () => {
                   </div>
                 </div>
               </div>
+              <CountryChoiceLinks />
             </div>
           </div>
         </div>
