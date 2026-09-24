@@ -150,7 +150,7 @@ function GrowthSignalWidget({ activeNeed, setActiveNeed }: { activeNeed: number;
       <div className={styles.diagnosticAnswer} key={need.id} role="status" aria-live="polite" aria-atomic="true">
         <p className={styles.answerKicker}>A useful place to start</p>
         <h3>{need.firstStep}</h3>
-        <a className={styles.answerLink} href={whatsappHref('Hi Rahul, I want help with my business. ' + need.message + ' What would you look at first?')} target="_blank" rel="noreferrer">
+        <a className={styles.answerLink} data-mobile-contact-anchor href={whatsappHref('Hi Rahul, I want help with my business. ' + need.message + ' What would you look at first?')} target="_blank" rel="noreferrer">
           Talk it through with Rahul <ArrowIcon />
         </a>
       </div>
@@ -246,7 +246,7 @@ function MarketFocusSection({ marketName, focus }: { marketName: string; focus: 
 
 function FaqSection() {
   return (
-    <section className={styles.faqSection} id="faq" aria-labelledby="faq-title">
+    <section className={styles.faqSection} id="faq" data-mobile-contact-anchor aria-labelledby="faq-title">
       <div className={styles.faqHeading} data-reveal>
         <div><p className={styles.sectionEyebrow}>BEFORE YOU START</p><h2 id="faq-title">A few things<br /><i>to know.</i></h2></div>
         <p>How the work starts, what it costs, and what you can expect before you commit.</p>
@@ -265,7 +265,7 @@ function FaqSection() {
 
 function WorkSection({ projects }: { projects: Project[] }) {
   return (
-    <section className={styles.workSection} id="work" aria-labelledby="work-title">
+    <section className={styles.workSection} id="work" data-mobile-contact-anchor aria-labelledby="work-title">
       <div className={styles.frame}>
         <div className={styles.workHeading} data-reveal>
           <div><p className={styles.sectionEyebrow}>SELECTED BUILDS · PERSONAL / DEMO</p><h2 id="work-title">A few things<br /><i>I have built.</i></h2></div>
@@ -481,7 +481,7 @@ export default function PrototypeExperience({ projects, market }: { projects: Pr
       </footer>
 
       {showMobileContact && <a className={styles.mobileContact} href={whatsappHref(contactMessage)} target="_blank" rel="noreferrer" aria-label="Talk through your goal with Rahul on WhatsApp">
-        <WhatsAppIcon /> Talk to Rahul on WhatsApp
+        <WhatsAppIcon /> Talk to Rahul
       </a>}
     </main>
   );

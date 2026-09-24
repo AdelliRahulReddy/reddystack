@@ -159,7 +159,8 @@
 .diagnosticAnswer { display: flex; min-height: 280px; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(26px, 4vw, 44px); border-left: 3px solid #7654e8; background: var(--paper-surface); color: var(--text); animation: answer-in .25s ease-out both; }
 .page .answerKicker { margin: 0; color: #6550bc; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .diagnosticAnswer h3 { max-width: 440px; margin: 18px 0 20px; color: var(--text); font-family: var(--font-brand-sora), sans-serif; font-size: clamp(27px, 3.2vw, 39px); font-weight: 600; letter-spacing: -.065em; line-height: 1.06; }
-.answerLink { color: #5842b4 !important; font-size: 13px; font-weight: 700; }
+.answerLink { display: inline-flex; align-items: center; gap: 8px; color: #5842b4 !important; font-size: 13px; font-weight: 700; }
+.answerLink svg { width: 17px; height: 17px; flex: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 
 .marketFocusSection { margin-top: 88px; padding-top: 43px; border-top: 1px solid var(--line); }
 .marketFocusGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 27px; }
@@ -221,7 +222,8 @@
 .workRole { display: flex; flex-wrap: wrap; gap: 5px 10px; margin-top: 13px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 10px; }
 .workRole span { color: var(--muted); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
 .workRole strong { font-weight: 600; }
-.workLink { display: flex; min-height: 40px; align-items: center; justify-content: space-between; margin-top: 3px; border-top: 1px solid var(--line); color: #5842b4 !important; font-size: 12px; font-weight: 700; }
+.workLink { display: flex; width: 100%; min-height: 40px; align-items: center; justify-content: space-between; gap: 12px; margin-top: 3px; border-top: 1px solid var(--line); color: #5842b4 !important; font-size: 12px; font-weight: 700; }
+.workLink svg { width: 17px; height: 17px; flex: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .workAllLink { min-height: 42px; margin-top: 25px; color: #5842b4 !important; font-size: 13px; font-weight: 700; }
 
 .footer { background: #25242a; color: #f7f4eb; }
@@ -289,32 +291,36 @@
   .menuToggle { display: inline-flex; }
   .headerCta { display: none; }
   .heroMeta { flex-wrap: wrap; gap: 7px 14px; padding-top: 17px; font-size: 9px; }
-  .hero { gap: 31px; min-height: 0; padding: 39px 0 35px; }
+  .heroMeta span:first-child { display: none; }
+  .hero { gap: 20px; min-height: 0; padding: 27px 0 28px; }
+  .heroCopy { display: contents; }
+  .hero .eyebrow { order: 1; }
   .page .eyebrow, .page .sectionEyebrow { font-size: 10px; }
-  .hero h1 { margin: 18px 0; font-size: clamp(42px, 11vw, 66px); letter-spacing: -.075em; line-height: 1; }
-  .page .heroDescription { max-width: 520px; font-size: 15px; line-height: 1.65; }
-  .heroActions { gap: 7px 18px; margin-top: 22px; }
+  .hero h1 { order: 2; margin: 10px 0 0; font-size: clamp(42px, 11vw, 66px); letter-spacing: -.075em; line-height: 1; }
+  .page .heroDescription { order: 4; max-width: 520px; font-size: 15px; line-height: 1.65; }
+  .heroActions { order: 5; gap: 7px 18px; margin-top: 2px; }
   .primaryButton { min-height: 50px; font-size: 12px; }
   .textButton { min-height: 43px; font-size: 12px; }
-  .trustPoints { display: grid; gap: 8px; margin-top: 20px; font-size: 11px; }
-  .heroBase { justify-content: flex-start; gap: 7px 18px; min-height: 47px; font-size: 8px; }
-  .heroVisual { min-height: 450px; border-radius: 20px; }
+  .trustPoints { order: 6; display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 2px; font-size: 10px; }
+  .heroBase { display: none; }
+  .heroVisual { order: 3; width: 100%; min-height: clamp(230px, 64vw, 260px); margin-top: 2px; border-radius: 18px; }
   .visualHeader { top: 21px; right: 18px; left: 18px; font-size: 8px; }
-  .visualFooter { right: 18px; bottom: 17px; left: 18px; font-size: 7px; }
-  .heroPoint { width: 196px; gap: 8px; }
-  .heroPointDiscover { top: 70%; left: 4%; }
-  .heroPointTrust { top: 49%; right: -1%; }
-  .heroPointEnquire { top: 27%; left: 11%; }
-  .heroPointLearn { top: 8%; right: 1%; }
-  .heroPointDot { width: 36px; height: 36px; font-size: 10px; }
+  .visualFooter { display: none; }
+  .heroPoint { width: auto; gap: 8px; }
+  .heroPointDiscover { top: 77%; left: 5%; }
+  .heroPointTrust { top: 57%; right: 8%; }
+  .heroPointEnquire { top: 37%; left: 9%; }
+  .heroPointLearn { top: 17%; right: 5%; }
+  .heroPointDot { width: 32px; height: 32px; font-size: 9px; }
+  .heroPointCopy { gap: 0; }
   .heroPointCopy small { font-size: 8px; }
-  .heroPointCopy strong { font-size: 10px; }
+  .heroPointCopy strong { display: none; }
   .journeySection { padding: 72px 0 76px; }
   .journeyHeading { gap: 14px; margin-bottom: 34px; }
   .journeyHeading h2 { font-size: clamp(40px, 11vw, 62px); }
   .page .journeyHeading > p:last-child { font-size: 14px; line-height: 1.65; }
   .journeyLayout { gap: 30px; }
-  .journeyVisual { width: 100%; min-height: 375px; border-radius: 20px; }
+  .journeyVisual { width: 100%; min-height: clamp(165px, 27vh, 220px); border-radius: 20px; }
   .journeyVisualHead { top: 18px; right: 18px; left: 18px; font-size: 8px; }
   .journeyVisualFoot { right: 18px; bottom: 16px; left: 18px; font-size: 7px; }
   .journeyRoute { inset: 8% 12% 10%; width: 76%; height: 80%; }
@@ -375,7 +381,7 @@
   .footerMarkets { padding: 17px 0; }
   .footer > .frame { align-items: flex-start; flex-direction: column; justify-content: center; gap: 10px; padding-block: 18px; }
   .footer p, .footer > .frame > a { font-size: 12px; }
-  .mobileContact { position: fixed; z-index: 25; right: auto; bottom: calc(env(safe-area-inset-bottom) + 13px); left: 50%; display: inline-flex; min-height: 48px; max-width: calc(100vw - 28px); align-items: center; justify-content: center; gap: 9px; padding: 0 20px; transform: translateX(-50%); border: 1px solid rgba(48, 47, 53, .24); border-radius: 999px; background: var(--lime); box-shadow: 0 8px 22px rgba(32, 30, 38, .18); color: #25242a !important; font-size: 12px; font-weight: 700; animation: contact-rise .22s ease-out both; white-space: nowrap; }
+  .mobileContact { position: fixed; z-index: 25; right: auto; bottom: calc(env(safe-area-inset-bottom) + 13px); left: 50%; display: inline-flex; min-height: 44px; max-width: calc(100vw - 28px); align-items: center; justify-content: center; gap: 8px; padding: 0 15px; transform: translateX(-50%); border: 1px solid rgba(48, 47, 53, .24); border-radius: 999px; background: var(--lime); box-shadow: 0 8px 22px rgba(32, 30, 38, .18); color: #25242a !important; font-size: 11px; font-weight: 700; animation: contact-rise .22s ease-out both; white-space: nowrap; }
   .mobileContact svg { width: 18px; height: 18px; stroke: currentColor; stroke-width: 1.55; stroke-linecap: round; stroke-linejoin: round; }
 }
 
@@ -384,10 +390,10 @@
   .brand { font-size: 15px; }
   .themeToggle, .menuToggle { width: 37px; min-height: 37px; }
   .hero h1 { font-size: clamp(40px, 10.4vw, 45px); }
-  .heroVisual { min-height: 420px; }
+  .heroVisual { min-height: clamp(220px, 60vw, 240px); }
   .heroPoint { width: 178px; }
   .heroPointCopy strong { font-size: 9px; }
-  .journeyVisual { min-height: 355px; }
+  .journeyVisual { min-height: clamp(165px, 27vh, 215px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
