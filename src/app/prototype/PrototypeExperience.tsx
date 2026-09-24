@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import brandSymbol from '@/assets/img/logo/reddystack-symbol.svg';
 import CountryChoiceLinks from '@/components/country/CountryChoiceLinks';
@@ -32,26 +33,34 @@ const bottlenecks = [
   { id: 'measurement', title: 'We cannot tell what is working', detail: 'Spend and enquiries are hard to connect.', firstStep: 'Check the tracking before increasing ad spend.', message: 'I cannot tell which marketing brings enquiries.' },
 ] as const;
 
-const serviceGroups = [
+const journeySteps = [
   {
-    number: '01',
-    title: 'Reach the right people',
-    description: 'Paid campaigns and creative shaped around your audience, offer, and budget.',
+    id: 'discover', number: '01', label: 'DISCOVER', title: 'Show up when the need appears.',
+    description: 'Help the right people come across your business while they are searching or exploring.',
     services: [
-      { title: 'Meta Ads', href: '/service/meta-ads' },
+      { title: 'SEO & Local SEO', href: '/service/seo-local-seo' },
       { title: 'Google Ads', href: '/service/google-ads' },
+      { title: 'Meta Ads', href: '/service/meta-ads' },
+    ],
+  },
+  {
+    id: 'trust', number: '02', label: 'TRUST', title: 'Make the offer easy to understand.',
+    description: 'A clear website and useful creative explain who you help and what someone can do next.',
+    services: [
+      { title: 'Website development', href: '/service/seo-websites' },
       { title: 'Ad creatives', href: '/service/ad-creatives' },
       { title: 'AI UGC-style videos', href: '/service/ai-ugc-videos' },
     ],
   },
   {
-    number: '02',
-    title: 'Make discovery count',
-    description: 'Search visibility and useful websites that help people understand your offer and take the next step.',
-    services: [
-      { title: 'SEO & Local SEO', href: '/service/seo-local-seo' },
-      { title: 'Website development', href: '/service/seo-websites' },
-    ],
+    id: 'enquire', number: '03', label: 'ENQUIRE', title: 'Make the next move feel natural.',
+    description: 'Keep the promise, the page and the contact action in sync—from the first tap to a real conversation.',
+    services: [{ title: 'Landing pages & websites', href: '/service/seo-websites' }],
+  },
+  {
+    id: 'learn', number: '04', label: 'LEARN', title: 'Let evidence guide what grows.',
+    description: 'Review actual enquiries and campaign signals with Rahul. Improve the weak point before adding more.',
+    services: [],
   },
 ] as const;
 
@@ -90,15 +99,32 @@ function WhatsAppIcon() {
 
 function GrowthPathVisual() {
   return (
-    <aside className={styles.growthVisual} data-growth-visual aria-label="Reddystack's approach: understand the goal, build the right mix, and review the evidence">
-      <p className={styles.growthVisualLabel}>A PRACTICAL GROWTH PATH</p>
-      <h2>Proof before<br /><i>scale.</i></h2>
-      <p className={styles.growthVisualIntro}>Start with the business goal. Connect only the work that helps answer it.</p>
-      <div className={styles.pathTrack} aria-hidden="true"><span>01</span><i /><span>02</span><i /><span>03</span></div>
-      <div className={styles.pathLabels}>
-        <span>Understand</span><span>Build</span><span>Review</span>
+    <aside className={styles.heroVisual} data-hero-visual aria-label="A connected customer journey: discover, trust, enquire, and learn">
+      <div className={styles.visualHeader}><span>THE CUSTOMER JOURNEY</span><span>01 — 04</span></div>
+      <div className={styles.heroJourneyMap}>
+        <svg className={styles.heroRoute} viewBox="0 0 600 520" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="growth-route-gradient" x1="96" y1="433" x2="480" y2="65" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#D2ED7A" /><stop offset=".55" stopColor="#A9CF72" /><stop offset="1" stopColor="#A993FF" />
+            </linearGradient>
+          </defs>
+          <path className={styles.heroRouteBase} d="M80 435C203 435 157 347 287 335S500 270 418 194 272 77 504 72" />
+          <path className={styles.heroRouteLine} data-hero-route d="M80 435C203 435 157 347 287 335S500 270 418 194 272 77 504 72" />
+        </svg>
+        <div className={[styles.heroPoint, styles.heroPointDiscover].join(' ')} data-hero-node>
+          <span className={styles.heroPointDot}>01</span><span className={styles.heroPointCopy}><small>DISCOVER</small><strong>Be there when it matters</strong></span>
+        </div>
+        <div className={[styles.heroPoint, styles.heroPointTrust].join(' ')} data-hero-node>
+          <span className={styles.heroPointDot}>02</span><span className={styles.heroPointCopy}><small>TRUST</small><strong>Make the value clear</strong></span>
+        </div>
+        <div className={[styles.heroPoint, styles.heroPointEnquire].join(' ')} data-hero-node>
+          <span className={styles.heroPointDot}>03</span><span className={styles.heroPointCopy}><small>ENQUIRE</small><strong>Make the next step easy</strong></span>
+        </div>
+        <div className={[styles.heroPoint, styles.heroPointLearn].join(' ')} data-hero-node>
+          <span className={styles.heroPointDot}>04</span><span className={styles.heroPointCopy}><small>LEARN</small><strong>Choose what to improve</strong></span>
+        </div>
       </div>
-      <span className={styles.growthMark} aria-hidden="true">R</span>
+      <div className={styles.visualFooter}><span>ONE CONNECTED EXPERIENCE</span><span>HYDERABAD · WORLDWIDE</span></div>
     </aside>
   );
 }
@@ -106,7 +132,7 @@ function GrowthPathVisual() {
 function GrowthSignalWidget({ activeNeed, setActiveNeed }: { activeNeed: number; setActiveNeed: (index: number) => void }) {
   const need = bottlenecks[activeNeed];
   return (
-    <article className={styles.diagnosticWidget} data-scroll-reveal>
+    <article className={styles.diagnosticWidget} data-reveal>
       <div className={styles.diagnosticChoices} role="group" aria-label="Choose the growth problem that feels closest">
         {bottlenecks.map((option, index) => (
           <button
@@ -132,28 +158,58 @@ function GrowthSignalWidget({ activeNeed, setActiveNeed }: { activeNeed: number;
   );
 }
 
-function ServiceGroup({ group }: { group: typeof serviceGroups[number] }) {
+function GrowthJourney() {
   return (
-    <article className={styles.serviceGroup} data-scroll-reveal>
-      <span className={styles.serviceNumber}>{group.number}</span>
-      <div className={styles.serviceGroupCopy}>
-        <h3>{group.title}</h3>
-        <p>{group.description}</p>
+    <section className={styles.journeySection} id="journey" data-journey-section aria-labelledby="journey-title">
+      <div className={styles.frame}>
+        <div className={styles.journeyHeading} data-reveal>
+          <p className={styles.sectionEyebrow}>A CUSTOMER&apos;S VIEW</p>
+          <h2 id="journey-title">One journey.<br /><i>Four moments.</i></h2>
+          <p>People don&apos;t experience separate channels. They see whether you show up, make sense, and make the next step clear.</p>
+        </div>
+        <div className={styles.journeyLayout} id="services">
+          <div className={styles.journeyVisual} aria-hidden="true">
+            <div className={styles.journeyVisualHead}><span>THE PATH TO AN ENQUIRY</span><span className={styles.journeyVisualCount}>01 / 04</span></div>
+            <svg className={styles.journeyRoute} viewBox="0 0 360 660" fill="none" preserveAspectRatio="none">
+              <path className={styles.journeyRouteBase} d="M92 40C245 88 86 184 246 218S91 352 246 394 96 532 246 620" />
+              <path className={styles.journeyRouteLine} data-journey-route d="M92 40C245 88 86 184 246 218S91 352 246 394 96 532 246 620" />
+            </svg>
+            <div className={styles.journeyNodes}>
+              {journeySteps.map((step) => (
+                <div className={[styles.journeyNode, step.id === 'discover' ? styles.journeyNodeActive : ''].filter(Boolean).join(' ')} data-journey-node={step.id} key={step.id}>
+                  <span>{step.number}</span><small>{step.label}</small>
+                </div>
+              ))}
+            </div>
+            <div className={styles.journeyVisualFoot}><span>Find the weak step.</span><span>Make the next move clear.</span></div>
+          </div>
+          <div className={styles.journeyStory}>
+            {journeySteps.map((step) => (
+              <article className={styles.journeyStep} data-journey-step={step.id} key={step.id}>
+                <span className={styles.journeyStepNumber}>{step.number}</span>
+                <div className={styles.journeyStepCopy}>
+                  <p className={styles.stepKicker}>{step.label}</p>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                  {step.services.length > 0 && (
+                    <ul className={styles.journeyServiceList} aria-label={`${step.label.toLowerCase()} services`}>
+                      {step.services.map((service) => <li key={service.title}><Link href={service.href}>{service.title}<ArrowIcon diagonal /></Link></li>)}
+                    </ul>
+                  )}
+                  {step.id === 'learn' && <Link className={styles.journeyTalkLink} href="#approach">How Rahul works <ArrowIcon /></Link>}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
       </div>
-      <div className={styles.serviceLinks}>
-        {group.services.map((service) => (
-          <Link className={styles.serviceLink} href={service.href} key={service.title}>
-            <span>{service.title}</span><ArrowIcon diagonal />
-          </Link>
-        ))}
-      </div>
-    </article>
+    </section>
   );
 }
 
 function WorkCard({ project }: { project: Project }) {
   return (
-    <article className={styles.workCard} data-scroll-reveal>
+    <article className={styles.workCard} data-reveal>
       <Link className={styles.workImage} href={project.path} aria-label={'View project notes for ' + project.title}>
         <Image src={project.image.src} alt={project.title + ' project preview'} fill sizes="(max-width: 700px) 100vw, 33vw" />
       </Link>
@@ -171,13 +227,13 @@ function WorkCard({ project }: { project: Project }) {
 function MarketFocusSection({ marketName, focus }: { marketName: string; focus: MarketFocusContent }) {
   return (
     <section className={styles.marketFocusSection} aria-labelledby="market-focus-title">
-      <div className={styles.sectionHeader} data-scroll-reveal>
+      <div className={styles.sectionHeader} data-reveal>
         <div><p className={styles.sectionEyebrow}>{focus.eyebrow}</p><h2 id="market-focus-title">{focus.title}</h2></div>
         <p>{focus.intro}</p>
       </div>
       <div className={styles.marketFocusGrid}>
         {focus.items.map((item, index) => (
-          <article className={styles.marketFocusCard} data-scroll-reveal key={item.title}>
+          <article className={styles.marketFocusCard} data-reveal key={item.title}>
             <span><i>0{index + 1}</i>{marketName}</span>
             <h3>{item.title}</h3>
             <p>{item.body}</p>
@@ -191,13 +247,13 @@ function MarketFocusSection({ marketName, focus }: { marketName: string; focus: 
 function FaqSection() {
   return (
     <section className={styles.faqSection} id="faq" aria-labelledby="faq-title">
-      <div className={styles.faqHeading} data-scroll-reveal>
+      <div className={styles.faqHeading} data-reveal>
         <div><p className={styles.sectionEyebrow}>BEFORE YOU START</p><h2 id="faq-title">A few things<br /><i>to know.</i></h2></div>
         <p>How the work starts, what it costs, and what you can expect before you commit.</p>
       </div>
       <div className={styles.faqList}>
         {homeFaqItems.map((faq) => (
-          <details className={styles.faqItem} data-scroll-reveal key={faq.id}>
+          <details className={styles.faqItem} data-reveal key={faq.id}>
             <summary>{faq.question}<span aria-hidden="true">+</span></summary>
             <p>{faq.answer}</p>
           </details>
@@ -207,30 +263,45 @@ function FaqSection() {
   );
 }
 
+function WorkSection({ projects }: { projects: Project[] }) {
+  return (
+    <section className={styles.workSection} id="work" aria-labelledby="work-title">
+      <div className={styles.frame}>
+        <div className={styles.workHeading} data-reveal>
+          <div><p className={styles.sectionEyebrow}>SELECTED BUILDS · PERSONAL / DEMO</p><h2 id="work-title">A few things<br /><i>I have built.</i></h2></div>
+          <p>Older design and development projects, shared as examples of the work—not client campaign case studies.</p>
+        </div>
+        <div className={styles.workGrid}>{projects.map((project) => <WorkCard project={project} key={project.slug} />)}</div>
+        <Link className={styles.workAllLink} href="/portfolio">See all project notes <ArrowIcon /></Link>
+      </div>
+    </section>
+  );
+}
+
 function WorkApproach({ contactMessage }: { contactMessage: string }) {
   return (
     <section className={styles.approachSection} id="approach" aria-labelledby="approach-title">
       <div className={styles.frame}>
-        <div className={styles.approachHeading} data-scroll-reveal>
-          <div><p className={styles.sectionEyebrow}>HOW THE WORK MOVES</p><h2 id="approach-title">Understand first.<br /><i>Then build.</i></h2></div>
-          <p>Every engagement starts with a conversation about your goal. We agree the work and its boundaries before it begins.</p>
+        <div className={styles.approachHeading} data-reveal>
+          <div><p className={styles.sectionEyebrow}>PROOF BEFORE SCALE</p><h2 id="approach-title">A clear next step.<br /><i>Then evidence.</i></h2></div>
+          <p>Start with the business goal. Set a baseline, agree the scope, then review the signal with Rahul.</p>
         </div>
         <ol className={styles.processList}>
           {workSteps.map((step) => (
-            <li className={styles.processStep} data-scroll-reveal key={step.number}>
+            <li className={styles.processStep} data-reveal key={step.number}>
               <span className={styles.processNumber}>{step.number}</span>
               <h3>{step.title}</h3><p>{step.description}</p>
             </li>
           ))}
         </ol>
-        <div className={styles.closingCard} data-scroll-reveal>
+        <div className={styles.closingCard} data-reveal>
           <div>
-            <p>START WITH A CONVERSATION</p>
-            <h3>Tell Rahul what you want to change.</h3>
-            <span>We’ll talk through the goal, what you have tried, and what a sensible next step could be.</span>
+            <p>START WITH THE QUESTION THAT MATTERS</p>
+            <h3>Where does growth feel stuck?</h3>
+            <span>Tell Rahul what is happening now. Together, we’ll agree on a sensible first move.</span>
           </div>
           <a data-mobile-contact-anchor href={whatsappHref(contactMessage)} target="_blank" rel="noreferrer">
-            Talk to Rahul on WhatsApp <WhatsAppIcon />
+            Talk through your goal <WhatsAppIcon />
           </a>
         </div>
       </div>
@@ -266,27 +337,68 @@ export default function PrototypeExperience({ projects, market }: { projects: Pr
   useEffect(() => {
     const root = rootRef.current;
     if (!root || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const compactMotion = window.matchMedia('(max-width: 640px)').matches;
+    gsap.registerPlugin(ScrollTrigger);
+    const desktop = gsap.matchMedia();
 
     const context = gsap.context(() => {
-      gsap.fromTo('[data-intro]', { autoAlpha: 0, y: compactMotion ? 10 : 16 }, { autoAlpha: 1, y: 0, duration: compactMotion ? 0.38 : 0.62, stagger: compactMotion ? 0.035 : 0.06, ease: 'power3.out', clearProps: 'all' });
-      gsap.fromTo('[data-growth-visual]', { autoAlpha: 0, y: compactMotion ? 8 : 14 }, { autoAlpha: 1, y: 0, duration: compactMotion ? 0.4 : 0.65, ease: 'power3.out', clearProps: 'all' });
+      const compactMotion = window.matchMedia('(max-width: 640px)').matches;
+      const intro = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      intro.fromTo('[data-intro]', { autoAlpha: 0, y: compactMotion ? 12 : 20 }, { autoAlpha: 1, y: 0, duration: compactMotion ? 0.42 : 0.68, stagger: compactMotion ? 0.04 : 0.075, clearProps: 'all' });
+      intro.fromTo('[data-hero-node]', { autoAlpha: 0, scale: 0.88 }, { autoAlpha: 1, scale: 1, duration: 0.5, stagger: 0.11, clearProps: 'all' }, 0.24);
+
+      const heroRoute = root.querySelector<SVGPathElement>('[data-hero-route]');
+      if (heroRoute) {
+        const length = heroRoute.getTotalLength();
+        gsap.set(heroRoute, { strokeDasharray: length, strokeDashoffset: length });
+        intro.to(heroRoute, { strokeDashoffset: 0, duration: 1.2, ease: 'power2.inOut' }, 0.36);
+      }
+
+      root.querySelectorAll<HTMLElement>('[data-reveal]').forEach((item) => {
+        gsap.fromTo(item, { autoAlpha: 0, y: compactMotion ? 14 : 24 }, {
+          autoAlpha: 1,
+          y: 0,
+          duration: compactMotion ? 0.48 : 0.72,
+          ease: 'power3.out',
+          clearProps: 'all',
+          scrollTrigger: { trigger: item, start: 'top 88%', once: true },
+        });
+      });
+
+      const journeySection = root.querySelector<HTMLElement>('[data-journey-section]');
+      const journeyRoute = root.querySelector<SVGPathElement>('[data-journey-route]');
+      if (journeySection && journeyRoute) {
+        const length = journeyRoute.getTotalLength();
+        gsap.set(journeyRoute, { strokeDasharray: length, strokeDashoffset: length });
+        gsap.to(journeyRoute, {
+          strokeDashoffset: 0,
+          ease: 'none',
+          scrollTrigger: { trigger: journeySection, start: 'top 72%', end: 'bottom 54%', scrub: 0.7 },
+        });
+      }
+
+      desktop.add('(min-width: 960px)', () => {
+        const steps = Array.from(root.querySelectorAll<HTMLElement>('[data-journey-step]'));
+        const nodes = Array.from(root.querySelectorAll<HTMLElement>('[data-journey-node]'));
+        const activate = (id: string) => {
+          nodes.forEach((node) => {
+            const active = node.dataset.journeyNode === id;
+            node.classList.toggle(styles.journeyNodeActive, active);
+          });
+        };
+        steps.forEach((step) => {
+          ScrollTrigger.create({
+            trigger: step,
+            start: 'center 58%',
+            end: 'bottom 58%',
+            onEnter: () => activate(step.dataset.journeyStep ?? ''),
+            onEnterBack: () => activate(step.dataset.journeyStep ?? ''),
+          });
+        });
+      });
     }, root);
 
-    const revealAnimations: gsap.core.Tween[] = [];
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        revealAnimations.push(gsap.fromTo(entry.target, { autoAlpha: 0.68, y: compactMotion ? 8 : 15 }, { autoAlpha: 1, y: 0, duration: compactMotion ? 0.34 : 0.55, ease: 'power3.out', clearProps: 'all' }));
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.13 });
-
-    root.querySelectorAll('[data-scroll-reveal]').forEach((item) => observer.observe(item));
-
     return () => {
-      observer.disconnect();
-      revealAnimations.forEach((animation) => animation.kill());
+      desktop.revert();
       context.revert();
     };
   }, []);
@@ -319,55 +431,41 @@ export default function PrototypeExperience({ projects, market }: { projects: Pr
 
           <section className={styles.hero} id="main-content" tabIndex={-1} aria-labelledby="prototype-title">
             <div className={styles.heroCopy}>
-              <p className={styles.eyebrow} data-intro>RAHUL REDDY · PROOF-FIRST GROWTH</p>
-              <h1 id="prototype-title">{marketPage && market ? <><span data-intro>Grow in</span><span data-intro><i>{marketHeroLabels[market.code]}</i></span></> : <><span data-intro>One problem.</span><span data-intro><i>One connected stack.</i></span></>}</h1>
-              <p className={styles.heroDescription} data-intro>{marketPage?.hero.sm_info ?? 'I connect websites, search, paid acquisition, creative and tracking around the business goal that matters most—then use real signals to guide the next move.'}</p>
+              <p className={styles.eyebrow} data-intro>GROWTH, CONNECTED · RAHUL REDDY</p>
+              <h1 id="prototype-title">{marketPage && market ? <><span data-intro>Grow in</span><span data-intro><i>{marketHeroLabels[market.code]}</i></span></> : <><span data-intro>From first look</span><span data-intro><i>to an enquiry.</i></span></>}</h1>
+              <p className={styles.heroDescription} data-intro>{marketPage?.hero.sm_info ?? 'I connect search, ads, creative and your website into one clear customer journey—then use real signals to decide what deserves to grow.'}</p>
               <div className={styles.heroActions} data-intro>
-                <a className={styles.primaryButton} data-mobile-contact-anchor href={whatsappHref(contactMessage)} target="_blank" rel="noreferrer">Talk through your goal <WhatsAppIcon /></a>
-                <a className={styles.textButton} href="#work">See selected work <ArrowIcon diagonal /></a>
+                <a className={styles.primaryButton} data-mobile-contact-anchor href={whatsappHref(contactMessage)} target="_blank" rel="noreferrer">Talk about your next step <WhatsAppIcon /></a>
+                <a className={styles.textButton} href="#journey">Follow the journey <ArrowIcon diagonal /></a>
               </div>
               <div className={styles.trustPoints} data-intro aria-label="What to expect"><span>Work directly with Rahul</span><span>Clear scope before work begins</span><span>Your accounts stay yours</span></div>
             </div>
             <GrowthPathVisual />
           </section>
 
-          <div className={styles.heroBase}><span>ONE CLEAR GOAL</span><span>THE RIGHT DIGITAL MIX</span><span>PROOF BEFORE SCALE</span></div>
+          <div className={styles.heroBase}><span>SHOW UP</span><span>BUILD TRUST</span><span>MAKE THE NEXT STEP CLEAR</span><span>LEARN WHAT WORKED</span></div>
         </div>
       </section>
+
+      <GrowthJourney />
 
       <div className={styles.paperArea}>
         <div className={styles.frame}>
           <section className={styles.diagnosticSection} id="diagnose" aria-labelledby="diagnose-title">
-            <div className={styles.sectionHeader} data-scroll-reveal>
-              <div><p className={styles.sectionEyebrow}>FIND A USEFUL STARTING POINT</p><h2 id="diagnose-title">Where does growth<br /><i>get stuck?</i></h2></div>
-              <p>Choose the closest problem. Get a practical first place to look—before adding another channel or more spend.</p>
+            <div className={styles.sectionHeader} data-reveal>
+              <div><p className={styles.sectionEyebrow}>FIND THE BREAK IN THE JOURNEY</p><h2 id="diagnose-title">Where does your customer<br /><i>lose the thread?</i></h2></div>
+              <p>Choose the moment that feels weakest. Start there before adding another channel or more spend.</p>
             </div>
             <GrowthSignalWidget activeNeed={activeNeed} setActiveNeed={setActiveNeed} />
-            <div className={styles.serviceHeader} data-scroll-reveal id="services">
-              <div><p className={styles.sectionEyebrow}>CONNECTED CAPABILITIES</p><h3>The right work for the goal.</h3></div>
-              <Link href="/service">All capabilities <ArrowIcon /></Link>
-            </div>
-            <div className={styles.serviceGrid}>{serviceGroups.map((group) => <ServiceGroup group={group} key={group.number} />)}</div>
             {marketPage && market && <MarketFocusSection marketName={market.name} focus={marketPage.focus} />}
-          </section>
-
-          <section className={styles.workSection} id="work" aria-labelledby="work-title">
-            <div className={styles.sectionHeader} data-scroll-reveal>
-              <div><p className={styles.sectionEyebrow}>SELECTED BUILDS</p><h2 id="work-title">Work with<br /><i>context.</i></h2></div>
-              <p>Website and product projects, with the purpose and role made clear. No invented campaign results.</p>
-            </div>
-            <div className={styles.workGrid}>{projects.map((project) => <WorkCard project={project} key={project.slug} />)}</div>
-            <div className={styles.workDisclosure} data-scroll-reveal>
-              <span>PERSONAL / DEMO WORK</span>
-              <p>These projects demonstrate design and development work. They are not paid client campaign case studies.</p>
-              <Link href="/portfolio">Explore all projects <ArrowIcon /></Link>
-            </div>
           </section>
           <FaqSection />
         </div>
       </div>
 
       <WorkApproach contactMessage={contactMessage} />
+
+      <div className={styles.paperArea}><WorkSection projects={projects} /></div>
 
       <footer className={styles.footer} data-mobile-contact-anchor>
         <div className={styles.footerMarkets}>
