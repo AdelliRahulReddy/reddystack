@@ -338,8 +338,6 @@ export default function PrototypeExperience({ projects, market }: { projects: Pr
     const root = rootRef.current;
     if (!root || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     gsap.registerPlugin(ScrollTrigger);
-    const desktop = gsap.matchMedia();
-
     const context = gsap.context(() => {
       const compactMotion = window.matchMedia('(max-width: 640px)').matches;
       const intro = gsap.timeline({ defaults: { ease: 'power3.out' } });
@@ -364,41 +362,45 @@ export default function PrototypeExperience({ projects, market }: { projects: Pr
         });
       });
 
-      const journeySection = root.querySelector<HTMLElement>('[data-journey-section]');
       const journeyRoute = root.querySelector<SVGPathElement>('[data-journey-route]');
-      if (journeySection && journeyRoute) {
+      const steps = Array.from(root.querySelectorAll<HTMLElement>('[data-journey-step]'));
+      const nodes = Array.from(root.querySelectorAll<HTMLElement>('[data-journey-node]'));
+      const activate = (id: string) => {
+        nodes.forEach((node) => {
+          const active = node.dataset.journeyNode === id;
+          node.classList.toggle(styles.journeyNodeActive, active);
+        });
+      };
+
+      if (journeyRoute && steps.length > 1) {
         const length = journeyRoute.getTotalLength();
         gsap.set(journeyRoute, { strokeDasharray: length, strokeDashoffset: length });
         gsap.to(journeyRoute, {
           strokeDashoffset: 0,
           ease: 'none',
-          scrollTrigger: { trigger: journeySection, start: 'top 72%', end: 'bottom 54%', scrub: 0.7 },
+          scrollTrigger: {
+            trigger: steps[0],
+            start: 'center 58%',
+            endTrigger: steps[steps.length - 1],
+            end: 'center 58%',
+            scrub: true,
+            invalidateOnRefresh: true,
+          },
         });
       }
 
-      desktop.add('(min-width: 960px)', () => {
-        const steps = Array.from(root.querySelectorAll<HTMLElement>('[data-journey-step]'));
-        const nodes = Array.from(root.querySelectorAll<HTMLElement>('[data-journey-node]'));
-        const activate = (id: string) => {
-          nodes.forEach((node) => {
-            const active = node.dataset.journeyNode === id;
-            node.classList.toggle(styles.journeyNodeActive, active);
-          });
-        };
-        steps.forEach((step) => {
-          ScrollTrigger.create({
-            trigger: step,
-            start: 'center 58%',
-            end: 'bottom 58%',
-            onEnter: () => activate(step.dataset.journeyStep ?? ''),
-            onEnterBack: () => activate(step.dataset.journeyStep ?? ''),
-          });
+      steps.forEach((step, index) => {
+        ScrollTrigger.create({
+          trigger: step,
+          start: 'center 58%',
+          onEnter: () => activate(step.dataset.journeyStep ?? ''),
+          onEnterBack: () => activate(step.dataset.journeyStep ?? ''),
+          onLeaveBack: () => activate(steps[index - 1]?.dataset.journeyStep ?? steps[0].dataset.journeyStep ?? ''),
         });
       });
     }, root);
 
     return () => {
-      desktop.revert();
       context.revert();
     };
   }, []);

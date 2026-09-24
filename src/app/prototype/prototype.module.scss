@@ -117,12 +117,12 @@
 .journeyRouteBase { stroke: rgba(247, 244, 235, .15); stroke-width: 1.2; }
 .journeyRouteLine { stroke: url(#growth-route-gradient); stroke-width: 2.2; filter: drop-shadow(0 0 8px rgba(210, 237, 122, .25)); }
 .journeyNodes { position: absolute; inset: 0; }
-.journeyNode { position: absolute; display: flex; align-items: center; gap: 9px; opacity: .52; transform: scale(.94); transition: opacity .45s ease,transform .45s ease; }
-.journeyNode:nth-child(1) { top: 9%; left: 9%; }
-.journeyNode:nth-child(2) { top: 31%; right: 9%; }
-.journeyNode:nth-child(3) { top: 57%; left: 8%; }
-.journeyNode:nth-child(4) { top: 83%; right: 8%; }
-.journeyNode > span { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid rgba(247, 244, 235, .38); border-radius: 50%; background: #302f35; color: #f7f4eb; font-size: 11px; font-weight: 700; transition: background .35s ease,color .35s ease; }
+.journeyNode { position: absolute; display: flex; align-items: center; gap: 9px; opacity: .52; transform: scale(.94); transition: opacity .18s ease,transform .18s ease; }
+.journeyNode:nth-child(1) { top: 11%; left: 25%; }
+.journeyNode:nth-child(2) { top: 33%; right: 20%; }
+.journeyNode:nth-child(3) { top: 55%; left: 25%; }
+.journeyNode:nth-child(4) { top: 84%; right: 20%; }
+.journeyNode > span { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid rgba(247, 244, 235, .38); border-radius: 50%; background: #302f35; color: #f7f4eb; font-size: 11px; font-weight: 700; transition: background .18s ease,color .18s ease; }
 .journeyNode small { color: #f7f4eb; font-size: 10px; font-weight: 700; letter-spacing: .12em; }
 .journeyNodeActive { opacity: 1; transform: scale(1); }
 .journeyNodeActive > span { border-color: var(--lime); background: var(--lime); color: #25242a; box-shadow: 0 0 0 7px rgba(210, 237, 122, .09); }
@@ -198,7 +198,8 @@
 .page .closingCard > div > p { margin: 0; color: var(--hero-accent); font-size: 10px; font-weight: 700; letter-spacing: .13em; }
 .closingCard h3 { max-width: 700px; margin: 0; color: var(--paper); font-family: var(--font-brand-sora), sans-serif; font-size: clamp(28px, 3.3vw, 42px); font-weight: 600; letter-spacing: -.06em; line-height: 1.08; }
 .closingCard > div > span { max-width: 600px; color: rgba(var(--paper-rgb), .78); font-size: 14px; line-height: 1.6; }
-.closingCard > a { min-height: 52px; flex: none; justify-content: center; padding: 0 21px; border-radius: 999px; background: var(--lime); color: #25242a !important; font-size: 13px; font-weight: 700; transition: transform .22s ease,background .22s ease; }
+.closingCard > a { display: inline-flex; width: max-content; max-width: 100%; min-height: 52px; flex: none; align-items: center; justify-content: center; gap: 10px; padding: 0 21px; border-radius: 999px; background: var(--lime); color: #25242a !important; font-size: 13px; font-weight: 700; line-height: 1.2; transition: transform .22s ease,background .22s ease; }
+.closingCard > a svg { width: 17px; height: 17px; flex: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .closingCard > a:hover { transform: translateY(-2px); background: #e3f5a5; }
 
 .workSection { padding: 105px 0 112px; background: var(--paper-surface); color: var(--text); }
@@ -261,8 +262,12 @@
   .journeyHeading h2 { font-size: clamp(52px, 8vw, 78px); }
   .page .journeyHeading > p:last-child { max-width: 560px; }
   .journeyLayout { grid-template-columns: 1fr; gap: 40px; }
-  .journeyVisual { position: relative; top: auto; width: min(100%, 600px); min-height: 500px; margin-inline: auto; }
+  .journeyVisual { position: sticky; top: 12px; width: min(100%, 600px); min-height: min(36vh, 320px); margin-inline: auto; }
   .journeyRoute { inset: 8% 12%; width: 76%; }
+  .journeyNode:nth-child(1) { top: 9%; left: 28%; }
+  .journeyNode:nth-child(2) { top: 32%; right: 26%; }
+  .journeyNode:nth-child(3) { top: 54%; left: 28%; }
+  .journeyNode:nth-child(4) { top: 82%; right: 26%; }
   .journeyStep { min-height: 230px; }
   .diagnosticWidget { gap: 34px; }
   .workGrid { gap: 20px; }
@@ -271,6 +276,7 @@
 
 @media (max-width: 740px) {
   .frame { width: min(100% - 42px, 1360px); }
+  .journeyVisual { top: 8px; width: 100%; min-height: clamp(165px, 27vh, 220px); margin-inline: 0; border-radius: 16px; }
   .header { min-height: 70px; gap: 9px; }
   .brand { margin-right: auto; font-size: 17px; }
   .brand img { width: 29px; height: 29px; }
@@ -312,10 +318,10 @@
   .journeyVisualHead { top: 18px; right: 18px; left: 18px; font-size: 8px; }
   .journeyVisualFoot { right: 18px; bottom: 16px; left: 18px; font-size: 7px; }
   .journeyRoute { inset: 8% 12% 10%; width: 76%; height: 80%; }
-  .journeyNode:nth-child(1) { top: 9%; left: 4%; }
-  .journeyNode:nth-child(2) { top: 30%; right: 4%; }
-  .journeyNode:nth-child(3) { top: 56%; left: 4%; }
-  .journeyNode:nth-child(4) { top: 81%; right: 4%; }
+  .journeyNode:nth-child(1) { top: 9%; left: 27%; }
+  .journeyNode:nth-child(2) { top: 30%; right: 21%; }
+  .journeyNode:nth-child(3) { top: 51%; left: 27%; }
+  .journeyNode:nth-child(4) { top: 79%; right: 21%; }
   .journeyNode > span { width: 33px; height: 33px; font-size: 10px; }
   .journeyNode small { font-size: 8px; }
   .journeyStep { grid-template-columns: 32px minmax(0, 1fr); gap: 11px; min-height: 0; padding: 22px 0 28px; scroll-margin-top: 85px; }
