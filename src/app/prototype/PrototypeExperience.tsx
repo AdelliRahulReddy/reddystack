@@ -99,32 +99,74 @@ function WhatsAppIcon() {
 
 function GrowthPathVisual() {
   return (
-    <aside className={styles.heroVisual} data-hero-visual aria-label="A connected customer journey: discover, trust, enquire, and learn">
-      <div className={styles.visualHeader}><span>THE CUSTOMER JOURNEY</span><span>01 — 04</span></div>
-      <div className={styles.heroJourneyMap}>
-        <svg className={styles.heroRoute} viewBox="0 0 600 520" fill="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="growth-route-gradient" x1="96" y1="433" x2="480" y2="65" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#D2ED7A" /><stop offset=".55" stopColor="#A9CF72" /><stop offset="1" stopColor="#A993FF" />
-            </linearGradient>
-          </defs>
-          <path className={styles.heroRouteBase} d="M80 435C203 435 157 347 287 335S500 270 418 194 272 77 504 72" />
-          <path className={styles.heroRouteLine} data-hero-route d="M80 435C203 435 157 347 287 335S500 270 418 194 272 77 504 72" />
-        </svg>
-        <div className={[styles.heroPoint, styles.heroPointDiscover].join(' ')} data-hero-node>
-          <span className={styles.heroPointDot}>01</span><span className={styles.heroPointCopy}><small>DISCOVER</small><strong>Be there when it matters</strong></span>
-        </div>
-        <div className={[styles.heroPoint, styles.heroPointTrust].join(' ')} data-hero-node>
-          <span className={styles.heroPointDot}>02</span><span className={styles.heroPointCopy}><small>TRUST</small><strong>Make the value clear</strong></span>
-        </div>
-        <div className={[styles.heroPoint, styles.heroPointEnquire].join(' ')} data-hero-node>
-          <span className={styles.heroPointDot}>03</span><span className={styles.heroPointCopy}><small>ENQUIRE</small><strong>Make the next step easy</strong></span>
-        </div>
-        <div className={[styles.heroPoint, styles.heroPointLearn].join(' ')} data-hero-node>
-          <span className={styles.heroPointDot}>04</span><span className={styles.heroPointCopy}><small>LEARN</small><strong>Choose what to improve</strong></span>
-        </div>
+    <aside className={styles.heroVisual} data-hero-visual aria-labelledby="growth-path-title">
+      <div className={styles.visualHeader}>
+        <h2 className={styles.visualTitle} id="growth-path-title">THE CUSTOMER JOURNEY</h2>
+        <span>01 <i /> 03</span>
       </div>
-      <div className={styles.visualFooter}><span>ONE CONNECTED EXPERIENCE</span><span>HYDERABAD · WORLDWIDE</span></div>
+      <ol className={styles.journeyCards} aria-label="Discover, trust, enquire">
+        <li className={styles.journeyCard} data-hero-node>
+          <div className={styles.journeyCardArt}>
+            <svg viewBox="0 0 180 116" fill="none" aria-hidden="true">
+              <rect x="10" y="10" width="160" height="96" rx="13" fill="#37363E" stroke="#5C5A63" />
+              <rect x="20" y="20" width="140" height="76" rx="8" fill="#F7F4EB" />
+              <circle cx="31" cy="31" r="4" fill="#D2ED7A" />
+              <rect x="40" y="28" width="79" height="6" rx="3" fill="#D6D2CA" />
+              <circle cx="138" cy="31" r="7" stroke="#77747A" strokeWidth="1.6" />
+              <path d="m143 36 4 4" stroke="#77747A" strokeWidth="1.6" strokeLinecap="round" />
+              <rect x="28" y="45" width="82" height="5" rx="2.5" fill="#34333A" />
+              <rect x="28" y="55" width="112" height="4" rx="2" fill="#C8C5BE" />
+              <rect x="28" y="63" width="86" height="4" rx="2" fill="#C8C5BE" />
+              <rect x="28" y="76" width="54" height="11" rx="5.5" fill="#D2ED7A" />
+              <path d="M116 82h22" stroke="#B5B2AA" strokeWidth="4" strokeLinecap="round" />
+            </svg>
+          </div>
+          <div className={styles.journeyCardCopy}>
+            <p className={styles.journeyCardTitle}><span>01</span><strong>DISCOVER</strong></p>
+            <p>The right people find your brand.</p>
+          </div>
+        </li>
+        <li className={styles.journeyCard} data-hero-node>
+          <div className={styles.journeyCardArt}>
+            <svg viewBox="0 0 180 116" fill="none" aria-hidden="true">
+              <rect x="10" y="10" width="160" height="96" rx="13" fill="#37363E" stroke="#5C5A63" />
+              <rect x="20" y="20" width="140" height="76" rx="8" fill="#F7F4EB" />
+              <path d="M28 20h124a8 8 0 0 1 8 8v6H20v-6a8 8 0 0 1 8-8Z" fill="#7654E8" />
+              <circle cx="31" cy="27" r="2" fill="#D2ED7A" /><circle cx="39" cy="27" r="2" fill="#C7B9FF" /><circle cx="47" cy="27" r="2" fill="#C7B9FF" />
+              <rect x="28" y="41" width="54" height="42" rx="6" fill="#D8D1F1" />
+              <path d="m31 75 14-15 9 9 6-6 19 20H31v-8Z" fill="#7654E8" opacity=".78" />
+              <circle cx="68" cy="51" r="4" fill="#D2ED7A" />
+              <rect x="91" y="44" width="48" height="5" rx="2.5" fill="#34333A" />
+              <rect x="91" y="54" width="56" height="4" rx="2" fill="#C8C5BE" />
+              <rect x="91" y="62" width="42" height="4" rx="2" fill="#C8C5BE" />
+              <path d="m95 80 3 3 5-6m4 3 3 3 5-6m4 3 3 3 5-6m4 3 3 3 5-6" stroke="#7654E8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+          <div className={styles.journeyCardCopy}>
+            <p className={styles.journeyCardTitle}><span>02</span><strong>TRUST</strong></p>
+            <p>They explore and build confidence.</p>
+          </div>
+        </li>
+        <li className={styles.journeyCard} data-hero-node>
+          <div className={styles.journeyCardArt}>
+            <svg viewBox="0 0 180 116" fill="none" aria-hidden="true">
+              <rect x="10" y="10" width="160" height="96" rx="13" fill="#37363E" stroke="#5C5A63" />
+              <rect x="20" y="17" width="140" height="86" rx="9" fill="#F7F4EB" />
+              <rect x="31" y="29" width="65" height="6" rx="3" fill="#34333A" />
+              <rect x="31" y="42" width="117" height="18" rx="5" fill="#E8E5DE" />
+              <circle cx="41" cy="51" r="3" fill="#89868C" />
+              <rect x="31" y="66" width="117" height="18" rx="5" fill="#E8E5DE" />
+              <path d="m39 74 4 4 7-8" stroke="#89868C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              <rect x="31" y="89" width="117" height="8" rx="4" fill="#D2ED7A" />
+              <path d="M82 93h15m-4-4 4 4-4 4" stroke="#302F35" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+          <div className={styles.journeyCardCopy}>
+            <p className={styles.journeyCardTitle}><span>03</span><strong>ENQUIRE</strong></p>
+            <p>More of the right people become customers.</p>
+          </div>
+        </li>
+      </ol>
     </aside>
   );
 }
@@ -344,13 +386,6 @@ export default function PrototypeExperience({ projects, market }: { projects: Pr
       intro.fromTo('[data-intro]', { autoAlpha: 0, y: compactMotion ? 12 : 20 }, { autoAlpha: 1, y: 0, duration: compactMotion ? 0.42 : 0.68, stagger: compactMotion ? 0.04 : 0.075, clearProps: 'all' });
       intro.fromTo('[data-hero-node]', { autoAlpha: 0, scale: 0.88 }, { autoAlpha: 1, scale: 1, duration: 0.5, stagger: 0.11, clearProps: 'all' }, 0.24);
 
-      const heroRoute = root.querySelector<SVGPathElement>('[data-hero-route]');
-      if (heroRoute) {
-        const length = heroRoute.getTotalLength();
-        gsap.set(heroRoute, { strokeDasharray: length, strokeDashoffset: length });
-        intro.to(heroRoute, { strokeDashoffset: 0, duration: 1.2, ease: 'power2.inOut' }, 0.36);
-      }
-
       root.querySelectorAll<HTMLElement>('[data-reveal]').forEach((item) => {
         gsap.fromTo(item, { autoAlpha: 0, y: compactMotion ? 14 : 24 }, {
           autoAlpha: 1,
@@ -429,23 +464,21 @@ export default function PrototypeExperience({ projects, market }: { projects: Pr
             <a className={styles.headerCta} href={whatsappHref(contactMessage)} target="_blank" rel="noreferrer" aria-label="Message Rahul on WhatsApp">WhatsApp Rahul <WhatsAppIcon /></a>
           </header>
 
-          <div className={styles.heroMeta} data-intro><span>{marketPage?.hero.sub_title ?? 'FOUNDER-LED DIGITAL GROWTH STUDIO'}</span><span>HYDERABAD · WORKING WORLDWIDE</span></div>
+          <div className={styles.heroMeta} data-intro><span>{marketPage?.hero.sub_title ?? 'HYDERABAD · WORKING WORLDWIDE'}</span></div>
 
           <section className={styles.hero} id="main-content" tabIndex={-1} aria-labelledby="prototype-title">
             <div className={styles.heroCopy}>
-              <p className={styles.eyebrow} data-intro>GROWTH, CONNECTED · RAHUL REDDY</p>
-              <h1 id="prototype-title">{marketPage && market ? <><span data-intro>Grow in</span><span data-intro><i>{marketHeroLabels[market.code]}</i></span></> : <><span data-intro>From first look</span><span data-intro><i>to an enquiry.</i></span></>}</h1>
-              <p className={styles.heroDescription} data-intro>{marketPage?.hero.sm_info ?? 'I connect search, ads, creative and your website into one clear customer journey—then use real signals to decide what deserves to grow.'}</p>
+              <p className={styles.eyebrow} data-intro>FOUNDER-LED GROWTH STUDIO</p>
+              <h1 id="prototype-title">{marketPage && market ? <><span data-intro>Grow in</span><span data-intro><i>{marketHeroLabels[market.code]}</i></span></> : <><span data-intro>Turn attention</span><span data-intro>into <i>action.</i></span></>}</h1>
+              <p className={styles.heroDescription} data-intro>{marketPage?.hero.sm_info ?? 'I connect your ads, website and creative so more of the right people become customers.'}</p>
               <div className={styles.heroActions} data-intro>
-                <a className={styles.primaryButton} data-mobile-contact-anchor href={whatsappHref(contactMessage)} target="_blank" rel="noreferrer">Talk about your next step <WhatsAppIcon /></a>
-                <a className={styles.textButton} href="#journey">Follow the journey <ArrowIcon diagonal /></a>
+                <a className={styles.primaryButton} data-mobile-contact-anchor href={whatsappHref(contactMessage)} target="_blank" rel="noreferrer">Talk with Rahul <WhatsAppIcon /></a>
+                <a className={styles.textButton} href="#journey">See how it works <ArrowIcon /></a>
               </div>
-              <div className={styles.trustPoints} data-intro aria-label="What to expect"><span>Work directly with Rahul</span><span>Clear scope before work begins</span><span>Your accounts stay yours</span></div>
             </div>
             <GrowthPathVisual />
           </section>
 
-          <div className={styles.heroBase}><span>SHOW UP</span><span>BUILD TRUST</span><span>MAKE THE NEXT STEP CLEAR</span><span>LEARN WHAT WORKED</span></div>
         </div>
       </section>
 
