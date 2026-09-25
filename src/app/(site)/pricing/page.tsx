@@ -1,5 +1,5 @@
-import PricingPage from "@/components/pricing/PricingPage";
-import Wrapper from "@/layouts/Wrapper";
+import PricingView from "@/components/views/PricingView";
+import { pricingFaqItems as visiblePricingFaqItems } from "@/data/PricingData";
 import {
   buildBreadcrumbSchema,
   buildFAQPageSchema,
@@ -58,7 +58,7 @@ const PricingRoute = () => {
   ]);
 
   return (
-    <Wrapper>
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingPageSchema) }}
@@ -75,8 +75,8 @@ const PricingRoute = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <PricingPage />
-    </Wrapper>
+      <PricingView faqItems={visiblePricingFaqItems} />
+    </>
   );
 };
 

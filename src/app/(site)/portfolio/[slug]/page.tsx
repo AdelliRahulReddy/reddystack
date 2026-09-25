@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import PortfolioDetails from '@/components/portfolio-details';
-import Wrapper from '@/layouts/Wrapper';
+import PortfolioDetailView from '@/components/views/PortfolioDetailView';
 import {
   getAdjacentPortfolioProjects,
   getPortfolioProject,
@@ -90,7 +89,7 @@ const PortfolioProjectPage = async ({ params }: PortfolioProjectPageProps) => {
   ]);
 
   return (
-    <Wrapper>
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -103,12 +102,8 @@ const PortfolioProjectPage = async ({ params }: PortfolioProjectPageProps) => {
           __html: JSON.stringify(breadcrumbSchema),
         }}
       />
-      <PortfolioDetails
-        project={project}
-        previousProject={previousProject}
-        nextProject={nextProject}
-      />
-    </Wrapper>
+      <PortfolioDetailView project={project} previous={previousProject} next={nextProject} />
+    </>
   );
 };
 

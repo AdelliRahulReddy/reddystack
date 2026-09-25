@@ -1,6 +1,4 @@
-import Portfolio from '@/components/portfolio';
-import Wrapper from '@/layouts/Wrapper';
-import React from 'react';
+import PortfolioIndexView from '@/components/views/PortfolioIndexView';
 import { buildBreadcrumbSchema, buildPageMetadata } from '@/data/siteConfig';
 
 
@@ -19,9 +17,7 @@ const index = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Wrapper>
-        <Portfolio />
-      </Wrapper>
+      <PortfolioIndexView />
     </>
   );
 };

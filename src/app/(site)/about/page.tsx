@@ -1,6 +1,4 @@
-import About from '@/components/about';
-import Wrapper from '@/layouts/Wrapper';
-import React from 'react';
+import AboutView from '@/components/views/AboutView';
 import { aboutPageSchema, buildBreadcrumbSchema, buildPageMetadata } from '@/data/siteConfig';
 
 
@@ -23,9 +21,7 @@ const index = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Wrapper>
-        <About />
-      </Wrapper>
+      <AboutView />
     </>
   );
 };

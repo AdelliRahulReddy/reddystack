@@ -218,3 +218,16 @@
 @keyframes nf-a { 50% { transform: translate(-18%, 14%) rotate(-10deg); } }
 @keyframes nf-b { 50% { transform: translate(-6%, -26%) rotate(12deg); } }
 @keyframes nf-c { 50% { transform: translate(22%, -10%) rotate(9deg); } }
+
+/* About: the signature writes itself in from the left. */
+@keyframes sig-wipe { from { clip-path: inset(0 100% 0 0); opacity: 0; } to { clip-path: inset(0 0 0 0); opacity: 1; } }
+
+/* Featured card: a lime/violet highlight travelling round the border. */
+@property --ang { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+@keyframes ring-sweep { to { --ang: 360deg; } }
+.ring-sweep::before {
+  content: ''; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: conic-gradient(from var(--ang), transparent 0 70%, var(--color-lime) 80%, var(--color-violet-soft) 90%, transparent);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: ring-sweep 5s linear infinite;
+}

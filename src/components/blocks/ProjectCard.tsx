@@ -7,6 +7,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { cn } from '@/lib/utils';
+import { projectBadge } from './projectBadge';
 
 export type ProjectCardData = {
   slug: string;
@@ -20,9 +21,6 @@ export type ProjectCardData = {
   image: StaticImageData | { src: string; width: number; height: number };
 };
 
-/** Personal/demo work must always say so. */
-export const projectBadge = (p: Pick<ProjectCardData, 'client' | 'year'>) =>
-  `${p.client.toLowerCase().includes('personal') ? 'Personal / demo' : 'Build'} · ${p.year}`;
 
 /** Work card: tilts toward the pointer, image drifts on scroll and unmasks on first view. */
 export default function ProjectCard({

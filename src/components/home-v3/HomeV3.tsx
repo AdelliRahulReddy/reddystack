@@ -9,6 +9,7 @@ import { homeFaqItems } from '@/data/HomeFaqData';
 import { marketPages } from '@/data/MarketPageData';
 import type { Market } from '@/data/MarketConfig';
 import CtaBand from '@/components/blocks/CtaBand';
+import EngagementCards from '@/components/blocks/EngagementCards';
 import Eyebrow from '@/components/blocks/Eyebrow';
 import Faq from '@/components/blocks/Faq';
 import MagneticButton from '@/components/blocks/MagneticButton';
@@ -19,13 +20,12 @@ import { Button, ButtonArrow } from '@/components/ui/button';
 import {
   BrandSymbol,
   DiagnosticVisual,
-  EngagementGlyph,
   OrbitText,
   ProcessWave,
   SignalFlow,
   capabilityIllustrations,
 } from './Illustrations';
-import { capabilities, engagements, marqueeItems, problems, processSteps, signals, stackLayers } from './homeContent';
+import { capabilities, marqueeItems, problems, processSteps, signals, stackLayers } from './homeContent';
 import s from './home-v3.module.scss';
 
 export type HomeProject = ProjectCardData;
@@ -388,23 +388,7 @@ export default function HomeV3({ projects, market }: { projects: HomeProject[]; 
       <section className={s.sec} id="engage" style={{ paddingTop: 0 }} aria-labelledby="hv3-engage">
         <div className={s.wrap}>
           <SectionHead id="hv3-engage" label="Ways to work" title="Start focused. Scale with evidence." intro="Each engagement is quoted after a short call, with the problem, scope, deliverables and ownership written down first." />
-          <div className={s.eng}>
-            {engagements.map((e, i) => (
-              <div key={e.id} className={cx(s.card, e.featured && s.feature)} data-reveal style={cssVars({ '--reveal-delay': i * 0.08 + 's' })}>
-                <div className={s.top}>
-                  <EngagementGlyph id={e.id} />
-                  {e.featured && <span className={s.rec}>Most start here</span>}
-                </div>
-                <span className={s.kind}>{e.kind}</span>
-                <h3>{e.title}</h3>
-                <p>{e.body}</p>
-                <ul>{e.points.map((pt) => <li key={pt}>{pt}</li>)}</ul>
-                <MagneticButton className={s.cardBtn}>
-                  <Button asChild variant={e.featured ? 'default' : 'ghost'}><Link href={e.href.replace('source=/', `source=${source}`)}>{e.cta} <ButtonArrow /></Link></Button>
-                </MagneticButton>
-              </div>
-            ))}
-          </div>
+          <EngagementCards source={source} />
           <p className={s.note}>Every quote is custom to the agreed scope. Ad spend, hosting and third-party tools are separate and stay in your name.</p>
         </div>
       </section>
