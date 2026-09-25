@@ -1,6 +1,4 @@
-import Contact from '@/components/contact';
-import Wrapper from '@/layouts/Wrapper';
-import React from 'react';
+import ContactView from '@/components/views/ContactView';
 import { buildBreadcrumbSchema, buildPageMetadata, contactPageSchema } from '@/data/siteConfig';
 
 
@@ -26,9 +24,7 @@ const index = async ({ searchParams }: { searchParams: Promise<Record<string, st
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Wrapper>
-        <Contact key={`${initialService}:${sourcePage}`} initialService={initialService} sourcePage={sourcePage} />
-      </Wrapper>
+      <ContactView key={`${initialService}:${sourcePage}`} initialService={initialService} sourcePage={sourcePage} />
     </>
   );
 };

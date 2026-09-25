@@ -4,6 +4,8 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+/* The site is dark-only, so shadcn's dark: styles always apply. */
+@custom-variant dark (&:where(html, html *));
 @custom-variant motion-ok (@media (prefers-reduced-motion: no-preference));
 
 @theme {
