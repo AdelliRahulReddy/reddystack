@@ -13,10 +13,11 @@ import {
 
 export default function CountrySuggestion() {
   const pathname = usePathname();
-  const [suggestedMarket, setSuggestedMarket] = useState<Market | null>(null);
+  // The suggestion is tied to the path it was fetched for, so a route change hides it without resetting state.
+  const [suggestion, setSuggestion] = useState<{ market: Market; path: string | null } | null>(null);
+  const suggestedMarket = suggestion?.path === pathname ? suggestion.market : null;
 
   useEffect(() => {
-    setSuggestedMarket(null);
     if (markets.some((market) => pathname === market.href || pathname?.startsWith(`${market.href}/`))) {
       return;
     }
@@ -29,7 +30,7 @@ export default function CountrySuggestion() {
         if (cancelled || !result?.country) return;
         const market = marketForIpCountry(result.country);
         if (!market || wasSuggestionDismissed(market.code)) return;
-        setSuggestedMarket(market);
+        setSuggestion({ market, path: pathname });
       })
       .catch(() => {
         // Location suggestions are optional. The country selector remains available.
@@ -58,7 +59,7 @@ export default function CountrySuggestion() {
           type="button"
           onClick={() => {
             dismissCountrySuggestion(suggestedMarket.code);
-            setSuggestedMarket(null);
+            setSuggestion(null);
           }}
         >
           Dismiss

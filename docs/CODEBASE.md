@@ -95,4 +95,4 @@ npm audit
 
 Use `SEO_CHECK_BASE` for another server. The browser check requires an installed `agent-browser` CLI (override its executable with `AGENT_BROWSER_BIN`). Contact tests replace the email provider; browser tests intercept submission, so neither sends an enquiry. Browser checks cover hover contrast/errors, keyboard tabs, repeated navigation, mobile menus/overflow and failure recovery. Inspect screenshots in both themes and desktop/mobile sizes as well.
 
-Do not claim deployment, delivery, rankings, accessibility compliance or performance scores from a build alone. Follow `docs/AGENTS.md` for edit and push authorization.
+Do not claim deployment, delivery, rankings, accessibility compliance or performance scores from a build alone. Follow the root `AGENTS.md` for edit and push authorization.

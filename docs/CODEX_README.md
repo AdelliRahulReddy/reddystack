@@ -6,13 +6,13 @@ What this does:
 - keeps all project documentation in `docs/`
 
 Files:
-- root `AGENTS.md` points to `docs/AGENTS.md`
+- root `AGENTS.md` holds all agent instructions
 - `docs/context/PROJECT_CONTEXT_LITE.md`
 - `docs/context/SEO_CONTEXT_LITE.md`
 
 How to use:
 - open Codex in this repo
-- Codex reads the root `AGENTS.md` pointer and follows the project instructions in `docs/AGENTS.md`
+- Codex reads and follows the root `AGENTS.md`
 - ask for `normal mode` or `detailed mode` when you want more depth
 
 What not to compress:

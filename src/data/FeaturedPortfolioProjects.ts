@@ -1,6 +1,6 @@
 import { portfolioProjects } from '@/data/PortfolioProjectsData';
 
-const featuredProjectSlugs = ['reelsxpress', 'bachelor-brother', 'kalyamram'];
+const featuredProjectSlugs = ['reelsxpress', 'bachelor-brother', 'kalyamram', 'gitwall-app'];
 
 export const featuredPortfolioProjects = featuredProjectSlugs
   .map((slug) => portfolioProjects.find((project) => project.slug === slug))

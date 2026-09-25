@@ -17,6 +17,7 @@ import {
   DM_Sans,
   EB_Garamond,
   Kufam,
+  JetBrains_Mono,
   Poppins,
   Playfair_Display,
 } from "next/font/google";
@@ -54,6 +55,12 @@ const kufam = Kufam({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-kufam",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  weight: ["400", "500"],
+  subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 const poppins = Poppins({
@@ -125,6 +132,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         ${sora.variable}
         ${abril.variable}
         ${dmSans.variable}
+        ${jetbrainsMono.variable}
         ${garamond.variable}
         ${kufam.variable}
         ${poppins.variable}

@@ -13,6 +13,12 @@
 @forward "./brand";
 @forward "./_inner-pages.scss";
 
+// Lenis smooth scrolling (homepage v3).
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: clip; }
+
 // Reserve exactly the existing artwork area while its player loads.
 .tp-hero-artwork {
   display: block;

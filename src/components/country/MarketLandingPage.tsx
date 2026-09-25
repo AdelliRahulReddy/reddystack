@@ -4,7 +4,7 @@ import type { Market } from "@/data/MarketConfig";
 import { buildBreadcrumbSchema, buildFAQPageSchema } from "@/data/siteConfig";
 import { homeFaqItems } from "@/data/HomeFaqData";
 import { featuredPortfolioProjects } from "@/data/FeaturedPortfolioProjects";
-import PrototypeExperience from "@/app/prototype/PrototypeExperience";
+import HomeV3 from "@/components/home-v3/HomeV3";
 
 export default function MarketLandingPage({ market }: { market: Market }) {
   const faqSchema = buildFAQPageSchema(homeFaqItems, market.href);
@@ -28,7 +28,7 @@ export default function MarketLandingPage({ market }: { market: Market }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <PrototypeExperience projects={featuredPortfolioProjects} market={market} />
+      <HomeV3 projects={featuredPortfolioProjects} market={market} />
     </>
   );
 }

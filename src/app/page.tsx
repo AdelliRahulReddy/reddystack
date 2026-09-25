@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 import { marketRootLanguageAlternates } from '@/data/MarketSeo';
 import { homeFaqItems } from '@/data/HomeFaqData';
 import { featuredPortfolioProjects } from '@/data/FeaturedPortfolioProjects';
-import PrototypeExperience from '@/app/prototype/PrototypeExperience';
+import HomeV3 from '@/components/home-v3/HomeV3';
 
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ const MainHome = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}
       />
-      <PrototypeExperience projects={featuredPortfolioProjects} />
+      <HomeV3 projects={featuredPortfolioProjects} />
     </>
   );
 };
