@@ -4,15 +4,15 @@ Reddystack is Rahul Reddy Adelli's digital services website: Meta Ads, Google Ad
 
 [Production website](https://www.reddystack.com)
 
-Built with Next.js App Router, React, TypeScript, Sass, and GSAP. The contact endpoint uses Resend.
+Built with Next.js App Router, React, TypeScript, Tailwind CSS v4, shadcn/ui, Motion, GSAP and Lenis. The contact endpoint uses Resend.
 
 ## Documentation
 
 Run commands from the repository root. Paths in backticks are relative to that root unless stated otherwise.
 
 - [Project context](context/PROJECT_CONTEXT_LITE.md) and [SEO context](context/SEO_CONTEXT_LITE.md)
-- [Agent instructions](../AGENTS.md), [source rules](AGENT_SOURCE_RULES.md), and [Codex setup](CODEX_README.md)
-- [Codebase guide](CODEBASE.md) and [unused files audit](DIEGO_UNUSED_FILES_AUDIT.md)
+- [Agent instructions](../AGENTS.md) and [Codex setup](CODEX_README.md)
+- [Codebase guide](CODEBASE.md)
 - [SEO playbook](AI_SEO_PLAYBOOK.md), [SEO fix plan](SEO_FIX_PLAN_Reddystack.md), and [keywords](SEO_KEYWORDS.md)
 
 ## Local development
@@ -40,4 +40,4 @@ The browser check requires the installed `agent-browser` CLI; set `AGENT_BROWSER
 
 Content lives in `src/data`; shared metadata and organization details live in `src/data/siteConfig.ts`. Branded article covers live in `public/assets/img/insights`, and the default sharing card lives in `public/assets/img/social`.
 
-The homepage and country pages use the custom `PrototypeExperience`; other pages retain the original template layout and source attribution. See the root `AGENTS.md` before changing the design.
+Every page uses the same dark design system (tokens in `src/styles/globals.css`, shared blocks in `src/components/blocks`). See the root `AGENTS.md` before changing the design.

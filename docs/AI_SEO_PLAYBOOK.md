@@ -16,7 +16,7 @@ Use clear scope, founder-led communication and custom quotes. Advertising spend 
 - Keep visible FAQ answers and FAQ schema driven by the same data.
 - Preserve eight historical article URLs; publish new guides under `/blog/{topic}/{article}` with a relevant topic hub.
 - Each page needs distinct useful content, one primary search intent, a clear title/description, one H1 and a canonical URL.
-- Internal search results are noindex. Prototype is noindex and excluded from the sitemap.
+- Internal search results are noindex. The former `/prototype` route was removed in September 2026.
 - Use actual edit dates, not build timestamps, in sitemap entries.
 - Default social previews use `reddystack-share-v4.png`; use approved brand icons.
 
