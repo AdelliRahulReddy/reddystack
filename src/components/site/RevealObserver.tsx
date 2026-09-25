@@ -71,10 +71,27 @@ export default function RevealObserver() {
     scan();
     root.setAttribute('data-motion', 'on');
 
+    // Decorative animation only runs while on screen: CSS pauses anything without
+    // data-onscreen (see globals.css), and SMIL is paused here.
+    const onscreen = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const el = entry.target as HTMLElement | SVGSVGElement;
+        el.toggleAttribute('data-onscreen', entry.isIntersecting);
+        if (el instanceof SVGSVGElement) {
+          try { if (entry.isIntersecting && !el.hasAttribute('data-held')) el.unpauseAnimations(); else el.pauseAnimations(); } catch { /* unsupported */ }
+        }
+      });
+    }, { rootMargin: '120px 0px' });
+    const watchAnim = () => document.querySelectorAll<HTMLElement>('svg:not([data-watched]), [data-anim]:not([data-watched])').forEach((el) => {
+      el.setAttribute('data-watched', '');
+      onscreen.observe(el);
+    });
+    watchAnim();
+
     let raf = 0;
     const mo = new MutationObserver(() => {
       cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(scan);
+      raf = requestAnimationFrame(() => { scan(); watchAnim(); });
     });
     mo.observe(document.body, { childList: true, subtree: true });
 
@@ -82,6 +99,7 @@ export default function RevealObserver() {
       cancelAnimationFrame(raf);
       mo.disconnect();
       io.disconnect();
+      onscreen.disconnect();
       root.removeAttribute('data-motion');
     };
   }, []);

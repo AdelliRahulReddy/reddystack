@@ -14,7 +14,7 @@
   --color-raised: #25242b;
   --color-charcoal: #302f35;
   --color-ivory: #f7f4eb;
-  --color-faint: #6f6c7a;
+  --color-faint: #8f8c99;
   --color-violet: #7654e8;
   --color-violet-soft: #9c82f2;
   --color-lime: #d2ed7a;
@@ -169,6 +169,15 @@
   html[data-motion='on'] [data-reveal] {
     transition: opacity 1.1s var(--ease-studio), transform 1.1s var(--ease-studio);
     transition-delay: var(--reveal-delay, 0s);
+  }
+
+  /* Off-screen decoration is paused once JavaScript is watching (RevealObserver). */
+  html[data-motion='on'] :is(svg[data-watched], [data-anim][data-watched]):not([data-onscreen]),
+  html[data-motion='on'] :is(svg[data-watched], [data-anim][data-watched]):not([data-onscreen]) *,
+  html[data-motion='on'] [data-anim][data-watched]:not([data-onscreen])::before,
+  html[data-motion='on'] [data-anim][data-watched]:not([data-onscreen]) *::before,
+  html[data-motion='on'] [data-anim][data-watched]:not([data-onscreen]) *::after {
+    animation-play-state: paused !important;
   }
 
   /* Split headings: each word rises out of its own mask. */

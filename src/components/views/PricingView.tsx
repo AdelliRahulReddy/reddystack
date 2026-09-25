@@ -26,6 +26,7 @@ function Ladder() {
       {compare.map((c, i) => (
         <div
           key={c.id}
+          data-anim={i === 0 ? '' : undefined}
           style={{ marginLeft: `${i * 12}%`, animationDelay: `${0.2 + i * 0.12}s` }}
           className={`flex items-center gap-4 rounded-[24px] border p-4 motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-bottom-6 motion-safe:fill-mode-both motion-safe:duration-1000 ${i === 0 ? 'ring-sweep relative border-violet-soft/40 bg-raised' : 'border-line bg-graphite'}`}
         >

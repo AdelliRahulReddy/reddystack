@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import CountrySuggestion from "@/components/country/CountrySuggestion";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import {
   siteConfig,
   siteSeo,
@@ -98,10 +97,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body suppressHydrationWarning>
         <GoogleAnalytics />
-        <TooltipProvider delayDuration={200}>
-          {children}
-          <CountrySuggestion />
-        </TooltipProvider>
+        {children}
+        <CountrySuggestion />
       </body>
     </html>
   );

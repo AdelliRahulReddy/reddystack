@@ -175,7 +175,7 @@ function PaidIll() {
       ))}
       <path className={cx(s.stl, s.trend)} pathLength={1} d="M40 78 C 90 82, 120 112, 160 116 S 240 150, 292 152" />
       <text x="36" y="190">META</text>
-      <text x="84" y="190" style={{ fill: '#6F6C7A' }}>GOOGLE</text>
+      <text x="84" y="190" style={{ fill: '#8F8C99' }}>GOOGLE</text>
       <text x="292" y="190" textAnchor="end" style={{ fill: '#D2ED7A' }}>COST PER ENQUIRY ↓</text>
     </svg>
   );

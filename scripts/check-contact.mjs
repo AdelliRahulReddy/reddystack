@@ -18,7 +18,7 @@ const context = vm.createContext({
     emails = { send: async (message) => { sent.push(message); if (providerThrows) throw new Error('private provider detail'); return { error: providerError }; } };
   } } : name === '@/data/siteConfig' ? { siteConfig: { email: 'hello@example.test' } }
     : name === '@/data/contactOptions' ? {
-      contactBudgetTitles: ['Under ₹25k', '₹25k–₹50k', '₹50k–₹1L', '₹1L–₹2.5L', '₹2.5L+'],
+      contactBudgetTitles: ['Under $1,000', '$1,000–$2,500', '$2,500–$5,000', '$5,000–$10,000', '$10,000+', 'Under £750', '£750–£2,000', '£2,000–£4,000', '£4,000–£8,000', '£8,000+', 'Under ₹25k', '₹25k–₹50k', '₹50k–₹1L', '₹1L–₹2.5L', '₹2.5L+'],
       contactCategoryTitles: ['Proof Sprint', 'Paid Acquisition — Meta', 'Paid Acquisition — Google', 'Creative & Conversion', 'AI-Assisted Video', 'Website & Tracking Foundation', 'Search Visibility', 'Automation or Product Build', 'Start With the Bottleneck'],
     }
     : require(name),
@@ -35,6 +35,7 @@ assert.equal((await post('{')).status, 400, 'Malformed JSON is a client error');
 assert.equal((await post(valid, { origin: 'https://spam.example' })).status, 403, 'Reject foreign browser origins');
 assert.equal((await post(valid, { 'content-type': 'text/plain' })).status, 415, 'Require JSON');
 assert.equal((await post({ ...valid, services: ['invented service'] })).status, 400, 'Validate service choices');
+assert.equal((await post({ ...valid, budget: '€1,000–€2,000' })).status, 400, 'Validate budget choices');
 for (const sourcePage of ['https://spam.example', '//spam.example', '/contact?email=private@example.test', '/service/../contact', '/service\nInjected: value', '/service\n', `/${'a'.repeat(180)}!`]) {
   assert.equal((await post({ ...valid, sourcePage })).status, 400, 'Reject external URLs, query data and malformed source paths');
 }

@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
+  // Barrel packages: import only the primitives and icons actually used.
+  experimental: {
+    optimizePackageImports: ['radix-ui', 'lucide-react'],
+  },
   async redirects() {
     return [
       {

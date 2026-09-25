@@ -69,7 +69,7 @@ export default function AboutView() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[560px]">
+          <div className="relative mx-auto mb-14 w-full max-w-[560px]">
             <div className="relative overflow-hidden rounded-[36px] border border-line-strong shadow-[0_50px_90px_-40px_rgb(0_0_0/0.9)]">
               <Image
                 src={portrait}
@@ -91,7 +91,7 @@ export default function AboutView() {
               src={signature}
               alt=""
               aria-hidden="true"
-              className="absolute -bottom-8 -right-3 w-[150px] rotate-[-6deg] motion-safe:animate-[sig-wipe_1.6s_.6s_var(--ease-studio)_both]"
+              className="absolute -bottom-16 right-2 w-[140px] rotate-[-6deg] motion-safe:animate-[sig-wipe_1.6s_.6s_var(--ease-studio)_both]"
             />
           </div>
         </div>

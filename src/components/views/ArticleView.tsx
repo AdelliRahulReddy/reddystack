@@ -203,6 +203,14 @@ export default function ArticleView({ article }: { article: ArticleData }) {
         </section>
       )}
 
+      <div className="site-wrap pb-[clamp(40px,6vw,80px)]">
+        <form action="/blog" method="get" role="search" className="flex w-full max-w-[560px] items-center gap-2 rounded-full border border-line-strong bg-graphite p-1.5 pl-5 focus-within:border-lime/60">
+          <label htmlFor="article-q" className="sr-only">Search articles</label>
+          <input id="article-q" type="search" name="q" maxLength={120} placeholder="Search all guides and articles…" className="min-w-0 flex-1 bg-transparent text-[15px] text-ivory placeholder:text-faint focus:outline-none" />
+          <button type="submit" className="rounded-full bg-lime px-4 py-2 text-[14px] font-semibold text-lime-ink transition-colors hover:bg-ivory">Search</button>
+        </form>
+      </div>
+
       {(article.previous || article.next) && (
         <nav aria-label="More articles" className="pb-[clamp(40px,6vw,80px)]">
           <div className="site-wrap grid gap-4 min-[761px]:grid-cols-2">

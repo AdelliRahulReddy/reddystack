@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, domAnimation, LazyMotion } from "motion/react";
+import * as m from "motion/react-m";
 import { Button, ButtonArrow } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 import { marketForIpCountry, markets, type Market } from "@/data/MarketConfig";
@@ -42,9 +43,10 @@ export default function CountrySuggestion() {
   }, [pathname]);
 
   return (
+    <LazyMotion features={domAnimation}>
     <AnimatePresence>
       {suggestedMarket && (
-        <motion.aside
+        <m.aside
           key={suggestedMarket.code}
           role="status"
           aria-live="polite"
@@ -77,8 +79,9 @@ export default function CountrySuggestion() {
               Dismiss
             </Button>
           </div>
-        </motion.aside>
+        </m.aside>
       )}
     </AnimatePresence>
+    </LazyMotion>
   );
 }

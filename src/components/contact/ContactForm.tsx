@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { useForm, useWatch } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence } from 'motion/react';
+import * as m from 'motion/react-m';
 import { Check } from 'lucide-react';
 
 import { trackLeadEvent } from '@/components/analytics/gaEvents';
@@ -117,7 +118,7 @@ export default function ContactForm({ initialService, sourcePage }: { initialSer
     <div className="relative">
       <AnimatePresence mode="wait" initial={false}>
         {sentRef !== null ? (
-          <motion.div
+          <m.div
             key="sent"
             role="status"
             initial={{ opacity: 0, y: 16 }}
@@ -133,9 +134,9 @@ export default function ContactForm({ initialService, sourcePage }: { initialSer
               {sentRef && <> Your reference is <span className="font-mono text-ivory">{sentRef.slice(0, 8)}</span>.</>}
             </p>
             <Button type="button" variant="ghost" onClick={() => setSentRef(null)}>Send another enquiry</Button>
-          </motion.div>
+          </m.div>
         ) : (
-          <motion.form
+          <m.form
             key="form"
             noValidate
             onSubmit={(event) => { void handleSubmit(onSubmit)(event); }}
@@ -256,7 +257,7 @@ export default function ContactForm({ initialService, sourcePage }: { initialSer
               </Button>
               <p className="text-[14px] text-faint">An enquiry does not start paid work.</p>
             </div>
-          </motion.form>
+          </m.form>
         )}
       </AnimatePresence>
     </div>

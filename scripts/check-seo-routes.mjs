@@ -19,7 +19,6 @@ for (const path of ['/blog/meta-ads', '/blog/meta-ads/facebook-ads-audit-checkli
 
 const titles = new Map();
 const descriptions = new Map();
-const iconCss = await readFile(new URL('../public/assets/css/font-awesome-pro.css', import.meta.url), 'utf8');
 const pages = JSON.parse(await readFile(new URL('../src/data/seo-pages.json', import.meta.url), 'utf8'));
 const lastModifiedByUrl = new Map([...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => [
   match[1].match(/<loc>([^<]+)<\/loc>/)?.[1],
@@ -48,11 +47,8 @@ for (const url of urls) {
   const response = await fetch(`${base}${path}`, { redirect: 'manual' });
   assert.equal(response.status, 200, `${path}: status`);
   const html = await response.text();
-  for (const match of html.matchAll(/class="([^"]*)"/g)) {
-    for (const name of match[1].split(/\s+/).filter((name) => name.startsWith('fa-') && name !== 'fa-sharp')) {
-      assert.ok(iconCss.includes(`.${name}`), `${path}: missing icon definition ${name}`);
-    }
-  }
+  // Font Awesome was removed with the template: no icon classes may depend on it.
+  assert.ok(![...html.matchAll(/class="([^"]*)"/g)].some((m) => m[1].split(/\s+/).some((n) => /^fa-/.test(n))), `${path}: Font Awesome class without its stylesheet`);
   assert.doesNotMatch(html, /(?:blog-list-avata-1|user24|user-1|avata-[123]|port-details-2|ab-circle-img|footer-circle-img|contact-flower(?:-text)?|sv-details(?:-[12])?|services-slider-[1-4]|blog-details-big-img|blog-standard-[1-4]|blog-list-[1-7](?:-[12])?|blog-[123](?:-[123]){0,2}|sidebar-[12]|hero-img|logo-black)(?:\.|%2E)/i, `${path}: retired template image reference`);
   for (const [attribute, tag] of [['property', 'og:image'], ['name', 'twitter:image']]) {
     const image = html.match(new RegExp(`<meta ${attribute}="${tag}" content="([^"]+)"`))?.[1];
@@ -90,7 +86,8 @@ for (const url of urls) {
   const organization = schemas.find((schema) => schema['@type'] === 'Organization');
   assert.equal(organization?.['@id'], `${origin}/#organization`, `${path}: publisher identity`);
   assert.equal(organization.logo?.url, `${origin}/assets/img/logo/reddystack-symbol.png`, `${path}: approved organization logo`);
-  assert.match(html, /reddystack-symbol[^"\s<>]*\.svg/, `${path}: approved visible brand symbol`);
+  // The header and footer draw the approved three-piece symbol inline.
+  assert.ok(['0', '1', '2'].every((i) => html.includes(`data-piece="${i}"`)), `${path}: approved visible brand symbol`);
   assert.equal(organization.hasOfferCatalog?.['@type'], 'OfferCatalog', `${path}: service catalog schema`);
   assert.ok(!organization.makesOffer, `${path}: OfferCatalog is not an Offer`);
   assert.equal(organization.founder.url, `${origin}/about/rahul-reddy-adelli`, `${path}: founder profile`);

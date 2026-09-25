@@ -14,6 +14,7 @@ export default function EngagementCards({ source = '/', className }: { source?: 
         <div
           key={e.id}
           data-reveal
+          data-anim={e.featured ? '' : undefined}
           style={{ ['--reveal-delay' as string]: `${i * 0.08}s` }}
           className={cn(
             'relative flex flex-col gap-[18px] overflow-hidden rounded-[28px] border p-[clamp(24px,2.6vw,36px)] transition-[transform,border-color,opacity] duration-500 ease-studio hover:-translate-y-1.5',
