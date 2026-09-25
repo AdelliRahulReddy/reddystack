@@ -1,14 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {     
+const nextConfig = {
   reactStrictMode: false,
-  // Both illustrations use SVG shapes without expressions or effects.
-  turbopack: {
-    resolveAlias: { 'lottie-web': 'lottie-web/build/player/lottie_light.js' },
-  },
-  webpack(config) {
-    config.resolve.alias['lottie-web$'] = require.resolve('lottie-web/build/player/lottie_light.js');
-    return config;
-  },
   async redirects() {
     return [
       {

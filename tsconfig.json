@@ -28,27 +28,6 @@
       ],
       "@/assets/*": [
         "./public/assets/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/layouts/*": [
-        "./src/layouts/*"
-      ],
-      "@/data/*": [
-        "./src/data/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/helpers/*": [
-        "./src/helpers/*"
-      ],
-      "@/plugins/*": [
-        "./src/plugins/*"
       ]
     }
   },
@@ -57,8 +36,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/homes/home/gsap.tsx",
-    "src/utils/utils.JS",
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [

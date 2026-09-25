@@ -11,15 +11,7 @@ import {
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
-import {
-  Abril_Fatface,
-  DM_Sans,
-  EB_Garamond,
-  Kufam,
-  JetBrains_Mono,
-  Poppins,
-  Playfair_Display,
-} from "next/font/google";
+import { DM_Sans, JetBrains_Mono } from "next/font/google";
 
 const sora = localFont({
   src: '../../public/assets/fonts/Sora-SemiBold.woff2',
@@ -28,13 +20,6 @@ const sora = localFont({
   variable: '--font-brand-sora',
 });
 
-// all font configure
-const abril = Abril_Fatface({
-  preload: false,
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-abril",
-});
 
 const dmSans = DM_Sans({
   weight: ["400", "500", "700"],
@@ -42,19 +27,7 @@ const dmSans = DM_Sans({
   variable: "--font-dm-sans",
 });
 
-const garamond = EB_Garamond({
-  preload: false,
-  weight: ["400", "500", "600", "700", "800"],
-  subsets: ["latin"],
-  variable: "--font-garamond",
-});
 
-const kufam = Kufam({
-  preload: false,
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-kufam",
-});
 
 const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
@@ -62,19 +35,7 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains",
 });
 
-const poppins = Poppins({
-  preload: false,
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-  variable: "--font-poppins",
-});
 
-const playfair = Playfair_Display({
-  preload: false,
-  weight: ["400", "500", "600", "700", "900"],
-  subsets: ["latin"],
-  variable: "--font-playfair",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -125,18 +86,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      tp-theme="tp-theme-dark"
       suppressHydrationWarning
-      className={`
-        ${sora.variable}
-        ${abril.variable}
-        ${dmSans.variable}
-        ${jetbrainsMono.variable}
-        ${garamond.variable}
-        ${kufam.variable}
-        ${poppins.variable}
-        ${playfair.variable}
-      `}
+      className={`${sora.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         {/* Site-level JSON-LD. Page/entity schemas are injected by their routes. */}
@@ -145,7 +96,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify([websiteSchema, organizationSchema]) }}
         />
       </head>
-      <body suppressHydrationWarning className="scroll-smooth">
+      <body suppressHydrationWarning>
         <GoogleAnalytics />
         <TooltipProvider delayDuration={200}>
           {children}
