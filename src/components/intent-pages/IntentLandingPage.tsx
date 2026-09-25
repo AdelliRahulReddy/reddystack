@@ -1,8 +1,4 @@
-import FooterOne from "@/layouts/footers/FooterOne";
-import HeaderFour from "@/layouts/headers/HeaderFour";
-import NavigationArea from "@/components/service-details/NavigationArea";
-import ServiceDetailsArea from "@/components/service-details/ServiceDetailsArea";
-import ServiceFaqArea from "@/components/service-details/ServiceFaqArea";
+import ServiceDetailView from "@/components/views/ServiceDetailView";
 import {
   buildIntentServiceDetail,
   getAdjacentIntentServiceDetails,
@@ -13,6 +9,7 @@ type IntentLandingPageProps = {
   page: IntentLandingPageData;
 };
 
+/** Intent landing pages share the service template, illustrated by their parent service. */
 const IntentLandingPage = ({ page }: IntentLandingPageProps) => {
   const service = buildIntentServiceDetail(page);
   const { previousPage, nextPage } = getAdjacentIntentServiceDetails(page.slug);
@@ -22,22 +19,12 @@ const IntentLandingPage = ({ page }: IntentLandingPageProps) => {
   }
 
   return (
-    <>
-      <HeaderFour />
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main id="main-content" className="rs-subpage" tabIndex={-1}>
-            <ServiceDetailsArea service={service} />
-            <ServiceFaqArea service={service} />
-            <NavigationArea
-              previousService={previousPage}
-              nextService={nextPage}
-            />
-          </main>
-          <FooterOne style={true} />
-        </div>
-      </div>
-    </>
+    <ServiceDetailView
+      service={service}
+      previous={previousPage}
+      next={nextPage}
+      illustrationSlug={page.relatedServiceSlug}
+    />
   );
 };
 

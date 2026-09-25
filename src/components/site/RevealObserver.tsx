@@ -32,7 +32,12 @@ export default function RevealObserver() {
     const root = document.documentElement;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       root.removeAttribute('data-motion');
-      return;
+      // CSS cannot stop SMIL (<animate>, <animateMotion>) in the illustrations; pause those directly.
+      const pause = () => document.querySelectorAll('svg').forEach((svg) => { try { svg.pauseAnimations(); } catch { /* unsupported */ } });
+      pause();
+      const mo = new MutationObserver(pause);
+      mo.observe(document.body, { childList: true, subtree: true });
+      return () => mo.disconnect();
     }
 
     const show = (el: HTMLElement) => {

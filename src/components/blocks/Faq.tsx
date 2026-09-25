@@ -37,8 +37,9 @@ export default function Faq({
   title = 'Before you get in touch.',
   label = 'Questions',
   id = 'faq-title',
+  intro,
   className,
-}: { items: FaqItem[]; title?: string; label?: string; id?: string; className?: string }) {
+}: { items: FaqItem[]; title?: string; label?: string; id?: string; intro?: string; className?: string }) {
   return (
     <section aria-labelledby={id} className={cn('py-[clamp(56px,8vw,120px)]', className)}>
       <div className="site-wrap grid gap-[clamp(24px,5vw,88px)] min-[861px]:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)]">
@@ -47,6 +48,7 @@ export default function Faq({
           <h2 id={id} aria-label={title} data-split className="mt-[18px] text-[clamp(36px,4.6vw,64px)]">
             <SplitText text={title} />
           </h2>
+          {intro && <p data-reveal className="mt-6 max-w-[40ch] text-muted-foreground">{intro}</p>}
         </div>
         <FaqList items={items} />
       </div>
