@@ -1,8 +1,7 @@
-import "../styles/index.scss";
+import "../styles/globals.css";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import CountrySuggestion from "@/components/country/CountrySuggestion";
-import ThemeProvider from "@/components/provider/ThemeProvider";
-import { VideoProvider } from "@/provider/VideoProvider";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import {
   siteConfig,
   siteSeo,
@@ -60,7 +59,7 @@ const kufam = Kufam({
 const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-jetbrains",
 });
 
 const poppins = Poppins({
@@ -148,10 +147,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body suppressHydrationWarning className="scroll-smooth">
         <GoogleAnalytics />
-        <ThemeProvider>
-          <VideoProvider>{children}</VideoProvider>
+        <TooltipProvider delayDuration={200}>
+          {children}
           <CountrySuggestion />
-        </ThemeProvider>
+        </TooltipProvider>
       </body>
     </html>
   );
