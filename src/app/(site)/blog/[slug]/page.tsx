@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import BlogDetails from '@/components/blog-details';
-import Wrapper from '@/layouts/Wrapper';
+import BlogPostView from '@/components/views/BlogPostView';
 import SeoContentPage, { seoContentMetadata } from '@/components/seo/SeoContentPage';
 import { getSeoPage, seoPages } from '@/data/SeoPagesData';
 import {
@@ -100,7 +99,7 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
   ]);
 
   return (
-    <Wrapper>
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -113,13 +112,8 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
           __html: JSON.stringify(breadcrumbSchema),
         }}
       />
-      <BlogDetails
-        post={post}
-        previousPost={previousPost}
-        nextPost={nextPost}
-        relatedPost={relatedPost || null}
-      />
-    </Wrapper>
+      <BlogPostView post={post} previous={previousPost} next={nextPost} related={relatedPost || null} />
+    </>
   );
 };
 

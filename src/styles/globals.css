@@ -231,3 +231,5 @@
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
   animation: ring-sweep 5s linear infinite;
 }
+
+.prose-studio > section:first-child > h2:first-child { margin-top: 0; }

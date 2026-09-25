@@ -1,5 +1,4 @@
-import TrustPage from "@/components/trust/TrustPage";
-import Wrapper from "@/layouts/Wrapper";
+import TrustView from "@/components/views/TrustView";
 import { getTrustPage, getTrustPageSeo } from "@/data/TrustPagesData";
 import {
   buildBreadcrumbSchema,
@@ -8,17 +7,17 @@ import {
   schemaIds,
 } from "@/data/siteConfig";
 
-const page = getTrustPage("terms");
+const page = getTrustPage("privacy-policy");
 
 export const metadata = buildPageMetadata(page.metaKey);
 
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": `${buildCanonicalUrl("/terms")}#webpage`,
-  name: getTrustPageSeo("terms").title,
-  url: buildCanonicalUrl("/terms"),
-  description: getTrustPageSeo("terms").description,
+  "@id": `${buildCanonicalUrl("/privacy-policy")}#webpage`,
+  name: getTrustPageSeo("privacy-policy").title,
+  url: buildCanonicalUrl("/privacy-policy"),
+  description: getTrustPageSeo("privacy-policy").description,
   isPartOf: {
     "@id": schemaIds.website,
   },
@@ -27,14 +26,14 @@ const pageSchema = {
   },
 };
 
-const TermsRoute = () => {
+const PrivacyPolicyRoute = () => {
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: "Home", path: "/" },
-    { name: page.title, path: "/terms" },
+    { name: page.title, path: "/privacy-policy" },
   ]);
 
   return (
-    <Wrapper>
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
@@ -43,9 +42,9 @@ const TermsRoute = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <TrustPage page={page} />
-    </Wrapper>
+      <TrustView page={page} path="/privacy-policy" />
+    </>
   );
 };
 
-export default TermsRoute;
+export default PrivacyPolicyRoute;

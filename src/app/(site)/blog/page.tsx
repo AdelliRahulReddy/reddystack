@@ -1,11 +1,7 @@
-import BlogSidebar from '@/components/blog-sidebar';
-import Wrapper from '@/layouts/Wrapper';
-import React from 'react';
+import BlogIndexView from '@/components/views/BlogIndexView';
 import { buildBreadcrumbSchema, buildPageMetadata, siteSeo } from '@/data/siteConfig';
 import { blogCategories, blogPosts } from '@/data/BlogPostsData';
 import { seoPages } from '@/data/SeoPagesData';
-import TrustPage from '@/components/trust/TrustPage';
-import ArticleSearch from '@/components/blog-sidebar/ArticleSearch';
 
 type Props = { searchParams: Promise<{ q?: string | string[]; category?: string | string[] }> };
 const queryFrom = (value?: string | string[]) => (Array.isArray(value) ? value[0] : value || '').trim().slice(0, 120);
@@ -46,52 +42,26 @@ const index = async ({ searchParams }: Props) => {
       ? []
       : seoPages
           .filter((page) => page.kind === 'guide')
-          .map((page) => ({ title: page.title, path: page.path, text: page.title + ' ' + page.description }));
+          .map((page) => ({ title: page.title, path: page.path, text: page.title + ' ' + page.description, note: page.description, kind: 'Guide' }));
     const results = [
       ...categoryPosts.map((post) => ({
         title: post.title,
         path: post.path,
         text: post.title + ' ' + post.excerpt + ' ' + post.tags.join(' '),
+        note: post.excerpt,
+        kind: post.categoryLabel,
       })),
       ...searchablePages,
     ].filter((page) => terms.every((term) => page.text.toLowerCase().includes(term)));
 
-    const resultLinks = results.map(({ title, path }) => ({ title, path }));
+    const resultLinks = results.map(({ title, path, note, kind }) => ({ title, path, note, kind }));
     const heading = categoryKey ? categoryLabel + ' articles' : 'Search articles';
     const intro = results.length + ' ' + (results.length === 1 ? 'article' : 'articles') +
       (categoryKey ? ' in ' + categoryLabel : '') +
       (query ? ' found for “' + query + '”.' : '.');
 
     return (
-      <Wrapper>
-        <TrustPage
-          breadcrumbs={[
-            { name: 'Home', path: '/' },
-            { name: 'Insights', path: '/blog' },
-          ]}
-          page={{
-            title: heading,
-            subtitle: siteSeo.siteName + ' Insights',
-            intro,
-            sections: [
-              {
-                title: resultLinks.length ? 'Matching articles' : 'No articles found',
-                body: resultLinks.length
-                  ? []
-                  : ['Try another topic or return to the main Insights page.'],
-                links: resultLinks,
-              },
-              {
-                title: 'Browse all topics',
-                body: [],
-                links: [{ title: 'Return to Insights', path: '/blog' }],
-              },
-            ],
-          }}
-        >
-          <ArticleSearch query={query} />
-        </TrustPage>
-      </Wrapper>
+      <BlogIndexView mode="results" query={query} categoryKey={categoryKey} heading={heading} summary={intro} results={resultLinks} />
     );
   }
 
@@ -106,9 +76,7 @@ const index = async ({ searchParams }: Props) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Wrapper>
-        <BlogSidebar />
-      </Wrapper>
+      <BlogIndexView mode="index" />
     </>
   );
 };

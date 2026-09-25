@@ -1,155 +1,45 @@
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import TrustPage from '@/components/trust/TrustPage';
-import Wrapper from '@/layouts/Wrapper';
-import { getSeoPage, seoPages } from '@/data/SeoPagesData';
-import { buildBreadcrumbSchema, buildCanonicalUrl, buildOpenGraph, buildTwitterCard, schemaIds, siteConfig } from '@/data/siteConfig';
+import ArticleView from '@/components/views/ArticleView';
+import FounderView from '@/components/views/FounderView';
+import HubView, { hubService } from '@/components/views/HubView';
+import { getServiceDetail } from '@/data/ServiceDetailData';
+import { getSeoContext, seoContentMetadata } from './seoContent';
 
-export function seoContentMetadata(path: string): Metadata {
-  const page = getSeoPage(path);
-  if (!page) notFound();
-  const title = page.title + ' | ' + siteConfig.brandName;
-  const url = buildCanonicalUrl(path);
-  return {
-    title,
-    description: page.description,
-    alternates: { canonical: url },
-    openGraph: buildOpenGraph({
-      title,
-      description: page.description,
-      url,
-      type: page.kind === 'guide' ? 'article' : 'website',
-      ...(page.publishedAt
-        ? { publishedTime: page.publishedAt, modifiedTime: page.updatedAt || page.publishedAt }
-        : {}),
-    }),
-    twitter: buildTwitterCard({ title, description: page.description }),
-  };
-}
+export { seoContentMetadata };
 
+/** Renders an entry from seo-pages.json with the view for its kind (guide, hub or profile). */
 export default function SeoContentPage({ path }: { path: string }) {
-  const page = getSeoPage(path);
-  if (!page) notFound();
+  const ctx = getSeoContext(path);
+  const { page, parents, relatedGuides } = ctx;
 
-  const parents = [];
-  let parentPath = page.parent;
-  const rootLabels: Record<string, string> = {
-    '/blog': 'Insights',
-    '/service': 'Capabilities',
-    '/about': 'About',
-    '/website-development': 'Website development',
-  };
+  if (page.kind === 'profile') return <FounderView ctx={ctx} />;
+  if (page.kind === 'hub') return <HubView ctx={ctx} />;
 
-  while (parentPath !== '/') {
-    const parent = getSeoPage(parentPath);
-    parents.unshift({
-      name: parent?.title || rootLabels[parentPath] || parentPath.split('/').pop()!,
-      path: parentPath,
-    });
-    parentPath = parent?.parent || '/';
-  }
-
-  const existingLinkPaths = new Set(
-    page.sections.flatMap((section) => (section.links || []).map((link) => link.path)),
-  );
-  const relatedGuides =
-    page.kind === 'guide'
-      ? seoPages
-          .filter(
-            (candidate) =>
-              candidate.kind === 'guide' &&
-              candidate.parent === page.parent &&
-              candidate.path !== path &&
-              !existingLinkPaths.has(candidate.path),
-          )
-          .slice(0, 2)
-      : [];
-  const relatedSection = relatedGuides.length
-    ? {
-        title: 'Related guides',
-        body: [],
-        links: relatedGuides.map((guide) => ({
-          title: guide.title,
-          path: guide.path,
-        })),
-      }
-    : undefined;
-  const renderedPage = relatedSection
-    ? { ...page, sections: [...page.sections, relatedSection] }
-    : page;
-
-  const url = buildCanonicalUrl(path);
-  const pageSchema = {
-    '@context': 'https://schema.org',
-    '@type':
-      page.kind === 'guide'
-        ? 'BlogPosting'
-        : page.kind === 'profile'
-          ? 'ProfilePage'
-          : page.kind === 'hub'
-            ? 'CollectionPage'
-            : 'WebPage',
-    '@id': url + '#webpage',
-    url,
-    name: page.title,
-    description: page.description,
-    isPartOf: { '@id': schemaIds.website },
-    ...(page.kind === 'guide'
-      ? {
-          headline: page.title,
-          datePublished: page.publishedAt,
-          dateModified: page.updatedAt || page.publishedAt,
-          author: {
-            '@type': 'Person',
-            '@id': buildCanonicalUrl('/about/rahul-reddy-adelli') + '#person',
-            name: siteConfig.ownerName,
-            jobTitle: 'Founder',
-            url: buildCanonicalUrl('/about/rahul-reddy-adelli'),
-            worksFor: { '@id': schemaIds.organization },
-          },
-          publisher: { '@id': schemaIds.organization },
-          mainEntityOfPage: url,
-        }
-      : page.kind === 'profile'
-        ? {
-            mainEntity: {
-              '@type': 'Person',
-              name: siteConfig.ownerName,
-              jobTitle: 'Founder',
-              worksFor: { '@id': schemaIds.organization },
-            },
-          }
-        : {}),
-  };
+  const hub = parents[parents.length - 1];
+  const service = getServiceDetail(hubService[page.parent.split('/')[2] ?? ''] ?? '');
+  const contactParams = new URLSearchParams({ ...(service ? { service: service.contactService || service.slug } : {}), source: path });
 
   return (
-    <Wrapper>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            pageSchema,
-            buildBreadcrumbSchema([
-              { name: 'Home', path: '/' },
-              ...parents,
-              { name: page.title, path },
-            ]),
-          ]).replace(/</g, '\\u003c'),
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ctx.schemaJson }} />
+      <ArticleView
+        article={{
+          title: page.title,
+          label: hub?.name ?? 'Insights',
+          intro: page.intro,
+          crumbs: [{ name: 'Home', href: '/' }, ...parents.map((p) => ({ name: p.name, href: p.path })), { name: page.title }],
+          byline: page.kind === 'guide',
+          publishedAt: page.publishedAt,
+          updatedAt: page.updatedAt,
+          sections: page.sections,
+          related: relatedGuides.map((g) => ({ title: g.title, path: g.path, note: g.description })),
+          relatedService: service ? { title: service.title, path: service.path } : undefined,
+          cta: {
+            href: `/contact?${contactParams}`,
+            title: 'Want a second pair of eyes on it?',
+            body: 'Send what you are seeing and what you have already checked. Rahul will say what to look at first, and whether a Proof Sprint makes sense.',
+          },
         }}
       />
-      <TrustPage
-        page={renderedPage}
-        breadcrumbs={[{ name: 'Home', path: '/' }, ...parents]}
-        byline={
-          page.kind === 'guide'
-            ? {
-                name: siteConfig.ownerName,
-                role: 'Founder',
-                href: buildCanonicalUrl('/about/rahul-reddy-adelli'),
-              }
-            : undefined
-        }
-      />
-    </Wrapper>
+    </>
   );
 }
