@@ -127,7 +127,8 @@ export default function SiteHeader() {
                   </nav>
                   <div className="mt-auto grid gap-1.5 pb-4 font-mono text-[13px] text-muted-foreground">
                     <a href={`mailto:${siteConfig.email}`} className="hover:text-ivory">{siteConfig.email}</a>
-                    <a href={siteConfig.socialLinks.whatsapp} target="_blank" rel="noreferrer" className="hover:text-ivory">WhatsApp {siteConfig.phoneDisplay}</a>
+                    <a href={`tel:${siteConfig.phoneHref}`} className="hover:text-ivory">Call {siteConfig.phoneDisplay}</a>
+              <a href={siteConfig.socialLinks.whatsapp} target="_blank" rel="noreferrer" className="hover:text-ivory">WhatsApp</a>
                   </div>
                 </div>
               </SheetContent>

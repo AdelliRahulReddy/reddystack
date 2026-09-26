@@ -123,7 +123,8 @@ export default function AboutView() {
             </p>
             <div className="mt-7 grid gap-1.5 font-mono text-[13.5px]">
               <a href={`mailto:${siteConfig.email}`} className="text-ivory hover:text-lime">{siteConfig.email}</a>
-              <a href={siteConfig.socialLinks.whatsapp} target="_blank" rel="noreferrer" className="text-ivory hover:text-lime">WhatsApp {siteConfig.phoneDisplay}</a>
+              <a href={`tel:${siteConfig.phoneHref}`} className="text-ivory hover:text-lime">Call {siteConfig.phoneDisplay}</a>
+              <a href={siteConfig.socialLinks.whatsapp} target="_blank" rel="noreferrer" className="text-ivory hover:text-lime">WhatsApp</a>
             </div>
             <ul className="mt-8 flex flex-wrap gap-2" aria-label="Capabilities">
               {capabilities.map((c, i) => (

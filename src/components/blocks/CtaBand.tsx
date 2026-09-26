@@ -81,6 +81,8 @@ export default function CtaBand({
           </div>
           <p className="mt-7 font-mono text-[13px] text-white/90">
             <a href={`mailto:${siteConfig.email}`} className="hover:underline">{siteConfig.email}</a>
+            <span aria-hidden="true"> · </span>
+            <a href={`tel:${siteConfig.phoneHref}`} className="hover:underline">Call {siteConfig.phoneDisplay}</a>
           </p>
         </div>
       </div>

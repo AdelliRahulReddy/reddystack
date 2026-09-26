@@ -77,7 +77,7 @@ export default function FounderView({ ctx }: { ctx: ReturnType<typeof getSeoCont
               </section>
             ))}
             <p className="font-mono text-[13px] text-faint">
-              {siteConfig.email} · WhatsApp {siteConfig.phoneDisplay}
+              <a href={`mailto:${siteConfig.email}`} className="hover:text-ivory">{siteConfig.email}</a> · <a href={`tel:${siteConfig.phoneHref}`} className="hover:text-ivory">Call {siteConfig.phoneDisplay}</a> · <a href={siteConfig.socialLinks.whatsapp} target="_blank" rel="noreferrer" className="hover:text-ivory">WhatsApp</a>
               {page.updatedAt && <> · Updated <time dateTime={page.updatedAt}>{page.updatedAt}</time></>}
             </p>
           </div>

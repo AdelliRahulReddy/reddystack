@@ -57,7 +57,7 @@ export default function ContactView({ initialService, sourcePage }: { initialSer
               <a href={siteConfig.socialLinks.whatsapp} target="_blank" rel="noreferrer" className="group/btn mt-4 inline-flex items-center gap-2 font-medium text-lime">
                 Chat on WhatsApp <span aria-hidden="true" className="transition-transform group-hover/btn:translate-x-0.5">→</span>
               </a>
-              <p className="mt-1 font-mono text-[13px] text-faint">{siteConfig.phoneDisplay}</p>
+              <a href={`tel:${siteConfig.phoneHref}`} className="mt-1 block font-mono text-[13px] text-muted-foreground hover:text-ivory">Call {siteConfig.phoneDisplay}</a>
             </div>
 
             <div className="rounded-[28px] border border-line bg-graphite p-6">

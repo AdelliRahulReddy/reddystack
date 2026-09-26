@@ -61,13 +61,13 @@ try {
   assert.ok(evaluate(`(() => { const d = document.querySelectorAll('#main details')[1]; d.querySelector('summary').click(); return d.open; })()`), 'FAQ items must open');
 
   // Repeated client-side navigation cleans up scroll scenes and listeners.
-  // The header hides while scrolling down, as it does for visitors; return to the top first.
-  evaluate('window.scrollTo(0, 0)');
-  run('wait', '--fn', '!document.querySelector("header").hasAttribute("data-hidden")');
+  // Keyboard activation: the header hides while scrolling, so pointer clicks would depend on scroll timing.
   for (let i = 0; i < 3; i++) {
-    run('click', 'header a[href="/contact"]');
+    run('focus', 'header a[href="/contact"]');
+    run('press', 'Enter');
     run('wait', '--url', '**/contact');
-    run('click', 'header a[aria-label="ReddyStack home"]');
+    run('focus', 'header a[aria-label="ReddyStack home"]');
+    run('press', 'Enter');
     run('wait', '--url', `${base}/`);
     run('wait', '#hv3-title');
   }

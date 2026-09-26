@@ -6,6 +6,7 @@ import { markets } from '@/data/MarketConfig';
 import { siteConfig } from '@/data/siteConfig';
 import { saveMarketChoice } from '@/utils/marketPreference';
 import { BrandSymbol } from './BrandSymbol';
+import CurrentYear from './CurrentYear';
 import { legalNav, primaryNav } from './navigation';
 
 const wordmarkColors = ['#7654E8', '#D2ED7A', '#FF765E'];
@@ -33,7 +34,8 @@ export default function SiteFooter() {
             </p>
             <p className="mt-5 grid gap-1 font-mono text-[13px] text-muted-foreground">
               <a href={`mailto:${siteConfig.email}`} className="hover:text-ivory">{siteConfig.email}</a>
-              <a href={siteConfig.socialLinks.whatsapp} target="_blank" rel="noreferrer" className="hover:text-ivory">WhatsApp {siteConfig.phoneDisplay}</a>
+              <a href={`tel:${siteConfig.phoneHref}`} className="hover:text-ivory">Call {siteConfig.phoneDisplay}</a>
+              <a href={siteConfig.socialLinks.whatsapp} target="_blank" rel="noreferrer" className="hover:text-ivory">WhatsApp</a>
             </p>
           </div>
           <Column title="Studio">
@@ -74,7 +76,7 @@ export default function SiteFooter() {
         </div>
 
         <div className="flex flex-wrap justify-between gap-3 border-t border-line pt-[22px] text-[13.5px] text-faint">
-          <span>© {new Date().getFullYear()} ReddyStack · {siteConfig.ownerName} · Hyderabad, India</span>
+          <span>© <CurrentYear /> ReddyStack · {siteConfig.ownerName} · Hyderabad, India</span>
           <nav aria-label="Legal" className="flex gap-3">
             {legalNav.map((l) => <Link key={l.href} href={l.href} className="hover:text-ivory">{l.title}</Link>)}
           </nav>
