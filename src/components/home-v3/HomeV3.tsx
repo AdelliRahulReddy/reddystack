@@ -65,7 +65,7 @@ export default function HomeV3({ projects, market }: { projects: HomeProject[]; 
           <div>
             <div className={s.heroKicker}>
               <span className={s.pill}><span className={s.dot} aria-hidden="true" />{kicker}</span>
-              <span className={s.label}>Founder-led growth studio</span>
+              <span className={s.label}>Founder-led growth marketing</span>
             </div>
             {marketPage ? (
               <h1 id="hv3-title" className={s.marketTitle}>

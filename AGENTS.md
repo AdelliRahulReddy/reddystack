@@ -58,7 +58,8 @@ The owner (Rahul Reddy Adelli) has granted agents full control of this repositor
 | SEO content pages | `src/components/seo/` (`seoContent.ts` builds metadata, breadcrumbs and JSON-LD; `SeoContentPage` picks the view by kind) |
 
 - Homepage `/` and market pages `/us` `/uk` `/au` `/ca` `/ae` `/sg` `/in` render `HomeV3` (markets through `MarketLandingPage`).
-- `ServiceDetailView` serves the 9 `/service/[slug]` pages and the 13 intent pages (via `buildIntentServiceDetail`).
+- Service and intent pages can set `heading` (a descriptive H1; intent pages use `headline`). Titles, descriptions and H1s follow `docs/SEO_KEYWORD_MAP.md`.
+- `ServiceDetailView` serves the 9 `/service/[slug]` pages and the 14 intent pages (including `/ppc-audit`) (via `buildIntentServiceDetail`).
 - `ArticleView` serves the 57 guides (`/blog/[slug]/[article]`), the 8 historical articles (`/blog/[slug]`) and the three policies.
 - `/blog?q=` and `/blog?category=` are server-side search and filter results (noindex, `/blog` canonical).
 
@@ -118,6 +119,7 @@ Set `SEO_CHECK_BASE` to check another server. The browser check needs the `agent
 Open only when needed:
 
 - `docs/CODEBASE.md`: architecture detail, contact limits, analytics, sales measurement
+- `docs/SEO_KEYWORD_MAP.md`: which page targets which query (Semrush data); check it before changing titles or adding pages
 - `docs/context/SEO_CONTEXT_LITE.md`, `docs/AI_SEO_PLAYBOOK.md`, `docs/SEO_KEYWORDS.md`: SEO work
 
 Keep this file current: when a change makes something here wrong, update this file in the same change.

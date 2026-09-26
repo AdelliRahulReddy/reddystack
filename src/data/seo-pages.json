@@ -3,10 +3,10 @@
     "path": "/blog/meta-ads/facebook-ads-audit-checklist",
     "parent": "/blog/meta-ads",
     "kind": "guide",
-    "title": "Facebook Ads Audit Checklist",
-    "description": "Audit a Facebook or Instagram account from business outcome back to the ad. A low cost per lead is useful only when those leads can become customers.",
-    "subtitle": "Meta Ads guides · ReddyStack · Updated 22 September 2026",
-    "intro": "Audit a Facebook or Instagram account from business outcome back to the ad. A low cost per lead is useful only when those leads can become customers.",
+    "title": "Facebook Ads Audit Checklist: Meta Ads Account Review",
+    "description": "A Facebook and Instagram (Meta) ads audit checklist: verify pixel and Conversions API events, lead quality, audiences, placements and creative before spending more.",
+    "subtitle": "Meta Ads guides · ReddyStack · Updated 26 September 2026",
+    "intro": "A Facebook and Instagram (Meta) ads audit checklist: verify pixel and Conversions API events, lead quality, audiences, placements and creative before spending more.",
     "publishedAt": "2026-09-12",
     "sections": [
       {
@@ -59,6 +59,40 @@
         ]
       },
       {
+        "title": "How to audit a Meta ads account, step by step",
+        "body": [
+          "Follow the money and the signal. Meta’s delivery system optimises towards the event you choose, so an audit that starts with creative before checking that event can reach the wrong conclusions."
+        ],
+        "bullets": [
+          "Step 1, ownership: confirm the ad account, pixel and page belong to the business portfolio, and note who has which access.",
+          "Step 2, events: in Events Manager, check which events fire, where from, and whether pixel and Conversions API events are deduplicated with a shared event ID.",
+          "Step 3, optimisation: check the objective and conversion event of each campaign and whether the event is one the business actually values.",
+          "Step 4, lead quality: match recent leads to outcomes, and for instant forms, check whether the form type trades volume for intent.",
+          "Step 5, audiences and placements: review the breakdowns by placement, age and region against where good leads came from.",
+          "Step 6, creative: check frequency and the trend in click-through and cost for the longest-running ads.",
+          "Step 7, destination: complete the journey on a phone and confirm the event fires once."
+        ]
+      },
+      {
+        "title": "Pixel and Conversions API checks",
+        "body": [
+          "Many accounts send the same purchase or lead through both the browser pixel and the Conversions API. That is recommended, but only when both carry the same event name and event ID so Meta can count them once. Without it, reported conversions can inflate and automated delivery learns from duplicates.",
+          "Also check the attribution setting used in reports (for example seven-day click with or without one-day view) and use the same setting when comparing periods. Changing it between reports can make performance appear to move when nothing in the account changed."
+        ]
+      },
+      {
+        "title": "Audiences, placements and creative fatigue",
+        "body": [
+          "Broad and Advantage+ audience settings can work well when the conversion signal is reliable, and poorly when it is not. Before narrowing targeting, read the placement and demographic breakdowns: a campaign can look acceptable overall while one placement delivers most of the spend and few real leads.",
+          "Creative wears out. Rising frequency with falling click-through or rising cost per result on the same ad suggests fatigue, and the fix is a new message or format to test, not only a budget change. Keep a record of which concept each ad tests so results add up to learning."
+        ],
+        "bullets": [
+          "Special Ad Categories: housing, employment, credit and social issues ads have targeting limits; check the category is declared where it applies.",
+          "Instant forms: compare form types and questions against lead quality, not lead count alone.",
+          "Comments and messages: unanswered comments and inbox messages are part of the funnel, not only the ad."
+        ]
+      },
+      {
         "title": "Related reading and services",
         "body": [],
         "links": [
@@ -73,11 +107,15 @@
           {
             "title": "Meta Ads services",
             "path": "/service/meta-ads"
+          },
+          {
+            "title": "Google Ads & PPC audit, including Meta Ads",
+            "path": "/ppc-audit"
           }
         ]
       }
     ],
-    "updatedAt": "2026-09-22"
+    "updatedAt": "2026-09-26"
   },
   {
     "path": "/blog/meta-ads/facebook-ads-cost-india",
@@ -783,10 +821,10 @@
     "path": "/blog/google-ads/google-ads-audit-checklist",
     "parent": "/blog/google-ads",
     "kind": "guide",
-    "title": "Google Ads Audit Checklist",
-    "description": "A Google Ads audit should explain which spending decisions to change and why. Start with real conversions and customer value before inspecting individual keywords.",
-    "subtitle": "Google Ads guides · ReddyStack · Updated 22 September 2026",
-    "intro": "A Google Ads audit should explain which spending decisions to change and why. Start with real conversions and customer value before inspecting individual keywords.",
+    "title": "Google Ads Audit Checklist and Template",
+    "description": "A step-by-step Google Ads audit checklist and template: check conversions, search terms, settings, ads and landing pages, then leave a prioritised fix list.",
+    "subtitle": "Google Ads guides · ReddyStack · Updated 26 September 2026",
+    "intro": "A step-by-step Google Ads audit checklist and template: check conversions, search terms, settings, ads and landing pages, then leave a prioritised fix list.",
     "publishedAt": "2026-09-12",
     "sections": [
       {
@@ -836,6 +874,66 @@
         ]
       },
       {
+        "title": "How to audit a Google Ads account, step by step",
+        "body": [
+          "Work from the business outcome back to the keyword. Each step below depends on the one before it: there is little point judging a campaign by conversions you have not yet verified."
+        ],
+        "bullets": [
+          "Step 1, access and scope: note who owns the account and billing, the date range you will review and a comparable earlier period.",
+          "Step 2, conversions: list every conversion action, mark which are primary (used for bidding) and which are secondary, and trace a few back to real enquiries or orders.",
+          "Step 3, spend by campaign: rank campaigns by cost and set the verified conversions beside them, not the reported totals.",
+          "Step 4, search terms: read the terms that spent the most and label them relevant, uncertain or irrelevant.",
+          "Step 5, settings: check networks, locations, schedules, bidding strategy and whether budgets limit delivery.",
+          "Step 6, ads and assets: check that each ad group’s messages match the searches it receives and the page it sends people to.",
+          "Step 7, landing pages: complete the enquiry or purchase yourself on a phone and confirm the conversion fires once.",
+          "Step 8, write it up: record each finding with evidence, likely impact, effort and an owner, then order the fixes."
+        ]
+      },
+      {
+        "title": "Campaign settings worth checking",
+        "body": [
+          "Several settings can quietly change where money goes. In a Search campaign, check whether Search Partners and the Display Network are included and whether that was a deliberate choice. Under locations, the difference between targeting people in an area and people showing interest in it can send ads to searchers who could never become customers of a local business.",
+          "Compare the bidding strategy with the conversion data it relies on. Automated bidding towards conversions needs enough reliable conversion volume to learn from; with very few verified conversions, or with the wrong actions marked primary, it optimises towards noise. Also look at auto-applied recommendations and the change history so you know which edits the platform made on its own."
+        ],
+        "bullets": [
+          "Networks: Search Partners and Display expansion, on or off by decision rather than default.",
+          "Locations: presence versus interest, exclusions and the areas that actually received clicks.",
+          "Schedule and devices: whether hours match when someone can answer the phone or enquiry.",
+          "Bidding: strategy, targets and whether the conversion signal behind them has been verified.",
+          "Budgets: campaigns limited by budget, and whether the limited ones are the valuable ones.",
+          "Auto-applied recommendations and change history: what changed, when and by whom."
+        ]
+      },
+      {
+        "title": "Ads, assets and Quality Score signals",
+        "body": [
+          "Responsive search ads can use up to fifteen headlines and four descriptions, so review which combinations actually served rather than the list alone. Ad Strength is guidance about variety, not a performance measure; a “Poor” rating on a well-performing ad is not a reason to rewrite it.",
+          "Quality Score is reported at keyword level from three components: expected click-through rate, ad relevance and landing page experience. Treat them as diagnostic hints. A low landing page experience score, for example, points you to check speed on mobile and whether the page answers the search, not to chase the number itself."
+        ]
+      },
+      {
+        "title": "A Google Ads audit template you can copy",
+        "body": [
+          "A spreadsheet with one row per finding is enough. Keep the columns below and the audit becomes a working list rather than a report that is read once. The example row is illustrative, not taken from a client account."
+        ],
+        "bullets": [
+          "Area: tracking, search terms, settings, ads, landing page or budget.",
+          "Finding: what you saw, written specifically enough to verify.",
+          "Evidence: the report, date range and numbers that show it.",
+          "Likely impact and effort: high, medium or low for each.",
+          "Action and owner: the change, and who can make it.",
+          "Validation: how and when you will check that the change worked.",
+          "Example: “Tracking | Lead form counted twice (tag and Analytics import) | Conversions report, last 30 days | High impact, low effort | Remove the duplicate import as a primary action, owner: account manager | Compare reported leads with inbox after two weeks.”"
+        ]
+      },
+      {
+        "title": "How often to audit, and what automated graders miss",
+        "body": [
+          "Run a full audit when you take over an account, before a large budget change and after a site or tracking change. Between those, a monthly look at conversions, search terms and budget-limited campaigns catches most drift.",
+          "Automated graders and the platform’s own recommendations are useful for spotting settings, but they cannot tell whether a conversion is a real customer, whether a search matches what you sell or whether the phone was answered. That judgement is the part of an audit worth paying attention to, whoever does it."
+        ]
+      },
+      {
         "title": "Related reading and services",
         "body": [],
         "links": [
@@ -850,11 +948,15 @@
           {
             "title": "Google Ads management",
             "path": "/service/google-ads"
+          },
+          {
+            "title": "Google Ads & PPC audit by ReddyStack",
+            "path": "/ppc-audit"
           }
         ]
       }
     ],
-    "updatedAt": "2026-09-22"
+    "updatedAt": "2026-09-26"
   },
   {
     "path": "/blog/google-ads/google-ads-cost-india",
@@ -4558,7 +4660,7 @@
         "body": [],
         "links": [
           {
-            "title": "Facebook Ads Audit Checklist",
+            "title": "Facebook Ads Audit Checklist: Meta Ads Account Review",
             "path": "/blog/meta-ads/facebook-ads-audit-checklist"
           },
           {
@@ -4616,7 +4718,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-09-22"
+    "updatedAt": "2026-09-26"
   },
   {
     "path": "/blog/google-ads",
@@ -4646,7 +4748,7 @@
         "body": [],
         "links": [
           {
-            "title": "Google Ads Audit Checklist",
+            "title": "Google Ads Audit Checklist and Template",
             "path": "/blog/google-ads/google-ads-audit-checklist"
           },
           {
@@ -4704,7 +4806,7 @@
         ]
       }
     ],
-    "updatedAt": "2026-09-22"
+    "updatedAt": "2026-09-26"
   },
   {
     "path": "/blog/ad-creatives",

@@ -60,7 +60,7 @@
 - no testimonials or ratings; diagnostic tabs support arrow, Home and End keys
 
 ## Service Detail
-- `/service/[slug]` and the 13 intent pages share `src/components/views/ServiceDetailView.tsx`
+- `/service/[slug]` and the 14 intent pages share `src/components/views/ServiceDetailView.tsx`
 - each service has an animated illustration in `src/components/illustrations/ServiceIllustrations.tsx`
 
 ## Blog

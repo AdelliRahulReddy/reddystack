@@ -66,8 +66,9 @@ export default function ServiceDetailView({ service, previous, next, illustratio
       <PageHero
         crumbs={[{ name: 'Home', href: '/' }, { name: 'Services', href: '/service' }, { name: service.title }]}
         eyebrow={service.subtitle}
-        title={service.title}
-        size="lg"
+        title={service.heading ?? service.title}
+        // Sentence-length headings read better one size down.
+        size={(service.heading ?? service.title).length > 28 ? 'md' : 'lg'}
         intro={<><p>{service.introPrimary}</p><p className="mt-4 text-[0.92em] text-faint">{service.introSecondary}</p></>}
         actions={
           <>

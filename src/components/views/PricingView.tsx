@@ -69,6 +69,11 @@ export default function PricingView({ faqItems }: { faqItems: FaqItem[] }) {
         <div className="site-wrap">
           <SectionHead id="eng-title" label="Engagements" title="Three shapes. One method." intro="Proof Sprint, Stack Build, or ongoing improvement, each quoted with a defined problem, scope, evidence plan, and ownership." />
           <EngagementCards source="/pricing" />
+          <p className="mt-6 text-[15.5px] text-muted-foreground">
+            A common Proof Sprint: the{' '}
+            <Link href="/ppc-audit" className="text-lime underline decoration-lime/40 underline-offset-4 hover:decoration-lime">Google Ads &amp; PPC audit</Link>
+            , which checks tracking, search terms and settings before any budget changes.
+          </p>
 
           <div className="mt-[clamp(40px,5vw,64px)] overflow-x-auto rounded-[28px] border border-line">
             <table className="w-full min-w-[720px] border-collapse text-left">

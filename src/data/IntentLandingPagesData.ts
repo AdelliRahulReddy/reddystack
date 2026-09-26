@@ -4,6 +4,7 @@ import type { StaticImageData } from "next/image";
 import heroWebsite from "@/assets/img/portfolio/port-inner-up-1.jpg";
 import heroAutomation from "@/assets/img/portfolio/port-inner-up-5.jpg";
 import heroMvp from "@/assets/img/portfolio/port-inner-up-2.jpg";
+import shareCard from "@/assets/img/social/reddystack-share-v4.png";
 import {
   buildCanonicalUrl,
   buildOpenGraph,
@@ -55,6 +56,8 @@ type IntentLandingPage = {
   relatedBlogSlug: string;
   relatedProjectSlug: string;
   keywords?: string[];
+  /** Last real content edit (YYYY-MM-DD); used by the sitemap. */
+  updatedAt?: string;
   heroImage: StaticImageData;
   accent: {
     primary: string;
@@ -1366,6 +1369,125 @@ export const intentLandingPages: IntentLandingPage[] = [
       glow: "rgba(25, 179, 241, 0.24)",
     },
   },
+  {
+    slug: "ppc-audit",
+    path: "/ppc-audit",
+    navLabel: "Google Ads & PPC Audit",
+    metaTitle: "Google Ads & PPC Audit Service | ReddyStack",
+    metaDescription:
+      "A founder-led Google Ads and PPC account audit: conversion tracking, search terms, structure, bidding, ads and landing pages, with a prioritised fix list.",
+    eyebrow: "Paid search and Meta account audits",
+    shortTitle: "PPC audit",
+    headline: "A Google Ads and PPC audit that ends in decisions, not a slide deck.",
+    intro:
+      "Rahul reviews your Google Ads account, and Meta Ads if you run them, from the business outcome back to the keyword and the ad. You get a written issue register ranked by likely impact, the evidence behind each finding and a clear next step.",
+    heroHighlights: [
+      "Conversion tracking checked against real enquiries or orders",
+      "Search terms, negatives, structure, bidding and budget pacing",
+      "A prioritised fix list you can act on with or without ReddyStack",
+    ],
+    fitTitle: "When an account audit is the right first step",
+    fitIntro:
+      "An audit fits when spend is running but you cannot say which part is working, or when results changed and nobody can explain why.",
+    fitBullets: [
+      "You spend on Google Ads or Meta Ads and cannot connect spend to real enquiries or sales",
+      "Cost per lead rose, lead quality dropped or the account was handed over without notes",
+      "You want an independent second opinion before changing agency, budget or strategy",
+      "You manage the account yourself and want a checked list of what to fix first",
+    ],
+    includedTitle: "What the audit covers",
+    includedBullets: [
+      "Conversion tracking: which actions are counted, duplicates, missing events and whether they match your records",
+      "Search terms and negative keywords: irrelevant queries, wasted spend patterns and match-type choices",
+      "Account and campaign structure, bidding strategy, budgets and delivery settings",
+      "Ads, assets and offers: message match between the query, the ad and the page",
+      "Landing pages: speed on mobile, clarity of the offer and the route to an enquiry",
+      "Meta Ads (optional): pixel and Conversions API setup, audiences, creative fatigue and placements",
+      "A written issue register ranked by likely impact and effort, with the evidence for each finding",
+    ],
+    processTitle: "How the audit runs",
+    processSteps: [
+      {
+        label: "01. Access and goal",
+        text: "You grant read access through the platform's user permissions (never passwords) and share what a good lead or sale looks like, plus a sample of recent enquiries or orders.",
+      },
+      {
+        label: "02. Review",
+        text: "Rahul checks tracking first, then spend, search terms, structure, ads and pages, recording evidence for every finding rather than general best practice.",
+      },
+      {
+        label: "03. Findings",
+        text: "You receive the issue register, separating urgent repairs such as broken tracking from experiments worth testing later.",
+      },
+      {
+        label: "04. Walkthrough",
+        text: "A call to go through the priorities and decide who makes the changes: your team, your current agency or ReddyStack as a scoped next step.",
+      },
+    ],
+    whyTitle: "Why tracking comes before optimisation",
+    whyParagraphs: [
+      "Most account changes rely on the conversion data. If a form view, a duplicate event or a click on a phone number is counted as a lead, automated bidding learns from the wrong signal and every later decision inherits the error. The audit therefore starts by comparing what the platform reports with what actually reached your inbox, CRM or checkout.",
+      "Wasted spend is usually visible in the search terms report rather than the keyword list. Queries for jobs, free alternatives, other locations or services you do not offer can take a meaningful share of a small budget. Those findings are listed with the date range they came from, so you can check them yourself.",
+      "An audit describes the account as it is; it does not promise a result. Some findings are clear repairs. Others are hypotheses that need a controlled test with enough traffic to learn from. The register keeps those two groups separate, and no lead volume, cost or revenue change is guaranteed.",
+      "The audit is written to be useful even if you never hire ReddyStack. If you continue with your current agency or manage the account yourself, the fix list and evidence travel with you. Your ad accounts stay in your name throughout.",
+    ],
+    pricingTitle: "Audit pricing",
+    pricingText:
+      "An audit is quoted as a fixed Proof Sprint once the scope is clear: which platforms, how many campaigns and whether landing pages and tracking implementation are included. Advertising spend is never part of the fee, and fixing the issues found is a separate, optional scope.",
+    finalCtaTitle: "Find out what your ad spend is actually doing.",
+    finalCtaText:
+      "Share which platforms you advertise on, your monthly spend range and what a good lead or sale looks like. Rahul will say whether an audit is the right first step.",
+    faqItems: [
+      {
+        question: "What is a Google Ads audit?",
+        answer:
+          "A structured review of a Google Ads account that checks conversion tracking, search terms, structure, bidding, budgets, ads and landing pages against the business goal, and records which issues to fix first and why.",
+        some_features: ["Tracking", "Search Terms", "Priorities"],
+      },
+      {
+        question: "What access do you need for a PPC audit?",
+        answer:
+          "Read access to the ad accounts and, where possible, Google Analytics or your CRM, granted through each platform's user permissions. Never send passwords. A sample of recent enquiries or orders helps check tracking against reality.",
+        some_features: ["Read Access", "Analytics", "No Passwords"],
+      },
+      {
+        question: "Can you audit Facebook and Instagram (Meta) ads too?",
+        answer:
+          "Yes. The Meta part checks pixel and Conversions API events, audiences, placements, creative fatigue and whether the ad promise matches the landing page.",
+        some_features: ["Meta Pixel", "Conversions API", "Creative"],
+      },
+      {
+        question: "Will an audit lower my cost per lead?",
+        answer:
+          "No audit can guarantee that. It shows where spend and tracking are going wrong and which changes are worth testing. Results depend on the fixes made, the offer, the market and the follow-up of each lead.",
+        some_features: ["No Guarantees", "Evidence", "Testing"],
+      },
+      {
+        question: "Do I have to hire ReddyStack to fix the issues?",
+        answer:
+          "No. The findings are written so your team or current agency can act on them. Implementation by ReddyStack is a separate scope if you want it.",
+        some_features: ["Independent", "Your Team", "Optional Scope"],
+      },
+    ],
+    relatedServiceSlug: "google-ads",
+    relatedBlogSlug: "",
+    relatedProjectSlug: "",
+    keywords: [
+      "ppc audit",
+      "google ads audit",
+      "google ads audit service",
+      "google ads account audit",
+      "paid search audit",
+      "facebook ads audit",
+    ],
+    updatedAt: "2026-09-26",
+    heroImage: shareCard,
+    accent: {
+      primary: "#d2ed7a",
+      secondary: "#141318",
+      glow: "rgba(210, 237, 122, 0.24)",
+    },
+  },
 ];
 
 export type IntentLandingPageSlug = (typeof intentLandingPages)[number]["slug"];
@@ -1398,6 +1520,8 @@ export function buildIntentServiceDetail(page: IntentLandingPage): ServiceDetail
     contactService: page.relatedServiceSlug,
     subtitle: page.eyebrow,
     title: page.navLabel,
+    heading: page.headline,
+    updatedAt: page.updatedAt,
     introPrimary: page.intro,
     introSecondary: page.fitIntro,
     overviewPrimary: page.whyParagraphs[0] || page.pricingText,
@@ -1439,6 +1563,7 @@ export function buildIntentServiceDetail(page: IntentLandingPage): ServiceDetail
     relatedLinks: [
       ...(page.relatedServiceSlug === 'seo-websites' ? [{ title: 'Website development guides and checklists', path: '/blog/website-development' }] : []),
       ...(page.relatedServiceSlug === 'seo-local-seo' ? [{ title: 'SEO & Local SEO guides', path: '/blog/seo-local-seo' }] : []),
+      ...(page.slug === 'ppc-audit' ? [{ title: 'Google Ads audit checklist', path: '/blog/google-ads/google-ads-audit-checklist' }, { title: 'Facebook Ads audit checklist', path: '/blog/meta-ads/facebook-ads-audit-checklist' }] : []),
       ...(relatedBlog ? [{ title: 'Guide: ' + relatedBlog.title, path: relatedBlog.path }] : []),
       ...(project ? [{ title: 'Development example: ' + project.title, path: project.path }] : []),
     ],

@@ -53,7 +53,7 @@ export default function PageHero({ eyebrow, title, accent, intro, actions, aside
               {eyebrow}
             </p>
           )}
-          <h1 className={cn(size === 'lg' ? 'text-[clamp(40px,6vw,92px)]' : 'text-[clamp(36px,4.8vw,68px)]', 'max-w-[18ch]')}>
+          <h1 className={cn(size === 'lg' ? 'max-w-[18ch] text-[clamp(40px,6vw,92px)]' : 'max-w-[24ch] text-[clamp(34px,4.2vw,60px)]')}>
             <Title title={title} accent={accent} />
           </h1>
           {intro && (

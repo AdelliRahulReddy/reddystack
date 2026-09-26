@@ -29,6 +29,8 @@ export type ServiceDetail = {
   contactService?: string;
   subtitle: string;
   title: string;
+  /** Descriptive H1 for search; falls back to `title`. */
+  heading?: string;
   introPrimary: string;
   introSecondary: string;
   overviewPrimary: string;
@@ -100,8 +102,9 @@ export const serviceDetailData: ServiceDetail[] = [
         ]
       }
     ],
-    updatedAt: "2026-09-22",
   "slug": "meta-ads",
+  "updatedAt": "2026-09-26",
+  "heading": "Facebook and Instagram ads, run by a Meta Ads specialist.",
   "path": "/service/meta-ads",
   "subtitle": "Facebook & Instagram Campaigns",
   "title": "Meta Ads",
@@ -128,9 +131,9 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Reach potential customers on Facebook and Instagram with campaigns built around your offer and business goals.",
-  "metaTitle": "Meta Ads Management Services | ReddyStack",
-  "relatedLinks": [{ "title": "Meta Ads guides and checklists", "path": "/blog/meta-ads" }],
-  "metaDescription": "Reach potential customers on Facebook and Instagram with campaigns built around your offer and business goals.",
+  "metaTitle": "Facebook & Instagram Ads Specialist (Meta Ads) | ReddyStack",
+  "relatedLinks": [{ "title": "Meta Ads guides and checklists", "path": "/blog/meta-ads" }, { "title": "Google Ads & PPC audit (includes Meta Ads)", "path": "/ppc-audit" }],
+  "metaDescription": "Founder-led Facebook and Instagram ads: a Meta Ads specialist who plans, launches and reviews campaigns around your offer, tracking and real enquiries.",
   "presentation": {
     "showVisuals": false,
     "showSidebar": true,
@@ -214,8 +217,9 @@ export const serviceDetailData: ServiceDetail[] = [
         ]
       }
     ],
-    updatedAt: "2026-09-22",
   "slug": "google-ads",
+  "updatedAt": "2026-09-26",
+  "heading": "Google Ads management from a founder-led specialist.",
   "path": "/service/google-ads",
   "subtitle": "Campaign Setup & Optimisation",
   "title": "Google Ads",
@@ -242,9 +246,9 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Connect with people looking for your products or services through Google Ads campaigns and conversion tracking.",
-  "metaTitle": "Google Ads Management Services | ReddyStack",
-  "relatedLinks": [{ "title": "Google Ads guides and checklists", "path": "/blog/google-ads" }],
-  "metaDescription": "Connect with people looking for your products or services through Google Ads campaigns and conversion tracking.",
+  "metaTitle": "Google Ads Specialist & Consultant for Small Businesses | ReddyStack",
+  "relatedLinks": [{ "title": "Google Ads & PPC audit", "path": "/ppc-audit" }, { "title": "Google Ads guides and checklists", "path": "/blog/google-ads" }],
+  "metaDescription": "A founder-led Google Ads specialist for small businesses: search campaigns, conversion tracking and search-term reviews tied to real enquiries.",
   "presentation": {
     "showVisuals": false,
     "showSidebar": true,
@@ -328,8 +332,9 @@ export const serviceDetailData: ServiceDetail[] = [
         ]
       }
     ],
-    updatedAt: "2026-09-22",
   "slug": "ad-creatives",
+  "updatedAt": "2026-09-26",
+  "heading": "Ad creatives built to test one message against another.",
   "path": "/service/ad-creatives",
   "subtitle": "Design, Editing, Copy & Scripts",
   "title": "Ad Creatives",
@@ -356,9 +361,9 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Turn your offer into ad images, promotional designs, edited videos, and copy for your campaigns.",
-  "metaTitle": "Ad Creative Services | ReddyStack",
+  "metaTitle": "Ad Creative Services: Static, Video & Copy | ReddyStack",
   "relatedLinks": [{ "title": "Ad creative briefs, scripts and examples", "path": "/blog/ad-creatives" }],
-  "metaDescription": "Turn your offer into ad images, promotional designs, edited videos, and copy for your campaigns.",
+  "metaDescription": "Ad creative services for Meta and Google campaigns: static ads, edited video and copy variations made to test one message against another.",
   "presentation": {
     "showVisuals": false,
     "showSidebar": true,
@@ -442,8 +447,9 @@ export const serviceDetailData: ServiceDetail[] = [
         ]
       }
     ],
-    updatedAt: "2026-09-22",
   "slug": "ai-ugc-videos",
+  "updatedAt": "2026-09-26",
+  "heading": "AI UGC-style video ads for your product or service.",
   "path": "/service/ai-ugc-videos",
   "subtitle": "AI Presenters, Demos & Explainers",
   "title": "AI UGC-Style Videos",
@@ -470,9 +476,9 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Explain your product or service through conversational AI-presenter videos designed for ads and social content.",
-  "metaTitle": "AI UGC-Style Video Production Services | ReddyStack",
+  "metaTitle": "AI UGC Video Ads & AI Presenter Videos | ReddyStack",
   "relatedLinks": [{ "title": "AI video workflows and production checklists", "path": "/blog/ai-ugc-videos" }],
-  "metaDescription": "Explain your product or service through conversational AI-presenter videos designed for ads and social content.",
+  "metaDescription": "AI UGC-style video ads and AI presenter videos for your product or service, scripted for ads and social, with AI use disclosed where required.",
   "presentation": {
     "showVisuals": false,
     "showSidebar": true,
@@ -521,8 +527,9 @@ export const serviceDetailData: ServiceDetail[] = [
 },
 {
   "slug": "seo-local-seo",
+  "heading": "Local SEO services for small businesses.",
   "path": "/service/seo-local-seo",
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-26",
   "subtitle": "Website Optimisation & Local Visibility",
   "title": "SEO & Local SEO",
   "introPrimary": "Make it easier for customers to find your services and send an enquiry. Start with a review of your website, search visibility, and Google Business Profile where your business is eligible.",
@@ -548,7 +555,7 @@ export const serviceDetailData: ServiceDetail[] = [
     "for your business"
   ],
   "highlightText": "Help customers find your business through website optimisation and Google Business Profile management.",
-  "metaTitle": "SEO & Search Visibility Services | ReddyStack",
+  "metaTitle": "Local SEO Consultant & Services for Small Businesses | ReddyStack",
   "relatedLinks": [
     {
       "title": "Google Business Profile optimisation checklist",
@@ -567,7 +574,7 @@ export const serviceDetailData: ServiceDetail[] = [
       "path": "/about/rahul-reddy-adelli"
     }
   ],
-  "metaDescription": "Proof-first SEO and search visibility work covering technical audits, service pages, eligible Google Business Profiles, baselines, and clear reporting.",
+  "metaDescription": "Local SEO services for small businesses from a founder-led consultant: Google Business Profile, service pages, technical fixes and clear reporting.",
   "presentation": {
     "showVisuals": false,
     "showSidebar": true,
@@ -732,8 +739,9 @@ export const serviceDetailData: ServiceDetail[] = [
         ]
       }
     ],
-    updatedAt: "2026-09-22",
     slug: 'seo-websites',
+    updatedAt: '2026-09-26',
+    heading: 'SEO-friendly website development.',
     path: '/service/seo-websites',
     subtitle: 'Business Websites, Online Stores & Landing Pages',
     title: 'Website Development',
@@ -764,7 +772,7 @@ export const serviceDetailData: ServiceDetail[] = [
     highlightTitle: ['Search-ready', 'websites'],
     highlightText:
       'Built for brands that need visibility, clarity, and stronger conversion from their online presence.',
-    metaTitle: 'SEO-Ready Website Development | ReddyStack',
+    metaTitle: 'SEO-Friendly Website Development | ReddyStack',
     relatedLinks: [{ title: 'Website development briefs and launch checklists', path: '/blog/website-development' }, { title: 'Business website development services', path: '/website-development' }, { title: 'Development example: KalyamRam portfolio website', path: '/portfolio/kalyamram' }, { title: 'Development example: ReelsXpress booking platform', path: '/portfolio/reelsxpress' }],
     metaDescription:
       'Proof-first website development by ReddyStack for companies that need responsive pages, search-ready structure, performance, tracking, and clear conversion paths.',
@@ -1084,8 +1092,9 @@ export const serviceDetailData: ServiceDetail[] = [
         ]
       }
     ],
-    updatedAt: "2026-09-22",
     slug: 'ai-automations',
+    updatedAt: '2026-09-26',
+    heading: 'AI automation consulting and builds for small teams.',
     path: '/service/ai-automations',
     subtitle: 'Workflow Systems',
     title: 'AI Automations',
@@ -1116,7 +1125,7 @@ export const serviceDetailData: ServiceDetail[] = [
     highlightTitle: ['Practical', 'automation systems'],
     highlightText:
       'Built to reduce manual work and help lean teams move faster with better operational flow.',
-    metaTitle: 'AI Automation Services | ReddyStack',
+    metaTitle: 'AI Automation Consultant & Services | ReddyStack',
     metaDescription:
       'AI automation services by ReddyStack for small teams that need workflow design, prompt engineering, lead handling, and practical business automation systems.',
     faqItems: [

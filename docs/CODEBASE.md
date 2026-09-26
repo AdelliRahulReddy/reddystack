@@ -29,13 +29,13 @@ The portfolio documents development work, including client projects and internal
 | Homepage FAQs and FAQ schema input | `src/data/HomeFaqData.ts` |
 | Eight historical articles | `src/data/BlogPostsData.ts` |
 | 57 guides, six topic hubs, founder profile | `src/data/seo-pages.json`, `SeoPagesData.ts` |
-| 13 intent landing pages | `src/data/IntentLandingPagesData.ts` |
+| 14 intent landing pages | `src/data/IntentLandingPagesData.ts` |
 | Six development projects | `src/data/PortfolioProjectsData.ts` |
 | Privacy, terms, revision policy | `src/data/TrustPagesData.ts` |
 
 ## Routes
 
-The sitemap has 117 canonical public URLs: 110 content URLs (ten core/trust pages, nine service details, 13 intent pages, six projects, eight historical articles, 57 guides, six hubs and a founder profile) plus seven market pages.
+The sitemap has 118 canonical public URLs: 111 content URLs (ten core/trust pages, nine service details, 14 intent pages, six projects, eight historical articles, 57 guides, six hubs and a founder profile) plus seven market pages.
 
 - All pages live in the `src/app/(site)` route group; the group name is not part of the URL.
 - Core: `/`, `/about`, `/service`, `/portfolio`, `/blog`, `/contact`, `/pricing`, `/privacy-policy`, `/terms`, `/revision-policy`.

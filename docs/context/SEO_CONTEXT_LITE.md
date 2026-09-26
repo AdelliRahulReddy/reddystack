@@ -41,7 +41,7 @@ Reddystack is Rahul Reddy Adelli's independent digital service business in Hyder
 - homepage FAQ schema from visible FAQ data
 - service FAQ schema from visible service data
 - blog/service/portfolio detail metadata and page schema
-- 110 canonical public URLs across core pages, services, intent pages, portfolio, articles, topic hubs, and the founder profile; no current location pages
+- 111 canonical content URLs (plus 7 market pages) across core pages, services, intent pages, portfolio, articles, topic hubs, and the founder profile; no current location pages
 - six `/blog/{topic}` hubs with nested guides from `seo-pages.json`
 - founder profile at `/about/rahul-reddy-adelli`
 - separate founder and business profiles in Organization schema

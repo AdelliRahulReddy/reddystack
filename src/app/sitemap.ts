@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ...serviceDetailData.map((service) => ({ path: service.path, lastModified: service.updatedAt || sitemapLastModified, changeFrequency: "monthly" as const, priority: 0.8 })),
       ...intentLandingPages.map((page) => ({
         path: page.path,
-        lastModified: sitemapLastModified,
+        lastModified: page.updatedAt || sitemapLastModified,
         changeFrequency: "monthly" as const,
         priority: page.slug === "website-development-services" ? 0.86 : 0.78,
       })),

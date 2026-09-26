@@ -11,7 +11,7 @@ export const siteSeo = {
   logoPath: "/assets/img/logo/reddystack-symbol.png",
   ogImagePath: "/assets/img/social/reddystack-proof-first.png",
   ogImageAlt: "ReddyStack — One problem. One connected stack. Proof before scale.",
-  contentUpdatedAt: "2026-09-22",
+  contentUpdatedAt: "2026-09-26",
 } as const;
 
 export const siteConfig = {
@@ -74,8 +74,9 @@ type PageSeoConfig = {
 
 export const pageSeo = {
   home: {
-    title: siteSeo.defaultTitle,
-    description: siteSeo.defaultDescription,
+    title: "ReddyStack | Founder-Led Growth Marketing for Small Businesses",
+    description:
+      "Founder-led growth marketing for small businesses: websites, local SEO, Meta and Google Ads, ad creative and tracking, connected around one growth problem.",
     path: "/",
   },
   about: {
@@ -85,9 +86,9 @@ export const pageSeo = {
     path: "/about",
   },
   services: {
-    title: "Capabilities | ReddyStack Digital Growth Studio",
+    title: "Digital Marketing Services for Small Businesses | ReddyStack",
     description:
-      "Explore the capabilities ReddyStack combines around one growth problem: websites, search, paid acquisition, creative, tracking, and automation.",
+      "Digital marketing services for small businesses, combined around one growth problem: websites, SEO, Meta and Google Ads, ad creative, tracking and automation.",
     path: "/service",
   },
   portfolio: {

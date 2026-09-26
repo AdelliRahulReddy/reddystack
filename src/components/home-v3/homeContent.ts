@@ -87,6 +87,7 @@ export const capabilities: Capability[] = [
     links: [
       { title: 'Meta Ads', href: '/service/meta-ads' },
       { title: 'Google Ads', href: '/service/google-ads' },
+      { title: 'PPC audit', href: '/ppc-audit' },
     ],
   },
   {
