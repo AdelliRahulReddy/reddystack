@@ -31,10 +31,11 @@ const GoogleAnalytics = () => {
     getAnalyticsEnabled,
     getServerAnalyticsEnabled,
   );
-  const sentPageViews = useRef(new Set<string>());
+  // Deduplicate the current navigation, but count a later return to the same page.
+  const lastPageView = useRef<string | null>(null);
 
   useEffect(() => {
-    if (!analyticsEnabled || sentPageViews.current.has(pathname)) {
+    if (!analyticsEnabled || lastPageView.current === pathname) {
       return;
     }
 
@@ -43,7 +44,7 @@ const GoogleAnalytics = () => {
         return false;
       }
 
-      if (sentPageViews.current.has(pathname)) {
+      if (lastPageView.current === pathname) {
         return true;
       }
 
@@ -52,7 +53,7 @@ const GoogleAnalytics = () => {
         page_location: window.location.href,
         page_title: document.title,
       });
-      sentPageViews.current.add(pathname);
+      lastPageView.current = pathname;
       return true;
     };
 
