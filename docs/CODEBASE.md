@@ -68,7 +68,7 @@ Every service has an animated SVG illustration (`ServiceIllustrations.tsx`); the
 - These limits are per process and reset on cold starts. They are not a distributed quota; configure a shared edge limiter if traffic scales or abuse spans instances.
 - Errors log an event, request ID and failure category without email addresses, message text, API keys or raw provider messages. The response includes the request ID for investigation.
 - Failed sends retain form values and expose a direct email fallback. No enquiry is persisted in a database or browser storage. Resend acceptance is not proof of final mailbox delivery; monitor provider delivery events.
-- Google Analytics uses `NEXT_PUBLIC_GA_MEASUREMENT_ID` or the existing default ID. It tracks page views and contact actions. Production delivery/analytics must be checked separately from local rendering.
+- Google Analytics requires `NEXT_PUBLIC_GA_MEASUREMENT_ID` and runs only on the production ReddyStack hostnames. It tracks page views and contact actions. Production delivery/analytics must be checked separately from local rendering.
 - Service and intent-page quote links pass an editable service choice and a source pathname to `/contact`; query variants retain the `/contact` canonical. External URLs and query strings are excluded from source attribution.
 - Accepted enquiries include a shared request ID in the response and email. `contact_form_submit` carries `lead_id`, `source_page`, service and budget, without the name, email or message. This means provider acceptance, not a qualified lead, delivered email or sale. Contact-link clicks are weaker intent signals.
 
