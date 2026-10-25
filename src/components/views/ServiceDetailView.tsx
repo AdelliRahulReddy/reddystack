@@ -32,7 +32,7 @@ function BulletList({ items }: { items: string[] }) {
     <ul className="mt-5 grid gap-2.5">
       {items.map((item) => (
         <li key={item} className="flex gap-3 text-text/90">
-          <Check aria-hidden="true" className="mt-1 size-4 flex-none text-action" />
+          <Check aria-hidden="true" className="mt-1 size-4 flex-none text-action-text" />
           <span>{item}</span>
         </li>
       ))}
@@ -86,7 +86,7 @@ export default function ServiceDetailView({ service, previous, next, illustratio
             ))}
           </div>
 
-          <aside className="h-fit rounded-[var(--radius-panel)] bg-surface p-6 sm:p-7 min-[1025px]:sticky min-[1025px]:top-[calc(var(--header-h)+24px)]" aria-label="Summary">
+          <aside className="h-fit rounded-[var(--radius-panel)] shadow-card bg-surface p-6 sm:p-7 min-[1025px]:sticky min-[1025px]:top-[calc(var(--header-h)+24px)]" aria-label="Summary">
             <p className="text-small text-muted">{service.sideTitle}</p>
             <h2 className="mt-2 text-h3 font-semibold first-letter:uppercase">{service.highlightTitle[0]} {service.highlightTitle[1]}</h2>
             <p className="mt-2 text-muted">{service.highlightText}</p>
@@ -126,7 +126,7 @@ export default function ServiceDetailView({ service, previous, next, illustratio
               <ul className="grid gap-2">
                 {guideLinks.map((l) => (
                   <li key={l.path}>
-                    <Link href={l.path} className="block rounded-[var(--radius-card)] bg-surface px-5 py-4 font-semibold text-text transition-colors hover:bg-surface-2 hover:text-action sm:px-6">
+                    <Link href={l.path} className="block rounded-[var(--radius-card)] shadow-card bg-surface px-5 py-4 font-semibold text-text transition-colors hover:bg-surface-2 hover:text-action-text sm:px-6">
                       {l.title}
                     </Link>
                   </li>
@@ -147,9 +147,9 @@ export default function ServiceDetailView({ service, previous, next, illustratio
       <nav aria-label="More services" className="section-tight">
         <div className="site-wrap grid gap-3 min-[761px]:grid-cols-2">
           {[{ s: previous, dir: 'Previous service' }, { s: next, dir: 'Next service' }].map(({ s, dir }) => (
-            <Link key={dir} href={s.path} className="group/nx rounded-[var(--radius-card)] bg-surface p-6 transition-colors hover:bg-surface-2">
+            <Link key={dir} href={s.path} className="group/nx rounded-[var(--radius-card)] shadow-card bg-surface p-6 transition-colors hover:bg-surface-2">
               <span className="text-small text-muted">{dir}</span>
-              <span className="mt-1 block text-h3 font-semibold group-hover/nx:text-action">{s.title}</span>
+              <span className="mt-1 block text-h3 font-semibold group-hover/nx:text-action-text">{s.title}</span>
               <span className="mt-1 block text-[15px] text-muted">{s.subtitle}</span>
             </Link>
           ))}

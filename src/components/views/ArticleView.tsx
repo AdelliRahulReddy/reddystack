@@ -51,7 +51,7 @@ function readingMinutes(a: ArticleData) {
   return Math.max(1, Math.round(text.split(/\s+/).length / 220));
 }
 
-const cardLink = 'block rounded-[var(--radius-card)] bg-surface px-5 py-4 font-semibold text-text transition-colors hover:bg-surface-2 hover:text-action';
+const cardLink = 'block rounded-[var(--radius-card)] shadow-card bg-surface px-5 py-4 font-semibold text-text transition-colors hover:bg-surface-2 hover:text-action-text';
 
 /** Reading layout for guides, blog posts and policies: breadcrumbs, title, contents, body, related, enquiry step. */
 export default function ArticleView({ article }: { article: ArticleData }) {
@@ -70,7 +70,7 @@ export default function ArticleView({ article }: { article: ArticleData }) {
           {article.intro && <p className="mt-5 max-w-[62ch] text-[clamp(17px,1.35vw,20px)] text-muted">{article.intro}</p>}
           <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-small text-muted">
             {article.byline && (
-              <Link href="/about/rahul-reddy-adelli" className="flex items-center gap-2.5 text-text hover:text-action">
+              <Link href="/about/rahul-reddy-adelli" className="flex items-center gap-2.5 text-text hover:text-action-text">
                 <Image src={portrait} alt="" width={32} height={32} className="size-8 rounded-full object-cover" />
                 Rahul Reddy Adelli
               </Link>
@@ -84,7 +84,7 @@ export default function ArticleView({ article }: { article: ArticleData }) {
 
       {article.heroImage && (
         <div className="site-wrap">
-          <Image src={article.heroImage} alt="" priority sizes="(max-width: 1240px) 100vw, 1240px" className="aspect-[2/1] w-full rounded-[var(--radius-panel)] object-cover" />
+          <Image src={article.heroImage} alt="" priority sizes="(max-width: 1240px) 100vw, 1240px" className="aspect-[2/1] w-full rounded-[var(--radius-panel)] shadow-card object-cover" />
         </div>
       )}
 
@@ -92,7 +92,7 @@ export default function ArticleView({ article }: { article: ArticleData }) {
         <div className={showToc ? 'grid gap-[clamp(28px,4vw,64px)] min-[1101px]:grid-cols-[240px_minmax(0,720px)]' : 'mx-auto max-w-[760px]'}>
           {showToc && (
             <aside className="min-[1101px]:sticky min-[1101px]:top-[calc(var(--header-h)+24px)] min-[1101px]:self-start" aria-label="Contents">
-              <details className="rounded-[var(--radius-card)] bg-surface p-4 min-[1101px]:hidden">
+              <details className="rounded-[var(--radius-card)] shadow-card bg-surface p-4 min-[1101px]:hidden">
                 <summary className="cursor-pointer font-semibold text-text">On this page</summary>
                 <TableOfContents items={toc} className="mt-3" />
               </details>
@@ -132,8 +132,8 @@ export default function ArticleView({ article }: { article: ArticleData }) {
             )}
 
             {article.relatedService && (
-              <p className="mt-10 rounded-[var(--radius-card)] bg-surface p-6 text-muted">
-                Need this for your business? <Link href={article.relatedService.path} className="font-semibold text-action underline underline-offset-4">See {article.relatedService.title}</Link>
+              <p className="mt-10 rounded-[var(--radius-card)] shadow-card bg-surface p-6 text-muted">
+                Need this for your business? <Link href={article.relatedService.path} className="font-semibold text-action-text underline underline-offset-4">See {article.relatedService.title}</Link>
               </p>
             )}
           </div>

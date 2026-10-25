@@ -12,7 +12,7 @@ const rows = [
 export default function ExampleReport() {
   return (
     <figure>
-      <div className="rounded-[var(--radius-card)] bg-surface-2 p-5 sm:p-6">
+      <div className="rounded-[var(--radius-card)] shadow-card bg-surface p-5 sm:p-6">
         <p className="font-semibold text-text">Weekly report</p>
         <dl className="mt-4 grid gap-2 text-[15px]">
           {rows.map(([label, value]) => (

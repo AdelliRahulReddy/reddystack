@@ -17,14 +17,14 @@ type Props =
 
 const hubs = seoPages.filter((p) => p.kind === 'hub' && p.parent === '/blog');
 const guidesOf = (hubPath: string) => seoPages.filter((p) => p.kind === 'guide' && p.parent === hubPath);
-const tile = 'block rounded-[var(--radius-card)] bg-surface p-5 transition-colors hover:bg-surface-2 sm:p-6';
+const tile = 'block rounded-[var(--radius-card)] shadow-card bg-surface p-5 transition-colors hover:bg-surface-2 sm:p-6';
 
 function SearchForm({ query = '' }: { query?: string }) {
   return (
     <form action="/blog" method="get" role="search" className="flex w-full max-w-[520px] items-center gap-2 rounded-full bg-surface p-1.5 pl-5">
       <label htmlFor="blog-q" className="sr-only">Search guides and articles</label>
       <input id="blog-q" type="search" name="q" defaultValue={query} maxLength={120} placeholder="Search: ads, budget, local search…" className="min-w-0 flex-1 bg-transparent text-base text-text placeholder:text-muted focus:outline-none" />
-      <button type="submit" className="min-h-11 rounded-full bg-action px-5 font-semibold text-action-ink hover:bg-text">Search</button>
+      <button type="submit" className="min-h-11 rounded-full bg-action px-5 font-semibold text-action-ink hover:bg-action-hover">Search</button>
     </form>
   );
 }
@@ -70,7 +70,7 @@ export default function BlogIndexView(props: Props) {
                 ))}
               </ul>
             ) : (
-              <div className="rounded-[var(--radius-card)] bg-surface p-8">
+              <div className="rounded-[var(--radius-card)] shadow-card bg-surface p-8">
                 <h2 className="text-h3 font-semibold">No articles found</h2>
                 <p className="mt-2 text-muted">Try another topic, or go back to all guides and articles.</p>
               </div>
@@ -117,12 +117,12 @@ export default function BlogIndexView(props: Props) {
           <ul className="grid gap-4 min-[761px]:grid-cols-2 min-[1181px]:grid-cols-3">
             {blogPosts.map((p) => (
               <li key={p.slug}>
-                <Link href={p.path} className="group/p flex h-full flex-col rounded-[var(--radius-card)] bg-ground p-4 transition-colors hover:bg-surface-2">
+                <Link href={p.path} className="group/p flex h-full flex-col rounded-[var(--radius-card)] shadow-card bg-ground p-4 transition-colors hover:bg-surface-2">
                   <div className="relative aspect-[16/10] overflow-hidden rounded-[14px] bg-surface-2">
                     <Image src={p.cardImage} alt="" fill sizes="(max-width: 760px) 100vw, (max-width: 1180px) 50vw, 33vw" className="object-cover" />
                   </div>
                   <span className="mt-4 text-small text-muted">{p.categoryLabel}, {p.readTime}</span>
-                  <span className="mt-1 font-semibold leading-snug text-text group-hover/p:text-action">{p.title}</span>
+                  <span className="mt-1 font-semibold leading-snug text-text group-hover/p:text-action-text">{p.title}</span>
                 </Link>
               </li>
             ))}
@@ -135,10 +135,10 @@ export default function BlogIndexView(props: Props) {
           <h2 id="all-guides" className="text-h2">Every guide</h2>
           <div className="grid gap-2">
             {hubs.map((h, i) => (
-              <details key={h.path} open={i === 0} className="rounded-[var(--radius-card)] bg-surface px-5 sm:px-6">
+              <details key={h.path} open={i === 0} className="rounded-[var(--radius-card)] shadow-card bg-surface px-5 sm:px-6">
                 <summary className="cursor-pointer py-4 font-semibold text-text">{h.title} ({guidesOf(h.path).length})</summary>
                 <ul className="grid gap-x-8 gap-y-2 pb-5 text-[15.5px] min-[641px]:grid-cols-2">
-                  {guidesOf(h.path).map((g) => <li key={g.path}><Link href={g.path} className="text-muted hover:text-action">{g.title}</Link></li>)}
+                  {guidesOf(h.path).map((g) => <li key={g.path}><Link href={g.path} className="text-muted hover:text-action-text">{g.title}</Link></li>)}
                 </ul>
               </details>
             ))}

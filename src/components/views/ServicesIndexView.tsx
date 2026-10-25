@@ -54,7 +54,7 @@ export default function ServicesIndexView() {
           <ul className="grid gap-2 min-[861px]:grid-cols-2">
             {intentLandingPages.map((p) => (
               <li key={p.path}>
-                <Link href={p.path} className="block rounded-[var(--radius-card)] bg-surface px-5 py-4 font-semibold text-text transition-colors hover:bg-surface-2 hover:text-action">
+                <Link href={p.path} className="block rounded-[var(--radius-card)] shadow-card bg-surface px-5 py-4 font-semibold text-text transition-colors hover:bg-surface-2 hover:text-action-text">
                   {p.navLabel}
                 </Link>
               </li>

@@ -27,7 +27,7 @@ export default function HomeHero({ bundle, guarantee }: { bundle: Bundle | null;
           )}
           {guarantee && (
             <p className="mt-3 flex max-w-[48ch] gap-2.5 text-text">
-              <ShieldCheck aria-hidden="true" className="mt-0.5 size-5 flex-none text-action" />
+              <ShieldCheck aria-hidden="true" className="mt-0.5 size-5 flex-none text-action-text" />
               <span>{guarantee}</span>
             </p>
           )}
@@ -41,7 +41,7 @@ export default function HomeHero({ bundle, guarantee }: { bundle: Bundle | null;
             src={portrait}
             alt="Rahul Reddy Adelli, founder of ReddyStack"
             sizes="(max-width: 960px) 1px, 420px"
-            className="aspect-[5/6] w-full rounded-[var(--radius-panel)] object-cover object-[center_25%]"
+            className="aspect-[5/6] w-full rounded-[var(--radius-panel)] shadow-card object-cover object-[center_25%]"
           />
           <figcaption className="mt-3 text-small text-muted">Rahul Reddy. You talk to him directly, from first message to report.</figcaption>
         </figure>

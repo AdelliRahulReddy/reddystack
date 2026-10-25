@@ -68,7 +68,7 @@ export default function HomeEnquiryForm({ whatsappNumber }: Props) {
         <span className="grid size-12 place-items-center rounded-full bg-lime text-lime-ink">✓</span>
         <h3 className="font-display text-[24px] font-semibold tracking-[-0.02em]">Message sent.</h3>
         <p className="text-muted-foreground">Thank you. Rahul reads every enquiry himself and will reply on WhatsApp or by phone.</p>
-        <button type="button" onClick={() => setSent(false)} className="text-[14px] text-lime underline underline-offset-4 hover:text-ivory">
+        <button type="button" onClick={() => setSent(false)} className="text-[14px] text-action-text underline underline-offset-4 hover:text-ivory">
           Send another enquiry
         </button>
       </div>
@@ -113,7 +113,7 @@ export default function HomeEnquiryForm({ whatsappNumber }: Props) {
       {error && (
         <p role="alert" className="rounded-2xl border border-coral/40 bg-coral/10 px-4 py-3 text-[15px] text-ivory">
           {error}{' '}
-          <a href={buildWhatsAppLink(whatsappNumber, '')} target="_blank" rel="noreferrer" className="font-medium text-lime underline underline-offset-4">
+          <a href={buildWhatsAppLink(whatsappNumber, '')} target="_blank" rel="noreferrer" className="font-medium text-action-text underline underline-offset-4">
             Message us on WhatsApp
           </a>
           .
@@ -128,7 +128,7 @@ export default function HomeEnquiryForm({ whatsappNumber }: Props) {
           href={buildWhatsAppLink(whatsappNumber, '')}
           target="_blank"
           rel="noreferrer"
-          className="text-[15px] font-medium text-lime underline underline-offset-4 hover:text-ivory"
+          className="text-[15px] font-medium text-action-text underline underline-offset-4 hover:text-ivory"
         >
           Or WhatsApp us directly
         </a>

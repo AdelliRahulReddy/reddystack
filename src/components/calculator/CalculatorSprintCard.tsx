@@ -9,14 +9,14 @@ export default function CalculatorSprintCard({ bundle, on, onToggle }: { bundle:
   return (
     <article
       id={`pick-${bundle.slug}`}
-      className={cn('scroll-mt-[calc(var(--header-h)+16px)] rounded-[var(--radius-card)] border bg-raised p-6 transition-colors sm:p-8', on ? 'border-lime' : 'border-lime/30')}
+      className={cn('scroll-mt-[calc(var(--header-h)+16px)] rounded-[var(--radius-card)] shadow-card border bg-raised p-6 transition-colors sm:p-8', on ? 'border-action-text' : 'border-action-text/30')}
     >
       <button type="button" aria-pressed={on} onClick={onToggle} className="flex w-full items-start gap-4 text-left">
         <span
           aria-hidden="true"
           className={cn(
             'grid size-6 flex-none place-items-center rounded-full border text-[13px] leading-none transition-colors',
-            on ? 'border-lime bg-lime text-lime-ink' : 'border-line-strong text-transparent',
+            on ? 'border-action-text bg-lime text-lime-ink' : 'border-line-strong text-transparent',
           )}
         >
           ✓
@@ -34,7 +34,7 @@ export default function CalculatorSprintCard({ bundle, on, onToggle }: { bundle:
       <p className="mt-3 text-[14.5px] text-muted-foreground">Ad spend is extra and paid directly to Meta, not to us.</p>
       {bundle.guarantee_text && (
         <p className="mt-4 border-t border-line pt-4 text-[14.5px] text-ivory">
-          <strong className="text-lime">Guarantee:</strong> {bundle.guarantee_text}
+          <strong className="text-action-text">Guarantee:</strong> {bundle.guarantee_text}
         </p>
       )}
     </article>

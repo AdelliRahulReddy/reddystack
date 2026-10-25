@@ -69,14 +69,14 @@ export default function CalculatorView({ bundles, services, options, settings, i
               <article
                 key={service.id}
                 id={`pick-${service.slug}`}
-                className={cn('scroll-mt-[calc(var(--header-h)+16px)] rounded-[var(--radius-card)] border bg-graphite p-6 transition-colors sm:p-8', on ? 'border-lime' : 'border-line')}
+                className={cn('scroll-mt-[calc(var(--header-h)+16px)] rounded-[var(--radius-card)] shadow-card border bg-graphite p-6 transition-colors sm:p-8', on ? 'border-action-text' : 'border-line')}
               >
                 <button type="button" aria-pressed={on} onClick={() => toggleService(service.id)} className="flex w-full items-start gap-4 text-left">
                   <span
                     aria-hidden="true"
                     className={cn(
                       'grid size-6 flex-none place-items-center rounded-full border text-[13px] leading-none transition-colors',
-                      on ? 'border-lime bg-lime text-lime-ink' : 'border-line-strong text-transparent',
+                      on ? 'border-action-text bg-lime text-lime-ink' : 'border-line-strong text-transparent',
                     )}
                   >
                     ✓
@@ -128,7 +128,7 @@ export default function CalculatorView({ bundles, services, options, settings, i
         </div>
 
         <aside id="calc-quote" className="h-fit scroll-mt-[calc(var(--header-h)+16px)] min-[961px]:sticky min-[961px]:top-[calc(var(--header-h)+24px)]">
-          <div className="rounded-[var(--radius-card)] border border-line bg-raised p-6 sm:p-8">
+          <div className="rounded-[var(--radius-card)] shadow-card border border-line bg-raised p-6 sm:p-8">
             <h2 className="font-display text-[22px] font-semibold tracking-[-0.02em]">Your quote</h2>
             {items.length > 0 && <p className="mt-2 text-[14.5px] text-muted-foreground">{items.map((i) => i.name).join(', ')}</p>}
             <dl className="mt-5 grid gap-3 border-t border-line pt-5 text-[15px]">

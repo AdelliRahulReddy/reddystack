@@ -29,7 +29,7 @@ Never invent a design system, price, SEO rule or ad structure a skill already co
 - Next.js 16 App Router, React 19, TypeScript; build uses webpack (`next build --webpack`).
 - Tailwind CSS v4 + shadcn/ui primitives; lucide-react icons; Motion for transitions; GSAP ScrollTrigger + Lenis for scroll scenes.
 - Supabase (Postgres + Auth) as the only backend. Hosting: Vercel, at ship time only, on the owner's word.
-- The site is dark-only. No theme toggle, Bootstrap, jQuery, Font Awesome or template CSS; do not reintroduce them.
+- The public site is light (owner decision, 2026-10-25): bone background, near-black ink, one marigold fill on actions and a darker amber for accent text, tokens in `src/styles/globals.css` scoped by `.site-theme`. /admin keeps its own dark look. No theme toggle, Bootstrap, jQuery, Font Awesome or template CSS; do not reintroduce them.
 
 ## Quality bar
 - Work at a senior level across design, frontend, backend, security, accessibility, SEO, performance, and deployment. Do not claim expertise or verification without evidence.
@@ -54,12 +54,20 @@ Set `SEO_CHECK_BASE` to check another server. The browser check needs the `agent
 
 Keep this file current: when a change makes something here wrong, update this file in the same change.
 
-<!-- BEGIN:nextjs-agent-rules -->
-
-# This is NOT the Next.js you know
-
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
-
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
-
+<!-- BEGIN:nextjs-agent-rules -->
+
+
+
+# This is NOT the Next.js you know
+
+
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+
+
 <!-- END:nextjs-agent-rules -->

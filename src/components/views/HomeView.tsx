@@ -86,7 +86,7 @@ export default function HomeView({ bundle, services, works, faqs, settings }: Pr
               Prefer to talk? <TextLink href={whatsapp('Hi, I want more enquiries for my business.')} external>Chat on WhatsApp</TextLink>
             </p>
           </div>
-          <div className="rounded-[var(--radius-panel)] bg-surface p-6 sm:p-8">
+          <div className="rounded-[var(--radius-panel)] shadow-card bg-surface p-6 sm:p-8">
             <HomeEnquiryForm whatsappNumber={settings.whatsapp_number} />
           </div>
         </div>

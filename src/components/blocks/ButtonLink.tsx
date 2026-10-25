@@ -11,7 +11,7 @@ export function ButtonLink({ className, ...props }: ComponentProps<typeof Link>)
   return (
     <Link
       className={cn(
-        'inline-flex min-h-12 items-center justify-center rounded-full bg-action px-6 text-base font-semibold text-action-ink transition-[background-color,transform] duration-200 hover:bg-text active:scale-[0.98]',
+        'inline-flex min-h-12 items-center justify-center rounded-full bg-action px-6 text-base font-semibold text-action-ink transition-[background-color,transform] duration-200 hover:bg-action-hover active:scale-[0.98]',
         className,
       )}
       {...props}
@@ -23,7 +23,7 @@ export function ButtonLink({ className, ...props }: ComponentProps<typeof Link>)
 export function TextLink({ className, external, ...props }: ComponentProps<'a'> & { external?: boolean }) {
   return (
     <a
-      className={cn('text-[15px] font-medium text-text underline decoration-text/40 underline-offset-4 transition-colors hover:text-action hover:decoration-current', className)}
+      className={cn('text-[15px] font-medium text-text underline decoration-text/40 underline-offset-4 transition-colors hover:text-action-text hover:decoration-current', className)}
       {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
       {...props}
     />

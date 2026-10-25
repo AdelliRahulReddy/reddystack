@@ -27,10 +27,10 @@ export default function FounderView({ ctx }: { ctx: ReturnType<typeof getSeoCont
         size="md"
         aside={
           <div className="grid gap-4">
-            <Image src={portrait} alt="Rahul Reddy Adelli" priority sizes="(max-width: 960px) 92vw, 520px" className="aspect-[7/6] w-full rounded-[var(--radius-panel)] object-cover" />
+            <Image src={portrait} alt="Rahul Reddy Adelli" priority sizes="(max-width: 960px) 92vw, 520px" className="aspect-[7/6] w-full rounded-[var(--radius-panel)] shadow-card object-cover" />
             <dl className="grid grid-cols-2 gap-2">
               {facts.map(([k, v]) => (
-                <div key={k} className="rounded-[var(--radius-card)] bg-surface p-4">
+                <div key={k} className="rounded-[var(--radius-card)] shadow-card bg-surface p-4">
                   <dt className="text-small text-muted">{k}</dt>
                   <dd className="mt-1 text-[15px] text-ivory">{v}</dd>
                 </div>
@@ -63,7 +63,7 @@ export default function FounderView({ ctx }: { ctx: ReturnType<typeof getSeoCont
                 {s.links && (
                   <div className="mt-6 flex flex-wrap gap-2.5">
                     {s.links.map((l) => (
-                      <Link key={l.path} href={l.path} className="rounded-full bg-surface px-4 py-2 text-[15px] font-medium transition-colors hover:bg-surface-2 hover:text-action">{l.title}</Link>
+                      <Link key={l.path} href={l.path} className="rounded-full bg-surface px-4 py-2 text-[15px] font-medium transition-colors hover:bg-surface-2 hover:text-action-text">{l.title}</Link>
                     ))}
                   </div>
                 )}

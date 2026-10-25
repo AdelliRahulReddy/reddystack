@@ -35,7 +35,7 @@ export default function PortfolioIndexView() {
           <h2 id="read-title" className="text-h2">How to read these builds</h2>
           <div className="grid gap-4 text-muted">
             <p>Each page covers the problem, the decisions made, the working result and its limits. Client case studies are added only when the client agrees and the numbers are real.</p>
-            <p>A similar project for your business needs its own brief and checks. Use an example to show the direction you want, then <Link href="/contact?source=/portfolio" className="font-semibold text-action underline underline-offset-4">tell us about it</Link>.</p>
+            <p>A similar project for your business needs its own brief and checks. Use an example to show the direction you want, then <Link href="/contact?source=/portfolio" className="font-semibold text-action-text underline underline-offset-4">tell us about it</Link>.</p>
           </div>
         </div>
       </section>

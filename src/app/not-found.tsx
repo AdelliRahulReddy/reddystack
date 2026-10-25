@@ -34,7 +34,7 @@ export default function NotFound() {
           <ul className="grid gap-3 min-[700px]:grid-cols-2 min-[1100px]:grid-cols-4">
             {destinations.map((d) => (
               <li key={d.href}>
-                <Link href={d.href} className="block h-full rounded-[var(--radius-card)] bg-surface p-6 transition-colors hover:bg-surface-2">
+                <Link href={d.href} className="block h-full rounded-[var(--radius-card)] shadow-card bg-surface p-6 transition-colors hover:bg-surface-2">
                   <span className="block text-h3 font-semibold text-text">{d.title}</span>
                   <span className="mt-1 block text-[15px] text-muted">{d.body}</span>
                 </Link>

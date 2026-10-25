@@ -4,9 +4,9 @@ import ExampleLabel from './ExampleLabel';
 export default function ExampleMessage() {
   return (
     <figure>
-      <div className="grid gap-2 rounded-[var(--radius-card)] bg-surface-2 p-5 text-[15px]" aria-hidden="true">
+      <div className="grid gap-2 rounded-[var(--radius-card)] shadow-card bg-surface-2 p-5 text-[15px]" aria-hidden="true">
         <p className="text-[13px] text-muted">From your Facebook ad · WhatsApp</p>
-        <p className="max-w-[85%] rounded-2xl rounded-tl-sm bg-ground px-4 py-2.5">
+        <p className="max-w-[85%] rounded-2xl rounded-tl-sm bg-surface px-4 py-2.5 shadow-[0_0_0_1px_var(--color-edge)]">
           Hello, I saw your ad. What is the price for a visit on Saturday?
         </p>
         <p className="ml-auto max-w-[85%] rounded-2xl rounded-tr-sm bg-action px-4 py-2.5 text-action-ink">

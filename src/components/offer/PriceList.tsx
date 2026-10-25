@@ -11,7 +11,7 @@ export default function PriceList({ services }: { services: Service[] }) {
         <li key={service.id}>
           <Link
             href={`/calculator?pick=${service.slug}`}
-            className="grid gap-x-6 gap-y-1 rounded-[var(--radius-card)] bg-surface px-5 py-4 transition-colors hover:bg-surface-2 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center sm:px-6"
+            className="grid gap-x-6 gap-y-1 rounded-[var(--radius-card)] shadow-card bg-surface px-5 py-4 transition-colors hover:bg-surface-2 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center sm:px-6"
           >
             <span>
               <span className="block font-semibold text-text">{service.name}</span>

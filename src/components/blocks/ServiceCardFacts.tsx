@@ -19,7 +19,7 @@ export default function ServiceCardFacts({ service }: { service: Service }) {
       {(service.includes || service.excludes) && (
         <ul className="mt-4 grid gap-2 text-[15px]">
           {service.includes && (
-            <li className="flex gap-2.5"><Check aria-hidden="true" className="mt-0.5 size-4 flex-none text-action" /><span><span className="sr-only">Includes: </span>{service.includes}</span></li>
+            <li className="flex gap-2.5"><Check aria-hidden="true" className="mt-0.5 size-4 flex-none text-action-text" /><span><span className="sr-only">Includes: </span>{service.includes}</span></li>
           )}
           {service.excludes && (
             <li className="flex gap-2.5 text-muted"><X aria-hidden="true" className="mt-0.5 size-4 flex-none" /><span><span className="sr-only">Not included: </span>{service.excludes}</span></li>

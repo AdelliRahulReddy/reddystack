@@ -1,5 +1,6 @@
 /* ReddyStack design system.
-   Public site: charcoal ground, warm ink, one marigold accent on actions only.
+   Public site (light): bone ground, warm near-black ink, one marigold fill on
+   actions only; a darker amber for any accent text.
    Tokens are declared once below; the public site applies them through
    `.site-theme` (SiteChrome). /admin keeps the earlier values. */
 
@@ -26,15 +27,19 @@
   --color-line: rgb(247 244 235 / 0.1);
   --color-line-strong: rgb(247 244 235 / 0.18);
 
-  /* Public site palette (semantic names). */
-  --color-ground: #111214;
-  --color-surface: #191b1e;
-  --color-surface-2: #212428;
-  --color-text: #f3f1ea;
-  --color-muted: #a7abb1;
+  /* Public site palette (semantic names), light. Contrast on --color-ground:
+     text 16:1, muted 6.7:1, action-text 5.5:1; action fill with action-ink 9.6:1. */
+  --color-ground: #f6f4ef;
+  --color-surface: #ffffff;
+  --color-surface-2: #eeeae2;
+  --color-text: #1c1915;
+  --color-muted: #5c564c;
   --color-action: #f2b13a;
+  --color-action-hover: #e6a21f;
   --color-action-ink: #1a1306;
-  --color-danger: #ff7a66;
+  --color-action-text: #8a5a00;
+  --color-edge: #ded7ca;
+  --color-danger: #b42318;
 
   --font-display: var(--font-brand-sora), 'Sora', ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -118,16 +123,16 @@
   --color-ink: var(--color-ground);
   --color-graphite: var(--color-surface);
   --color-raised: var(--color-surface-2);
-  --color-charcoal: #2a2d32;
+  --color-charcoal: #e3ddd2;
   --color-ivory: var(--color-text);
-  --color-faint: #8d9298;
-  --color-violet: var(--color-surface-2);
-  --color-violet-soft: #4a4f57;
+  --color-faint: var(--color-muted);
+  --color-violet: var(--color-action-text);
+  --color-violet-soft: var(--color-action-text);
   --color-lime: var(--color-action);
   --color-lime-ink: var(--color-action-ink);
   --color-coral: var(--color-danger);
-  --color-line: rgb(243 241 234 / 0.09);
-  --color-line-strong: rgb(243 241 234 / 0.16);
+  --color-line: var(--color-edge);
+  --color-line-strong: #c9c0b0;
 
   --background: var(--color-ground);
   --foreground: var(--color-text);
@@ -142,13 +147,21 @@
   --muted-foreground: var(--color-muted);
   --accent: var(--color-surface-2);
   --destructive: var(--color-danger);
-  --border: rgb(243 241 234 / 0.1);
-  --input: rgb(243 241 234 / 0.2);
-  --ring: var(--color-action);
+  --border: var(--color-edge);
+  --input: #8f8677;
+  --ring: var(--color-action-text);
+  /* Shared Button hover on the public site (admin falls back to its own). */
+  --btn-hover: var(--color-action-hover);
 
+  color-scheme: light;
   min-height: 100dvh;
   background: var(--color-ground);
   color: var(--color-text);
+}
+
+/* On light, every card, panel and example needs an edge, or it reads as loose text. */
+@utility shadow-card {
+  box-shadow: 0 0 0 1px var(--color-edge), 0 1px 2px rgb(28 25 21 / 0.04), 0 10px 28px -14px rgb(28 25 21 / 0.18);
 }
 
 @layer base {
@@ -158,7 +171,7 @@
     scroll-padding-top: calc(var(--header-h) + 16px);
     overflow-x: clip;
   }
-  html:has(.site-theme) { background: var(--color-ground); }
+  html:has(.site-theme) { background: var(--color-ground); color-scheme: light; }
   body {
     min-height: 100vh;
     background: var(--color-ink);
@@ -180,7 +193,7 @@
   }
   p { text-wrap: pretty; }
   :focus-visible {
-    outline: 2px solid var(--color-lime);
+    outline: 2px solid var(--ring);
     outline-offset: 3px;
     border-radius: 6px;
   }
@@ -206,7 +219,7 @@
 
   /* Rich text for guides, articles and policies. */
   .prose-studio {
-    color: #d8d6cf;
+    color: color-mix(in srgb, var(--color-ivory) 88%, transparent);
     font-size: 18px;
     line-height: 1.75;
   }
@@ -214,11 +227,11 @@
   .prose-studio h2 { font-size: clamp(26px, 2.6vw, 34px); margin-top: 2.2em; color: var(--color-ivory); scroll-margin-top: calc(var(--header-h) + 24px); }
   .prose-studio h3 { font-size: clamp(21px, 2vw, 25px); margin-top: 1.8em; color: var(--color-ivory); scroll-margin-top: calc(var(--header-h) + 24px); }
   .prose-studio h2 + *, .prose-studio h3 + * { margin-top: 0.7em; }
-  .prose-studio a { color: var(--color-lime); text-decoration: underline; text-underline-offset: 3px; }
+  .prose-studio a { color: var(--color-action-text); text-decoration: underline; text-underline-offset: 3px; }
   .prose-studio strong { color: var(--color-ivory); font-weight: 600; }
   .prose-studio ul { list-style: disc; padding-left: 1.2em; }
   .prose-studio ol { list-style: decimal; padding-left: 1.3em; }
-  .prose-studio li::marker { color: var(--color-lime); }
+  .prose-studio li::marker { color: var(--color-action-text); }
   .prose-studio li + li { margin-top: 0.5em; }
   .prose-studio blockquote { padding-left: 1.2em; box-shadow: inset 3px 0 0 var(--color-lime); color: var(--color-ivory); font-size: 1.1em; }
   .prose-studio table { width: 100%; border-collapse: collapse; font-size: 15.5px; display: block; overflow-x: auto; }

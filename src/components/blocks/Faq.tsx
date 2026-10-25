@@ -10,7 +10,7 @@ export function FaqList({ items, openFirst = true, className }: { items: FaqItem
   return (
     <div className={cn('grid gap-2', className)}>
       {items.map((f, i) => (
-        <details key={f.id ?? f.question} open={openFirst && i === 0} className="group/qa rounded-[var(--radius-card)] bg-surface px-5 sm:px-6">
+        <details key={f.id ?? f.question} open={openFirst && i === 0} className="group/qa rounded-[var(--radius-card)] shadow-card bg-surface px-5 sm:px-6">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[18px] font-semibold text-text [&::-webkit-details-marker]:hidden">
             {f.question}
             <span aria-hidden="true" className="grid size-8 flex-none place-items-center rounded-full bg-surface-2 text-[18px] leading-none text-muted transition-transform duration-200 group-open/qa:rotate-45">+</span>
@@ -25,11 +25,11 @@ export function FaqList({ items, openFirst = true, className }: { items: FaqItem
 /** Shown until the owner adds real answers in Admin → Content. Never filled with invented answers. */
 function FaqEmpty({ whatsappHref }: { whatsappHref?: string }) {
   return (
-    <div role="status" className="rounded-[var(--radius-card)] bg-surface p-6 sm:p-8">
+    <div role="status" className="rounded-[var(--radius-card)] shadow-card bg-surface p-6 sm:p-8">
       <p className="text-h3 font-semibold text-text">Questions coming soon — ask us on WhatsApp.</p>
       <p className="mt-2 text-muted">Rahul answers every question himself, in plain words.</p>
       {whatsappHref && (
-        <a href={whatsappHref} target="_blank" rel="noreferrer" className="mt-5 inline-flex font-semibold text-action underline underline-offset-4">
+        <a href={whatsappHref} target="_blank" rel="noreferrer" className="mt-5 inline-flex font-semibold text-action-text underline underline-offset-4">
           Ask on WhatsApp
         </a>
       )}

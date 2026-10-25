@@ -37,7 +37,7 @@ export default function AboutView() {
         }
         aside={
           <figure>
-            <Image src={portrait} alt="Rahul Reddy Adelli, founder of ReddyStack" priority sizes="(max-width: 960px) 92vw, 520px" className="aspect-[7/6] w-full rounded-[var(--radius-panel)] object-cover object-[center_25%]" />
+            <Image src={portrait} alt="Rahul Reddy Adelli, founder of ReddyStack" priority sizes="(max-width: 960px) 92vw, 520px" className="aspect-[7/6] w-full rounded-[var(--radius-panel)] shadow-card object-cover object-[center_25%]" />
             <figcaption className="mt-3 text-small text-muted">Rahul Reddy Adelli, Hyderabad.</figcaption>
           </figure>
         }
@@ -56,7 +56,7 @@ export default function AboutView() {
           </div>
           <ul className="grid gap-3 content-start">
             {principles.map(([title, body]) => (
-              <li key={title} className="rounded-[var(--radius-card)] bg-ground p-6">
+              <li key={title} className="rounded-[var(--radius-card)] shadow-card bg-ground p-6">
                 <h3 className="text-h3 font-semibold">{title}</h3>
                 <p className="mt-2 text-muted">{body}</p>
               </li>
@@ -71,7 +71,7 @@ export default function AboutView() {
             <h2 id="background-title" className="text-h2">Background</h2>
             <ol className="mt-6 grid gap-3">
               {background.map(([time, role, where]) => (
-                <li key={time} className="rounded-[var(--radius-card)] bg-surface p-5">
+                <li key={time} className="rounded-[var(--radius-card)] shadow-card bg-surface p-5">
                   <p className="text-small text-muted">{time}</p>
                   <p className="mt-1 font-semibold text-text">{role}</p>
                   <p className="text-[15px] text-muted">{where}</p>
@@ -81,7 +81,7 @@ export default function AboutView() {
           </div>
           <div>
             <h2 className="text-h2">Education</h2>
-            <div className="mt-6 rounded-[var(--radius-card)] bg-surface p-5">
+            <div className="mt-6 rounded-[var(--radius-card)] shadow-card bg-surface p-5">
               <p className="text-small text-muted">2022 – Present</p>
               <p className="mt-1 font-semibold text-text">B.Sc. Design &amp; Computing (WILP)</p>
               <p className="text-[15px] text-muted">BITS Pilani</p>

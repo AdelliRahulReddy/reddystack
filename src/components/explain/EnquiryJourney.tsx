@@ -58,7 +58,7 @@ export default function EnquiryJourney({ className }: { className?: string }) {
             <li key={step.title} className={cn(s.panel, panelClass[i])}>
               <div className={s.stage}><Stage /></div>
               <h3 className="mt-4 text-h3 font-semibold">
-                <span className="text-action">{i + 1}.</span> {step.title}
+                <span className="text-action-text">{i + 1}.</span> {step.title}
               </h3>
               <p className="mt-1 text-muted">{step.body}</p>
             </li>

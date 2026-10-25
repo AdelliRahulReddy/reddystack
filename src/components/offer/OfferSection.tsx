@@ -24,7 +24,7 @@ export default function OfferSection({ bundle, id = 'offer' }: { bundle: Bundle;
             <ul className="mt-8 grid gap-x-8 gap-y-6 min-[640px]:grid-cols-2">
               {offerIncludes.map((item) => (
                 <li key={item.title} className="flex gap-3">
-                  <Check aria-hidden="true" className="mt-1 size-5 flex-none text-action" />
+                  <Check aria-hidden="true" className="mt-1 size-5 flex-none text-action-text" />
                   <span>
                     <span className="block font-semibold text-text">{item.title}</span>
                     <span className="mt-1 block text-muted">{item.body}</span>
@@ -34,14 +34,14 @@ export default function OfferSection({ bundle, id = 'offer' }: { bundle: Bundle;
             </ul>
           </div>
 
-          <aside aria-label={`${bundle.name} price`} className="h-fit rounded-[var(--radius-panel)] bg-surface p-6 sm:p-8 min-[961px]:sticky min-[961px]:top-[calc(var(--header-h)+24px)]">
+          <aside aria-label={`${bundle.name} price`} className="h-fit rounded-[var(--radius-panel)] shadow-card bg-surface p-6 sm:p-8 min-[961px]:sticky min-[961px]:top-[calc(var(--header-h)+24px)]">
             <p className="text-small text-muted">{bundle.name}</p>
             <p className="mt-2 font-display text-[clamp(44px,5vw,64px)] font-semibold leading-none tracking-[-0.04em] text-text">{price}</p>
             <p className="mt-2 text-text">One-time payment.</p>
             <p className="mt-1 text-muted">Ad spend is extra and paid directly to Meta, not to us.</p>
             {bundle.guarantee_text && (
               <p className="mt-6 rounded-2xl bg-surface-2 p-4 text-text">
-                <span className="font-semibold text-action">Our promise: </span>{bundle.guarantee_text}
+                <span className="font-semibold text-action-text">Our promise: </span>{bundle.guarantee_text}
               </p>
             )}
             <ButtonLink href={`/calculator?pick=${bundle.slug}`} className="mt-6 w-full">Get customer enquiries</ButtonLink>

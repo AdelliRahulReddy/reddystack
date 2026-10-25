@@ -11,20 +11,27 @@
   buttons, WhatsApp button always visible, forms short (name, business,
   phone, what you need, message).
 
-## Design direction (NOT decided — read this before any design change)
-- The current look of the site is NOT the final decided design. Nothing in
-  this file locks colours, fonts, or layout as final.
-- For any design change or design suggestion, the builder MUST follow the
-  design skills in `.agents/skills/` first and work through them:
-  frontend-design, design-taste-frontend, ui-ux-pro-max, impeccable,
-  ui-styling, design-system, hallmark, better-interface, emil-design-eng,
-  web-design-guidelines.
-- Never invent a new look without the skills, and never present the current
-  look as "the design". Suggestions come from the skills; the owner picks
-  the direction.
+## Design direction (decided: light, owner's word 2026-10-25)
+- One light system on every public page, country pages included: bone
+  background, near-black ink, white cards with a visible edge and soft
+  shadow, one marigold fill on buttons (dark ink text on it), and a darker
+  amber for any accent text or link. Sora for headings, DM Sans for text,
+  one type scale, one button, one card, one section rhythm. Tokens live in
+  `src/styles/globals.css` (scoped by `.site-theme`; /admin keeps its own).
+- Plain words first: headlines say what the owner gets ("More customer
+  enquiries, set up in 7 days"); offer names appear only as small labels.
+- Motion explains, never decorates: the ad → message → enquiry explainer is
+  CSS only and shows a complete still picture with reduced motion.
+- Every mock or sample carries a visible "Example" label.
+- Changes to this direction still go through the design skills in
+  `.agents/skills/` (frontend-design, design-taste-frontend, ui-ux-pro-max,
+  impeccable, ui-styling, design-system, hallmark, better-interface,
+  emil-design-eng, web-design-guidelines) and the owner's word.
 - Guardrails that hold in any redesign: numbers in Indian format (₹14,999).
   Dates in IST. No fake counters ("500+ happy clients" is banned — it would
   be a lie). No graphic eating the headline (the old site's exact fault).
+  Body text and buttons pass 4.5:1 contrast; marigold is never used as
+  small text on a light background.
 
 ## Pages (content order — the look of each section follows the skills)
 - Home: hero (site_content hero row) → Sprint box → services preview →

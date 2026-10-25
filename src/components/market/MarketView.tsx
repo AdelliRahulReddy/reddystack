@@ -42,7 +42,7 @@ export default function MarketView({ market, page }: { market: Market; page: Mar
           <SectionHead id="market-focus" title={page.focus.title} intro={page.focus.intro} />
           <ul className="grid gap-4 min-[860px]:grid-cols-3">
             {page.focus.items.map((item) => (
-              <li key={item.title} className="rounded-[var(--radius-card)] bg-ground p-6">
+              <li key={item.title} className="rounded-[var(--radius-card)] shadow-card bg-ground p-6">
                 <h3 className="text-h3 font-semibold">{item.title}</h3>
                 <p className="mt-2 text-muted">{item.body}</p>
               </li>
@@ -69,7 +69,7 @@ export default function MarketView({ market, page }: { market: Market; page: Mar
 
       <section aria-labelledby="market-founder" className="section bg-surface">
         <div className="site-wrap grid items-center gap-10 min-[860px]:grid-cols-[minmax(0,.7fr)_minmax(0,1.3fr)]">
-          <Image src={portrait} alt="Rahul Reddy Adelli, founder of ReddyStack" sizes="(max-width: 860px) 90vw, 380px" className="aspect-[5/6] w-full max-w-[380px] rounded-[var(--radius-panel)] object-cover object-[center_25%]" />
+          <Image src={portrait} alt="Rahul Reddy Adelli, founder of ReddyStack" sizes="(max-width: 860px) 90vw, 380px" className="aspect-[5/6] w-full max-w-[380px] rounded-[var(--radius-panel)] shadow-card object-cover object-[center_25%]" />
           <div>
             <h2 id="market-founder" className="text-h2">You talk to the person who does the work.</h2>
             <p className="mt-4 max-w-[52ch] text-muted">

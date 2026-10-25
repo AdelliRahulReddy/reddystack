@@ -4,15 +4,15 @@ import ExampleLabel from './ExampleLabel';
 export default function ExampleEnquiryPage() {
   return (
     <figure>
-      <div className="rounded-[var(--radius-card)] bg-text p-5 text-ground sm:p-6" aria-hidden="true">
-        <p className="text-[13px] font-medium text-ground/60">yourbusiness.in</p>
+      <div className="rounded-[var(--radius-card)] shadow-card bg-surface p-5 text-text sm:p-6" aria-hidden="true">
+        <p className="text-[13px] font-medium text-muted">yourbusiness.in</p>
         <p className="mt-3 font-display text-[22px] font-semibold leading-tight tracking-[-0.02em]">
           Same-day AC repair in your area
         </p>
-        <p className="mt-2 text-[14px] text-ground/70">Trained technicians, fixed visit charge, open 9 am to 9 pm.</p>
+        <p className="mt-2 text-[14px] text-muted">Trained technicians, fixed visit charge, open 9 am to 9 pm.</p>
         <div className="mt-4 grid grid-cols-2 gap-2 text-[14px] font-semibold">
           <span className="rounded-full bg-action px-3 py-2 text-center text-action-ink">WhatsApp us</span>
-          <span className="rounded-full bg-ground/10 px-3 py-2 text-center">Call now</span>
+          <span className="rounded-full bg-surface-2 px-3 py-2 text-center">Call now</span>
         </div>
       </div>
       <figcaption className="mt-3 flex items-center gap-2 text-small text-muted">

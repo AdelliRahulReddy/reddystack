@@ -96,11 +96,11 @@ export default function CalculatorQuoteForm({ selection, hasItems, adSpend, what
   if (result) {
     return (
       <div className="mt-6 grid gap-4">
-        <p className="rounded-2xl border border-lime/40 bg-lime/10 px-4 py-3 text-[15px] text-ivory">
+        <p className="rounded-2xl border border-action-text/40 bg-lime/10 px-4 py-3 text-[15px] text-ivory">
           Quote saved. Your reference is <span className="tabular-nums">#{result.quote_id.slice(0, 8)}</span>.
         </p>
         <a
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-lime px-5 py-3 font-semibold text-lime-ink transition-colors hover:bg-ivory"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-lime px-5 py-3 font-semibold text-lime-ink transition-colors hover:bg-action-hover"
           href={buildWhatsAppLink(whatsappNumber, quoteMessage(result))}
           target="_blank"
           rel="noreferrer"

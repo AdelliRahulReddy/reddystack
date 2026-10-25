@@ -22,7 +22,7 @@ function Brand() {
 }
 
 const enquireClass =
-  'inline-flex h-11 items-center rounded-full bg-action px-5 text-[15px] font-semibold text-action-ink transition-colors hover:bg-text';
+  'inline-flex h-11 items-center rounded-full bg-action px-5 text-[15px] font-semibold text-action-ink transition-colors hover:bg-action-hover';
 
 /** Sticky top bar: wordmark, the one menu, one Enquire action. Below 1100px the menu moves into a sheet. */
 export default function SiteHeader() {
@@ -31,7 +31,7 @@ export default function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-ground/95 pt-[env(safe-area-inset-top,0px)] backdrop-saturate-150">
+    <header className="sticky top-0 z-50 bg-ground/95 pt-[env(safe-area-inset-top,0px)] shadow-[0_1px_0_var(--color-edge)] backdrop-saturate-150">
       <div className="site-wrap flex h-[var(--header-h)] items-center justify-between gap-4">
         <Brand />
         <nav aria-label="Main" className="hidden items-center gap-1 min-[1100px]:flex">
@@ -74,7 +74,7 @@ export default function SiteHeader() {
                       <Link
                         href={l.href}
                         aria-current={isActivePath(pathname, l.href) ? 'page' : undefined}
-                        className="py-2.5 font-display text-[32px] font-semibold leading-tight tracking-[-0.03em] text-text aria-[current=page]:text-action"
+                        className="py-2.5 font-display text-[32px] font-semibold leading-tight tracking-[-0.03em] text-text aria-[current=page]:text-action-text"
                       >
                         {l.title}
                       </Link>

@@ -163,7 +163,7 @@ export default function ContactForm({ choices, initialService, sourcePage, whats
                         type="button"
                         aria-pressed={on}
                         onClick={() => toggleService(c.title)}
-                        className={cn(chip, on ? 'border-lime bg-lime text-lime-ink' : 'border-line-strong text-ivory hover:border-ivory/40')}
+                        className={cn(chip, on ? 'border-action-text bg-lime text-lime-ink' : 'border-line-strong text-ivory hover:border-ivory/40')}
                       >
                         {c.title}
                       </button>
@@ -216,7 +216,7 @@ export default function ContactForm({ choices, initialService, sourcePage, whats
             {submitError && (
               <p role="alert" className="rounded-2xl border border-coral/40 bg-coral/10 px-5 py-4 text-[15px] text-ivory">
                 {submitError}{' '}
-                <a href={whatsapp} target="_blank" rel="noreferrer" className="font-medium text-lime underline underline-offset-4">Send it on WhatsApp instead</a>.
+                <a href={whatsapp} target="_blank" rel="noreferrer" className="font-medium text-action-text underline underline-offset-4">Send it on WhatsApp instead</a>.
               </p>
             )}
 
@@ -224,7 +224,7 @@ export default function ContactForm({ choices, initialService, sourcePage, whats
               <Button type="submit" size="lg" disabled={submitting} aria-busy={submitting}>
                 {submitting ? 'Sending…' : <>Send enquiry</>}
               </Button>
-              <a href={whatsapp} target="_blank" rel="noreferrer" className="text-[15px] font-medium text-lime underline underline-offset-4 hover:text-ivory">
+              <a href={whatsapp} target="_blank" rel="noreferrer" className="text-[15px] font-medium text-action-text underline underline-offset-4 hover:text-ivory">
                 Or WhatsApp us directly
               </a>
             </div>

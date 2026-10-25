@@ -57,7 +57,7 @@ export default function HubView({ ctx }: { ctx: ReturnType<typeof getSeoContext>
               const guide = getSeoPage(g.path);
               return (
                 <li key={g.path}>
-                  <Link href={g.path} className="block h-full rounded-[var(--radius-card)] bg-surface p-5 transition-colors hover:bg-surface-2 sm:p-6">
+                  <Link href={g.path} className="block h-full rounded-[var(--radius-card)] shadow-card bg-surface p-5 transition-colors hover:bg-surface-2 sm:p-6">
                     <span className="block font-semibold text-text">{g.title}</span>
                     {guide && <span className="mt-1 line-clamp-2 block text-[15px] text-muted">{guide.description}</span>}
                   </Link>
@@ -73,7 +73,7 @@ export default function HubView({ ctx }: { ctx: ReturnType<typeof getSeoContext>
         <section aria-label="How to use these guides" className="section pt-0">
           <div className="site-wrap grid gap-4 min-[961px]:grid-cols-2">
             {otherSections.map((s) => (
-              <div key={s.title} className="rounded-[var(--radius-card)] bg-surface p-[clamp(24px,3vw,40px)]">
+              <div key={s.title} className="rounded-[var(--radius-card)] shadow-card bg-surface p-[clamp(24px,3vw,40px)]">
                 <h2 className="text-h3 font-semibold">{s.title}</h2>
                 <div className="prose-studio mt-5 text-[16.5px]">
                   {s.body.map((p) => <p key={p}>{p}</p>)}
@@ -81,7 +81,7 @@ export default function HubView({ ctx }: { ctx: ReturnType<typeof getSeoContext>
                 </div>
                 {s.links && (
                   <div className="mt-5 flex flex-wrap gap-2">
-                    {s.links.map((l) => <Link key={l.path} href={l.path} className="rounded-full bg-surface-2 px-3.5 py-1.5 text-[14px] transition-colors hover:text-action">{l.title}</Link>)}
+                    {s.links.map((l) => <Link key={l.path} href={l.path} className="rounded-full bg-surface-2 px-3.5 py-1.5 text-[14px] transition-colors hover:text-action-text">{l.title}</Link>)}
                   </div>
                 )}
               </div>
