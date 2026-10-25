@@ -6,6 +6,7 @@ import ScrollProgress from './ScrollProgress';
 import SiteFooter from './SiteFooter';
 import SiteHeader from './SiteHeader';
 import SmoothScroll from './SmoothScroll';
+import PhoneActionBar from './PhoneActionBar';
 import WhatsAppButton from './WhatsAppButton';
 
 /** Site frame: one smooth-scroll instance, header, footer, cursor and scroll reveals. */
@@ -24,7 +25,10 @@ export default function SiteChrome({ children }: { children: ReactNode }) {
       <SiteHeader />
       <main id="main" className="grain">{children}</main>
       <SiteFooter />
+      {/* Room for the phone bottom bar so it never covers the footer. */}
+      <div aria-hidden="true" className="h-[76px] min-[961px]:hidden" />
       <WhatsAppButton />
+      <PhoneActionBar />
     </SmoothScroll>
   );
 }

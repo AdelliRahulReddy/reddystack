@@ -12,17 +12,17 @@ import portrait from '@/assets/img/hero/ab-hero-1.jpg';
 import signature from '@/assets/img/brand/rahul-signature-ivory.png';
 
 const capabilityLinks = [
-  { title: 'digital foundations', href: '/service/seo-websites' },
-  { title: 'search visibility', href: '/service/seo-local-seo' },
-  { title: 'paid acquisition', href: '/service/meta-ads' },
-  { title: 'automation systems', href: '/service/ai-automations' },
+  { title: 'the Enquiry Sprint', href: '/pricing#sprint' },
+  { title: 'services and prices', href: '/services' },
+  { title: 'the price calculator', href: '/calculator' },
+  { title: 'real work', href: '/works' },
 ];
 
-const capabilities = ['Growth diagnostics', 'Web & landing pages', 'Search visibility', 'Paid acquisition', 'Creative testing', 'Tracking & analytics', 'AI workflows', 'Product builds'];
+const capabilities = ['Landing pages', 'Websites', 'Admin panels', 'Meta ads', 'Image creatives', 'Tracking', 'Google profile & SEO'];
 
 const principles = [
-  ['Problem before channel', 'The work starts with the commercial problem and current evidence, not a preselected service package.'],
-  ['Proof before scale', 'A focused build or test creates evidence before more budget, more channels, or a longer engagement is recommended.'],
+  ['Enquiries, not activity', 'The work is judged by whether customers can reach you on WhatsApp, by phone, on Instagram or through a form, not by hours spent.'],
+  ['Prices in public', 'Every service has a fixed public price. One-time and monthly are always labelled, and ad spend is paid directly to Meta.'],
   ['Transparent AI use', 'AI can support research and execution. Rahul remains responsible for review, decisions, quality, and communication.'],
   ['Client-owned foundations', "Domains, hosting, advertising accounts, analytics, and core business assets remain under the client's ownership."],
 ] as const;
@@ -34,8 +34,8 @@ const background = [
 ] as const;
 
 const structure = [
-  { n: '4', label: 'Method stages', detail: 'Diagnose, Build, Prove, Scale' },
-  { n: '1', label: 'Connected stack', detail: 'Chosen by the problem' },
+  { n: '1', label: 'Lead offer', detail: 'The Enquiry Sprint, at a fixed public price' },
+  { n: '1', label: 'Stack', detail: 'From your ad to your enquiry' },
   { n: '1', label: 'Accountable lead', detail: 'The person who quotes builds' },
 ];
 
@@ -61,7 +61,7 @@ export default function AboutView() {
               Built by <br /><em className="not-italic text-lime">Rahul Reddy.</em>
             </h1>
             <p className="mt-7 max-w-[50ch] text-[clamp(17px,1.4vw,19px)] text-muted-foreground">
-              An independent, founder-led growth studio operated from Hyderabad. One accountable lead, one defined problem, and evidence before anything is scaled.
+              A founder-led enquiry stack for Indian businesses: landing page, Meta ads, creatives and tracking, at public prices. Based in Hyderabad, working India-wide.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Button asChild size="lg"><Link href="/contact?source=/about">Talk to Rahul <ButtonArrow /></Link></Button>
@@ -81,7 +81,7 @@ export default function AboutView() {
               <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgb(20_19_24/0.85))]" />
               <div className="absolute inset-x-5 bottom-5 flex items-end justify-between gap-4 font-mono text-[11.5px] uppercase tracking-[0.1em] text-ivory/85">
                 <span>Rahul Reddy Adelli<br /><span className="text-lime">Founder</span></span>
-                <span className="text-right">Hyderabad · IN<br />Working with US &amp; UK</span>
+                <span className="text-right">Hyderabad · IN<br />Working India-wide</span>
               </div>
             </div>
             <div aria-hidden="true" className="absolute -left-6 -top-6 grid size-28 place-items-center rounded-full border border-line-strong bg-ink/80 backdrop-blur max-[560px]:-left-2 max-[560px]:size-20">
@@ -101,7 +101,7 @@ export default function AboutView() {
       <section aria-label="What ReddyStack is" className="py-[clamp(56px,9vw,140px)]">
         <div className="site-wrap">
           <ScrubText className="max-w-[26ch] font-display text-[clamp(30px,4.4vw,64px)] font-semibold leading-[1.12] tracking-[-0.035em]">
-            {`I'm Rahul Reddy. I built ReddyStack as a proof-first studio. We begin with one important growth problem, connect only the capabilities it needs, and use evidence to decide what happens next.`}
+            {`I'm Rahul Reddy. I built ReddyStack to put one stack between your ad and your enquiry, so customers reach you on WhatsApp, by phone, on Instagram or through a form.`}
           </ScrubText>
           <p data-reveal className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-muted-foreground">
             <span>Across</span>
@@ -116,10 +116,10 @@ export default function AboutView() {
       <section aria-labelledby="founder-led" className="py-[clamp(48px,7vw,96px)]">
         <div className="site-wrap grid gap-[clamp(32px,5vw,88px)] min-[961px]:grid-cols-[minmax(0,.9fr)_minmax(0,1.1fr)]">
           <div className="min-[961px]:sticky min-[961px]:top-[calc(var(--header-h)+24px)] min-[961px]:self-start">
-            <Eyebrow>Founder-led, proof-first</Eyebrow>
+            <Eyebrow>Founder-led</Eyebrow>
             <h2 id="founder-led" className="mt-5 text-[clamp(32px,4vw,56px)]">One accountable lead. A defined problem.</h2>
             <p className="mt-6 max-w-[46ch] text-muted-foreground">
-              ReddyStack is an independent digital growth studio operated by Rahul Reddy Adelli from Hyderabad. Every engagement has one accountable lead, a defined problem, a connected scope, and an evidence plan.
+              ReddyStack is run by Rahul Reddy Adelli from Hyderabad for businesses across India. The person who quotes the work is the person who does it, and every price is on the site.
             </p>
             <div className="mt-7 grid gap-1.5 font-mono text-[13.5px]">
               <a href={`mailto:${siteConfig.email}`} className="text-ivory hover:text-lime">{siteConfig.email}</a>
@@ -142,8 +142,8 @@ export default function AboutView() {
             <div data-reveal>
               <h2 className="text-[clamp(26px,2.8vw,36px)]">How I work</h2>
               <div className="mt-5 grid gap-4 text-[17px] leading-[1.75] text-muted-foreground">
-                <p>I start with the offer, customer, commercial goal, current setup, and what has already been tried. The first recommendation may be a page, search fix, campaign test, tracking repair, creative comparison, or workflow, not every capability at once.</p>
-                <p>Before work starts, the proposal names deliverables, access, approvals, costs, review points, exclusions, and the evidence that can reasonably be collected. Results are interpreted with their limits; no lead volume, revenue, or ranking is guaranteed.</p>
+                <p>I start with your business, your customers and which door they use: WhatsApp, calls, Instagram DMs or forms. Most businesses start with the Enquiry Sprint; some need only one service from the price list.</p>
+                <p>Before work starts, we agree what you get, what it costs, what is not included, and when you review it. Updates are written, so you can catch up in a few minutes. Beyond the written guarantee on the Enquiry Sprint, no lead count, revenue or ranking is promised.</p>
                 <p>Current portfolio items remain clearly marked as personal or demo work. Client outcomes will be published only when the work is real, permission exists, and the measurement supports the claim.</p>
               </div>
             </div>
@@ -190,7 +190,7 @@ export default function AboutView() {
       {/* ---------- structure ---------- */}
       <section aria-labelledby="structure-title" className="py-[clamp(48px,7vw,96px)]">
         <div className="site-wrap">
-          <SectionHead id="structure-title" label="How the studio is built" title="Small on purpose." intro="Not headcount or client numbers: the structure every engagement runs on." />
+          <SectionHead id="structure-title" label="How ReddyStack is built" title="Small on purpose." intro="Not headcount or client numbers: the structure every project runs on." />
           <ul className="grid gap-px overflow-hidden rounded-[28px] border border-line bg-line min-[761px]:grid-cols-3">
             {structure.map((s, i) => (
               <li key={s.label} data-reveal style={{ ['--reveal-delay' as string]: `${i * 0.08}s` }} className="bg-ink p-[clamp(24px,3vw,40px)]">

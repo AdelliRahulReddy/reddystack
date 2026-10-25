@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import CtaBand from '@/components/blocks/CtaBand';
 import PageHero from '@/components/blocks/PageHero';
 import ContentUnavailable from '@/components/blocks/ContentUnavailable';
 import WorksView from '@/components/views/WorksView';
@@ -36,6 +37,7 @@ const WorksPage = async () => {
         }
       />
       {groups ? <WorksView client={groups.client} portfolio={groups.portfolio} /> : <ContentUnavailable />}
+      <CtaBand href="/contact?source=/works" />
     </>
   );
 };

@@ -80,9 +80,9 @@ export const pageSeo = {
     path: "/",
   },
   about: {
-    title: "About Rahul Reddy & ReddyStack | Proof-First Studio",
+    title: "About Rahul Reddy & ReddyStack | Enquiry Stack for Indian Businesses",
     description:
-      "Meet Rahul Reddy and learn how ReddyStack diagnoses, builds, proves, and improves connected digital growth systems with direct founder accountability.",
+      "Meet Rahul Reddy, the founder behind ReddyStack: landing pages, Meta ads and tracking that turn ads into enquiries for Indian businesses, at public prices.",
     path: "/about",
   },
   services: {
@@ -104,9 +104,9 @@ export const pageSeo = {
     path: "/blog",
   },
   contact: {
-    title: "Start With One Growth Problem | Contact ReddyStack",
+    title: "Contact ReddyStack | Get More Enquiries for Your Business",
     description:
-      "Share one digital growth problem with Rahul Reddy. Start with a focused proof sprint, connected build, or ongoing improvement engagement.",
+      "Tell Rahul Reddy what you want more of: WhatsApp chats, calls, Instagram DMs or form fills. Fixed public prices, India-wide, based in Hyderabad.",
     path: "/contact",
   },
   pricing: {

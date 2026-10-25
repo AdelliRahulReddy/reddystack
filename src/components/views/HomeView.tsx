@@ -1,12 +1,14 @@
 import Link from 'next/link';
 
 import type { AppSettings, Bundle, Faq, Service, Work } from '@/types/database';
+import { formatInr } from '@/lib/money';
 import { buildWhatsAppLink } from '@/lib/whatsapp';
 import type { WorkGroups } from '@/lib/works';
 import type { HeroContent } from '@/lib/siteContent';
 import Eyebrow from '@/components/blocks/Eyebrow';
 import FaqBlock from '@/components/blocks/Faq';
 import PageHero from '@/components/blocks/PageHero';
+import WorkImage from '@/components/blocks/WorkImage';
 import SectionHead from '@/components/blocks/SectionHead';
 import ServiceCardFacts from '@/components/blocks/ServiceCardFacts';
 import SprintBox from '@/components/blocks/SprintBox';
@@ -33,12 +35,25 @@ export default function HomeView({ hero, positioning, bundle, services, works, f
       <PageHero
         eyebrow={positioning.title}
         title={hero.title}
-        intro={<>{positioning.body}</>}
+        className="max-[640px]:pt-[104px] max-[640px]:pb-10"
+        intro={
+          <>
+            {positioning.body}
+            {bundle && (
+              <span className="mt-4 block text-ivory">
+                <strong>{bundle.name}: {formatInr(bundle.fixed_price)} one-time.</strong>{' '}
+                <span className="text-muted-foreground">Ad spend is extra, paid directly to Meta.</span>
+              </span>
+            )}
+          </>
+        }
         actions={
           <>
-            <Button asChild size="lg"><a href="#sprint">Get started <ButtonArrow /></a></Button>
+            <Button asChild size="lg">
+              <Link href={bundle ? `/calculator?pick=${bundle.slug}` : '/calculator'}>Get my quote <ButtonArrow /></Link>
+            </Button>
             <Button asChild size="lg" variant="ghost">
-              <a href={whatsappLink(settings)} target="_blank" rel="noreferrer">WhatsApp us</a>
+              <a href={whatsappLink(settings, 'Hi, I want more enquiries for my business.')} target="_blank" rel="noreferrer">WhatsApp us</a>
             </Button>
           </>
         }
@@ -112,14 +127,13 @@ export default function HomeView({ hero, positioning, bundle, services, works, f
       </section>
 
       {/* ---------- faq preview ---------- */}
-      {faqs.length > 0 && (
-        <FaqBlock
-          items={faqs.slice(0, 6).map((faq) => ({ id: faq.id, question: faq.question, answer: faq.answer }))}
-          label="Questions"
-          title="Before you get in touch."
-          id="home-faq"
-        />
-      )}
+      <FaqBlock
+        items={faqs.slice(0, 6).map((faq) => ({ id: faq.id, question: faq.question, answer: faq.answer }))}
+        label="Questions"
+        title="Before you get in touch."
+        id="home-faq"
+        whatsappHref={whatsappLink(settings, 'Hi, I have a question about ReddyStack.')}
+      />
 
       {/* ---------- enquiry ---------- */}
       <section aria-labelledby="home-enquiry" className="pb-[clamp(48px,7vw,96px)]">
@@ -132,7 +146,7 @@ export default function HomeView({ hero, positioning, bundle, services, works, f
               business and we&apos;ll tell you what fits.
             </p>
             <p className="mt-6 font-mono text-[14px] text-muted-foreground">
-              WhatsApp: <a href={whatsappLink(settings)} target="_blank" rel="noreferrer" className="text-ivory hover:text-lime">+{settings.whatsapp_number}</a>
+              WhatsApp: <a href={whatsappLink(settings, 'Hi, I want more enquiries for my business.')} target="_blank" rel="noreferrer" className="text-ivory hover:text-lime">+{settings.whatsapp_number}</a>
             </p>
           </div>
           <div className="rounded-[28px] border border-line bg-raised p-6 sm:p-8">
@@ -146,7 +160,8 @@ export default function HomeView({ hero, positioning, bundle, services, works, f
 
 function WorkCard({ work }: { work: Work }) {
   return (
-    <article className="rounded-[24px] border border-line bg-graphite p-6">
+    <article className="overflow-hidden rounded-[24px] border border-line bg-graphite p-6 sm:p-8">
+      <WorkImage work={work} />
       <h3 className="font-display text-[18px] font-semibold tracking-[-0.02em]">{work.title}</h3>
       {work.client_name && <p className="mt-1 font-mono text-xs uppercase tracking-[0.08em] text-faint">{work.client_name}</p>}
       {work.description && <p className="mt-3 text-[14.5px] text-muted-foreground">{work.description}</p>}

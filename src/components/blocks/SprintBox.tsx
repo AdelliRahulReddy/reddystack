@@ -24,7 +24,7 @@ export default function SprintBox({ bundle, settings, id = 'sprint' }: { bundle:
               <h2 id={`${id}-title`} className="text-[clamp(32px,4.6vw,64px)]">{bundle.name}</h2>
               <p className="mt-4 max-w-[52ch] text-[17px] text-muted-foreground">{bundle.description}</p>
               <div className="mt-6 flex flex-wrap items-center gap-5">
-                <Button asChild size="lg"><Link href="/calculator">Build your quote <ButtonArrow /></Link></Button>
+                <Button asChild size="lg"><Link href={`/calculator?pick=${bundle.slug}`}>Get this in a quote <ButtonArrow /></Link></Button>
                 <a href={whatsapp} target="_blank" rel="noreferrer" className="text-[15px] font-medium text-lime underline underline-offset-4 hover:text-ivory">
                   Ask on WhatsApp
                 </a>
@@ -34,6 +34,7 @@ export default function SprintBox({ bundle, settings, id = 'sprint' }: { bundle:
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.1em] text-faint">One-time</p>
                 <p className="mt-2 font-display text-[clamp(40px,5vw,72px)] leading-none">{formatInr(bundle.fixed_price)}</p>
+                <p className="mt-3 text-[14.5px] text-muted-foreground">Ad spend is extra, paid directly to Meta.</p>
               </div>
               {bundle.guarantee_text && (
                 <p className="border-t border-line pt-5 text-[15px] text-ivory">

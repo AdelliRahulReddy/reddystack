@@ -1,7 +1,9 @@
 import Link from 'next/link';
 
 import type { AppSettings, Bundle, Faq, Service } from '@/types/database';
+import CtaBand from '@/components/blocks/CtaBand';
 import FaqBlock from '@/components/blocks/Faq';
+import { buildWhatsAppLink } from '@/lib/whatsapp';
 import PageHero from '@/components/blocks/PageHero';
 import SectionHead from '@/components/blocks/SectionHead';
 import SprintBox from '@/components/blocks/SprintBox';
@@ -51,14 +53,14 @@ export default function PricingView({ bundle, services, faqs, settings }: Props)
       </section>
       <ServicesPricingView services={services} />
 
-      {faqs.length > 0 && (
-        <FaqBlock
-          items={faqs.map((f) => ({ id: f.id, question: f.question, answer: f.answer }))}
-          label="Pricing questions"
-          title="Before you start."
-          id="pricing-faq"
-        />
-      )}
+      <FaqBlock
+        items={faqs.map((f) => ({ id: f.id, question: f.question, answer: f.answer }))}
+        label="Pricing questions"
+        title="Before you start."
+        id="pricing-faq"
+        whatsappHref={buildWhatsAppLink(settings.whatsapp_number, 'Hi, I have a question about your prices.')}
+      />
+      <CtaBand href="/contact?source=/pricing" />
     </>
   );
 }

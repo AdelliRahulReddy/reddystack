@@ -19,7 +19,7 @@ export default function ServicesPricingView({ services }: { services: Service[] 
               <ServiceCardFacts service={service} />
             </div>
             <Link
-              href="/calculator"
+              href={`/calculator?pick=${service.slug}`}
               className="mt-6 inline-flex items-center gap-2 rounded-full border border-line-strong px-5 py-2.5 text-[15px] font-semibold text-ivory transition-colors hover:border-lime hover:text-lime"
             >
               Build this in the calculator <span aria-hidden="true">→</span>

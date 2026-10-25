@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import CtaBand from '@/components/blocks/CtaBand';
 import PageHero from '@/components/blocks/PageHero';
 import ProcessView from '@/components/views/ProcessView';
 import { buildBreadcrumbSchema, buildPageMetadata } from '@/data/siteConfig';
@@ -34,6 +35,7 @@ const ProcessPage = async () => {
         }
       />
       <ProcessView advancePercent={advancePercent} />
+      <CtaBand href="/contact?source=/process" />
     </>
   );
 };

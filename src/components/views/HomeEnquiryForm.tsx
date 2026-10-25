@@ -18,6 +18,7 @@ type Props = {
  */
 export default function HomeEnquiryForm({ whatsappNumber }: Props) {
   const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState('');
   const [message, setMessage] = useState('');
@@ -36,6 +37,7 @@ export default function HomeEnquiryForm({ whatsappNumber }: Props) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name,
+          phone,
           email,
           company,
           message,
@@ -49,6 +51,7 @@ export default function HomeEnquiryForm({ whatsappNumber }: Props) {
       if (!response.ok) throw new Error(result.error || 'Unable to send right now.');
       setSent(true);
       setName('');
+      setPhone('');
       setEmail('');
       setCompany('');
       setMessage('');
@@ -64,7 +67,7 @@ export default function HomeEnquiryForm({ whatsappNumber }: Props) {
       <div role="status" className="grid justify-items-start gap-4">
         <span className="grid size-12 place-items-center rounded-full bg-lime text-lime-ink">✓</span>
         <h3 className="font-display text-[24px] font-semibold tracking-[-0.02em]">Message sent.</h3>
-        <p className="text-muted-foreground">Thank you. Rahul reads every enquiry himself and will reply.</p>
+        <p className="text-muted-foreground">Thank you. Rahul reads every enquiry himself and will reply on WhatsApp or by phone.</p>
         <button type="button" onClick={() => setSent(false)} className="text-[14px] text-lime underline underline-offset-4 hover:text-ivory">
           Send another enquiry
         </button>
@@ -84,19 +87,25 @@ export default function HomeEnquiryForm({ whatsappNumber }: Props) {
           <Input id="home-company" required value={company} onChange={(e) => setCompany(e.target.value)} autoComplete="organization" />
         </div>
       </div>
-      <div>
-        <Label htmlFor="home-email">Your email</Label>
-        <Input id="home-email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" />
+      <div className="grid gap-4 min-[641px]:grid-cols-2">
+        <div>
+          <Label htmlFor="home-phone">Phone (WhatsApp)</Label>
+          <Input id="home-phone" type="tel" inputMode="tel" required pattern="\+?[0-9][0-9 \-]{6,}" title="A phone number, e.g. +91 98765 43210" value={phone} onChange={(e) => setPhone(e.target.value)} autoComplete="tel" />
+        </div>
+        <div>
+          <Label htmlFor="home-email">Email (optional)</Label>
+          <Input id="home-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" />
+        </div>
       </div>
       <div>
-        <Label htmlFor="home-message">What do you want more of — calls, WhatsApp chats, or form fills?</Label>
+        <Label htmlFor="home-message">What do you want more of?</Label>
         <textarea
           id="home-message"
           rows={3}
           required
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Tell us about your business and what a good week looks like."
+          placeholder="WhatsApp chats, calls, Instagram DMs or form fills? Tell us your business and city."
           className="mt-2 w-full rounded-2xl border border-input bg-graphite px-4 py-3 text-base text-ivory outline-none placeholder:text-faint focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
         />
       </div>

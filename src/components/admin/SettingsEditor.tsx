@@ -14,7 +14,7 @@ const FIELDS: { key: SettingKey; label: string; type: 'text' | 'number' }[] = [
   { key: 'whatsapp_number', label: 'WhatsApp number (digits only)', type: 'text' },
   { key: 'email', label: 'Email', type: 'text' },
   { key: 'advance_percent', label: 'Advance %', type: 'number' },
-  { key: 'guarantee_text', label: 'Guarantee text', type: 'text' },
+  { key: 'guarantee_text', label: 'Guarantee text (homepage guarantee section)', type: 'text' },
 ];
 
 export default function SettingsEditor({ settings }: { settings: AppSettings }) {

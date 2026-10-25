@@ -5,7 +5,8 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import { siteConfig } from '@/data/siteConfig';
+import { useSettings } from '@/lib/useSettings';
+import { buildWhatsAppLink } from '@/lib/whatsapp';
 import { Button, ButtonArrow } from '@/components/ui/button';
 import { brandPaths } from '@/components/site/BrandSymbol';
 import MagneticButton from './MagneticButton';
@@ -23,13 +24,15 @@ const offsets = [{ x: -260, y: 180, rotation: -40 }, { x: 40, y: -320, rotation:
 
 /** Violet closing panel; the brand symbol assembles as it scrolls into view. */
 export default function CtaBand({
-  title = 'Bring one problem. Leave with a plan.',
-  body = 'A short call to understand the goal, look at your current setup and agree whether a Proof Sprint makes sense.',
+  title = 'Tell us what you want more of.',
+  body = 'WhatsApp chats, calls, Instagram DMs or form fills. Share your business and get a clear plan with a fixed, public price.',
   href = '/contact',
-  label = 'Start the conversation',
+  label = 'Send an enquiry',
   id = 'cta-title',
 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
+  const settings = useSettings();
+  const phone = `+${settings.whatsapp_number}`;
 
   useEffect(() => {
     const el = ref.current;
@@ -71,18 +74,18 @@ export default function CtaBand({
               </Button>
             </MagneticButton>
             <a
-              href={siteConfig.socialLinks.whatsapp}
+              href={buildWhatsAppLink(settings.whatsapp_number, '')}
               target="_blank"
               rel="noreferrer"
               className="border-b border-white/50 pb-0.5 font-medium text-white transition-colors hover:border-white"
             >
-              WhatsApp {siteConfig.phoneDisplay}
+              WhatsApp {phone}
             </a>
           </div>
           <p className="mt-7 font-mono text-[13px] text-white/90">
-            <a href={`mailto:${siteConfig.email}`} className="hover:underline">{siteConfig.email}</a>
+            <a href={`mailto:${settings.email}`} className="hover:underline">{settings.email}</a>
             <span aria-hidden="true"> · </span>
-            <a href={`tel:${siteConfig.phoneHref}`} className="hover:underline">Call {siteConfig.phoneDisplay}</a>
+            <a href={`tel:${phone}`} className="hover:underline">Call {phone}</a>
           </p>
         </div>
       </div>

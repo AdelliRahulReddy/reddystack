@@ -12,6 +12,9 @@ import { DEFAULT_SETTINGS, getSettings } from './settings';
  * that renders inside the static shell, where a server read would force the
  * whole shell dynamic.
  */
+// One request per page load, shared by every component that reads settings.
+let pending: Promise<AppSettings | null> | null = null;
+
 export function useSettings(): AppSettings {
   const [settings, setSettings] = useState<AppSettings>(DEFAULT_SETTINGS);
 
@@ -19,7 +22,8 @@ export function useSettings(): AppSettings {
     const client = getBrowserClient();
     if (!client) return;
     let cancelled = false;
-    getSettings(client).then((next) => {
+    pending ??= getSettings(client);
+    pending.then((next) => {
       if (!cancelled && next) setSettings(next);
     });
     return () => {

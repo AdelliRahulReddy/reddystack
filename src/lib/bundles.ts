@@ -12,20 +12,19 @@ export async function listBundles(client: SupabaseClient | null): Promise<Bundle
   return data ?? [];
 }
 
-export type BundleInput = Partial<Bundle> & { name: string; fixed_price: number };
+export type BundleUpdate = Pick<Bundle, 'name' | 'description' | 'fixed_price' | 'guarantee_text' | 'is_active'>;
 
-export async function saveBundle(client: SupabaseClient | null, bundle: BundleInput): Promise<boolean> {
+/** Admin only (owner RLS): edits an existing bundle such as the Enquiry Sprint. */
+export async function updateBundle(client: SupabaseClient | null, id: string, patch: BundleUpdate): Promise<boolean> {
   if (!client) return false;
-  const payload = {
-    name: bundle.name,
-    fixed_price: bundle.fixed_price,
-    guarantee_text: bundle.guarantee_text ?? '',
-  };
-  const { error } = bundle.id
-    ? await client.from('bundles').update(payload).eq('id', bundle.id)
-    : await client.from('bundles').insert(payload);
-  if (error) {
-    console.error('bundle_save_failed', { reason: error.message });
+  // RLS turns a blocked update into "0 rows, no error", so confirm the row came back.
+  const { data, error } = await client
+    .from('bundles')
+    .update({ ...patch, updated_at: new Date().toISOString() })
+    .eq('id', id)
+    .select('id');
+  if (error || !data || data.length !== 1) {
+    console.error('bundle_save_failed', { reason: error?.message ?? 'no row updated' });
     return false;
   }
   return true;

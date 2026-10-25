@@ -2,22 +2,25 @@ import { NextResponse } from 'next/server';
 import * as yup from 'yup';
 
 import { createSupabaseServerClient } from '@/lib/supabase/server';
+import { listBundles } from '@/lib/bundles';
 import { listActiveServices, listServiceOptions } from '@/lib/services';
-import { createQuote, type QuoteLine } from '@/lib/quotes';
-import { computeQuoteTotals, type PricedItem } from '@/lib/quote';
+import { createQuote } from '@/lib/quotes';
+import { computeQuoteTotals } from '@/lib/quote';
+import { resolveQuoteSelection } from '@/lib/quoteSelection';
 import { isSupabaseConfigured } from '@/lib/supabase/env';
 
 export const runtime = 'nodejs';
 
 const calculatorSchema = yup
   .object({
+    bundle_ids: yup.array().of(yup.string().uuid()).max(10).default([]),
     service_ids: yup.array().of(yup.string().uuid()).max(50).default([]),
     option_ids: yup.array().of(yup.string().uuid()).max(50).default([]),
     ad_spend_estimate: yup.number().integer().min(0).max(100000000).default(0),
     name: yup.string().trim().max(100).required(),
     business_name: yup.string().trim().max(200).required(),
     phone: yup.string().trim().max(30).required(),
-    email: yup.string().trim().email().max(254).required(),
+    email: yup.string().trim().email().max(254).default(''),
     message: yup.string().trim().max(4000).default(''),
     website: yup.string().max(0).default(''),
   })
@@ -52,63 +55,35 @@ export async function POST(request: Request) {
   }
 
   const client = await createSupabaseServerClient();
-  const [services, options] = await Promise.all([
+  const [bundles, services, options] = await Promise.all([
+    listBundles(client),
     listActiveServices(client),
     listServiceOptions(client),
   ]);
 
-  if (!services || !options) {
+  if (!bundles || !services || !options) {
     return NextResponse.json(
       { error: 'Unable to build the quote right now. Please try again or use WhatsApp.' },
       { status: 502 },
     );
   }
 
-  const serviceIds = new Set(payload.service_ids);
-  const optionIds = new Set(payload.option_ids);
-
-  const selectedServices = services.filter((service) => serviceIds.has(service.id));
-  const selectedOptions = options.filter(
-    (option) => optionIds.has(option.id) && serviceIds.has(option.service_id),
+  // Prices are resolved server-side from the DB, never trusted from the client.
+  const { items: pricedItems, lines } = resolveQuoteSelection(
+    {
+      bundleIds: (payload.bundle_ids ?? []).filter((id): id is string => Boolean(id)),
+      serviceIds: (payload.service_ids ?? []).filter((id): id is string => Boolean(id)),
+      optionIds: (payload.option_ids ?? []).filter((id): id is string => Boolean(id)),
+    },
+    { bundles, services, options },
   );
 
-  if (selectedServices.length === 0) {
-    return NextResponse.json({ error: 'Pick at least one service to build a quote.' }, { status: 400 });
+  if (lines.every((line) => line.kind === 'option')) {
+    return NextResponse.json({ error: 'Pick the Enquiry Sprint or at least one service to build a quote.' }, { status: 400 });
   }
 
-  // Prices are resolved server-side from the DB, never trusted from the client.
-  const pricedItems: PricedItem[] = [
-    ...selectedServices.map((service) => ({
-      name: service.name,
-      type: 'service' as const,
-      price: service.base_price,
-      billing_type: service.billing_type,
-    })),
-    ...selectedOptions.map((option) => ({
-      name: option.option_name,
-      type: 'option' as const,
-      price: option.extra_price,
-      billing_type: 'one_time' as const,
-    })),
-  ];
-
-  const lines: QuoteLine[] = [
-    ...selectedServices.map((service) => ({
-      kind: 'service' as const,
-      service_id: service.id,
-      name: service.name,
-      price: service.base_price,
-    })),
-    ...selectedOptions.map((option) => ({
-      kind: 'option' as const,
-      option_id: option.id,
-      name: option.option_name,
-      price: option.extra_price,
-    })),
-  ];
-
   const totals = computeQuoteTotals(pricedItems);
-  const serviceInterest = selectedServices.map((service) => service.name).join(', ');
+  const serviceInterest = lines.filter((line) => line.kind !== 'option').map((line) => line.name).join(', ');
 
   const result = await createQuote(client, {
     lines,

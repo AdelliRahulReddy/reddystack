@@ -11,7 +11,7 @@ import portrait from '@/assets/img/hero/ab-hero-1.jpg';
 const facts = [
   ['Based in', 'Hyderabad, India'],
   ['Founded', 'April 2026'],
-  ['Works with', 'US & UK teams, remotely'],
+  ['Works with', 'Businesses across India'],
   ['Leads', 'Every engagement directly'],
 ] as const;
 

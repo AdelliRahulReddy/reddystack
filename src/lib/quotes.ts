@@ -5,6 +5,7 @@ import type { QuoteTotals } from './quote';
 import { insertEnquiry } from './enquiries';
 
 export type QuoteLine =
+  | { kind: 'bundle'; bundle_id: string; name: string; price: number }
   | { kind: 'service'; service_id: string; name: string; price: number }
   | { kind: 'option'; option_id: string; name: string; price: number };
 
@@ -48,10 +49,14 @@ export async function createQuote(
     return null;
   }
 
+  // quote_items has no bundle column yet, so a bundle line (the Enquiry Sprint)
+  // is stored with its price only; its name is kept in quotes.items_summary.
   const itemRows = input.lines.map((line) =>
     line.kind === 'service'
       ? { quote_id: quoteId, service_id: line.service_id, price: line.price }
-      : { quote_id: quoteId, option_id: line.option_id, price: line.price },
+      : line.kind === 'option'
+        ? { quote_id: quoteId, option_id: line.option_id, price: line.price }
+        : { quote_id: quoteId, price: line.price },
   );
   if (itemRows.length > 0) {
     const { error: itemsError } = await client.from('quote_items').insert(itemRows);

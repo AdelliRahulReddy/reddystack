@@ -4,7 +4,8 @@ import { Resend } from 'resend';
 import { createHash, randomUUID } from 'node:crypto';
 
 import { siteConfig } from '@/data/siteConfig';
-import { contactBudgetTitles, contactCategoryTitles } from '@/data/contactOptions';
+import { contactBudgetTitles } from '@/data/contactOptions';
+import { listEnquiryChoices } from '@/lib/enquiryChoices';
 import { createSupabaseServerClient } from '@/lib/supabase/server';
 import { insertEnquiry } from '@/lib/enquiries';
 
@@ -13,11 +14,12 @@ export const runtime = 'nodejs';
 const contactSchema = yup
   .object({
     name: yup.string().trim().max(100).required(),
-    email: yup.string().trim().email().max(254).required(),
+    phone: yup.string().trim().max(30).matches(/^\+?[0-9][0-9 -]{6,}$/).required(),
+    email: yup.string().trim().email().max(254).default(''),
     company: yup.string().trim().max(200).required(),
     message: yup.string().trim().max(4000).required(),
     budget: yup.string().oneOf(['Not specified', ...contactBudgetTitles]).required(),
-    services: yup.array().max(contactCategoryTitles.length).of(yup.string().oneOf(contactCategoryTitles).required()).default([]).required(),
+    services: yup.array().max(12).of(yup.string().trim().max(120).required()).default([]).required(),
     website: yup.string().max(0).default(''),
     sourcePage: yup.string().max(200).matches(/^\/(?!\/)[a-z0-9/-]*(?![\s\S])/, { excludeEmptyString: true }).default(''),
   })
@@ -73,6 +75,13 @@ export async function POST(request: Request) {
       stripUnknown: true,
     });
 
+    // Service choices come from the same rows as the price list. If the database
+    // is unreachable, accept the enquiry rather than lose it.
+    const choices = await listEnquiryChoices(await createSupabaseServerClient());
+    if (choices && payload.services.some((title) => !choices.some((choice) => choice.title === title))) {
+      return NextResponse.json({ error: 'Please complete all required fields correctly.' }, { status: 400 });
+    }
+
     const now = Date.now();
     for (const [key, value] of attempts) if (value.resetAt <= now) attempts.delete(key);
     // Only trust Vercel's overwritten client-IP header. Other hosts share the conservative bucket.
@@ -103,10 +112,11 @@ export async function POST(request: Request) {
     const fromEmail =
       process.env.RESEND_FROM_EMAIL || 'ReddyStack <hello@reddystack.com>';
 
-    const subject = `New ReddyStack inquiry from ${payload.name}`;
+    const subject = `New ReddyStack enquiry from ${payload.name}`;
     const text = [
       `Name: ${payload.name}`,
-      `Email: ${payload.email}`,
+      `Phone: ${payload.phone}`,
+      `Email: ${payload.email || 'Not given'}`,
       `Business / project: ${payload.company}`,
       `Budget: ${payload.budget}`,
       `Services: ${selectedServices}`,
@@ -121,7 +131,8 @@ export async function POST(request: Request) {
       <div>
         <h2>New ReddyStack inquiry</h2>
         <p><strong>Name:</strong> ${escapeHtml(payload.name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(payload.email)}</p>
+        <p><strong>Phone:</strong> ${escapeHtml(payload.phone)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(payload.email || 'Not given')}</p>
         <p><strong>Business / project:</strong> ${escapeHtml(payload.company)}</p>
         <p><strong>Budget:</strong> ${escapeHtml(payload.budget)}</p>
         <p><strong>Services:</strong> ${escapeHtml(selectedServices)}</p>
@@ -135,7 +146,7 @@ export async function POST(request: Request) {
     const { error } = await resend.emails.send({
       from: fromEmail,
       to: [toEmail],
-      replyTo: payload.email,
+      ...(payload.email ? { replyTo: payload.email } : {}),
       subject,
       text,
       html,
@@ -158,7 +169,7 @@ export async function POST(request: Request) {
         await insertEnquiry(supabase, {
           name: payload.name,
           business_name: payload.company,
-          phone: '',
+          phone: payload.phone,
           email: payload.email,
           service_interest: selectedServices,
           message: payload.message,

@@ -17,16 +17,14 @@ const context = vm.createContext({
   require: (name) => name === 'resend' ? { Resend: class {
     emails = { send: async (message) => { sent.push(message); if (providerThrows) throw new Error('private provider detail'); return { error: providerError }; } };
   } } : name === '@/data/siteConfig' ? { siteConfig: { email: 'hello@example.test' } }
-    : name === '@/data/contactOptions' ? {
-      contactBudgetTitles: ['Under $1,000', '$1,000–$2,500', '$2,500–$5,000', '$5,000–$10,000', '$10,000+', 'Under £750', '£750–£2,000', '£2,000–£4,000', '£4,000–£8,000', '£8,000+', 'Under ₹25k', '₹25k–₹50k', '₹50k–₹1L', '₹1L–₹2.5L', '₹2.5L+'],
-      contactCategoryTitles: ['Proof Sprint', 'Paid Acquisition — Meta', 'Paid Acquisition — Google', 'Creative & Conversion', 'AI-Assisted Video', 'Website & Tracking Foundation', 'Search Visibility', 'Automation or Product Build', 'Start With the Bottleneck'],
-    }
+    : name === '@/data/contactOptions' ? { contactBudgetTitles: ['Under ₹25k', '₹25k–₹50k', '₹50k–₹1L', '₹1L–₹2.5L', '₹2.5L+'] }
+    : name === '@/lib/enquiryChoices' ? { listEnquiryChoices: async () => [{ slug: 'enquiry-sprint', title: 'Enquiry Sprint' }, { slug: 'website', title: 'Website (multi-page)' }, { slug: 'not-sure', title: 'Not sure yet' }] }
     : name === '@/lib/supabase/server' ? { createSupabaseServerClient: async () => ({ __fakeDb: true }) }
     : name === '@/lib/enquiries' ? { insertEnquiry: async (_client, payload) => { dbInserts.push(payload); return 'test-enquiry-uuid'; } }
     : require(name),
 });
 vm.runInContext(code, context);
-const valid = { name: 'Test <person>', email: 'test@example.test', company: 'Example', message: 'Please discuss a website.', budget: '₹25k–₹50k', services: ['Website & Tracking Foundation'] };
+const valid = { name: 'Test <person>', phone: '+91 98765 43210', email: 'test@example.test', company: 'Example', message: 'Please discuss a website.', budget: '₹25k–₹50k', services: ['Website (multi-page)'] };
 const post = (body, headers = {}) => context.exports.POST(new Request('https://www.reddystack.com/api/contact', {
   method: 'POST', headers: { 'content-type': 'application/json', origin: 'https://www.reddystack.com', 'x-vercel-forwarded-for': '192.0.2.1', ...headers },
   body: typeof body === 'string' ? body : JSON.stringify(body),
@@ -38,6 +36,9 @@ assert.equal((await post(valid, { origin: 'https://spam.example' })).status, 403
 assert.equal((await post(valid, { 'content-type': 'text/plain' })).status, 415, 'Require JSON');
 assert.equal((await post({ ...valid, services: ['invented service'] })).status, 400, 'Validate service choices');
 assert.equal((await post({ ...valid, budget: '€1,000–€2,000' })).status, 400, 'Validate budget choices');
+assert.equal((await post({ ...valid, budget: 'Under $1,000' })).status, 400, 'Budgets are INR only');
+assert.equal((await post({ ...valid, phone: '' })).status, 400, 'Phone is required');
+assert.equal((await post({ ...valid, phone: 'call me' })).status, 400, 'Phone must look like a number');
 for (const sourcePage of ['https://spam.example', '//spam.example', '/contact?email=private@example.test', '/service/../contact', '/service\nInjected: value', '/service\n', `/${'a'.repeat(180)}!`]) {
   assert.equal((await post({ ...valid, sourcePage })).status, 400, 'Reject external URLs, query data and malformed source paths');
 }
@@ -54,7 +55,7 @@ assert.match(sent[0].text, /Source page: \/service\/seo-websites/);
 assert.equal(dbInserts.length, 1, 'Record the enquiry in the database alongside the email');
 assert.deepEqual(
   { source: dbInserts[0].source, business_name: dbInserts[0].business_name, service_interest: dbInserts[0].service_interest, email: dbInserts[0].email, phone: dbInserts[0].phone },
-  { source: 'website', business_name: 'Example', service_interest: 'Website & Tracking Foundation', email: 'test@example.test', phone: '' },
+  { source: 'website', business_name: 'Example', service_interest: 'Website (multi-page)', email: 'test@example.test', phone: '+91 98765 43210' },
   'Map the form fields onto the enquiries row (status new, source website)',
 );
 assert.match(sent[0].html, /Test &lt;person&gt;/, 'Escape email HTML');
@@ -72,6 +73,9 @@ assert.equal(throttled.status, 429, 'Fourth attempt in the window must be thrott
 assert.ok(Number(throttled.headers.get('retry-after')) > 0);
 now += 600001;
 assert.equal((await post(valid)).status, 200, 'Allow requests after the window expires');
+const before = sent.length;
+assert.equal((await post({ ...valid, email: '' })).status, 200, 'Email is optional when phone is given');
+assert.equal(sent[before].replyTo, undefined, 'No reply-to address without an email');
 now += 600001;
 for (let i = 0; i < 20; i++) {
   assert.equal((await post(valid, { 'x-vercel-forwarded-for': `192.0.2.${i + 10}` })).status, 200);

@@ -5,7 +5,7 @@ const STEPS = [
   },
   {
     title: 'Pay the advance.',
-    text: 'A small percentage up front books the work. The rest is paid on delivery.',
+    text: 'The advance books the work. The rest is paid on delivery.',
   },
   {
     title: 'We build.',
@@ -26,7 +26,7 @@ export default function ProcessView({ advancePercent }: { advancePercent: number
           <li key={step.title} className="rounded-[28px] border border-line bg-graphite p-6 sm:p-8">
             <span className="font-mono text-xs uppercase tracking-[0.1em] text-lime">Step {index + 1}</span>
             <h2 className="mt-3 font-display text-[22px] font-semibold tracking-[-0.02em]">
-              {index === 1 ? `${advancePercent}% ${step.title.toLowerCase()}` : step.title}
+              {index === 1 ? `Pay ${advancePercent}% to start.` : step.title}
             </h2>
             <p className="mt-3 text-muted-foreground">{step.text}</p>
           </li>

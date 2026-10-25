@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState, type ComponentProps } from 'react';
 
-import { siteConfig } from '@/data/siteConfig';
+import { useSettings } from '@/lib/useSettings';
+import { buildWhatsAppLink } from '@/lib/whatsapp';
 import { Button, ButtonArrow } from '@/components/ui/button';
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
@@ -41,6 +42,7 @@ export default function SiteHeader() {
   const pathname = usePathname();
   const { subscribe, lock } = useSmoothScroll();
   const [open, setOpen] = useState(false);
+  const settings = useSettings();
   const headerRef = useRef<HTMLElement>(null);
 
   // Hide on scroll down, show on scroll up.
@@ -64,7 +66,7 @@ export default function SiteHeader() {
       className="fixed inset-x-0 top-[env(safe-area-inset-top,0px)] z-50 py-3.5 transition-transform duration-500 ease-studio data-[hidden]:-translate-y-[110%]"
     >
       <div className="site-wrap">
-        <div className="flex items-center justify-between gap-6 rounded-full border border-line bg-ink/62 py-2 pl-[18px] pr-2 backdrop-blur-[18px] backdrop-saturate-[1.4]">
+        <div className="flex items-center justify-between gap-3 rounded-full border border-line bg-ink/62 min-[461px]:gap-6 py-2 pl-[18px] pr-2 backdrop-blur-[18px] backdrop-saturate-[1.4]">
           <Brand />
           <nav aria-label="Primary" className="hidden gap-1 text-[15px] min-[901px]:flex">
             {primaryNav.map((l) => {
@@ -86,8 +88,12 @@ export default function SiteHeader() {
           </nav>
           <div className="flex items-center gap-2">
             <MagneticButton>
-              <Button asChild className="max-[460px]:hidden">
-                <Link href="/contact">Start a project <ButtonArrow /></Link>
+              <Button asChild className="max-[460px]:h-11 max-[460px]:px-4">
+                <Link href="/contact">
+                  <span className="max-[460px]:hidden">Start a project</span>
+                  <span className="min-[461px]:hidden">Enquire</span>
+                  <ButtonArrow className="max-[460px]:hidden" />
+                </Link>
               </Button>
             </MagneticButton>
             <Sheet open={open} onOpenChange={setOpen}>
@@ -126,9 +132,9 @@ export default function SiteHeader() {
                     ))}
                   </nav>
                   <div className="mt-auto grid gap-1.5 pb-4 font-mono text-[13px] text-muted-foreground">
-                    <a href={`mailto:${siteConfig.email}`} className="hover:text-ivory">{siteConfig.email}</a>
-                    <a href={`tel:${siteConfig.phoneHref}`} className="hover:text-ivory">Call {siteConfig.phoneDisplay}</a>
-              <a href={siteConfig.socialLinks.whatsapp} target="_blank" rel="noreferrer" className="hover:text-ivory">WhatsApp</a>
+                    <a href={`mailto:${settings.email}`} className="hover:text-ivory">{settings.email}</a>
+                    <a href={`tel:+${settings.whatsapp_number}`} className="hover:text-ivory">Call +{settings.whatsapp_number}</a>
+                    <a href={buildWhatsAppLink(settings.whatsapp_number, '')} target="_blank" rel="noreferrer" className="hover:text-ivory">WhatsApp</a>
                   </div>
                 </div>
               </SheetContent>

@@ -31,15 +31,33 @@ export function FaqList({ items, openFirst = true, className }: { items: FaqItem
   );
 }
 
-/** Two-column FAQ section: heading left, questions right. */
+/** Shown until the owner adds real answers in Admin → Content. Never filled with invented answers. */
+function FaqEmpty({ whatsappHref }: { whatsappHref?: string }) {
+  return (
+    <div role="status" className="rounded-[28px] border border-line bg-graphite p-6 sm:p-8">
+      <p className="font-display text-[clamp(20px,1.8vw,24px)] font-semibold tracking-[-0.02em]">
+        Questions coming soon — ask us on WhatsApp.
+      </p>
+      <p className="mt-2 text-muted-foreground">Rahul answers every question himself, in plain words.</p>
+      {whatsappHref && (
+        <a href={whatsappHref} target="_blank" rel="noreferrer" className="mt-5 inline-flex font-medium text-lime underline underline-offset-4 hover:text-ivory">
+          Ask on WhatsApp
+        </a>
+      )}
+    </div>
+  );
+}
+
+/** Two-column FAQ section: heading left, questions right (or an honest empty state). */
 export default function Faq({
   items,
   title = 'Before you get in touch.',
   label = 'Questions',
   id = 'faq-title',
   intro,
+  whatsappHref,
   className,
-}: { items: FaqItem[]; title?: string; label?: string; id?: string; intro?: string; className?: string }) {
+}: { items: FaqItem[]; title?: string; label?: string; id?: string; intro?: string; whatsappHref?: string; className?: string }) {
   return (
     <section aria-labelledby={id} className={cn('py-[clamp(56px,8vw,120px)]', className)}>
       <div className="site-wrap grid gap-[clamp(24px,5vw,88px)] min-[861px]:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)]">
@@ -50,7 +68,7 @@ export default function Faq({
           </h2>
           {intro && <p data-reveal className="mt-6 max-w-[40ch] text-muted-foreground">{intro}</p>}
         </div>
-        <FaqList items={items} />
+        {items.length > 0 ? <FaqList items={items} /> : <FaqEmpty whatsappHref={whatsappHref} />}
       </div>
     </section>
   );

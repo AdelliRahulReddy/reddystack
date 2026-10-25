@@ -1,4 +1,5 @@
 import type { Work, WorkType } from '@/types/database';
+import WorkImage from '@/components/blocks/WorkImage';
 import SectionHead from '@/components/blocks/SectionHead';
 
 const GROUP_LABELS: Record<WorkType, { label: string; title: string; note: string }> = {
@@ -16,7 +17,8 @@ const GROUP_LABELS: Record<WorkType, { label: string; title: string; note: strin
 
 function WorkCard({ work }: { work: Work }) {
   return (
-    <article className="rounded-[28px] border border-line bg-graphite p-6 sm:p-8">
+    <article className="overflow-hidden rounded-[28px] border border-line bg-graphite p-6 sm:p-8">
+      <WorkImage work={work} />
       <h3 className="font-display text-[20px] font-semibold tracking-[-0.02em]">{work.title}</h3>
       {work.client_name && <p className="mt-1 font-mono text-xs uppercase tracking-[0.08em] text-faint">{work.client_name}</p>}
       {work.description && <p className="mt-4 text-muted-foreground">{work.description}</p>}

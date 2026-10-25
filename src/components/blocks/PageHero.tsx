@@ -62,7 +62,7 @@ export default function PageHero({ eyebrow, title, accent, intro, actions, aside
             </div>
           )}
           {actions && (
-            <div className="mt-9 flex flex-wrap gap-3 motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-bottom-4 motion-safe:delay-300 motion-safe:duration-1000 motion-safe:fill-mode-both">
+            <div className="mt-9 flex flex-wrap gap-3 max-[640px]:mt-7">
               {actions}
             </div>
           )}
