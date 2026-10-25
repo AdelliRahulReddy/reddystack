@@ -33,3 +33,7 @@
   tests 10/10, typecheck clean). Note: services."Landing page (Basic)"
   is ₹5,989 in the DB (seed was ₹4,999) — a leftover owner test change to
   confirm/restore.
+- 2026-10-25: build 1 SHIPPED live (owner word "Ship build 1 live now"): commit f9dc520 pushed to main on github.com/AdelliRahulReddy/reddystack; Vercel env vars (NEXT_PUBLIC_SUPABASE_URL + NEXT_PUBLIC_SUPABASE_ANON_KEY) added by owner; live verified: /calculator shows all 6 services with exact prices, homepage hero + Enquiry Sprint ₹14,999.
+- 2026-10-25: Landing page (Basic) price restored ₹5,989 → ₹4,999 (owner decision; the ₹5,989 was a sync-proof test leftover).
+- 2026-10-25: 25 agent skills installed in .agents/skills/ (provenance in SOURCES.md); mandatory-skills rule added to AGENTS.md.
+- 2026-10-25: root docs standardised (one file, one job, no repeats, no pointers to deleted files): AGENTS.md 146 → 65 lines, PRD.md reframed to live + next builds, ARCHITECTURE.md corrected (RLS done, live on Vercel, real folder map), DESIGN.md corrected (current look NOT final; design changes must follow the design skills), RULES.md + rule 11 (docs standard).

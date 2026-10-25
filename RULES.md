@@ -25,3 +25,7 @@
    run/batch/pack numbering.
 10. SHORT SIMPLE UPDATES: one point at a time, plain English, status during
     long work — the owner does not read long reports.
+11. DOCS STANDARD: each root file owns one topic and nothing else. When a
+    change makes a doc wrong, update that doc in the same change. Never point
+    to a deleted file or deleted code, and never repeat another file's
+    content — point to it instead.

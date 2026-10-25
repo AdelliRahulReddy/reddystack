@@ -1,6 +1,6 @@
 # ReddyStack — DESIGN
 
-## Principles
+## Principles (decided — these do not change with a redesign)
 - Simple plain English. A business owner with no marketing knowledge must
   understand every page in one read. No jargon without a plain explanation.
 - Price first. Prices are visible, not "call for quote". One-time vs monthly
@@ -11,7 +11,22 @@
   buttons, WhatsApp button always visible, forms short (name, business,
   phone, what you need, message).
 
-## Pages
+## Design direction (NOT decided — read this before any design change)
+- The current look of the site is NOT the final decided design. Nothing in
+  this file locks colours, fonts, or layout as final.
+- For any design change or design suggestion, the builder MUST follow the
+  design skills in `.agents/skills/` first and work through them:
+  frontend-design, design-taste-frontend, ui-ux-pro-max, impeccable,
+  ui-styling, design-system, hallmark, better-interface, emil-design-eng,
+  web-design-guidelines.
+- Never invent a new look without the skills, and never present the current
+  look as "the design". Suggestions come from the skills; the owner picks
+  the direction.
+- Guardrails that hold in any redesign: numbers in Indian format (₹14,999).
+  Dates in IST. No fake counters ("500+ happy clients" is banned — it would
+  be a lie). No graphic eating the headline (the old site's exact fault).
+
+## Pages (content order — the look of each section follows the skills)
 - Home: hero (site_content hero row) → Sprint box → services preview →
   works preview → guarantee → FAQ preview → enquiry form.
 - Services: one card per active service — price, includes, excludes,
@@ -23,10 +38,3 @@
 - Process: 4 steps — pick → 50% advance → we build → report. Async rule
   stated: written updates, no daily calls needed.
 - FAQ: from faqs table. Contact: form + WhatsApp + email + response promise.
-
-## Visual rules
-- Clean, not flashy. One accent colour, one font family, generous spacing.
-  No 3D graphic eating the headline (the old site's exact fault).
-- Numbers in Indian format (₹14,999). Dates in IST.
-- No dark "agency" look, no stock-photo clutter, no fake counters
-  ("500+ happy clients" is banned — it would be a lie).

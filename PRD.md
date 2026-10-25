@@ -26,22 +26,22 @@ database — the site never stores its own copy of prices, services or works.
 - Prices rise after 3–5 real client works with showable results.
 - No AI video (no budget for paid AI video tools).
 
-## Public site must do
+## Public site (live)
 Home, Services (public prices), Calculator, Works, Process, FAQ, Contact.
 Enquiry form + WhatsApp button on every page. Calculator creates a quote +
 enquiry in the database and offers WhatsApp send. Works are split into
 "Client work" (ReelsXpress, Manamantha) and "Portfolio" (Asli, demos) —
 never mixed, never relabelled.
 
-## Admin panel must do (/admin, owner only)
+## Admin panel (live, /admin, owner only)
 Dashboard counts; services + options + prices editing; enquiries pipeline
 (new → contacted → quoted → won → lost) with notes + follow-up date; works
 manager; site content + FAQ editing (CMS inside admin); settings editing.
-Admin edits must appear on the public site + calculator with no code change.
+Admin edits appear on the public site + calculator with no code change.
 
-## Out of scope for build 1
+## Next builds (their tables already exist in the database)
 Client report portal UI, rank-tracking UI, visitor-analytics UI, payments /
-invoices UI, blog engine. Their tables already exist in the database.
+invoices UI, blog engine.
 
 ## Success test (owner's word, not a feeling)
 1. Change a price in admin → public site + calculator show the new price.

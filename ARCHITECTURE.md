@@ -6,8 +6,8 @@
   lclgzoishrlhgocgfyln, https://lclgzoishrlhgocgfyln.supabase.co,
   region ap-south-1. NEVER the ReddyWatch project (nhhubbhghigtjmhxzqam)
   or any ReelsXpress project.
-- Hosting: Vercel at ship time only, on the owner's word. The current live
-  reddystack.com is NOT replaced until the owner says ship.
+- Hosting: Vercel. The live reddystack.com runs this build (shipped
+  2026-10-25 on the owner's word).
 
 ## Data flow (the sync rule)
 Public pages and admin both read/write the same Supabase tables. There is
@@ -16,10 +16,9 @@ no second copy of prices, services, works or content anywhere in code.
   site_content, settings (public-safe rows only).
 - Public writes: enquiries, quotes, quote_items (insert only).
 - Admin writes: everything above, behind Supabase Auth + admin_users check.
-- RLS (to be set in build 1): public read on catalogue/content tables;
-  anon insert on enquiries/quotes/quote_items; all other writes require an
-  authenticated owner. Until RLS is set, the admin login gate is the only
-  protection — say so plainly in the build report.
+- RLS (applied 2026-10-25, migration 003_rls.sql, verified): public read
+  on catalogue/content tables; anon insert on enquiries/quotes/quote_items;
+  all other writes require an authenticated owner.
 
 ## Tables (18, created by migration 001, seeded by 002 — read, don't guess)
 services, service_options, bundles, enquiries, quotes, quote_items, clients,
@@ -32,9 +31,13 @@ Money is whole INR integers. Status enums are enforced by CHECK constraints.
   NEXT_PUBLIC_SUPABASE_ANON_KEY. Never commit, never print, never chat.
 - Local dev: npm run dev. Production: Vercel env vars, same names.
 
-## Folder map (see folder structure in the build brief)
+## Folder map (checked against the real tree 2026-10-25)
 - src/app: routes (public + admin). src/components: reusable UI.
-- src/lib: supabase clients + one query module per table group.
-- src/types: shared types. tests: paired tests per logic module.
-- supabase/migrations: copies of 001 + 002 (source of truth is the live DB;
-  migrations are the record, not a re-run target).
+  src/data: legacy hardcoded content for the old pages (new pages read
+  Supabase, not this).
+- src/lib: supabase clients + one query module per table group, with tests
+  next to the code (src/lib/*.test.ts).
+- src/types: shared types. src/styles, src/utils: styles + helpers.
+- supabase/migrations: 001_tables.sql + 002_seed.sql + 003_rls.sql (the
+  live DB is the source of truth; migrations are the record, not a re-run
+  target).
