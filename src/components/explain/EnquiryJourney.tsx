@@ -1,4 +1,4 @@
-import { MessageCircle, Phone, ClipboardList, Bell } from 'lucide-react';
+import LineIcon from '@/components/blocks/LineIcon';
 
 import { journeySteps } from '@/content/plainOffer';
 import { cn } from '@/lib/utils';
@@ -21,9 +21,9 @@ function AdStage() {
 function ReplyStage() {
   return (
     <div aria-hidden="true">
-      <div className={cn(s.row, s.r1)}><span className={s.dot}><MessageCircle className="size-4" /></span>“Hi, is this available tomorrow?”</div>
-      <div className={cn(s.row, s.r2)}><span className={s.dot}><Phone className="size-4" /></span>Calling your number…</div>
-      <div className={cn(s.row, s.r3)}><span className={s.dot}><ClipboardList className="size-4" /></span>Form sent: name and phone</div>
+      <div className={cn(s.row, s.r1)}><span className={s.dot}><LineIcon name="message" className="size-4" /></span>“Hi, is this available tomorrow?”</div>
+      <div className={cn(s.row, s.r2)}><span className={s.dot}><LineIcon name="phone" className="size-4" /></span>Calling your number…</div>
+      <div className={cn(s.row, s.r3)}><span className={s.dot}><LineIcon name="form" className="size-4" /></span>Form sent: name and phone</div>
     </div>
   );
 }
@@ -31,7 +31,7 @@ function ReplyStage() {
 function EnquiryStage() {
   return (
     <div className={s.notice} aria-hidden="true">
-      <p className="flex items-center gap-2 text-[13px] font-semibold"><Bell className="size-4" /> New enquiry</p>
+      <p className="flex items-center gap-2 text-[13px] font-semibold"><LineIcon name="bell" className="size-4" /> New enquiry</p>
       <p className="mt-1 text-[14px]">WhatsApp message from your Instagram ad, 2 minutes ago.</p>
       <span className={s.reply}>Reply</span>
     </div>

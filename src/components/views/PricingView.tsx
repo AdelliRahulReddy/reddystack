@@ -1,5 +1,4 @@
 import type { AppSettings, Bundle, Faq, Service } from '@/types/database';
-import { buildWhatsAppLink } from '@/lib/whatsapp';
 import { ButtonLink, TextLink } from '@/components/blocks/ButtonLink';
 import EnquiryStep from '@/components/blocks/EnquiryStep';
 import FaqBlock from '@/components/blocks/Faq';
@@ -16,7 +15,7 @@ type Props = {
 };
 
 /** Pricing: the lead offer first, then every service with its public price. */
-export default function PricingView({ bundle, services, faqs, settings }: Props) {
+export default function PricingView({ bundle, services, faqs }: Props) {
   return (
     <>
       <PageHero
@@ -49,13 +48,13 @@ export default function PricingView({ bundle, services, faqs, settings }: Props)
         <ServicesPricingView services={services} />
       </section>
 
-      <FaqBlock
-        items={faqs.map((f) => ({ id: f.id, question: f.question, answer: f.answer }))}
-        title="Questions about prices"
-        id="pricing-faq"
-        whatsappHref={buildWhatsAppLink(settings.whatsapp_number, 'Hi, I have a question about your prices.')}
+      {faqs.length > 0 && (
+        <FaqBlock items={faqs.map((f) => ({ id: f.id, question: f.question, answer: f.answer }))} title="Questions about prices" id="pricing-faq" />
+      )}
+      <EnquiryStep
+        href="/contact?source=/pricing"
+        body={faqs.length > 0 ? undefined : 'Not sure which fits? Tell us your business, or ask any question on WhatsApp. Rahul answers every question himself.'}
       />
-      <EnquiryStep href="/contact?source=/pricing" />
     </>
   );
 }

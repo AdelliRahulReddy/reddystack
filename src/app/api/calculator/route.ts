@@ -7,6 +7,7 @@ import { listActiveServices, listServiceOptions } from '@/lib/services';
 import { createQuote } from '@/lib/quotes';
 import { computeQuoteTotals } from '@/lib/quote';
 import { resolveQuoteSelection } from '@/lib/quoteSelection';
+import { planLabel } from '@/content/plainOffer';
 import { isSupabaseConfigured } from '@/lib/supabase/env';
 
 export const runtime = 'nodejs';
@@ -79,7 +80,7 @@ export async function POST(request: Request) {
   );
 
   if (lines.every((line) => line.kind === 'option')) {
-    return NextResponse.json({ error: 'Pick the Enquiry Sprint or at least one service to build a quote.' }, { status: 400 });
+    return NextResponse.json({ error: 'Pick the 7-day enquiry plan or at least one service to build a quote.' }, { status: 400 });
   }
 
   const totals = computeQuoteTotals(pricedItems);
@@ -111,6 +112,7 @@ export async function POST(request: Request) {
     success: true,
     quote_id: result.quote_id,
     totals,
-    items_summary: pricedItems.map((item) => item.name).join(', '),
+    // The visitor sees (and sends on WhatsApp) the plan's public label.
+    items_summary: pricedItems.map((item) => (item.type === 'bundle' ? planLabel : item.name)).join(', '),
   });
 }

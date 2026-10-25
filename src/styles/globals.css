@@ -28,16 +28,17 @@
   --color-line-strong: rgb(247 244 235 / 0.18);
 
   /* Public site palette (semantic names), light. Contrast on --color-ground:
-     text 16:1, muted 6.7:1, action-text 5.5:1; action fill with action-ink 9.6:1. */
+     text 16:1, muted 8.8:1 (8:1 on surface-2), action-text 7.1:1 (6.5:1 on
+     surface-2); action fill with action-ink 9.6:1; input borders 3.3:1. */
   --color-ground: #f6f4ef;
   --color-surface: #ffffff;
   --color-surface-2: #eeeae2;
   --color-text: #1c1915;
-  --color-muted: #5c564c;
+  --color-muted: #4a443b;
   --color-action: #f2b13a;
   --color-action-hover: #e6a21f;
   --color-action-ink: #1a1306;
-  --color-action-text: #8a5a00;
+  --color-action-text: #734a00;
   --color-edge: #ded7ca;
   --color-danger: #b42318;
 

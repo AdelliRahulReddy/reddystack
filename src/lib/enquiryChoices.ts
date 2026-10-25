@@ -2,6 +2,7 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 
 import { listBundles } from './bundles';
 import { listActiveServices } from './services';
+import { planLabel } from '@/content/plainOffer';
 
 export const NOT_SURE_CHOICE = { slug: 'not-sure', title: 'Not sure yet' } as const;
 
@@ -17,7 +18,8 @@ export async function listEnquiryChoices(client: SupabaseClient | null): Promise
   const [bundles, services] = await Promise.all([listBundles(client), listActiveServices(client)]);
   if (!bundles || !services) return null;
   return [
-    ...bundles.filter((b) => b.is_active).map((b) => ({ slug: b.slug, title: b.name })),
+    // The lead offer is shown (and recorded) by its public label, not its database name.
+    ...bundles.filter((b) => b.is_active).map((b) => ({ slug: b.slug, title: planLabel })),
     ...services.map((s) => ({ slug: s.slug, title: s.name })),
     NOT_SURE_CHOICE,
   ];

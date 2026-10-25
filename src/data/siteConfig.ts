@@ -112,7 +112,7 @@ export const pageSeo = {
   pricing: {
     title: "Pricing | ReddyStack",
     description:
-      "Public prices: Enquiry Sprint ₹14,999 one-time, plus landing pages, websites, admin panels, Meta ads and SEO — one-time vs monthly clearly labelled.",
+      "Public prices: the 7-day enquiry plan ₹14,999 one-time, plus landing pages, websites, admin panels, Meta ads and SEO — one-time vs monthly clearly labelled.",
     path: "/pricing",
   },
   servicesPricing: {
@@ -328,7 +328,7 @@ export const schemaIds = {
 
 export const engagementOffers = [
   {
-    name: "Enquiry Sprint",
+    name: "7-day enquiry plan",
     description:
       "A landing page, one Meta campaign, image creatives, tracking, and seven days of async optimisation — sold on enquiries, not activities.",
   },

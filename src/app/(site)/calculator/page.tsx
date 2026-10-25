@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import PageHero from '@/components/blocks/PageHero';
 import ContentUnavailable from '@/components/blocks/ContentUnavailable';
 import { listBundles } from '@/lib/bundles';
+import { planLabel } from '@/content/plainOffer';
 import CalculatorView from '@/components/views/CalculatorView';
 import { buildBreadcrumbSchema, buildPageMetadata } from '@/data/siteConfig';
 import { listActiveServices, listServiceOptions } from '@/lib/services';
@@ -41,7 +42,7 @@ const CalculatorPage = async ({ searchParams }: { searchParams: Promise<Record<s
         }
       />
       {services && options && settings ? (
-        <CalculatorView bundles={bundles ?? []} services={services} options={options} settings={settings} initialPick={initialPick} />
+        <CalculatorView bundles={(bundles ?? []).map((b) => ({ ...b, name: planLabel }))} services={services} options={options} settings={settings} initialPick={initialPick} />
       ) : (
         <ContentUnavailable />
       )}

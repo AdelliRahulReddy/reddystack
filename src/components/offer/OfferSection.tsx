@@ -1,58 +1,59 @@
-import { Check } from 'lucide-react';
-
-import { offerIncludes } from '@/content/plainOffer';
+import { offerIncludes, planLabel } from '@/content/plainOffer';
 import { formatInr } from '@/lib/money';
 import type { Bundle } from '@/types/database';
 import { ButtonLink } from '@/components/blocks/ButtonLink';
+import LineIcon, { type LineIconName } from '@/components/blocks/LineIcon';
 import ExampleEnquiryPage from '@/components/explain/ExampleEnquiryPage';
 import ExampleMessage from '@/components/explain/ExampleMessage';
 import ExampleReport from '@/components/explain/ExampleReport';
+import ExampleViewer from '@/components/explain/ExampleViewer';
+
+const icons: LineIconName[] = ['page', 'ads', 'image', 'bell', 'refresh', 'chart'];
 
 /**
- * The lead offer in plain words: what you get, the price panel (name, price,
- * ad-spend note, guarantee, one action) and three labelled examples.
- * Name, price and guarantee come from the bundles row. Shared by home and pricing.
+ * The lead offer as one block: what is included, the price facts and the
+ * promise in a single card, with three tap-to-open examples beside it.
+ * Price and promise come from the bundles row; the plan shows its display label.
  */
-export default function OfferSection({ bundle, id = 'offer' }: { bundle: Bundle; id?: string }) {
+export default function OfferSection({ bundle, id = 'offer', showPromise = true }: { bundle: Bundle; id?: string; showPromise?: boolean }) {
   const price = formatInr(bundle.fixed_price);
   return (
     <section id={id} aria-labelledby={`${id}-title`} className="section scroll-mt-[calc(var(--header-h)+8px)]">
-      <div className="site-wrap">
-        <div className="grid gap-[clamp(32px,5vw,72px)] min-[961px]:grid-cols-[minmax(0,1.25fr)_minmax(0,.75fr)]">
-          <div>
-            <h2 id={`${id}-title`} className="max-w-[16ch] text-h2">What you get for {price}</h2>
-            <ul className="mt-8 grid gap-x-8 gap-y-6 min-[640px]:grid-cols-2">
-              {offerIncludes.map((item) => (
+      <div className="site-wrap grid gap-[clamp(24px,4vw,48px)] min-[1025px]:grid-cols-[minmax(0,1.2fr)_minmax(0,.8fr)]">
+        <div className="rounded-[var(--radius-panel)] shadow-card bg-surface p-6 sm:p-8">
+          <p className="text-small font-semibold text-action-text">{planLabel}</p>
+          <h2 id={`${id}-title`} className="mt-1 text-h2">What you get for {price}</h2>
+          <p className="mt-2 text-muted">One-time. Ad spend is extra, paid directly to Meta.</p>
+
+          <ul className="mt-6 grid gap-x-6 gap-y-4 min-[560px]:grid-cols-2">
+            {offerIncludes.map((item, i) => {
+              return (
                 <li key={item.title} className="flex gap-3">
-                  <Check aria-hidden="true" className="mt-1 size-5 flex-none text-action-text" />
+                  <span className="grid size-10 flex-none place-items-center rounded-xl bg-surface-2 text-action-text"><LineIcon name={icons[i]} /></span>
                   <span>
-                    <span className="block font-semibold text-text">{item.title}</span>
-                    <span className="mt-1 block text-muted">{item.body}</span>
+                    <span className="block font-semibold leading-6 text-text">{item.title}</span>
+                    <span className="block text-[15px] text-muted">{item.body}</span>
                   </span>
                 </li>
-              ))}
-            </ul>
-          </div>
+              );
+            })}
+          </ul>
 
-          <aside aria-label={`${bundle.name} price`} className="h-fit rounded-[var(--radius-panel)] shadow-card bg-surface p-6 sm:p-8 min-[961px]:sticky min-[961px]:top-[calc(var(--header-h)+24px)]">
-            <p className="text-small text-muted">{bundle.name}</p>
-            <p className="mt-2 font-display text-[clamp(44px,5vw,64px)] font-semibold leading-none tracking-[-0.04em] text-text">{price}</p>
-            <p className="mt-2 text-text">One-time payment.</p>
-            <p className="mt-1 text-muted">Ad spend is extra and paid directly to Meta, not to us.</p>
-            {bundle.guarantee_text && (
-              <p className="mt-6 rounded-2xl bg-surface-2 p-4 text-text">
-                <span className="font-semibold text-action-text">Our promise: </span>{bundle.guarantee_text}
-              </p>
-            )}
-            <ButtonLink href={`/calculator?pick=${bundle.slug}`} className="mt-6 w-full">Get customer enquiries</ButtonLink>
-            <p className="mt-3 text-center text-small text-muted">Saving a quote does not start paid work.</p>
-          </aside>
+          {showPromise && bundle.guarantee_text && (
+            <p className="mt-6 rounded-2xl bg-surface-2 p-4 text-text">
+              <span className="font-semibold">Our promise: </span>{bundle.guarantee_text}
+            </p>
+          )}
+          <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2">
+            <ButtonLink href={`/calculator?pick=${bundle.slug}`}>Get this plan</ButtonLink>
+            <p className="text-small text-muted">Saving a quote does not start paid work.</p>
+          </div>
         </div>
 
-        <div className="mt-[clamp(48px,6vw,88px)] grid gap-8 min-[900px]:grid-cols-3">
-          <ExampleEnquiryPage />
-          <ExampleMessage />
-          <ExampleReport />
+        <div className="grid content-start gap-3 min-[640px]:max-[1024px]:grid-cols-3">
+          <ExampleViewer title="Your enquiry page"><ExampleEnquiryPage /></ExampleViewer>
+          <ExampleViewer title="An enquiry arriving"><ExampleMessage /></ExampleViewer>
+          <ExampleViewer title="Your weekly report"><ExampleReport /></ExampleViewer>
         </div>
       </div>
     </section>

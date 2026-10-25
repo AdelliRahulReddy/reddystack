@@ -21,7 +21,7 @@ export default function PhoneActionBar() {
   return (
     <nav
       aria-label="Quick contact"
-      className="fixed inset-x-0 bottom-0 z-[95] border-t border-line-strong bg-ink/95 pb-[env(safe-area-inset-bottom,0px)] backdrop-blur min-[961px]:hidden"
+      className="fixed inset-x-0 bottom-0 z-[95] border-t border-line-strong bg-ground pb-[env(safe-area-inset-bottom,0px)] backdrop-blur min-[961px]:hidden"
     >
       <div className="site-wrap flex gap-2 py-2.5">
         <a

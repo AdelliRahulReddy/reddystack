@@ -7,21 +7,24 @@ export const offerHeadline = 'More customer enquiries, set up in 7 days.';
 export const offerSentence =
   'We set up a simple page, run Facebook & Instagram ads for you, and make sure every WhatsApp chat, call and form reaches you.';
 
+/** Public display name of the lead offer. The database bundle name is unchanged; pages show this label. */
+export const planLabel = '7-day enquiry plan';
+
 /** What the lead offer includes, in plain words (the database description stays the formal version). */
 export const offerIncludes = [
-  { title: 'Your own enquiry page', body: 'A simple page, or a direct WhatsApp route, that says what you offer and lets customers reach you in one tap.' },
-  { title: 'Facebook & Instagram ads', body: 'One ad campaign shown to people near you who are likely to buy.' },
-  { title: 'Ad images made for you', body: 'Ready-to-run images for the ads, in your colours and with your offer.' },
-  { title: 'You see every enquiry', body: 'Set up so you know which ad brought each WhatsApp chat, call or form.' },
-  { title: '7 days of improvements', body: 'We keep improving the ads for 7 days and send written updates. No daily calls needed.' },
-  { title: 'One plain report', body: 'What was spent, how many enquiries came in, and what to do next.' },
+  { title: 'Your enquiry page', body: 'One tap to WhatsApp, call or a form.' },
+  { title: 'Facebook & Instagram ads', body: 'One campaign, shown to people near you.' },
+  { title: 'Ad images made for you', body: 'In your colours, with your offer.' },
+  { title: 'Every enquiry tracked', body: 'You see which ad brought it.' },
+  { title: '7 days of improvements', body: 'Written updates, no daily calls.' },
+  { title: 'One plain report', body: 'Spend, enquiries and what to do next.' },
 ] as const;
 
 /** The customer journey the explainer animates. */
 export const journeySteps = [
   { title: 'A customer sees your ad', body: 'On Facebook or Instagram, near where you work.' },
-  { title: 'They message, call or fill a form', body: 'Whichever is easiest for them: WhatsApp, a call or a short form.' },
-  { title: 'You get the enquiry', body: 'On your phone, with the ad it came from, ready to reply.' },
+  { title: 'They message, call or fill a form', body: 'WhatsApp, a call or a short form.' },
+  { title: 'The enquiry reaches your phone', body: 'With the ad it came from, ready to reply.' },
 ] as const;
 
 /** Plain names for the doors a customer can use. */

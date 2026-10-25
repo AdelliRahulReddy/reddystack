@@ -2,7 +2,7 @@ import type { Bundle } from '@/types/database';
 import { formatInr } from '@/lib/money';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
-import { offerHeadline, offerSentence } from '@/content/plainOffer';
+import { offerHeadline, offerSentence, planLabel } from '@/content/plainOffer';
 
 /** The lead offer as a tickable calculator item, read from the bundles row. */
 export default function CalculatorSprintCard({ bundle, on, onToggle }: { bundle: Bundle; on: boolean; onToggle: () => void }) {
@@ -22,7 +22,7 @@ export default function CalculatorSprintCard({ bundle, on, onToggle }: { bundle:
           ✓
         </span>
         <span>
-          <span className="block text-small text-muted">{bundle.name} · our main offer</span>
+          <span className="block text-small font-semibold text-action-text">{planLabel}</span>
           <span className="mt-1 block font-display text-[21px] font-semibold tracking-[-0.02em]">{offerHeadline}</span>
           <span className="mt-1 block text-muted-foreground">{offerSentence}</span>
         </span>

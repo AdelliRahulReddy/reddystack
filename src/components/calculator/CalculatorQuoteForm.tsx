@@ -57,7 +57,7 @@ export default function CalculatorQuoteForm({ selection, hasItems, adSpend, what
     if (submitting) return;
     setError('');
     if (!hasItems) {
-      setError('Pick the Enquiry Sprint or at least one service to build a quote.');
+      setError('Pick the 7-day enquiry plan or at least one service to build a quote.');
       return;
     }
     setSubmitting(true);

@@ -1,0 +1,39 @@
+/* Tap-to-enlarge example. The dialog eases in with opacity and scale only;
+   reduced motion gets the global near-zero transition. */
+
+.dialog {
+  width: min(560px, calc(100vw - 32px));
+  max-height: calc(100dvh - 48px);
+  margin: auto;
+  border: 0;
+  border-radius: 24px;
+  padding: 0;
+  background: var(--color-ground);
+  color: var(--color-text);
+  box-shadow: 0 30px 80px -20px rgb(28 25 21 / 0.5);
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 200ms ease-out, transform 200ms ease-out, overlay 200ms allow-discrete, display 200ms allow-discrete;
+}
+
+.dialog[open] {
+  opacity: 1;
+  transform: none;
+}
+
+@starting-style {
+  .dialog[open] {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+}
+
+.dialog::backdrop {
+  background: rgb(28 25 21 / 0.55);
+}
+
+.preview {
+  height: 150px;
+  overflow: hidden;
+  pointer-events: none;
+}

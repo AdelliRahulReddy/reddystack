@@ -20,7 +20,7 @@ export function GET() {
     line("Home", "/", "ReddyStack positioning, connected capabilities, proof-first method, engagement models, work, FAQs, and contact paths."),
     line("About", "/about", "Rahul Reddy, operating principles, transparent AI use, and the ReddyStack accountability model."),
     line("Capabilities", "/service", "Web, search, paid acquisition, creative, tracking, automation, and product capabilities selected around one growth problem."),
-    line("Pricing", "/pricing", "Public prices in Indian rupees: the Enquiry Sprint and every service, one-time and monthly labelled."),
+    line("Pricing", "/pricing", "Public prices in Indian rupees: the 7-day enquiry plan and every service, one-time and monthly labelled."),
     line("Work", "/portfolio", "Clearly labelled personal and demo builds with context, implementation decisions, and stated limitations."),
     line("Insights", "/blog", "Practical guides about web, search, paid acquisition, creative testing, measurement, and automation."),
     line("Founder", "/about/rahul-reddy-adelli", "Rahul Reddy Adelli and the ReddyStack delivery approach."),

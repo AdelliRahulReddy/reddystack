@@ -3,9 +3,13 @@
 import { useState } from 'react';
 
 import { buildWhatsAppLink } from '@/lib/whatsapp';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+
+// Plain elements styled like the shared label and button, so the homepage form
+// ships no extra component code.
+const labelClass = 'flex items-center gap-2 text-[14px] leading-none font-medium text-muted-foreground';
+const submitClass =
+  'inline-flex h-[52px] items-center justify-center rounded-full bg-action px-6 text-base font-semibold text-action-ink transition-[background-color,transform] duration-200 hover:bg-action-hover active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50';
 
 type Props = {
   whatsappNumber: string;
@@ -79,26 +83,26 @@ export default function HomeEnquiryForm({ whatsappNumber }: Props) {
     <form onSubmit={onSubmit} className="grid gap-4">
       <div className="grid gap-4 min-[641px]:grid-cols-2">
         <div>
-          <Label htmlFor="home-name">Your name</Label>
+          <label htmlFor="home-name" className={labelClass}>Your name</label>
           <Input id="home-name" required value={name} onChange={(e) => setName(e.target.value)} autoComplete="name" />
         </div>
         <div>
-          <Label htmlFor="home-company">Business name</Label>
+          <label htmlFor="home-company" className={labelClass}>Business name</label>
           <Input id="home-company" required value={company} onChange={(e) => setCompany(e.target.value)} autoComplete="organization" />
         </div>
       </div>
       <div className="grid gap-4 min-[641px]:grid-cols-2">
         <div>
-          <Label htmlFor="home-phone">Phone (WhatsApp)</Label>
+          <label htmlFor="home-phone" className={labelClass}>Phone (WhatsApp)</label>
           <Input id="home-phone" type="tel" inputMode="tel" required pattern="\+?[0-9][0-9 \-]{6,}" title="A phone number, e.g. +91 98765 43210" value={phone} onChange={(e) => setPhone(e.target.value)} autoComplete="tel" />
         </div>
         <div>
-          <Label htmlFor="home-email">Email (optional)</Label>
+          <label htmlFor="home-email" className={labelClass}>Email (optional)</label>
           <Input id="home-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" />
         </div>
       </div>
       <div>
-        <Label htmlFor="home-message">What do you want more of?</Label>
+        <label htmlFor="home-message" className={labelClass}>What do you want more of?</label>
         <textarea
           id="home-message"
           rows={3}
@@ -121,9 +125,9 @@ export default function HomeEnquiryForm({ whatsappNumber }: Props) {
       )}
 
       <div className="flex flex-wrap items-center gap-4">
-        <Button type="submit" size="lg" disabled={submitting} aria-busy={submitting}>
+        <button type="submit" disabled={submitting} aria-busy={submitting} className={submitClass}>
           {submitting ? 'Sending…' : <>Send enquiry</>}
-        </Button>
+        </button>
         <a
           href={buildWhatsAppLink(whatsappNumber, '')}
           target="_blank"

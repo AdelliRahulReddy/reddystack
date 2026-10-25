@@ -31,7 +31,7 @@ export default function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-ground/95 pt-[env(safe-area-inset-top,0px)] shadow-[0_1px_0_var(--color-edge)] backdrop-saturate-150">
+    <header className="sticky top-0 z-50 bg-ground pt-[env(safe-area-inset-top,0px)] shadow-[0_1px_0_var(--color-edge)] backdrop-saturate-150">
       <div className="site-wrap flex h-[var(--header-h)] items-center justify-between gap-4">
         <Brand />
         <nav aria-label="Main" className="hidden items-center gap-1 min-[1100px]:flex">

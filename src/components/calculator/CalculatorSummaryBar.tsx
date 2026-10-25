@@ -8,7 +8,7 @@ import type { QuoteTotals } from '@/lib/quote';
  */
 export default function CalculatorSummaryBar({ totals, count }: { totals: QuoteTotals; count: number }) {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-[95] border-t border-line-strong bg-ink/95 pb-[env(safe-area-inset-bottom,0px)] backdrop-blur min-[961px]:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-[95] border-t border-line-strong bg-ground pb-[env(safe-area-inset-bottom,0px)] backdrop-blur min-[961px]:hidden">
       <div className="site-wrap flex items-center justify-between gap-4 py-3">
         <dl className="grid grid-cols-2 gap-x-5 text-[13px] text-muted-foreground" aria-live="polite">
           <div>
