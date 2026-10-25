@@ -1433,7 +1433,7 @@ export const intentLandingPages: IntentLandingPage[] = [
     ],
     pricingTitle: "Audit pricing",
     pricingText:
-      "An audit is quoted as a fixed Proof Sprint once the scope is clear: which platforms, how many campaigns and whether landing pages and tracking implementation are included. Advertising spend is never part of the fee, and fixing the issues found is a separate, optional scope.",
+      "An audit is quoted at a fixed price once the scope is clear: which platforms, how many campaigns and whether landing pages and tracking implementation are included. Advertising spend is never part of the fee, and fixing the issues found is a separate, optional scope.",
     finalCtaTitle: "Find out what your ad spend is actually doing.",
     finalCtaText:
       "Share which platforms you advertise on, your monthly spend range and what a good lead or sale looks like. Rahul will say whether an audit is the right first step.",

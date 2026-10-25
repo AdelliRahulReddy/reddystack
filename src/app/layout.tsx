@@ -20,17 +20,19 @@ const sora = localFont({
 
 
 const dmSans = DM_Sans({
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
   variable: "--font-dm-sans",
 });
 
 
 
+// Only /admin uses the monospace face, so public pages never preload it.
 const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
   subsets: ["latin"],
   variable: "--font-jetbrains",
+  preload: false,
 });
 
 

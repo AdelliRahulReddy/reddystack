@@ -10,7 +10,7 @@ export const homeFaqItems: HomeFaqItem[] = [
     id: 1,
     tab_id: "Faq1",
     question: "What can ReddyStack help with?",
-    answer: "ReddyStack helps with websites, SEO, Meta and Google Ads, ad creative, AI video, and automation. We choose what fits your main goal.",
+    answer: "Getting customers to enquire: landing pages and websites, Facebook & Instagram ads, ad images, getting found on Google, and making sure every enquiry reaches you. We choose what fits your main goal.",
   },
   {
     id: 2,
@@ -28,13 +28,13 @@ export const homeFaqItems: HomeFaqItem[] = [
     id: 4,
     tab_id: "Faq4",
     question: "How much does it cost?",
-    answer: "Each project gets a custom quote before work begins. Advertising spend and platform fees are separate; your business keeps ownership of its accounts.",
+    answer: "Prices for Indian businesses are public on the pricing page, in rupees. Projects outside India get a written quote before work begins. Ad spend and platform fees are separate, and your business keeps its own accounts.",
   },
   {
     id: 5,
     tab_id: "Faq5",
     question: "Can you guarantee results?",
-    answer: "No. Results depend on your offer, market, budget, and sales process. I commit to the agreed work, clear reporting, and an honest review.",
+    answer: "We do not promise a number of leads, sales or rankings: those depend on your offer, market and budget. The main offer for Indian businesses carries a written promise about going live with first enquiries; see the pricing page.",
   },
   {
     id: 6,

@@ -1,13 +1,11 @@
-import Link from 'next/link';
-
 import type { AppSettings, Bundle, Faq, Service } from '@/types/database';
-import CtaBand from '@/components/blocks/CtaBand';
-import FaqBlock from '@/components/blocks/Faq';
 import { buildWhatsAppLink } from '@/lib/whatsapp';
+import { ButtonLink, TextLink } from '@/components/blocks/ButtonLink';
+import EnquiryStep from '@/components/blocks/EnquiryStep';
+import FaqBlock from '@/components/blocks/Faq';
 import PageHero from '@/components/blocks/PageHero';
 import SectionHead from '@/components/blocks/SectionHead';
-import SprintBox from '@/components/blocks/SprintBox';
-import { Button, ButtonArrow } from '@/components/ui/button';
+import OfferSection from '@/components/offer/OfferSection';
 import ServicesPricingView from './ServicesPricingView';
 
 type Props = {
@@ -17,50 +15,47 @@ type Props = {
   settings: AppSettings;
 };
 
-/** India pricing: the lead offer (Sprint), then every service with its public price. */
+/** Pricing: the lead offer first, then every service with its public price. */
 export default function PricingView({ bundle, services, faqs, settings }: Props) {
   return (
     <>
       <PageHero
-        eyebrow="Pricing"
-        title="Plain prices, no surprises."
-        accent="no surprises."
+        title="Prices, in plain rupees."
         crumbs={[{ name: 'Home', href: '/' }, { name: 'Pricing' }]}
         intro={
           <>
-            One-time vs monthly is always labelled, and ad spend stays separate —{' '}
+            Every price is public. One-time and monthly are always labelled, and ad spend is always separate —{' '}
             <strong>paid directly to Meta, not to us</strong>.
           </>
         }
         actions={
           <>
-            <Button asChild size="lg"><Link href="/calculator">Build your quote <ButtonArrow /></Link></Button>
+            <ButtonLink href="/calculator">Work out my price</ButtonLink>
+            <TextLink href="#offer">See the main offer</TextLink>
           </>
         }
       />
 
-      {bundle && <SprintBox bundle={bundle} settings={settings} />}
+      {bundle && <OfferSection bundle={bundle} />}
 
-      <section aria-labelledby="pricing-services" className="pb-[clamp(48px,7vw,96px)]">
+      <section aria-labelledby="pricing-services" className="section bg-surface">
         <div className="site-wrap">
           <SectionHead
             id="pricing-services"
-            label="Services"
-            title="Everything you can add, priced."
-            intro="Each service shows what is included and excluded, and how long it takes."
+            title="Every service, priced"
+            intro="Each one shows what is included, what is not, and how long it takes. Tick any of them in the calculator to add them up."
           />
         </div>
+        <ServicesPricingView services={services} />
       </section>
-      <ServicesPricingView services={services} />
 
       <FaqBlock
         items={faqs.map((f) => ({ id: f.id, question: f.question, answer: f.answer }))}
-        label="Pricing questions"
-        title="Before you start."
+        title="Questions about prices"
         id="pricing-faq"
         whatsappHref={buildWhatsAppLink(settings.whatsapp_number, 'Hi, I have a question about your prices.')}
       />
-      <CtaBand href="/contact?source=/pricing" />
+      <EnquiryStep href="/contact?source=/pricing" />
     </>
   );
 }

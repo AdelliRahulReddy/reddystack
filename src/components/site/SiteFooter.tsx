@@ -3,90 +3,62 @@
 import Link from 'next/link';
 
 import { markets } from '@/data/MarketConfig';
-import { siteConfig } from '@/data/siteConfig';
-import { saveMarketChoice } from '@/utils/marketPreference';
-import { buildWhatsAppLink } from '@/lib/whatsapp';
 import { useSettings } from '@/lib/useSettings';
+import { buildWhatsAppLink } from '@/lib/whatsapp';
+import { saveMarketChoice } from '@/utils/marketPreference';
 import { BrandSymbol } from './BrandSymbol';
 import CurrentYear from './CurrentYear';
-import { legalNav, legacyNav, primaryNav } from './navigation';
-
-const wordmarkColors = ['#7654E8', '#D2ED7A', '#FF765E'];
+import { legalNav, moreNav, primaryNav } from './navigation';
 
 function Column({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
-      <h2 className="mb-3.5 font-mono text-xs font-medium uppercase tracking-[0.14em] text-faint">{title}</h2>
-      <ul className="grid gap-2 text-[15.5px] [&_a]:text-muted-foreground [&_a]:transition-colors [&_a:hover]:text-ivory">{children}</ul>
+      <h2 className="text-small font-sans font-medium tracking-normal text-muted">{title}</h2>
+      <ul className="mt-3 grid gap-2 text-[15px] [&_a]:text-text/85 [&_a]:transition-colors [&_a:hover]:text-action">{children}</ul>
     </div>
   );
 }
 
+/** One footer for every public page: contact first, then every page group, including the country pages. */
 export default function SiteFooter() {
   const settings = useSettings();
+  const phone = `+${settings.whatsapp_number}`;
+
   return (
-    <footer className="overflow-hidden pb-8 pt-[72px]">
-      <div className="site-wrap">
-        <div className="grid grid-cols-2 gap-8 pb-14 min-[861px]:grid-cols-[1.4fr_repeat(4,1fr)]">
-          <div className="col-span-2 min-[861px]:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-2.5 font-display text-[19px] font-semibold tracking-[-0.03em] text-ivory">
-              <BrandSymbol className="size-7" />ReddyStack
-            </Link>
-            <p className="mt-3.5 max-w-[34ch] text-[15.5px] text-muted-foreground">
-              A founder-led growth studio connecting web, search, ads, creative, tracking and automation.
-            </p>
-            <p className="mt-5 grid gap-1 font-mono text-[13px] text-muted-foreground">
-              <a href={`mailto:${siteConfig.email}`} className="hover:text-ivory">{siteConfig.email}</a>
-              <a href={`tel:${siteConfig.phoneHref}`} className="hover:text-ivory">Call {siteConfig.phoneDisplay}</a>
-              <a href={buildWhatsAppLink(settings.whatsapp_number, '')} target="_blank" rel="noreferrer" className="hover:text-ivory">WhatsApp</a>
-            </p>
-          </div>
-          <Column title="Studio">
+    <footer className="bg-surface">
+      <div className="site-wrap grid gap-12 py-16 min-[900px]:grid-cols-[1.3fr_2fr]">
+        <div>
+          <Link href="/" className="inline-flex items-center gap-2.5 font-display text-[22px] font-semibold tracking-[-0.03em] text-text">
+            <BrandSymbol className="size-8" />ReddyStack
+          </Link>
+          <p className="mt-4 max-w-[36ch] text-muted">
+            More customer enquiries for Indian businesses: a page, Facebook &amp; Instagram ads, and every enquiry tracked. Run by Rahul Reddy from Hyderabad.
+          </p>
+          <ul className="mt-6 grid gap-1.5 text-[15px]">
+            <li><a href={buildWhatsAppLink(settings.whatsapp_number, 'Hi, I want more enquiries for my business.')} target="_blank" rel="noreferrer" className="font-semibold text-action hover:underline">Chat on WhatsApp</a></li>
+            <li><a href={`tel:${phone}`} className="text-text/85 hover:text-action">Call {phone}</a></li>
+            <li><a href={`mailto:${settings.email}`} className="break-all text-text/85 hover:text-action">{settings.email}</a></li>
+          </ul>
+        </div>
+        <div className="grid grid-cols-2 gap-10 min-[640px]:grid-cols-4">
+          <Column title="Website">
             {primaryNav.map((l) => <li key={l.href}><Link href={l.href}>{l.title}</Link></li>)}
-            <li><Link href="/contact">Contact</Link></li>
           </Column>
           <Column title="More">
-            {legacyNav.map((l) => <li key={l.href}><Link href={l.href}>{l.title}</Link></li>)}
+            {moreNav.map((l) => <li key={l.href}><Link href={l.href}>{l.title}</Link></li>)}
           </Column>
-          <Column title="Markets">
+          <Column title="Countries">
             <li><Link href="/" onClick={() => saveMarketChoice('global')}>Global</Link></li>
             {markets.map((m) => <li key={m.code}><Link href={m.href} onClick={() => saveMarketChoice(m.code)}>{m.name}</Link></li>)}
           </Column>
-          <Column title="Elsewhere">
-            <li><a href={siteConfig.socialLinks.linkedin} target="_blank" rel="noreferrer">LinkedIn</a></li>
-            <li><a href={siteConfig.socialLinks.instagram} target="_blank" rel="noreferrer">Instagram</a></li>
-            <li><a href={siteConfig.socialLinks.x} target="_blank" rel="noreferrer">X</a></li>
-            <li><a href={siteConfig.socialLinks.github} target="_blank" rel="noreferrer">GitHub</a></li>
+          <Column title="Policies">
+            {legalNav.map((l) => <li key={l.href}><Link href={l.href}>{l.title}</Link></li>)}
           </Column>
         </div>
-
-        <div
-          aria-hidden="true"
-          data-split
-          className="-ml-[0.04em] flex select-none whitespace-nowrap pb-[0.16em] font-display text-[min(14.2vw,222px)] font-semibold leading-[0.9] tracking-[-0.06em]"
-        >
-          {'ReddyStack'.split('').map((c, i) => (
-            <span
-              key={i}
-              className="split-w group/ch pt-[0.14em] [transition:translate_.5s_var(--ease-studio)] hover:-translate-y-[12%]"
-              style={{ ['--i' as string]: i }}
-            >
-              <span
-                style={{ ['--c' as string]: wordmarkColors[i % 3] }}
-                className="text-transparent [-webkit-text-stroke:1px_rgb(247_244_235/0.2)] [transition:transform_1s_var(--ease-expo)_calc(var(--i)*.05s),color_.3s,-webkit-text-stroke-color_.3s] group-hover/ch:text-(--c) group-hover/ch:[-webkit-text-stroke-color:var(--c)]"
-              >
-                {c}
-              </span>
-            </span>
-          ))}
-        </div>
-
-        <div className="flex flex-wrap justify-between gap-3 border-t border-line pt-[22px] text-[13.5px] text-faint">
-          <span>© <CurrentYear /> ReddyStack · {siteConfig.ownerName} · Hyderabad, India</span>
-          <nav aria-label="Legal" className="flex gap-3">
-            {legalNav.map((l) => <Link key={l.href} href={l.href} className="hover:text-ivory">{l.title}</Link>)}
-          </nav>
-        </div>
+      </div>
+      <div className="site-wrap flex flex-wrap justify-between gap-3 pb-10 text-small text-muted">
+        <p>© <CurrentYear /> ReddyStack. Prices in Indian rupees. Ad spend is paid directly to Meta.</p>
+        <p>Hyderabad, India</p>
       </div>
     </footer>
   );

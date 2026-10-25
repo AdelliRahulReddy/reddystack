@@ -4,29 +4,30 @@ import type { Service } from '@/types/database';
 import ServiceCardFacts from '@/components/blocks/ServiceCardFacts';
 
 /**
- * Static services + prices listing. Each active service shows its price,
- * includes, excludes, delivery time and billing badge, all read from the DB.
+ * Every active service as a card: price, billing label, what is included and
+ * not, and delivery time, all read from the DB. Each card's one action adds it
+ * in the calculator.
  */
 export default function ServicesPricingView({ services }: { services: Service[] }) {
   return (
-    <section className="site-wrap pb-[clamp(56px,8vw,120px)]">
-      <div className="grid gap-5 md:grid-cols-2">
+    <div className="site-wrap">
+      <div className="grid gap-4 min-[760px]:grid-cols-2 min-[1100px]:grid-cols-3">
         {services.map((service) => (
-          <article key={service.id} className="flex flex-col rounded-[28px] border border-line bg-graphite p-6 sm:p-8">
-            <h2 className="font-display text-[22px] font-semibold tracking-[-0.02em]">{service.name}</h2>
-            <p className="mt-2 text-muted-foreground">{service.description}</p>
-            <div className="mt-5">
+          <article key={service.id} className="flex flex-col rounded-[var(--radius-card)] bg-ground p-6 sm:p-7">
+            <h3 className="text-h3 font-semibold">{service.name}</h3>
+            <p className="mt-2 text-muted">{service.description}</p>
+            <div className="mt-5 flex-1">
               <ServiceCardFacts service={service} />
             </div>
             <Link
               href={`/calculator?pick=${service.slug}`}
-              className="mt-6 inline-flex items-center gap-2 rounded-full border border-line-strong px-5 py-2.5 text-[15px] font-semibold text-ivory transition-colors hover:border-lime hover:text-lime"
+              className="mt-6 inline-flex text-[15px] font-semibold text-action underline underline-offset-4"
             >
-              Build this in the calculator <span aria-hidden="true">→</span>
+              Add this to my price
             </Link>
           </article>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

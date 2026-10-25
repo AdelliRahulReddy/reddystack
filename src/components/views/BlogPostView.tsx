@@ -18,7 +18,7 @@ export default function BlogPostView({ post, previous, next, related }: Props) {
         title: post.title,
         label: post.categoryLabel,
         intro: post.excerpt,
-        crumbs: [{ name: 'Home', href: '/' }, { name: 'Insights', href: '/blog' }, { name: post.title }],
+        crumbs: [{ name: 'Home', href: '/' }, { name: 'Guides and articles', href: '/blog' }, { name: post.title }],
         byline: true,
         publishedAt: post.publishedAt,
         updatedAt: post.updatedAt,

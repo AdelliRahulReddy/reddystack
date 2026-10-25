@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 import { buildWhatsAppLink } from '@/lib/whatsapp';
-import { Button, ButtonArrow } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
@@ -122,7 +122,7 @@ export default function HomeEnquiryForm({ whatsappNumber }: Props) {
 
       <div className="flex flex-wrap items-center gap-4">
         <Button type="submit" size="lg" disabled={submitting} aria-busy={submitting}>
-          {submitting ? 'Sending…' : <>Send enquiry <ButtonArrow /></>}
+          {submitting ? 'Sending…' : <>Send enquiry</>}
         </Button>
         <a
           href={buildWhatsAppLink(whatsappNumber, '')}

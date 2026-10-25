@@ -11,7 +11,7 @@ export default function ContentUnavailable() {
   if (missing.length > 0) {
     return (
       <section className="site-wrap py-[clamp(48px,7vw,96px)]">
-        <div className="max-w-[56ch] rounded-[28px] border border-coral/40 bg-coral/10 p-8">
+        <div className="max-w-[56ch] rounded-[var(--radius-card)] border border-coral/40 bg-coral/10 p-8">
           <h2 className="font-display text-[22px] font-semibold tracking-[-0.02em]">Content not connected yet</h2>
           <p className="mt-3 text-muted-foreground">
             This page reads from the shared database, which is not configured. Paste the following into
@@ -30,7 +30,7 @@ export default function ContentUnavailable() {
 
   return (
     <section className="site-wrap py-[clamp(48px,7vw,96px)]">
-      <div className="max-w-[56ch] rounded-[28px] border border-line bg-raised p-8">
+      <div className="max-w-[56ch] rounded-[var(--radius-card)] border border-line bg-raised p-8">
         <h2 className="font-display text-[22px] font-semibold tracking-[-0.02em]">Content not available yet</h2>
         <p className="mt-3 text-muted-foreground">
           This content reads from the shared database and is not available right now. It will appear once the

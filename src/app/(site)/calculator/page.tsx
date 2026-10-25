@@ -31,13 +31,11 @@ const CalculatorPage = async ({ searchParams }: { searchParams: Promise<Record<s
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHero
-        eyebrow="Price calculator"
-        title="Add up your own stack."
-        accent="stack."
+        title="Work out your price."
         crumbs={[{ name: 'Home', href: '/' }, { name: 'Calculator' }]}
         intro={
           <>
-            Tick the Enquiry Sprint, or the services and add-ons you need. One-time and monthly totals are shown separately, and ad
+            Tick the main offer, or just the services you need. One-time and monthly totals are shown separately, and ad
             spend is always separate — <strong>paid directly to Meta, not to us</strong>.
           </>
         }

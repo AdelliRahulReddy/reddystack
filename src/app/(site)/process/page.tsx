@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import CtaBand from '@/components/blocks/CtaBand';
+import EnquiryStep from '@/components/blocks/EnquiryStep';
 import PageHero from '@/components/blocks/PageHero';
 import ProcessView from '@/components/views/ProcessView';
 import { buildBreadcrumbSchema, buildPageMetadata } from '@/data/siteConfig';
@@ -23,19 +23,12 @@ const ProcessPage = async () => {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHero
-        eyebrow="Process"
-        title="How a project runs."
-        accent="runs."
+        title="What happens after you enquire."
         crumbs={[{ name: 'Home', href: '/' }, { name: 'Process' }]}
-        intro={
-          <>
-            Four steps, written updates, no daily calls needed. You always know what is done and what happens
-            next.
-          </>
-        }
+        intro={<>Four steps, written updates, no daily calls needed. You always know what is done and what comes next.</>}
       />
       <ProcessView advancePercent={advancePercent} />
-      <CtaBand href="/contact?source=/process" />
+      <EnquiryStep href="/contact?source=/process" />
     </>
   );
 };

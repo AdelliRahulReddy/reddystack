@@ -36,7 +36,7 @@ export default function SeoContentPage({ path }: { path: string }) {
           cta: {
             href: `/contact?${contactParams}`,
             title: 'Want a second pair of eyes on it?',
-            body: 'Send what you are seeing and what you have already checked. Rahul will say what to look at first, and whether a Proof Sprint makes sense.',
+            body: 'Send what you are seeing and what you have already checked. Rahul will say what to look at first, and what it would cost.',
           },
         }}
       />

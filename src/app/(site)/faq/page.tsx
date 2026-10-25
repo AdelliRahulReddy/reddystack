@@ -4,7 +4,7 @@ import PageHero from '@/components/blocks/PageHero';
 import FaqBlock from '@/components/blocks/Faq';
 import ContentUnavailable from '@/components/blocks/ContentUnavailable';
 import { buildBreadcrumbSchema, buildFAQPageSchema, buildPageMetadata } from '@/data/siteConfig';
-import CtaBand from '@/components/blocks/CtaBand';
+import EnquiryStep from '@/components/blocks/EnquiryStep';
 import { listFaqs } from '@/lib/faqs';
 import { DEFAULT_SETTINGS, getSettings } from '@/lib/settings';
 import { buildWhatsAppLink } from '@/lib/whatsapp';
@@ -30,9 +30,7 @@ const FaqPage = async () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {items.length > 0 && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
       <PageHero
-        eyebrow="FAQ"
         title="Questions, answered plainly."
-        accent="plainly."
         crumbs={[{ name: 'Home', href: '/' }, { name: 'FAQ' }]}
         intro={<>What it costs, how long it takes, what you get, and what happens after you pay.</>}
       />
@@ -40,7 +38,6 @@ const FaqPage = async () => {
         <FaqBlock
           items={items}
           title="Before you get in touch."
-          label="Questions"
           id="faq-title"
           whatsappHref={whatsappHref}
           className="pb-[clamp(56px,8vw,120px)] pt-0"
@@ -48,7 +45,7 @@ const FaqPage = async () => {
       ) : (
         <ContentUnavailable />
       )}
-      <CtaBand href="/contact?source=/faq" />
+      <EnquiryStep href="/contact?source=/faq" />
     </>
   );
 };

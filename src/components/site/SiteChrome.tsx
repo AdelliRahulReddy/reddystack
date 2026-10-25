@@ -1,34 +1,27 @@
 import type { ReactNode } from 'react';
 
-import Cursor from './Cursor';
-import RevealObserver from './RevealObserver';
-import ScrollProgress from './ScrollProgress';
+import PhoneActionBar from './PhoneActionBar';
 import SiteFooter from './SiteFooter';
 import SiteHeader from './SiteHeader';
-import SmoothScroll from './SmoothScroll';
-import PhoneActionBar from './PhoneActionBar';
 import WhatsAppButton from './WhatsAppButton';
 
-/** Site frame: one smooth-scroll instance, header, footer, cursor and scroll reveals. */
+/** Site frame for every public page: header, page, footer, and the contact bar or button. */
 export default function SiteChrome({ children }: { children: ReactNode }) {
   return (
-    <SmoothScroll>
+    <div className="site-theme">
       <a
         href="#main"
-        className="fixed left-4 -top-16 z-[120] rounded-full bg-lime px-4 py-2.5 font-semibold text-lime-ink focus:top-4"
+        className="fixed left-4 -top-16 z-[120] rounded-full bg-action px-4 py-2.5 font-semibold text-action-ink focus:top-4"
       >
         Skip to content
       </a>
-      <ScrollProgress />
-      <Cursor />
-      <RevealObserver />
       <SiteHeader />
-      <main id="main" className="grain">{children}</main>
+      <main id="main">{children}</main>
       <SiteFooter />
       {/* Room for the phone bottom bar so it never covers the footer. */}
-      <div aria-hidden="true" className="h-[76px] min-[961px]:hidden" />
+      <div aria-hidden="true" className="h-[76px] bg-surface min-[961px]:hidden" />
       <WhatsAppButton />
       <PhoneActionBar />
-    </SmoothScroll>
+    </div>
   );
 }

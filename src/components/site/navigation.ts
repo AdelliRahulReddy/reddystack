@@ -1,19 +1,22 @@
+// One menu for every public page. The header, the phone menu and the footer
+// all read from here, so a visitor sees the same structure everywhere.
 export const primaryNav = [
+  { title: 'Home', href: '/' },
   { title: 'Services', href: '/services' },
-  { title: 'Calculator', href: '/calculator' },
-  { title: 'Work', href: '/works' },
+  { title: 'Pricing', href: '/pricing' },
+  { title: 'Works', href: '/works' },
   { title: 'Process', href: '/process' },
   { title: 'FAQ', href: '/faq' },
-  { title: 'About', href: '/about' },
+  { title: 'Contact', href: '/contact' },
 ] as const;
 
-// Earlier pages that still carry traffic; kept reachable from the footer while
-// the new India-stack pages own the header.
-export const legacyNav = [
-  { title: 'Portfolio', href: '/portfolio' },
-  { title: 'Capabilities', href: '/service' },
-  { title: 'Pricing', href: '/pricing' },
-  { title: 'Insights', href: '/blog' },
+/** Footer: pages that are not in the main menu but must never be hidden. */
+export const moreNav = [
+  { title: 'Price calculator', href: '/calculator' },
+  { title: 'About Rahul', href: '/about' },
+  { title: 'Portfolio notes', href: '/portfolio' },
+  { title: 'Guides and articles', href: '/blog' },
+  { title: 'All service pages', href: '/service' },
 ] as const;
 
 export const legalNav = [
@@ -22,8 +25,12 @@ export const legalNav = [
   { title: 'Revision policy', href: '/revision-policy' },
 ] as const;
 
-/** True when `href` is the current page or a section of it. */
+/** The one action every page header offers. */
+export const enquireAction = { title: 'Enquire', href: '/contact' } as const;
+
+/** True when `href` is the current page or a section of it. Home matches only itself. */
 export function isActivePath(pathname: string | null, href: string) {
   if (!pathname) return false;
+  if (href === '/') return pathname === '/';
   return pathname === href || pathname.startsWith(href + '/');
 }

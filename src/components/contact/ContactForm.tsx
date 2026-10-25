@@ -4,12 +4,10 @@ import { useRef, useState } from 'react';
 import { useForm, useWatch } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { AnimatePresence } from 'motion/react';
-import * as m from 'motion/react-m';
 import { Check } from 'lucide-react';
 
 import { trackLeadEvent } from '@/components/analytics/gaEvents';
-import { Button, ButtonArrow } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
@@ -105,32 +103,23 @@ export default function ContactForm({ choices, initialService, sourcePage, whats
 
   return (
     <div className="relative">
-      <AnimatePresence mode="wait" initial={false}>
         {sentRef !== null ? (
-          <m.div
-            key="sent"
+          <div
             role="status"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="grid justify-items-start gap-5 py-6"
           >
             <span className="grid size-14 place-items-center rounded-full bg-lime text-lime-ink"><Check className="size-7" strokeWidth={2.5} /></span>
             <h2 className="text-[clamp(28px,3vw,40px)]">Message sent.</h2>
             <p className="max-w-[48ch] text-muted-foreground">
               Thank you. Rahul reads every enquiry himself and will reply on WhatsApp or by phone.
-              {sentRef && <> Your reference is <span className="font-mono text-ivory">{sentRef.slice(0, 8)}</span>.</>}
+              {sentRef && <> Your reference is <span className="tabular-nums text-ivory">{sentRef.slice(0, 8)}</span>.</>}
             </p>
             <Button type="button" variant="ghost" onClick={() => setSentRef(null)}>Send another enquiry</Button>
-          </m.div>
+          </div>
         ) : (
-          <m.form
-            key="form"
+          <form
             noValidate
             onSubmit={(event) => { void handleSubmit(onSubmit)(event); }}
-            initial={false}
-            exit={{ opacity: 0, y: -8 }}
             className="grid gap-9"
           >
             <div hidden>
@@ -187,7 +176,7 @@ export default function ContactForm({ choices, initialService, sourcePage, whats
             <div>
               <div className="flex items-baseline justify-between gap-4">
                 <Label htmlFor="contact-message">What do you want more of?</Label>
-                <span className={cn('font-mono text-xs', messageLength > MESSAGE_MAX ? 'text-coral' : 'text-faint')} aria-live="polite">
+                <span className={cn('tabular-nums text-xs', messageLength > MESSAGE_MAX ? 'text-coral' : 'text-faint')} aria-live="polite">
                   {messageLength > MESSAGE_MAX * 0.8 ? `${messageLength} / ${MESSAGE_MAX}` : ''}
                 </span>
               </div>
@@ -233,16 +222,15 @@ export default function ContactForm({ choices, initialService, sourcePage, whats
 
             <div className="flex flex-wrap items-center gap-5">
               <Button type="submit" size="lg" disabled={submitting} aria-busy={submitting}>
-                {submitting ? 'Sending…' : <>Send enquiry <ButtonArrow /></>}
+                {submitting ? 'Sending…' : <>Send enquiry</>}
               </Button>
               <a href={whatsapp} target="_blank" rel="noreferrer" className="text-[15px] font-medium text-lime underline underline-offset-4 hover:text-ivory">
                 Or WhatsApp us directly
               </a>
             </div>
             <p className="-mt-5 text-[14px] text-faint">An enquiry does not start paid work.</p>
-          </m.form>
+          </form>
         )}
-      </AnimatePresence>
     </div>
   );
 }

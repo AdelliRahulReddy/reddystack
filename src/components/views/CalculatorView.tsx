@@ -69,7 +69,7 @@ export default function CalculatorView({ bundles, services, options, settings, i
               <article
                 key={service.id}
                 id={`pick-${service.slug}`}
-                className={cn('scroll-mt-[calc(var(--header-h)+16px)] rounded-[28px] border bg-graphite p-6 transition-colors sm:p-8', on ? 'border-lime' : 'border-line')}
+                className={cn('scroll-mt-[calc(var(--header-h)+16px)] rounded-[var(--radius-card)] border bg-graphite p-6 transition-colors sm:p-8', on ? 'border-lime' : 'border-line')}
               >
                 <button type="button" aria-pressed={on} onClick={() => toggleService(service.id)} className="flex w-full items-start gap-4 text-left">
                   <span
@@ -128,7 +128,7 @@ export default function CalculatorView({ bundles, services, options, settings, i
         </div>
 
         <aside id="calc-quote" className="h-fit scroll-mt-[calc(var(--header-h)+16px)] min-[961px]:sticky min-[961px]:top-[calc(var(--header-h)+24px)]">
-          <div className="rounded-[28px] border border-line bg-raised p-6 sm:p-8">
+          <div className="rounded-[var(--radius-card)] border border-line bg-raised p-6 sm:p-8">
             <h2 className="font-display text-[22px] font-semibold tracking-[-0.02em]">Your quote</h2>
             {items.length > 0 && <p className="mt-2 text-[14.5px] text-muted-foreground">{items.map((i) => i.name).join(', ')}</p>}
             <dl className="mt-5 grid gap-3 border-t border-line pt-5 text-[15px]">

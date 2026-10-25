@@ -1,38 +1,34 @@
+import { Check, X } from 'lucide-react';
+
 import type { Service } from '@/types/database';
 import { formatInr } from '@/lib/money';
-import { Badge } from '@/components/ui/badge';
 
 /**
- * Read-only facts for one service: price, billing badge, description,
- * includes/excludes (each a single TEXT line) and delivery time. Used by the
- * services page and the calculator so the two stay identical and both read
- * the same DB row.
+ * Read-only facts for one service: price, billing label, includes/excludes
+ * (each a single TEXT line) and delivery time. Used by the services cards and
+ * the calculator so both read the same DB row the same way.
  */
 export default function ServiceCardFacts({ service }: { service: Service }) {
   return (
     <>
-      <div className="flex items-center justify-between gap-4">
-        <span className="font-display text-[24px] font-semibold">{formatInr(service.base_price)}</span>
-        <Badge variant={service.billing_type === 'monthly' ? 'secondary' : 'default'}>
-          {service.billing_type === 'monthly' ? 'Per month' : 'One-time'}
-        </Badge>
-      </div>
+      <p className="flex items-baseline gap-2">
+        <span className="font-display text-[26px] font-semibold tabular-nums text-text">{formatInr(service.base_price)}</span>
+        <span className="text-small text-muted">{service.billing_type === 'monthly' ? 'per month' : 'one-time'}</span>
+      </p>
 
       {(service.includes || service.excludes) && (
-        <ul className="mt-5 grid gap-2 border-t border-line pt-5 text-[14.5px] text-muted-foreground">
+        <ul className="mt-4 grid gap-2 text-[15px]">
           {service.includes && (
-            <li className="flex gap-2"><span className="text-lime">✓</span><span>{service.includes}</span></li>
+            <li className="flex gap-2.5"><Check aria-hidden="true" className="mt-0.5 size-4 flex-none text-action" /><span><span className="sr-only">Includes: </span>{service.includes}</span></li>
           )}
           {service.excludes && (
-            <li className="flex gap-2"><span className="text-coral">✕</span><span>{service.excludes}</span></li>
+            <li className="flex gap-2.5 text-muted"><X aria-hidden="true" className="mt-0.5 size-4 flex-none" /><span><span className="sr-only">Not included: </span>{service.excludes}</span></li>
           )}
         </ul>
       )}
 
       {service.delivery_time && (
-        <div className="mt-5 flex flex-wrap items-center gap-3">
-          <span className="font-mono text-xs uppercase tracking-[0.08em] text-faint">Delivery: {service.delivery_time}</span>
-        </div>
+        <p className="mt-4 text-small text-muted">Ready in: {service.delivery_time}</p>
       )}
     </>
   );

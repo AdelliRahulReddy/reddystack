@@ -11,7 +11,6 @@ import { listBundles } from '@/lib/bundles';
 import { listFaqs } from '@/lib/faqs';
 import { listActiveServices } from '@/lib/services';
 import { DEFAULT_SETTINGS, getSettings } from '@/lib/settings';
-import { buildHeroContent, getSiteContent } from '@/lib/siteContent';
 import { createSupabaseServerClient } from '@/lib/supabase/server';
 import { groupWorksByType, listVisibleWorks } from '@/lib/works';
 
@@ -26,9 +25,7 @@ export const metadata: Metadata = {
 const MainHome = async () => {
   const client = await createSupabaseServerClient();
 
-  const [heroRow, positioningRow, bundles, services, works, faqs, settings] = await Promise.all([
-    getSiteContent(client, 'hero'),
-    getSiteContent(client, 'positioning'),
+  const [bundles, services, works, faqs, settings] = await Promise.all([
     listBundles(client),
     listActiveServices(client),
     listVisibleWorks(client),
@@ -36,8 +33,6 @@ const MainHome = async () => {
     getSettings(client),
   ]);
 
-  const hero = buildHeroContent(heroRow);
-  const positioning = buildHeroContent(positioningRow);
   const bundle = bundles?.[0] ?? null;
   const workGroups = groupWorksByType(works ?? []);
 
@@ -59,8 +54,6 @@ const MainHome = async () => {
         />
       )}
       <HomeView
-        hero={hero}
-        positioning={positioning}
         bundle={bundle}
         services={services ?? []}
         works={workGroups}

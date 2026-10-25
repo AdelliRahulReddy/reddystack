@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
-import CtaBand from '@/components/blocks/CtaBand';
+import { ButtonLink } from '@/components/blocks/ButtonLink';
+import EnquiryStep from '@/components/blocks/EnquiryStep';
 import PageHero from '@/components/blocks/PageHero';
 import ContentUnavailable from '@/components/blocks/ContentUnavailable';
 import ServicesPricingView from '@/components/views/ServicesPricingView';
@@ -23,19 +24,20 @@ const ServicesPage = async () => {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHero
-        eyebrow="Services"
-        title="Plain prices, no surprises."
-        accent="prices,"
+        title="What we can do for your business."
         crumbs={[{ name: 'Home', href: '/' }, { name: 'Services' }]}
         intro={
           <>
-            Every service is priced up front. One-time vs monthly is always labelled, and ad spend is always
-            separate — <strong>paid directly to Meta, not to us</strong>.
+            Pages that bring enquiries, Facebook &amp; Instagram ads, and getting found on Google. Every service has a
+            public price, and ad spend is always separate — <strong>paid directly to Meta, not to us</strong>.
           </>
         }
+        actions={<ButtonLink href="/calculator">Work out my price</ButtonLink>}
       />
-      {services ? <ServicesPricingView services={services} /> : <ContentUnavailable />}
-      <CtaBand href="/contact?source=/services" />
+      <section aria-label="Services and prices" className="section bg-surface">
+        {services ? <ServicesPricingView services={services} /> : <ContentUnavailable />}
+      </section>
+      <EnquiryStep href="/contact?source=/services" />
     </>
   );
 };

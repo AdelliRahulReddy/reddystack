@@ -21,15 +21,14 @@ export default function TableOfContents({ items, className }: { items: TocItem[]
   }, [items]);
 
   return (
-    <ol className={cn('grid border-l border-line', className)}>
-      {items.map((item, i) => (
+    <ol className={cn('grid gap-0.5', className)}>
+      {items.map((item) => (
         <li key={item.id}>
           <a
             href={`#${item.id}`}
             aria-current={active === item.id ? 'location' : undefined}
-            className="-ml-px flex gap-3 border-l-2 border-transparent py-1.5 pl-4 text-[14.5px] leading-snug text-muted-foreground transition-colors hover:text-ivory aria-[current=location]:border-lime aria-[current=location]:text-ivory"
+            className="block rounded-lg px-3 py-1.5 text-[15px] leading-snug text-muted transition-colors hover:text-text aria-[current=location]:bg-surface-2 aria-[current=location]:text-text"
           >
-            <span className="font-mono text-[11px] leading-[1.9] text-faint">{String(i + 1).padStart(2, '0')}</span>
             {item.title}
           </a>
         </li>

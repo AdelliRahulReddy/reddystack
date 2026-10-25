@@ -3,8 +3,8 @@ import { marketPageSchema } from "@/data/MarketSeo";
 import type { Market } from "@/data/MarketConfig";
 import { buildBreadcrumbSchema, buildFAQPageSchema } from "@/data/siteConfig";
 import { homeFaqItems } from "@/data/HomeFaqData";
-import { featuredPortfolioProjects } from "@/data/FeaturedPortfolioProjects";
-import HomeV3 from "@/components/home-v3/HomeV3";
+import { marketPages } from "@/data/MarketPageData";
+import MarketView from "@/components/market/MarketView";
 
 export default function MarketLandingPage({ market }: { market: Market }) {
   const faqSchema = buildFAQPageSchema(homeFaqItems, market.href);
@@ -28,7 +28,7 @@ export default function MarketLandingPage({ market }: { market: Market }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <HomeV3 projects={featuredPortfolioProjects} market={market} />
+      <MarketView market={market} page={marketPages[market.code]} />
     </>
   );
 }

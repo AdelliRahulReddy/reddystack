@@ -1,5 +1,7 @@
-/* ReddyStack design system: dark, cinematic, founder-led.
-   Tokens mirror the v3 homepage (src/components/home-v3). */
+/* ReddyStack design system.
+   Public site: charcoal ground, warm ink, one marigold accent on actions only.
+   Tokens are declared once below; the public site applies them through
+   `.site-theme` (SiteChrome). /admin keeps the earlier values. */
 
 @import 'tailwindcss';
 @import 'tw-animate-css';
@@ -9,6 +11,7 @@
 @custom-variant motion-ok (@media (prefers-reduced-motion: no-preference));
 
 @theme {
+  /* Earlier palette, still used by /admin. */
   --color-ink: #141318;
   --color-graphite: #1c1b21;
   --color-raised: #25242b;
@@ -23,28 +26,43 @@
   --color-line: rgb(247 244 235 / 0.1);
   --color-line-strong: rgb(247 244 235 / 0.18);
 
+  /* Public site palette (semantic names). */
+  --color-ground: #111214;
+  --color-surface: #191b1e;
+  --color-surface-2: #212428;
+  --color-text: #f3f1ea;
+  --color-muted: #a7abb1;
+  --color-action: #f2b13a;
+  --color-action-ink: #1a1306;
+  --color-danger: #ff7a66;
+
   --font-display: var(--font-brand-sora), 'Sora', ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
-  --radius-card: 28px;
-  --radius-panel: 40px;
+  /* One type scale: display, h2, h3, body, small. */
+  --text-display: clamp(2.5rem, 1.55rem + 3.6vw, 4.75rem);
+  --text-display--line-height: 1.02;
+  --text-h2: clamp(1.875rem, 1.35rem + 1.9vw, 3rem);
+  --text-h2--line-height: 1.08;
+  --text-h3: 1.3125rem;
+  --text-h3--line-height: 1.25;
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.6;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+
+  --radius-card: 20px;
+  --radius-panel: 28px;
 
   --ease-studio: cubic-bezier(0.2, 0.7, 0.1, 1);
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
-  --container-site: 1320px;
+  --container-site: 1240px;
   --container-prose: 44rem;
-
-  --animate-marquee: marquee 38s linear infinite;
-  --animate-spin-slow: spin 14s linear infinite;
-  --animate-pulse-dot: pulse-dot 2.4s infinite;
-
-  @keyframes marquee { to { transform: translateX(-50%); } }
-  @keyframes pulse-dot { 50% { box-shadow: 0 0 0 7px rgb(210 237 122 / 0); } }
 }
 
-/* shadcn/ui semantic tokens, mapped onto the brand palette. */
+/* shadcn/ui semantic tokens, mapped onto the palette. */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -56,7 +74,6 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
@@ -82,7 +99,6 @@
   --primary-foreground: #17170f;
   --secondary: #25242b;
   --secondary-foreground: #f7f4eb;
-  --muted: #25242b;
   --muted-foreground: #a8a5b3;
   --accent: #302f35;
   --accent-foreground: #f7f4eb;
@@ -91,9 +107,48 @@
   --input: rgb(247 244 235 / 0.18);
   --ring: #d2ed7a;
 
-  --gutter: clamp(16px, 4vw, 56px);
-  --header-h: 84px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --header-h: 68px;
   color-scheme: dark;
+}
+
+/* The public site: earlier utility names resolve to the new palette, so every
+   page (including older templates) reads as one system. */
+.site-theme {
+  --color-ink: var(--color-ground);
+  --color-graphite: var(--color-surface);
+  --color-raised: var(--color-surface-2);
+  --color-charcoal: #2a2d32;
+  --color-ivory: var(--color-text);
+  --color-faint: #8d9298;
+  --color-violet: var(--color-surface-2);
+  --color-violet-soft: #4a4f57;
+  --color-lime: var(--color-action);
+  --color-lime-ink: var(--color-action-ink);
+  --color-coral: var(--color-danger);
+  --color-line: rgb(243 241 234 / 0.09);
+  --color-line-strong: rgb(243 241 234 / 0.16);
+
+  --background: var(--color-ground);
+  --foreground: var(--color-text);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-text);
+  --popover: var(--color-surface);
+  --popover-foreground: var(--color-text);
+  --primary: var(--color-action);
+  --primary-foreground: var(--color-action-ink);
+  --secondary: var(--color-surface-2);
+  --secondary-foreground: var(--color-text);
+  --muted-foreground: var(--color-muted);
+  --accent: var(--color-surface-2);
+  --destructive: var(--color-danger);
+  --border: rgb(243 241 234 / 0.1);
+  --input: rgb(243 241 234 / 0.2);
+  --ring: var(--color-action);
+
+  min-height: 100dvh;
+  background: var(--color-ground);
+  color: var(--color-text);
 }
 
 @layer base {
@@ -101,7 +156,9 @@
     background: var(--color-ink);
     -webkit-text-size-adjust: 100%;
     scroll-padding-top: calc(var(--header-h) + 16px);
+    overflow-x: clip;
   }
+  html:has(.site-theme) { background: var(--color-ground); }
   body {
     min-height: 100vh;
     background: var(--color-ink);
@@ -115,11 +172,13 @@
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-weight: 600;
-    letter-spacing: -0.035em;
-    line-height: 1.04;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
     text-wrap: balance;
     color: var(--color-ivory);
+    overflow-wrap: break-word;
   }
+  p { text-wrap: pretty; }
   :focus-visible {
     outline: 2px solid var(--color-lime);
     outline-offset: 3px;
@@ -128,119 +187,55 @@
   ::selection { background: var(--color-lime); color: var(--color-lime-ink); }
 }
 
-/* Film grain over the whole site. */
 @layer components {
-  .grain::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 100;
-    opacity: 0.05;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-
   .site-wrap {
     max-width: var(--container-site);
     margin-inline: auto;
     padding-inline: var(--gutter);
   }
 
+  /* One section rhythm for every page. */
+  .section { padding-block: clamp(64px, 8vw, 128px); }
+  .section-tight { padding-block: clamp(40px, 5vw, 72px); }
+
+  /* Small meta label: body face, sentence case, never tracked capitals. */
   .eyebrow {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    font-size: var(--text-small);
     color: var(--muted-foreground);
   }
 
-  /* Lenis */
-  html.lenis, html.lenis body { height: auto; }
-  .lenis.lenis-smooth { scroll-behavior: auto !important; }
-  .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
-  .lenis.lenis-stopped { overflow: clip; }
-
-  /* Scroll reveals. Hidden only once the motion provider has hydrated and
-     marked what is already on screen, so content is visible without JS. */
-  html[data-motion='on'] [data-reveal]:not([data-shown]) {
-    opacity: 0;
-    transform: translateY(28px);
-  }
-  html[data-motion='on'] [data-reveal] {
-    transition: opacity 1.1s var(--ease-studio), transform 1.1s var(--ease-studio);
-    transition-delay: var(--reveal-delay, 0s);
-  }
-
-  /* Off-screen decoration is paused once JavaScript is watching (RevealObserver). */
-  html[data-motion='on'] :is(svg[data-watched], [data-anim][data-watched]):not([data-onscreen]),
-  html[data-motion='on'] :is(svg[data-watched], [data-anim][data-watched]):not([data-onscreen]) *,
-  html[data-motion='on'] [data-anim][data-watched]:not([data-onscreen])::before,
-  html[data-motion='on'] [data-anim][data-watched]:not([data-onscreen]) *::before,
-  html[data-motion='on'] [data-anim][data-watched]:not([data-onscreen]) *::after {
-    animation-play-state: paused !important;
-  }
-
-  /* Split headings: each word rises out of its own mask. */
-  .split-w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.08em; margin-bottom: -0.08em; }
-  .split-w > span { display: inline-block; }
-  html[data-motion='on'] [data-split]:not([data-shown]) .split-w > span { transform: translateY(110%); }
-  html[data-motion='on'] [data-split] .split-w > span {
-    transition: transform 1s var(--ease-expo);
-    transition-delay: calc(var(--i, 0) * 0.05s);
-  }
-
-  /* Rich text for guides and articles. */
+  /* Rich text for guides, articles and policies. */
   .prose-studio {
-    color: #d9d6ce;
+    color: #d8d6cf;
     font-size: 18px;
     line-height: 1.75;
   }
   .prose-studio > * + * { margin-top: 1.1em; }
-  .prose-studio h2 { font-size: clamp(28px, 3vw, 38px); margin-top: 2.2em; color: var(--color-ivory); scroll-margin-top: calc(var(--header-h) + 24px); }
-  .prose-studio h3 { font-size: clamp(22px, 2.2vw, 27px); margin-top: 1.8em; color: var(--color-ivory); scroll-margin-top: calc(var(--header-h) + 24px); }
+  .prose-studio h2 { font-size: clamp(26px, 2.6vw, 34px); margin-top: 2.2em; color: var(--color-ivory); scroll-margin-top: calc(var(--header-h) + 24px); }
+  .prose-studio h3 { font-size: clamp(21px, 2vw, 25px); margin-top: 1.8em; color: var(--color-ivory); scroll-margin-top: calc(var(--header-h) + 24px); }
   .prose-studio h2 + *, .prose-studio h3 + * { margin-top: 0.7em; }
-  .prose-studio a { color: var(--color-lime); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgb(210 237 122 / 0.4); }
-  .prose-studio a:hover { text-decoration-color: currentColor; }
+  .prose-studio a { color: var(--color-lime); text-decoration: underline; text-underline-offset: 3px; }
   .prose-studio strong { color: var(--color-ivory); font-weight: 600; }
-  .prose-studio ul, .prose-studio ol { padding-left: 1.3em; }
-  .prose-studio ul { list-style: none; padding-left: 0; }
-  .prose-studio ul > li { position: relative; padding-left: 1.4em; }
-  .prose-studio ul > li::before { content: ''; position: absolute; left: 0.2em; top: 0.72em; width: 6px; height: 6px; border-radius: 2px; background: var(--color-violet-soft); transform: rotate(45deg); }
-  .prose-studio ol { list-style: decimal; }
-  .prose-studio ol > li::marker { color: var(--color-lime); font-family: var(--font-mono); font-size: 0.85em; }
+  .prose-studio ul { list-style: disc; padding-left: 1.2em; }
+  .prose-studio ol { list-style: decimal; padding-left: 1.3em; }
+  .prose-studio li::marker { color: var(--color-lime); }
   .prose-studio li + li { margin-top: 0.5em; }
-  .prose-studio blockquote { border-left: 2px solid var(--color-lime); padding-left: 1.2em; color: var(--color-ivory); font-family: var(--font-display); font-size: 1.2em; line-height: 1.4; }
+  .prose-studio blockquote { padding-left: 1.2em; box-shadow: inset 3px 0 0 var(--color-lime); color: var(--color-ivory); font-size: 1.1em; }
   .prose-studio table { width: 100%; border-collapse: collapse; font-size: 15.5px; display: block; overflow-x: auto; }
-  .prose-studio th, .prose-studio td { border-bottom: 1px solid var(--color-line); padding: 12px 14px 12px 0; text-align: left; vertical-align: top; }
-  .prose-studio th { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-foreground); font-weight: 500; }
-  .prose-studio code { font-family: var(--font-mono); font-size: 0.88em; background: var(--color-raised); padding: 0.12em 0.4em; border-radius: 6px; }
-  .prose-studio img { border-radius: 20px; }
+  .prose-studio th, .prose-studio td { padding: 12px 14px 12px 0; text-align: left; vertical-align: top; }
+  .prose-studio tr + tr td { box-shadow: inset 0 1px 0 var(--color-line); }
+  .prose-studio th { font-size: 14px; color: var(--muted-foreground); font-weight: 500; }
+  .prose-studio code { font-size: 0.9em; background: var(--color-raised); padding: 0.12em 0.4em; border-radius: 6px; }
+  .prose-studio img { border-radius: 16px; }
+  .prose-studio > section:first-child > h2:first-child { margin-top: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
-    animation: none !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
 
-/* 404: the symbol pieces drift apart and back. */
-@keyframes nf-a { 50% { transform: translate(-18%, 14%) rotate(-10deg); } }
-@keyframes nf-b { 50% { transform: translate(-6%, -26%) rotate(12deg); } }
-@keyframes nf-c { 50% { transform: translate(22%, -10%) rotate(9deg); } }
-
-/* About: the signature writes itself in from the left. */
-@keyframes sig-wipe { from { clip-path: inset(0 100% 0 0); opacity: 0; } to { clip-path: inset(0 0 0 0); opacity: 1; } }
-
-/* Featured card: a lime/violet highlight travelling round the border. */
-@property --ang { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
-@keyframes ring-sweep { to { --ang: 360deg; } }
-.ring-sweep::before {
-  content: ''; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; pointer-events: none;
-  background: conic-gradient(from var(--ang), transparent 0 70%, var(--color-lime) 80%, var(--color-violet-soft) 90%, transparent);
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
-  animation: ring-sweep 5s linear infinite;
-}
-
-.prose-studio > section:first-child > h2:first-child { margin-top: 0; }

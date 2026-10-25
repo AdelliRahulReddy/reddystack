@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { formatInr } from '@/lib/money';
 import type { QuoteSelection } from '@/lib/quoteSelection';
 import { buildWhatsAppLink } from '@/lib/whatsapp';
-import { Button, ButtonArrow } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
@@ -97,7 +97,7 @@ export default function CalculatorQuoteForm({ selection, hasItems, adSpend, what
     return (
       <div className="mt-6 grid gap-4">
         <p className="rounded-2xl border border-lime/40 bg-lime/10 px-4 py-3 text-[15px] text-ivory">
-          Quote saved. Your reference is <span className="font-mono">#{result.quote_id.slice(0, 8)}</span>.
+          Quote saved. Your reference is <span className="tabular-nums">#{result.quote_id.slice(0, 8)}</span>.
         </p>
         <a
           className="inline-flex items-center justify-center gap-2 rounded-full bg-lime px-5 py-3 font-semibold text-lime-ink transition-colors hover:bg-ivory"
@@ -138,7 +138,7 @@ export default function CalculatorQuoteForm({ selection, hasItems, adSpend, what
       </div>
       {error && <p role="alert" className="rounded-2xl border border-coral/40 bg-coral/10 px-4 py-3 text-[15px] text-ivory">{error}</p>}
       <Button type="submit" size="lg" disabled={submitting} aria-busy={submitting}>
-        {submitting ? 'Saving…' : <>Save quote <ButtonArrow /></>}
+        {submitting ? 'Saving…' : <>Save quote</>}
       </Button>
       <p className="text-[13px] text-faint">A saved quote does not start paid work.</p>
     </form>

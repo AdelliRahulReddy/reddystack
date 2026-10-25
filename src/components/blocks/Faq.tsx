@@ -1,6 +1,4 @@
 import { cn } from '@/lib/utils';
-import Eyebrow from './Eyebrow';
-import SplitText from './SplitText';
 
 export type FaqItem = { id?: string | number; question: string; answer: string };
 
@@ -10,21 +8,14 @@ export type FaqItem = { id?: string | number; question: string; answer: string }
  */
 export function FaqList({ items, openFirst = true, className }: { items: FaqItem[]; openFirst?: boolean; className?: string }) {
   return (
-    <div className={className}>
+    <div className={cn('grid gap-2', className)}>
       {items.map((f, i) => (
-        <details
-          key={f.id ?? f.question}
-          open={openFirst && i === 0}
-          className="group/qa border-t border-line last:border-b [&::details-content]:h-0 [&::details-content]:overflow-hidden [&::details-content]:[transition:height_.5s_var(--ease-studio),content-visibility_.5s_allow-discrete] open:[&::details-content]:h-auto [interpolate-size:allow-keywords]"
-        >
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 font-display text-[clamp(19px,1.7vw,23px)] font-semibold tracking-[-0.02em] transition-colors duration-300 hover:text-lime [&::-webkit-details-marker]:hidden">
+        <details key={f.id ?? f.question} open={openFirst && i === 0} className="group/qa rounded-[var(--radius-card)] bg-surface px-5 sm:px-6">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[18px] font-semibold text-text [&::-webkit-details-marker]:hidden">
             {f.question}
-            <span
-              aria-hidden="true"
-              className="relative size-9 flex-none rounded-full border border-line transition-all duration-400 ease-studio before:absolute before:left-1/2 before:top-1/2 before:h-[1.5px] before:w-3 before:-translate-1/2 before:bg-ivory after:absolute after:left-1/2 after:top-1/2 after:h-[1.5px] after:w-3 after:-translate-1/2 after:rotate-90 after:bg-ivory after:transition-transform after:duration-400 group-open/qa:border-lime group-open/qa:bg-lime group-open/qa:before:bg-lime-ink group-open/qa:after:rotate-0 group-open/qa:after:bg-lime-ink"
-            />
+            <span aria-hidden="true" className="grid size-8 flex-none place-items-center rounded-full bg-surface-2 text-[18px] leading-none text-muted transition-transform duration-200 group-open/qa:rotate-45">+</span>
           </summary>
-          <p className="max-w-[62ch] pb-[26px] text-muted-foreground">{f.answer}</p>
+          <p className="max-w-[62ch] pb-6 text-muted">{f.answer}</p>
         </details>
       ))}
     </div>
@@ -34,13 +25,11 @@ export function FaqList({ items, openFirst = true, className }: { items: FaqItem
 /** Shown until the owner adds real answers in Admin → Content. Never filled with invented answers. */
 function FaqEmpty({ whatsappHref }: { whatsappHref?: string }) {
   return (
-    <div role="status" className="rounded-[28px] border border-line bg-graphite p-6 sm:p-8">
-      <p className="font-display text-[clamp(20px,1.8vw,24px)] font-semibold tracking-[-0.02em]">
-        Questions coming soon — ask us on WhatsApp.
-      </p>
-      <p className="mt-2 text-muted-foreground">Rahul answers every question himself, in plain words.</p>
+    <div role="status" className="rounded-[var(--radius-card)] bg-surface p-6 sm:p-8">
+      <p className="text-h3 font-semibold text-text">Questions coming soon — ask us on WhatsApp.</p>
+      <p className="mt-2 text-muted">Rahul answers every question himself, in plain words.</p>
       {whatsappHref && (
-        <a href={whatsappHref} target="_blank" rel="noreferrer" className="mt-5 inline-flex font-medium text-lime underline underline-offset-4 hover:text-ivory">
+        <a href={whatsappHref} target="_blank" rel="noreferrer" className="mt-5 inline-flex font-semibold text-action underline underline-offset-4">
           Ask on WhatsApp
         </a>
       )}
@@ -48,25 +37,21 @@ function FaqEmpty({ whatsappHref }: { whatsappHref?: string }) {
   );
 }
 
-/** Two-column FAQ section: heading left, questions right (or an honest empty state). */
+/** FAQ section: heading left, questions right (or an honest empty state). */
 export default function Faq({
   items,
-  title = 'Before you get in touch.',
-  label = 'Questions',
+  title = 'Questions people ask first.',
   id = 'faq-title',
   intro,
   whatsappHref,
   className,
-}: { items: FaqItem[]; title?: string; label?: string; id?: string; intro?: string; whatsappHref?: string; className?: string }) {
+}: { items: FaqItem[]; title?: string; id?: string; intro?: string; whatsappHref?: string; className?: string }) {
   return (
-    <section aria-labelledby={id} className={cn('py-[clamp(56px,8vw,120px)]', className)}>
-      <div className="site-wrap grid gap-[clamp(24px,5vw,88px)] min-[861px]:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)]">
+    <section aria-labelledby={id} className={cn('section', className)}>
+      <div className="site-wrap grid gap-[clamp(24px,4vw,64px)] min-[900px]:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)]">
         <div>
-          <Eyebrow>{label}</Eyebrow>
-          <h2 id={id} aria-label={title} data-split className="mt-[18px] text-[clamp(36px,4.6vw,64px)]">
-            <SplitText text={title} />
-          </h2>
-          {intro && <p data-reveal className="mt-6 max-w-[40ch] text-muted-foreground">{intro}</p>}
+          <h2 id={id} className="text-h2">{title}</h2>
+          {intro && <p className="mt-4 max-w-[40ch] text-muted">{intro}</p>}
         </div>
         {items.length > 0 ? <FaqList items={items} /> : <FaqEmpty whatsappHref={whatsappHref} />}
       </div>
