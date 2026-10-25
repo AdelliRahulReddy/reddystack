@@ -8,7 +8,7 @@ import ts from 'typescript';
 const require = createRequire(import.meta.url);
 const source = await readFile(new URL('../src/app/api/contact/route.ts', import.meta.url), 'utf8');
 const code = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
-let sent = [], logs = [], providerError = null, providerThrows = false, now = Date.now();
+let sent = [], dbInserts = [], logs = [], providerError = null, providerThrows = false, now = Date.now();
 const env = { RESEND_API_KEY: 'test-only', VERCEL: '1' };
 const context = vm.createContext({
   exports: {}, process: { env }, Request, Response, URL, TextDecoder, Uint8Array,
@@ -21,6 +21,8 @@ const context = vm.createContext({
       contactBudgetTitles: ['Under $1,000', '$1,000–$2,500', '$2,500–$5,000', '$5,000–$10,000', '$10,000+', 'Under £750', '£750–£2,000', '£2,000–£4,000', '£4,000–£8,000', '£8,000+', 'Under ₹25k', '₹25k–₹50k', '₹50k–₹1L', '₹1L–₹2.5L', '₹2.5L+'],
       contactCategoryTitles: ['Proof Sprint', 'Paid Acquisition — Meta', 'Paid Acquisition — Google', 'Creative & Conversion', 'AI-Assisted Video', 'Website & Tracking Foundation', 'Search Visibility', 'Automation or Product Build', 'Start With the Bottleneck'],
     }
+    : name === '@/lib/supabase/server' ? { createSupabaseServerClient: async () => ({ __fakeDb: true }) }
+    : name === '@/lib/enquiries' ? { insertEnquiry: async (_client, payload) => { dbInserts.push(payload); return 'test-enquiry-uuid'; } }
     : require(name),
 });
 vm.runInContext(code, context);
@@ -49,6 +51,12 @@ const receipt = await accepted.json();
 assert.match(receipt.requestId, /^[a-f0-9-]{36}$/, 'Return an enquiry reference after provider acceptance');
 assert.ok(sent[0].text.includes(receipt.requestId), 'Use the same reference in the enquiry email');
 assert.match(sent[0].text, /Source page: \/service\/seo-websites/);
+assert.equal(dbInserts.length, 1, 'Record the enquiry in the database alongside the email');
+assert.deepEqual(
+  { source: dbInserts[0].source, business_name: dbInserts[0].business_name, service_interest: dbInserts[0].service_interest, email: dbInserts[0].email, phone: dbInserts[0].phone },
+  { source: 'website', business_name: 'Example', service_interest: 'Website & Tracking Foundation', email: 'test@example.test', phone: '' },
+  'Map the form fields onto the enquiries row (status new, source website)',
+);
 assert.match(sent[0].html, /Test &lt;person&gt;/, 'Escape email HTML');
 providerError = { name: 'validation_error', message: 'private email detail', statusCode: 422 };
 assert.equal((await post(valid)).status, 502, 'Report provider failure');

@@ -6,6 +6,7 @@ import ScrollProgress from './ScrollProgress';
 import SiteFooter from './SiteFooter';
 import SiteHeader from './SiteHeader';
 import SmoothScroll from './SmoothScroll';
+import WhatsAppButton from './WhatsAppButton';
 
 /** Site frame: one smooth-scroll instance, header, footer, cursor and scroll reveals. */
 export default function SiteChrome({ children }: { children: ReactNode }) {
@@ -23,6 +24,7 @@ export default function SiteChrome({ children }: { children: ReactNode }) {
       <SiteHeader />
       <main id="main" className="grain">{children}</main>
       <SiteFooter />
+      <WhatsAppButton />
     </SmoothScroll>
   );
 }

@@ -5,6 +5,8 @@ import { createHash, randomUUID } from 'node:crypto';
 
 import { siteConfig } from '@/data/siteConfig';
 import { contactBudgetTitles, contactCategoryTitles } from '@/data/contactOptions';
+import { createSupabaseServerClient } from '@/lib/supabase/server';
+import { insertEnquiry } from '@/lib/enquiries';
 
 export const runtime = 'nodejs';
 
@@ -145,6 +147,26 @@ export async function POST(request: Request) {
         { error: 'Unable to send right now. Your form is unchanged; retry or contact us directly.', requestId },
         { status: 502 }
       );
+    }
+
+    // Also record the enquiry in Supabase (status 'new', source 'website') so it
+    // shows in /admin immediately. Best-effort: an email still reaches the owner
+    // even if the database insert is unavailable (e.g. RLS not applied yet).
+    try {
+      const supabase = await createSupabaseServerClient();
+      if (supabase) {
+        await insertEnquiry(supabase, {
+          name: payload.name,
+          business_name: payload.company,
+          phone: '',
+          email: payload.email,
+          service_interest: selectedServices,
+          message: payload.message,
+          source: 'website',
+        });
+      }
+    } catch {
+      console.error('contact_enquiry_insert_failed', { requestId, reason: 'db_unavailable' });
     }
 
     return NextResponse.json({ success: true, requestId });

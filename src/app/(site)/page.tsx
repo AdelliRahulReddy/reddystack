@@ -6,10 +6,14 @@ import {
 } from '@/data/siteConfig';
 import type { Metadata } from 'next';
 import { marketRootLanguageAlternates } from '@/data/MarketSeo';
-import { homeFaqItems } from '@/data/HomeFaqData';
-import { featuredPortfolioProjects } from '@/data/FeaturedPortfolioProjects';
-import HomeV3 from '@/components/home-v3/HomeV3';
-
+import HomeView from '@/components/views/HomeView';
+import { listBundles } from '@/lib/bundles';
+import { listFaqs } from '@/lib/faqs';
+import { listActiveServices } from '@/lib/services';
+import { DEFAULT_SETTINGS, getSettings } from '@/lib/settings';
+import { buildHeroContent, getSiteContent } from '@/lib/siteContent';
+import { createSupabaseServerClient } from '@/lib/supabase/server';
+import { groupWorksByType, listVisibleWorks } from '@/lib/works';
 
 export const metadata: Metadata = {
   ...buildPageMetadata("home"),
@@ -19,8 +23,28 @@ export const metadata: Metadata = {
   },
 };
 
-const MainHome = () => {
-  const homeFaqSchema = buildFAQPageSchema(homeFaqItems, "/");
+const MainHome = async () => {
+  const client = await createSupabaseServerClient();
+
+  const [heroRow, positioningRow, bundles, services, works, faqs, settings] = await Promise.all([
+    getSiteContent(client, 'hero'),
+    getSiteContent(client, 'positioning'),
+    listBundles(client),
+    listActiveServices(client),
+    listVisibleWorks(client),
+    listFaqs(client),
+    getSettings(client),
+  ]);
+
+  const hero = buildHeroContent(heroRow);
+  const positioning = buildHeroContent(positioningRow);
+  const bundle = bundles?.[0] ?? null;
+  const workGroups = groupWorksByType(works ?? []);
+
+  const homeFaqSchema = buildFAQPageSchema(
+    (faqs ?? []).map((faq) => ({ question: faq.question, answer: faq.answer })),
+    '/',
+  );
 
   return (
     <>
@@ -32,7 +56,15 @@ const MainHome = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}
       />
-      <HomeV3 projects={featuredPortfolioProjects} />
+      <HomeView
+        hero={hero}
+        positioning={positioning}
+        bundle={bundle}
+        services={services ?? []}
+        works={workGroups}
+        faqs={faqs ?? []}
+        settings={settings ?? DEFAULT_SETTINGS}
+      />
     </>
   );
 };

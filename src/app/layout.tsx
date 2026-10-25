@@ -1,6 +1,5 @@
 import "../styles/globals.css";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
-import CountrySuggestion from "@/components/country/CountrySuggestion";
 import {
   siteConfig,
   siteSeo,
@@ -98,7 +97,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning>
         <GoogleAnalytics />
         {children}
-        <CountrySuggestion />
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
 # ReddyStack agent instructions
 
-Updated: 2026-09-26. This is the only agent instructions file. Other documentation lives in `docs/`; paths are relative to the repo root. This file takes precedence over older docs where they conflict. Runtime source takes precedence over all docs.
+Updated: 2026-09-26, SUPERSEDED IN PART 2026-10-25 — read this first.
+The 2026-10-25 direction below OVERRIDES any conflicting line in this file (especially Authority, Business context, Stack). Where this file says "US/UK priority", "custom quotes", "no database/auth/CMS", or "commit/push/deploy allowed once verified", the new direction wins: target = India-wide (Hyderabad = home ground; foreign clients = phase 2 after Indian proof); prices are PUBLIC in the database (Sprint ₹14,999; landing ₹4,999/₹9,999; website ₹24,999; admin ₹19,999; ads ₹9,999/mo; SEO ₹7,999/mo) — never "custom quote"; backend = Supabase project lclgzoishrlhgocgfyln (18 tables, RLS + grants, /admin owner-gated); NOTHING ships (no merge, deploy or production write) without the owner's explicit word for that exact step. Authority for the current build: PRD.md, ARCHITECTURE.md, DESIGN.md, RULES.md, TASKS.md, PROGRESS.md in the repo root. Runtime source takes precedence over all docs.
 
 Use short, direct answers by default. Keep technical detail exact. Expand only when asked.
 
@@ -10,7 +11,7 @@ The owner (Rahul Reddy Adelli) has granted agents full control of this repositor
 
 - Edit any file without asking first: code, design, content, data, config, docs, and scripts.
 - Design changes are allowed. They must fit the design system below and be verified visually.
-- Commit, push, and deploy are allowed once the verification steps below pass. State in the handoff what was pushed or deployed.
+- Commit, push, and deploy ONLY on the owner's explicit word for that exact step (2026-10-25 rule — overrides the older "allowed once verified" line). State in the handoff what was pushed or deployed.
 - Still ask before doing anything that cannot be undone, or anything outside this repo: deleting Git history, rotating or exposing credentials, changing DNS, hosting, Resend, GA4, or Search Console settings, or spending money.
 - Never commit secrets. Env files stay out of Git.
 
@@ -26,8 +27,8 @@ The owner (Rahul Reddy Adelli) has granted agents full control of this repositor
 ## Business context
 
 - ReddyStack: Rahul Reddy Adelli's founder-led growth studio, delivered remotely from Hyderabad, India. It connects websites, SEO and local search, Meta and Google Ads, ad creative and AI UGC-style video, tracking and AI automation around one growth problem.
-- Priority clients: the US and UK. Market pages also exist for Australia, Canada, UAE, Singapore and India.
-- Offers: Proof Sprint → Stack Build → Operate & Improve. Custom quotes; advertising spend and third-party costs are separate.
+- Priority clients (2026-10-25 direction): India-wide. Market pages for other countries are legacy content kept for SEO, not the offer. Foreign clients = phase 2 after Indian proof.
+- Offers (2026-10-25 direction): Enquiry Sprint ₹14,999 one-time + à-la-carte public prices (see PRD.md); advertising spend and third-party costs are separate. No "custom quote" pricing.
 - Honesty rules (non-negotiable): the six portfolio projects are personal or demo work and must stay labelled that way. No invented testimonials, ratings, client results, stats, availability claims or prices. Budget brackets on the contact form describe the enquirer's budget, not ReddyStack prices.
 - Voice: founder-led, clear scope, practical, credible. Avoid "cheap", "best agency", unproven hype, thin AI SEO pages and city stuffing.
 
@@ -37,7 +38,7 @@ The owner (Rahul Reddy Adelli) has granted agents full control of this repositor
 - Tailwind CSS v4 (`@tailwindcss/postcss`) with theme tokens in `src/styles/globals.css`; shadcn/ui primitives in `src/components/ui` (`components.json`); lucide-react icons.
 - Motion (`motion/react`, loaded through `LazyMotion` + `domAnimation`) for page transitions and small UI transitions. GSAP ScrollTrigger + Lenis for scroll scenes.
 - Sass is still used by two CSS modules: `home-v3.module.scss` (homepage) and `illustrations.module.scss`. Both sit in `@layer components` so Tailwind utilities win.
-- No database, auth, CMS or server actions. API routes: `/api/contact` (Resend email) and `/api/visitor-country` (country suggestion).
+- Database + auth + CMS (2026-10-25): Supabase project lclgzoishrlhgocgfyln; public site + /admin read/write the same 18 tables. API routes: `/api/contact` (Resend email + enquiries insert) and `/api/calculator` (quote + enquiry insert).
 - The site is dark-only. There is no theme toggle, Bootstrap, jQuery, Font Awesome or template CSS; do not reintroduce them.
 
 ## Structure

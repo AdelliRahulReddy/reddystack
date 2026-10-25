@@ -11,7 +11,7 @@ const destinations = [
   { title: "Capabilities", body: "Websites, search, ads, creative, tracking and automation.", href: "/service" },
   { title: "Selected work", body: "Personal and demo builds, with the decisions explained.", href: "/portfolio" },
   { title: "Insights", body: "Practical guides on ads, SEO and websites.", href: "/blog" },
-  { title: "Ways to work", body: "Proof Sprint, Stack Build, Operate & Improve.", href: "/pricing" },
+  { title: "Pricing", body: "Public prices for the enquiry stack.", href: "/pricing" },
 ];
 
 // The three pieces drift apart, as if the stack lost its signal.

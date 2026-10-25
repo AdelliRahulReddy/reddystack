@@ -74,9 +74,9 @@ type PageSeoConfig = {
 
 export const pageSeo = {
   home: {
-    title: "ReddyStack | Founder-Led Growth Marketing for Small Businesses",
+    title: "ReddyStack | Enquiry Stack for Indian Businesses",
     description:
-      "Founder-led growth marketing for small businesses: websites, local SEO, Meta and Google Ads, ad creative and tracking, connected around one growth problem.",
+      "The enquiry stack for Indian businesses: a landing page or website, Meta ads, tracking and WhatsApp — built and run by one founder, with fixed public prices.",
     path: "/",
   },
   about: {
@@ -110,10 +110,40 @@ export const pageSeo = {
     path: "/contact",
   },
   pricing: {
-    title: "Ways to Work | Proof Sprint to Scale | ReddyStack",
+    title: "Pricing | ReddyStack",
     description:
-      "Understand ReddyStack engagements: a focused Proof Sprint, a connected Stack Build, or ongoing Operate and Improve support with clear scope.",
+      "Public prices: Enquiry Sprint ₹14,999 one-time, plus landing pages, websites, admin panels, Meta ads and SEO — one-time vs monthly clearly labelled.",
     path: "/pricing",
+  },
+  servicesPricing: {
+    title: "Services & Prices | ReddyStack",
+    description:
+      "Plain-English services and public prices for ReddyStack: landing pages, websites, admin panels, Meta ads and SEO, with one-time vs monthly clearly labelled.",
+    path: "/services",
+  },
+  calculator: {
+    title: "Price Calculator | ReddyStack",
+    description:
+      "Pick services and add-ons to see one-time and monthly totals instantly. Ad spend is shown separately as paid directly to Meta, not to us.",
+    path: "/calculator",
+  },
+  works: {
+    title: "Work & Proof | ReddyStack",
+    description:
+      "ReddyStack work, clearly separated into labelled client work and portfolio projects. No invented results or relabelled demos.",
+    path: "/works",
+  },
+  process: {
+    title: "How We Work | ReddyStack",
+    description:
+      "How a ReddyStack project runs: pick, pay a percentage advance, we build, and report. Written updates, no daily calls needed.",
+    path: "/process",
+  },
+  faq: {
+    title: "Questions & Answers | ReddyStack",
+    description:
+      "Plain answers to common ReddyStack questions about cost, timelines, guarantees, ad spend, and what happens after you pay.",
+    path: "/faq",
   },
   privacyPolicy: {
     title: "Privacy Policy | ReddyStack",
@@ -298,32 +328,22 @@ export const schemaIds = {
 
 export const engagementOffers = [
   {
-    name: "Proof Sprint",
+    name: "Enquiry Sprint",
     description:
-      "A bounded engagement that establishes the baseline, addresses one important digital growth problem, and records the evidence needed for the next decision.",
-  },
-  {
-    name: "Stack Build",
-    description:
-      "A connected implementation combining only the web, search, paid acquisition, creative, tracking, or automation capabilities required by the agreed problem.",
-  },
-  {
-    name: "Operate and Improve",
-    description:
-      "Ongoing testing, measurement, and improvement for a working digital growth system with priorities and reporting agreed in advance.",
+      "A landing page, one Meta campaign, image creatives, tracking, and seven days of async optimisation — sold on enquiries, not activities.",
   },
 ] as const;
 
 const serviceOfferCatalog = {
   "@type": "OfferCatalog",
   "@id": schemaIds.offerCatalog,
-  name: "ReddyStack engagement models",
+  name: "ReddyStack services",
   url: buildCanonicalUrl("/pricing"),
   itemListElement: engagementOffers.map((offer) => ({
     "@type": "Offer",
     name: offer.name,
     url: buildCanonicalUrl("/pricing"),
-    description: "Custom quote based on agreed scope and deliverables.",
+    description: "See public prices on the pricing page.",
     itemOffered: {
       "@type": "Service",
       name: offer.name,

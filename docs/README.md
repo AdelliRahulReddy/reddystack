@@ -1,43 +1,32 @@
-# Reddystack
+# ReddyStack — docs index
 
-Reddystack is Rahul Reddy Adelli's digital services website: Meta Ads, Google Ads, Ad Creatives, AI UGC-Style Videos, Website Development, and SEO & Local SEO.
+Docs live here only when they are current. Root docs are the authority;
+everything in `docs/` is supporting detail. If a doc below contradicts a
+root doc, the root doc wins.
 
-[Production website](https://www.reddystack.com)
+## Root docs (read first)
+- `../PRD.md` — what we build, the offer, prices, success test
+- `../ARCHITECTURE.md` — Next.js + Supabase, the sync rule, RLS
+- `../DESIGN.md` — simple English, price-first, mobile-first
+- `../RULES.md` — the 10 non-negotiable rules
+- `../TASKS.md` — build checklist
+- `../PROGRESS.md` — build log (append-only)
+- `../AGENTS.md` — agent instructions (2026-10-25 supersession note on top)
 
-Built with Next.js App Router, React, TypeScript, Tailwind CSS v4, shadcn/ui, Motion, GSAP and Lenis. The contact endpoint uses Resend.
+## Supporting docs
+- `CODEBASE.md` — runtime architecture, route/content ownership
+  (2026-10-25 note at the end: Supabase/Auth/CMS now exist; `src/data`
+  content is being replaced by database reads)
+- `AI_SEO_PLAYBOOK.md` — SEO + honesty rules (positioning section is
+  superseded — see the 2026-10-25 note at the end; schema/honesty rules
+  still apply)
+- `BUSINESS_PROFILE.md` — business identity + Google Business Profile notes
+  (2026-10-25 note at the end: GBP is back in scope for India local SEO)
 
-## Documentation
-
-Run commands from the repository root. Paths in backticks are relative to that root unless stated otherwise.
-
-- [Project context](context/PROJECT_CONTEXT_LITE.md) and [SEO context](context/SEO_CONTEXT_LITE.md)
-- [Agent instructions](../AGENTS.md) and [Codex setup](CODEX_README.md)
-- [Codebase guide](CODEBASE.md)
-- [SEO playbook](AI_SEO_PLAYBOOK.md), [SEO fix plan](SEO_FIX_PLAN_Reddystack.md), and [keywords](SEO_KEYWORDS.md)
-
-## Local development
-
-```sh
-npm ci
-npm run dev -- --port 3187
-```
-
-## Production verification
-
-```sh
-npm run build
-npm run start -- --port 3187
-node scripts/check-contact.mjs
-node scripts/check-seo-routes.mjs
-node scripts/check-ui-contracts.mjs
-node scripts/check-browser.mjs
-npm run lint
-npm audit
-```
-
-Use `SEO_CHECK_BASE` to check a different server. Environment files and credentials stay outside Git.
-The browser check requires the installed `agent-browser` CLI; set `AGENT_BROWSER_BIN` if it is elsewhere. Contact and browser checks do not send email. See `CODEBASE.md` for contact limits, safe failure logs, and the per-instance throttling limitation.
-
-Content lives in `src/data`; shared metadata and organization details live in `src/data/siteConfig.ts`. Branded article covers live in `public/assets/img/insights`, and the default sharing card lives in `public/assets/img/social`.
-
-Every page uses the same dark design system (tokens in `src/styles/globals.css`, shared blocks in `src/components/blocks`). See the root `AGENTS.md` before changing the design.
+## Deleted 2026-10-25 (structure cleanup, owner-approved)
+- `context/` (PROJECT_CONTEXT_LITE, SEO_CONTEXT_LITE) — replaced by root docs
+- `CODEX_README.md` — Codex-specific; this repo builds with OpenCode now
+- `SEO_KEYWORDS.md`, `SEO_KEYWORD_MAP.md`, `SEO_FIX_PLAN_Reddystack.md` —
+  September US/UK research + worldwide positioning; India-first SEO will be
+  researched fresh (old volumes/rules do not transfer)
+- `../test-results/performance/review.md` — generated test output

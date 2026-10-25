@@ -5,9 +5,11 @@ import Link from 'next/link';
 import { markets } from '@/data/MarketConfig';
 import { siteConfig } from '@/data/siteConfig';
 import { saveMarketChoice } from '@/utils/marketPreference';
+import { buildWhatsAppLink } from '@/lib/whatsapp';
+import { useSettings } from '@/lib/useSettings';
 import { BrandSymbol } from './BrandSymbol';
 import CurrentYear from './CurrentYear';
-import { legalNav, primaryNav } from './navigation';
+import { legalNav, legacyNav, primaryNav } from './navigation';
 
 const wordmarkColors = ['#7654E8', '#D2ED7A', '#FF765E'];
 
@@ -21,10 +23,11 @@ function Column({ title, children }: { title: string; children: React.ReactNode 
 }
 
 export default function SiteFooter() {
+  const settings = useSettings();
   return (
     <footer className="overflow-hidden pb-8 pt-[72px]">
       <div className="site-wrap">
-        <div className="grid grid-cols-2 gap-8 pb-14 min-[861px]:grid-cols-[1.4fr_repeat(3,1fr)]">
+        <div className="grid grid-cols-2 gap-8 pb-14 min-[861px]:grid-cols-[1.4fr_repeat(4,1fr)]">
           <div className="col-span-2 min-[861px]:col-span-1">
             <Link href="/" className="inline-flex items-center gap-2.5 font-display text-[19px] font-semibold tracking-[-0.03em] text-ivory">
               <BrandSymbol className="size-7" />ReddyStack
@@ -35,12 +38,15 @@ export default function SiteFooter() {
             <p className="mt-5 grid gap-1 font-mono text-[13px] text-muted-foreground">
               <a href={`mailto:${siteConfig.email}`} className="hover:text-ivory">{siteConfig.email}</a>
               <a href={`tel:${siteConfig.phoneHref}`} className="hover:text-ivory">Call {siteConfig.phoneDisplay}</a>
-              <a href={siteConfig.socialLinks.whatsapp} target="_blank" rel="noreferrer" className="hover:text-ivory">WhatsApp</a>
+              <a href={buildWhatsAppLink(settings.whatsapp_number, '')} target="_blank" rel="noreferrer" className="hover:text-ivory">WhatsApp</a>
             </p>
           </div>
           <Column title="Studio">
             {primaryNav.map((l) => <li key={l.href}><Link href={l.href}>{l.title}</Link></li>)}
             <li><Link href="/contact">Contact</Link></li>
+          </Column>
+          <Column title="More">
+            {legacyNav.map((l) => <li key={l.href}><Link href={l.href}>{l.title}</Link></li>)}
           </Column>
           <Column title="Markets">
             <li><Link href="/" onClick={() => saveMarketChoice('global')}>Global</Link></li>
